@@ -1,0 +1,413 @@
+--- a/Source/README_TECHNICAL.md
++++ b/Source/README_TECHNICAL.md
+@@ -1,15 +1,43 @@
+-# Исходники для следующей Work-сессии
++# FinRate p2.2-quality01 — исходники для проверки (не опубликованы)
+ 
+-Это не инструкция владельцу запускать терминал. Для ручной установки используйте только соседнюю папку `GitHub/` и `READ_ME_FIRST.txt`.
++Это отдельный **source-only** quality pass поверх `p2.1-build02`, а не собранный сайт.
++Не переносите файлы из папки `Source/src/` прямо поверх действующего GitHub-сайта:
++браузерная PWA требует сборки с актуальными CSP-хешами и precache-ревизиями.
+ 
+-Проект продолжает прежнюю базу FinRate, сборка `p2.1-build02`. Runtime локальный: Dexie/Workbox собраны внутрь, без CDN. `package-lock.json` фиксирует зависимости. `src/crypto.mjs` и `src/sw.mjs` прежние; документ schema 3 читает schema 1/2/3, а формат зашифрованного контейнера и IndexedDB version 1 сохранены.
++## Что поменялось
++- `src/model.mjs`: индекс операций, счетов, категорий и сумм возвратов для быстрой полной проверки документа, без изменения схемы/арифметики.
++- `src/app.mjs`: явная форма входа и создания базы; удалены устаревшие интерфейсные ветви, ранее подменявшиеся строковыми `.replace()`.
++- `src/style.css`: видимые подписи нижней навигации, адаптация dock-reserve и прозрачности.
++- `src/management.mjs`: явное предупреждение о том, что восстановление родителя восстанавливает и детей.
++- `tests/validation-index.test.mjs`, `tests/ui-source.test.mjs`: регрессии.
++- `tools/benchmark-validation.mjs`: синтетический профиль производительности.
+ 
+-Для разработчика/агента в каталоге Source: `npm ci`, затем `npm run build`, `npm test`. Сборка сама создаёт `dist/`, `evidence/` и `FinRate.html`. Обязательно сначала build: artifact-тесты проверяют именно готовые байты.
++## Локальная разработка
++В папке `Source/`:
++```
++npm ci
++npm run build
++npm test
++npm run test:browser
++node tests/management-browser.mjs
++npm run bench:validation
++```
++Зависимости зафиксированы в `package-lock.json`. Нужны доступ к npm и совместимая
++версия Node.js. `npm run build` генерирует `dist/` с правильным CSP-хешем и Workbox
++precaching; только после тестов и iOS-приёмки можно рассматривать публикацию.
+ 
+-Браузерные проверки: установить Chromium Playwright (`npx playwright install chromium`), затем `npm run test:browser` и `node tests/management-browser.mjs`. В ограниченной среде вместо установки допускается существующий Chromium через `FINRATE_CHROMIUM`. Скрипты не отключают web security; локальный сервер и отдельные браузерные профили используют только искусственные данные. Не запускать эти тесты в профиле владельца.
++В данной среде npm-сборка не выполнена: registry.npmjs.org недоступен (EAI_AGAIN),
++в том числе нет `fake-indexeddb`, Dexie, Workbox, esbuild и Playwright JS-модулей.
++Доступные независимые тесты приведены в `QUALITY_2_2_REPORT.md`.
+ 
+-`tests/fixtures/p1`, `p2`, `b01` — настоящие прежние статические сборки для проверки обновления Service Worker и старых схем. Это НЕ новые варианты для установки. Браузерные скриншоты и сгенерированная искусственная база не включены в передачу; будут созданы внутри `evidence/` при повторном прогоне, не публиковать их.
++## Безопасность данных и ограничения
++Схема 3, `src/crypto.mjs`, `src/store.mjs`, `src/service.mjs`, `src/sw.mjs`,
++структура IndexedDB, правила комиссий, ID, резервные копии, история и миграции
++не изменены. Нельзя откатывать существующий документ schema 3 на старую сборку.
++Не очищайте IndexedDB, не заменяйте действующий Service Worker без проверки
++старых баз и без внешней зашифрованной резервной копии.
+ 
+-Финальные результаты этой сессии находятся снаружи в `Evidence/`. `tools/browser-runtime.mjs` использует необязательный явный путь браузера либо установленный Chromium Playwright; локальная подсказка `evidence/chromium-path.txt` не требуется и не передаётся.
+-
+-Для следующих изменений: прочитать актуальные `Sources/02_DECISIONS.md`, `03_CHECKPOINT.md`, `10_PATCH_2_1_REGISTER.md` и новое задание. Не очищать IndexedDB/PWA, не переписывать schema 3 старой сборкой, сохранять финансовые ID/комиссии/черновики/аудит. Нет разрешения на GitHub-запись, публикацию, сервисы или следующие пакеты.
++Автономность реального iPhone, свайпы Safari/PWA и сценарии миграции остаются
++непринятыми; макетная проверка ширины навигации их не заменяет.
++Родительская категория по действующим правилам при восстановлении активирует
++также все её подкатегории, в том числе архивированные отдельно; логика не менялась.
+--- a/Source/package-lock.json
++++ b/Source/package-lock.json
+@@ -1,12 +1,12 @@
+ {
+-  "name": "finrate-patch-2-1-block-02",
+-  "version": "0.2.1-build02",
++  "name": "finrate-quality-2-2",
++  "version": "0.2.2-quality01",
+   "lockfileVersion": 3,
+   "requires": true,
+   "packages": {
+     "": {
+-      "name": "finrate-patch-2-1-block-02",
+-      "version": "0.2.1-build02",
++      "name": "finrate-quality-2-2",
++      "version": "0.2.2-quality01",
+       "dependencies": {
+         "dexie": "4.4.6"
+       },
+--- a/Source/package.json
++++ b/Source/package.json
+@@ -1,12 +1,13 @@
+ {
+-  "name": "finrate-patch-2-1-block-02",
+-  "version": "0.2.1-build02",
++  "name": "finrate-quality-2-2",
++  "version": "0.2.2-quality01",
+   "private": true,
+   "type": "module",
+   "scripts": {
+     "build": "node tools/build.mjs",
+     "test": "node --test --test-reporter=tap tests/*.test.mjs",
+-    "test:browser": "node tests/block02-browser.mjs"
++    "test:browser": "node tests/block02-browser.mjs",
++    "bench:validation": "node tools/benchmark-validation.mjs"
+   },
+   "dependencies": {
+     "dexie": "4.4.6"
+--- a/Source/src/app.mjs
++++ b/Source/src/app.mjs
+@@ -1,14 +1,13 @@
+ import {createStore} from './store.mjs';
+ import {FinRate} from './service.mjs';
+-import {addAccount,addCategory,rename,archive,post,totals,formatMoney,money,copy,uid} from './model.mjs';
++import {formatMoney} from './model.mjs';
+ import {backupBlob} from './crypto.mjs';
+ import {createUI} from './ui.mjs';
+ import {PRIMARY_TABS} from './interaction.mjs';
+-const BUILD='p2.1-build02',root=document.getElementById('app'),store=createStore(),app=new FinRate(store);
++const BUILD='p2.2-quality01',root=document.getElementById('app'),store=createStore(),app=new FinRate(store);
+ let page='Главная',status='',bad=false,exists=false,recovery=null,prepared=null,safetyDownloaded=false,hiddenTimer,suspendRequested=false;
+ const primary=PRIMARY_TABS,extra=['Счета и кошельки','Категории','Настройки','Данные и синхронизация'];
+ const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+-const amt=n=>formatMoney(n,app.document?.currency||'RUB');
+ const get=id=>document.getElementById(id);
+ const ui=createUI({app,root,render,run,setStatus,getStatus:()=>status,getPage:()=>page,goPage:x=>{page=x;prepared=null;render();window.scrollTo(0,0);},closeBase});
+ const messages={MONEY:'Введите сумму цифрами, с точкой или запятой и не более чем двумя знаками после неё.',PASSWORD:'Пароль должен содержать от 12 до 1024 символов.',DECRYPT:'Не удалось открыть: неверный пароль / ключ восстановления или повреждённый файл.',RECOVERY:'Введите ключ восстановления целиком.',FORMAT:'Файл не соответствует защищённому формату FinRate.',SCHEMA:'Структура базы не прошла проверку. Изменения не применены.',SIZE:'База или файл превышает допустимый размер.',STALE:'База изменилась в другом окне. Эта правка не сохранена. Закройте и снова откройте базу; текущие данные не перезаписаны.',BUSY:'Дождитесь завершения действия.',LOCKED:'Сначала откройте локальную базу.',EMPTY:'Локальной базы пока нет.',EXISTS:'База уже создана. Откройте её или проверьте резервную копию.',NAME_EXISTS:'Такое название уже существует.',CATEGORY_PARENT:'Выберите категорию того же типа. Допускается один уровень подкатегорий.',PENDING_ACCOUNT:'На счёте есть незавершённый перевод. Сначала подтвердите или отмените его.',NONZERO_ACCOUNT:'Счёт с ненулевым остатком нельзя архивировать. Сначала выполните сверку.',CONFIRM:'Для замены базы нужно явное подтверждение.',OVERFLOW:'Сумма вышла за безопасный диапазон. Запись остановлена.',DATE:'Дата некорректна.',NOT_FOUND:'Запись не найдена.'};
+@@ -17,15 +16,14 @@
+ function navigation(cls,items){return ui.navigation(cls,items);}
+ function header(){return ui.header();}
+ function pageTitle(title,subtitle){return `<div class="page-title"><h1>${title}</h1><p>${subtitle}</p></div>`;}
+-function auth(){return legacyAuth().replace(/<label>Название первого счёта[\s\S]*?<\/label>/,'').replace(/<label>Тип счёта[\s\S]*?<\/label>/,'').replace(/<label>Начальный остаток[\s\S]*?<\/label>/,'').replace('Открыть локальную базу','Войти в FinRate').replace('Способ открытия','Открыть с помощью').replace('Пароль базы</option>','Пароль</option>').replace('Открыть базу</button>','Войти</button>').replace('Сначала создайте локальную базу и первый денежный счёт. Облачный аккаунт не нужен.','Основной счёт с нулевым остатком создаётся автоматически. Задайте пароль для защиты данных.').replace('Объединение в пакете 1 не выполняется.','Объединение баз не выполняется.');}
+-function legacyAuth(){
++function auth(){
+   if(recovery)return `<div class="auth">${header()}<div class="panel"><h1>Сохраните ключ восстановления</h1><p>Он открывает базу и защищённую копию, если пароль потерян. Храните его отдельно от файла копии.</p><div class="secret" id="recovery-secret">${esc(recovery)}</div><button class="button secondary" id="save-key">Скачать ключ отдельно</button><label class="check"><input type="checkbox" id="key-saved">Я сохранил ключ в безопасном месте</label><button class="button" id="ready">Открыть FinRate</button><p class="hint">Ключ показан только сейчас. При закрытии приложения он исчезнет с экрана.</p></div>${message()}</div>`;
+-  return `<div class="auth">${header()}${message()}<div class="panel">${exists?`<h1>Открыть локальную базу</h1><p class="hint">Данные хранятся в этом браузере. Пароль никуда не отправляется.</p><form id="unlock"><label>Способ открытия<select name="mode"><option value="password">Пароль базы</option><option value="recovery">Ключ восстановления</option></select></label><label>Пароль или ключ<input name="secret" type="password" autocomplete="off" required maxlength="1024"></label><p><button class="button" type="submit">Открыть базу</button></p></form>`:`<h1>Ваш финансовый путь</h1><p>Сначала создайте локальную базу и первый денежный счёт. Облачный аккаунт не нужен.</p><form id="setup" class="stack"><div class="fields"><label>Основная валюта<select name="currency"><option value="RUB">RUB · рубль</option><option value="USD">USD · доллар</option><option value="EUR">EUR · евро</option><option value="GBP">GBP · фунт</option></select></label><label>Название первого счёта<input name="name" value="Основной счёт" maxlength="100" required></label><label>Тип счёта<select name="kind"><option value="bank">Банковский счёт</option><option value="cash">Наличные</option><option value="wallet">Кошелёк</option></select></label><label>Начальный остаток<input name="opening" inputmode="decimal" value="0,00" required></label><label class="full">Пароль базы, от 12 символов<input name="password" type="password" minlength="12" maxlength="1024" autocomplete="new-password" required></label><label class="full">Повторите пароль<input name="repeat" type="password" minlength="12" maxlength="1024" autocomplete="new-password" required></label></div><p class="hint">Карта, привязанная к этому счёту, не создаёт второй остаток. Не вводите пароль банка или Dropbox.</p><button class="button" type="submit">Создать локальную базу</button></form>`}</div><div class="panel"><h2>Есть защищённая копия?</h2><button class="button secondary" id="restore-start">Проверить и восстановить из файла</button></div><p class="footer-note">Без аналитики и внешней отправки. Очистка браузера удаляет локальную базу: сохраните защищённую копию отдельно.</p>${restorePanel()}</div>`;
++  const authForm=exists
++    ? `<h1>Войти в FinRate</h1><p class="hint">Данные хранятся в этом браузере. Пароль никуда не отправляется.</p><form id="unlock"><label>Открыть с помощью<select name="mode"><option value="password">Пароль</option><option value="recovery">Ключ восстановления</option></select></label><label>Пароль или ключ<input name="secret" type="password" autocomplete="off" required maxlength="1024"></label><p><button class="button" type="submit">Войти</button></p></form>`
++    : `<h1>Ваш финансовый путь</h1><p>Основной счёт с нулевым остатком создаётся автоматически. Задайте пароль для защиты данных.</p><form id="setup" class="stack"><div class="fields"><label>Основная валюта<select name="currency"><option value="RUB">RUB · рубль</option><option value="USD">USD · доллар</option><option value="EUR">EUR · евро</option><option value="GBP">GBP · фунт</option></select></label><label class="full">Пароль базы, от 12 символов<input name="password" type="password" minlength="12" maxlength="1024" autocomplete="new-password" required></label><label class="full">Повторите пароль<input name="repeat" type="password" minlength="12" maxlength="1024" autocomplete="new-password" required></label></div><p class="hint">Не вводите пароль банка или стороннего сервиса.</p><button class="button" type="submit">Создать локальную базу</button></form>`;
++  return `<div class="auth">${header()}${message()}<div class="panel">${authForm}</div><div class="panel"><h2>Есть защищённая копия?</h2><button class="button secondary" id="restore-start">Проверить и восстановить из файла</button></div><p class="footer-note">Без аналитики и внешней отправки. Очистка браузера удаляет локальную базу: сохраните защищённую копию отдельно.</p>${restorePanel()}</div>`;
+ }
+ function home(){return ui.home();}
+-function accounts(){const d=app.document,b=totals(d).balances;return `${pageTitle('Счета и кошельки','Каждое реальное место хранения средств учитывается один раз.')}<section class="panel">${d.accounts.map(a=>`<div class="tile"><div class="row wrap"><div><strong>${esc(a.name)}</strong> ${a.archived?'<span class="pill">Архив</span>':''}<p class="hint">${{bank:'Банковский счёт',cash:'Наличные',wallet:'Кошелёк'}[a.kind]}</p></div><span class="amount">${amt(b[a.id])}</span></div><div class="tools"><button class="button secondary" data-rename-account="${esc(a.id)}">Переименовать</button>${!a.archived?`<button class="button secondary" data-reconcile="${esc(a.id)}">Сверить остаток</button><button class="button secondary" data-archive-account="${esc(a.id)}">В архив</button>`:''}</div></div>`).join('')}</section><section class="panel"><h2>Добавить счёт</h2><form id="account-form"><div class="fields"><label>Название<input name="name" required maxlength="100"></label><label>Тип<select name="kind"><option value="bank">Банковский счёт</option><option value="cash">Наличные</option><option value="wallet">Кошелёк</option></select></label><label>Начальный остаток<input name="opening" inputmode="decimal" value="0,00" required></label></div><p class="hint">Привязанную карту не добавляйте как самостоятельный счёт.</p><button class="button" type="submit">Добавить счёт</button></form></section>`;}
+-function categories(){const d=app.document;return `${pageTitle('Категории','Доходы и расходы раздельны. Подкатегории — один уровень.')}<section class="panel">${d.categories.length?d.categories.map(c=>`<div class="tile ${c.parentId?'sub':''}"><div class="row wrap"><div><strong>${esc(c.name)}</strong> <span class="pill">${c.type==='expense'?'Расход':'Доход'}${c.archived?' · Архив':''}</span></div><div class="tools"><button class="button secondary" data-rename-category="${esc(c.id)}">Переименовать</button>${!c.archived?`<button class="button secondary" data-archive-category="${esc(c.id)}">В архив</button>`:''}</div></div></div>`).join(''):'<p class="empty">Добавьте свои категории. Готовые суммы и финансовые записи не подставляются.</p>'}</section><section class="panel"><h2>Новая категория / подкатегория</h2><form id="category-form"><div class="fields"><label>Название<input name="name" maxlength="100" required></label><label>Тип<select name="type" id="category-type"><option value="expense">Расход</option><option value="income">Доход</option></select></label><label class="full">Родитель<select name="parentId" id="parent-category">${parentOptions('expense')}</select></label></div><p><button class="button" type="submit">Добавить категорию</button></p></form></section>`;}
+-function parentOptions(type){return '<option value="">Без родителя</option>'+app.document.categories.filter(c=>c.type===type&&!c.parentId&&!c.archived).map(c=>`<option value="${esc(c.id)}">${esc(c.name)}</option>`).join('');}
+ function operations(){return ui.operations();}
+ function later(){return `${pageTitle(page,'')}<div class="panel read-only"><p>Этот раздел пока недоступен в текущей версии.</p><p class="hint">Ваши счета и повседневные операции доступны локально.</p></div>`;}
+ function settings(){return ui.settings();}
+@@ -50,16 +48,10 @@
+ function bind(){
+   root.querySelectorAll('[data-page]').forEach(b=>b.onclick=()=>{page=b.dataset.page;status='';prepared=null;render();window.scrollTo(0,0);});
+   for(const id of ['lock','lock-settings'])if(get(id))get(id).onclick=closeBase;
+-  if(get('setup'))get('setup').onsubmit=e=>{e.preventDefault();const v=formData(e.target);if(v.password!==v.repeat){setStatus('Пароли не совпали.',true);render();return;}run(async()=>{recovery=await app.setup({...v,opening:money(v.opening||'0')});});};
++  if(get('setup'))get('setup').onsubmit=e=>{e.preventDefault();const v=formData(e.target);if(v.password!==v.repeat){setStatus('Пароли не совпали.',true);render();return;}run(async()=>{recovery=await app.setup(v);});};
+   if(get('unlock'))get('unlock').onsubmit=e=>{e.preventDefault();const v=formData(e.target);run(()=>app.unlock(v.secret,v.mode),'База открыта. Данные на устройстве.');};
+   if(get('save-key'))get('save-key').onclick=()=>download(new Blob([`FinRate — ключ восстановления\n\n${recovery}\n\nХранить отдельно от защищённой копии. Никому не отправлять.\n`],{type:'text/plain;charset=utf-8'}),'FinRate_RECOVERY_KEY.txt');
+   if(get('ready'))get('ready').onclick=()=>{if(!get('key-saved').checked){setStatus('Сначала сохраните ключ и отметьте подтверждение.',true);render();return;}recovery=null;setStatus('Локальная база создана. Сохраните защищённую копию.');render();};
+-  if(get('account-form'))get('account-form').onsubmit=e=>{e.preventDefault();const v=formData(e.target);run(()=>app.mutate('account.add',d=>addAccount(d,{...v,opening:money(v.opening||'0')})),'Счёт сохранён на устройстве.');};
+-  if(get('category-form'))get('category-form').onsubmit=e=>{e.preventDefault();const v=formData(e.target);run(()=>app.mutate('category.add',d=>addCategory(d,{...v,parentId:v.parentId||null})),'Категория сохранена на устройстве.');};
+-  if(get('category-type'))get('category-type').onchange=e=>{get('parent-category').innerHTML=parentOptions(e.target.value);};
+-  for(const [attr,collection] of [['renameAccount','accounts'],['renameCategory','categories']])root.querySelectorAll(`[data-${attr==='renameAccount'?'rename-account':'rename-category'}]`).forEach(b=>b.onclick=()=>{const id=b.dataset[attr],item=app.document[collection].find(x=>x.id===id);dialog('Переименовать',`<label>Название<input name="name" value="${esc(item.name)}" maxlength="100" required></label>`,v=>app.mutate(collection+'.rename',d=>rename(d,collection,id,v.name)));});
+-  for(const [attr,collection] of [['archiveAccount','accounts'],['archiveCategory','categories']])root.querySelectorAll(`[data-${attr==='archiveAccount'?'archive-account':'archive-category'}]`).forEach(b=>b.onclick=()=>{if(confirm('Отправить в архив? История сохранится.'))run(()=>app.mutate(collection+'.archive',d=>archive(d,collection,b.dataset[attr])),'Запись архивирована; история сохранена.');});
+-  root.querySelectorAll('[data-reconcile]').forEach(b=>b.onclick=()=>{const id=b.dataset.reconcile,value=totals(app.document).balances[id],requestId=uid();dialog('Сверить остаток',`<p class="hint">Сверка не считается доходом или расходом.</p><label>Фактический остаток<input name="amount" inputmode="decimal" value="${value/100}" required></label>`,v=>app.mutate('account.reconcile',d=>{const delta=money(v.amount)-totals(d).balances[id];if(!delta)return false;return post(d,{id:requestId,kind:'adjustment',date:new Date().toLocaleDateString('en-CA'),accountId:id,amount:delta});}));});
+   if(get('backup'))get('backup').onclick=()=>run(async()=>{download(await app.backup(),fileName('FinRate_backup'));},'Защищённый файл подготовлен для скачивания. Проверьте его наличие в «Файлах» / загрузках.');
+   if(get('restore-start'))get('restore-start').onclick=restoreDialog;
+   if(get('safety-download'))get('safety-download').onclick=()=>run(async()=>{const current=await store.read();if(current?.generation!==prepared.expected?.generation||current?.vault.datasetId!==prepared.expected?.vault.datasetId)throw Object.assign(new Error('STALE'),{code:'STALE'});download(backupBlob(current.vault),fileName('FinRate_before_restore'));safetyDownloaded=true;},'Страховочный файл подготовлен. Проверьте, что он сохранён отдельно, затем подтвердите замену.');
+--- a/Source/src/management.mjs
++++ b/Source/src/management.mjs
+@@ -9,7 +9,7 @@
+  function categories(){return `<h1>Категории</h1><div class="actions"><button class="button" id="category-create">+ Категория</button><button class="button secondary" id="category-archive">${archiveCategories?'Активные':'Архив'}</button></div><input type="search" id="category-query" aria-label="Поиск категорий" value="${esc(categoryQuery)}" placeholder="Найти категорию или подкатегорию"><div id="category-results">${categoryRows()}</div>${d().categoryEdits.length?'<button class="text-button" id="taxonomy-undo">Отменить последнее изменение классификации</button>':''}`;}
+  function categoryRows(){return d().categories.filter(c=>!c.mergedInto&&c.archived===archiveCategories&&normalized(label(c)).includes(normalized(categoryQuery))).map(c=>`<div class="category-row"><button class="list-button" data-category-view="${esc(c.id)}">${esc(label(c))}<small>${c.type==='income'?'Доход':'Расход'}</small></button><button class="icon-button" data-category-actions="${esc(c.id)}" aria-label="Действия ${esc(c.name)}">⋯</button></div>`).join('')||'<p class="empty">Категорий в этом списке пока нет.</p>';}
+  function categoryView(id){const c=d().categories.find(c=>c.id===id);sheet(label(c),`${d().categories.filter(x=>x.parentId===id&&!x.mergedInto).map(x=>`<button class="list-button" data-child="${esc(x.id)}">${esc(x.name)}${x.archived?' · Архив':''}</button>`).join('')}<div>${d().operations.filter(o=>o.allocations.some(a=>a.categoryId===id||d().categories.find(c=>c.id===a.categoryId)?.parentId===id)).map(o=>`<button class="list-button" data-cat-operation="${esc(o.id)}">${o.date} · ${amt(o.amount)}</button>`).join('')||'<p>Операций пока нет.</p>'}</div><button class="button secondary" id="category-actions-open">Действия</button>`,el=>{el.querySelectorAll('[data-child]').forEach(b=>b.onclick=()=>categoryView(b.dataset.child));el.querySelectorAll('[data-cat-operation]').forEach(b=>b.onclick=()=>card(b.dataset.catOperation));el.querySelector('#category-actions-open').onclick=()=>categoryContext(id);});}
+- function categoryContext(id){const c=d().categories.find(c=>c.id===id);sheet('Действия категории',`${c.archived?'<button class="list-button" id="cat-restore">Восстановить</button>':`<button class="list-button" id="cat-rename">Переименовать</button>${c.parentId?'<button class="list-button" id="cat-move">Переместить</button>':''}<button class="list-button" id="cat-merge">Объединить</button><button class="list-button danger" id="cat-archive">Архивировать</button>${!c.parentId?'<button class="list-button" id="cat-child">+ Подкатегория</button>':''}`}`,el=>{
++ function categoryContext(id){const c=d().categories.find(c=>c.id===id);sheet('Действия категории',`${c.archived?`${!c.parentId?'<p class="hint">Восстановление основной категории также активирует все её подкатегории, в том числе архивированные отдельно.</p>':''}<button class="list-button" id="cat-restore">Восстановить${c.parentId?'':' с подкатегориями'}</button>`:`<button class="list-button" id="cat-rename">Переименовать</button>${c.parentId?'<button class="list-button" id="cat-move">Переместить</button>':''}<button class="list-button" id="cat-merge">Объединить</button><button class="list-button danger" id="cat-archive">Архивировать</button>${!c.parentId?'<button class="list-button" id="cat-child">+ Подкатегория</button>':''}`}`,el=>{
+   const update=(action,params)=>perform(()=>app.mutate('category.'+action,n=>categoryAction(n,id,action,params)),'Классификация обновлена.',()=>{pop();render();});
+   el.querySelector('#cat-restore')?.addEventListener('click',()=>update('restore'));
+   el.querySelector('#cat-archive')?.addEventListener('click',()=>sheet('Архивировать?',`<p>Исторические операции остаются. ${c.parentId?'':'Подкатегории также будут недоступны для новых записей.'}</p><button class="button" id="cat-confirm-archive">В архив</button>`,p=>p.querySelector('button#cat-confirm-archive').onclick=()=>perform(()=>app.mutate('category.archive',n=>categoryAction(n,id,'archive')),'Категория в архиве.',()=>{pop();pop();render();}),{mode:'compact'}));
+--- a/Source/src/model.mjs
++++ b/Source/src/model.mjs
+@@ -57,22 +57,44 @@
+     default:fail('OPERATION_KIND');
+   }
+ }
+-function validateOperation(d,o,historical=false){
++// A single read-only index per full-document validation.  Never persisted:
++ // the encrypted document schema, arithmetic and operation order stay unchanged.
++function validationIndex(d){
++  const accounts=new Map(d.accounts.map(a=>[a.id,a]));
++  const categories=new Map(d.categories.map(c=>[c.id,c]));
++  const expenses=new Map();
++  const refunds=new Map();
++  for(const o of d.operations){
++    if(o.kind==='expense')expenses.set(o.id,o);
++    if(o.kind!=='refund'||o.cancelled||!Array.isArray(o.allocations))continue;
++    let byCategory=refunds.get(o.referenceId);
++    if(!byCategory){byCategory=new Map();refunds.set(o.referenceId,byCategory);}
++    for(const allocation of o.allocations){
++      // Invalid entries are reported by validateOperation, with its own error code.
++      if(!allocation||!Number.isSafeInteger(allocation.amount))continue;
++      byCategory.set(allocation.categoryId,addSafe(byCategory.get(allocation.categoryId)||0,allocation.amount));
++    }
++  }
++  return {accounts,categories,expenses,refunds};
++}
++function validateOperation(d,o,historical=false,index=null){
+   text(o.id);date(o.date);if(!kinds.includes(o.kind))fail('OPERATION_KIND');integer(o.amount);
+   if(o.kind==='adjustment'?o.amount===0:o.amount<=0)fail('AMOUNT');
+-  const account=d.accounts.find(a=>a.id===o.accountId);if(!account||(!historical&&account.archived))fail('ACCOUNT');
+-  if(o.kind==='transfer'){const target=d.accounts.find(a=>a.id===o.toAccountId);if(!target||target.id===account.id||(!historical&&target.archived))fail('TRANSFER');}
++  const account=index?index.accounts.get(o.accountId):d.accounts.find(a=>a.id===o.accountId);if(!account||(!historical&&account.archived))fail('ACCOUNT');
++  if(o.kind==='transfer'){const target=index?index.accounts.get(o.toAccountId):d.accounts.find(a=>a.id===o.toAccountId);if(!target||target.id===account.id||(!historical&&target.archived))fail('TRANSFER');}
+   if(!Array.isArray(o.allocations)||o.allocations.length>100)fail('ALLOCATIONS');
+   if(['expense','income','refund'].includes(o.kind)){
+     if(!o.allocations.length)fail('ALLOCATIONS');let total=0;const seen=new Set();
+-    for(const x of o.allocations){const c=d.categories.find(c=>c.id===x.categoryId),uncategorized=d.schema>=3&&x.categoryId===null;if(!uncategorized&&(!c||c.type!==(o.kind==='income'?'income':'expense')||(!historical&&(c.archived||c.parentId&&d.categories.find(p=>p.id===c.parentId)?.archived)))||seen.has(x.categoryId))fail('CATEGORY');seen.add(x.categoryId);integer(x.amount);if(x.amount<=0)fail('AMOUNT');total=addSafe(total,x.amount);}
++    for(const x of o.allocations){const c=index?index.categories.get(x.categoryId):d.categories.find(c=>c.id===x.categoryId),uncategorized=d.schema>=3&&x.categoryId===null;if(!uncategorized&&(!c||c.type!==(o.kind==='income'?'income':'expense')||(!historical&&(c.archived||c.parentId&&(index?index.categories.get(c.parentId):d.categories.find(p=>p.id===c.parentId))?.archived)))||seen.has(x.categoryId))fail('CATEGORY');seen.add(x.categoryId);integer(x.amount);if(x.amount<=0)fail('AMOUNT');total=addSafe(total,x.amount);}
+     if(total!==o.amount)fail('SPLIT_SUM');
+   }else if(o.allocations.length)fail('ALLOCATIONS');
+   if(typeof o.note!=='string'||o.note.length>500)fail('SCHEMA');
+   if(o.kind==='refund'){
+-    const original=d.operations.find(x=>x.id===o.referenceId&&x.kind==='expense');if(!original||(!o.cancelled&&original.cancelled))fail('REFUND');
++    const original=index?index.expenses.get(o.referenceId):d.operations.find(x=>x.id===o.referenceId&&x.kind==='expense');if(!original||(!o.cancelled&&original.cancelled))fail('REFUND');
+     for(const x of o.allocations){const max=original.allocations.find(a=>a.categoryId===x.categoryId)?.amount||0;
+-      const prior=d.operations.filter(a=>a.kind==='refund'&&!a.cancelled&&a.referenceId===original.id&&a.id!==o.id).flatMap(a=>a.allocations).filter(a=>a.categoryId===x.categoryId).reduce((s,a)=>addSafe(s,a.amount),0);
++      const prior=index
++        ? addSafe(index.refunds.get(original.id)?.get(x.categoryId)||0,o.cancelled?0:-x.amount)
++        : d.operations.filter(a=>a.kind==='refund'&&!a.cancelled&&a.referenceId===original.id&&a.id!==o.id).flatMap(a=>a.allocations).filter(a=>a.categoryId===x.categoryId).reduce((s,a)=>addSafe(s,a.amount),0);
+       if(!o.cancelled&&addSafe(prior,x.amount)>max)fail('REFUND');}
+   }
+ }
+@@ -113,7 +135,8 @@
+   for(const [k,limit] of [['accounts',200],['categories',2000],['operations',20000],['events',30000]]){if(!Array.isArray(d[k])||d[k].length>limit)fail('SIZE');unique(d[k]);}
+   const names=new Set();for(const a of d.accounts){text(a.name);integer(a.opening);if(!['bank','cash','wallet'].includes(a.kind)||typeof a.archived!=='boolean')fail('SCHEMA');const n=normalized(a.name);if(names.has(n))fail('NAME_EXISTS');names.add(n);}
+   names.clear();for(const c of d.categories){text(c.name);if(!['expense','income'].includes(c.type)||typeof c.archived!=='boolean'||!(c.parentId===null||typeof c.parentId==='string'))fail('SCHEMA');if(c.parentId){const p=d.categories.find(x=>x.id===c.parentId);if(!p||p.parentId||p.type!==c.type)fail('CATEGORY_PARENT');}const n=c.type+'|'+c.parentId+'|'+normalized(c.name)+(c.mergedInto?'|merged:'+c.id:'');if(names.has(n))fail('NAME_EXISTS');names.add(n);}
+-  for(const o of d.operations){validateOperation(d,o,true);
++  const index=validationIndex(d);
++  for(const o of d.operations){validateOperation(d,o,true,index);
+     if(o.cancelled!==undefined&&typeof o.cancelled!=='boolean')fail('SCHEMA');
+     if(o.pending!==undefined&&typeof o.pending!=='boolean')fail('SCHEMA');
+     if(o.stage!==undefined){if(o.kind!=='transfer'||!['waiting','debited','received','returned'].includes(o.stage))fail('TRANSFER');
+--- a/Source/src/style.css
++++ b/Source/src/style.css
+@@ -71,3 +71,22 @@
+ @media(max-width:760px) and (max-height:700px){.overview{gap:8px}.dual-summary .summary-main{min-height:96px;padding:14px 16px}.dual-summary .big{font-size:2rem}.dual-summary .free-row{min-height:74px;padding:14px 16px}.home-tile{min-height:66px;padding:10px 12px}.home-tile strong{font-size:1rem}.quick-actions{margin-top:0}.quick-action{min-height:44px}.local-status{font-size:.65rem}.draft-home{min-height:44px}}
+ @media(min-width:761px){.overview{max-width:700px}.sheet.large{width:min(820px,calc(100% - 48px));max-height:calc(var(--viewport-height,100dvh) - 48px)}.sheet.compact{width:min(480px,calc(100% - 48px))}.focus-form{max-width:700px;margin:auto}.focus-mode .sheet.focus-sheet{width:min(820px,calc(100% - 48px))}.numeric-finish{right:calc((100vw - min(820px,100vw - 48px))/2 + 30px)}}
+ @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
++
++
++/* Quality pass 2.2: every primary destination has a legible visible label.
++   Do not hide navigation text to make the dock artificially short. */
++@media(max-width:760px){
++ :root{--dock-reserve:calc(7rem + var(--dock-safe-bottom))}
++ .bottom{align-items:stretch}
++ .bottom button,.bottom button.active{min-height:4.35rem;gap:4px}
++ .bottom .nav-label,.bottom button.active .nav-label{
++   display:block;font-size:.76rem;line-height:1.18;white-space:normal;
++   overflow-wrap:anywhere;text-align:center;font-weight:550
++ }
++ .bottom button.active .nav-label{font-weight:750}
++ .bottom button svg,.bottom button.active svg{width:23px;height:23px}
++ .local-status{font-size:.78rem;line-height:1.5}
++}
++@media(prefers-reduced-transparency:reduce){
++ #app>header,.bottom{backdrop-filter:none;background:var(--white)}
++}
+--- /dev/null
++++ b/Source/tests/ui-source.test.mjs
+@@ -0,0 +1,34 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {readFile} from 'node:fs/promises';
++const read=name=>readFile(new URL('../src/'+name,import.meta.url),'utf8');
++
++test('authentication uses explicit forms instead of modifying legacy HTML',async()=>{
++  const app=await read('app.mjs');
++  assert.match(app,/function auth\(\)/);
++  assert.match(app,/const authForm=exists/);
++  assert.match(app,/id="unlock"/);
++  assert.match(app,/id="setup"/);
++  assert.doesNotMatch(app,/legacyAuth/);
++  assert.doesNotMatch(app,/\.replace\(\/<label>/);
++});
++
++test('first account remains an explicit zero-opening domain default',async()=>{
++  const app=await read('app.mjs'),service=await read('service.mjs');
++  assert.match(app,/app\.setup\(v\)/);
++  assert.match(service,/addAccount\(d,\{name:name\|\|'Основной счёт',kind:kind\|\|'wallet',opening:opening\|\|0\}\)/);
++});
++
++test('category restore warning describes existing group restore behavior',async()=>{
++  const management=await read('management.mjs');
++  assert.match(management,/Восстановление основной категории также активирует все её подкатегории/);
++  assert.match(management,/id="cat-restore"/);
++});
++
++test('mobile primary dock never hides inactive labels in the final CSS rule',async()=>{
++  const css=await read('style.css');
++  const qualitySection=css.slice(css.indexOf('Quality pass 2.2:'));
++  assert.match(qualitySection,/\.bottom \.nav-label,\.bottom button\.active \.nav-label/);
++  assert.match(qualitySection,/display:block/);
++  assert.match(qualitySection,/--dock-reserve:calc\(7rem/);
++});
+--- /dev/null
++++ b/Source/tests/validation-index.test.mjs
+@@ -0,0 +1,82 @@
++import test from 'node:test';
++import assert from 'node:assert/strict';
++import {newDocument,addAccount,addCategory,post,validateDocument,changed,totals} from '../src/model.mjs';
++
++function fixture() {
++  const d=newDocument();
++  addAccount(d,{id:'a',name:'Тестовый счёт',opening:1000000});
++  addCategory(d,{id:'food',name:'Покупки'});
++  addCategory(d,{id:'travel',name:'Поездки'});
++  return d;
++}
++const expense=(id,amount=1000,categoryId='food')=>({
++  id,kind:'expense',date:'2026-10-14',accountId:'a',amount,
++  allocations:[{categoryId,amount}],referenceId:null,note:''
++});
++const refund=(id,referenceId,amount=100,categoryId='food')=>({
++  id,kind:'refund',date:'2026-10-14',accountId:'a',amount,
++  allocations:[{categoryId,amount}],referenceId,note:''
++});
++function expectCode(fn,code){assert.throws(fn,e=>e.code===code);}
++
++test('independent refunds remain bounded by their own purchase',()=>{
++  const d=fixture();
++  post(d,expense('e1',500));post(d,expense('e2',700,'travel'));
++  post(d,refund('r1','e1',200));
++  post(d,refund('r2','e1',300));
++  post(d,refund('r3','e2',600,'travel'));
++  validateDocument(d);
++  assert.equal(totals(d).expense,100);
++  expectCode(()=>post(d,refund('excess','e1',1)),'REFUND');
++  expectCode(()=>post(d,refund('excess2','e2',101,'travel')),'REFUND');
++  assert.equal(d.operations.length,5);
++});
++
++test('validation is independent of storage order for historical refunds',()=>{
++  const d=fixture();
++  d.operations=[refund('r1','e',400),expense('e',1000),refund('r2','e',600)];
++  assert.equal(validateDocument(d),d);
++  d.operations.push(refund('r3','e',1));
++  expectCode(()=>validateDocument(d),'REFUND');
++});
++
++test('cancelled refund does not reduce available refund cap',()=>{
++  const d=fixture();
++  d.operations=[expense('e',1000),{...refund('r1','e',900),cancelled:true},refund('r2','e',1000)];
++  validateDocument(d);
++  d.operations[1].cancelled=false;
++  expectCode(()=>validateDocument(d),'REFUND');
++});
++
++test('cancelled original blocks active refund but not a cancelled historical refund',()=>{
++  const d=fixture();
++  d.operations=[{...expense('e',1000),cancelled:true},{...refund('r','e',100),cancelled:true}];
++  validateDocument(d);
++  d.operations[1].cancelled=false;
++  expectCode(()=>validateDocument(d),'REFUND');
++});
++
++test('historical archive and split category caps are preserved',()=>{
++  const d=fixture();
++  d.operations=[{
++    ...expense('e',1000),allocations:[{categoryId:'food',amount:600},{categoryId:'travel',amount:400}]
++  }, refund('r1','e',500),refund('r2','e',400,'travel')];
++  d.categories[0].archived=true;
++  validateDocument(d);
++  d.operations.push(refund('r3','e',101));
++  expectCode(()=>validateDocument(d),'REFUND');
++});
++
++test('many refunds of one purchase use exact integer caps and do not alter document schema',()=>{
++  const d=fixture();
++  d.operations.push(expense('original',10000));
++  for(let i=0;i<2000;i++)d.operations.push(refund('refund-'+i,'original',5));
++  validateDocument(d);
++  assert.equal(d.schema,3);
++  assert.equal(d.operations.length,2001);
++  d.operations.push(refund('extra','original',1));
++  expectCode(()=>validateDocument(d),'REFUND');
++  d.operations.pop();
++  changed(d,'test.validation');
++  assert.equal(d.revision,1);
++});
+--- /dev/null
++++ b/Source/tools/benchmark-validation.mjs
+@@ -0,0 +1,29 @@
++// Synthetic performance probe; it never opens IndexedDB or real FinRate data.
++// Run with: node tools/benchmark-validation.mjs
++import {performance} from 'node:perf_hooks';
++import {newDocument,addAccount,addCategory,validateDocument} from '../src/model.mjs';
++function fixture(count){
++  const d=newDocument();
++  addAccount(d,{id:'a',name:'Синтетический счёт',opening:100000});
++  addCategory(d,{id:'c',name:'Синтетическая категория'});
++  const expenses=Math.ceil(count*2/3);
++  for(let i=0;i<expenses;i++)d.operations.push({
++    id:'expense-'+i,kind:'expense',date:'2026-10-14',accountId:'a',
++    amount:100000,allocations:[{categoryId:'c',amount:100000}],note:''
++  });
++  for(let i=0;i<count-expenses;i++)d.operations.push({
++    id:'refund-'+i,kind:'refund',date:'2026-10-14',
++    accountId:'a',referenceId:'expense-'+i,amount:1,
++    allocations:[{categoryId:'c',amount:1}],note:''
++  });
++  return d;
++}
++for(const count of [1000,5000,15000]){
++  const doc=fixture(count),samples=[];
++  for(let i=0;i<5;i++){
++    const start=performance.now();validateDocument(doc);
++    samples.push(performance.now()-start);
++  }
++  samples.sort((a,b)=>a-b);
++  console.log(JSON.stringify({count,medianMilliseconds:+samples[2].toFixed(2)}));
++}
+--- a/Source/tools/build.mjs
++++ b/Source/tools/build.mjs
+@@ -15,5 +15,5 @@
+ await build({entryPoints:['src/sw.mjs'],bundle:true,format:'iife',outfile:'dist/sw-base.js',minify:true,target:['es2022'],legalComments:'inline'});
+ const {count,size,warnings}=await injectManifest({swSrc:'dist/sw-base.js',swDest:'dist/sw.js',globDirectory:'dist',globPatterns:['index.html','icon.svg','icon-192.png','icon-512.png','manifest.webmanifest'],maximumFileSizeToCacheInBytes:2*1024*1024});
+ const {unlink}=await import('node:fs/promises');await unlink('dist/sw-base.js');if(warnings.length)throw new Error(warnings.join('\n'));
+-await writeFile('evidence/build.json',JSON.stringify({build:'p2.1-build02',shellFiles:count,shellBytes:size,scriptHash:hash,externalRuntimeDependencies:0,published:false,warnings},null,2));
++await writeFile('evidence/build.json',JSON.stringify({build:'p2.2-quality01',shellFiles:count,shellBytes:size,scriptHash:hash,externalRuntimeDependencies:0,published:false,warnings},null,2));
+ console.log('Build OK:',count,'precache assets;',html.length,'HTML characters; unpublished.');
