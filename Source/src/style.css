@@ -589,7 +589,7 @@ body.keyboard-navigation .context-options button:focus-visible { background:tran
 .context-options button.context-selected,
 body.keyboard-navigation .context-options button.context-selected:focus-visible { background:var(--menu-selected); }
 .context-options button:disabled { color:var(--muted); opacity:.65; }
-.field-editor .sheet-head { display:grid; grid-template-columns:44px minmax(0,1fr) auto; }
+.field-editor .sheet-head { display:grid; grid-template-columns:auto minmax(0,1fr) auto; }
 .field-editor .sheet-head h2 { text-align:center; }
 .field-done { min-height:44px; padding:8px; color:var(--blue); font-weight:600; white-space:nowrap; }
 .field-editor .field-input,.field-editor .field-input:focus,.field-editor .field-input:focus-visible { flex:1; min-height:44px; width:100%; margin:0; padding:8px 2px; border:0; border-radius:0; outline:0; box-shadow:none; background:transparent; color:var(--ink); font-size:var(--field-text-size); line-height:1.65; }
