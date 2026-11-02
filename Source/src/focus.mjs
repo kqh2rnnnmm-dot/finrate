@@ -112,5 +112,5 @@ export function createFocus({app,sheet,pop,perform,askLeave,captureReturn,fieldE
   el.querySelector('[data-field=note]').onclick=()=>textValue('Примечание',f.note,v=>{f.note=v;changed();el.querySelector('[data-field=note] strong').textContent=compactText(v)||'Добавить';});el.querySelector('[data-more=split]')?.addEventListener('click',()=>splitEditor(f,changed));
  },{mode:'compact',onBack:changed});}
  function splitEditor(...args){return splitter.open(...args);}
- return {setIncomeEntry:fn=>incomeEntry=fn,start,editor,createAccount,allocateOpening,accountPicker,categoryPicker,newCategory,fresh,categoryName,textValue};
+ return {notes:fieldEditor,setIncomeEntry:fn=>incomeEntry=fn,start,editor,createAccount,allocateOpening,accountPicker,categoryPicker,newCategory,fresh,categoryName,textValue};
 }
