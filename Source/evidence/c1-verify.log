@@ -1,0 +1,5 @@
+{"build":"b1.2.1-layout01","r30ProtectedUnchanged":32,"securityCoreUnchanged":true,"creditSchema":5,"publicAllowlist":7,"csp":"PASS","scope":"./","noSeedCredentialsOrData":"PASS","licenses":"PASS","published":false}
+{"b1ProtectedUnchanged":38,"correctiveModules":["src/planning.mjs","src/planning-ui.mjs","src/operations.mjs","src/activity.mjs","src/help.mjs","src/app.mjs","src/focus.mjs","src/ui.mjs","src/activity-ui.mjs","src/style.css","src/context-menu.mjs","src/icons.mjs","src/recurring-income.mjs"]}
+{"b11ProtectedUnchanged":39,"creditCoreUnchanged":true,"securityCoreUnchanged":true}
+{"b12ProtectedUnchanged":50,"changedProductionModules":["style.css","app.mjs (build ID only)"],"financialModulesByteIdentical":true}
+{"c1Allowed":["src/surfaces.mjs","src/planning-ui.mjs","src/field-editor.mjs","src/navigation.mjs","src/style.css","src/focus.mjs","src/ui.mjs","src/management.mjs","src/activity-ui.mjs","src/help.mjs","src/app.mjs"],"protectedModulesByteIdentical":true}

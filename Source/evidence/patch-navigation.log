@@ -2,7 +2,7 @@ PASS 320 primary section replaces brand; no duplicate title; edge only outside H
 PASS 320 scoped search, no Menu self-card, full-page menu, one-step Back and scroll restoration
 PASS 320 archives consistent; quick actions overlay without page shift; hidden throughout operation including pickers
 PASS 320 native touch dock scrub: live multi-tab crossing, reversal, commit and cancellation
-PASS 320 content swipe over cards; native vertical scrolling remains enabled
+PASS 320 C1 horizontal swipe in operation list stays on Operations; native vertical scrolling remains enabled
 PASS 320 down-to-end and reappearance, no horizontal overflow, themes retained, encrypted record byte-identical
 PASS 320 full viewport editor, distinct fields in both themes, translucent island, creation hidden for the entire form
 PASS 320 unfinished account form hides creation; discard returns to real account without financial writes
@@ -10,7 +10,7 @@ PASS 402 primary section replaces brand; no duplicate title; edge only outside H
 PASS 402 scoped search, no Menu self-card, full-page menu, one-step Back and scroll restoration
 PASS 402 archives consistent; quick actions overlay without page shift; hidden throughout operation including pickers
 PASS 402 native touch dock scrub: live multi-tab crossing, reversal, commit and cancellation
-PASS 402 content swipe over cards; native vertical scrolling remains enabled
+PASS 402 C1 horizontal swipe in operation list stays on Operations; native vertical scrolling remains enabled
 PASS 402 down-to-end and reappearance, no horizontal overflow, themes retained, encrypted record byte-identical
 PASS 402 full viewport editor, distinct fields in both themes, translucent island, creation hidden for the entire form
 PASS 402 unfinished account form hides creation; discard returns to real account without financial writes

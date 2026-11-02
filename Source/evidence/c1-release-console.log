@@ -1,0 +1,34 @@
+
+> finrate-actions@0.3.4-c1 check:release
+> node tools/check-release.mjs
+
+PASS release-build
+PASS patch-unit
+PASS c1-browser
+PASS b12-browser
+PASS b1-period-sync-browser
+PASS b1-browser
+PASS b11-browser
+PASS r30-browser
+PASS edge-lifecycle-browser
+PASS credit-browser
+PASS notice-motion-browser
+PASS entryfix-browser
+PASS combined-browser
+PASS security-lifecycle-browser
+PASS history-browser
+PASS compact-scroll-browser
+PASS feedback-browser
+PASS security-browser
+PASS modality-browser
+PASS home-browser
+PASS layout-browser
+PASS revision-browser
+PASS shell-browser
+PASS control-browser
+PASS patch-navigation
+PASS patch-lists
+PASS patch-forms
+FAIL unified-browser
+FAIL patch-upgrade
+unified-browser failed: see evidence/unified-browser.log

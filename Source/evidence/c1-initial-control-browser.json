@@ -1,0 +1,18 @@
+{
+  "build": "p2.1-combined01",
+  "checks": [
+    "320 operation quick actions omit Open; no duplicate account; direct return preserves sort and ciphertext",
+    "320 category hierarchy and scoped type/search; contextual outline plus; creation hidden in form; no ellipsis",
+    "320 merge candidates fixed at source type; no premature writes; final merge relinks records without changing financial totals",
+    "320 subcategory merge fixed type; cancelling a new parent writes nothing; archived child remains reachable/restorable through parent",
+    "320 account rename is separate; nested current correction keeps pending metadata; revealed card refreshes; opening mode creates no adjustment"
+  ],
+  "failures": [
+    "locator.waitFor: Timeout 10000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.overview') to be visible\u001b[22m\n\n    at unlock (/workspace/finrate/Source/tests/control-browser.mjs:8:159)\n    at async file:///workspace/finrate/Source/tests/control-browser.mjs:25:412"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "actualIPhone": false,
+  "published": false,
+  "visible": "FinRate\nДоступно обновление\nОбновить\nВойти в FinRate\n\nДанные хранятся в этом браузере. Пароль никуда не отправляется.\n\nОткрыть с помощью\nОсновной пароль\nКлюч восстановления\nПароль или ключ\n\nВойти\n\nЕсть защищённая копия?\nВосстановить копию\n\nБез аналитики и внешней отправки. Очистка данных браузера удалит данные FinRate на этом устройстве. Сохраняйте защищённую копию отдельно."
+}

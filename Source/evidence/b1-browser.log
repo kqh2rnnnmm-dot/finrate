@@ -1,2 +1,7 @@
 PASS five-mode selector persists preference without posting money
 PASS unfinished refund draft persists across reload and leaves all financial metrics unchanged
+PASS refund draft does not block a new credit-card purchase
+PASS draft completion recomputes changed debt; surplus becomes own money exactly once
+PASS confirmed actual withdrawal moves refund surplus to debit with no income or duplicate expense
+PASS B1 home and forecast surfaces fit 320/402/736 widths in both themes without document scrolling
+PASS no browser exceptions and no premature support UI

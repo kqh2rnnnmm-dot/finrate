@@ -1,5 +1,5 @@
 {
-  "build": "b1.2-plans01",
+  "build": "b1.2.1-layout01",
   "checks": [
     "1/7 absent preferences: current month on both surfaces",
     "2 Home three months synchronizes financial planning",

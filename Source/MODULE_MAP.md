@@ -1,3 +1,18 @@
+# C1 · дополнение карты модулей
+
+- Source/src/field-editor.mjs: единый view/preview/open/enhance; сохранение пробелов и лимитов, textarea родителя остаётся источником формы.
+- Source/src/focus.mjs, ui.mjs, management.mjs: существующие операции/счета используют общий механизм заметок.
+- Source/src/activity-ui.mjs: полный просмотр исторических note без редактирования снимка.
+- Source/src/planning-ui.mjs: доступ к существующим comment закрытых поступлений, без изменения финансовых полей.
+- Source/src/surfaces.mjs: завершение числового поля при закрытии цифровой клавиатуры; общий стек сохранён.
+- Source/src/navigation.mjs, style.css: границы жестов списков, выделение пользовательского текста, общие gap tokens.
+- Source/src/help.mjs: FAQ по фактическому C1. app.mjs: только build ID.
+- Source/tests/c1-browser.mjs, C1_BASELINE_SHA256.json, tools/verify-delivery.mjs: адресные проверки и побайтная защита остальных исходников.
+
+Полная таблица поверхностей и полей: C1_UI_INVENTORY.md.
+
+---
+
 > B1.1: актуальный периметр — ../B11_SCOPE.json; recurring-income.mjs задаёт расписания, planning.mjs — связи и подтверждения, planning-ui.mjs — последовательный ввод; focus.mjs и ui.mjs связывают единый вход дохода. Нижеследующая карта содержит историю предыдущих выпусков.
 
 > Актуальное адресное исправление: единый период в planning.mjs / planning-ui.mjs и переход в operations.mjs. Полный периметр относительно готовой B1 — ../Documents/PERIOD_SYNC_SCOPE.json.

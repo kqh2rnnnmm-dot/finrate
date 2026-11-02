@@ -1,0 +1,18 @@
+{
+  "baseline": "B1.2.1",
+  "changed": [
+    "src/activity-ui.mjs",
+    "src/style.css",
+    "src/focus.mjs",
+    "src/ui.mjs",
+    "src/field-editor.mjs",
+    "src/planning-ui.mjs",
+    "src/management.mjs",
+    "src/app.mjs",
+    "src/navigation.mjs",
+    "src/surfaces.mjs",
+    "src/help.mjs"
+  ],
+  "unchangedCount": 41,
+  "total": 52
+}

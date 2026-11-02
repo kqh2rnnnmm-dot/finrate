@@ -1,3 +1,9 @@
-# Source FinRate B1.2.1
+# Source FinRate C1
 
-0.3.3-b1.2.1 · b1.2.1-layout01. Полная сборка B1.2 с адресным исправлением CSS. Финансовый код и схема 5 не изменены. Актуальный отчёт TEST_REPORT_B1_2_1.md в корне архива. npm ci; npm run build; npm test; npm run check:release. Chromium задаётся через FINRATE_CHROMIUM либо устанавливается для Playwright. dist уже готов для GitHub Pages.
+`0.3.4-c1` · `c1-ui01`, основа B1.2.1 (`b1.2.1-layout01`). Финансовый код и схема 5 прежние.
+
+Сборка: `npm ci`, `npm run build`. Проверка: `npm run check:release` (включает модульные и браузерные проверки). Chromium задаётся через `FINRATE_CHROMIUM` либо устанавливается для Playwright. Только инструменты тестирования используют браузерный runtime; приложение не подключает внешние сервисы.
+
+Отчёт: [C1_TEST_REPORT.md](../Documents/C1_TEST_REPORT.md). [Карта полей и компонентов](../Documents/C1_UI_INVENTORY.md). [Приёмка iPhone](../Documents/C1_IPHONE_ACCEPTANCE.md).
+
+`dist/` и семь публичных файлов в корне репозитория соответствуют исходникам. Наличие файлов в ветке C1 не означает публикации: GitHub Pages использует main. Не сливать и не публиковать без отдельного согласия владельца.

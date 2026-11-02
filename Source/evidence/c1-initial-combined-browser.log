@@ -1,0 +1,14 @@
+PASS 320 light stationary hold, continuing touch selection, no tab switch on hold; dock scrub preserved
+PASS 320 light settings configurator retained; lock title only, explicit confirmation/cancel, intact ciphertext and return
+PASS 320 light archive is blue, existing names and confirmations retained
+PASS 320 light reset: wrong credential and cancel preserve data; final reset clears both stores, other tab and memory; onboarding and external copy remain
+PASS 320 dark stationary hold, continuing touch selection, no tab switch on hold; dock scrub preserved
+PASS 320 dark settings configurator retained; lock title only, explicit confirmation/cancel, intact ciphertext and return
+PASS 320 dark archive is blue, existing names and confirmations retained
+{
+  "checks": 7,
+  "errors": [],
+  "failures": [
+    "locator.waitFor: Timeout 30000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#unlock') to be detached\u001b[22m\n\u001b[2m    64 × locator resolved to visible <form id=\"unlock\">…</form>\u001b[22m\n\n    at unlock (/workspace/finrate/Source/tests/combined-browser.mjs:15:172)\n    at async file:///workspace/finrate/Source/tests/combined-browser.mjs:41:56"
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "build": "b1.2-plans01",
+  "build": "b1.2.1-layout01",
   "checks": [
     "no available planned income opens ordinary income directly",
     "wizard reuses common category/subcategory/account creation, four schedules and review edit",

@@ -7,7 +7,7 @@
     "320 scoped search, no Menu self-card, full-page menu, one-step Back and scroll restoration",
     "320 archives consistent; quick actions overlay without page shift; hidden throughout operation including pickers",
     "320 native touch dock scrub: live multi-tab crossing, reversal, commit and cancellation",
-    "320 content swipe over cards; native vertical scrolling remains enabled",
+    "320 C1 horizontal swipe in operation list stays on Operations; native vertical scrolling remains enabled",
     "320 down-to-end and reappearance, no horizontal overflow, themes retained, encrypted record byte-identical",
     "320 full viewport editor, distinct fields in both themes, translucent island, creation hidden for the entire form",
     "320 unfinished account form hides creation; discard returns to real account without financial writes",
@@ -15,7 +15,7 @@
     "402 scoped search, no Menu self-card, full-page menu, one-step Back and scroll restoration",
     "402 archives consistent; quick actions overlay without page shift; hidden throughout operation including pickers",
     "402 native touch dock scrub: live multi-tab crossing, reversal, commit and cancellation",
-    "402 content swipe over cards; native vertical scrolling remains enabled",
+    "402 C1 horizontal swipe in operation list stays on Operations; native vertical scrolling remains enabled",
     "402 down-to-end and reappearance, no horizontal overflow, themes retained, encrypted record byte-identical",
     "402 full viewport editor, distinct fields in both themes, translucent island, creation hidden for the entire form",
     "402 unfinished account form hides creation; discard returns to real account without financial writes"

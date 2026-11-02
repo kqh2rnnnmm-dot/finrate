@@ -1,0 +1,158 @@
+
+> finrate-actions@0.3.3-b1.2.1 test
+> node --test --test-reporter=tap tests/*.test.mjs
+
+TAP version 13
+# Subtest: tests/activity.test.mjs
+ok 1 - tests/activity.test.mjs
+  ---
+  duration_ms: 433.19547
+  type: 'test'
+  ...
+# Subtest: tests/artifact.test.mjs
+ok 2 - tests/artifact.test.mjs
+  ---
+  duration_ms: 124.27297
+  type: 'test'
+  ...
+# Subtest: tests/b1-credit.test.mjs
+ok 3 - tests/b1-credit.test.mjs
+  ---
+  duration_ms: 79.994618
+  type: 'test'
+  ...
+# Subtest: tests/b1-help.test.mjs
+ok 4 - tests/b1-help.test.mjs
+  ---
+  duration_ms: 48.972541
+  type: 'test'
+  ...
+# Subtest: tests/b1-integration.test.mjs
+ok 5 - tests/b1-integration.test.mjs
+  ---
+  duration_ms: 1295.066108
+  type: 'test'
+  ...
+# Subtest: tests/b1-period-sync.test.mjs
+ok 6 - tests/b1-period-sync.test.mjs
+  ---
+  duration_ms: 1204.583184
+  type: 'test'
+  ...
+# Subtest: tests/b1-planning.test.mjs
+ok 7 - tests/b1-planning.test.mjs
+  ---
+  duration_ms: 66.71343
+  type: 'test'
+  ...
+# Subtest: tests/b11-recurring.test.mjs
+ok 8 - tests/b11-recurring.test.mjs
+  ---
+  duration_ms: 377.981282
+  type: 'test'
+  ...
+# Subtest: tests/b12-plans.test.mjs
+ok 9 - tests/b12-plans.test.mjs
+  ---
+  duration_ms: 66.272687
+  type: 'test'
+  ...
+# Subtest: tests/block02.test.mjs
+ok 10 - tests/block02.test.mjs
+  ---
+  duration_ms: 1036.359547
+  type: 'test'
+  ...
+# Subtest: tests/credit.test.mjs
+ok 11 - tests/credit.test.mjs
+  ---
+  duration_ms: 74.834662
+  type: 'test'
+  ...
+# Subtest: tests/feedback-state.test.mjs
+ok 12 - tests/feedback-state.test.mjs
+  ---
+  duration_ms: 40.641927
+  type: 'test'
+  ...
+# Subtest: tests/interaction.test.mjs
+ok 13 - tests/interaction.test.mjs
+  ---
+  duration_ms: 45.211315
+  type: 'test'
+  ...
+# Subtest: tests/leave-guard.test.mjs
+ok 14 - tests/leave-guard.test.mjs
+  ---
+  duration_ms: 48.486011
+  type: 'test'
+  ...
+# Subtest: tests/list-state.test.mjs
+ok 15 - tests/list-state.test.mjs
+  ---
+  duration_ms: 59.548283
+  type: 'test'
+  ...
+# Subtest: tests/model.test.mjs
+ok 16 - tests/model.test.mjs
+  ---
+  duration_ms: 64.079346
+  type: 'test'
+  ...
+# Subtest: tests/money-input.test.mjs
+ok 17 - tests/money-input.test.mjs
+  ---
+  duration_ms: 46.973372
+  type: 'test'
+  ...
+# Subtest: tests/operations.test.mjs
+ok 18 - tests/operations.test.mjs
+  ---
+  duration_ms: 733.441395
+  type: 'test'
+  ...
+# Subtest: tests/reset.test.mjs
+ok 19 - tests/reset.test.mjs
+  ---
+  duration_ms: 3836.7803
+  type: 'test'
+  ...
+# Subtest: tests/security.test.mjs
+ok 20 - tests/security.test.mjs
+  ---
+  duration_ms: 5428.197879
+  type: 'test'
+  ...
+# Subtest: tests/session-policy.test.mjs
+ok 21 - tests/session-policy.test.mjs
+  ---
+  duration_ms: 40.467112
+  type: 'test'
+  ...
+# Subtest: tests/split-state.test.mjs
+ok 22 - tests/split-state.test.mjs
+  ---
+  duration_ms: 68.916439
+  type: 'test'
+  ...
+# Subtest: tests/ui-values.test.mjs
+ok 23 - tests/ui-values.test.mjs
+  ---
+  duration_ms: 62.180288
+  type: 'test'
+  ...
+# Subtest: tests/vault.test.mjs
+ok 24 - tests/vault.test.mjs
+  ---
+  duration_ms: 3146.546866
+  type: 'test'
+  ...
+1..24
+# tests 24
+# suites 0
+# pass 24
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 18445.995288
