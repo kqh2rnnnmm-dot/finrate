@@ -16,7 +16,7 @@ export function installNavigationGestures({root,getPage,navigate,blocked}){
   if(!e.isPrimary){cancel();return;}if(!canUse()||e.button!==0)return;
   const el=e.target.closest('.bottom');
   if(el){drag={id:e.pointerId,startX:e.clientX,startY:e.clientY,initial:getPage(),moved:false};el.dataset.pressed='true';el.setPointerCapture(e.pointerId);return;}
-  if(!e.target.closest('main')||e.target.closest('input,textarea,select,a,[contenteditable=true],[data-no-swipe],[role=slider]')||e.clientX<24||e.clientX>innerWidth-24)return;
+  if(!e.target.closest('main')||e.target.closest('input,textarea,select,a,[contenteditable=true],[data-no-swipe],[role=slider],.operation-row,.list-button,.entity-history,.activity-events,.category-row,.full-note')||e.clientX<24||e.clientX>innerWidth-24)return;
   const selection=getSelection();if(selection&&!selection.isCollapsed)return;
   content={id:e.pointerId,x:e.clientX,y:e.clientY,page:getPage(),axis:null};
  });

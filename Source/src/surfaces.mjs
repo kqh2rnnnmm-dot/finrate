@@ -63,7 +63,13 @@ export function updateViewport(reveal=true){
   document.documentElement.style.setProperty('--viewport-height',height+'px');document.documentElement.style.setProperty('--viewport-top',top+'px');
   document.body.classList.toggle('keyboard-open',keyboardOpen);
   const active=document.activeElement;
-  if(keyboardWasOpen&&!keyboardOpen&&active?.closest('[data-field-editor]'))active.blur();
+  if(keyboardWasOpen&&!keyboardOpen&&active?.closest('[data-field-editor]')){
+   const editor=active.closest('[data-field-editor]');active.blur();
+   // Native iOS Done may dismiss the decimal keyboard without an Enter event.
+   // Accept this field only; parent financial forms still require explicit save.
+   // A page button owns its own cancel/navigation action instead.
+   if(!document.hidden&&numeric(active)&&activeSurface()===editor&&(!pointerControl||performance.now()-pointerAt>500))editor.finrateApplyValue?.();
+  }
   keyboardWasOpen=keyboardOpen;const ensureVisible=revealInput;revealInput=false;
   // A keyboard resize/focus reveals the field once. Viewport panning must
   // remain under the user's control instead of snapping back to the caret.

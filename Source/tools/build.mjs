@@ -15,5 +15,5 @@ await writeFile('dist/manifest.webmanifest',JSON.stringify({id:'./',name:'FinRat
 await build({entryPoints:['src/sw.mjs'],bundle:true,format:'iife',outfile:'dist/sw-base.js',minify:true,target:['es2022'],legalComments:'inline'});
 const {count,size,warnings}=await injectManifest({swSrc:'dist/sw-base.js',swDest:'dist/sw.js',globDirectory:'dist',globPatterns:['index.html','icon.svg','icon-192.png','icon-512.png','manifest.webmanifest','apple-touch-icon.png'],maximumFileSizeToCacheInBytes:2*1024*1024});
 const {unlink}=await import('node:fs/promises');await unlink('dist/sw-base.js');if(warnings.length)throw new Error(warnings.join('\n'));
-await writeFile('evidence/build.json',JSON.stringify({build:'b1.2.1-layout01',shellFiles:count,shellBytes:size,scriptHash:hash,externalRuntimeDependencies:0,published:false,warnings},null,2));
+await writeFile('evidence/build.json',JSON.stringify({build:'c1-ui01',shellFiles:count,shellBytes:size,scriptHash:hash,externalRuntimeDependencies:0,published:false,warnings},null,2));
 console.log('Build OK:',count,'precache assets;',html.length,'HTML characters; unpublished.');

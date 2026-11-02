@@ -77,11 +77,11 @@ small,.hint,.safe,.footer-note,dt { color:var(--muted); font-size:.82rem; line-h
 .expense,.negative,button.danger { color:var(--red); }
 .income,.refund { color:var(--income); }
 .transfer { color:var(--transfer); }
-.row,.actions,.tools { display:flex; align-items:center; gap:12px; }
+.row,.actions,.tools { display:flex; align-items:center; gap:var(--peer-gap); }
 .row { justify-content:space-between; }
 .row.wrap,.actions,.tools { flex-wrap:wrap; }
 .row>*,.fields>*,main,form,input,select,textarea { min-width:0; max-width:100%; }
-.stack { display:grid; gap:12px; }
+.stack { display:grid; gap:var(--peer-gap); }
 .stack>*+* { margin-top:0; }
 .fields,.grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:16px; }
 .full { grid-column:1/-1; }
@@ -899,3 +899,11 @@ button.archive-action,.context-options button.archive-action { color:var(--blue)
 .pick-button#plan-subcategory { grid-template-columns:minmax(0,1fr); }
 .pick-button#plan-subcategory>.plan-subcategory { grid-column:1; grid-row:2; white-space:normal; word-break:normal; overflow-wrap:break-word; }
 .list-button[data-plan-due] { flex-direction:column; align-items:stretch; }
+
+/* C1: static chrome does not summon the iOS copy menu; personal text does. */
+body { -webkit-user-select:none; user-select:none; -webkit-touch-callout:none; }
+input,textarea,[contenteditable=true],.full-note,.activity-comparison span {
+ -webkit-user-select:text; user-select:text; -webkit-touch-callout:default;
+}
+.note-viewer .note-content { max-height:none; overflow:visible; margin-bottom:var(--group-gap); }
+.note-preview { width:100%; margin-block:var(--peer-gap); }
