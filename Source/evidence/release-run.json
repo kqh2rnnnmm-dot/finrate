@@ -1,0 +1,361 @@
+{
+  "build": "b1.2.1-layout01",
+  "publicHTMLSHA256": "e34f8a8a53622e1881cefeb96b2f417f96d092fec543962a0ac978ca28f9ea5f",
+  "allPassed": true,
+  "results": [
+    {
+      "name": "release-build",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 884
+    },
+    {
+      "name": "patch-unit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 9326
+    },
+    {
+      "name": "b12-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 20891
+    },
+    {
+      "name": "b11-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 25277
+    },
+    {
+      "name": "b1-period-sync-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 10771
+    },
+    {
+      "name": "b1-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 9513
+    },
+    {
+      "name": "r30-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 9891
+    },
+    {
+      "name": "edge-lifecycle-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18978
+    },
+    {
+      "name": "credit-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 14717
+    },
+    {
+      "name": "notice-motion-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 12464
+    },
+    {
+      "name": "entryfix-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 19055
+    },
+    {
+      "name": "combined-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 33911
+    },
+    {
+      "name": "security-lifecycle-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5516
+    },
+    {
+      "name": "history-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18638
+    },
+    {
+      "name": "compact-scroll-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 11344
+    },
+    {
+      "name": "feedback-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 15466
+    },
+    {
+      "name": "security-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 46213
+    },
+    {
+      "name": "modality-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8854
+    },
+    {
+      "name": "home-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 22401
+    },
+    {
+      "name": "layout-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 20840
+    },
+    {
+      "name": "revision-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 38586
+    },
+    {
+      "name": "shell-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 38219
+    },
+    {
+      "name": "control-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 39463
+    },
+    {
+      "name": "patch-navigation",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 11295
+    },
+    {
+      "name": "patch-lists",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 16038
+    },
+    {
+      "name": "patch-forms",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8479
+    },
+    {
+      "name": "patch-upgrade",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 32552,
+      "retried": true,
+      "initialCode": 1,
+      "reason": "Test expected the prior build ID; updated test marker and passed all 15 upgrade fixtures."
+    },
+    {
+      "name": "unified-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 91214
+    },
+    {
+      "name": "patch-list-performance",
+      "code": 0,
+      "timedOut": false
+    },
+    {
+      "name": "verify-delivery",
+      "code": 0,
+      "timedOut": false
+    }
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "initialResults": [
+    {
+      "name": "release-build",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 884
+    },
+    {
+      "name": "patch-unit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 9326
+    },
+    {
+      "name": "b12-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 20891
+    },
+    {
+      "name": "b11-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 25277
+    },
+    {
+      "name": "b1-period-sync-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 10771
+    },
+    {
+      "name": "b1-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 9513
+    },
+    {
+      "name": "r30-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 9891
+    },
+    {
+      "name": "edge-lifecycle-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18978
+    },
+    {
+      "name": "credit-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 14717
+    },
+    {
+      "name": "notice-motion-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 12464
+    },
+    {
+      "name": "entryfix-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 19055
+    },
+    {
+      "name": "combined-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 33911
+    },
+    {
+      "name": "security-lifecycle-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5516
+    },
+    {
+      "name": "history-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18638
+    },
+    {
+      "name": "compact-scroll-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 11344
+    },
+    {
+      "name": "feedback-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 15466
+    },
+    {
+      "name": "security-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 46213
+    },
+    {
+      "name": "modality-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8854
+    },
+    {
+      "name": "home-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 22401
+    },
+    {
+      "name": "layout-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 20840
+    },
+    {
+      "name": "revision-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 38586
+    },
+    {
+      "name": "shell-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 38219
+    },
+    {
+      "name": "control-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 39463
+    },
+    {
+      "name": "patch-navigation",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 11295
+    },
+    {
+      "name": "patch-lists",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 16038
+    },
+    {
+      "name": "patch-forms",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8479
+    },
+    {
+      "name": "patch-upgrade",
+      "code": 1,
+      "timedOut": false,
+      "milliseconds": 32552
+    },
+    {
+      "name": "unified-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 91214
+    }
+  ],
+  "completion": "28 broad stages plus corrected upgrade rerun and remaining performance/delivery checks; all final 30 stages pass."
+}

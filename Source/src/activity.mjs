@@ -1,0 +1,49 @@
+import {planningMode} from './planning.mjs';
+// Optional, encrypted event metadata. Financial records and schema stay unchanged.
+const groups={accounts:'account',categories:'category',operations:'operation',drafts:'draft'};
+const fields={account:['name','kind','opening','archived','note','financeType','credit'],category:['name','type','parentId','archived','mergedInto'],operation:['creditDueDate','refundChoice','refundToAccountId','refundWithdrawAmount','kind','date','accountId','toAccountId','amount','allocations','note','cancelled','pending','stage','debitDate','creditDate','returnDate','referenceId','feeMode','enteredAmount','transferTarget','recipient'],draft:['kind','amount','accountId','toAccountId','date','categoryId','subcategoryId','note','split','isSplit','fee','feeMode','transferTarget','recipient']};
+const settingKeys=['appearance','topPalette','bottomPalette','autoLock','edgeSide','homeTiles','homeTileStyle','defaultOperation'];
+export const activitySections={operation:'Операции',account:'Счета',category:'Категории',draft:'Черновики',plan:'Финансовое планирование',settings:'Настройки'};
+export const activityFields={planDeleted:'План удалён',planPauses:'Паузы плана',planSchedule:'Расписание плана',planStopped:'План отключён',advanceAmount:'Сумма аванса',advanceDay:'День аванса',plannedAmount:'Ожидаемая сумма',expectedDate:'Ожидаемая дата',recurrence:'Повторение',planState:'Состояние плана',planLinks:'Связи с фактом',financialMode:'Режим свободных денег',defaultFinancialMode:'Режим по умолчанию',creditDueDate:'Срок погашения',refundChoice:'Излишек возврата',refundToAccountId:'Счёт вывода',refundWithdrawAmount:'Фактически выведено',financeType:'Тип счёта',credit:'Условия кредитного счёта',transferTarget:'Назначение перевода',recipient:'Получатель',entryMode:'Способ входа',pinLength:'Длина PIN',name:'Название',kind:'Тип',type:'Тип',opening:'Начальный остаток',archived:'Состояние',note:'Примечание',parentId:'Основная категория',mergedInto:'Объединена с',date:'Дата',accountId:'Счёт',toAccountId:'Получатель',amount:'Сумма',allocations:'Распределение',cancelled:'Отмена',pending:'Ожидает движения',stage:'Статус перевода',debitDate:'Дата списания',creditDate:'Дата зачисления',returnDate:'Дата возврата',referenceId:'Связанная операция',feeMode:'Учёт комиссии',enteredAmount:'Введённая сумма',categoryId:'Категория',subcategoryId:'Подкатегория',split:'Распределение',isSplit:'Разделённый расход',fee:'Комиссия',appearance:'Тема',topPalette:'Цвет остатка',bottomPalette:'Цвет свободных денег',autoLock:'Автоблокировка',edgeSide:'Сторона кнопки',homeTiles:'Блоки Главной',homeTileStyle:'Вид блоков',defaultOperation:'Операция по умолчанию'};
+const kindName={expense:'Расход',income:'Доход',transfer:'Перевод',refund:'Возврат',adjustment:'Корректировка'};
+const same=(a,b)=>JSON.stringify(a??null)===JSON.stringify(b??null);
+function name(type,row){return type==='operation'?(row.note?.trim().slice(0,100)||kindName[row.kind]||'Операция'):type==='draft'?'Черновик · '+(kindName[row.form?.kind]||'Операция'):row.name;}
+export function describeAction(action){return ({'category.merge':'Объединение категорий','category.undo':'Восстановлена классификация','account.reconcile':'Сверен остаток счёта','account.opening':'Изменён начальный остаток','transfer.debit':'Подтверждено списание','transfer.credit':'Подтверждено зачисление','transfer.return':'Перевод возвращён','home.configure':'Изменены блоки Главной','settings.save':'Настройки изменены','setup':'Начало работы'})[action]||({account:'Изменён счёт',accounts:'Изменён счёт',category:'Изменена категория',categories:'Изменена категория',operation:'Изменена операция',draft:'Изменён черновик',settings:'Изменены настройки',home:'Изменена Главная',transfer:'Изменён перевод'})[String(action).split('.')[0]]||'Изменены данные';}
+function itemAction(type,before,after){const noun=type==='operation'?(kindName[(after||before).kind]||'Операция'):type==='account'?'Счёт':type==='category'?'Категория':'Черновик';
+ if(!after)return 'Удалён черновик';if(!before)return noun+' · создание';if(before.archived!==after.archived)return noun+(after.archived?' · в архиве':' · восстановление');if(before.cancelled!==after.cancelled)return noun+' · отмена';return noun+' · изменение';}
+function display(d,type,key,value){if(['planSchedule','planPauses'].includes(key))return JSON.stringify(value??null);if(value===undefined||value===null||value==='')return null;
+ if(['accountId','toAccountId','refundToAccountId'].includes(key))return d.accounts.find(x=>x.id===value)?.name||'Недоступный счёт';
+ if(['parentId','mergedInto','categoryId','subcategoryId'].includes(key)){const c=d.categories.find(x=>x.id===value);return c?(c.parentId?(d.categories.find(x=>x.id===c.parentId)?.name||'')+' · ':'')+c.name:'Без категории';}
+ if(key==='credit')return 'Лимит: '+value.limit/100+'; '+(value.grace.mode==='months'?'погашение через '+value.grace.months+' мес.':value.grace.mode==='days'?'через '+value.grace.days+' дней':'платёж по выписке')+(value.openingLots?'; исходные сроки: '+value.openingLots.map(x=>x.amount/100+' до '+x.due).join(', '):'')+(value.statement?'; по выписке: '+value.statement.amount/100+' до '+value.statement.dueDate:'');
+ if(key==='referenceId')return 'Связанная операция';
+ if(key==='allocations')return value.map(x=>({category:display(d,type,'categoryId',x.categoryId)||'Без категории',amount:x.amount}));
+ if(key==='split')return value.map(x=>({category:display(d,type,'categoryId',x.categoryId)||'Без категории',amount:x.amount}));
+ if(key==='homeTiles')return value.map(x=>({metric:x.metric,...(x.creditMetric?{creditMetric:x.creditMetric}:{}),...(x.accountId?{account:display(d,type,'accountId',x.accountId)}:{})}));
+ return value;
+}
+export function captureActivity(before,after,action){const items=[],counts={};
+ const add=item=>{counts[item.type]=(counts[item.type]||0)+1;items.push(item);};
+ for(const [collection,type]of Object.entries(groups)){
+  const prior=new Map((before[collection]||[]).map(x=>[x.id,x])),next=new Map((after[collection]||[]).map(x=>[x.id,x]));
+  for(const id of new Set([...prior.keys(),...next.keys()])){const old=prior.get(id),row=next.get(id),a=type==='draft'?old?.form:old,b=type==='draft'?row?.form:row;
+   const changes=fields[type].filter(k=>!same(a?.[k],b?.[k])).map(key=>({key,before:display(before,type,key,a?.[key]),after:display(after,type,key,b?.[key])}));
+   if(changes.length||!old||!row)add({type,id,title:name(type,row||old),action:itemAction(type,a,b),deleted:!row,changes});
+  }
+ }
+ const beforeP=before.planning||{},afterP=after.planning||{};
+ for(const collection of ['incomes','occurrences']){
+  const olds=new Map((beforeP[collection]||[]).map(x=>[x.id,x])),nexts=new Map((afterP[collection]||[]).map(x=>[x.id,x]));
+  for(const id of new Set([...olds.keys(),...nexts.keys()])){const a=olds.get(id),b=nexts.get(id);if(same(a,b))continue;const changes=[];for(const [field,key]of [['deletedAt','planDeleted'],['pauses','planPauses'],['schedules','planSchedule'],['stoppedAt','planStopped'],['comment','note'],['advanceAmount','advanceAmount'],['advanceDay','advanceDay'],['amount','plannedAmount'],['end','date'],['accountId','accountId'],['categoryId','categoryId'],['start','expectedDate'],['date','expectedDate'],['repeat','recurrence'],['status','planState'],['name','name'],['archived','archived']])if(!same(a?.[field],b?.[field]))changes.push({key,before:display(before,'plan',key,a?.[field]),after:display(after,'plan',key,b?.[field])});add({type:'plan',id,title:b?.name||a?.name||'Ожидаемое поступление',action:a?'Изменён план':'Создан план',changes});}
+ }
+ if(!same(beforeP.links,afterP.links))add({type:'plan',id:'links',title:'Связи доходов с планами',action:'Связи обновлены',changes:[{key:'planLinks',before:JSON.stringify(beforeP.links||[]).slice(0,1200),after:JSON.stringify(afterP.links||[]).slice(0,1200)}]});
+ if(planningMode(before)!==planningMode(after))add({type:'settings',id:'planning',title:'Финансовое планирование',action:'Режим изменён',changes:[{key:'financialMode',before:planningMode(before),after:planningMode(after)}]});
+ const changes=settingKeys.filter(k=>!same(before.settings?.[k],after.settings?.[k])).map(key=>({key,before:display(before,'settings',key,before.settings?.[key]),after:display(after,'settings',key,after.settings?.[key])}));
+ if(changes.length)add({type:'settings',id:'settings',title:'Настройки',action:describeAction(action),changes});
+ return {version:1,items,counts};
+}
+function safeValue(key,v){if(v===null||v===undefined||typeof v==='boolean')return true;if(typeof v==='number')return Number.isSafeInteger(v);if(typeof v==='string')return v.length<=1200;if(!Array.isArray(v))return false;
+ if(key==='homeTiles')return v.length<=6&&v.every(x=>x&&typeof x.metric==='string'&&x.metric.length<40&&(!x.account||typeof x.account==='string'&&x.account.length<=220));
+ return ['allocations','split'].includes(key)&&v.length<=100&&v.every(x=>x&&typeof x.category==='string'&&x.category.length<=220&&(Number.isSafeInteger(x.amount)||typeof x.amount==='string'&&x.amount.length<=100));
+}
+export function eventItems(event){const info=event?.details;if(info?.version!==1||!Array.isArray(info.items)||info.items.length>22401)return [];return info.items.filter(x=>x&&Object.hasOwn(activitySections,x.type)&&typeof x.id==='string'&&x.id.length<=100&&typeof x.title==='string'&&typeof x.action==='string'&&Array.isArray(x.changes)&&x.changes.length<=24).map(x=>({type:x.type,id:x.id,title:x.title.slice(0,110),action:x.action.slice(0,100),deleted:!!x.deleted,changes:x.changes.filter(c=>c&&Object.hasOwn(activityFields,c.key)&&safeValue(c.key,c.before)&&safeValue(c.key,c.after))}));}
+export function eventSection(event){return ({accounts:'account',categories:'category',home:'settings',security:'settings',transfer:'operation'})[String(event.action).split('.')[0]]||String(event.action).split('.')[0];}

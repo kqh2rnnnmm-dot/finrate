@@ -1,0 +1,13 @@
+PASS 320 light stationary hold, continuing touch selection, no tab switch on hold; dock scrub preserved
+PASS 320 light settings configurator retained; lock title only, explicit confirmation/cancel, intact ciphertext and return
+PASS 320 light archive is blue, existing names and confirmations retained
+PASS 320 light reset: wrong credential and cancel preserve data; final reset clears both stores, other tab and memory; onboarding and external copy remain
+PASS 320 dark stationary hold, continuing touch selection, no tab switch on hold; dock scrub preserved
+PASS 320 dark settings configurator retained; lock title only, explicit confirmation/cancel, intact ciphertext and return
+PASS 320 dark archive is blue, existing names and confirmations retained
+PASS 320 dark reset: wrong credential and cancel preserve data; final reset clears both stores, other tab and memory; onboarding and external copy remain
+PASS 402 light stationary hold, continuing touch selection, no tab switch on hold; dock scrub preserved
+PASS 402 light settings configurator retained; lock title only, explicit confirmation/cancel, intact ciphertext and return
+PASS 402 light archive is blue, existing names and confirmations retained
+PASS 402 light reset: wrong credential and cancel preserve data; final reset clears both stores, other tab and memory; onboarding and external copy remain
+PASS 402 dark stationary hold, continuing touch selection, no tab switch on hold; dock scrub preserved

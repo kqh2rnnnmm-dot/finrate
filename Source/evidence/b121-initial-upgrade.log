@@ -1,0 +1,10 @@
+{
+  "checks": [],
+  "failures": [
+    "page.waitForFunction: Timeout 30000ms exceeded.\n    at /workspace/scratch/2f675cf8055c/work/b121/FinRate_B1_2_SOURCE/Source/tests/navigation-upgrade-browser.mjs:18:216"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "failedSource": "list01",
+  "visibleState": "FinRate\nВойти в FinRate\n\nДанные хранятся в этом браузере. Пароль никуда не отправляется.\n\nОткрыть с помощью\nОсновной пароль\nКлюч восстановления\nПароль или ключ\n\nВойти\n\nЕсть защищённая копия?\nВосстановить копию\n\nБез аналитики и внешней отправки. Очистка данных браузера удалит данные FinRate на этом устройстве. Сохраняйте защищённую копию отдельно."
+}

@@ -1,0 +1,7 @@
+{
+  "baseline": "uploaded B1.2 public dist",
+  "newGeometryTestRejectsOriginalDefect": true,
+  "returncode": 1,
+  "expectedFailure": "active card width assertion",
+  "fictionalDataOnly": true
+}

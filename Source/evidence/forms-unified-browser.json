@@ -1,0 +1,79 @@
+{
+  "build": "p2.1-combined01",
+  "actualIPhone": false,
+  "published": false,
+  "checks": [
+    {
+      "name": "blue plus → one-time type chooser → full expense form; no old buttons or inline typing",
+      "status": "PASS"
+    },
+    {
+      "name": "summary-only split overview and direct main date",
+      "status": "PASS"
+    },
+    {
+      "name": "flat part uses parent and optional child; exact amount accepted only by shared Done",
+      "status": "PASS"
+    },
+    {
+      "name": "cross-category and same-parent subcategory allocation share one flat editor and grouped disclosure",
+      "status": "PASS"
+    },
+    {
+      "name": "Back discards pending part; one explicit purchase save preserves exact allocations and uncategorized residue",
+      "status": "PASS"
+    },
+    {
+      "name": "reload/edit retains flat data; reducing a part changes only visible uncategorized residue, never another part or debit",
+      "status": "PASS"
+    },
+    {
+      "name": "light 320 home fits, symmetric editor, income save",
+      "status": "PASS"
+    },
+    {
+      "name": "light 402 home fits, symmetric editor, income save",
+      "status": "PASS"
+    },
+    {
+      "name": "light 430 home fits, symmetric editor, income save",
+      "status": "PASS"
+    },
+    {
+      "name": "light 1280 home fits, symmetric editor, income save",
+      "status": "PASS"
+    },
+    {
+      "name": "dark 320 home fits, symmetric editor, income save",
+      "status": "PASS"
+    },
+    {
+      "name": "dark 402 home fits, symmetric editor, income save",
+      "status": "PASS"
+    },
+    {
+      "name": "dark 430 home fits, symmetric editor, income save",
+      "status": "PASS"
+    },
+    {
+      "name": "dark 1280 home fits, symmetric editor, income save",
+      "status": "PASS"
+    },
+    {
+      "name": "transfer slider preserves established account and fee mathematics",
+      "status": "PASS"
+    },
+    {
+      "name": "commission first uses explicit Done; transfer and linked fee post once through unchanged financial service",
+      "status": "PASS"
+    },
+    {
+      "name": "offline reload preserves exact encrypted document",
+      "status": "PASS"
+    }
+  ],
+  "failures": [],
+  "pageErrors": [],
+  "externalRequests": [],
+  "engine": "153.0.8010.0"
+}

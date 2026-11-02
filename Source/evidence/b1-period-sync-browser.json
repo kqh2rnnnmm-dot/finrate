@@ -1,0 +1,17 @@
+{
+  "build": "b1.2-plans01",
+  "checks": [
+    "1/7 absent preferences: current month on both surfaces",
+    "2 Home three months synchronizes financial planning",
+    "3 settings four months refreshes open forecast and Home",
+    "4 all debts equal on both surfaces",
+    "5 reload and new application page preserve all debts",
+    "5 cached PWA shell reopens offline with persisted selection",
+    "8/9 five modes preserve formulas, operations and unrelated settings",
+    "6/7 migration preserves Home, falls back to settings, then current month; removes conflicts on save"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false,
+  "published": false
+}

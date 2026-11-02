@@ -1,0 +1,16 @@
+{
+  "build": "b1.1-income01",
+  "checks": [
+    "five-mode selector persists preference without posting money",
+    "unfinished refund draft persists across reload and leaves all financial metrics unchanged",
+    "refund draft does not block a new credit-card purchase",
+    "draft completion recomputes changed debt; surplus becomes own money exactly once",
+    "confirmed actual withdrawal moves refund surplus to debit with no income or duplicate expense",
+    "B1 home and forecast surfaces fit 320/402/736 widths in both themes without document scrolling",
+    "no browser exceptions and no premature support UI"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false,
+  "published": false
+}

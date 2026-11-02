@@ -1,0 +1,30 @@
+{
+  "build": "p2.1-combined01",
+  "checks": [
+    "320 light grouped allocation disclosure, exact totals, common numeric ceiling; no extra debit",
+    "320 light parent-only search/filter lists, child query returns parent, shared conditional disclosure and accessible operation icons",
+    "320 light archive preflight, negative top-up chooses sender and prefills receiver/absolute amount; zero result; no implicit archive",
+    "320 dark grouped allocation disclosure, exact totals, common numeric ceiling; no extra debit",
+    "320 dark parent-only search/filter lists, child query returns parent, shared conditional disclosure and accessible operation icons",
+    "320 dark archive preflight, negative top-up chooses sender and prefills receiver/absolute amount; zero result; no implicit archive",
+    "402 light grouped allocation disclosure, exact totals, common numeric ceiling; no extra debit",
+    "402 light parent-only search/filter lists, child query returns parent, shared conditional disclosure and accessible operation icons",
+    "402 light archive preflight, negative top-up chooses sender and prefills receiver/absolute amount; zero result; no implicit archive",
+    "light 59px safe-area: glass blur and feathering replace opaque plane; no legacy status override (native iPhone remains unverified)",
+    "402 dark grouped allocation disclosure, exact totals, common numeric ceiling; no extra debit",
+    "402 dark parent-only search/filter lists, child query returns parent, shared conditional disclosure and accessible operation icons",
+    "402 dark archive preflight, negative top-up chooses sender and prefills receiver/absolute amount; zero result; no implicit archive",
+    "dark 59px safe-area: glass blur and feathering replace opaque plane; no legacy status override (native iPhone remains unverified)",
+    "1280 light grouped allocation disclosure, exact totals, common numeric ceiling; no extra debit",
+    "1280 light parent-only search/filter lists, child query returns parent, shared conditional disclosure and accessible operation icons",
+    "1280 light archive preflight, negative top-up chooses sender and prefills receiver/absolute amount; zero result; no implicit archive",
+    "1280 dark grouped allocation disclosure, exact totals, common numeric ceiling; no extra debit",
+    "1280 dark parent-only search/filter lists, child query returns parent, shared conditional disclosure and accessible operation icons",
+    "1280 dark archive preflight, negative top-up chooses sender and prefills receiver/absolute amount; zero result; no implicit archive"
+  ],
+  "failures": [],
+  "errors": [],
+  "externalRequests": [],
+  "actualIPhone": false,
+  "published": false
+}

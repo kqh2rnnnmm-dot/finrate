@@ -1,0 +1,22 @@
+import {spawn} from 'node:child_process';
+import {createWriteStream} from 'node:fs';
+import {readFile,writeFile,mkdir,readdir} from 'node:fs/promises';
+import {createHash} from 'node:crypto';
+await mkdir('evidence',{recursive:true});
+const results=[];
+async function run(name,args,limit=300000,extraEnv={}){
+ const start=Date.now(),log=createWriteStream('evidence/'+name+'.log');
+ const result=await new Promise(resolve=>{const child=spawn(process.execPath,args,{stdio:['ignore','pipe','pipe'],env:{...process.env,...extraEnv}});child.stdout.pipe(log,{end:false});child.stderr.pipe(log,{end:false});let timedOut=false;const timer=setTimeout(()=>{timedOut=true;child.kill('SIGKILL');},limit);child.on('error',error=>{clearTimeout(timer);resolve({name,code:1,error:error.message});});child.on('close',code=>{clearTimeout(timer);resolve({name,code,timedOut,milliseconds:Date.now()-start});});});
+ await new Promise(resolve=>log.end(resolve));results.push(result);console.log(result.code===0?'PASS':'FAIL',name);if(result.code!==0)throw Error(name+' failed: see evidence/'+name+'.log');
+}
+try{
+ await run('release-build',['tools/build.mjs']);
+ await run('patch-unit',['--test','--test-reporter=tap',...(await readdir('tests')).filter(x=>x.endsWith('.test.mjs')).map(x=>'tests/'+x)]);
+ const jobs=[['b12-browser','tests/b12-browser.mjs'],['b11-browser','tests/b11-browser.mjs'],['b1-period-sync-browser','tests/b1-period-sync-browser.mjs'],['b1-browser','tests/b1-browser.mjs'],['r30-browser','tests/r30-browser.mjs'],['edge-lifecycle-browser','tests/edge-lifecycle-browser.mjs'],['credit-browser','tests/credit-browser.mjs'],['notice-motion-browser','tests/notice-motion-browser.mjs'],['combined-browser','tests/combined-browser.mjs'],['entryfix-browser','tests/entryfix-browser.mjs'],['security-lifecycle-browser','tests/security-lifecycle-browser.mjs'],['security-browser','tests/security-browser.mjs'],['history-browser','tests/history-browser.mjs'],['compact-scroll-browser','tests/compact-scroll-browser.mjs'],['feedback-browser','tests/feedback-browser.mjs'],['home-browser','tests/home-browser.mjs'],['modality-browser','tests/modality-browser.mjs'],['revision-browser','tests/revision-browser.mjs'],['layout-browser','tests/layout-browser.mjs'],['shell-browser','tests/shell-browser.mjs'],['control-browser','tests/control-browser.mjs'],['unified-browser','tests/unified-browser.mjs'],['patch-navigation','tests/navigation-browser.mjs'],['patch-lists','tests/list-browser.mjs'],['patch-forms','tests/forms-unified-browser.mjs'],['patch-upgrade','tests/navigation-upgrade-browser.mjs']];
+ async function worker(){let job;while((job=jobs.shift()))await run(job[0],[job[1]]);}
+ const workers=await Promise.allSettled([worker(),worker()]);for(const worker of workers)if(worker.status==='rejected')throw worker.reason;
+ await run('patch-list-performance',['tests/list-browser.mjs'],300000,{FINRATE_TEST_WIDTHS:'402',FINRATE_PERF:'1'});
+ await run('verify-delivery',['tools/verify-delivery.mjs']);
+ await writeFile('evidence/delivery-verification.json',await readFile('evidence/verify-delivery.log'));
+}catch(error){process.exitCode=1;console.error(error.message);}
+await writeFile('evidence/release-run.json',JSON.stringify({build:'b1.2.1-layout01',publicHTMLSHA256:createHash('sha256').update(await readFile('dist/index.html')).digest('hex'),allPassed:!process.exitCode,results,actualIPhone:false,published:false},null,2)+'\n');

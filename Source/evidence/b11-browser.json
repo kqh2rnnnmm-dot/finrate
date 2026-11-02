@@ -1,0 +1,15 @@
+{
+  "build": "b1.2-plans01",
+  "checks": [
+    "no available planned income opens ordinary income directly",
+    "wizard reuses common category/subcategory/account creation, four schedules and review edit",
+    "plans and common references survive encrypted reload",
+    "two overdue cards, adjusted partial receipt, remainder quick confirm, skip comment and direct ordinary income after closing all",
+    "overpayment and final shortfall close only selected occurrence; base monthly amounts unchanged",
+    "ordinary entry fits 320/402/736 both themes; document fixed, no horizontal overflow"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false,
+  "published": false
+}

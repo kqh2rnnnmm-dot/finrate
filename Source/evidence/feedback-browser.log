@@ -1,0 +1,23 @@
+PASS light failed unlock keeps input; no permanent action banner
+PASS light insufficient debit funds blocks saving without changing ciphertext or form
+PASS light failed save keeps editor and ciphertext; error interrupts, no automatic retry
+PASS light explicit retry rechecks funds, writes exactly once, shows success after commit
+PASS light opaque success island disappears automatically without changing page geometry
+PASS light compact draft confirmation keeps its controls and shows clickable error; retry saves draft without changing money
+PASS light real copy download and honest transient wording; no data change
+PASS light wrong copy key preserves file/form; preview writes nothing; replacement guards persist; cancel leaves data intact
+PASS light locking clears private notifications and queued callbacks
+PASS dark failed unlock keeps input; no permanent action banner
+PASS dark insufficient debit funds blocks saving without changing ciphertext or form
+PASS dark failed save keeps editor and ciphertext; error interrupts, no automatic retry
+PASS dark explicit retry rechecks funds, writes exactly once, shows success after commit
+PASS dark opaque success island disappears automatically without changing page geometry
+PASS dark compact draft confirmation keeps its controls and shows clickable error; retry saves draft without changing money
+PASS dark real copy download and honest transient wording; no data change
+PASS dark wrong copy key preserves file/form; preview writes nothing; replacement guards persist; cancel leaves data intact
+PASS dark locking clears private notifications and queued callbacks
+{
+  "checks": 18,
+  "errors": [],
+  "failures": []
+}

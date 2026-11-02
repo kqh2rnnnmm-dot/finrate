@@ -1,0 +1,29 @@
+{
+  "build": "p2.1-combined01",
+  "checks": [
+    "320 light atomic history, exact before/after, current object and local history with correct back chain",
+    "320 light scoped search/filter/sort and honest legacy event; viewing writes nothing",
+    "320 dark atomic history, exact before/after, current object and local history with correct back chain",
+    "320 dark scoped search/filter/sort and honest legacy event; viewing writes nothing",
+    "402 light atomic history, exact before/after, current object and local history with correct back chain",
+    "402 light scoped search/filter/sort and honest legacy event; viewing writes nothing",
+    "402 dark atomic history, exact before/after, current object and local history with correct back chain",
+    "402 dark scoped search/filter/sort and honest legacy event; viewing writes nothing",
+    "1280 light atomic history, exact before/after, current object and local history with correct back chain",
+    "1280 light scoped search/filter/sort and honest legacy event; viewing writes nothing",
+    "1280 dark atomic history, exact before/after, current object and local history with correct back chain",
+    "1280 dark scoped search/filter/sort and honest legacy event; viewing writes nothing",
+    "Данные и синхронизация real departure locks key, then restores full back path without data write",
+    "Счета и кошельки real departure locks key, then restores full back path without data write",
+    "Категории real departure locks key, then restores full back path without data write",
+    "Настройки real departure locks key, then restores full back path without data write",
+    "three actual copy downloads + simulated system return preserve session, route and ciphertext",
+    "elapsed timeout shows approved explanation, retains it after wrong password and restores back after unlock",
+    "download return respects autoLock 0 with truthful explanation and working Back",
+    "download return respects autoLock -1 with truthful explanation and working Back"
+  ],
+  "failures": [],
+  "errors": [],
+  "actualIPhone": false,
+  "published": false
+}

@@ -1,0 +1,62 @@
+PASS direct list with active plans and compact shared horizon, no intermediate navigation
+Настройки
+Внешний вид
+Тема
+Как в системе
+Светлая
+Тёмная
+Фактический остаток
+Золотистая / песочная
+Лавандовая
+Оливковая / графитовая
+Свободные деньги
+Золотистая / песочная
+Лавандовая
+Оливковая / графитовая
+Управление
+Сторона кнопки создания
+Справа
+Слева
+Безопасность
+Авто-блокировка
+Сразу
+5 минут
+15 минут
+30 минут
+Никогда — не рекомендуется
+Сохранить настройки
+Пароль и вход
+Финансовое планирование
+Главная
+Настроить блоки
+
+Крупные показатели · Блоков: 2
+
+FinRate · RUB
+
+Финансовое планирование
+Планируемые доходы
+Архив
+Зарплата
+Зарплата
+↳ Подкатегория с длинным названием для проверки переноса
+60 000 ₽ · Каждый месяц
+Дебет
+Настроить
+Добавить доход
+Период расчёта
+Текущий месяц
+2 месяца
+3 месяца
+4 месяца
+Все долги
+AssertionError [ERR_ASSERTION]: {"label":"active card","width":320,"theme":"light","part":{"text":"Зарплата","width":0,"usable":264,"ordered":true,"overflow":12,"color":"rgb(34, 35, 41)"}}
+    at layoutPlans (file:///workspace/scratch/2f675cf8055c/work/b121-negative/tests/b12-browser.mjs:22:186)
+    at async file:///workspace/scratch/2f675cf8055c/work/b121-negative/tests/b12-browser.mjs:30:2 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: false,
+  expected: true,
+  operator: '==',
+  diff: 'simple'
+}

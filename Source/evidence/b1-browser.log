@@ -1,0 +1,2 @@
+PASS five-mode selector persists preference without posting money
+PASS unfinished refund draft persists across reload and leaves all financial metrics unchanged

@@ -1,0 +1,30 @@
+import Dexie from 'dexie';
+import {fail,uid,now} from './model.mjs';
+export function createStore(name='finrate-local-v1',dependencies){
+  const db=new Dexie(name,dependencies);db.version(1).stores({vault:'id',safety:'id,createdAt'});
+  db.on('versionchange',()=>db.close());
+  const same=(a,b)=>a?.generation===b?.generation&&a?.vault.datasetId===b?.vault.datasetId;
+  return {
+    db, async read(){return db.vault.get('active');},
+    async readAccess(){return db.vault.get('device-access');},
+    async assertCurrent(expected){const current=await db.vault.get('active');if(!current||!same(current,expected))fail('STALE');},
+    async commit(vault,expected,{beforeRestore=false,beforeMigration=false,access,resetAccess=false}={}){
+      return db.transaction('rw',db.vault,db.safety,async()=>{
+        const current=await db.vault.get('active');if(!same(current,expected))fail('STALE');
+        if((beforeRestore||beforeMigration)&&current)await db.safety.add({id:uid(),createdAt:now(),vault:current.vault,reason:beforeMigration?'before-schema-3':'before-restore'});
+        const record={id:'active',generation:(current?.generation||0)+1,vault};await db.vault.put(record);
+        if(resetAccess)await db.vault.delete('device-access');else if(access)await db.vault.put(access);return record;
+      });
+    },
+    async accessAttempt(expected,id){return db.transaction('rw',db.vault,async()=>{const current=await db.vault.get('active'),a=await db.vault.get('device-access');if(!same(current,expected)||a?.accessId!==id)fail('STALE');if(!Number.isInteger(a.failed)||a.failed<0||a.failed>=5)fail('PIN_LOCKED');a.failed++;await db.vault.put(a);return {...a,failed:a.failed-1};});},
+    async resetAttempts(expected,id){return db.transaction('rw',db.vault,async()=>{const current=await db.vault.get('active'),a=await db.vault.get('device-access');if(!same(current,expected)||a?.accessId!==id)fail('STALE');if(a.failed){a.failed=0;await db.vault.put(a);}});},
+    async safety(){return db.safety.orderBy('createdAt').reverse().toArray();},
+    async reset(expected){
+      return db.transaction('rw',db.vault,db.safety,async()=>{
+        const current=await db.vault.get('active');if(!current||!same(current,expected))fail('STALE');
+        await db.safety.clear();await db.vault.clear();
+      });
+    },
+    async close(){db.close();}
+  };
+}

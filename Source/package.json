@@ -1,0 +1,48 @@
+{
+  "name": "finrate-actions",
+  "version": "0.3.3-b1.2.1",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node tools/build.mjs",
+    "test": "node --test --test-reporter=tap tests/*.test.mjs",
+    "test:browser": "node tests/unified-browser.mjs",
+    "test:legacy:browser": "node tests/block02-browser.mjs",
+    "test:legacy:management": "node tests/management-browser.mjs",
+    "test:legacy:ui": "node tests/ui-repair-browser.mjs",
+    "test:block3": "node tests/forms-unified-browser.mjs",
+    "test:navigation": "node tests/navigation-browser.mjs",
+    "test:lists": "node tests/list-browser.mjs",
+    "test:actions": "node tests/unified-browser.mjs",
+    "test:upgrade": "node tests/navigation-upgrade-browser.mjs",
+    "verify:delivery": "node tools/verify-delivery.mjs",
+    "test:unified": "node tests/unified-browser.mjs",
+    "test:forms": "node tests/forms-unified-browser.mjs",
+    "test:legacy:actions": "node tests/actions-browser.mjs",
+    "check:release": "node tools/check-release.mjs",
+    "test:revision": "node tests/revision-browser.mjs",
+    "test:layout": "node tests/layout-browser.mjs",
+    "test:shell": "node tests/shell-browser.mjs",
+    "test:control": "node tests/control-browser.mjs",
+    "test:home": "node tests/home-browser.mjs",
+    "test:modality": "node tests/modality-browser.mjs",
+    "test:feedback": "node tests/feedback-browser.mjs",
+    "test:history": "node tests/history-browser.mjs",
+    "test:compact": "node tests/compact-scroll-browser.mjs",
+    "test:security": "node tests/security-browser.mjs",
+    "test:security:lifecycle": "node tests/security-lifecycle-browser.mjs",
+    "test:entryfix": "node tests/entryfix-browser.mjs"
+  },
+  "dependencies": {
+    "dexie": "4.4.6"
+  },
+  "devDependencies": {
+    "@sparticuz/chromium": "153.0.0",
+    "esbuild": "0.28.2",
+    "fake-indexeddb": "6.2.5",
+    "playwright": "1.62.1",
+    "workbox-build": "7.4.1",
+    "workbox-precaching": "7.4.1",
+    "workbox-routing": "7.4.1"
+  }
+}
