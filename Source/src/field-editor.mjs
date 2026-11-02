@@ -33,6 +33,7 @@ export function createFieldEditor({sheet,pop}){
   return sheet(title,`<div class="full-note note-content" tabindex="0">${esc(current)}</div>${done?'<button type="button" class="button" data-note-edit>Редактировать</button>':''}`,el=>{
    el.classList.add('note-viewer');
    el.querySelector('[data-note-edit]')?.addEventListener('click',()=>open(title,current,async next=>{
+    if(next===current)return;
     const result=await done(next);if(result===false)return false;
     current=String(next);el.querySelector('.note-content').textContent=current;
    },{...options,multiline:true,reading:false}));
