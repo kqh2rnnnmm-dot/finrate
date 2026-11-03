@@ -1,15 +1,27 @@
 import {bindFieldEditor,validMoneyInput,signedMoneyField} from './surfaces.mjs';
+import {icon} from './icons.mjs';
 import {editMoney,compactText} from './ui-values.mjs';
+let fieldSequence=0;
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export function createFieldEditor({sheet,pop}){
  function open(title,value,done,{numeric=false,multiline=/примечание|описание|комментарий|заметка/i.test(title),reading=true,signed=false,min=null,max=null,maxLength=multiline?500:100,required=false,onApplyClose=null}={}){
   if(multiline&&reading&&String(value??'').length)return view(title,value,done,{maxLength,required,onApplyClose});
   const original=String(value??''),initial=numeric?editMoney(value):original;
-  return sheet(title,`<form class="value-form">${multiline?`<textarea class="field-input" name="value" maxlength="${maxLength}" aria-label="${esc(title)}">${esc(initial)}</textarea>`:`<input class="field-input" name="value" ${numeric?'inputmode="decimal" data-signed="'+signed+'"':'type="text" maxlength="'+maxLength+'"'} value="${esc(initial)}" aria-label="${esc(title)}" autocomplete="off">`}${numeric?'':'<small class="field-count" aria-live="polite"></small>'}</form>`,el=>{
+  return sheet(title,`<form class="value-form">${multiline?`<div class="note-field"><div class="note-tools"><button type="button" class="icon-button note-expand" data-note-expand aria-expanded="false" aria-label="Развернуть" title="Развернуть">${icon('expand')}</button></div><textarea class="field-input" name="value" maxlength="${maxLength}" aria-label="${esc(title)}">${esc(initial)}</textarea></div>`:`<input class="field-input" name="value" ${numeric?'inputmode="decimal" data-signed="'+signed+'"':'type="text" maxlength="'+maxLength+'"'} value="${esc(initial)}" aria-label="${esc(title)}" autocomplete="off">`}${numeric?'':'<small class="field-count" aria-live="polite"></small>'}</form>`,el=>{
    el.classList.add('field-editor');if(multiline)el.classList.add('note-editor');
    const brand=el.querySelector('.brand-home'),button=document.createElement('button');button.type='button';button.className='text-button field-done';button.textContent=multiline?'Сохранить':'Готово';brand.replaceWith(button);
    const back=el.querySelector('.sheet-back');back.className='text-button sheet-back';back.textContent='Отмена';back.setAttribute('aria-label','Отмена');
-   const input=el.querySelector('.field-input');input.value=initial;if(max!==null)input.dataset.max=String(max);
+   const input=el.querySelector('.field-input');input.value=initial;
+   if(multiline){
+    const toggle=el.querySelector('[data-note-expand]');input.id='note-field-'+(++fieldSequence);toggle.setAttribute('aria-controls',input.id);
+    toggle.onclick=()=>{
+     const state={start:input.selectionStart,end:input.selectionEnd,direction:input.selectionDirection,scroll:input.scrollTop,focused:document.activeElement===input};
+     const expanded=el.classList.toggle('note-expanded');toggle.setAttribute('aria-expanded',String(expanded));toggle.setAttribute('aria-label',expanded?'Свернуть':'Развернуть');toggle.title=expanded?'Свернуть':'Развернуть';toggle.innerHTML=icon(expanded?'collapse':'expand');
+     el.style.setProperty('--sheet-head-height',el.querySelector('.sheet-head').offsetHeight+'px');
+     requestAnimationFrame(()=>{input.setSelectionRange(state.start,state.end,state.direction);input.scrollTop=state.scroll;if(state.focused&&document.activeElement!==input)input.focus({preventScroll:true});});
+    };
+   }
+   if(max!==null)input.dataset.max=String(max);
    const valid=()=>{if(!numeric)return !required||!!input.value.trim();if(!input.value)return !required;const n=Number(input.value.replace(',','.'));return validMoneyInput(input.value,{signed})&&new RegExp('^'+(signed?'-?':'')+'\\d{1,12}(?:[.,]\\d{1,2})?$').test(input.value)&&Number.isFinite(n)&&(min===null||n>=min)&&(max===null||n<=max);};
    const {apply}=bindFieldEditor(el,async v=>{if(!valid())return false;const accepted=!numeric&&v===original.replace(/\r\n?/g,'\n')?original:v;const result=await done(accepted);if(result===false)return false;pop();onApplyClose?.();return false;});
    const sync=()=>{button.disabled=!valid();const count=el.querySelector('.field-count');if(count)count.textContent=input.value.length+' / '+maxLength;};input.addEventListener('input',sync);sync();button.onclick=apply;input.focus({preventScroll:true});if(numeric)input.select();
