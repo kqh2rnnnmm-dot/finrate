@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "288 Home layouts: counts 1–6, all styles/themes, portrait/landscape/desktop, no scroll/overlap, finances unchanged"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}

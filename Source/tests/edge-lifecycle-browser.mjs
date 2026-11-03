@@ -16,6 +16,13 @@ try{
   // An interrupted entrance must settle; a stale banner must never cover Back.
   await p.locator('.feedback-notice:visible').waitFor();await p.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'));document.getAnimations().forEach(a=>a.cancel());Object.defineProperty(document,'hidden',{configurable:true,value:false});document.dispatchEvent(new Event('visibilitychange'));});
   await p.locator('.feedback-notice').waitFor({state:'detached',timeout:7000});report.checks.push(side+' notification animation interrupted by app switch recovers and dismisses');
+  if(side==='right'){
+   const plus=p.locator('#operation-add');await plus.click();const chooser=p.locator('dialog.top-chooser[open]');await chooser.waitFor();
+   await p.waitForFunction(()=>Math.abs(parseFloat(document.querySelector('dialog.top-chooser')?.style.getPropertyValue('--top-sx'))-1)<.001);
+   const header=await p.locator('#app>header').boundingBox(),box=await chooser.boundingBox();assert.ok(box.y>=header.y+header.height&&box.y<=header.y+header.height+24);assert.equal(await plus.evaluate(e=>getComputedStyle(e).opacity),'0');
+   await chooser.locator('.sheet-close').click();await chooser.waitFor({state:'detached'});assert.equal(await plus.getAttribute('aria-expanded'),'false');assert.equal(await plus.evaluate(e=>getComputedStyle(e).opacity),'1');
+   await plus.click();await p.evaluate(()=>{Object.defineProperty(document,'hidden',{configurable:true,value:true});document.dispatchEvent(new Event('visibilitychange'));Object.defineProperty(document,'hidden',{configurable:true,value:false});document.dispatchEvent(new Event('visibilitychange'));});await chooser.waitFor({state:'visible'});await p.evaluate(()=>history.back());await chooser.waitFor({state:'detached'});assert.equal(await plus.getAttribute('aria-expanded'),'false');report.checks.push('top plus animated morph, interrupted animation, X and system Back restore original trigger');
+  }
   if(side==='left'){
    await p.locator('#more').click();await p.locator('[data-extra="Настройки"]').click();await p.locator('[name=edgeSide]').selectOption('left');await p.locator('#p2-settings [type=submit]').click();await p.locator('.feedback-notice:visible .feedback-close').click();await p.locator('#page-back').click();await p.locator('#page-back').click();
   }

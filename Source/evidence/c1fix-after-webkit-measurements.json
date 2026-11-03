@@ -31,12 +31,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 296,
-      "height": 689,
-      "client": 689,
-      "scroll": 699,
+      "top": 137,
+      "bottom": 768,
+      "width": 270,
+      "height": 631,
+      "client": 631,
+      "scroll": 750,
       "overflow": "auto"
     },
     "head": {
@@ -46,6 +46,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 296,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 270,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -84,12 +102,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 296,
-      "height": 247,
-      "client": 247,
-      "scroll": 699,
+      "top": 172,
+      "bottom": 361,
+      "width": 270,
+      "height": 189,
+      "client": 189,
+      "scroll": 750,
       "overflow": "auto"
     },
     "head": {
@@ -99,6 +117,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 296,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 270,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -137,12 +173,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 296,
-      "height": 689,
-      "client": 689,
-      "scroll": 699,
+      "top": 137,
+      "bottom": 768,
+      "width": 270,
+      "height": 631,
+      "client": 631,
+      "scroll": 750,
       "overflow": "auto"
     },
     "head": {
@@ -152,6 +188,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 296,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 270,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(17, 18, 22)",
@@ -190,12 +244,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 296,
-      "height": 247,
-      "client": 247,
-      "scroll": 699,
+      "top": 172,
+      "bottom": 361,
+      "width": 270,
+      "height": 189,
+      "client": 189,
+      "scroll": 750,
       "overflow": "auto"
     },
     "head": {
@@ -207,6 +261,24 @@
       "scroll": 62,
       "overflow": "visible"
     },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 296,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 270,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
+      "overflow": "visible"
+    },
     "backdrop": "rgb(17, 18, 22)",
     "rootVisibility": "hidden",
     "display": "grid"
@@ -243,12 +315,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 343,
-      "height": 689,
-      "client": 689,
-      "scroll": 689,
+      "top": 137,
+      "bottom": 768,
+      "width": 317,
+      "height": 631,
+      "client": 631,
+      "scroll": 661,
       "overflow": "auto"
     },
     "head": {
@@ -258,6 +330,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 343,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 317,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -296,12 +386,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 343,
-      "height": 247,
-      "client": 247,
-      "scroll": 610,
+      "top": 172,
+      "bottom": 361,
+      "width": 317,
+      "height": 189,
+      "client": 189,
+      "scroll": 661,
       "overflow": "auto"
     },
     "head": {
@@ -311,6 +401,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 343,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 317,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -349,12 +457,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 343,
-      "height": 689,
-      "client": 689,
-      "scroll": 689,
+      "top": 137,
+      "bottom": 768,
+      "width": 317,
+      "height": 631,
+      "client": 631,
+      "scroll": 661,
       "overflow": "auto"
     },
     "head": {
@@ -364,6 +472,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 343,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 317,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(17, 18, 22)",
@@ -402,12 +528,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 343,
-      "height": 247,
-      "client": 247,
-      "scroll": 610,
+      "top": 172,
+      "bottom": 361,
+      "width": 317,
+      "height": 189,
+      "client": 189,
+      "scroll": 661,
       "overflow": "auto"
     },
     "head": {
@@ -417,6 +543,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 343,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 317,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(17, 18, 22)",
@@ -455,12 +599,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 358,
-      "height": 689,
-      "client": 689,
-      "scroll": 689,
+      "top": 137,
+      "bottom": 768,
+      "width": 332,
+      "height": 631,
+      "client": 631,
+      "scroll": 631,
       "overflow": "auto"
     },
     "head": {
@@ -470,6 +614,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 358,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 332,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -508,12 +670,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 358,
-      "height": 247,
-      "client": 247,
-      "scroll": 610,
+      "top": 172,
+      "bottom": 361,
+      "width": 332,
+      "height": 189,
+      "client": 189,
+      "scroll": 602,
       "overflow": "auto"
     },
     "head": {
@@ -523,6 +685,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 358,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 332,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -561,12 +741,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 358,
-      "height": 689,
-      "client": 689,
-      "scroll": 689,
+      "top": 137,
+      "bottom": 768,
+      "width": 332,
+      "height": 631,
+      "client": 631,
+      "scroll": 631,
       "overflow": "auto"
     },
     "head": {
@@ -576,6 +756,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 358,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 332,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(17, 18, 22)",
@@ -614,12 +812,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 358,
-      "height": 247,
-      "client": 247,
-      "scroll": 610,
+      "top": 172,
+      "bottom": 361,
+      "width": 332,
+      "height": 189,
+      "client": 189,
+      "scroll": 602,
       "overflow": "auto"
     },
     "head": {
@@ -631,6 +829,24 @@
       "scroll": 62,
       "overflow": "visible"
     },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 358,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 332,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
+      "overflow": "visible"
+    },
     "backdrop": "rgb(17, 18, 22)",
     "rootVisibility": "hidden",
     "display": "grid"
@@ -667,12 +883,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 370,
-      "height": 689,
-      "client": 689,
-      "scroll": 689,
+      "top": 137,
+      "bottom": 768,
+      "width": 344,
+      "height": 631,
+      "client": 631,
+      "scroll": 631,
       "overflow": "auto"
     },
     "head": {
@@ -682,6 +898,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 370,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 344,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -720,12 +954,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 370,
-      "height": 247,
-      "client": 247,
-      "scroll": 610,
+      "top": 172,
+      "bottom": 361,
+      "width": 344,
+      "height": 189,
+      "client": 189,
+      "scroll": 602,
       "overflow": "auto"
     },
     "head": {
@@ -735,6 +969,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 370,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 344,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -773,12 +1025,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 370,
-      "height": 689,
-      "client": 689,
-      "scroll": 689,
+      "top": 137,
+      "bottom": 768,
+      "width": 344,
+      "height": 631,
+      "client": 631,
+      "scroll": 631,
       "overflow": "auto"
     },
     "head": {
@@ -788,6 +1040,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 370,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 344,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(17, 18, 22)",
@@ -826,12 +1096,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 370,
-      "height": 247,
-      "client": 247,
-      "scroll": 610,
+      "top": 172,
+      "bottom": 361,
+      "width": 344,
+      "height": 189,
+      "client": 189,
+      "scroll": 602,
       "overflow": "auto"
     },
     "head": {
@@ -843,6 +1113,24 @@
       "scroll": 62,
       "overflow": "visible"
     },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 370,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 344,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
+      "overflow": "visible"
+    },
     "backdrop": "rgb(17, 18, 22)",
     "rootVisibility": "hidden",
     "display": "grid"
@@ -879,12 +1167,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 398,
-      "height": 689,
-      "client": 689,
-      "scroll": 689,
+      "top": 137,
+      "bottom": 768,
+      "width": 372,
+      "height": 631,
+      "client": 631,
+      "scroll": 631,
       "overflow": "auto"
     },
     "head": {
@@ -894,6 +1182,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 398,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 372,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -932,12 +1238,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 398,
-      "height": 247,
-      "client": 247,
-      "scroll": 610,
+      "top": 172,
+      "bottom": 361,
+      "width": 372,
+      "height": 189,
+      "client": 189,
+      "scroll": 602,
       "overflow": "auto"
     },
     "head": {
@@ -947,6 +1253,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 398,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 372,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -985,12 +1309,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 398,
-      "height": 689,
-      "client": 689,
-      "scroll": 689,
+      "top": 137,
+      "bottom": 768,
+      "width": 372,
+      "height": 631,
+      "client": 631,
+      "scroll": 631,
       "overflow": "auto"
     },
     "head": {
@@ -1000,6 +1324,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 398,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 372,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(17, 18, 22)",
@@ -1038,12 +1380,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 398,
-      "height": 247,
-      "client": 247,
-      "scroll": 610,
+      "top": 172,
+      "bottom": 361,
+      "width": 372,
+      "height": 189,
+      "client": 189,
+      "scroll": 602,
       "overflow": "auto"
     },
     "head": {
@@ -1053,6 +1395,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 398,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 372,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(17, 18, 22)",
@@ -1082,30 +1442,48 @@
       "overflow": "hidden"
     },
     "form": {
-      "top": 92,
+      "top": 66,
       "bottom": 366,
       "width": 804,
-      "height": 274,
-      "client": 274,
-      "scroll": 274,
+      "height": 300,
+      "client": 300,
+      "scroll": 300,
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 327,
-      "width": 804,
-      "height": 235,
-      "client": 235,
-      "scroll": 432,
+      "top": 111,
+      "bottom": 314,
+      "width": 778,
+      "height": 203,
+      "client": 203,
+      "scroll": 424,
       "overflow": "auto"
     },
     "head": {
       "top": 10,
-      "bottom": 72,
+      "bottom": 54,
       "width": 816,
-      "height": 62,
-      "client": 62,
-      "scroll": 62,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 66,
+      "bottom": 327,
+      "width": 804,
+      "height": 261,
+      "client": 259,
+      "scroll": 259,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 67,
+      "bottom": 111,
+      "width": 778,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -1135,30 +1513,48 @@
       "overflow": "hidden"
     },
     "form": {
-      "top": 127,
+      "top": 101,
       "bottom": 223,
       "width": 804,
-      "height": 96,
-      "client": 96,
-      "scroll": 96,
+      "height": 122,
+      "client": 122,
+      "scroll": 122,
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 184,
-      "width": 804,
-      "height": 57,
-      "client": 57,
-      "scroll": 432,
+      "top": 146,
+      "bottom": 171,
+      "width": 778,
+      "height": 25,
+      "client": 25,
+      "scroll": 424,
       "overflow": "auto"
     },
     "head": {
       "top": 45,
-      "bottom": 107,
+      "bottom": 89,
       "width": 816,
-      "height": 62,
-      "client": 62,
-      "scroll": 62,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 101,
+      "bottom": 184,
+      "width": 804,
+      "height": 83,
+      "client": 81,
+      "scroll": 81,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 102,
+      "bottom": 146,
+      "width": 778,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -1188,30 +1584,48 @@
       "overflow": "hidden"
     },
     "form": {
-      "top": 92,
+      "top": 66,
       "bottom": 366,
       "width": 804,
-      "height": 274,
-      "client": 274,
-      "scroll": 274,
+      "height": 300,
+      "client": 300,
+      "scroll": 300,
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 327,
-      "width": 804,
-      "height": 235,
-      "client": 235,
-      "scroll": 432,
+      "top": 111,
+      "bottom": 314,
+      "width": 778,
+      "height": 203,
+      "client": 203,
+      "scroll": 424,
       "overflow": "auto"
     },
     "head": {
       "top": 10,
-      "bottom": 72,
+      "bottom": 54,
       "width": 816,
-      "height": 62,
-      "client": 62,
-      "scroll": 62,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 66,
+      "bottom": 327,
+      "width": 804,
+      "height": 261,
+      "client": 259,
+      "scroll": 259,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 67,
+      "bottom": 111,
+      "width": 778,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(17, 18, 22)",
@@ -1241,30 +1655,48 @@
       "overflow": "hidden"
     },
     "form": {
-      "top": 127,
+      "top": 101,
       "bottom": 223,
       "width": 804,
-      "height": 96,
-      "client": 96,
-      "scroll": 96,
+      "height": 122,
+      "client": 122,
+      "scroll": 122,
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
+      "top": 146,
+      "bottom": 171,
+      "width": 778,
+      "height": 25,
+      "client": 25,
+      "scroll": 424,
+      "overflow": "auto"
+    },
+    "head": {
+      "top": 45,
+      "bottom": 89,
+      "width": 816,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 101,
       "bottom": 184,
       "width": 804,
-      "height": 57,
-      "client": 57,
-      "scroll": 432,
-      "overflow": "auto"
+      "height": 83,
+      "client": 81,
+      "scroll": 81,
+      "overflow": "hidden"
     },
-    "head": {
-      "top": 45,
-      "bottom": 107,
-      "width": 816,
-      "height": 62,
-      "client": 62,
-      "scroll": 62,
+    "tools": {
+      "top": 102,
+      "bottom": 146,
+      "width": 778,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(17, 18, 22)",
@@ -1303,12 +1735,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 1240,
-      "height": 689,
-      "client": 689,
-      "scroll": 689,
+      "top": 137,
+      "bottom": 768,
+      "width": 1214,
+      "height": 631,
+      "client": 631,
+      "scroll": 631,
       "overflow": "auto"
     },
     "head": {
@@ -1318,6 +1750,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 1240,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 1214,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -1356,12 +1806,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 1240,
-      "height": 247,
-      "client": 247,
-      "scroll": 343,
+      "top": 172,
+      "bottom": 361,
+      "width": 1214,
+      "height": 189,
+      "client": 189,
+      "scroll": 335,
       "overflow": "auto"
     },
     "head": {
@@ -1371,6 +1821,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 1240,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 1214,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -1409,12 +1877,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 1240,
-      "height": 689,
-      "client": 689,
-      "scroll": 689,
+      "top": 137,
+      "bottom": 768,
+      "width": 1214,
+      "height": 631,
+      "client": 631,
+      "scroll": 631,
       "overflow": "auto"
     },
     "head": {
@@ -1424,6 +1892,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 1240,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 1214,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(17, 18, 22)",
@@ -1462,12 +1948,12 @@
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 1240,
-      "height": 247,
-      "client": 247,
-      "scroll": 343,
+      "top": 172,
+      "bottom": 361,
+      "width": 1214,
+      "height": 189,
+      "client": 189,
+      "scroll": 335,
       "overflow": "auto"
     },
     "head": {
@@ -1477,6 +1963,24 @@
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 1240,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 1214,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(17, 18, 22)",
@@ -1530,6 +2034,8 @@
       "scroll": 62,
       "overflow": "visible"
     },
+    "frame": null,
+    "tools": null,
     "backdrop": "rgb(17, 18, 22)",
     "rootVisibility": "hidden",
     "display": "flex"

@@ -1,3 +1,9 @@
+# Актуальная точка D1 · 03.11.2026
+
+Начинать с верхних разделов `03_CHECKPOINT.md`, `02_DECISIONS.md` и [D1/AUDIT.md](D1/AUDIT.md). Основа D1 — main `46d21be` после объединённого PR №2, C1/c1-input02 принят с замечаниями. Код D1 `d1-ui01` в ветке `codex/d1-home-input-launcher`, без merge/deploy/reset. [Тесты](D1/TEST_REPORT.md), [снимки](D1/SCREENSHOTS.md), [аппаратная приёмка](D1/IPHONE_ACCEPTANCE.md). Следующая очередь G1 → A1 → A2 → A3 не начата. Старые статусы ниже исторические.
+
+---
+
 # Актуализация C1 · 02.11.2026
 
 Код C1: Source/ в ветке codex/c1-unified-ui-ux, сборка c1-ui01. Основа B1.2.1 сверена с main 16253c1. Карта охвата — C1_UI_INVENTORY.md, проверки — C1_TEST_REPORT.md, аппаратная приёмка — C1_IPHONE_ACCEPTANCE.md.

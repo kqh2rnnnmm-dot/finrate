@@ -32,12 +32,12 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
       "overflow": "hidden"
     },
     "input": {
-      "top": 92,
-      "bottom": 781,
-      "width": 296,
-      "height": 689,
-      "client": 689,
-      "scroll": 699,
+      "top": 137,
+      "bottom": 768,
+      "width": 270,
+      "height": 631,
+      "client": 631,
+      "scroll": 750,
       "overflow": "auto"
     },
     "head": {
@@ -47,6 +47,24 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 92,
+      "bottom": 781,
+      "width": 296,
+      "height": 689,
+      "client": 687,
+      "scroll": 687,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 93,
+      "bottom": 137,
+      "width": 270,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",
@@ -85,12 +103,12 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
       "overflow": "hidden"
     },
     "input": {
-      "top": 127,
-      "bottom": 374,
-      "width": 296,
-      "height": 247,
-      "client": 247,
-      "scroll": 699,
+      "top": 172,
+      "bottom": 361,
+      "width": 270,
+      "height": 189,
+      "client": 189,
+      "scroll": 750,
       "overflow": "auto"
     },
     "head": {
@@ -100,6 +118,24 @@ Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HO
       "height": 62,
       "client": 62,
       "scroll": 62,
+      "overflow": "visible"
+    },
+    "frame": {
+      "top": 127,
+      "bottom": 374,
+      "width": 296,
+      "height": 247,
+      "client": 245,
+      "scroll": 245,
+      "overflow": "hidden"
+    },
+    "tools": {
+      "top": 128,
+      "bottom": 172,
+      "width": 270,
+      "height": 44,
+      "client": 44,
+      "scroll": 44,
       "overflow": "visible"
     },
     "backdrop": "rgb(242, 242, 245)",

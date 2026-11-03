@@ -1,11 +1,9 @@
-# Source FinRate C1
+# Source FinRate D1
 
-`0.3.5-c1-fix` · `c1-input02`, основа B1.2.1 (`b1.2.1-layout01`). Финансовый код и схема 5 прежние.
+`0.3.6-d1` · `d1-ui01`, основа main `46d21be` после C1/c1-input02/PR №2. Финансовая модель B1.2.1, схема 5 и защитные механизмы прежние.
 
-Сборка: `npm ci`, `npm run build`. Проверка: `npm run check:release` (включает модульные и браузерные проверки). Chromium задаётся через `FINRATE_CHROMIUM` либо устанавливается для Playwright. Только инструменты тестирования используют браузерный runtime; приложение не подключает внешние сервисы.
+Сборка: `npm ci`, `npm run build`. Проверки: `npm run check:release`; дополнительно `FINRATE_TEST_WEBKIT=1` включает два набора WebKit при установленном Playwright WebKit. Chromium задаётся `FINRATE_CHROMIUM` либо штатным runtime. Браузеры и пакеты сборки — инструменты разработки; приложение не подключает внешние сервисы.
 
-Отчёт: [C1_TEST_REPORT.md](../Documents/C1_TEST_REPORT.md). [Карта полей и компонентов](../Documents/C1_UI_INVENTORY.md). [Приёмка iPhone](../Documents/C1_IPHONE_ACCEPTANCE.md).
+[Аудит](../Documents/D1/AUDIT.md) · [Проверки](../Documents/D1/TEST_REPORT.md) · [Снимки](../Documents/D1/SCREENSHOTS.md) · [Приёмка iPhone](../Documents/D1/IPHONE_ACCEPTANCE.md). WebKit/Linux не является настоящим iPhone.
 
-`dist/` и семь публичных файлов в корне репозитория соответствуют исходникам. Наличие файлов в ветке C1 не означает публикации: GitHub Pages использует main. Не сливать и не публиковать без отдельного согласия владельца.
-
-Корректирующий аудит: [C1_INPUT_FIX](../Documents/C1_INPUT_FIX/AUDIT.md). Дополнительная проверка WebKit: `FINRATE_TEST_WEBKIT=1 npm run check:release` при установленном Playwright WebKit. Это тестовый WebKit/Linux, не iPhone.
+Семь файлов dist совпадают с публичными файлами корня **рабочей ветки**. Это не публикация. Не объединять main, не публиковать и не сбрасывать базу без отдельного согласия владельца. `D1_BASELINE_SHA256.json` фиксирует все 52 исходника исходного main; проверка защищает финансовые/защитные модули от скрытых изменений.

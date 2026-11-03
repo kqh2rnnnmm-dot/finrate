@@ -1,0 +1,74 @@
+{
+  grid: {
+    x: 12,
+    y: 282.484375,
+    width: 296,
+    height: 193.515625,
+    top: 282.484375,
+    right: 308,
+    bottom: 476,
+    left: 12
+  },
+  tiles: [
+    {
+      x: 12,
+      y: 282.484375,
+      width: 143,
+      height: 84,
+      top: 282.484375,
+      right: 155,
+      bottom: 366.484375,
+      left: 12
+    },
+    {
+      x: 165,
+      y: 282.484375,
+      width: 143,
+      height: 84,
+      top: 282.484375,
+      right: 308,
+      bottom: 366.484375,
+      left: 165
+    },
+    {
+      x: 12,
+      y: 376.484375,
+      width: 143,
+      height: 84,
+      top: 376.484375,
+      right: 155,
+      bottom: 460.484375,
+      left: 12
+    },
+    {
+      x: 165,
+      y: 376.484375,
+      width: 143,
+      height: 84,
+      top: 376.484375,
+      right: 308,
+      bottom: 460.484375,
+      left: 165
+    },
+    {
+      x: 12,
+      y: 470.484375,
+      width: 143,
+      height: 84,
+      top: 470.484375,
+      right: 155,
+      bottom: 554.484375,
+      left: 12
+    },
+    {
+      x: 165,
+      y: 470.484375,
+      width: 143,
+      height: 84,
+      top: 470.484375,
+      right: 308,
+      bottom: 554.484375,
+      left: 165
+    }
+  ]
+}

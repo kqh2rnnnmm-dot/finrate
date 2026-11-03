@@ -1,204 +1,232 @@
 {
-  "build": "c1-input02",
-  "publicHTMLSHA256": "a808f76baa876875e1d68fbb0a33dacc9c33b61719712b4f9d98707a9bdfcb21",
+  "build": "d1-ui01",
+  "publicHTMLSHA256": "a5180c337184551d5da144d27a8108193722895b9cfcf0609857368cf2dda4e1",
   "allPassed": true,
-  "execution": "check:release with WebKit plus period hidden-root harness correction retry and resume",
+  "execution": "check:release with WebKit plus D1 accessibility settings-snapshot harness correction retry and hash-pinned resume",
   "results": [
     {
       "name": "release-build",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 525
+      "milliseconds": 585
     },
     {
       "name": "patch-unit",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 18231
-    },
-    {
-      "name": "c1-input-geometry",
-      "code": 0,
-      "timedOut": false,
-      "milliseconds": 6216
+      "milliseconds": 18083
     },
     {
       "name": "c1-input-geometry-webkit",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 7061
+      "milliseconds": 7114
+    },
+    {
+      "name": "d1-note-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8173
+    },
+    {
+      "name": "d1-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5607
+    },
+    {
+      "name": "d1-home-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 45982
+    },
+    {
+      "name": "c1-input-geometry",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5399
     },
     {
       "name": "c1-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 9919
+      "milliseconds": 9407
     },
     {
       "name": "b12-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 17212
+      "milliseconds": 16517
     },
     {
       "name": "b11-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 23369
+      "milliseconds": 23825
+    },
+    {
+      "name": "b1-period-sync-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8578
     },
     {
       "name": "b1-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 7683
+      "milliseconds": 8190
     },
     {
       "name": "r30-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 8417
+      "milliseconds": 8967
     },
     {
       "name": "edge-lifecycle-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 18274
+      "milliseconds": 21311
     },
     {
       "name": "credit-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 14116
+      "milliseconds": 14048
     },
     {
       "name": "notice-motion-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 12469
+      "milliseconds": 12457
     },
     {
       "name": "combined-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 31248
+      "milliseconds": 31145
     },
     {
       "name": "entryfix-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 16518
+      "milliseconds": 16701
     },
     {
       "name": "security-lifecycle-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 4722
+      "milliseconds": 4786
     },
     {
       "name": "security-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 42189
+      "milliseconds": 42109
     },
     {
       "name": "history-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 16146
+      "milliseconds": 16285
     },
     {
       "name": "compact-scroll-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 10365
+      "milliseconds": 10882
     },
     {
       "name": "feedback-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 14621
+      "milliseconds": 14545
     },
     {
       "name": "home-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 19060
+      "milliseconds": 17755
     },
     {
       "name": "modality-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 7768
+      "milliseconds": 7580
     },
     {
       "name": "revision-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 35079
+      "milliseconds": 34676
     },
     {
       "name": "layout-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 17965
+      "milliseconds": 18067
     },
     {
       "name": "shell-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 34801
+      "milliseconds": 35226
     },
     {
       "name": "control-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 36530
+      "milliseconds": 37378
     },
     {
       "name": "unified-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 86498
+      "milliseconds": 86595
     },
     {
       "name": "patch-navigation",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 11012
+      "milliseconds": 10664
     },
     {
       "name": "patch-lists",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 14659
+      "milliseconds": 15128
     },
     {
       "name": "patch-forms",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 6780
+      "milliseconds": 6999
     },
     {
       "name": "patch-upgrade",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 39980
+      "milliseconds": 39734
     },
     {
-      "name": "b1-period-sync-browser",
+      "name": "d1-interaction-browser",
       "code": 0,
-      "retestedAfterHiddenRootHarnessCorrection": true,
-      "checks": 8
+      "retestedAfterSettingsSnapshotHarnessCorrection": true,
+      "checks": [
+        "28 note layouts: bounded region, no competing scroller, keyboard/expansion/caret/scroll/500-char text and ciphertext retained",
+        "126 chooser selections; all widths/themes, common geometry, top anchor, both sides, X/outside/system Back",
+        "keyboard Enter/Space operate chooser and note expansion; accessible names/expanded/controls/live counter and selection retained; Chromium safe-area 59/34; real VoiceOver pending"
+      ]
     },
     {
       "name": "patch-list-performance",
       "code": 0,
-      "milliseconds": 7632
+      "milliseconds": 7180
     },
     {
       "name": "verify-delivery",
       "code": 0,
-      "milliseconds": 83
+      "milliseconds": 77
     }
   ],
   "actualIPhone": false,

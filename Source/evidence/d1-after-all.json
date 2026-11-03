@@ -1,0 +1,14 @@
+{
+  "checks": [
+    "one bounded shared note editor, expand/collapse preserves value/caret; no extra surface",
+    "top plus opens the shared outlined chooser directly below header",
+    "left chooser symmetric and all three operations visible",
+    "right chooser symmetric and all three operations visible",
+    "object history action and operation history have group-gap",
+    "remaining debt tap prefills exact cents only; no lot or account auto-save",
+    "six visible Home tiles without scroll; direct configuration and no Blocks heading"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}
