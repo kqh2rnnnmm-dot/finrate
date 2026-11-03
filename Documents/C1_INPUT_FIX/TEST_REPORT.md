@@ -1,5 +1,7 @@
 # Корректирующий C1: итог проверок
 
+Корректирующий PR: https://github.com/kqh2rnnnmm-dot/finrate/pull/2 — открыт, не слит.
+
 База main: `4d3eccf143fd4644bfed46fbc655f00424b959bb`. Ветка: `codex/c1-input-geometry-fix`. Сборка `c1-input02`, пакет `0.3.5-c1-fix`.
 
 ## Результат
