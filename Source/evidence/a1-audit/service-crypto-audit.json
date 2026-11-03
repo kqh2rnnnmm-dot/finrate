@@ -1,0 +1,161 @@
+{
+  "main": "0022e1e3ee557656f902b58dcd1f6b434a47fa57",
+  "build": "g1-theme01",
+  "scope": "audit only; WebCrypto and Dexie/fake-indexeddb; runtime-generated secrets never recorded",
+  "results": [
+    {
+      "id": "A1-01-rich-file-password-recovery",
+      "status": "PASS",
+      "schema": 5,
+      "operations": 7,
+      "events": 1,
+      "drafts": 1,
+      "allFiveModesEqual": true
+    },
+    {
+      "id": "A1-02-clean-independent-store",
+      "status": "PASS",
+      "independentStores": 2
+    },
+    {
+      "id": "A1-03-invalid-files-rejected-with-no-write",
+      "status": "PASS",
+      "rejectedCases": 13
+    },
+    {
+      "id": "A1-04-preview-cancel-is-read-only",
+      "status": "PASS",
+      "revisionAndSafetyUnchanged": true
+    },
+    {
+      "id": "A1-05-replacement-safety-and-local-access",
+      "status": "PASS",
+      "pinAndNoCheckCleared": true
+    },
+    {
+      "id": "A1-06-stale-generation-two-tabs",
+      "status": "PASS",
+      "newerRevisionPreserved": true
+    },
+    {
+      "id": "A1-07-quota-abort-three-stores-atomic",
+      "status": "PASS",
+      "rollbackAt": [
+        "safety",
+        "active",
+        "access"
+      ]
+    },
+    {
+      "id": "A1-08-compatible-legacy-and-future",
+      "status": "PASS",
+      "legacySchemasTested": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "limits": "simple supported legacy documents, not arbitrary historical files"
+    },
+    {
+      "id": "A1-09-key-nonces-aad-bounds",
+      "status": "PASS",
+      "algorithm": "AES-GCM-256",
+      "kdf": "PBKDF2-SHA256",
+      "iterations": 600000,
+      "randomIVBytes": 12,
+      "sampleUniqueIVs": 13,
+      "recoveryEntropyBits": 256
+    },
+    {
+      "id": "A1-10-old-new-passwords-and-recovery",
+      "status": "PASS",
+      "oldCopyUnchanged": true,
+      "recoveryRetained": true
+    },
+    {
+      "id": "A1-F01-export-corrupt-stored-ciphertext",
+      "status": "FINDING",
+      "finding": "backup validates structure only and exports a structurally valid corrupt vault",
+      "severity": "important",
+      "exportSucceeded": true,
+      "reopenError": "DECRYPT",
+      "validInMemoryDocumentStillPresent": true
+    },
+    {
+      "id": "A1-F02-password-change-is-not-DEK-revocation",
+      "status": "FINDING",
+      "finding": "old copy plus its known secret can recover unchanged DEK and decrypt later ciphertext",
+      "severity": "important-threat-limit",
+      "requires": "old copy, its secret, and access to later ciphertext",
+      "notPasswordOnlyBypass": true
+    },
+    {
+      "id": "A1-F03-unselected-recovery-slot-authentication",
+      "status": "FINDING",
+      "finding": "preview verifies the selected opening route, not both credential slots",
+      "severity": "ux-integrity-limit",
+      "passwordPreviewSucceeds": true,
+      "recoveryRouteFails": true
+    },
+    {
+      "id": "A1-F04-json-null-error-classification",
+      "status": "FINDING",
+      "finding": "null JSON produces generic TypeError instead of FORMAT",
+      "severity": "improvement",
+      "rejected": true,
+      "code": "TypeError"
+    },
+    {
+      "id": "A1-F06-large-valid-payload",
+      "status": "FINDING",
+      "finding": "valid encrypted payload below declared limit rejected by base64 validation regex",
+      "severity": "important-availability",
+      "engine": "Node v24.19.0",
+      "sizes": [
+        {
+          "paddingBytes": 65536,
+          "plainBytes": 66061,
+          "fileBytes": 88633,
+          "opened": true
+        },
+        {
+          "paddingBytes": 2097152,
+          "plainBytes": 2097677,
+          "fileBytes": 2797453,
+          "opened": true
+        },
+        {
+          "paddingBytes": 4194304,
+          "plainBytes": 4194829,
+          "stage": "backupBlob",
+          "error": "RangeError",
+          "openError": "RangeError",
+          "withinDeclaredLimit": true
+        },
+        {
+          "paddingBytes": 8000000,
+          "plainBytes": 8000525,
+          "stage": "backupBlob",
+          "error": "RangeError",
+          "openError": "RangeError",
+          "withinDeclaredLimit": true
+        }
+      ]
+    },
+    {
+      "id": "A1-11-full-source-and-public-bytes-unchanged",
+      "status": "PASS",
+      "filesHashed": 72,
+      "main": "0022e1e3ee557656f902b58dcd1f6b434a47fa57",
+      "applicationModified": false
+    }
+  ],
+  "counts": {
+    "PASS": 11,
+    "FINDING": 5,
+    "TEST_ERROR": 0
+  },
+  "actualIPhone": false,
+  "applicationChanged": false
+}
