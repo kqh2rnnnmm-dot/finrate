@@ -14,9 +14,11 @@ export function createFieldEditor({sheet,pop}){
    const input=el.querySelector('.field-input');input.value=initial;
    if(multiline){
     const toggle=el.querySelector('[data-note-expand]');input.id='note-field-'+(++fieldSequence);toggle.setAttribute('aria-controls',input.id);
+    // Keep the native keyboard and selection when the toolbar is tapped.
+    toggle.addEventListener('pointerdown',e=>{if(document.activeElement===input)e.preventDefault();});
     toggle.onclick=()=>{
      const state={start:input.selectionStart,end:input.selectionEnd,direction:input.selectionDirection,scroll:input.scrollTop,focused:document.activeElement===input};
-     const expanded=el.classList.toggle('note-expanded');toggle.setAttribute('aria-expanded',String(expanded));toggle.setAttribute('aria-label',expanded?'Свернуть':'Развернуть');toggle.title=expanded?'Свернуть':'Развернуть';toggle.innerHTML=icon(expanded?'collapse':'expand');
+     const expanded=el.classList.toggle('note-expanded');const count=el.querySelector('.field-count');if(expanded)el.querySelector('.note-tools').prepend(count);else el.querySelector('.value-form').append(count);toggle.setAttribute('aria-expanded',String(expanded));toggle.setAttribute('aria-label',expanded?'Свернуть':'Развернуть');toggle.title=expanded?'Свернуть':'Развернуть';toggle.innerHTML=icon(expanded?'collapse':'expand');
      el.style.setProperty('--sheet-head-height',el.querySelector('.sheet-head').offsetHeight+'px');
      requestAnimationFrame(()=>{input.setSelectionRange(state.start,state.end,state.direction);input.scrollTop=state.scroll;if(state.focused&&document.activeElement!==input)input.focus({preventScroll:true});});
     };

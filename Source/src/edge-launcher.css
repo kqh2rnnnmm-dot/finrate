@@ -26,6 +26,6 @@
 
 /* D1: both launch points finish at the same safe, symmetric panel. */
 .edge-preview,.sheet.operation-chooser,.edge-preview[data-side=left],.sheet.operation-chooser[data-side=left] { left:50%; right:auto; width:min(480px,calc(100% - 2 * var(--island-gutter))); transform:translate(calc(-50% + var(--edge-shift,0px)),-50%); }
-.sheet.top-chooser { top:var(--chooser-top,84px); max-height:calc(var(--viewport-height,100dvh) - var(--chooser-top,84px) - var(--peer-gap)); transform:translateX(-50%) translate(var(--top-dx,0px),var(--top-dy,0px)) scale(var(--top-sx,1),var(--top-sy,1)); transform-origin:center; clip-path:none; }
+.sheet.operation-chooser.top-chooser { top:var(--chooser-top,84px); max-height:calc(var(--viewport-height,100dvh) - var(--chooser-top,84px) - var(--peer-gap)); transform:translateX(-50%) translate(var(--top-dx,0px),var(--top-dy,0px)) scale(var(--top-sx,1),var(--top-sy,1)); transform-origin:center; clip-path:none; }
 .sheet.top-chooser::before { opacity:var(--top-inner,1); }
 .sheet.top-chooser .edge-stripe { display:none; }

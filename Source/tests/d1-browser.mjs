@@ -33,7 +33,7 @@ try{
  if(run('spacing')){
   await home();await p.locator('#more').click();await p.locator('[data-extra="Категории"]').click();await p.locator('[data-category-view="food"]').click();await p.screenshot({path:`evidence/d1-${phase}-category-spacing.png`});const a=await top().locator('[data-object-history]').boundingBox(),b=await top().locator('.entity-history').boundingBox();if(phase!=='before'){assert.ok(b.y-a.y-a.height>=19);checks.push('object history action and operation history have group-gap');}
  }
- if(run('credit')){
+ if(run('credit')&&phase!=='before'){
   await home();const original=JSON.stringify(await record());await p.locator('#more').click();await p.locator('[data-extra="Счета и кошельки"]').click();await p.locator('#account-create').click();
   const set=async(name,value)=>{await top().locator(`[name="${name}"]`).click();await top().locator('.field-input').fill(value);await top().locator('.field-done').click();};
   await set('name','Тестовый долг D1');await top().locator('[name=financeType]').selectOption('credit');await set('creditLimit','600000');await set('opening','15000');await top().locator('#inline-account [type=submit]').click();await top().locator('.opening-remaining').click();assert.equal(await top().locator('[name=amount]').inputValue(),'15000.00');assert.equal(await top().locator('.opening-part').count(),0);assert.equal(await top().locator('#opening-save').isDisabled(),true);assert.equal(JSON.stringify(await record()),original);
