@@ -14,7 +14,7 @@ function isolateActiveSurface(){
   for(const sibling of branch.parentElement?.children||[]){if(sibling===branch||!(sibling instanceof HTMLElement)||sibling.matches('script,style,link'))continue;isolated.set(sibling,sibling.inert);sibling.inert=true;}
  }
 }
-function sync(){isolateActiveSurface();document.body.classList.toggle('surface-open',!!surfaces.length);document.dispatchEvent(new Event('finrate-surface'));}
+function sync(){isolateActiveSurface();document.body.classList.toggle('surface-open',!!surfaces.length);document.body.classList.toggle('screen-surface-open',surfaces.some(row=>row.el.classList.contains('large')));document.dispatchEvent(new Event('finrate-surface'));}
 export function openSurface(el){
  const previous=surfaces.at(-1);
  if(el.dataset.surfaceOverlay){const host=previous?.el||document.body;host.append(el);el.setAttribute('open','');surfaces.push({el,overlay:true,scroll:0});sync();return;}
@@ -49,6 +49,8 @@ const moneyState=new WeakMap();
 function remember(el){moneyState.set(el,{value:el.value,start:el.selectionStart,end:el.selectionEnd});}
 function validInput(el,value){return validMoneyInput(value,{signed:signedMoneyField(el)})&&(!el.dataset.max||value===''||Number(value.replace(',','.'))<=Number(el.dataset.max));}
 function keepInputVisible(el){
+ // Native textarea caret scrolling owns the note; never pan its outer grid.
+ if(el.matches('textarea')&&el.closest('[data-field-editor]'))return;
  const area=el.closest('.sheet-body,main,.auth');if(!area)return;const r=el.getBoundingClientRect(),a=area.getBoundingClientRect(),vv=window.visualViewport;
  const top=Math.max(a.top,vv?.offsetTop||0)+12,bottom=Math.min(a.bottom,(vv?.offsetTop||0)+(vv?.height||innerHeight))-16;
  const submit=el.closest('.auth #unlock-pin,.auth #unlock')?.querySelector('[type=submit]')?.getBoundingClientRect();
@@ -64,7 +66,7 @@ export function updateViewport(reveal=true){
   document.body.classList.toggle('keyboard-open',keyboardOpen);
   const active=document.activeElement;
   if(keyboardWasOpen&&!keyboardOpen&&active?.closest('[data-field-editor]')){
-   const editor=active.closest('[data-field-editor]');active.blur();
+   const editor=active.closest('[data-field-editor]');if(numeric(active))active.blur();
    // Native iOS Done may dismiss the decimal keyboard without an Enter event.
    // Accept this field only; parent financial forms still require explicit save.
    // A page button owns its own cancel/navigation action instead.
@@ -106,11 +108,34 @@ export function installInputBehavior(){
  window.visualViewport?.addEventListener('resize',updateViewport);window.visualViewport?.addEventListener('scroll',()=>updateViewport(false));window.addEventListener('resize',updateViewport);updateViewport();
 }
 
+// WebKit has no portable interactive keyboard-dismiss API for textarea.
+// At the beginning of the note only, a deliberate downward pull blurs it.
+// Scrolling earlier text, selecting text and pinch gestures stay native.
+function bindNoteKeyboard(input,form){
+ let pull=null;
+ input.addEventListener('touchstart',e=>{
+  pull=null;if(e.touches.length!==1||document.activeElement!==input||!document.body.classList.contains('keyboard-open')||input.scrollTop>1||input.selectionStart!==input.selectionEnd)return;
+  pull={x:e.touches[0].clientX,y:e.touches[0].clientY,at:performance.now()};
+ },{passive:true});
+ input.addEventListener('touchmove',e=>{
+  if(!pull)return;const start=pull;
+  if(e.touches.length!==1||performance.now()-start.at>500||input.selectionStart!==input.selectionEnd){pull=null;return;}
+  const dx=e.touches[0].clientX-start.x,dy=e.touches[0].clientY-start.y;
+  if(Math.abs(dx)>24||dy< -12){pull=null;return;}
+  if(dy>64&&dy>Math.abs(dx)*2&&input.scrollTop<=1){pull=null;if(e.cancelable)e.preventDefault();input.blur();}
+ },{passive:false});
+ for(const type of ['touchend','touchcancel'])input.addEventListener(type,()=>pull=null,{passive:true});
+ form.parentElement.addEventListener('pointerup',e=>{
+  if(document.activeElement===input&&(e.target===form||e.target===form.parentElement||e.target.matches('.field-count')))input.blur();
+ });
+}
+
 /* Single-value editing never posts a financial transaction. Caller owns commit. */
 export function bindFieldEditor(el,commit){
  const form=el.querySelector('form'),input=form.querySelector('input,textarea');let busy=false;
  el.dataset.fieldEditor='true';input.setAttribute('aria-label',el.querySelector('h2')?.textContent||'Значение');
  input.enterKeyHint=input.tagName==='TEXTAREA'?'enter':'done';
+ if(input.tagName==='TEXTAREA')bindNoteKeyboard(input,form);
  const apply=async()=>{if(busy||!el.open||el.dataset.closing||el.dataset.suspending)return;busy=true;try{const ok=await commit(input.value);if(ok===false){busy=false;return;}if(el.isConnected&&activeSurface()===el)closeSurface(el);}catch{busy=false;notifyFeedback('Проверьте введённое значение.',{error:true});}};
  // The caller normally pops its own panel stack after committing.
  form.onsubmit=e=>{e.preventDefault();apply();};

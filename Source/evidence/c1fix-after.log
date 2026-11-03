@@ -1,0 +1,108 @@
+[
+  {
+    "width": 320,
+    "theme": "light",
+    "height": 844,
+    "dialog": {
+      "top": 0,
+      "bottom": 844,
+      "width": 320,
+      "height": 844,
+      "client": 844,
+      "scroll": 844,
+      "overflow": "hidden"
+    },
+    "body": {
+      "top": 0,
+      "bottom": 844,
+      "width": 320,
+      "height": 844,
+      "client": 844,
+      "scroll": 844,
+      "overflow": "hidden"
+    },
+    "form": {
+      "top": 92,
+      "bottom": 820,
+      "width": 296,
+      "height": 728,
+      "client": 728,
+      "scroll": 728,
+      "overflow": "hidden"
+    },
+    "input": {
+      "top": 92,
+      "bottom": 780.96875,
+      "width": 296,
+      "height": 688.96875,
+      "client": 689,
+      "scroll": 689,
+      "overflow": "auto"
+    },
+    "head": {
+      "top": 10,
+      "bottom": 72,
+      "width": 300,
+      "height": 62,
+      "client": 62,
+      "scroll": 62,
+      "overflow": "visible"
+    },
+    "backdrop": "rgb(242, 242, 245)",
+    "rootVisibility": "hidden",
+    "display": "grid"
+  },
+  {
+    "width": 320,
+    "theme": "light",
+    "height": 390,
+    "dialog": {
+      "top": 35,
+      "bottom": 425,
+      "width": 320,
+      "height": 390,
+      "client": 390,
+      "scroll": 390,
+      "overflow": "hidden"
+    },
+    "body": {
+      "top": 35,
+      "bottom": 425,
+      "width": 320,
+      "height": 390,
+      "client": 390,
+      "scroll": 390,
+      "overflow": "hidden"
+    },
+    "form": {
+      "top": 127,
+      "bottom": 413,
+      "width": 296,
+      "height": 286,
+      "client": 286,
+      "scroll": 286,
+      "overflow": "hidden"
+    },
+    "input": {
+      "top": 127,
+      "bottom": 373.96875,
+      "width": 296,
+      "height": 246.96875,
+      "client": 247,
+      "scroll": 669,
+      "overflow": "auto"
+    },
+    "head": {
+      "top": 45,
+      "bottom": 107,
+      "width": 300,
+      "height": 62,
+      "client": 62,
+      "scroll": 62,
+      "overflow": "visible"
+    },
+    "backdrop": "rgb(242, 242, 245)",
+    "rootVisibility": "hidden",
+    "display": "grid"
+  }
+]

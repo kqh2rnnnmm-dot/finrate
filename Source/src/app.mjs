@@ -10,7 +10,7 @@ import {backupBlob} from './crypto.mjs';
 import {createUI,icon} from './ui.mjs';
 import {PRIMARY_TABS} from './interaction.mjs';
 import {helpPage} from './help.mjs';
-const BUILD='c1-ui01',root=document.getElementById('app'),store=createStore(),app=new FinRate(store);
+const BUILD='c1-input02',root=document.getElementById('app'),store=createStore(),app=new FinRate(store);
 root.dataset.build=BUILD;
 let page='Главная',status='',bad=false,exists=false,recovery=null,prepared=null,safetyDownloaded=false,hiddenTimer,suspendRequested=false;
 let returnContext=null,lockReason=null,lockDelay=5,suspendReason='timeout';const sessionPolicy=createSessionPolicy();

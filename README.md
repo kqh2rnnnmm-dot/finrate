@@ -1,3 +1,11 @@
+# Корректирующий FinRate C1
+
+Сборка c1-input02 от main 4d3eccf. [Аудит](Documents/C1_INPUT_FIX/AUDIT.md) · [Проверки](Documents/C1_INPUT_FIX/TEST_REPORT.md) · [До/после](Documents/C1_INPUT_FIX/SCREENSHOTS.md) · [iPhone](Documents/C1_INPUT_FIX/IPHONE_ACCEPTANCE.md).
+
+Исправление только в отдельной ветке, без слияния и публикации. Предыдущая справка сохранена ниже.
+
+---
+
 # FinRate
 
 Локальная финансовая PWA. Рабочая ветка PATCH C1; без публикации main.

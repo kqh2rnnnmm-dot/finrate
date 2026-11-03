@@ -1,0 +1,11 @@
+{
+  "checks": [
+    "keyboard resize retains caret/text; pull only at note start; blank tap dismisses; no save; Continue/Discard keep storage",
+    "nested planned amount: opaque screen, one-line field, discard returns to actual parent",
+    "full-width, remaining-height text editor; one scroller; opaque isolation; both themes, five iPhone widths, landscape and desktop"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false,
+  "keyboard": "VisualViewport model, no native keyboard screenshot"
+}

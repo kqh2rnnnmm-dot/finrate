@@ -2,7 +2,7 @@ import {readFile,readdir} from 'node:fs/promises';
 import {createHash} from 'node:crypto';
 import assert from 'node:assert/strict';
 const hash=b=>createHash('sha256').update(b).digest('hex');
-const c1=new Set(['src/surfaces.mjs','src/planning-ui.mjs','src/field-editor.mjs','src/navigation.mjs','src/style.css','src/focus.mjs','src/ui.mjs','src/management.mjs','src/activity-ui.mjs','src/help.mjs','src/app.mjs']);
+const c1=new Set(['src/chrome.mjs','src/surfaces.mjs','src/planning-ui.mjs','src/field-editor.mjs','src/navigation.mjs','src/style.css','src/focus.mjs','src/ui.mjs','src/management.mjs','src/activity-ui.mjs','src/help.mjs','src/app.mjs']);
 const baseline=JSON.parse(await readFile('R30_BASELINE_SHA256.json','utf8'));
 const scope=new Set(['src/context-menu.mjs','src/icons.mjs','src/style.css','src/app.mjs','src/block02.mjs','src/credit-ui.mjs','src/credit.mjs','src/focus.mjs','src/management.mjs','src/model.mjs','src/operations.mjs','src/dashboard.mjs','src/ui.mjs','src/service.mjs','src/activity.mjs','src/activity-ui.mjs','src/help.mjs']);
 for(const [file,digest]of Object.entries(baseline))if(!scope.has(file)&&!c1.has(file))assert.equal(hash(await readFile(file)),digest,'R30 protected: '+file);
@@ -23,8 +23,15 @@ for(const [file,digest]of Object.entries(b11))if(!allowed.has(file)&&!c1.has(fil
 
 const b12=JSON.parse(await readFile('B12_BASELINE_SHA256.json','utf8'));
 for(const [file,digest]of Object.entries(b12))if(!c1.has(file)&&!['src/style.css','src/app.mjs'].includes(file))assert.equal(hash(await readFile(file)),digest,'B1.2 protected: '+file);
-assert.equal(hash((await readFile('src/app.mjs','utf8')).replace('c1-ui01','b1.2-plans01')),b12['src/app.mjs'],'app metadata only');
+assert.equal(hash((await readFile('src/app.mjs','utf8')).replace('c1-input02','b1.2-plans01')),b12['src/app.mjs'],'app metadata only');
 
 const c1base=JSON.parse(await readFile('C1_BASELINE_SHA256.json','utf8'));
 for(const [file,digest] of Object.entries(c1base))if(!c1.has(file))assert.equal(hash(await readFile(file)),digest,'C1 protected: '+file);
-console.log(JSON.stringify({build:'c1-ui01',securityCoreUnchanged:true,financialCoreUnchanged:true,publicAllowlist:7,csp:'PASS',published:false,c1Allowed:[...c1],protectedModulesByteIdentical:true}));
+console.log(JSON.stringify({build:'c1-input02',securityCoreUnchanged:true,financialCoreUnchanged:true,publicAllowlist:7,csp:'PASS',published:false,c1Allowed:[...c1],protectedModulesByteIdentical:true}));
+
+const correctiveBaseline=JSON.parse(await readFile('C1_CORRECTION_BASELINE_SHA256.json','utf8'));
+assert.equal(Object.keys(correctiveBaseline).length,52,'complete corrective baseline');
+const correction=new Set(['src/style.css','src/surfaces.mjs','src/chrome.mjs','src/app.mjs','src/help.mjs']);
+for(const [file,digest]of Object.entries(correctiveBaseline))if(!correction.has(file))assert.equal(hash(await readFile(file)),digest,'C1 correction protected: '+file);
+assert.equal(hash((await readFile('src/app.mjs','utf8')).replace('c1-input02','c1-ui01')),correctiveBaseline['src/app.mjs'],'correction app metadata only');
+console.log(JSON.stringify({correctiveMain:'4d3eccf',protectedUnchanged:52-correction.size,correctionAllowed:[...correction]}));

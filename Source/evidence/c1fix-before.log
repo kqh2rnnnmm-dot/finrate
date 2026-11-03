@@ -1,0 +1,109 @@
+[
+  {
+    "width": 390,
+    "theme": "light",
+    "height": 844,
+    "dialog": {
+      "top": 0,
+      "bottom": 844,
+      "width": 390,
+      "height": 844,
+      "client": 844,
+      "scroll": 844,
+      "overflow": "hidden"
+    },
+    "body": {
+      "top": 0,
+      "bottom": 844,
+      "width": 390,
+      "height": 844,
+      "client": 844,
+      "scroll": 844,
+      "overflow": "hidden"
+    },
+    "form": {
+      "top": 92,
+      "bottom": 820,
+      "width": 358,
+      "height": 728,
+      "client": 728,
+      "scroll": 728,
+      "overflow": "visible"
+    },
+    "input": {
+      "top": 92,
+      "bottom": 776.96875,
+      "width": 358,
+      "height": 684.96875,
+      "client": 685,
+      "scroll": 685,
+      "overflow": "auto"
+    },
+    "head": {
+      "top": 10,
+      "bottom": 72,
+      "width": 362,
+      "height": 62,
+      "client": 62,
+      "scroll": 62,
+      "overflow": "visible"
+    },
+    "backdrop": "rgba(0, 0, 0, 0)",
+    "rootVisibility": "hidden",
+    "display": "flex"
+  },
+  {
+    "width": 390,
+    "theme": "light",
+    "height": 390,
+    "dialog": {
+      "top": 35,
+      "bottom": 425,
+      "width": 390,
+      "height": 390,
+      "client": 390,
+      "scroll": 390,
+      "overflow": "hidden"
+    },
+    "body": {
+      "top": 35,
+      "bottom": 425,
+      "width": 390,
+      "height": 390,
+      "client": 390,
+      "scroll": 390,
+      "overflow": "hidden"
+    },
+    "form": {
+      "top": 127,
+      "bottom": 401,
+      "width": 358,
+      "height": 274,
+      "client": 274,
+      "scroll": 274,
+      "overflow": "visible"
+    },
+    "input": {
+      "top": 127,
+      "bottom": 357.96875,
+      "width": 358,
+      "height": 230.96875,
+      "client": 231,
+      "scroll": 610,
+      "overflow": "auto"
+    },
+    "head": {
+      "top": 45,
+      "bottom": 107,
+      "width": 362,
+      "height": 62,
+      "client": 62,
+      "scroll": 62,
+      "overflow": "visible"
+    },
+    "backdrop": "rgba(0, 0, 0, 0)",
+    "rootVisibility": "hidden",
+    "display": "flex"
+  }
+]
+REPRO: transparent full-screen backdrop and measured editor sizing captured

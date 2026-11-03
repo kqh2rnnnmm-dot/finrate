@@ -559,7 +559,8 @@ main { overflow-x:hidden; touch-action:pan-y pinch-zoom; }
 
 /* Full pages have no outer card or safe-area masking strip. Only the island floats. */
 .sheet.large { position:fixed; inset:var(--viewport-top,0px) 0 auto; width:100%; max-width:none; height:var(--viewport-height,100dvh); max-height:var(--viewport-height,100dvh); margin:0; padding:0; border:0; border-radius:0; background:var(--canvas); animation:none; transform:none; box-shadow:none; }
-.sheet.large::backdrop { background:transparent; }
+.sheet.large::backdrop { background:var(--canvas); }
+.screen-surface-open #app { visibility:hidden; }
 .sheet.large .sheet-head { top:calc(10px + env(safe-area-inset-top)); left:max(14px,env(safe-area-inset-left)); right:max(14px,env(safe-area-inset-right)); min-height:62px; background:var(--island); backdrop-filter:blur(12px); -webkit-backdrop-filter:blur(12px); }
 .sheet.large .sheet-body { padding-top:calc(var(--sheet-head-height,62px) + env(safe-area-inset-top) + 30px); padding-bottom:calc(24px + env(safe-area-inset-bottom)); }
 .sheet.large .sheet-body>.list-button,.sheet.large .operation-money,.sheet.large .split-summary,.sheet.large .split-amount-card,.sheet.large .split-item,.sheet.large .split-choice,.sheet.large .transfer-account,.sheet.large .pick-button { background:var(--white); }
@@ -592,11 +593,15 @@ body.keyboard-navigation .context-options button.context-selected:focus-visible 
 .field-editor .sheet-head { display:grid; grid-template-columns:auto minmax(0,1fr) auto; }
 .field-editor .sheet-head h2 { text-align:center; }
 .field-done { min-height:44px; padding:8px; color:var(--blue); font-weight:600; white-space:nowrap; }
-.field-editor .field-input,.field-editor .field-input:focus,.field-editor .field-input:focus-visible { flex:1; min-height:44px; width:100%; margin:0; padding:8px 2px; border:0; border-radius:0; outline:0; box-shadow:none; background:transparent; color:var(--ink); font-size:var(--field-text-size); line-height:1.65; }
+.field-editor .field-input { flex:1; min-height:44px; width:100%; margin:0; padding:8px 2px; border:0; border-radius:0; outline:0; box-shadow:none; background:transparent; color:var(--ink); font-size:var(--field-text-size); line-height:1.65; }
 .field-editor input.field-input { flex:0 0 auto; font-size:1.75rem; white-space:nowrap; overflow-x:auto; }
 .field-editor textarea.field-input { resize:none; overflow:auto; white-space:pre-wrap; overflow-wrap:anywhere; }
-.field-editor .sheet-body { min-height:0; overflow:hidden; }
-.field-editor .value-form { min-height:0; height:100%; margin:0; }
+.field-editor .sheet-body { display:grid; grid-template-rows:minmax(0,1fr); min-height:0; overflow:hidden; }
+.field-editor .value-form { min-height:0; height:auto; margin:0; overflow:hidden; gap:var(--peer-gap); }
+.note-editor .value-form { display:grid; grid-template-rows:minmax(0,1fr) auto; }
+.note-editor textarea.field-input { height:100%; min-height:0; max-height:100%; scroll-margin:0; touch-action:pan-y pinch-zoom; }
+.field-editor .field-count { margin:0; }
+.keyboard-open .field-editor .sheet-body { padding-bottom:var(--peer-gap); }
 .field-launcher { cursor:pointer; }
 .full-note { white-space:pre-wrap; overflow-wrap:anywhere; max-height:min(40dvh,360px); overflow-y:auto; overscroll-behavior:contain; padding-block:4px; line-height:1.6; user-select:text; -webkit-user-select:text; }
 .pick-button strong,.list-button strong,.op-description { min-width:0; }
