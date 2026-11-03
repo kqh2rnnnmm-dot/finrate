@@ -45,7 +45,7 @@ try{
   checks.push(cases+' chooser selections; all widths/themes, common geometry, top anchor, both sides, X/outside/system Back');
  }
  if(scope==='all'||scope==='accessibility'){
-  await p.setViewportSize({width:390,height:844});await p.reload();await unlock();
+  await p.setViewportSize({width:390,height:844});await p.reload();await unlock();const accessibilityOriginal=JSON.stringify(await record());
   const plus=p.locator('#operation-add');await plus.focus();await plus.press('Enter');assert.equal(await plus.getAttribute('aria-expanded'),'true');
   const income=top().getByRole('button',{name:'Доход',exact:true});await income.focus();await income.press('Enter');await top().locator('[data-field=advanced]').click();await top().locator('[data-field=note]').click();const input=top().locator('.field-input');await input.fill(note);await input.evaluate(e=>e.setSelectionRange(125,135));
   assert.equal(await top().getByRole('button',{name:'Развернуть',exact:true}).count(),1);const toggle=top().locator('[data-note-expand]');assert.equal(await toggle.getAttribute('aria-controls'),await input.getAttribute('id'));await toggle.focus();await toggle.press('Enter');assert.equal(await toggle.getAttribute('aria-expanded'),'true');assert.equal(await toggle.getAttribute('aria-label'),'Свернуть');assert.equal(await input.evaluate(e=>e.selectionStart),125);assert.equal(await input.evaluate(e=>e.selectionEnd),135);
@@ -54,7 +54,7 @@ try{
    const cdp=await context.newCDPSession(p);await cdp.send('Emulation.setSafeAreaInsetsOverride',{insets:{top:59,bottom:34,left:0,right:0}});await viewport(844);await p.evaluate(()=>new Promise(r=>requestAnimationFrame(r)));
    const g=await top().evaluate(el=>{const r=n=>n.getBoundingClientRect().toJSON();return {head:r(el.querySelector('.sheet-head')),field:r(el.querySelector('.note-field')),count:r(el.querySelector('.field-count'))};});assert.ok(g.field.y>=g.head.bottom&&g.count.bottom<=844&&g.count.y>=g.field.bottom,JSON.stringify(g));await p.screenshot({path:'evidence/d1-note-safe-area.png'});
   }
-  assert.equal(JSON.stringify(await record()),original);checks.push('keyboard Enter/Space operate chooser and note expansion; accessible names/expanded/controls/live counter and selection retained; Chromium safe-area 59/34; real VoiceOver pending');
+  assert.equal(JSON.stringify(await record()),accessibilityOriginal);checks.push('keyboard Enter/Space operate chooser and note expansion; accessible names/expanded/controls/live counter and selection retained; Chromium safe-area 59/34; real VoiceOver pending');
  }
  assert.deepEqual(errors,[]);
 }catch(e){console.error(e);process.exitCode=1;}finally{await browser?.close();server.close();await writeFile(`evidence/d1-interaction-${scope}-${engine}.json`,JSON.stringify({checks,errors,passed:!process.exitCode,actualIPhone:false},null,2));}
