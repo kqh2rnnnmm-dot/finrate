@@ -17,16 +17,17 @@ try{
  browser=process.env.FINRATE_WEBKIT?await webkit.launch():await chromium.launch({executablePath:await chromiumPath(),args:['--no-sandbox']});context=await browser.newContext({viewport:{width:390,height:844},hasTouch:true,isMobile:true,reducedMotion:'reduce'});p=await context.newPage();p.setDefaultTimeout(10000);p.on('pageerror',e=>errors.push(e.message));await p.goto(base);const sample=fixture();planning(sample).onboarding='skipped';await seed(sample);
  await p.locator('#operation-add').click();await top().locator('[data-new=income]').click();await top().locator('[data-field=advanced]').click();await top().locator('[data-field=note]').click();await top().locator('.field-input').fill(longText);
  const measurements=[];
- for(const width of (phase==='before'?[390]:[320,375,390,402,430,1280]))for(const theme of ['light','dark']){
-  await p.setViewportSize({width,height:844});await p.emulateMedia({colorScheme:theme});
-  for(const height of [844,390]){
-   await viewport(height,height===390?35:0);const g=await geometry();measurements.push({width,theme,height,...g});
-   if(width===390)await p.screenshot({path:`evidence/c1fix-${artifactPhase}-note-${theme}-${height===390?'keyboard-model':'full'}.png`});
+ for(const width of (phase==='before'?[390]:[320,375,390,402,430,844,1280]))for(const theme of ['light','dark']){
+  const screenHeight=width===844?390:844;await p.setViewportSize({width,height:screenHeight});await p.emulateMedia({colorScheme:theme});
+  for(const height of [screenHeight,width===844?200:390]){
+   await viewport(height,height<screenHeight?35:0);const g=await geometry();measurements.push({width,theme,height,...g});
+   if(width===390)await p.screenshot({path:`evidence/c1fix-${artifactPhase}-note-${theme}-${height<screenHeight?'keyboard-model':'full'}.png`});
    if(phase!=='before'){
     assert.ok(g.input.height>=g.form.height-50,JSON.stringify(g));assert.ok(g.input.bottom<=g.dialog.bottom+1);assert.ok(g.input.top>=g.head.bottom);assert.ok(g.input.width>=width-50);assert.equal(g.body.overflow,'hidden');assert.ok(g.body.scroll<=g.body.client+1);assert.ok(g.form.scroll<=g.form.client+1);assert.notEqual(g.backdrop,'rgba(0, 0, 0, 0)');assert.equal(g.rootVisibility,'hidden');assert.equal(await top().locator('.field-input').inputValue(),longText);
    }
   }
  }
+ await p.setViewportSize({width:390,height:844});
  if(phase!=='before'){
   const input=top().locator('.field-input'),storageBefore=JSON.stringify(await record());
   await input.evaluate(e=>{e.focus();e.setSelectionRange(20,20);e.scrollTop=0;});
@@ -44,5 +45,5 @@ try{
  await writeFile(`evidence/c1fix-${artifactPhase}-measurements.json`,JSON.stringify(measurements,null,2));
  console.log(JSON.stringify(measurements.slice(0,2),null,2));
  if(phase==='before'){console.log('REPRO: transparent full-screen backdrop and measured editor sizing captured');}
- else{checks.push('full-width, remaining-height text editor; one scroller; opaque isolation; both themes and six widths');assert.deepEqual(errors,[]);}
+ else{checks.push('full-width, remaining-height text editor; one scroller; opaque isolation; both themes, five iPhone widths, landscape and desktop');assert.deepEqual(errors,[]);}
 }catch(e){console.error(e);process.exitCode=1;}finally{await browser?.close();server.close();await writeFile(`evidence/c1fix-${artifactPhase}-geometry.json`,JSON.stringify({checks,errors,passed:!process.exitCode,actualIPhone:false,keyboard:'VisualViewport model, no native keyboard screenshot'},null,2));}
