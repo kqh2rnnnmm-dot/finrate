@@ -91,8 +91,13 @@ export function createUI(ctx){
  function refreshExposed(){const parent=panels.at(-1);if(!parent?.needsRefresh||!parent.refresh)return;const scroll=parent.el.querySelector('.sheet-body')?.scrollTop||0,refresh=parent.refresh;pop();refresh();const body=panels.at(-1)?.el.querySelector('.sheet-body');if(body)body.scrollTop=scroll;}
  async function perform(fn,text,onSuccess){const top=panels.at(-1)?.el,host=top||root,afterSave=pendingLeaves.get(host);pendingLeaves.delete(host);if(locked||app.busy)return false;locked=true;
   const disabled=[...document.querySelectorAll('button')].filter(b=>!b.disabled);disabled.forEach(b=>b.disabled=true);
-  const scroll=root.querySelector('main')?.scrollTop||0;restoreScroll=scroll;const form=top?.querySelector('form'),retry=form?()=>{if(top.isConnected&&activeSurface()===top&&!locked&&!app.busy)form.requestSubmit();}:null;const ok=await run(fn,text,retry?{action:retry}:{});locked=false;disabled.filter(b=>b.isConnected).forEach(b=>b.disabled=false);
+  const scroll=root.querySelector('main')?.scrollTop||0;restoreScroll=scroll;const form=top?.querySelector('form'),retry=form?()=>{if(top.isConnected&&activeSurface()===top&&!locked&&!app.busy)form.requestSubmit();}:null;const ok=await run(fn,text,retry?{action:retry,actionAvailable:()=>top.isConnected&&activeSurface()===top}:{});locked=false;disabled.filter(b=>b.isConnected).forEach(b=>b.disabled=false);
   if(ok){for(const panel of panels)if(panel.entity)panel.needsRefresh=true;onSuccess?.();afterSave?.();}return ok;
+ }
+ function feedbackDetails(item){
+  if(!d()||!item.financial?.length)return;
+  const stages={waiting:'Ожидает отправки',sent:'Отправлен',received:'Зачислен',returned:'Возвращён',cancelled:'Отменён'};
+  return sheet('Подробности действия',`<p>${esc(item.title)}</p>${item.financial.map(o=>`<section class="financial-receipt"><h3>${esc(o.cancelled?'Отмена · '+o.kind:o.kind)}</h3><dl><dt>Сумма</dt><dd>${esc(o.amount)}</dd><dt>Счёт</dt><dd>${esc(o.account)}</dd>${o.destination?`<dt>Куда / кому</dt><dd>${esc(o.destination)}</dd>`:''}<dt>Дата операции</dt><dd>${esc(o.date)}</dd>${o.stage?`<dt>Состояние</dt><dd>${esc(stages[o.stage]||o.stage)}</dd>`:''}</dl></section>`).join('')}`,el=>{el.dataset.feedbackDetails='true';},{mode:'compact',dismiss:true});
  }
  function guardRow(row,done){if(row.guard){row.guard(done);return;}if(row.state()===row.initial){done();return;}saveChanges(row,done);}
  function saveChanges(row,done){const form=row.el.querySelector('form'),button=row.el.querySelector('[data-save-changes]'),save=row.save||row.el.finrateApplyValue|| (form?()=>form.requestSubmit():button?()=>button.click():null);
@@ -236,6 +241,6 @@ export function createUI(ctx){
  const gestures=installNavigationGestures({root,getPage,navigate,blocked:()=>!d()||locked||app.busy||!!activeSurface()||!PRIMARY_TABS.includes(getPage())});
  const edgeLauncher=installEdgeLauncher({root,getPage,getSide:()=>d()?.settings.edgeSide||'right',available:()=>!!d()&&!locked&&!app.busy&&PRIMARY_TABS.includes(getPage())&&!panels.length&&!root.querySelector('main form')&&!activeSurface(),open:operationChooser});
 
- return {header,navigation,home,operations,settings,activityPage:activity.page,securityPage:security.page,securityOpen:security.open,navigationContext,restoreNavigation,bind,clear,reset,back,menu,menuPage,search,searchPage,navigate,watchUpdates,bindUpdate,sheet,perform,closePanel:el=>{if(panels.at(-1)?.el===el)pop();},filtersPage:lists.page,accounts:management.accounts,categories:management.categories};
+ return {header,navigation,home,operations,settings,feedbackDetails,activityPage:activity.page,securityPage:security.page,securityOpen:security.open,navigationContext,restoreNavigation,bind,clear,reset,back,menu,menuPage,search,searchPage,navigate,watchUpdates,bindUpdate,sheet,perform,closePanel:el=>{if(panels.at(-1)?.el===el)pop();},filtersPage:lists.page,accounts:management.accounts,categories:management.categories};
 }
 function rank(rows,query,text){const q=normalized(query);if(!q)return rows;return rows.map(x=>({x,t:normalized(text(x))})).filter(x=>x.t.includes(q)).sort((a,b)=>Number(!a.t.split(/\s+/).some(w=>w.startsWith(q)))-Number(!b.t.split(/\s+/).some(w=>w.startsWith(q)))).map(x=>x.x);}

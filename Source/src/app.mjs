@@ -3,6 +3,7 @@ import{createSessionPolicy}from'./session-policy.mjs';
 import {formatMoney} from './ui-values.mjs';
 import {openSurface,closeSurface,activeSurface} from './surfaces.mjs';
 import {installFeedback,notifyFeedback,clearFeedback} from './feedback.mjs';
+import {completedNotification} from './notification-events.mjs';
 import {createStore} from './store.mjs';
 import {FinRate} from './service.mjs';
 import {addAccount,addCategory,rename,archive,post,totals,money,copy,uid} from './model.mjs';
@@ -19,7 +20,7 @@ const primary=PRIMARY_TABS,extra=['Счета и кошельки','Катего
 const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const amt=n=>formatMoney(n,app.document?.currency||'RUB');
 const get=id=>document.getElementById(id);
-installFeedback(root,activeSurface);
+installFeedback(root,activeSurface,{getSettings:()=>app.document?.settings,openDetails:item=>ui.feedbackDetails(item)});
 const ui=createUI({app,root,render,run,setStatus,getStatus:()=>status,getPage:()=>page,goPage:x=>{page=x;prepared=null;render();window.scrollTo(0,0);},closeBase});
 const resetUI=createResetUI({app,sheet:ui.sheet,pop:()=>ui.closePanel(activeSurface()),perform:ui.perform,download:blob=>download(blob,fileName('FinRate_backup')),finished:()=>{prepared=null;recovery=null;returnContext=null;forcePassword=false;recoverPin=false;lockReason=null;page='Главная';clearFeedback();ui.clear();sessionPolicy.resume();notifyFeedback('Данные FinRate на этом устройстве удалены.');resetChannel?.postMessage({dataset:resetDataset});}});
 let resetDataset=null;
@@ -63,7 +64,7 @@ function render(){
   bind();ui.bind();if(page==='Данные и синхронизация')loadSafety();
 }
 async function run(fn,success,options={}){if(app.busy)return false;const disabled=[...root.querySelectorAll('button')].filter(b=>!b.disabled);disabled.forEach(b=>{b.disabled=true;});
-  let ok=false;try{await fn();exists=!!await store.read();await app.entryStatus();ok=true;if(success!==undefined)setStatus(success);}
+  const before=app.document;let ok=false;try{await fn();exists=!!await store.read();await app.entryStatus();ok=true;if(success!==undefined)setStatus(success,false,{...completedNotification(before,app.document),resolveError:true});}
   catch(e){setStatus(messages[e.code]||({LAST_ACCOUNT:'Последний активный счёт нельзя архивировать.',TRANSFER_MAX:'Сумма перевода превышает остаток за вычетом комиссии.',MERGE:'Выберите минимум две категории одного типа.',MERGE_COLLISION:'Для одинаковых подкатегорий выберите объединение или разные названия.',UNDO_STALE:'После изменения были другие записи. Автоматическая отмена остановлена, чтобы сохранить их.',AMOUNT:'Введите положительную сумму. Комиссия внутри суммы должна быть меньше перевода.',CATEGORY:'Выберите доступную категорию.',ACCOUNT:'Выберите доступный счёт.',TRANSFER:'Выберите два разных счёта.',SPLIT_SUM:'Части превышают общую сумму. Исправьте распределение.',SPLIT_PARENT:'Разделите покупку только между подкатегориями одной основной категории.',REFUND:'Возврат превышает невозвращённую часть покупки.',REFUND_LINKED:'Сначала отмените связанные возвраты. История покупки сохраняется.',EDIT_STALE:'Операция уже изменилась. Откройте актуальную запись; черновик сохранён.',EDIT_UNSUPPORTED:'Для этой записи используйте отдельное действие подтверждения или отмены.',TRANSFER_STATE:'Это движение перевода уже подтверждено или недоступно.'})[e.code]||'Действие не выполнено. Изменения не подтверждены как сохранённые; текущие данные не удалялись.',true,options);}
   finally{if(suspendRequested&&!app.busy){suspendRequested=false;closeBase(suspendReason);if(waitingReturn){waitingReturn=false;void autoEnter();}}else if(ok)render();else disabled.filter(b=>b.isConnected).forEach(b=>b.disabled=false);}return ok;
 }
