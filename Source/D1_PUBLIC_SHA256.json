@@ -1,0 +1,14 @@
+{
+  "build": "d1-ui01",
+  "baseMain": "46d21bef357fbaa5376f391f67ab65a3041e0647",
+  "files": {
+    "apple-touch-icon.png": "b5885c943dfa178c5b7043b35c80cb0f13b3ddc34f7f4085663bf9eac5d1e46d",
+    "icon-192.png": "02de571ad2d51f9c5ad3e7025d69c3757144326731163ecfe9a76b7fb13bcfa4",
+    "icon-512.png": "dc5ebe3e204b64dfeb6585959145d7823c5db9e9af7e3fe45ef00a43bb9a0c0b",
+    "icon.svg": "ac3bdbd1431e6d58b2da6e759e1b86e4da70a0f35fbeb173a98e001035fe6328",
+    "index.html": "a5180c337184551d5da144d27a8108193722895b9cfcf0609857368cf2dda4e1",
+    "manifest.webmanifest": "9c42fa3d8ed6be9044ed42c93ea7d45ad7d25e4efad893e4a29f17b463557e39",
+    "sw.js": "9abd02b05ed1d2760303b7bdd75e9d9b4e870d948a764ba88a2bf7c199ecaa76"
+  },
+  "published": false
+}

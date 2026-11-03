@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "keyboard Enter/Space operate chooser and note expansion; accessible names/expanded/controls/live counter and selection retained; Chromium safe-area 59/34; real VoiceOver pending"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}

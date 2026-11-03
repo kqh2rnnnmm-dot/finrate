@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "28 note layouts: bounded region, no competing scroller, keyboard/expansion/caret/scroll/500-char text and ciphertext retained"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}

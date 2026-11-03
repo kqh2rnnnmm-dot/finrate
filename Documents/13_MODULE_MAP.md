@@ -1,3 +1,16 @@
+# D1 · актуальные изменения модулей · 03.11.2026
+
+- `field-editor.mjs`, `icons.mjs`, `style.css`: рамка общей note-field, разворачивание, счётчик/фокус; один scroller.
+- `ui.mjs`, `edge-launcher.mjs/css`: общий chooser и morph из верхнего «+» и side; конечная безопасная симметричная геометрия.
+- `dashboard.mjs`, `home-layout.mjs`, `home-config.mjs`, `style.css`: остаточная высота Главной, 1–6/три вида, плотности и прямой configure.
+- `management.mjs`, `ui.mjs`, `style.css`: общие object-actions и разделение групп; `focus.mjs`: только подстановка остатка кредита.
+- `help.mjs`: FAQ; `app.mjs`: только ID `d1-ui01`.
+- `D1_BASELINE_SHA256.json`, `tools/verify-delivery.mjs`: защита 39 остальных файлов src/ и metadata-only app. `tests/d1-*.mjs`: новые адресные browser-матрицы; существующие тесты адаптированы только к утверждённым изменениям UI. Финансовые unit assertions не ослаблялись.
+
+[Полная инвентаризация/аудит](D1/AUDIT.md). Стек surfaces/chrome/navigation, финансовые и защитные исходники прежние.
+
+---
+
 # C1 · дополнение карты модулей
 
 - Source/src/field-editor.mjs: единый view/preview/open/enhance; сохранение пробелов и лимитов, textarea родителя остаётся источником формы.

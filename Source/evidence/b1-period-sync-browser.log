@@ -1,48 +1,8 @@
 PASS 1/7 absent preferences: current month on both surfaces
 PASS 2 Home three months synchronizes financial planning
-AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
-
-'99 000 ₽' !== ''
-
-    at file:///workspace/finrate/Source/tests/b1-period-sync-browser.mjs:20:147 {
-  generatedMessage: true,
-  code: 'ERR_ASSERTION',
-  actual: '99 000 ₽',
-  expected: '',
-  operator: 'strictEqual',
-  diff: 'simple'
-}
-{
-  controls: [ { value: 'm4', disabled: false } ],
-  errors: [ '' ],
-  text: 'Свободные деньги\n' +
-    'Режим\n' +
-    'Текущий месяц\n' +
-    '2 месяца\n' +
-    '3 месяца\n' +
-    '4 месяца\n' +
-    'Все долги\n' +
-    '99 000 ₽\n' +
-    '\n' +
-    'Прогноз до 2027-02-28\n' +
-    '\n' +
-    'Фактический остаток\n' +
-    '99 000 ₽\n' +
-    'Осталось погасить\n' +
-    '0 ₽\n' +
-    'Ожидаемые доходы\n' +
-    '0 ₽\n' +
-    '\n' +
-    'Учтены кредитные долги и настроенные доходы. Личные долги, регулярные расходы и резервы пока не подключены. Прогноз неполный; поступления не гарантированы.\n' +
-    '\n' +
-    'Финансовое планирование\n' +
-    'Режим сохранён.'
-}
-{
-  version: 1,
-  incomes: [],
-  occurrences: [],
-  links: [],
-  mode: 'm4',
-  onboarding: 'skipped'
-}
+PASS 3 settings four months refreshes open forecast and Home
+PASS 4 all debts equal on both surfaces
+PASS 5 reload and new application page preserve all debts
+PASS 5 cached PWA shell reopens offline with persisted selection
+PASS 8/9 five modes preserve formulas, operations and unrelated settings
+PASS 6/7 migration preserves Home, falls back to settings, then current month; removes conflicts on save
