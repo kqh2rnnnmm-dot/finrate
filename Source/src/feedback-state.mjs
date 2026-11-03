@@ -5,6 +5,7 @@ export function createFeedbackState(){
  return {
   get current(){return current;},get pending(){return waiting.length;},
   push(item){if(!item?.title)return false;const next={duration:item.error||item.mandatory?0:item.level==='financial'?5000:3000,...item};
+   if(next.error&&current?.error&&current.title===next.title){current=next;return true;}
    if(required(next)){waiting=waiting.filter(required);if(required(current)){waiting.push(next);return false;}current=next;return true;}
    if(current?.error&&next.resolveError){current=next;return true;}
    if(current){waiting.push(next);return false;}current=next;return true;

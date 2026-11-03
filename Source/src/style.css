@@ -971,3 +971,7 @@ input,textarea,[contenteditable=true],.full-note,.activity-comparison span {
 .feedback-financial:focus-visible { background:var(--keyboard-state); text-decoration:underline; }
 .financial-receipt { margin-top:var(--group-gap); }
 .financial-receipt dl { margin-bottom:0; }
+.palette-swatches { display:grid; grid-template-columns:repeat(6,minmax(0,1fr)); gap:4px; margin-block:var(--peer-gap); }
+.palette-swatches>span { height:24px; min-width:0; border-radius:8px; border:1px solid var(--line); }
+
+.feedback-required { touch-action:pan-y; overscroll-behavior:contain; }

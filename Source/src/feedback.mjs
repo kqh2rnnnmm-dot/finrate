@@ -51,13 +51,13 @@ export function installFeedback(root,getSurface,{getSettings=()=>({}),openDetail
  el.addEventListener('pointerenter',pause);el.addEventListener('pointerleave',resume);el.addEventListener('focusin',pause);el.addEventListener('focusout',()=>queueMicrotask(resume));
  el.addEventListener('pointerdown',e=>{if(e.target.closest('button')||phase!=='idle')return;gesture={id:e.pointerId,x:e.clientX,y:e.clientY};pause();el.setPointerCapture(e.pointerId);});
  el.addEventListener('pointermove',e=>{if(gesture?.id===e.pointerId)el.style.translate='0 '+Math.min(0,e.clientY-gesture.y)+'px';});
- el.addEventListener('pointerup',e=>{if(gesture?.id!==e.pointerId)return;const distance=gesture.y-e.clientY,gestureX=gesture.x;gesture=null;el.style.removeProperty('translate');if(distance>28)dismiss();else resume();suppressTap=performance.now()+(Math.abs(distance)>8||Math.abs(e.clientX-gestureX)>8?400:0);});
+ el.addEventListener('pointerup',e=>{if(gesture?.id!==e.pointerId)return;const distance=gesture.y-e.clientY,gestureX=gesture.x;gesture=null;el.style.removeProperty('translate');if(distance>28)dismiss();else resume();suppressTap=Math.abs(distance)>8||Math.abs(e.clientX-gestureX)>8?performance.now()+400:0;});
  el.addEventListener('pointercancel',()=>{gesture=null;el.style.removeProperty('translate');resume();});
  document.addEventListener('finrate-surface',refresh);document.addEventListener('visibilitychange',()=>{if(document.hidden)suspend();else refresh();});
  window.addEventListener('pagehide',suspend);window.addEventListener('pageshow',refresh);
  window.addEventListener('resize',schedule);window.visualViewport?.addEventListener('resize',schedule);window.visualViewport?.addEventListener('scroll',schedule);
  // Root replacement must not remove the live region or change the page's geometry.
  new MutationObserver(schedule).observe(root,{childList:true,subtree:true});
- instance={notify(title,options={}){if(!notificationAllowed(options,getSettings()))return;if(state.push({title,...options}))displayed=null;refresh();},clear(){stop();epoch++;animation?.cancel();animation=null;phase='idle';gesture=null;el.style.removeProperty('translate');state.clear();el.remove();el.hidden=true;displayed=null;}};
+ instance={notify(title,options={}){if(options.resolveError&&state.current?.error){state.dismiss();displayed=null;}if(!title||!notificationAllowed(options,getSettings())){refresh();return;}if(state.push({title,...options}))displayed=null;refresh();},clear(){stop();epoch++;animation?.cancel();animation=null;phase='idle';gesture=null;el.style.removeProperty('translate');state.clear();el.remove();el.hidden=true;displayed=null;}};
  return instance;
 }

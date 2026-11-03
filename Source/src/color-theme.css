@@ -1,0 +1,36 @@
+/* G1: independent palette axis. No selector in this file recolours neutral. */
+:root[data-palette=color] {
+ --palette-1:#06141B; --palette-2:#11212D; --palette-3:#253745;
+ --palette-4:#4A5C6A; --palette-5:#9BA8AB; --palette-6:#CCD0CF;
+ --chrome-canvas:light-dark(#CCD0CF,#06141B);
+ --ink:light-dark(#06141B,#CCD0CF);
+ --muted:light-dark(#253745,#9BA8AB);
+ --white:light-dark(#e7ebea,#11212D);
+ --soft:light-dark(#CCD0CF,#253745);
+ --field:light-dark(#CCD0CF,#253745);
+ --line:light-dark(#4A5C6A,#9BA8AB);
+ --island:light-dark(#9BA8ABf2,#11212Df2);
+ --feedback-bg:var(--white);
+ --menu-surface:var(--white);
+ --menu-selected:var(--soft);
+ --keyboard-state:var(--soft);
+ --control-pressed:var(--soft);
+ --archive-selected:var(--soft);
+ /* Same semantic hues, darker light-mode text for the darker blue-grey island. */
+ --blue:light-dark(#003568,#9bc3ff);
+ --expense:light-dark(#701b27,#ff858d);
+ --income:light-dark(#084526,#78d5a2);
+ --transfer:light-dark(#483605,#ebcb71);
+ --credit-ink:light-dark(#4f256b,#d8b6f0);
+ --shadow:0 10px 28px light-dark(#4A5C6A33,#06141B70);
+ --island-shadow:0 12px 28px light-dark(#4A5C6A40,#06141Bb3);
+}
+:root[data-palette=color] .scroll-end::before,:root[data-palette=color] .scroll-start::before { background:var(--white); }
+:root[data-palette=color] #app::before,:root[data-palette=color] .sheet.large::before { background:linear-gradient(to bottom,light-dark(#CCD0CF66,#06141B66),light-dark(#CCD0CF22,#06141B22)); }
+@media(max-width:760px) {
+ :root[data-palette=color] :is(.page-title h1,.floating-heading>span,main>h1:not(.sr-only),.floating-heading button) { background:light-dark(#CCD0CFc7,#06141Bc7); }
+}
+@media(prefers-reduced-transparency:reduce) {
+ :root[data-palette=color] { --island:light-dark(#9BA8AB,#11212D); }
+ :root[data-palette=color] #app::before,:root[data-palette=color] .sheet.large::before { background:var(--canvas); }
+}

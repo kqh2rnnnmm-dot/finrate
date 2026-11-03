@@ -1,3 +1,4 @@
+import {notificationForm,uiPreferences} from './ui-settings.mjs';
 import {createPlanningUI} from './planning-ui.mjs';
 import {installHomeLayout} from './home-layout.mjs';
 import {creditLedger,operationCredit,isExternal,isExpense} from './credit.mjs';
@@ -96,8 +97,8 @@ export function createUI(ctx){
  }
  function feedbackDetails(item){
   if(!d()||!item.financial?.length)return;
-  const stages={waiting:'Ожидает отправки',sent:'Отправлен',received:'Зачислен',returned:'Возвращён',cancelled:'Отменён'};
-  return sheet('Подробности действия',`<p>${esc(item.title)}</p>${item.financial.map(o=>`<section class="financial-receipt"><h3>${esc(o.cancelled?'Отмена · '+o.kind:o.kind)}</h3><dl><dt>Сумма</dt><dd>${esc(o.amount)}</dd><dt>Счёт</dt><dd>${esc(o.account)}</dd>${o.destination?`<dt>Куда / кому</dt><dd>${esc(o.destination)}</dd>`:''}<dt>Дата операции</dt><dd>${esc(o.date)}</dd>${o.stage?`<dt>Состояние</dt><dd>${esc(stages[o.stage]||o.stage)}</dd>`:''}</dl></section>`).join('')}`,el=>{el.dataset.feedbackDetails='true';},{mode:'compact',dismiss:true});
+  const stages={waiting:'Ожидает отправки',debited:'В пути',sent:'Отправлен',received:'Зачислен',returned:'Возвращён',cancelled:'Отменён'};
+  return sheet('Подробности действия',`<p>${esc(item.title)}</p>${item.financial.map(o=>`<section class="financial-receipt"><h3>${esc(o.cancelled?'Отмена · '+o.kind:o.kind)}</h3><dl><dt>Сумма</dt><dd>${esc(o.amount)}</dd><dt>Счёт</dt><dd>${esc(o.account)}</dd>${o.destination?`<dt>Куда / кому</dt><dd>${esc(o.destination)}</dd>`:''}<dt>Дата операции</dt><dd>${esc(o.date)}</dd>${o.stage?`<dt>Состояние</dt><dd>${esc(stages[o.stage]||o.stage)}</dd>`:''}</dl></section>`).join('')}`,el=>{el.dataset.feedbackDetails='true';el.setAttribute('aria-label','Подробности действия');},{mode:'compact',dismiss:true});
  }
  function guardRow(row,done){if(row.guard){row.guard(done);return;}if(row.state()===row.initial){done();return;}saveChanges(row,done);}
  function saveChanges(row,done){const form=row.el.querySelector('form'),button=row.el.querySelector('[data-save-changes]'),save=row.save||row.el.finrateApplyValue|| (form?()=>form.requestSubmit():button?()=>button.click():null);
@@ -108,7 +109,7 @@ export function createUI(ctx){
    el.querySelector('[data-leave=save]')?.addEventListener('click',()=>{pop();if(form&&!form.reportValidity())return;pendingLeaves.set(row.el,done);const result=save(),finish=()=>{if(pendingLeaves.get(row.el)!==done)return;pendingLeaves.delete(row.el);if(!row.el.isConnected)done();};if(result?.then)result.then(finish,()=>pendingLeaves.delete(row.el));else if(!locked&&!app.busy)finish();});
   },{mode:'compact'});
  }
- function guardPage(done){const form=root.querySelector('#p2-settings');if(!form){done();return;}const settings=Object.fromEntries(new FormData(form));if(Object.entries(settings).every(([k,v])=>String(k==='edgeSide'?(d().settings[k]||'right'):d().settings[k])===String(v))){done();return;}
+ function guardPage(done){const form=root.querySelector('#p2-settings');if(!form){done();return;}const settings={...Object.fromEntries(new FormData(form)),...notificationForm(form)},saved={...d().settings,...uiPreferences(d().settings),edgeSide:d().settings.edgeSide||'right'};if(Object.entries(settings).every(([k,v])=>String(saved[k])===String(v))){done();return;}
   saveChanges({el:root,discard:dashboard.clearSettingsDraft},done);
  }
  function leavePanels(done){const row=panels.at(-1);if(row){if(row.el.finrateBack?.())return;guardRow(row,()=>{if(panels.at(-1)===row)pop();leavePanels(done);});}else guardPage(done);}
@@ -229,7 +230,7 @@ export function createUI(ctx){
   root.querySelector('#balance-details')?.addEventListener('click',()=>sheet('Фактический остаток',d().accounts.map(a=>`<div class="detail-row"><span>${esc(a.name)}</span><strong>${amt(a.financeType==='credit'?Math.max(0,totals(d()).balances[a.id]):totals(d()).balances[a.id])}</strong></div>`).join('')+'<p class="hint">Только собственные средства, включая излишек подтверждённого возврата на кредитку. Кредитный долг и лимит исключены; деньги в пути не зачислены получателю.</p>'));
   root.querySelector('#free-details')?.addEventListener('click',financial.free);root.querySelector('#financial-planning')?.addEventListener('click',financial.open);financial.offer();
   if(root.querySelector('#history-results'))attachRows();
-  root.querySelector('#p2-settings')?.addEventListener('submit',e=>{e.preventDefault();const v=Object.fromEntries(new FormData(e.target));perform(()=>app.mutate('settings.save',n=>Object.assign(n.settings,{...v,autoLock:v.autoLock===undefined?d().settings.autoLock:Number(v.autoLock)})),'Настройки сохранены.',dashboard.clearSettingsDraft);});
+  root.querySelector('#p2-settings')?.addEventListener('submit',e=>{e.preventDefault();const v=Object.fromEntries(new FormData(e.target));perform(()=>app.mutate('settings.save',n=>Object.assign(n.settings,{...v,...notificationForm(e.target),autoLock:v.autoLock===undefined?d().settings.autoLock:Number(v.autoLock)})),'Настройки сохранены.',dashboard.clearSettingsDraft);});
  }
  function attachRows(){root.querySelectorAll('[data-operation]').forEach(b=>b.onclick=()=>card(b.dataset.operation));}
  function navigationContext(){const allowed=new Set([...PRIMARY_TABS,...menuItems,'Меню','Фильтры операций','Пароль и вход']);let current=getPage()==='Поиск'?searchState.scope:getPage();if(!allowed.has(current))current='Главная';return {page:current,trail:trail.filter(x=>allowed.has(x)&&x!==current).slice(-20),scroll:root.querySelector('main')?.scrollTop||0};}
