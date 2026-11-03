@@ -1,0 +1,107 @@
+{
+  "main": "0022e1e3ee557656f902b58dcd1f6b434a47fa57",
+  "build": "g1-theme01",
+  "engine": "Chromium Linux",
+  "results": [
+    {
+      "id": "A1-B01-real-download-and-financial-completeness",
+      "status": "PASS",
+      "downloadGenerated": true,
+      "physicalIOSSaved": "not observable",
+      "fullDocumentExact": true,
+      "allFiveModesEqual": true
+    },
+    {
+      "id": "A1-B02-invalid-secret-and-cancel-stages",
+      "status": "PASS",
+      "cancelledStages": 3,
+      "selectedFileAndInputPreservedOnFailure": true
+    },
+    {
+      "id": "A1-B03-clean-independent-password-and-offline-recovery",
+      "status": "PASS",
+      "independentProfiles": 2,
+      "cachedShellColdOfflineRecovery": true,
+      "freshPasswordRestore": true,
+      "passwordUnlockAfterRecoveryRestore": true
+    },
+    {
+      "id": "A1-B04-existing-replacement-quota-and-PIN",
+      "status": "PASS",
+      "quotaRollsBackAllRows": true,
+      "explicitRetryOnce": true,
+      "PINRemoved": true,
+      "safetyExact": true,
+      "quotaMessageSpecific": false
+    },
+    {
+      "id": "A1-B05-two-tabs-stale-restore-no-overwrite",
+      "status": "PASS",
+      "newerTabPreserved": true,
+      "safetyNoPartialWrite": true
+    },
+    {
+      "id": "A1-B06-reload-during-verification",
+      "status": "PASS",
+      "interruptedBeforeWrite": true,
+      "reopenIntact": true
+    },
+    {
+      "id": "A1-B07-page-close-during-IDB-transaction",
+      "status": "PASS",
+      "transactionOutcome": "full-rollback",
+      "partialState": false,
+      "scope": "controlled page destruction; not physical power-loss durability"
+    },
+    {
+      "id": "A1-B08-lock-no-secret-storage-URL-cache",
+      "status": "PASS",
+      "uiClean": true,
+      "cacheClean": true,
+      "detailsRemoved": true,
+      "passwordBlank": true,
+      "noExternalRequests": true
+    },
+    {
+      "id": "A1-B09-large-valid-payload",
+      "status": "FINDING",
+      "finding": "valid encrypted payload below declared limit rejected by base64 validation regex",
+      "severity": "important-availability",
+      "sizes": [
+        {
+          "paddingBytes": 65536,
+          "plainBytes": 66061,
+          "fileBytes": 88633,
+          "opened": true
+        },
+        {
+          "paddingBytes": 2097152,
+          "plainBytes": 2097677,
+          "fileBytes": 2797453,
+          "opened": true
+        },
+        {
+          "paddingBytes": 4194304,
+          "plainBytes": 4194829,
+          "stage": "backupBlob",
+          "error": "RangeError",
+          "openError": "RangeError",
+          "withinDeclaredLimit": true
+        },
+        {
+          "paddingBytes": 8000000,
+          "plainBytes": 8000525,
+          "stage": "backupBlob",
+          "error": "RangeError",
+          "openError": "RangeError",
+          "withinDeclaredLimit": true
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "externalRequests": 0,
+  "actualIPhone": false,
+  "secretsSaved": false,
+  "applicationModified": false
+}
