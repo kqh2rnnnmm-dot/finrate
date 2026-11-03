@@ -5,7 +5,7 @@ import {createHash} from 'node:crypto';
 await mkdir('dist',{recursive:true});
 await mkdir('evidence',{recursive:true});
 const built=await build({entryPoints:['src/app.mjs'],bundle:true,format:'iife',write:false,minify:true,target:['es2022'],charset:'utf8',legalComments:'inline'});
-const js=built.outputFiles[0].text.replace(/<\/script/gi,'<\\/script'),css=(await readFile('src/style.css','utf8'))+'\n'+(await readFile('src/edge-launcher.css','utf8')),hash=createHash('sha256').update(js).digest('base64');
+const js=built.outputFiles[0].text.replace(/<\/script/gi,'<\\/script'),css=(await readFile('src/style.css','utf8'))+'\n'+(await readFile('src/edge-launcher.css','utf8'))+'\n'+(await readFile('src/color-theme.css','utf8')),hash=createHash('sha256').update(js).digest('base64');
 const csp=`default-src 'none'; script-src 'self' 'sha256-${hash}'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; connect-src 'self'; worker-src 'self'; manifest-src 'self'; base-uri 'none'; object-src 'none'; form-action 'none'`;
 const html=(await readFile('src/index.html','utf8')).replace('__CSP__',()=>csp).replace('__STYLE__',()=>css).replace('__SCRIPT__',()=>js);
 await writeFile('dist/index.html',html);await writeFile('FinRate.html',html.replace('<link rel="manifest" href="./manifest.webmanifest">','').replace('<link rel="icon" href="./icon.svg">',''));
@@ -15,5 +15,5 @@ await writeFile('dist/manifest.webmanifest',JSON.stringify({id:'./',name:'FinRat
 await build({entryPoints:['src/sw.mjs'],bundle:true,format:'iife',outfile:'dist/sw-base.js',minify:true,target:['es2022'],legalComments:'inline'});
 const {count,size,warnings}=await injectManifest({swSrc:'dist/sw-base.js',swDest:'dist/sw.js',globDirectory:'dist',globPatterns:['index.html','icon.svg','icon-192.png','icon-512.png','manifest.webmanifest','apple-touch-icon.png'],maximumFileSizeToCacheInBytes:2*1024*1024});
 const {unlink}=await import('node:fs/promises');await unlink('dist/sw-base.js');if(warnings.length)throw new Error(warnings.join('\n'));
-await writeFile('evidence/build.json',JSON.stringify({build:'d1-ui01',shellFiles:count,shellBytes:size,scriptHash:hash,externalRuntimeDependencies:0,published:false,warnings},null,2));
+await writeFile('evidence/build.json',JSON.stringify({build:'g1-theme01',shellFiles:count,shellBytes:size,scriptHash:hash,externalRuntimeDependencies:0,published:false,warnings},null,2));
 console.log('Build OK:',count,'precache assets;',html.length,'HTML characters; unpublished.');

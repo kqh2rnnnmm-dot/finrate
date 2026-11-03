@@ -1,0 +1,189 @@
+{
+  "baseMain": "025fa8e07d35c354376cfa316187e914010f196d",
+  "build": "g1-theme01",
+  "compared": 20,
+  "identical": 20,
+  "scope": "390×844, same Chromium runtime, both themes; new Settings controls and FAQ content excluded",
+  "rows": [
+    {
+      "theme": "light",
+      "screen": "home",
+      "before": "evidence/g1-before-chromium-neutral-light-home.png",
+      "after": "evidence/g1-after-chromium-neutral-light-home.png",
+      "identical": true,
+      "beforeSHA256": "2268c63970b1e7e342aeb5a442074d25d9e41f763ae65cc465dbacf22652bfd2",
+      "afterSHA256": "2268c63970b1e7e342aeb5a442074d25d9e41f763ae65cc465dbacf22652bfd2"
+    },
+    {
+      "theme": "light",
+      "screen": "operations",
+      "before": "evidence/g1-before-chromium-neutral-light-operations.png",
+      "after": "evidence/g1-after-chromium-neutral-light-operations.png",
+      "identical": true,
+      "beforeSHA256": "589a18860f64735a2bfa2e38bc1882e7f082fd096c63539d7ddc663fb0cf561b",
+      "afterSHA256": "589a18860f64735a2bfa2e38bc1882e7f082fd096c63539d7ddc663fb0cf561b"
+    },
+    {
+      "theme": "light",
+      "screen": "accounts",
+      "before": "evidence/g1-before-chromium-neutral-light-accounts.png",
+      "after": "evidence/g1-after-chromium-neutral-light-accounts.png",
+      "identical": true,
+      "beforeSHA256": "e5f36bf947d72c4d92e8cab973f6b6c0403892664fcd5c30986b62a100383b2d",
+      "afterSHA256": "e5f36bf947d72c4d92e8cab973f6b6c0403892664fcd5c30986b62a100383b2d"
+    },
+    {
+      "theme": "light",
+      "screen": "categories",
+      "before": "evidence/g1-before-chromium-neutral-light-categories.png",
+      "after": "evidence/g1-after-chromium-neutral-light-categories.png",
+      "identical": true,
+      "beforeSHA256": "c921fbd61c126d11f32a1eeb1b8d55423c716f8e08dd077039a73fc489fe547e",
+      "afterSHA256": "c921fbd61c126d11f32a1eeb1b8d55423c716f8e08dd077039a73fc489fe547e"
+    },
+    {
+      "theme": "light",
+      "screen": "plans",
+      "before": "evidence/g1-before-chromium-neutral-light-plans.png",
+      "after": "evidence/g1-after-chromium-neutral-light-plans.png",
+      "identical": true,
+      "beforeSHA256": "7b9604f09476fc9a9f7e57134c28cb629b71414b84a0fa14d3e75f347111a9dd",
+      "afterSHA256": "7b9604f09476fc9a9f7e57134c28cb629b71414b84a0fa14d3e75f347111a9dd"
+    },
+    {
+      "theme": "light",
+      "screen": "chooser",
+      "before": "evidence/g1-before-chromium-neutral-light-chooser.png",
+      "after": "evidence/g1-after-chromium-neutral-light-chooser.png",
+      "identical": true,
+      "beforeSHA256": "03f99b294f5d8c26560abee24c4e5748e32f53cc32dd015e3f47c8b3084a3249",
+      "afterSHA256": "03f99b294f5d8c26560abee24c4e5748e32f53cc32dd015e3f47c8b3084a3249"
+    },
+    {
+      "theme": "light",
+      "screen": "form",
+      "before": "evidence/g1-before-chromium-neutral-light-form.png",
+      "after": "evidence/g1-after-chromium-neutral-light-form.png",
+      "identical": true,
+      "beforeSHA256": "488e5fae1de9711143f4d359fd7ad1a047f2bfd1fe5a6700303797a92528edbf",
+      "afterSHA256": "488e5fae1de9711143f4d359fd7ad1a047f2bfd1fe5a6700303797a92528edbf"
+    },
+    {
+      "theme": "light",
+      "screen": "note",
+      "before": "evidence/g1-before-chromium-neutral-light-note.png",
+      "after": "evidence/g1-after-chromium-neutral-light-note.png",
+      "identical": true,
+      "beforeSHA256": "754269fed477da3f6601e59af6d54d6b4220c3c4e287bd70b9ed97ecda0302e0",
+      "afterSHA256": "754269fed477da3f6601e59af6d54d6b4220c3c4e287bd70b9ed97ecda0302e0"
+    },
+    {
+      "theme": "light",
+      "screen": "security",
+      "before": "evidence/g1-before-chromium-neutral-light-security.png",
+      "after": "evidence/g1-after-chromium-neutral-light-security.png",
+      "identical": true,
+      "beforeSHA256": "f1c1af6fff6822f60a3dd1906fed01ba04b223101790de645791dbcd0d83df27",
+      "afterSHA256": "f1c1af6fff6822f60a3dd1906fed01ba04b223101790de645791dbcd0d83df27"
+    },
+    {
+      "theme": "light",
+      "screen": "data",
+      "before": "evidence/g1-before-chromium-neutral-light-data.png",
+      "after": "evidence/g1-after-chromium-neutral-light-data.png",
+      "identical": true,
+      "beforeSHA256": "534ad2a84e611711e5d4348928c07719e60d193f6f3f005fdc6f5240e75cb76f",
+      "afterSHA256": "534ad2a84e611711e5d4348928c07719e60d193f6f3f005fdc6f5240e75cb76f"
+    },
+    {
+      "theme": "dark",
+      "screen": "home",
+      "before": "evidence/g1-before-chromium-neutral-dark-home.png",
+      "after": "evidence/g1-after-chromium-neutral-dark-home.png",
+      "identical": true,
+      "beforeSHA256": "083c3f93ad70461157db6b4b44da94eb2681bc6b216eba6c6247ae65b78b0995",
+      "afterSHA256": "083c3f93ad70461157db6b4b44da94eb2681bc6b216eba6c6247ae65b78b0995"
+    },
+    {
+      "theme": "dark",
+      "screen": "operations",
+      "before": "evidence/g1-before-chromium-neutral-dark-operations.png",
+      "after": "evidence/g1-after-chromium-neutral-dark-operations.png",
+      "identical": true,
+      "beforeSHA256": "73c832af532b24e80e51a53a8509244245f446fc6ee968b5e7ef7bcbf9a10b13",
+      "afterSHA256": "73c832af532b24e80e51a53a8509244245f446fc6ee968b5e7ef7bcbf9a10b13"
+    },
+    {
+      "theme": "dark",
+      "screen": "accounts",
+      "before": "evidence/g1-before-chromium-neutral-dark-accounts.png",
+      "after": "evidence/g1-after-chromium-neutral-dark-accounts.png",
+      "identical": true,
+      "beforeSHA256": "1265a4dcb481d82b791f343f6c92fe5b7c4a45031404e78beb1ad3567c816434",
+      "afterSHA256": "1265a4dcb481d82b791f343f6c92fe5b7c4a45031404e78beb1ad3567c816434"
+    },
+    {
+      "theme": "dark",
+      "screen": "categories",
+      "before": "evidence/g1-before-chromium-neutral-dark-categories.png",
+      "after": "evidence/g1-after-chromium-neutral-dark-categories.png",
+      "identical": true,
+      "beforeSHA256": "873052dc06f3429622429b606006eaf3ab0a66c378c46116705a731e6f60655c",
+      "afterSHA256": "873052dc06f3429622429b606006eaf3ab0a66c378c46116705a731e6f60655c"
+    },
+    {
+      "theme": "dark",
+      "screen": "plans",
+      "before": "evidence/g1-before-chromium-neutral-dark-plans.png",
+      "after": "evidence/g1-after-chromium-neutral-dark-plans.png",
+      "identical": true,
+      "beforeSHA256": "945d350e0aec9c342a29da8bbd3080cc0c3aecba1c8cde59dab834651c3b6dcf",
+      "afterSHA256": "945d350e0aec9c342a29da8bbd3080cc0c3aecba1c8cde59dab834651c3b6dcf"
+    },
+    {
+      "theme": "dark",
+      "screen": "chooser",
+      "before": "evidence/g1-before-chromium-neutral-dark-chooser.png",
+      "after": "evidence/g1-after-chromium-neutral-dark-chooser.png",
+      "identical": true,
+      "beforeSHA256": "73d5f688d7e7b628ea64d8b276df7f74a7ba3b8bcbd8e98c1807d11e51b5ebe4",
+      "afterSHA256": "73d5f688d7e7b628ea64d8b276df7f74a7ba3b8bcbd8e98c1807d11e51b5ebe4"
+    },
+    {
+      "theme": "dark",
+      "screen": "form",
+      "before": "evidence/g1-before-chromium-neutral-dark-form.png",
+      "after": "evidence/g1-after-chromium-neutral-dark-form.png",
+      "identical": true,
+      "beforeSHA256": "a8c78e0d3622e5dcab0cf91e46f0d3d775922427eed8b706c6a25d5a6693b26f",
+      "afterSHA256": "a8c78e0d3622e5dcab0cf91e46f0d3d775922427eed8b706c6a25d5a6693b26f"
+    },
+    {
+      "theme": "dark",
+      "screen": "note",
+      "before": "evidence/g1-before-chromium-neutral-dark-note.png",
+      "after": "evidence/g1-after-chromium-neutral-dark-note.png",
+      "identical": true,
+      "beforeSHA256": "c09bbec964f5bda2bb22bbf8f5b19e9b8ba83fa9c977fe1229d3c87c8bca9710",
+      "afterSHA256": "c09bbec964f5bda2bb22bbf8f5b19e9b8ba83fa9c977fe1229d3c87c8bca9710"
+    },
+    {
+      "theme": "dark",
+      "screen": "security",
+      "before": "evidence/g1-before-chromium-neutral-dark-security.png",
+      "after": "evidence/g1-after-chromium-neutral-dark-security.png",
+      "identical": true,
+      "beforeSHA256": "ef0c9f20b12b8004d579f3c18f0ea0571b1efb30b7dfaaed5ac70950c6ae9bbd",
+      "afterSHA256": "ef0c9f20b12b8004d579f3c18f0ea0571b1efb30b7dfaaed5ac70950c6ae9bbd"
+    },
+    {
+      "theme": "dark",
+      "screen": "data",
+      "before": "evidence/g1-before-chromium-neutral-dark-data.png",
+      "after": "evidence/g1-after-chromium-neutral-dark-data.png",
+      "identical": true,
+      "beforeSHA256": "6f5bdfd4e1e4d9d73d24647c4298e78272bb397f78ceb46f7d4dbab7b0bb8105",
+      "afterSHA256": "6f5bdfd4e1e4d9d73d24647c4298e78272bb397f78ceb46f7d4dbab7b0bb8105"
+    }
+  ]
+}

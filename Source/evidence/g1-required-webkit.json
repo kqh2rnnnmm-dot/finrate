@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "financial/system independently disabled; global off hides ordinary messages; required write error persists beyond former 8s timeout with draft/ciphertext intact; explicit retry writes once; security warning survives all-off; pagehide clears sensitive UI"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}
