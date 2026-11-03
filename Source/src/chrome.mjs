@@ -39,7 +39,7 @@ export function installChrome(root){
   // Native keyboard avoidance owns auth scrolling while editing. A second
   // layout reservation here used to resize the form beneath Safari's caret.
   const editingAuth=auth&&(document.body.classList.contains('keyboard-open')||auth.contains(document.activeElement)&&document.activeElement.matches('input,textarea,select'));
-  const candidates=surface?[...surface.querySelectorAll('.picker-results,.merge-options,.part-body,.sheet-body')]:main&&!main.classList.contains('main-home')?[main]:auth&&!editingAuth?[auth]:[];
+  const candidates=surface?.matches('.field-editor')?[]:surface?[...surface.querySelectorAll('.picker-results,.merge-options,.part-body,.sheet-body')]:main&&!main.classList.contains('main-home')?[main]:auth&&!editingAuth?[auth]:[];
   const next=candidates.find(el=>visible(el)&&el.clientHeight>30&&el.scrollHeight-el.clientHeight>12&&/auto|scroll/.test(getComputedStyle(el).overflowY));
   if(next!==target){stop();release();target=next;}
   if(!target){release();for(const b of arrows)if(!b.hidden)b.hidden=true;return;}
