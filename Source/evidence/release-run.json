@@ -1,192 +1,204 @@
 {
-  "build": "c1-ui01",
-  "publicHTMLSHA256": "9f82e146b5c7098e689a0257c94e0696df24935ba5d661d53649863eb2948c7d",
+  "build": "c1-input02",
+  "publicHTMLSHA256": "a808f76baa876875e1d68fbb0a33dacc9c33b61719712b4f9d98707a9bdfcb21",
   "allPassed": true,
-  "execution": "check:release plus corrected legacy-harness reruns and resume-c1-release",
+  "execution": "check:release with WebKit plus period hidden-root harness correction retry and resume",
   "results": [
     {
       "name": "release-build",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 518
+      "milliseconds": 525
     },
     {
       "name": "patch-unit",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 17692
+      "milliseconds": 18231
+    },
+    {
+      "name": "c1-input-geometry",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 6216
+    },
+    {
+      "name": "c1-input-geometry-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7061
     },
     {
       "name": "c1-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 10141
+      "milliseconds": 9919
     },
     {
       "name": "b12-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 17352
-    },
-    {
-      "name": "b1-period-sync-browser",
-      "code": 0,
-      "timedOut": false,
-      "milliseconds": 7695
-    },
-    {
-      "name": "b1-browser",
-      "code": 0,
-      "timedOut": false,
-      "milliseconds": 7466
+      "milliseconds": 17212
     },
     {
       "name": "b11-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 23365
+      "milliseconds": 23369
+    },
+    {
+      "name": "b1-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7683
     },
     {
       "name": "r30-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 8795
+      "milliseconds": 8417
     },
     {
       "name": "edge-lifecycle-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 18689
+      "milliseconds": 18274
     },
     {
       "name": "credit-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 13966
+      "milliseconds": 14116
     },
     {
       "name": "notice-motion-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 12315
-    },
-    {
-      "name": "entryfix-browser",
-      "code": 0,
-      "timedOut": false,
-      "milliseconds": 17998
+      "milliseconds": 12469
     },
     {
       "name": "combined-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 32192
+      "milliseconds": 31248
+    },
+    {
+      "name": "entryfix-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 16518
     },
     {
       "name": "security-lifecycle-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 5461
-    },
-    {
-      "name": "history-browser",
-      "code": 0,
-      "timedOut": false,
-      "milliseconds": 17235
-    },
-    {
-      "name": "compact-scroll-browser",
-      "code": 0,
-      "timedOut": false,
-      "milliseconds": 10874
-    },
-    {
-      "name": "feedback-browser",
-      "code": 0,
-      "timedOut": false,
-      "milliseconds": 15376
+      "milliseconds": 4722
     },
     {
       "name": "security-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 44807
+      "milliseconds": 42189
     },
     {
-      "name": "modality-browser",
+      "name": "history-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 8802
+      "milliseconds": 16146
+    },
+    {
+      "name": "compact-scroll-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 10365
+    },
+    {
+      "name": "feedback-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 14621
     },
     {
       "name": "home-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 20957
+      "milliseconds": 19060
     },
     {
-      "name": "layout-browser",
+      "name": "modality-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 18570
+      "milliseconds": 7768
     },
     {
       "name": "revision-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 35747
+      "milliseconds": 35079
+    },
+    {
+      "name": "layout-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 17965
     },
     {
       "name": "shell-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 36981
+      "milliseconds": 34801
     },
     {
       "name": "control-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 39006
+      "milliseconds": 36530
+    },
+    {
+      "name": "unified-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 86498
     },
     {
       "name": "patch-navigation",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 10794
+      "milliseconds": 11012
     },
     {
       "name": "patch-lists",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 15236
+      "milliseconds": 14659
     },
     {
       "name": "patch-forms",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 7167
-    },
-    {
-      "name": "unified-browser",
-      "code": 0,
-      "retestedAfterHarnessCorrection": true,
-      "checks": 44
+      "milliseconds": 6780
     },
     {
       "name": "patch-upgrade",
       "code": 0,
-      "retestedAfterHarnessCorrection": true,
-      "checks": 15
+      "timedOut": false,
+      "milliseconds": 39980
+    },
+    {
+      "name": "b1-period-sync-browser",
+      "code": 0,
+      "retestedAfterHiddenRootHarnessCorrection": true,
+      "checks": 8
     },
     {
       "name": "patch-list-performance",
       "code": 0,
-      "milliseconds": 7312
+      "milliseconds": 7632
     },
     {
       "name": "verify-delivery",
       "code": 0,
-      "milliseconds": 61
+      "milliseconds": 83
     }
   ],
   "actualIPhone": false,

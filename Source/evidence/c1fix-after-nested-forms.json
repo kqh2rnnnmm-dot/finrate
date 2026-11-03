@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "light nested credit name editor restores parent scroll and does not write ciphertext",
+    "dark nested credit name editor restores parent scroll and does not write ciphertext"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}

@@ -1,8 +1,8 @@
 {
-  "build": "c1-ui01",
+  "build": "c1-input02",
   "shellFiles": 6,
-  "shellBytes": 553533,
-  "scriptHash": "QKboc6opAmRGjOiaHgrFfByyZdDR4mHbso7e7qBOems=",
+  "shellBytes": 555594,
+  "scriptHash": "+Tx+xFXyUwYBbdQz7SmA14KL8BenxBoZHMU6XS8C1pA=",
   "externalRuntimeDependencies": 0,
   "published": false,
   "warnings": []

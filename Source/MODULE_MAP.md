@@ -1,3 +1,9 @@
+# Корректирующий C1: 03.11.2026
+
+style.css — непрозрачная large-поверхность, grid note editor, focus/layout fix; surfaces.mjs — общий класс visual isolation, textarea caret ownership, keyboard dismissal без apply; chrome.mjs — не резервировать скролл-стрелки в field-editor; app.mjs — только build ID; help.mjs — фактический FAQ. Финансовые и защитные модули не менялись. Field-editor/focus/ui/planning/management используют прежние общие вызовы. Новый адресный тест: c1-input-geometry-browser.mjs (Chromium и WebKit); C1_CORRECTION_BASELINE_SHA256.json защищает остальные 47 файлов исходного main.
+
+---
+
 # C1 · дополнение карты модулей
 
 - Source/src/field-editor.mjs: единый view/preview/open/enhance; сохранение пробелов и лимитов, textarea родителя остаётся источником формы.
