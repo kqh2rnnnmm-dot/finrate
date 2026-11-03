@@ -1,233 +1,266 @@
 {
-  "build": "d1-ui01",
-  "publicHTMLSHA256": "a5180c337184551d5da144d27a8108193722895b9cfcf0609857368cf2dda4e1",
+  "build": "g1-theme01",
+  "publicHTMLSHA256": "ad6bad5b2bca53412135af706c8f33f4e09c264eda9143dc489b32c06fd1b833",
   "allPassed": true,
-  "execution": "check:release with WebKit plus D1 accessibility settings-snapshot harness correction retry and hash-pinned resume",
+  "execution": "check:release with WebKit; approved financial-swipe harness retry; fresh-profile visual captures and 20 exact neutral PNG matches; hash-pinned completion",
   "results": [
     {
       "name": "release-build",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 585
+      "milliseconds": 543
     },
     {
       "name": "patch-unit",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 18083
+      "milliseconds": 18565
     },
     {
-      "name": "c1-input-geometry-webkit",
+      "name": "g1-notifications-webkit",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 7114
+      "milliseconds": 20068
+    },
+    {
+      "name": "g1-required-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18942
     },
     {
       "name": "d1-note-webkit",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 8173
+      "milliseconds": 8685
+    },
+    {
+      "name": "c1-input-geometry-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7503
+    },
+    {
+      "name": "g1-notifications",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 17558
+    },
+    {
+      "name": "g1-theme-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 192299
+    },
+    {
+      "name": "g1-required",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 17351
     },
     {
       "name": "d1-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 5607
+      "milliseconds": 5935
+    },
+    {
+      "name": "g1-theme",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 177631
     },
     {
       "name": "d1-home-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 45982
+      "milliseconds": 46877
     },
     {
       "name": "c1-input-geometry",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 5399
+      "milliseconds": 6053
     },
     {
       "name": "c1-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 9407
+      "milliseconds": 10085
+    },
+    {
+      "name": "d1-interaction-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 40275
     },
     {
       "name": "b12-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 16517
-    },
-    {
-      "name": "b11-browser",
-      "code": 0,
-      "timedOut": false,
-      "milliseconds": 23825
+      "milliseconds": 18263
     },
     {
       "name": "b1-period-sync-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 8578
+      "milliseconds": 7598
+    },
+    {
+      "name": "b11-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 23277
     },
     {
       "name": "b1-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 8190
+      "milliseconds": 10255
     },
     {
       "name": "r30-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 8967
+      "milliseconds": 2933
     },
     {
       "name": "edge-lifecycle-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 21311
-    },
-    {
-      "name": "credit-browser",
-      "code": 0,
-      "timedOut": false,
-      "milliseconds": 14048
+      "milliseconds": 20648
     },
     {
       "name": "notice-motion-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 12457
+      "milliseconds": 12374
     },
     {
       "name": "combined-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 31145
+      "milliseconds": 30750
     },
     {
       "name": "entryfix-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 16701
+      "milliseconds": 16768
     },
     {
       "name": "security-lifecycle-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 4786
+      "milliseconds": 4690
     },
     {
       "name": "security-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 42109
+      "milliseconds": 42390
     },
     {
       "name": "history-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 16285
+      "milliseconds": 17067
     },
     {
       "name": "compact-scroll-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 10882
+      "milliseconds": 12778
     },
     {
       "name": "feedback-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 14545
+      "milliseconds": 21364
     },
     {
       "name": "home-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 17755
+      "milliseconds": 29344
     },
     {
       "name": "modality-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 7580
+      "milliseconds": 11193
     },
     {
       "name": "revision-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 34676
+      "milliseconds": 54908
     },
     {
       "name": "layout-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 18067
+      "milliseconds": 25851
     },
     {
       "name": "shell-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 35226
+      "milliseconds": 47577
     },
     {
       "name": "control-browser",
       "code": 0,
       "timedOut": false,
-      "milliseconds": 37378
+      "milliseconds": 37920
     },
     {
-      "name": "unified-browser",
+      "name": "credit-browser",
       "code": 0,
-      "timedOut": false,
-      "milliseconds": 86595
+      "retestedAfterApprovedFinancialSwipeHarnessCorrection": true,
+      "checks": 19
     },
     {
       "name": "patch-navigation",
       "code": 0,
-      "timedOut": false,
-      "milliseconds": 10664
+      "milliseconds": 11453
     },
     {
       "name": "patch-lists",
       "code": 0,
-      "timedOut": false,
-      "milliseconds": 15128
+      "milliseconds": 15845
     },
     {
       "name": "patch-forms",
       "code": 0,
-      "timedOut": false,
-      "milliseconds": 6999
+      "milliseconds": 13112
     },
     {
       "name": "patch-upgrade",
       "code": 0,
-      "timedOut": false,
-      "milliseconds": 39734
-    },
-    {
-      "name": "d1-interaction-browser",
-      "code": 0,
-      "retestedAfterSettingsSnapshotHarnessCorrection": true,
-      "checks": [
-        "28 note layouts: bounded region, no competing scroller, keyboard/expansion/caret/scroll/500-char text and ciphertext retained",
-        "126 chooser selections; all widths/themes, common geometry, top anchor, both sides, X/outside/system Back",
-        "keyboard Enter/Space operate chooser and note expansion; accessible names/expanded/controls/live counter and selection retained; Chromium safe-area 59/34; real VoiceOver pending"
-      ]
+      "milliseconds": 40383
     },
     {
       "name": "patch-list-performance",
       "code": 0,
-      "milliseconds": 7180
+      "milliseconds": 7357
     },
     {
       "name": "verify-delivery",
       "code": 0,
-      "milliseconds": 77
+      "milliseconds": 79
+    },
+    {
+      "name": "unified-browser",
+      "code": 0,
+      "retestedAfterApprovedFinancialSwipeHarnessCorrection": true,
+      "checks": 44
     }
+  ],
+  "neutralPNGIdentical": 20,
+  "freshVisualProfiles": [
+    "chromium",
+    "webkit"
   ],
   "actualIPhone": false,
   "published": false

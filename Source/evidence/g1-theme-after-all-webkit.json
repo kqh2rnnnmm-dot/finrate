@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "12 persisted palette/appearance/system combinations; live system changes; exact top/bottom/theme and financial data retained; theme-color/color-scheme match",
+    "independent notification preferences survive reload; real protected legacy-copy restore defaults to neutral with no schema/financial changes",
+    "336 screen layouts: 7 sizes, 12 screens, both palettes/themes, no geometry overflow or hidden writes"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}

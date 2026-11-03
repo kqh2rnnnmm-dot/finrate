@@ -1,0 +1,8 @@
+{
+  "checks": [
+    "168 screen layouts: 7 sizes, 12 screens, both palettes/themes, no geometry overflow or hidden writes"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}

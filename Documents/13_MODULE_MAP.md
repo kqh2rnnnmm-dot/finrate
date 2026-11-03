@@ -1,3 +1,17 @@
+# G1 · изменения модулей · 03.11.2026
+
+- `feedback.mjs`, `feedback-state.mjs`: два уровня, required/FIFO/filter, таймеры/жесты/снимок/lifecycle, без повторных мутаций.
+- Новый `notification-events.mjs`: read-only классификация подтверждённых событий и snapshot реальных записей, без финансовых вычислений.
+- Новый `ui-settings.mjs`: defaults необязательных параметров, gate ordinary/required и boolean checkbox values; ни базы, ни криптографии.
+- `app.mjs`: проводка completion → notification, настройки фильтра, genuine-details delegate; прежние обработчики проверяются нормализованным SHA.
+- `ui.mjs`: общая compact-сurface финансовых подробностей, настройки/dirty normalization, проверка актуальности retry. Стек и навигация прежние.
+- `dashboard.mjs`, новый `color-theme.css`, `style.css`: отдельные selectors/checkboxes/swatches, palette+appearance, scoped цвета, общие стили уведомлений. D1 layout/editor исходники прежние.
+- `help.mjs`: FAQ по фактическому G1. `G1_BASELINE_SHA256.json`, `tools/verify-delivery.mjs`, `tests/g1-*.mjs`: защита и адресные регрессии; `tools/compare-g1-neutral.mjs`: PNG-сравнение одного runtime.
+
+[Карта вызовов](G1/NOTIFICATION_MAP.md) · [Палитра](G1/PALETTE.md). Не менялись model/operations/credit/planning/service/crypto/store/security-ui/device-access/reset-ui/session-policy/sw. Новых runtime-зависимостей нет.
+
+---
+
 # D1 · актуальные изменения модулей · 03.11.2026
 
 - `field-editor.mjs`, `icons.mjs`, `style.css`: рамка общей note-field, разворачивание, счётчик/фокус; один scroller.

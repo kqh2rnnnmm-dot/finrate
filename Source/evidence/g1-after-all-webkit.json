@@ -1,0 +1,15 @@
+{
+  "checks": [
+    "light neutral FIFO queue retains separate financial snapshots; ",
+    "light expense/income/transfer after actual commit; tap opens genuine read-only snapshot; X/outside restore inert background; swipe up, no compact X, no repeat writes",
+    "light color FIFO queue retains separate financial snapshots; ",
+    "light expense/income/transfer after actual commit; tap opens genuine read-only snapshot; X/outside restore inert background; swipe up, no compact X, no repeat writes",
+    "dark neutral FIFO queue retains separate financial snapshots; ",
+    "dark expense/income/transfer after actual commit; tap opens genuine read-only snapshot; X/outside restore inert background; swipe up, no compact X, no repeat writes",
+    "dark color FIFO queue retains separate financial snapshots; ",
+    "dark expense/income/transfer after actual commit; tap opens genuine read-only snapshot; X/outside restore inert background; swipe up, no compact X, no repeat writes"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}

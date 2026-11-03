@@ -1,0 +1,9 @@
+{
+  "checks": [
+    "baseline D1 financial/system light",
+    "baseline D1 financial/system dark"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}
