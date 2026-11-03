@@ -1,0 +1,274 @@
+{
+  "build": "p2.1-combined01",
+  "actualIPhone": false,
+  "published": false,
+  "checks": [
+    "320 large values: exact text, single line, local scroll, both themes",
+    "320 chooser X; numeric insertion/paste/digit limits; no blur save; Done only updates parent; multiline exact after explicit financial save",
+    "320 direct quick edit: Back and Save return to list without a hidden details screen",
+    "320 details edit: Back and Save return to refreshed details; duplicate overflow menu removed",
+    "320 search scope/query and actual list scroll survive direct editing",
+    "320 complete comments with original whitespace; long amounts in both themes; one menu selection and keyboard access without outlines",
+    "320 accounts: direct edit, raw description, signed reconciliation returns to refreshed details, archive/restore stay in source section",
+    "320 categories: direct rename and details rename share command/return; editing contains direct commands without an ellipsis",
+    "320 offline reload unlocks same encrypted data; no external runtime requests",
+    "375 large values: exact text, single line, local scroll, both themes",
+    "375 chooser X; numeric insertion/paste/digit limits; no blur save; Done only updates parent; multiline exact after explicit financial save",
+    "375 direct quick edit: Back and Save return to list without a hidden details screen",
+    "375 details edit: Back and Save return to refreshed details; duplicate overflow menu removed",
+    "375 search scope/query and actual list scroll survive direct editing",
+    "375 complete comments with original whitespace; long amounts in both themes; one menu selection and keyboard access without outlines",
+    "375 accounts: direct edit, raw description, signed reconciliation returns to refreshed details, archive/restore stay in source section",
+    "375 categories: direct rename and details rename share command/return; editing contains direct commands without an ellipsis",
+    "375 offline reload unlocks same encrypted data; no external runtime requests",
+    "402 large values: exact text, single line, local scroll, both themes",
+    "402 chooser X; numeric insertion/paste/digit limits; no blur save; Done only updates parent; multiline exact after explicit financial save",
+    "402 direct quick edit: Back and Save return to list without a hidden details screen",
+    "402 details edit: Back and Save return to refreshed details; duplicate overflow menu removed",
+    "402 search scope/query and actual list scroll survive direct editing",
+    "402 complete comments with original whitespace; long amounts in both themes; one menu selection and keyboard access without outlines",
+    "402 accounts: direct edit, raw description, signed reconciliation returns to refreshed details, archive/restore stay in source section",
+    "402 categories: direct rename and details rename share command/return; editing contains direct commands without an ellipsis",
+    "write failure leaves amount/comment available; exact leading/trailing blank lines and hard 500-character limit; retry commits once",
+    "split uses the common numeric editor and rejects amounts above available part before applying",
+    "draft quick continue saves directly back to refreshed drafts, without phantom panels",
+    "native Chromium touch hold → drag → release invokes one direct action; Home tile menu opens shared settings with position and returns directly",
+    "cancel from quick menu returns to list; refund entered through details returns to actual source details",
+    "unchanged imported CRLF is preserved; 500-character multiline editor and full details scroll inside their own areas",
+    "native horizontal pan scrolls the long amount locally, without opening details or swiping to another section",
+    "direct subcategory move, category merge and taxonomy undo return to source list without changing financial totals",
+    "402 offline reload unlocks same encrypted data; no external runtime requests",
+    "1280 large values: exact text, single line, local scroll, both themes",
+    "1280 chooser X; numeric insertion/paste/digit limits; no blur save; Done only updates parent; multiline exact after explicit financial save",
+    "1280 direct quick edit: Back and Save return to list without a hidden details screen",
+    "1280 details edit: Back and Save return to refreshed details; duplicate overflow menu removed",
+    "1280 search scope/query and actual list scroll survive direct editing",
+    "1280 complete comments with original whitespace; long amounts in both themes; one menu selection and keyboard access without outlines",
+    "1280 accounts: direct edit, raw description, signed reconciliation returns to refreshed details, archive/restore stay in source section",
+    "1280 categories: direct rename and details rename share command/return; editing contains direct commands without an ellipsis",
+    "1280 offline reload unlocks same encrypted data; no external runtime requests"
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "failures": [],
+  "contrast": [
+    {
+      "theme": "light",
+      "ratios": [
+        {
+          "foreground": "ink",
+          "background": "canvas",
+          "color": "rgb(34, 35, 41)",
+          "surface": "rgb(242, 242, 245)",
+          "ratio": 14.021,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "muted",
+          "background": "canvas",
+          "color": "rgb(98, 99, 110)",
+          "surface": "rgb(242, 242, 245)",
+          "ratio": 5.325,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "ink",
+          "background": "white",
+          "color": "rgb(34, 35, 41)",
+          "surface": "rgb(255, 255, 255)",
+          "ratio": 15.666,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "ink",
+          "background": "field",
+          "color": "rgb(34, 35, 41)",
+          "surface": "rgb(232, 232, 238)",
+          "ratio": 12.838,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "blue",
+          "background": "white",
+          "color": "rgb(7, 95, 189)",
+          "surface": "rgb(255, 255, 255)",
+          "ratio": 6.212,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "expense",
+          "background": "white",
+          "color": "rgb(177, 43, 59)",
+          "surface": "rgb(255, 255, 255)",
+          "ratio": 6.406,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "income",
+          "background": "white",
+          "color": "rgb(22, 112, 66)",
+          "surface": "rgb(255, 255, 255)",
+          "ratio": 6.122,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "transfer",
+          "background": "white",
+          "color": "rgb(136, 102, 18)",
+          "surface": "rgb(255, 255, 255)",
+          "ratio": 5.308,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "ink",
+          "background": "menu-selected",
+          "color": "rgb(34, 35, 41)",
+          "surface": "rgb(209, 220, 233)",
+          "ratio": 11.284,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "expense",
+          "background": "danger-selected",
+          "color": "rgb(177, 43, 59)",
+          "surface": "rgb(248, 214, 219)",
+          "ratio": 4.769,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "blue",
+          "background": "archive-selected",
+          "color": "rgb(7, 95, 189)",
+          "surface": "rgb(220, 234, 255)",
+          "ratio": 5.104,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "blue",
+          "background": "field",
+          "color": "rgb(7, 95, 189)",
+          "surface": "rgb(232, 232, 238)",
+          "ratio": 5.09,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "#fff",
+          "background": "action",
+          "color": "rgb(255, 255, 255)",
+          "surface": "rgb(6, 105, 214)",
+          "ratio": 5.251,
+          "normalTextAA": true
+        }
+      ]
+    },
+    {
+      "theme": "dark",
+      "ratios": [
+        {
+          "foreground": "ink",
+          "background": "canvas",
+          "color": "rgb(243, 243, 246)",
+          "surface": "rgb(17, 18, 22)",
+          "ratio": 16.901,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "muted",
+          "background": "canvas",
+          "color": "rgb(177, 178, 189)",
+          "surface": "rgb(17, 18, 22)",
+          "ratio": 8.889,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "ink",
+          "background": "white",
+          "color": "rgb(243, 243, 246)",
+          "surface": "rgb(35, 37, 44)",
+          "ratio": 13.816,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "ink",
+          "background": "field",
+          "color": "rgb(243, 243, 246)",
+          "surface": "rgb(54, 57, 67)",
+          "ratio": 10.401,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "blue",
+          "background": "white",
+          "color": "rgb(155, 195, 255)",
+          "surface": "rgb(35, 37, 44)",
+          "ratio": 8.484,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "expense",
+          "background": "white",
+          "color": "rgb(255, 133, 141)",
+          "surface": "rgb(35, 37, 44)",
+          "ratio": 6.551,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "income",
+          "background": "white",
+          "color": "rgb(120, 213, 162)",
+          "surface": "rgb(35, 37, 44)",
+          "ratio": 8.625,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "transfer",
+          "background": "white",
+          "color": "rgb(235, 203, 113)",
+          "surface": "rgb(35, 37, 44)",
+          "ratio": 9.7,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "ink",
+          "background": "menu-selected",
+          "color": "rgb(243, 243, 246)",
+          "surface": "rgb(98, 109, 130)",
+          "ratio": 4.706,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "expense",
+          "background": "danger-selected",
+          "color": "rgb(255, 133, 141)",
+          "surface": "rgb(92, 38, 48)",
+          "ratio": 5.066,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "blue",
+          "background": "archive-selected",
+          "color": "rgb(155, 195, 255)",
+          "surface": "rgb(36, 67, 106)",
+          "ratio": 5.582,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "blue",
+          "background": "field",
+          "color": "rgb(155, 195, 255)",
+          "surface": "rgb(54, 57, 67)",
+          "ratio": 6.387,
+          "normalTextAA": true
+        },
+        {
+          "foreground": "#fff",
+          "background": "action",
+          "color": "rgb(255, 255, 255)",
+          "surface": "rgb(25, 114, 227)",
+          "ratio": 4.608,
+          "normalTextAA": true
+        }
+      ]
+    }
+  ]
+}

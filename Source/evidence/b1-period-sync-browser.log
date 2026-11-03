@@ -1,0 +1,8 @@
+PASS 1/7 absent preferences: current month on both surfaces
+PASS 2 Home three months synchronizes financial planning
+PASS 3 settings four months refreshes open forecast and Home
+PASS 4 all debts equal on both surfaces
+PASS 5 reload and new application page preserve all debts
+PASS 5 cached PWA shell reopens offline with persisted selection
+PASS 8/9 five modes preserve formulas, operations and unrelated settings
+PASS 6/7 migration preserves Home, falls back to settings, then current month; removes conflicts on save

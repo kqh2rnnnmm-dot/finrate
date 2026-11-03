@@ -1,0 +1,25 @@
+{
+  "build": "p2.1-combined01",
+  "checks": [
+    "320x260 light compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll",
+    "320 light resize restores original layout and picker back path",
+    "320x260 dark compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll",
+    "320 dark resize restores original layout and picker back path",
+    "320x360 light compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll",
+    "320 light resize restores original layout and picker back path",
+    "320x360 dark compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll",
+    "320 dark resize restores original layout and picker back path",
+    "402x260 light compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll",
+    "402 light resize restores original layout and picker back path",
+    "402x260 dark compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll",
+    "402 dark resize restores original layout and picker back path",
+    "402x360 light compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll",
+    "402 light resize restores original layout and picker back path",
+    "402x360 dark compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll",
+    "402 dark resize restores original layout and picker back path"
+  ],
+  "failures": [],
+  "errors": [],
+  "actualIPhone": false,
+  "published": false
+}

@@ -1,0 +1,20 @@
+{
+  "checks": [
+    "operation note: exact whitespace, escaped markup, no keyboard",
+    "transfer / income / refund note viewers share exact text behavior",
+    "reading every operation note leaves encrypted storage byte-identical",
+    "fixed outer shell / note viewer at 320/375/390/428/1280, light and dark",
+    "dirty guard: continue retains text, discard does not persist",
+    "note-only save preserves all financial totals",
+    "history note has full viewer without editing immutable snapshot",
+    "account note uses shared viewer",
+    "account form note: viewer → shared editor → unsaved parent form",
+    "new numeric value empty; native Enter accepts cents and removes focus",
+    "saved skip comment: shared viewer/editor, financial status preserved",
+    "simulated native keyboard dismissal accepts numeric field without submitting operation",
+    "no browser runtime errors"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}

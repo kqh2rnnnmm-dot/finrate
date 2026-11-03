@@ -1,0 +1,4 @@
+PASS credit card wizard requires complete allocation and labels examples as placeholders
+PASS forgotten earlier purchase can be entered from the credit account with its historical date
+PASS category expands inline and creates a child above the list
+PASS FAQ is reachable from menu, answers debt questions and credits developer

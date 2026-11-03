@@ -1,0 +1,1950 @@
+{
+  "build": "p2.1-combined01",
+  "checks": [
+    "320 Setup scanned including nested text",
+    "320 Recovery scanned including nested text",
+    "320 Home scanned including nested text",
+    "320 Chooser scanned including nested text",
+    "320 Operations scanned including nested text",
+    "320 Details scanned including nested text",
+    "320 Edit operation scanned including nested text",
+    "320 Filters scanned including nested text",
+    "320 Accounts scanned including nested text",
+    "320 Account scanned including nested text",
+    "320 Edit account scanned including nested text",
+    "320 Balance scanned including nested text",
+    "320 Categories scanned including nested text",
+    "320 Category scanned including nested text",
+    "320 Category commands scanned including nested text",
+    "320 Hold scanned including nested text",
+    "320 Merge scanned including nested text",
+    "320 Merge naming scanned including nested text",
+    "320 Merge review scanned including nested text",
+    "320 light Settings (4 tiles) scanned including nested text",
+    "320 Data scanned including nested text",
+    "320 Restore form scanned including nested text",
+    "320 Setup scanned including nested text",
+    "320 Recovery scanned including nested text",
+    "320 Home scanned including nested text",
+    "320 Chooser scanned including nested text",
+    "320 Operations scanned including nested text",
+    "320 Details scanned including nested text",
+    "320 Edit operation scanned including nested text",
+    "320 Filters scanned including nested text",
+    "320 Accounts scanned including nested text",
+    "320 Account scanned including nested text",
+    "320 Edit account scanned including nested text",
+    "320 Balance scanned including nested text",
+    "320 Categories scanned including nested text",
+    "320 Category scanned including nested text",
+    "320 Category commands scanned including nested text",
+    "320 Hold scanned including nested text",
+    "320 Merge scanned including nested text",
+    "320 Merge naming scanned including nested text",
+    "320 Merge review scanned including nested text",
+    "320 dark Settings (4 tiles) scanned including nested text",
+    "320 Data scanned including nested text",
+    "320 Restore form scanned including nested text",
+    "402 Setup scanned including nested text",
+    "402 Recovery scanned including nested text",
+    "402 Home scanned including nested text",
+    "402 Chooser scanned including nested text",
+    "402 Operations scanned including nested text",
+    "402 Details scanned including nested text",
+    "402 Edit operation scanned including nested text",
+    "402 Filters scanned including nested text",
+    "402 Accounts scanned including nested text",
+    "402 Account scanned including nested text",
+    "402 Edit account scanned including nested text",
+    "402 Balance scanned including nested text",
+    "402 Categories scanned including nested text",
+    "402 Category scanned including nested text",
+    "402 Category commands scanned including nested text",
+    "402 Hold scanned including nested text",
+    "402 Merge scanned including nested text",
+    "402 Merge naming scanned including nested text",
+    "402 Merge review scanned including nested text",
+    "402 light Settings (4 tiles) scanned including nested text",
+    "402 Data scanned including nested text",
+    "402 Restore form scanned including nested text",
+    "402 Setup scanned including nested text",
+    "402 Recovery scanned including nested text",
+    "402 Home scanned including nested text",
+    "402 Chooser scanned including nested text",
+    "402 Operations scanned including nested text",
+    "402 Details scanned including nested text",
+    "402 Edit operation scanned including nested text",
+    "402 Filters scanned including nested text",
+    "402 Accounts scanned including nested text",
+    "402 Account scanned including nested text",
+    "402 Edit account scanned including nested text",
+    "402 Balance scanned including nested text",
+    "402 Categories scanned including nested text",
+    "402 Category scanned including nested text",
+    "402 Category commands scanned including nested text",
+    "402 Hold scanned including nested text",
+    "402 Merge scanned including nested text",
+    "402 Merge naming scanned including nested text",
+    "402 Merge review scanned including nested text",
+    "402 dark Settings (4 tiles) scanned including nested text",
+    "402 Data scanned including nested text",
+    "402 Restore form scanned including nested text",
+    "1280 Setup scanned including nested text",
+    "1280 Recovery scanned including nested text",
+    "1280 Home scanned including nested text",
+    "1280 Chooser scanned including nested text",
+    "1280 Operations scanned including nested text",
+    "1280 Details scanned including nested text",
+    "1280 Edit operation scanned including nested text",
+    "1280 Filters scanned including nested text",
+    "1280 Accounts scanned including nested text",
+    "1280 Account scanned including nested text",
+    "1280 Edit account scanned including nested text",
+    "1280 Balance scanned including nested text",
+    "1280 Categories scanned including nested text",
+    "1280 Category scanned including nested text",
+    "1280 Category commands scanned including nested text",
+    "1280 Hold scanned including nested text",
+    "1280 Merge scanned including nested text",
+    "1280 Merge naming scanned including nested text",
+    "1280 Merge review scanned including nested text",
+    "1280 light Settings (4 tiles) scanned including nested text",
+    "1280 Data scanned including nested text",
+    "1280 Restore form scanned including nested text",
+    "1280 Setup scanned including nested text",
+    "1280 Recovery scanned including nested text",
+    "1280 Home scanned including nested text",
+    "1280 Chooser scanned including nested text",
+    "1280 Operations scanned including nested text",
+    "1280 Details scanned including nested text",
+    "1280 Edit operation scanned including nested text",
+    "1280 Filters scanned including nested text",
+    "1280 Accounts scanned including nested text",
+    "1280 Account scanned including nested text",
+    "1280 Edit account scanned including nested text",
+    "1280 Balance scanned including nested text",
+    "1280 Categories scanned including nested text",
+    "1280 Category scanned including nested text",
+    "1280 Category commands scanned including nested text",
+    "1280 Hold scanned including nested text",
+    "1280 Merge scanned including nested text",
+    "1280 Merge naming scanned including nested text",
+    "1280 Merge review scanned including nested text",
+    "1280 dark Settings (4 tiles) scanned including nested text",
+    "1280 Data scanned including nested text",
+    "1280 Restore form scanned including nested text"
+  ],
+  "failures": [],
+  "errors": [],
+  "externalRequests": [],
+  "actualIPhone": false,
+  "published": false,
+  "snapshots": [
+    {
+      "name": "320 Setup",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "320 Recovery",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "320 Home",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "320 Chooser",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Новая операция",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Operations",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Details",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Расход",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Edit operation",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить расход",
+          "height": 36.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Filters",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Фильтры",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Accounts",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Семейный накопительный счёт для будущих крупных покупок и поездок",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Edit account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать счёт",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Balance",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить остаток",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Categories",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Category",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Category commands",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать: Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Hold",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Merge",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Merge naming",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Merge review",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 light Settings (4 tiles)",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Настройки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Data",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Restore form",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Выберите защищённую копию",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Setup",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "320 Recovery",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "320 Home",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "320 Chooser",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Новая операция",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Operations",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Details",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Расход",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Edit operation",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить расход",
+          "height": 36.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Filters",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Фильтры",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Accounts",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Семейный накопительный счёт для будущих крупных покупок и поездок",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Edit account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать счёт",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Balance",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить остаток",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Categories",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Category",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Category commands",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать: Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Hold",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Merge",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Merge naming",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Merge review",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 dark Settings (4 tiles)",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Настройки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Data",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "320 Restore form",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Выберите защищённую копию",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Setup",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "402 Recovery",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "402 Home",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "402 Chooser",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Новая операция",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Operations",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Details",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Расход",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Edit operation",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить расход",
+          "height": 36.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Filters",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Фильтры",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Accounts",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Семейный накопительный счёт для будущих крупных покупок и поездок",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Edit account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать счёт",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Balance",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить остаток",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Categories",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Category",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Category commands",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать: Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Hold",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Merge",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Merge naming",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Merge review",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 light Settings (4 tiles)",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Настройки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Data",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Restore form",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Выберите защищённую копию",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Setup",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "402 Recovery",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "402 Home",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "402 Chooser",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Новая операция",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Operations",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Details",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Расход",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Edit operation",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить расход",
+          "height": 36.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Filters",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Фильтры",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Accounts",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Семейный накопительный счёт для будущих крупных покупок и поездок",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Edit account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать счёт",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Balance",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить остаток",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Categories",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Category",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Category commands",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать: Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Hold",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Merge",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Merge naming",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Merge review",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 dark Settings (4 tiles)",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Настройки",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Data",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "402 Restore form",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Выберите защищённую копию",
+          "height": 20.15625,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Setup",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "1280 Recovery",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "1280 Home",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "1280 Chooser",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Новая операция",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Operations",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Details",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Расход",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Edit operation",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить расход",
+          "height": 38.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Filters",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Фильтры",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Accounts",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Семейный накопительный счёт для будущих крупных покупок и поездок",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Edit account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать счёт",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Balance",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить остаток",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Categories",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Category",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Category commands",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать: Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Hold",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Merge",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Merge naming",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Merge review",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 light Settings (4 tiles)",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Настройки",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Data",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Restore form",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Выберите защищённую копию",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Setup",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "1280 Recovery",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "1280 Home",
+      "bad": [],
+      "overflow": false,
+      "heading": []
+    },
+    {
+      "name": "1280 Chooser",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Новая операция",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Operations",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Details",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Расход",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Edit operation",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Операции",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить расход",
+          "height": 38.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Filters",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Фильтры",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Accounts",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Семейный накопительный счёт для будущих крупных покупок и поездок",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Edit account",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать счёт",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Balance",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Счета и кошельки",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Изменить остаток",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Categories",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Category",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Category commands",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Редактировать: Покупки для всей семьи и дополнительные повседневные расходы",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Hold",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Merge",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Merge naming",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Merge review",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Объединить категории",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 dark Settings (4 tiles)",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Настройки",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Data",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    },
+    {
+      "name": "1280 Restore form",
+      "bad": [],
+      "overflow": false,
+      "heading": [
+        {
+          "text": "Данные и синхронизация",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        },
+        {
+          "text": "Выберите защищённую копию",
+          "height": 22.078125,
+          "nowrap": "nowrap"
+        }
+      ]
+    }
+  ]
+}

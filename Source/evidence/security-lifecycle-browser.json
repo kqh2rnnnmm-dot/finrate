@@ -1,0 +1,13 @@
+{
+  "build": "p2.1-combined01",
+  "checks": [
+    "light none busy real security commit + simulated system return completes, reopens correctly, clears secret form and keeps Back",
+    "light pin busy real security commit + simulated system return completes, reopens correctly, clears secret form and keeps Back",
+    "dark none busy real security commit + simulated system return completes, reopens correctly, clears secret form and keeps Back",
+    "dark pin busy real security commit + simulated system return completes, reopens correctly, clears secret form and keeps Back"
+  ],
+  "failures": [],
+  "errors": [],
+  "actualIPhone": false,
+  "published": false
+}

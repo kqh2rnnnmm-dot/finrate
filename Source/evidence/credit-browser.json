@@ -1,0 +1,28 @@
+{
+  "build": "b1-financial01",
+  "checks": [
+    "320 light 5 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "320 light 6 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "320 dark 5 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "320 dark 6 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "402 light 5 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "402 light 6 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "402 dark 5 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "402 dark 6 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "736 light 5 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "736 light 6 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "736 dark 5 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "736 dark 6 blocks, equal grid/spanning, no money wrap, draft-only settings",
+    "expanded four-block view has real debt/payment/limit facts and per-account selection",
+    "external transfer retains existing two cards; recipient/category/subcategory/note persisted as one expense",
+    "editing external transfer keeps recipient/category/subcategory and recomputes balances once",
+    "debit deficit blocks save; mixed own/credit funding displays and records borrowed portion",
+    "account creation supports debit/credit, credit limit and monthly rule without changing category flow",
+    "allocated initial debt can be refined with an explicit bank statement payment",
+    "encrypted reload and offline retain external transfer, accounts and layout"
+  ],
+  "errors": [],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false
+}

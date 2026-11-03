@@ -1,0 +1,17 @@
+{
+  "repository": "kqh2rnnnmm-dot/finrate",
+  "main": "16253c181eae43512c7159d28ad31f610ec033d6",
+  "publicFilesIdenticalToB121": 7,
+  "sourcePreviouslyInGitHub": false,
+  "openPRsAtStart": 0,
+  "pages": {
+    "build_type": "legacy",
+    "source": {
+      "branch": "main",
+      "path": "/"
+    },
+    "status": "built",
+    "html_url": "https://kqh2rnnnmm-dot.github.io/finrate/"
+  },
+  "pagesSettingsChanged": false
+}

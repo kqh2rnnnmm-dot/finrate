@@ -1,0 +1,17 @@
+{
+  "src/crypto.mjs": "923b71e04c7cc7a06f7c37941e1fe008f3e14f7bd0a3a3d8ad008b6fa3622a13",
+  "src/store.mjs": "94aff164135544e30d16e553fa5752c609aff7a897839d28f888597e59fdf0c5",
+  "src/service.mjs": "2d1a42598c959bea49e7735e694af6d70be2385d1ad4c3e5eb9fd6265771418e",
+  "src/device-access.mjs": "a06917f42ef5bace7a82fd8f8c8a5104a4efabae3f9d58c5f3696b7ba6ffd1d2",
+  "src/session-policy.mjs": "a3554c45ad55540fed52eff52dd8dd647cb3c8b9c4a8fd34242a73ae658927c6",
+  "src/chrome.mjs": "4991bf6da8e0bd11677de9b61ae00b5313c426e7954f1f2abaaf2b6011bdd2d4",
+  "src/feedback-state.mjs": "59afde263f1291f78afe15a672dd49802dd7b4e2e3fad52918a9389b10f40492",
+  "src/context-menu.mjs": "95aa791038ab3b7ca14df3a436fa263852847b5a83f2cfd32dd762734278eaca",
+  "src/security-ui.mjs": "1c3df5d8134401f7a11e805ddde37e4714b0f2d8defcff90ddee71c3d7c6e264",
+  "src/reset-ui.mjs": "7029a830ace59abb0bebae545d72116f9efb700702c4ff9a221761da74dbd5e2",
+  "src/sw.mjs": "23720caeb8591f79daa76e008bb341613d73cc2989525e8136eb802ac33fd4a9",
+  "src/icon.svg": "ac3bdbd1431e6d58b2da6e759e1b86e4da70a0f35fbeb173a98e001035fe6328",
+  "src/icon-192.png": "02de571ad2d51f9c5ad3e7025d69c3757144326731163ecfe9a76b7fb13bcfa4",
+  "src/icon-512.png": "dc5ebe3e204b64dfeb6585959145d7823c5db9e9af7e3fe45ef00a43bb9a0c0b",
+  "src/apple-touch-icon.png": "b5885c943dfa178c5b7043b35c80cb0f13b3ddc34f7f4085663bf9eac5d1e46d"
+}

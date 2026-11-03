@@ -1,0 +1,32 @@
+{
+  "build": "p2.1-combined01",
+  "checks": [
+    "320 light stationary hold, continuing touch selection, no tab switch on hold; dock scrub preserved",
+    "320 light settings configurator retained; lock title only, explicit confirmation/cancel, intact ciphertext and return",
+    "320 light archive is blue, existing names and confirmations retained",
+    "320 light reset: wrong credential and cancel preserve data; final reset clears both stores, other tab and memory; onboarding and external copy remain",
+    "320 dark stationary hold, continuing touch selection, no tab switch on hold; dock scrub preserved",
+    "320 dark settings configurator retained; lock title only, explicit confirmation/cancel, intact ciphertext and return",
+    "320 dark archive is blue, existing names and confirmations retained",
+    "320 dark reset: wrong credential and cancel preserve data; final reset clears both stores, other tab and memory; onboarding and external copy remain",
+    "402 light stationary hold, continuing touch selection, no tab switch on hold; dock scrub preserved",
+    "402 light settings configurator retained; lock title only, explicit confirmation/cancel, intact ciphertext and return",
+    "402 light archive is blue, existing names and confirmations retained",
+    "402 light reset: wrong credential and cancel preserve data; final reset clears both stores, other tab and memory; onboarding and external copy remain",
+    "402 dark stationary hold, continuing touch selection, no tab switch on hold; dock scrub preserved",
+    "402 dark settings configurator retained; lock title only, explicit confirmation/cancel, intact ciphertext and return",
+    "402 dark archive is blue, existing names and confirmations retained",
+    "reset failed clear rolls back safety and vault in the real browser; confirmation remains retryable",
+    "402 dark reset: wrong credential and cancel preserve data; final reset clears both stores, other tab and memory; onboarding and external copy remain",
+    "1280 light settings configurator retained; lock title only, explicit confirmation/cancel, intact ciphertext and return",
+    "1280 light archive is blue, existing names and confirmations retained",
+    "1280 light reset: wrong credential and cancel preserve data; final reset clears both stores, other tab and memory; onboarding and external copy remain",
+    "1280 dark settings configurator retained; lock title only, explicit confirmation/cancel, intact ciphertext and return",
+    "1280 dark archive is blue, existing names and confirmations retained",
+    "1280 dark reset: wrong credential and cancel preserve data; final reset clears both stores, other tab and memory; onboarding and external copy remain"
+  ],
+  "failures": [],
+  "errors": [],
+  "actualIPhone": false,
+  "published": false
+}

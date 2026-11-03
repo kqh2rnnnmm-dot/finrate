@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "right notification animation interrupted by app switch recovers and dismisses",
+    "right 18×84 tab morphs into opaque chooser and reverse swipe restores it",
+    "right short quick outward swipe collapses chooser",
+    "right interrupted native dialog restored; system Back closes chooser",
+    "right operation editor and Back remain responsive",
+    "background/foreground with a settings sheet preserves Back and navigation",
+    "left notification animation interrupted by app switch recovers and dismisses",
+    "left 18×84 tab morphs into opaque chooser and reverse swipe restores it",
+    "left short quick outward swipe collapses chooser",
+    "left interrupted native dialog restored; system Back closes chooser",
+    "left operation editor and Back remain responsive"
+  ],
+  "errors": [],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false
+}

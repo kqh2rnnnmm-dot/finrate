@@ -1,0 +1,23 @@
+PASS 320 light outside over balance consumes click; modal survives pointerup; restores background
+PASS 320 light side chooser outside over operation does not open details
+PASS 320 light nested form/hold isolation, Escape restoration, unchanged encrypted record
+PASS 320 dark outside over balance consumes click; modal survives pointerup; restores background
+PASS 320 dark side chooser outside over operation does not open details
+PASS 320 dark nested form/hold isolation, Escape restoration, unchanged encrypted record
+PASS 402 light outside over balance consumes click; modal survives pointerup; restores background
+PASS 402 light side chooser outside over operation does not open details
+PASS 402 light nested form/hold isolation, Escape restoration, unchanged encrypted record
+PASS 402 dark outside over balance consumes click; modal survives pointerup; restores background
+PASS 402 dark side chooser outside over operation does not open details
+PASS 402 dark nested form/hold isolation, Escape restoration, unchanged encrypted record
+PASS 1280 light outside over balance consumes click; modal survives pointerup; restores background
+PASS 1280 light side chooser outside over operation does not open details
+PASS 1280 light nested form/hold isolation, Escape restoration, unchanged encrypted record
+PASS 1280 dark outside over balance consumes click; modal survives pointerup; restores background
+PASS 1280 dark side chooser outside over operation does not open details
+PASS 1280 dark nested form/hold isolation, Escape restoration, unchanged encrypted record
+{
+  "checks": 18,
+  "errors": [],
+  "failures": []
+}

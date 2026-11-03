@@ -1,0 +1,1 @@
+{"build":"c1-ui01","securityCoreUnchanged":true,"financialCoreUnchanged":true,"publicAllowlist":7,"csp":"PASS","published":false,"c1Allowed":["src/surfaces.mjs","src/planning-ui.mjs","src/field-editor.mjs","src/navigation.mjs","src/style.css","src/focus.mjs","src/ui.mjs","src/management.mjs","src/activity-ui.mjs","src/help.mjs","src/app.mjs"],"protectedModulesByteIdentical":true}

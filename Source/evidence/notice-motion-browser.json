@@ -1,0 +1,10 @@
+{
+  "build": "p2.1-combined01",
+  "checks": [
+    "light approved 1200ms entry / 3000ms dwell / 900ms spring exit, centred island below header, no permanent notice",
+    "dark approved 1200ms entry / 3000ms dwell / 900ms spring exit, centred island below header, no permanent notice"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false
+}

@@ -1,0 +1,79 @@
+{
+  "build": "p2.1-combined01",
+  "actualIPhone": false,
+  "published": false,
+  "checks": [
+    "320 primary section replaces brand; no duplicate title; edge only outside Home",
+    "320 scoped search, no Menu self-card, full-page menu, one-step Back and scroll restoration",
+    "320 archives consistent; quick actions overlay without page shift; hidden throughout operation including pickers",
+    "320 native touch dock scrub: live multi-tab crossing, reversal, commit and cancellation",
+    "320 C1 horizontal swipe in operation list stays on Operations; native vertical scrolling remains enabled",
+    "320 down-to-end and reappearance, no horizontal overflow, themes retained, encrypted record byte-identical",
+    "320 full viewport editor, distinct fields in both themes, translucent island, creation hidden for the entire form",
+    "320 unfinished account form hides creation; discard returns to real account without financial writes",
+    "402 primary section replaces brand; no duplicate title; edge only outside Home",
+    "402 scoped search, no Menu self-card, full-page menu, one-step Back and scroll restoration",
+    "402 archives consistent; quick actions overlay without page shift; hidden throughout operation including pickers",
+    "402 native touch dock scrub: live multi-tab crossing, reversal, commit and cancellation",
+    "402 C1 horizontal swipe in operation list stays on Operations; native vertical scrolling remains enabled",
+    "402 down-to-end and reappearance, no horizontal overflow, themes retained, encrypted record byte-identical",
+    "402 full viewport editor, distinct fields in both themes, translucent island, creation hidden for the entire form",
+    "402 unfinished account form hides creation; discard returns to real account without financial writes"
+  ],
+  "errors": [],
+  "failures": [],
+  "surfaces": [
+    {
+      "width": 320,
+      "theme": "light",
+      "x": 0,
+      "y": 0,
+      "height": 874,
+      "radius": "0px",
+      "background": "rgb(242, 242, 245)",
+      "field": "rgb(232, 232, 238)",
+      "header": "rgba(233, 237, 245, 0.78)",
+      "transform": "none",
+      "edgeRight": 0
+    },
+    {
+      "width": 320,
+      "theme": "dark",
+      "x": 0,
+      "y": 0,
+      "height": 874,
+      "radius": "0px",
+      "background": "rgb(17, 18, 22)",
+      "field": "rgb(54, 57, 67)",
+      "header": "rgba(59, 67, 82, 0.78)",
+      "transform": "none",
+      "edgeRight": 0
+    },
+    {
+      "width": 402,
+      "theme": "light",
+      "x": 0,
+      "y": 0,
+      "height": 874,
+      "radius": "0px",
+      "background": "rgb(242, 242, 245)",
+      "field": "rgb(232, 232, 238)",
+      "header": "rgba(233, 237, 245, 0.78)",
+      "transform": "none",
+      "edgeRight": 0
+    },
+    {
+      "width": 402,
+      "theme": "dark",
+      "x": 0,
+      "y": 0,
+      "height": 874,
+      "radius": "0px",
+      "background": "rgb(17, 18, 22)",
+      "field": "rgb(54, 57, 67)",
+      "header": "rgba(59, 67, 82, 0.78)",
+      "transform": "none",
+      "edgeRight": 0
+    }
+  ]
+}
