@@ -373,6 +373,9 @@ dialog h2 { margin-bottom:18px; }
 #app[data-page="Пароль и вход"] main>.list-button { background:var(--white); }
 .security-wide { display:flex; justify-content:center; width:100%; margin-top:18px; }
 .security-input { position:relative; display:block; }
+/* All top-layer dialogs are covered too; visibility is restored after the
+   session deadline/committing action has been resolved. No new visual style. */
+html.access-private body,html.access-private body * { visibility:hidden !important; }
 .security-input>input { padding-right:58px; }
 .security-eye { position:absolute; right:3px; top:50%; transform:translateY(-50%); }
 .security-validation { color:var(--red); margin-top:14px; }
