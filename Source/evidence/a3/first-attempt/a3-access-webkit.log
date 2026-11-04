@@ -1,0 +1,29 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+PASS A3-F01 secret form cancelled and financial UI hidden immediately on background
+PASS A3-F02 pending no-check confirmation cannot retain authorization across background
+PASS A3-F03 recovery switch clears previously revealed password and excludes autofill
+PASS A3-F04 security change invalidates already unlocked peer tab
+PASS A3-06 mismatch, wrong secret, Back/discard preserve exact vault and clear detached secret fields
+PASS A3-09/10 PIN4 and PIN6, maximum length, cleared errors and primary/recovery fallback
+PASS A3-14 delayed unlock completes atomically but stays locked after background and return
+PASS A3-14 delayed security commit clears secrets and reveals only locked state after return
+PASS A3-13 browser background deadline 0
+PASS A3-13 browser background deadline 5
+PASS A3-13 browser background deadline 15
+PASS A3-13 browser background deadline 30
+PASS A3-13 browser background deadline -1
+PASS A3-17/18/22 no biometric entry, no secret in URL/history/storage/shell cache/logs
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+page.reload: WebKit encountered an internal error
+Call log:
+[2m  - waiting for navigation until "load"[22m
+
+    at /workspace/finrate/Source/tests/a3-browser.mjs:80:43 {
+  log: [ '  - waiting for navigation until "load"' ],
+  name: 'Error'
+}
+
+Node.js v24.19.0

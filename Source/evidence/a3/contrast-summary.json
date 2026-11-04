@@ -1,0 +1,178 @@
+{
+  "scope": "Existing token probes for access text/buttons, native OS select rendering requires iPhone test; unused selected-menu token combinations kept separate",
+  "results": [
+    {
+      "file": "g1-contrast-chromium-color-dark.json",
+      "accessTextAndButtonsMinimum": 4.607819312327966,
+      "allSelectedAtLeast4_5": true,
+      "legacyCombinationsBelow4_5": []
+    },
+    {
+      "file": "g1-contrast-chromium-color-light.json",
+      "accessTextAndButtonsMinimum": 4.690330718633653,
+      "allSelectedAtLeast4_5": true,
+      "legacyCombinationsBelow4_5": []
+    },
+    {
+      "file": "g1-contrast-chromium-neutral-dark.json",
+      "accessTextAndButtonsMinimum": 4.607819312327966,
+      "allSelectedAtLeast4_5": true,
+      "legacyCombinationsBelow4_5": [
+        {
+          "fg": "muted",
+          "bg": "menu-selected",
+          "ratio": 2.4750759020884416
+        },
+        {
+          "fg": "blue",
+          "bg": "menu-selected",
+          "ratio": 2.8898924939729986
+        },
+        {
+          "fg": "expense",
+          "bg": "menu-selected",
+          "ratio": 2.231654723014041
+        },
+        {
+          "fg": "income",
+          "bg": "menu-selected",
+          "ratio": 2.9381127341484414
+        },
+        {
+          "fg": "transfer",
+          "bg": "menu-selected",
+          "ratio": 3.3042507403022645
+        },
+        {
+          "fg": "credit-ink",
+          "bg": "menu-selected",
+          "ratio": 2.9458510430886253
+        }
+      ]
+    },
+    {
+      "file": "g1-contrast-chromium-neutral-light.json",
+      "accessTextAndButtonsMinimum": 4.857009079998089,
+      "allSelectedAtLeast4_5": true,
+      "legacyCombinationsBelow4_5": [
+        {
+          "fg": "transfer",
+          "bg": "field",
+          "ratio": 4.349809270621664
+        },
+        {
+          "fg": "transfer",
+          "bg": "soft",
+          "ratio": 4.332892941731837
+        },
+        {
+          "fg": "muted",
+          "bg": "menu-selected",
+          "ratio": 4.285634251335999
+        },
+        {
+          "fg": "blue",
+          "bg": "menu-selected",
+          "ratio": 4.473863559375951
+        },
+        {
+          "fg": "income",
+          "bg": "menu-selected",
+          "ratio": 4.409033782504034
+        },
+        {
+          "fg": "transfer",
+          "bg": "menu-selected",
+          "ratio": 3.8231747342060274
+        }
+      ]
+    },
+    {
+      "file": "g1-contrast-webkit-color-dark.json",
+      "accessTextAndButtonsMinimum": 4.607819312327966,
+      "allSelectedAtLeast4_5": true,
+      "legacyCombinationsBelow4_5": []
+    },
+    {
+      "file": "g1-contrast-webkit-color-light.json",
+      "accessTextAndButtonsMinimum": 4.690330718633653,
+      "allSelectedAtLeast4_5": true,
+      "legacyCombinationsBelow4_5": []
+    },
+    {
+      "file": "g1-contrast-webkit-neutral-dark.json",
+      "accessTextAndButtonsMinimum": 4.607819312327966,
+      "allSelectedAtLeast4_5": true,
+      "legacyCombinationsBelow4_5": [
+        {
+          "fg": "muted",
+          "bg": "menu-selected",
+          "ratio": 2.4750759020884416
+        },
+        {
+          "fg": "blue",
+          "bg": "menu-selected",
+          "ratio": 2.8898924939729986
+        },
+        {
+          "fg": "expense",
+          "bg": "menu-selected",
+          "ratio": 2.231654723014041
+        },
+        {
+          "fg": "income",
+          "bg": "menu-selected",
+          "ratio": 2.9381127341484414
+        },
+        {
+          "fg": "transfer",
+          "bg": "menu-selected",
+          "ratio": 3.3042507403022645
+        },
+        {
+          "fg": "credit-ink",
+          "bg": "menu-selected",
+          "ratio": 2.9458510430886253
+        }
+      ]
+    },
+    {
+      "file": "g1-contrast-webkit-neutral-light.json",
+      "accessTextAndButtonsMinimum": 4.857009079998089,
+      "allSelectedAtLeast4_5": true,
+      "legacyCombinationsBelow4_5": [
+        {
+          "fg": "transfer",
+          "bg": "field",
+          "ratio": 4.349809270621664
+        },
+        {
+          "fg": "transfer",
+          "bg": "soft",
+          "ratio": 4.332892941731837
+        },
+        {
+          "fg": "muted",
+          "bg": "menu-selected",
+          "ratio": 4.285634251335999
+        },
+        {
+          "fg": "blue",
+          "bg": "menu-selected",
+          "ratio": 4.473863559375951
+        },
+        {
+          "fg": "income",
+          "bg": "menu-selected",
+          "ratio": 4.409033782504034
+        },
+        {
+          "fg": "transfer",
+          "bg": "menu-selected",
+          "ratio": 3.8231747342060274
+        }
+      ]
+    }
+  ],
+  "publicHTMLSHA256": "3da6bbef04b19349534deac02482969f2426bdf1e5b085863be4b28744556139"
+}

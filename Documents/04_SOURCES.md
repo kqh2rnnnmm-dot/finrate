@@ -1,3 +1,14 @@
+# A3 · источники · 04.11.2026
+
+- [Утверждённое задание](A3/TASK.md), [матрица](A3/ACCEPTANCE_MATRIX.md), [передача статусов/выдержка roadmap](A3/HANDOFF_STATUS.md) из FinRate_A3_CODEX_HANDOFF_2026-11-04.zip.
+- GitHub main `7abfe0e84442e6b1c8cdf624767ed1341a668473` после A2/PR #7; реальный HEAD проверен fetch. Владелец принимает A2 без аппаратного тестирования, а не без необходимости резервных копий.
+- Действующие checkpoint/decisions, UX/behavior, DESIGN.md, A2 DATA_MATRIX/OPEN_ITEMS и A1 REPORT; существующий runtime и тесты. Исторического R30-roadmap нет в repo, приоритет новой передачи сохранён.
+- [Аудит](A3/AUDIT.md), [первичные Apple/WebKit/W3C источники](A3/BIOMETRY_FEASIBILITY.md), [проверки](A3/TEST_REPORT.md), [открытые пункты](A3/OPEN_ITEMS.md).
+
+Новых сервисов/SDK/зависимостей нет. Исследовательские HTTP-чтения документации не включены в приложение. Ничего не публиковалось; внешние источники ChatGPT автоматически не заменены.
+
+---
+
 # Источники A2 · 04.11.2026
 
 - Явное разрешение владельца и архив `FinRate_A2_CODEX_HANDOFF_2026-11-04.zip`: [сохранённое задание](A2/TASK.md), [реестр](A2/OPEN_ITEMS.md).

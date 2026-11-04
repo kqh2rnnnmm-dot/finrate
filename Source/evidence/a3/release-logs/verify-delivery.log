@@ -1,0 +1,30 @@
+{
+  "build": "a3-access01",
+  "base": "7abfe0e84442e6b1c8cdf624767ed1341a668473",
+  "publicAllowlist": 7,
+  "files": {
+    "apple-touch-icon.png": "b5885c943dfa178c5b7043b35c80cb0f13b3ddc34f7f4085663bf9eac5d1e46d",
+    "icon-192.png": "02de571ad2d51f9c5ad3e7025d69c3757144326731163ecfe9a76b7fb13bcfa4",
+    "icon-512.png": "dc5ebe3e204b64dfeb6585959145d7823c5db9e9af7e3fe45ef00a43bb9a0c0b",
+    "icon.svg": "ac3bdbd1431e6d58b2da6e759e1b86e4da70a0f35fbeb173a98e001035fe6328",
+    "index.html": "3da6bbef04b19349534deac02482969f2426bdf1e5b085863be4b28744556139",
+    "manifest.webmanifest": "9c42fa3d8ed6be9044ed42c93ea7d45ad7d25e4efad893e4a29f17b463557e39",
+    "sw.js": "9fe6d0655f8414049322df4679815b80db0263ea013d11bb50fd49966bccef14"
+  },
+  "csp": "PASS",
+  "financialCoreUnchanged": true,
+  "keyArchitectureModulesUnchanged": true,
+  "cryptoProtocolUnchanged": true,
+  "authorizedChangedModules": [
+    "src/service.mjs",
+    "src/app.mjs",
+    "src/security-ui.mjs",
+    "src/ui.mjs",
+    "src/style.css",
+    "src/help.mjs",
+    "src/access-fields.mjs"
+  ],
+  "schema": 5,
+  "format": "finrate-backup/1",
+  "published": false
+}
