@@ -1,0 +1,33 @@
+{
+  "checks": [
+    "320/light/neutral notice attached to system boundary",
+    "320/light/color notice attached to system boundary",
+    "320/dark/neutral notice attached to system boundary",
+    "320/dark/color notice attached to system boundary",
+    "375/light/neutral notice attached to system boundary",
+    "375/light/color notice attached to system boundary",
+    "375/dark/neutral notice attached to system boundary",
+    "375/dark/color notice attached to system boundary",
+    "390/light/neutral notice attached to system boundary",
+    "390/light/color notice attached to system boundary",
+    "390/dark/neutral notice attached to system boundary",
+    "390/dark/color notice attached to system boundary",
+    "402/light/neutral notice attached to system boundary",
+    "402/light/color notice attached to system boundary",
+    "402/dark/neutral notice attached to system boundary",
+    "402/dark/color notice attached to system boundary",
+    "430/light/neutral notice attached to system boundary",
+    "430/light/color notice attached to system boundary",
+    "430/dark/neutral notice attached to system boundary",
+    "430/dark/color notice attached to system boundary",
+    "gesture starts return from finger offset without snap",
+    "pointercancel restores notice without dismissing it",
+    "double close preserves queued next notice",
+    "long error preserves native vertical scrolling and reachable header",
+    "note header follows panned VisualViewport",
+    "500 characters and paragraphs remain intact across keyboard close",
+    "auth header and form remain separate under mandatory notice"
+  ],
+  "findings": [],
+  "actualIPhone": false
+}

@@ -1,0 +1,122 @@
+{
+  "checks": [
+    "pointercancel restores notice without dismissing it",
+    "double close preserves queued next notice",
+    "note header follows panned VisualViewport",
+    "500 characters and paragraphs remain intact across keyboard close",
+    "auth header and form remain separate under mandatory notice"
+  ],
+  "findings": [
+    {
+      "name": "320/light/neutral notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "320/light/color notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "320/dark/neutral notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "320/dark/color notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "375/light/neutral notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "375/light/color notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "375/dark/neutral notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "375/dark/color notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "390/light/neutral notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "390/light/color notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "390/dark/neutral notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "390/dark/color notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "402/light/neutral notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "402/light/color notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "402/dark/neutral notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "402/dark/color notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "430/light/neutral notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "430/light/color notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "430/dark/neutral notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "430/dark/color notice attached to system boundary",
+      "error": "AssertionError",
+      "message": "{\"top\":82,\"bottom\":138,\"height\":56,\"headTop\":10}"
+    },
+    {
+      "name": "gesture starts return from finger offset without snap",
+      "error": "AssertionError",
+      "message": "{\"held\":\"0px -24px\",\"immediately\":\"none\"}"
+    },
+    {
+      "name": "long error preserves native vertical scrolling and reachable header",
+      "error": "AssertionError",
+      "message": "The expression evaluated to a falsy value:\n\n  assert.ok(g.bottom<=g.head-5)\n"
+    }
+  ],
+  "actualIPhone": false
+}
