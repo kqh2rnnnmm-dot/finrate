@@ -1,0 +1,20 @@
+PASS 320 light 5 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS 320 light 6 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS 320 dark 5 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS 320 dark 6 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS 402 light 5 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS 402 light 6 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS 402 dark 5 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS 402 dark 6 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS 736 light 5 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS 736 light 6 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS 736 dark 5 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS 736 dark 6 blocks, equal grid/spanning, no money wrap, draft-only settings
+PASS expanded four-block view has real debt/payment/limit facts and per-account selection
+PASS external transfer retains existing two cards; recipient/category/subcategory/note persisted as one expense
+PASS editing external transfer keeps recipient/category/subcategory and recomputes balances once
+PASS debit deficit blocks save; mixed own/credit funding displays and records borrowed portion
+PASS account creation supports debit/credit, credit limit and monthly rule without changing category flow
+PASS allocated initial debt can be refined with an explicit bank statement payment
+PASS encrypted reload and offline retain external transfer, accounts and layout
+{"checks":19,"errors":[],"failures":[]}

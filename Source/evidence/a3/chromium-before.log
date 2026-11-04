@@ -1,0 +1,21 @@
+DIAGNOSTIC {"hidden":true,"html":"","body":"app-open surface-open screen-surface-open","root":"hidden","rootInline":"","inert":true,"auth":null,"unlock":null,"dialogs":1}
+FAIL A3-F01 secret form cancelled and financial UI hidden immediately on background Expected values to be strictly equal:
+
+1 !== 0
+
+DIAGNOSTIC {"hidden":false,"html":"","body":"app-open surface-open screen-surface-open","root":"hidden","rootInline":"","inert":true,"auth":null,"unlock":null,"dialogs":1}
+FAIL A3-F02 pending no-check confirmation cannot retain authorization across background Expected values to be strictly equal:
+
+2 !== 0
+
+DIAGNOSTIC {"hidden":false,"html":"","body":"app-open surface-open screen-surface-open","root":"hidden","rootInline":"","inert":true,"auth":null,"unlock":null,"dialogs":1}
+FAIL A3-F03 recovery switch clears previously revealed password and excludes autofill Expected values to be strictly equal:
++ actual - expected
+
++ 'off'
+- 'current-password'
+
+DIAGNOSTIC {"hidden":false,"html":"","body":"app-open","root":"visible","rootInline":"","inert":false,"auth":null,"unlock":null,"dialogs":0}
+FAIL A3-F04 security change invalidates already unlocked peer tab locator.waitFor: Timeout 2500ms exceeded.
+Call log:
+[2m  - waiting for locator('#unlock') to be visible[22m

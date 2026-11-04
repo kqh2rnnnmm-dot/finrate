@@ -1,0 +1,23 @@
+{
+  "engine": "chromium",
+  "stage": "before",
+  "build": "a2-reset01",
+  "checks": [],
+  "failures": [
+    "A3-F01 secret form cancelled and financial UI hidden immediately on background",
+    "A3-F02 pending no-check confirmation cannot retain authorization across background",
+    "A3-F03 recovery switch clears previously revealed password and excludes autofill",
+    "A3-F04 security change invalidates already unlocked peer tab"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "deviceRequired": [
+    "Safari/PWA AutoFill and OS saving",
+    "real keyboard/safe area/VoiceOver",
+    "task switcher snapshot and real timers",
+    "Face/Touch ID PRF lifecycle (feature absent)"
+  ],
+  "version": "153.0.8010.0",
+  "allPassed": false,
+  "publicHTMLSHA256": "1ae99bbf72daf65e527cc0b31ba8139607cd9eb508b17951b2ff9697022d7a8f"
+}

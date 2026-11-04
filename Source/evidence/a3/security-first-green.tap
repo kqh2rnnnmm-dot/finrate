@@ -1,0 +1,112 @@
+TAP version 13
+# Subtest: A3 same current password is rejected by service using password
+ok 1 - A3 same current password is rejected by service using password
+  ---
+  duration_ms: 315.891046
+  type: 'test'
+  ...
+# Subtest: A3 same current password is rejected by service using recovery
+ok 2 - A3 same current password is rejected by service using recovery
+  ---
+  duration_ms: 298.062961
+  type: 'test'
+  ...
+# Subtest: legacy records default to password without writing either row
+ok 3 - legacy records default to password without writing either row
+  ---
+  duration_ms: 168.537614
+  type: 'test'
+  ...
+# Subtest: PIN persists across service restart, leading zeros preserved; encrypted backups contain no local unlock material
+ok 4 - PIN persists across service restart, leading zeros preserved; encrypted backups contain no local unlock material
+  ---
+  duration_ms: 494.627691
+  type: 'test'
+  ...
+# Subtest: fifth PIN attempt may succeed, five wrong attempts survive reload and require primary credentials
+ok 5 - fifth PIN attempt may succeed, five wrong attempts survive reload and require primary credentials
+  ---
+  duration_ms: 1431.470711
+  type: 'test'
+  ...
+# Subtest: password change retains PIN, recovery key, all money and old backup password semantics
+ok 6 - password change retains PIN, recovery key, all money and old backup password semantics
+  ---
+  duration_ms: 957.528388
+  type: 'test'
+  ...
+# Subtest: no-check mode stores only nonextractable device wrapper; removing it restores password entry
+ok 7 - no-check mode stores only nonextractable device wrapper; removing it restores password entry
+  ---
+  duration_ms: 381.739886
+  type: 'test'
+  ...
+# Subtest: recovery credential may replace forgotten PIN without changing money
+ok 8 - recovery credential may replace forgotten PIN without changing money
+  ---
+  duration_ms: 483.683243
+  type: 'test'
+  ...
+# Subtest: wrong primary, malformed PIN and weak replacement do not change either stored row
+ok 9 - wrong primary, malformed PIN and weak replacement do not change either stored row
+  ---
+  duration_ms: 366.178372
+  type: 'test'
+  ...
+# Subtest: failure writing access row rolls back vault, history and previous access
+ok 10 - failure writing access row rolls back vault, history and previous access
+  ---
+  duration_ms: 461.50352
+  type: 'test'
+  ...
+# Subtest: restore clears local PIN/no-check but keeps original protected safety copy
+ok 11 - restore clears local PIN/no-check but keeps original protected safety copy
+  ---
+  duration_ms: 276.420983
+  type: 'test'
+  ...
+# Subtest: foreign or tampered access cannot auto-unlock and does not damage vault
+ok 12 - foreign or tampered access cannot auto-unlock and does not damage vault
+  ---
+  duration_ms: 256.311106
+  type: 'test'
+  ...
+# Subtest: stale security change cannot overwrite another tab or its device credential
+ok 13 - stale security change cannot overwrite another tab or its device credential
+  ---
+  duration_ms: 464.379244
+  type: 'test'
+  ...
+# Subtest: download intent is short-lived and consumed once
+ok 14 - download intent is short-lived and consumed once
+  ---
+  duration_ms: 0.391683
+  type: 'test'
+  ...
+# Subtest: download does not bypass immediate or timed locking
+ok 15 - download does not bypass immediate or timed locking
+  ---
+  duration_ms: 0.155305
+  type: 'test'
+  ...
+# Subtest: repeated hide events do not extend the allowed absence
+ok 16 - repeated hide events do not extend the allowed absence
+  ---
+  duration_ms: 0.078559
+  type: 'test'
+  ...
+# Subtest: remaining timer follows original deadline and never policy has no deadline
+ok 17 - remaining timer follows original deadline and never policy has no deadline
+  ---
+  duration_ms: 0.119561
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6421.308909

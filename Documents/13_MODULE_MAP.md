@@ -1,3 +1,20 @@
+# A3 · изменения модулей · 04.11.2026
+
+| Модуль | Адресное изменение |
+|---|---|
+| access-fields.mjs (новый общий) | Существующая геометрия security-input/eye, current/new-password, маскирование/очистка, recovery-mode switch, aria-pressed; без хранилища |
+| security-ui.mjs | Native hints, отмена временной авторизации, sensitive-поверхности, честные границы PIN/DEK |
+| app.mjs | Синхронное privacy-скрытие, завершение busy auth с блокировкой, очистка PIN после ошибки, invalidation вкладок после security commit |
+| ui.mjs | Явный sensitive-признак и очистка только такого процесса с дочерними поверхностями; обычные формы/guard прежние |
+| style.css | Только правило скрытия всех поверхностей в фоне; дизайн/токены/палитры прежние |
+| service.mjs | До записи запрещён одинаковый текущий новый пароль, включая recovery; штатное открытие существующего slot |
+| help.mjs | FAQ по фактическому входу, фону, AutoFill и отсутствующей биометрии |
+| build/check-release/verify-delivery | a3-access01, дополнительные проверки и byte guards от main7abfe0e, семь публичных файлов |
+
+Crypto/device-access/store/session-policy/reset-ui/reset-policy/model/operations/credit/planning/SW не переписаны. [Аудит](A3/AUDIT.md) · [тесты](A3/TEST_REPORT.md).
+
+---
+
 # A2 · изменения модулей · 04.11.2026
 
 | Компонент | Изменение / необходимость |

@@ -1,0 +1,11 @@
+DIAGNOSTIC {"hidden":false,"html":"","body":"","root":"visible","rootInline":"","inert":false,"auth":{"visible":"visible","style":null,"inert":false,"rootHidden":false,"parent":"DIV:app","matched":[],"bodyVisible":"visible","htmlVisible":"visible"},"unlock":"visible","dialogs":0}
+FAIL A3-14 pageshow preserves input in the first displayed auth form without a second render Expected values to be strictly deep-equal:
++ actual - expected
+
+  {
+    found: true,
++   lost: true,
++   retained: false
+-   lost: false,
+-   retained: true
+  }

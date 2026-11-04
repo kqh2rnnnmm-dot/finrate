@@ -1,0 +1,25 @@
+PASS 320 light visible red lock in both menus, explanation, lock preserves ciphertext and back context
+PASS 320 light removing protection uses red confirmation, discard stays red, cancelling changes nothing
+PASS 320 light PIN survives repeated keyboard resize and viewport offsets, no overlay arrows, independent login gap
+PASS 320 light manual pan does not snap to caret, keyboard closes cleanly, leading-zero PIN and back work
+PASS 320 dark visible red lock in both menus, explanation, lock preserves ciphertext and back context
+PASS 320 dark removing protection uses red confirmation, discard stays red, cancelling changes nothing
+PASS 320 dark PIN survives repeated keyboard resize and viewport offsets, no overlay arrows, independent login gap
+PASS 320 dark manual pan does not snap to caret, keyboard closes cleanly, leading-zero PIN and back work
+PASS 402 light visible red lock in both menus, explanation, lock preserves ciphertext and back context
+PASS 402 light removing protection uses red confirmation, discard stays red, cancelling changes nothing
+PASS 402 light PIN survives repeated keyboard resize and viewport offsets, no overlay arrows, independent login gap
+PASS 402 light manual pan does not snap to caret, keyboard closes cleanly, leading-zero PIN and back work
+PASS 402 dark visible red lock in both menus, explanation, lock preserves ciphertext and back context
+PASS 402 dark removing protection uses red confirmation, discard stays red, cancelling changes nothing
+PASS 402 dark PIN survives repeated keyboard resize and viewport offsets, no overlay arrows, independent login gap
+PASS 402 dark manual pan does not snap to caret, keyboard closes cleanly, leading-zero PIN and back work
+PASS 1280 light visible red lock in both menus, explanation, lock preserves ciphertext and back context
+PASS 1280 light removing protection uses red confirmation, discard stays red, cancelling changes nothing
+PASS 1280 light PIN survives repeated keyboard resize and viewport offsets, no overlay arrows, independent login gap
+PASS 1280 light manual pan does not snap to caret, keyboard closes cleanly, leading-zero PIN and back work
+PASS 1280 dark visible red lock in both menus, explanation, lock preserves ciphertext and back context
+PASS 1280 dark removing protection uses red confirmation, discard stays red, cancelling changes nothing
+PASS 1280 dark PIN survives repeated keyboard resize and viewport offsets, no overlay arrows, independent login gap
+PASS 1280 dark manual pan does not snap to caret, keyboard closes cleanly, leading-zero PIN and back work
+{"checks":24,"errors":[],"failures":[]}

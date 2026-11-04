@@ -1,0 +1,21 @@
+PASS 320 light atomic history, exact before/after, current object and local history with correct back chain
+PASS 320 light scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS 320 dark atomic history, exact before/after, current object and local history with correct back chain
+PASS 320 dark scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS 402 light atomic history, exact before/after, current object and local history with correct back chain
+PASS 402 light scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS 402 dark atomic history, exact before/after, current object and local history with correct back chain
+PASS 402 dark scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS 1280 light atomic history, exact before/after, current object and local history with correct back chain
+PASS 1280 light scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS 1280 dark atomic history, exact before/after, current object and local history with correct back chain
+PASS 1280 dark scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS Данные и синхронизация real departure locks key, then restores full back path without data write
+PASS Счета и кошельки real departure locks key, then restores full back path without data write
+{
+  "checks": 14,
+  "errors": [],
+  "failures": [
+    "locator.waitFor: Timeout 9000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#unlock') to be detached\u001b[22m\n\u001b[2m    22 × locator resolved to visible <form id=\"unlock\" data-access-bound=\"true\">…</form>\u001b[22m\n\n    at unlock (/workspace/finrate/Source/tests/history-browser.mjs:6:157)\n    at async file:///workspace/finrate/Source/tests/history-browser.mjs:14:443"
+  ]
+}
