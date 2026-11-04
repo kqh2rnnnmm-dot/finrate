@@ -3,7 +3,17 @@ export const ITERATIONS=600000, MAX_BYTES=8*1024*1024;
 const te=new TextEncoder(),td=new TextDecoder('utf-8',{fatal:true});
 const bytes=n=>crypto.getRandomValues(new Uint8Array(n));
 export function base64(b){let s='';for(const x of new Uint8Array(b))s+=String.fromCharCode(x);return btoa(s);}
-function decode(s,min,max=min){if(typeof s!=='string'||s.length>Math.ceil(max/3)*4||!/^(?:[A-Za-z0-9+/]{4})*(?:[A-Za-z0-9+/]{2}==|[A-Za-z0-9+/]{3}=)?$/.test(s))fail('FORMAT');const b=Uint8Array.from(atob(s),c=>c.charCodeAt(0));if(b.length<min||b.length>max)fail('FORMAT');return b;}
+// Strict linear base64 validation: repeating regexp groups overflow engine stacks
+// on valid multi-megabyte vaults. Preserve the existing byte limits and format.
+function decode(s,min,max=min){
+ if(typeof s!=='string'||s.length>Math.ceil(max/3)*4||s.length%4)fail('FORMAT');
+ const pad=s.endsWith('==')?2:s.endsWith('=')?1:0,end=s.length-pad;
+ const value=c=>c>=65&&c<=90?c-65:c>=97&&c<=122?c-71:c>=48&&c<=57?c+4:c===43?62:c===47?63:-1;
+ for(let i=0;i<end;i++)if(value(s.charCodeAt(i))<0)fail('FORMAT');
+ if(pad&&(end<2||value(s.charCodeAt(end-1))&(pad===2?15:3)))fail('FORMAT');
+ const length=s.length/4*3-pad;if(length<min||length>max)fail('FORMAT');
+ return Uint8Array.from(atob(s),c=>c.charCodeAt(0));
+}
 const header=v=>({format:v.format,datasetId:v.datasetId,revision:v.revision,savedAt:v.savedAt});
 const aad=x=>te.encode(JSON.stringify(x));
 const slotAAD=(id,type,slot)=>aad({format:'finrate-key/1',datasetId:id,type,kdf:slot.kdf,iterations:slot.iterations||null,salt:slot.salt||null});
@@ -55,5 +65,5 @@ export async function newPasswordSlot(raw,datasetId,password){
 export function backupBlob(v){validateVault(v);return new Blob([JSON.stringify({format:'finrate-backup/1',vault:v})],{type:'application/json'});}
 export async function parseBackup(file){
   if(!file||file.size>12*1024*1024||file.size<10)fail('SIZE');let x;try{x=JSON.parse(await file.text());}catch{fail('FORMAT');}
-  if(x.format!=='finrate-backup/1')fail('FORMAT');validateVault(x.vault);return x.vault;
+  if(!x||typeof x!=='object'||Array.isArray(x)||x.format!=='finrate-backup/1')fail('FORMAT');validateVault(x.vault);return x.vault;
 }

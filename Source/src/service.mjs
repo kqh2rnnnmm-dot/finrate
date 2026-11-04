@@ -1,14 +1,16 @@
+import {resetSummary,clearedDocument,sameContainer} from './reset-policy.mjs';
 import {defaultPlanning} from './planning.mjs';
 import {copy,changed,validateDocument,newDocument,addAccount,addCategory,totals,fail,SCHEMA} from './model.mjs';
-import {createVault,openVault,authorizeVault,newPasswordSlot,seal,backupBlob,parseBackup} from './crypto.mjs';
+import {createVault,openVault,openWithKey,authorizeVault,newPasswordSlot,seal,backupBlob,parseBackup} from './crypto.mjs';
 import {createAccess,openAccess,validAccess,rebindAccess} from './device-access.mjs';
 import {migrateDocument} from './operations.mjs';
 import {captureActivity} from './activity.mjs';
 export class FinRate {
-  #resetProofs=new WeakSet();
+  #resetProofs=new WeakMap();
+  #resetIntents=new WeakMap();
   constructor(store){this.store=store;this.document=null;this.key=null;this.record=null;this.busy=false;this.entry={mode:'password'};}
   async exclusive(action){if(this.busy)fail('BUSY');this.busy=true;try{return await action();}finally{this.busy=false;}}
-  lock(){if(this.busy)fail('BUSY');this.#resetProofs=new WeakSet();this.document=null;this.key=null;this.record=null;}
+  lock(){if(this.busy)fail('BUSY');this.discardReset();this.document=null;this.key=null;this.record=null;}
   async setup({currency,name,kind,opening,password}){return this.exclusive(async()=>{
     if(await this.store.read())fail('EXISTS');const d=newDocument(currency);d.planning=defaultPlanning();for(const name of ['Продукты','Кафе и рестораны','Жильё','Транспорт','Связь','Здоровье','Дети','Покупки'])addCategory(d,{name});for(const name of ['Зарплата','Дополнительный доход','Прочие поступления'])addCategory(d,{name,type:'income'});for(const [parent,children]of [['Зарплата',['Аванс','Основная часть']],['Дополнительный доход',['Подработка','Премия']],['Жильё',['ЖКХ','Аренда']]])for(const name of children)addCategory(d,{name,type:d.categories.find(c=>c.name===parent).type,parentId:d.categories.find(c=>c.name===parent).id});addAccount(d,{name:name||'Основной счёт',kind:kind||'wallet',opening:opening||0});changed(d,'setup');d.events.at(-1).details=captureActivity({...d,accounts:[]},d,'setup');
     const result=await createVault(d,password),record=await this.store.commit(result.vault,undefined);
@@ -49,22 +51,48 @@ export class FinRate {
     const vault=await seal(next,this.key,this.record.vault.slots),record=await this.store.commit(vault,this.record,{beforeMigration:!!this.needsMigration});
     this.document=next;this.record=record;this.needsMigration=false;return result;
   });}
-  async backup(){return this.exclusive(async()=>{const record=await this.store.read();if(!record)fail('EMPTY');return backupBlob(record.vault);});}
-  async prepareReset(secret,mode='password'){return this.exclusive(async()=>{
-    if(!this.document||!this.key)fail('LOCKED');
-    if(!['password','recovery'].includes(mode))fail('FORMAT');
-    const expected=this.record,auth=await authorizeVault(expected.vault,secret,mode);
-    auth.raw.fill(0);const proof=Object.freeze({expected});this.#resetProofs.add(proof);return proof;
+  async backup(expected=this.record){return this.exclusive(async()=>{
+    if(!this.document||!this.key||!this.record)fail('LOCKED');
+    const record=await this.store.read();
+    if(!record||record.generation!==expected?.generation||record.vault.datasetId!==expected?.vault.datasetId||record.generation!==this.record.generation||record.vault.datasetId!==this.record.vault.datasetId)fail('STALE');
+    try{await openWithKey(record.vault,this.key);}catch{fail('BACKUP_INVALID');}
+    await this.store.assertCurrent(record);return backupBlob(record.vault);
+  });}
+  discardReset(){this.#resetProofs=new WeakMap();this.#resetIntents=new WeakMap();}
+  async resetPreview(mode){return this.exclusive(async()=>{
+    if(!this.document||!this.key)fail('LOCKED');await this.store.assertCurrent(this.record);
+    const summary=resetSummary(this.document,mode,(await this.store.safety()).length,await this.entryStatus());
+    await this.store.assertCurrent(this.record);
+    const intent=Object.freeze({mode,summary:Object.freeze(summary)});this.#resetIntents.set(intent,{mode,expected:this.record});return intent;
+  });}
+  async prepareReset(secret,mode='password',intent,file){return this.exclusive(async()=>{
+    if(!this.document||!this.key)fail('LOCKED');if(!['password','recovery'].includes(mode))fail('FORMAT');
+    const request=this.#resetIntents.get(intent);if(!request)fail('CONFIRM');
+    await this.store.assertCurrent(request.expected);
+    const persisted=await this.store.read();if(!persisted||!sameContainer(persisted.vault,request.expected.vault))fail('BACKUP_INVALID');
+    const vault=await parseBackup(file);if(!sameContainer(vault,request.expected.vault))fail('BACKUP_MISMATCH');
+    const auth=await openVault(vault,secret,mode),document=migrateDocument(auth.doc);
+    resetSummary(document,request.mode,0,this.entry);await this.store.assertCurrent(request.expected);
+    if(this.#resetIntents.get(intent)!==request)fail('CONFIRM');
+    const proof=Object.freeze({mode:request.mode,verifiedWith:mode});
+    this.#resetProofs.set(proof,{expected:request.expected,mode:request.mode,document});return proof;
   });}
   async resetData(proof,confirmed){return this.exclusive(async()=>{
-    if(!this.document||!this.key)fail('LOCKED');
-    if(confirmed!==true||!this.#resetProofs.has(proof))fail('CONFIRM');
-    await this.store.reset(proof.expected);this.#resetProofs.delete(proof);
-    this.document=null;this.key=null;this.record=null;this.needsMigration=false;this.entry={mode:'password'};
+    if(!this.document||!this.key)fail('LOCKED');const request=this.#resetProofs.get(proof);
+    if(confirmed!==true||!request)fail('CONFIRM');
+    if(request.mode==='all'){
+      await this.store.reset(request.expected);this.document=null;this.key=null;this.record=null;this.entry={mode:'password'};
+    }else{
+      const next=clearedDocument(request.document,request.mode),vault=await seal(next,this.key,request.expected.vault.slots);
+      if(this.#resetProofs.get(proof)!==request)fail('CONFIRM');
+      const record=await this.store.clearFinancial(vault,request.expected);
+      this.document=next;this.record=record;
+    }
+    this.discardReset();this.needsMigration=false;return request.mode;
   });}
   async prepareRestore(file,secret,mode='password'){return this.exclusive(async()=>{
     const vault=await parseBackup(file),{doc,key}=await openVault(vault,secret,mode),expected=await this.store.read();
-    return {vault,doc,key,expected,summary:{currency:doc.currency,accounts:doc.accounts.length,categories:doc.categories.length,operations:doc.operations.length,drafts:doc.drafts?.length||0,total:totals(migrateDocument(doc)).total,savedAt:doc.updatedAt,different:!!expected&&expected.vault.datasetId!==doc.datasetId,older:!!expected&&expected.vault.datasetId===doc.datasetId&&vault.revision<expected.vault.revision,replaces:!!expected}};
+    return {vault,doc,key,expected,summary:{verifiedWith:mode,currency:doc.currency,accounts:doc.accounts.length,categories:doc.categories.length,operations:doc.operations.length,drafts:doc.drafts?.length||0,total:totals(migrateDocument(doc)).total,savedAt:doc.updatedAt,different:!!expected&&expected.vault.datasetId!==doc.datasetId,older:!!expected&&expected.vault.datasetId===doc.datasetId&&vault.revision<expected.vault.revision,replaces:!!expected}};
   });}
   async applyRestore(prepared,confirmed){return this.exclusive(async()=>{
     if(confirmed!==true)fail('CONFIRM');validateDocument(prepared.doc);

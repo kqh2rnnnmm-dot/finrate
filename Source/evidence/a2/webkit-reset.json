@@ -1,0 +1,148 @@
+{
+  "engine": "webkit",
+  "checks": [
+    "light/neutral/financial: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "light/neutral/categories: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "light/neutral/all: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "light/color/financial: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "light/color/categories: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "light/color/all: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/neutral/financial: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/neutral/categories: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/neutral/all: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/color/financial: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/color/categories: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/color/all: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "exact 8MiB plaintext: encrypt, export and reopen in webkit"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "externalFileVerified": true,
+  "files": [
+    {
+      "case": "light/neutral/financial",
+      "sha256": "3914364589ca0190a319b63a9a275c63d20440bfbac57c9d92dc0ba387b6c49a",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/neutral/categories",
+      "sha256": "868935087d9055b502cf7f94064c33386b35e2260fb761e8012281191b8d85f0",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/neutral/all",
+      "sha256": "9e1d99f4a0b0a42a1aebb7549a2158c51007f674b215cc217c15447f169c02e2",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/color/financial",
+      "sha256": "bbf8a6d70d206908a4221fade9308ed1d2c1c00892a2be623c89df1ff3108402",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/color/categories",
+      "sha256": "332806553bcb5064ef871aa75eb802b66db136b3a35eb66873855dbd6a0bf5b4",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/color/all",
+      "sha256": "fb71b5de506983897586c96801ef6d6335ba01be3ee9b5dd6381fe34fd5f5d8f",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "dark/neutral/financial",
+      "sha256": "89c11c54cd6954952c29b877d2b5c9608f3bb6ebef7e5edafdee02b0ed458eac",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    },
+    {
+      "case": "dark/neutral/categories",
+      "sha256": "edbb664fe228450dfa598de2964b42af0d343891e0f5cb3c2c8db8bde4616507",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    },
+    {
+      "case": "dark/neutral/all",
+      "sha256": "70d3d6e5bc04c654a09cf5becfee250da5e6ba7ac8b6e458ffb26644169a5bce",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    },
+    {
+      "case": "dark/color/financial",
+      "sha256": "c0c0c0434bd55ef60efc06614471f2dabc00945010858c36e5172a5c3f50f830",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    },
+    {
+      "case": "dark/color/categories",
+      "sha256": "b0ab9cb67876c9088d58f398e6657e2ab8dbddf5faa6d04d3e606b9f3579dcfa",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    },
+    {
+      "case": "dark/color/all",
+      "sha256": "8082c8f92b77bf9db9ae5a28954d0e05264d37d870e5c807829e216d3770fd9d",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    }
+  ],
+  "version": "26.5",
+  "layoutChecks": 168,
+  "offlineModel": "Test server refuses every HTTP connection carrying this isolated profile cookie; native File input unchanged and navigator.onLine remains true. WebKit setOffline flag separately rejects File IO (NotReadableError), so real iOS airplane mode remains hardware-only.",
+  "nativePartialQuotaRollback": true
+}

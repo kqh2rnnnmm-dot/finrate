@@ -1,0 +1,118 @@
+✖ A1-F06: exact 8MiB plaintext exports and opens with password and recovery without changing limits (820.164823ms)
+✖ A1: base64 grammar rejects invalid alphabet, middle padding, extra padding, noncanonical trailing bits and length (83.423346ms)
+✖ A1-F04: null, array and primitive JSON are FORMAT (0.901193ms)
+✖ A1-F01: corrupt active ciphertext cannot be exported, and memory/storage remain unchanged (96.13909ms)
+✖ A1: export rejects stale row both before and after authentication, and historical blob remains downloadable (170.001066ms)
+✖ A1-F03: selected verification route is explicit, unselected damaged route not claimed as verified (169.456763ms)
+ℹ tests 6
+ℹ suites 0
+ℹ pass 0
+ℹ fail 6
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 1393.936782
+
+✖ failing tests:
+
+test at tests/backup-safety.test.mjs:4:1
+✖ A1-F06: exact 8MiB plaintext exports and opens with password and recovery without changing limits (820.164823ms)
+  RangeError: Maximum call stack size exceeded
+      at RegExp.test (<anonymous>)
+      at decode (file:///workspace/finrate/Source/src/crypto.mjs:6:153)
+      at validateVault (file:///workspace/finrate/Source/src/crypto.mjs:22:19)
+      at backupBlob (file:///workspace/finrate/Source/src/crypto.mjs:55:31)
+      at TestContext.<anonymous> (file:///workspace/finrate/Source/tests/backup-safety.test.mjs:4:287)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/backup-safety.test.mjs:5:1
+✖ A1: base64 grammar rejects invalid alphabet, middle padding, extra padding, noncanonical trailing bits and length (83.423346ms)
+  AssertionError [ERR_ASSERTION]: Missing expected exception.
+      at TestContext.<anonymous> (file:///workspace/finrate/Source/tests/backup-safety.test.mjs:5:363)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Function (anonymous)],
+    operator: 'throws',
+    diff: 'simple'
+  }
+
+test at tests/backup-safety.test.mjs:6:1
+✖ A1-F04: null, array and primitive JSON are FORMAT (0.901193ms)
+  AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
+
+  Caught error:
+
+  TypeError: Cannot read properties of null (reading 'format')
+      at async TestContext.<anonymous> (file:///workspace/finrate/Source/tests/backup-safety.test.mjs:6:153)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: TypeError: Cannot read properties of null (reading 'format')
+        at parseBackup (file:///workspace/finrate/Source/src/crypto.mjs:58:8)
+        at async waitForActual (node:assert:646:5)
+        at async strict.rejects (node:assert:769:25)
+        at async TestContext.<anonymous> (file:///workspace/finrate/Source/tests/backup-safety.test.mjs:6:153)
+        at async Test.run (node:internal/test_runner/test:1389:7)
+        at async Test.processPendingSubtests (node:internal/test_runner/test:960:7),
+    expected: [Function (anonymous)],
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/backup-safety.test.mjs:7:1
+✖ A1-F01: corrupt active ciphertext cannot be exported, and memory/storage remain unchanged (96.13909ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processImmediate (node:internal/timers:502:9)
+      at async TestContext.<anonymous> (file:///workspace/finrate/Source/tests/backup-safety.test.mjs:7:385)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Function (anonymous)],
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/backup-safety.test.mjs:8:1
+✖ A1: export rejects stale row both before and after authentication, and historical blob remains downloadable (170.001066ms)
+  AssertionError [ERR_ASSERTION]: Missing expected rejection.
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processImmediate (node:internal/timers:502:9)
+      at async TestContext.<anonymous> (file:///workspace/finrate/Source/tests/backup-safety.test.mjs:8:385)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: false,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: [Function (anonymous)],
+    operator: 'rejects',
+    diff: 'simple'
+  }
+
+test at tests/backup-safety.test.mjs:9:1
+✖ A1-F03: selected verification route is explicit, unselected damaged route not claimed as verified (169.456763ms)
+  AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
+  + actual - expected
+
+  + undefined
+  - 'password'
+
+      at TestContext.<anonymous> (file:///workspace/finrate/Source/tests/backup-safety.test.mjs:9:436)
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processImmediate (node:internal/timers:502:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7) {
+    generatedMessage: true,
+    code: 'ERR_ASSERTION',
+    actual: undefined,
+    expected: 'password',
+    operator: 'strictEqual',
+    diff: 'simple'
+  }

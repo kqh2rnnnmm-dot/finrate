@@ -1,0 +1,10 @@
+{
+  "checks": [
+    "28 note layouts: bounded region, no competing scroller, keyboard/expansion/caret/scroll/500-char text and ciphertext retained",
+    "126 chooser selections; all widths/themes, common geometry, top anchor, both sides, X/outside/system Back",
+    "keyboard Enter/Space operate chooser and note expansion; accessible names/expanded/controls/live counter and selection retained; Chromium safe-area 59/34; real VoiceOver pending"
+  ],
+  "errors": [],
+  "passed": true,
+  "actualIPhone": false
+}

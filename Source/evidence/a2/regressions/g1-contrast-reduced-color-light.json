@@ -1,0 +1,222 @@
+[
+  {
+    "fg": "ink",
+    "bg": "canvas",
+    "ratio": 12.006439016611505
+  },
+  {
+    "fg": "muted",
+    "bg": "canvas",
+    "ratio": 7.884424982919785
+  },
+  {
+    "fg": "blue",
+    "bg": "canvas",
+    "ratio": 7.893356115088798
+  },
+  {
+    "fg": "expense",
+    "bg": "canvas",
+    "ratio": 7.1950334092616615
+  },
+  {
+    "fg": "income",
+    "bg": "canvas",
+    "ratio": 7.139657338894958
+  },
+  {
+    "fg": "transfer",
+    "bg": "canvas",
+    "ratio": 7.472477220652193
+  },
+  {
+    "fg": "credit-ink",
+    "bg": "canvas",
+    "ratio": 7.456016570854766
+  },
+  {
+    "fg": "ink",
+    "bg": "white",
+    "ratio": 15.547096443247487
+  },
+  {
+    "fg": "muted",
+    "bg": "white",
+    "ratio": 10.209514697855742
+  },
+  {
+    "fg": "blue",
+    "bg": "white",
+    "ratio": 10.221079590076235
+  },
+  {
+    "fg": "expense",
+    "bg": "white",
+    "ratio": 9.316823928511388
+  },
+  {
+    "fg": "income",
+    "bg": "white",
+    "ratio": 9.245117646120077
+  },
+  {
+    "fg": "transfer",
+    "bg": "white",
+    "ratio": 9.676084962303579
+  },
+  {
+    "fg": "credit-ink",
+    "bg": "white",
+    "ratio": 9.654770123693643
+  },
+  {
+    "fg": "ink",
+    "bg": "field",
+    "ratio": 12.006439016611505
+  },
+  {
+    "fg": "muted",
+    "bg": "field",
+    "ratio": 7.884424982919785
+  },
+  {
+    "fg": "blue",
+    "bg": "field",
+    "ratio": 7.893356115088798
+  },
+  {
+    "fg": "expense",
+    "bg": "field",
+    "ratio": 7.1950334092616615
+  },
+  {
+    "fg": "income",
+    "bg": "field",
+    "ratio": 7.139657338894958
+  },
+  {
+    "fg": "transfer",
+    "bg": "field",
+    "ratio": 7.472477220652193
+  },
+  {
+    "fg": "credit-ink",
+    "bg": "field",
+    "ratio": 7.456016570854766
+  },
+  {
+    "fg": "ink",
+    "bg": "island",
+    "ratio": 7.638459693764599
+  },
+  {
+    "fg": "muted",
+    "bg": "island",
+    "ratio": 5.016047002547493
+  },
+  {
+    "fg": "blue",
+    "bg": "island",
+    "ratio": 5.021728961452903
+  },
+  {
+    "fg": "expense",
+    "bg": "island",
+    "ratio": 4.577458196880559
+  },
+  {
+    "fg": "income",
+    "bg": "island",
+    "ratio": 4.542228110681819
+  },
+  {
+    "fg": "transfer",
+    "bg": "island",
+    "ratio": 4.75396709911701
+  },
+  {
+    "fg": "credit-ink",
+    "bg": "island",
+    "ratio": 4.743494884179937
+  },
+  {
+    "fg": "ink",
+    "bg": "soft",
+    "ratio": 12.006439016611505
+  },
+  {
+    "fg": "muted",
+    "bg": "soft",
+    "ratio": 7.884424982919785
+  },
+  {
+    "fg": "blue",
+    "bg": "soft",
+    "ratio": 7.893356115088798
+  },
+  {
+    "fg": "expense",
+    "bg": "soft",
+    "ratio": 7.1950334092616615
+  },
+  {
+    "fg": "income",
+    "bg": "soft",
+    "ratio": 7.139657338894958
+  },
+  {
+    "fg": "transfer",
+    "bg": "soft",
+    "ratio": 7.472477220652193
+  },
+  {
+    "fg": "credit-ink",
+    "bg": "soft",
+    "ratio": 7.456016570854766
+  },
+  {
+    "fg": "ink",
+    "bg": "menu-selected",
+    "ratio": 12.006439016611505
+  },
+  {
+    "fg": "muted",
+    "bg": "menu-selected",
+    "ratio": 7.884424982919785
+  },
+  {
+    "fg": "blue",
+    "bg": "menu-selected",
+    "ratio": 7.893356115088798
+  },
+  {
+    "fg": "expense",
+    "bg": "menu-selected",
+    "ratio": 7.1950334092616615
+  },
+  {
+    "fg": "income",
+    "bg": "menu-selected",
+    "ratio": 7.139657338894958
+  },
+  {
+    "fg": "transfer",
+    "bg": "menu-selected",
+    "ratio": 7.472477220652193
+  },
+  {
+    "fg": "credit-ink",
+    "bg": "menu-selected",
+    "ratio": 7.456016570854766
+  },
+  {
+    "fg": "white button text",
+    "bg": "action",
+    "ratio": 5.250811755122034
+  },
+  {
+    "fg": "white button text",
+    "bg": "danger-action",
+    "ratio": 6.406098195565949
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "findings": [
+    {
+      "severity": "warning",
+      "path": "colors",
+      "message": "No 'primary' color defined. The agent will auto-generate key colors, reducing your control over the palette.",
+      "rule": "missing-primary"
+    },
+    {
+      "severity": "info",
+      "message": "Design system defines 2 colors, 1 typography scale.",
+      "rule": "token-summary"
+    },
+    {
+      "severity": "info",
+      "path": "omitted.spacing",
+      "message": "spacing intentionally omitted — no spacing tokens will be validated",
+      "rule": "declared-omission"
+    },
+    {
+      "severity": "info",
+      "path": "omitted.rounded",
+      "message": "rounded intentionally omitted — no rounded tokens will be validated",
+      "rule": "declared-omission"
+    },
+    {
+      "severity": "info",
+      "path": "omitted.components",
+      "message": "components intentionally omitted — no components tokens will be validated",
+      "rule": "declared-omission"
+    }
+  ],
+  "summary": {
+    "errors": 0,
+    "warnings": 1,
+    "infos": 4
+  }
+}

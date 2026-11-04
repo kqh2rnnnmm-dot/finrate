@@ -27,7 +27,7 @@ export function closeSurface(el){
  if(wasTop&&!row.overlay){const previous=surfaces.at(-1);if(previous){previous.el.inert=false;if(!previous.el.open)previous.el.showModal();const scroll=previous.el.querySelector('.sheet-body');previous.el.querySelector('.sheet-back,button')?.focus({preventScroll:true});if(scroll)scroll.scrollTop=previous.scroll;}}
  sync();
 }
-export function clearSurfaces(){while(surfaces.length)closeSurface(surfaces.at(-1).el);}
+export function clearSurfaces(){pointerControl=null;pointerAt=0;while(surfaces.length)closeSurface(surfaces.at(-1).el);}
 // A resumed iOS page can retain our stack while WebKit has dropped its native
 // dialog from the top layer. Restore the actual top before it can leave the app inert.
 function restoreSurface(){

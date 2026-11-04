@@ -33,7 +33,7 @@ export function createFieldEditor({sheet,pop}){
  // leaving the keyboard never submits the parent form or a financial record.
  const enhanced=new WeakSet();
  function enhance(host){for(const input of host.querySelectorAll('dialog input:not([type]),dialog input[type=text],dialog input[inputmode=decimal],dialog textarea')){
-  if(enhanced.has(input)||input.closest('.value-form,.auth,[data-security-form]')||input.readOnly||input.disabled)continue;enhanced.add(input);
+  if(enhanced.has(input)||input.closest('.value-form,.auth,[data-security-form],[data-reset-auth],[data-reset-final]')||input.readOnly||input.disabled)continue;enhanced.add(input);
   input.readOnly=true;input.setAttribute('aria-haspopup','dialog');input.classList.add('field-launcher');
   const launch=()=>{if(input.closest('dialog')&&!input.closest('dialog').open)return;const title=input.getAttribute('aria-label')||[...input.closest('label')?.childNodes||[]].filter(n=>n.nodeType===3).map(n=>n.textContent).join('').trim()||input.closest('dialog').querySelector('h2').textContent;
    open(title,input.value,value=>{input.value=value;input.dispatchEvent(new Event('input',{bubbles:true}));input.dispatchEvent(new Event('change',{bubbles:true}));},{numeric:input.inputMode==='decimal',multiline:input.tagName==='TEXTAREA',signed:signedMoneyField(input),required:input.required,maxLength:input.maxLength>0?input.maxLength:input.tagName==='TEXTAREA'?500:100,min:input.dataset.min?Number(input.dataset.min):null,max:input.dataset.max?Number(input.dataset.max):null});};

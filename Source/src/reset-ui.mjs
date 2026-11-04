@@ -1,23 +1,28 @@
+import {RESET_MODES} from './reset-policy.mjs';
 export function createResetUI({app,sheet,pop,perform,download,finished}){
- function verify(){
-  let authForm;
-  sheet('Подтвердите сброс',`<p>Введите основной пароль или ключ восстановления. PIN-код для сброса не подходит.</p><form data-reset-auth><label>Подтвердить с помощью<select name="mode"><option value="password">Основной пароль</option><option value="recovery">Ключ восстановления</option></select></label><label>Основной пароль или ключ<input type="password" name="secret" autocomplete="off" maxlength="1024" required></label><button type="submit" class="button">Продолжить</button></form>`,el=>{
-   const form=authForm=el.querySelector('form');form.onsubmit=e=>{e.preventDefault();const {secret,mode}=form.elements;
-    perform(async()=>{const proof=await app.prepareReset(secret.value,mode.value);secret.value='';pop();confirm(proof);},'');
-   };
-  },{mode:'large',state:()=>'',onBack:()=>authForm?.reset()});
+ let current=null,advancing=false,epoch=0;
+ function cancel(){epoch++;app.discardReset();if(current?.isConnected){advancing=true;pop();advancing=false;}current=null;}
+ const left=()=>{if(!advancing){epoch++;app.discardReset();current=null;}};
+ function next(draw){advancing=true;pop();advancing=false;draw();}
+ const options={mode:'large',state:()=>'',onBack:left};
+ function summary(s){return `<dl class="reset-summary"><dt>Счета, включая кредитные и архивные</dt><dd>${s.accounts}</dd><dt>Категории / подкатегории</dt><dd>${s.categories} / ${s.subcategories}</dd><dt>Операции, переводы и возвраты</dt><dd>${s.operations}</dd><dt>Планы / ожидаемые поступления / связи</dt><dd>${s.plans} / ${s.occurrences} / ${s.links}</dd><dt>Черновики</dt><dd>${s.drafts}</dd><dt>События / версии изменений</dt><dd>${s.events} / ${s.edits}</dd><dt>Локальные страховочные версии</dt><dd>${s.safety}</dd></dl>`;}
+ function consequences(mode,s){return mode==='financial'?`<p>Удалятся все счета, остатки, долги, операции, планы, черновики и история. Категории и подкатегории, включая архив, останутся. Оформление и уведомления сохранятся; привязки блоков Главной к удалённым счетам очистятся.</p><p>Сохранятся валюта ${s.currency}, пароль, ключ восстановления и ${s.entry==='pin'?'вход по PIN':s.entry==='none'?'вход без проверки':'вход по паролю'}. Локальные страховочные версии удалятся.</p>`:mode==='categories'?'<p>Удалятся все финансовые данные, категории и подкатегории, их архив и история, а также локальные страховочные версии. Каталог останется пустым.</p><p>Оформление: «Как в системе», нейтральная палитра, стандартные блоки Главной; уведомления включены. Валюта, пароль, ключ восстановления, способ входа и время автоблокировки сохранятся.</p>':'<p>Удалятся все данные FinRate в этом браузере: база, счета, категории, история, настройки, локальные страховочные версии и PIN/способ входа. После сброса — первый запуск или восстановление.</p><p>Внешние файлы, отдельно сохранённый ключ, другие сайты, устройства и браузерные пароли останутся. Откат кода не возвращает удалённые данные.</p>';}
+ function review(intent){const ticket=epoch,s=intent.summary,mode=intent.mode;
+  current=sheet(RESET_MODES[mode].title,`${consequences(mode,s)}${summary(s)}<h3>Сначала сохраните и проверьте копию</h3><p>Копия должна соответствовать текущим данным и открываться паролем или ключом восстановления. Храните ключ отдельно. Проверьте физическое сохранение файла в iOS «Файлах» самостоятельно.</p><button type="button" class="button secondary" data-reset-backup>Скачать защищённую копию</button><form data-reset-auth class="stack" novalidate><label>Проверить файл копии<input type="file" name="file" accept=".json,application/json" required></label><label>Открыть с помощью<select name="mode"><option value="password">Основного пароля</option><option value="recovery">Ключа восстановления</option></select></label><label>Основной пароль или ключ<input type="password" name="secret" autocomplete="off" maxlength="1024" required></label><p class="hint">PIN недостаточен. Сейчас только проверка, без удаления и без восстановления.</p><button type="submit" class="button">Проверить файл копии</button><button type="button" class="button secondary" data-reset-cancel>Оставить без изменений</button></form>`,el=>{
+   el.dataset.resetFlow='review';const form=el.querySelector('form');
+   el.querySelector('[data-reset-cancel]').onclick=cancel;
+   el.querySelector('[data-reset-backup]').onclick=()=>perform(async()=>download(await app.backup()),'Копия подготовлена и проверена. Выберите место и проверьте сохранение в «Файлах».');
+   form.onsubmit=e=>{e.preventDefault();perform(async()=>{const proof=await app.prepareReset(form.elements.secret.value,form.elements.mode.value,intent,form.elements.file.files[0]);form.elements.secret.value='';if(ticket!==epoch)return;next(()=>confirm(intent,proof));},'');};
+  },options);
  }
- function confirm(proof){
-  sheet('Удалить все данные?',`<p>С этого устройства будут удалены счета, категории, операции, черновики, история изменений, настройки, PIN-код и страховочные копии FinRate в этом браузере.</p><p>Отдельно сохранённые файлы копий и данные на других устройствах останутся. Отменить удаление будет нельзя.</p><div class="stack"><button type="button" class="button danger danger-strong" data-reset-confirm>Удалить все данные</button><button type="button" class="button secondary" data-reset-cancel>Оставить без изменений</button></div>`,el=>{
-   el.querySelector('[data-reset-cancel]').onclick=pop;
-   el.querySelector('[data-reset-confirm]').onclick=()=>perform(()=>app.resetData(proof,true),'Данные FinRate на этом устройстве удалены.',finished);
-  },{mode:'compact',dismiss:true});
+ function confirm(intent,proof){const mode=intent.mode,s=intent.summary,definition=RESET_MODES[mode];
+  current=sheet(definition.title,`<h3>Последнее подтверждение</h3><p>Внешний файл проверен ${proof.verifiedWith==='recovery'?'ключом восстановления':'основным паролем'}. Другой способ открытия не проверен. Данные ещё не изменены.</p>${consequences(mode,s)}${summary(s)}<form data-reset-final class="stack" novalidate><label class="check"><input type="checkbox" name="saved">Я проверил, что файл сохранён отдельно, и сохранил пароль или ключ для его открытия</label><label>Для подтверждения введите ${definition.word}<input name="word" autocomplete="off" data-reset-word></label><button type="submit" class="button danger danger-strong" data-reset-confirm>${definition.action}</button><button type="button" class="button secondary" data-reset-cancel>Оставить без изменений</button></form>`,el=>{
+   el.dataset.resetFlow='confirm';el.querySelector('[data-reset-cancel]').onclick=cancel;
+   el.querySelector('form').onsubmit=e=>{e.preventDefault();const f=e.target;if(!f.elements.saved.checked||f.elements.word.value!==definition.word){const error=el.querySelector('.sheet-error');error.textContent='Проверьте отдельное сохранение файла и введите указанную фразу целиком.';error.scrollIntoView({block:'nearest'});return;}
+    perform(()=>app.resetData(proof,true),'',()=>{epoch++;current=null;finished(mode);},{deferRender:true});};
+   el.querySelector('[data-reset-cancel]').focus({preventScroll:true});
+  },options);
  }
- function open(){
-  sheet('Сброс данных',`<p>Удаление всех данных FinRate только в этом браузере на этом устройстве. Отдельно сохранённые копии и другие устройства не затрагиваются.</p><p>Перед сбросом можно сохранить защищённую копию. Для удаления потребуется основной пароль или ключ восстановления.</p><div class="stack"><button type="button" class="button" data-reset-backup>Скачать защищённую копию</button><button type="button" class="button danger" data-reset-continue>Продолжить сброс</button></div>`,el=>{
-   el.querySelector('[data-reset-backup]').onclick=()=>perform(async()=>download(await app.backup()),'Копия готова. Выберите, куда сохранить её. Проверьте, что она сохранена отдельно.');
-   el.querySelector('[data-reset-continue]').onclick=verify;
-  },{mode:'large'});
- }
- return {open};
+ function open(){cancel();current=sheet('Сброс данных',`<p>Выберите, что удалить. Сначала увидите состав данных и проверите внешнюю защищённую копию. До последнего подтверждения ничего не изменится.</p><div class="stack">${Object.entries(RESET_MODES).map(([mode,d])=>`<section class="panel"><h3>${d.title}</h3><p>${mode==='financial'?'Сохранить категории, оформление и защиту.':mode==='categories'?'Оставить защиту, очистить каталог и вернуть начальное оформление.':'Удалить всю локальную базу и защиту входа. Внешние файлы останутся.'}</p><button type="button" class="button secondary" data-reset-mode="${mode}">Выбрать режим</button></section>`).join('')}</div>`,el=>{el.dataset.resetFlow='choose';el.querySelectorAll('[data-reset-mode]').forEach(b=>b.onclick=()=>{const ticket=epoch;perform(async()=>{const intent=await app.resetPreview(b.dataset.resetMode);if(ticket===epoch)next(()=>review(intent));},'');});},options);}
+ return {open,cancel};
 }

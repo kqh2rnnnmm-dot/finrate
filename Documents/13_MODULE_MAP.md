@@ -1,3 +1,23 @@
+# A2 · изменения модулей · 04.11.2026
+
+| Компонент | Изменение / необходимость |
+|---|---|
+| reset-policy.mjs (новый) | Чистая политика трёх режимов, все поля/настройки, обзор состава и безопасный отказ неизвестных расширений |
+| crypto.mjs | Линейный base64 и object/null guard; AES/KDF/slots/AAD не менялись |
+| service.mjs | Проверенный текущий экспорт; intent/proof с привязкой к режиму/файлу/record; частичная/полная очистка |
+| store.mjs | Атомарный active+safety cleanup при сохранении device-access; классификация подтверждённого quota-abort |
+| reset-ui.mjs | Штатные sheet-поверхности: выбор, обзор/внешний файл/главный секрет, отдельное финальное подтверждение |
+| app.mjs | Общий экспорт до restore, выбранный способ проверки, invalidation вкладок и безопасный порядок render после reset |
+| ui.mjs, management.mjs, dashboard.mjs, surfaces.mjs | Сброс stale форм/поисков/кредитных кэшей/pointer-ссылки; deferRender только для финального cleanup |
+| field-editor.mjs | Исключение новых auth/confirmation форм из вложенного редактора; текстовый редактор сохранён |
+| feedback.mjs, style.css | Системный якорь, резервирование места, непрерывный gesture/cancel/queue, нативный скролл длинной ошибки |
+| help.mjs | Помощь по трём режимам, пригодности файла и границам смены пароля |
+| build/check-release/verify-delivery | Готовые 7 файлов, Chromium/WebKit A2 jobs, точные byte guards финансов/ключевой архитектуры и SHA |
+
+model/operations/planning/credit/block02/recurring, device-access/security/session-policy/SW и цвета G1 не переписывались. [Подробности](A2/REPORT.md) · [Данные](A2/DATA_MATRIX.md) · [Тесты](A2/TEST_REPORT.md).
+
+---
+
 # G1 · изменения модулей · 03.11.2026
 
 - `feedback.mjs`, `feedback-state.mjs`: два уровня, required/FIFO/filter, таймеры/жесты/снимок/lifecycle, без повторных мутаций.
