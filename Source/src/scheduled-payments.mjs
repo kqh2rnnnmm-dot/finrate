@@ -112,10 +112,10 @@ export function setPaymentPaused(d,id,pause,today){return atomic(d,n=>{
  else if(open.from>=today)plan.pauses=plan.pauses.filter(p=>p!==open);else open.to=today;
  return true;
 });}
-export function confirmPayment(d,id,input,today){return atomic(d,n=>{
+export function confirmPayment(d,id,input,today,{draftId=null}={}){return atomic(d,n=>{
  date(today);if(!input.id)fail('PAYMENT');const existing=n.operations.find(o=>o.id===input.id);
  if(existing){if(n.payments.links.some(l=>l.operationId===input.id&&l.occurrenceId===id))return false;fail('DUPLICATE');}
  const r=paymentOccurrence(n,id);integer(input.amount);date(input.date);if(input.date>today)fail('PAYMENT_DATE');if(input.amount>r.remaining)fail('PAYMENT_AMOUNT');
  if(!n.payments.occurrences.some(o=>o.id===id)){const {paid,remaining,status,...snapshot}=r;n.payments.occurrences.push(snapshot);}
- saveOperation(n,{...input,kind:'expense',referenceId:null});n.payments.links.push({operationId:input.id,occurrenceId:id});return true;
+ saveOperation(n,{...input,kind:'expense',referenceId:null},{draftId});n.payments.links.push({operationId:input.id,occurrenceId:id});return true;
 });}
