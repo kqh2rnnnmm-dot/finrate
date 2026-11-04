@@ -35,7 +35,15 @@ export class FinRate {
     try{
       let slots=this.record.vault.slots,access=await this.store.readAccess(),resetAccess=false;
       const previous=await validAccess(this.record.vault,access)?access.mode:'password';
-      if(action==='password'){slots={...slots,password:await newPasswordSlot(auth.raw,this.document.datasetId,password)};}
+      if(action==='password'){
+        if(typeof password!=='string'||password.length<12||password.length>1024)fail('PASSWORD');
+        // Recovery can authorize a change too: enforce the same rule at the
+        // service boundary without retaining a password or changing the DEK.
+        let unchanged=mode==='password'&&password===secret;
+        if(mode==='recovery'){try{await openVault(this.record.vault,password);unchanged=true;}catch(e){if(e.code!=='DECRYPT')throw e;}}
+        if(unchanged)fail('PASSWORD_SAME');
+        slots={...slots,password:await newPasswordSlot(auth.raw,this.document.datasetId,password)};
+      }
       else{if(!['pin','none','password'].includes(entry))fail('FORMAT');if(entry==='password'){access=undefined;resetAccess=true;}else access=await createAccess(this.record.vault,auth.raw,entry,pin);}
       const next=copy(this.document),label=action==='password'?'Основной пароль изменён':entry==='pin'?'Вход по PIN включён':entry==='none'?'Вход без проверки включён':'Вход по основному паролю включён';
       changed(next,'security.'+(action==='password'?'password':entry));next.events.at(-1).details={version:1,counts:{settings:1},items:[{type:'settings',id:'security',title:'Пароль и вход',action:label,changes:action==='password'?[]:[{key:'entryMode',before:previous,after:entry},...(entry==='pin'?[{key:'pinLength',before:null,after:pin.length}]:[])]}]};
