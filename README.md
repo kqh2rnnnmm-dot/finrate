@@ -1,5 +1,7 @@
 # FinRate PATCH A3
 
+Pull Request: [https://github.com/kqh2rnnnmm-dot/finrate/pull/8](https://github.com/kqh2rnnnmm-dot/finrate/pull/8) — открыт для приёмки, без merge/deploy.
+
 `a3-access01` / `0.3.9-a3`, от main `7abfe0e` после A2/PR #7. A2 принят владельцем без проверки iPhone. A3 сохраняет существующие пароль/PIN/recovery/none и исправляет жизненный цикл секретных форм/блокировки; добавлены стандартные подсказки менеджеру паролей. Отдельный Face/Touch ID не включён: NEEDS-DEVICE.
 
 [Аудит](Documents/A3/AUDIT.md) · [Тесты](Documents/A3/TEST_REPORT.md) · [Биометрия](Documents/A3/BIOMETRY_FEASIBILITY.md) · [Снимки](Documents/A3/SCREENSHOTS.md) · [iPhone](Documents/A3/IPHONE_ACCEPTANCE.md).

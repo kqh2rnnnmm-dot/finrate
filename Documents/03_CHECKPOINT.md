@@ -1,5 +1,7 @@
 # PATCH A3 · контрольная точка · 04.11.2026
 
+Pull Request: [https://github.com/kqh2rnnnmm-dot/finrate/pull/8](https://github.com/kqh2rnnnmm-dot/finrate/pull/8) — открыт для приёмки, без merge/deploy.
+
 Основа — актуальный main `7abfe0e84442e6b1c8cdf624767ed1341a668473`, объединённый A2/PR #7. Владелец принял `a2-reset01` / `0.3.8-a2` без проверки на iPhone; аппаратные пункты остаются отложенными. A3 разрешён отдельным заданием, ветка `codex/a3-security-access`, сборка `a3-access01` / `0.3.9-a3`.
 
 Сохранены работающие пароль/recovery/PIN4/6/none и автоблокировка. Исправлены совпадение нового пароля с текущим на уровне сервиса, mode switch/reveal, очистка чувствительных форм и временной авторизации при уходе, закрытие финансового UI соседней вкладки после смены защиты, отрисовка входа после busy-return. Добавлены только стандартные native current/new-password hints и aria-pressed; OS AutoFill на iPhone не подтверждён. Реальный Face/Touch ID не включён — NEEDS-DEVICE, отдельный протокол локального wrapper не внедрялся.
