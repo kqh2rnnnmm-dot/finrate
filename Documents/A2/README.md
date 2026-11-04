@@ -1,6 +1,6 @@
 # FinRate PATCH A2 · 04.11.2026
 
-Рабочая ветка `codex/a2-reset-and-acceptance-fixes`, основа main `83eee25`, сборка `a2-reset01` (`0.3.8-a2`). Код реализован; merge/deploy не выполнялись.
+Рабочая ветка `codex/a2-reset-and-acceptance-fixes`, основа main `83eee25`, сборка `a2-reset01` (`0.3.8-a2`). Код реализован; [PR №7](https://github.com/kqh2rnnnmm-dot/finrate/pull/7) открыт. Merge/deploy не выполнялись.
 
 - [Результат, модули и откат](REPORT.md)
 - [Задание владельца](TASK.md)
