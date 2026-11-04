@@ -1,6 +1,6 @@
 import {defaultPlanning} from './planning.mjs';
 import {copy,changed,validateDocument,newDocument,addAccount,addCategory,totals,fail,SCHEMA} from './model.mjs';
-import {createVault,openVault,authorizeVault,newPasswordSlot,seal,backupBlob,parseBackup} from './crypto.mjs';
+import {createVault,openVault,openWithKey,authorizeVault,newPasswordSlot,seal,backupBlob,parseBackup} from './crypto.mjs';
 import {createAccess,openAccess,validAccess,rebindAccess} from './device-access.mjs';
 import {migrateDocument} from './operations.mjs';
 import {captureActivity} from './activity.mjs';
@@ -49,7 +49,13 @@ export class FinRate {
     const vault=await seal(next,this.key,this.record.vault.slots),record=await this.store.commit(vault,this.record,{beforeMigration:!!this.needsMigration});
     this.document=next;this.record=record;this.needsMigration=false;return result;
   });}
-  async backup(){return this.exclusive(async()=>{const record=await this.store.read();if(!record)fail('EMPTY');return backupBlob(record.vault);});}
+  async backup(expected=this.record){return this.exclusive(async()=>{
+    if(!this.document||!this.key||!this.record)fail('LOCKED');
+    const record=await this.store.read();
+    if(!record||record.generation!==expected?.generation||record.vault.datasetId!==expected?.vault.datasetId||record.generation!==this.record.generation||record.vault.datasetId!==this.record.vault.datasetId)fail('STALE');
+    try{await openWithKey(record.vault,this.key);}catch{fail('BACKUP_INVALID');}
+    await this.store.assertCurrent(record);return backupBlob(record.vault);
+  });}
   async prepareReset(secret,mode='password'){return this.exclusive(async()=>{
     if(!this.document||!this.key)fail('LOCKED');
     if(!['password','recovery'].includes(mode))fail('FORMAT');
@@ -64,7 +70,7 @@ export class FinRate {
   });}
   async prepareRestore(file,secret,mode='password'){return this.exclusive(async()=>{
     const vault=await parseBackup(file),{doc,key}=await openVault(vault,secret,mode),expected=await this.store.read();
-    return {vault,doc,key,expected,summary:{currency:doc.currency,accounts:doc.accounts.length,categories:doc.categories.length,operations:doc.operations.length,drafts:doc.drafts?.length||0,total:totals(migrateDocument(doc)).total,savedAt:doc.updatedAt,different:!!expected&&expected.vault.datasetId!==doc.datasetId,older:!!expected&&expected.vault.datasetId===doc.datasetId&&vault.revision<expected.vault.revision,replaces:!!expected}};
+    return {vault,doc,key,expected,summary:{verifiedWith:mode,currency:doc.currency,accounts:doc.accounts.length,categories:doc.categories.length,operations:doc.operations.length,drafts:doc.drafts?.length||0,total:totals(migrateDocument(doc)).total,savedAt:doc.updatedAt,different:!!expected&&expected.vault.datasetId!==doc.datasetId,older:!!expected&&expected.vault.datasetId===doc.datasetId&&vault.revision<expected.vault.revision,replaces:!!expected}};
   });}
   async applyRestore(prepared,confirmed){return this.exclusive(async()=>{
     if(confirmed!==true)fail('CONFIRM');validateDocument(prepared.doc);

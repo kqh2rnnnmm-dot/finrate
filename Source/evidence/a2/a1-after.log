@@ -1,0 +1,316 @@
+TAP version 13
+# Subtest: B1 encrypted close/reopen and independent restore retain draft, plans, links and refund own
+ok 1 - B1 encrypted close/reopen and independent restore retain draft, plans, links and refund own
+  ---
+  duration_ms: 459.413068
+  type: 'test'
+  ...
+# Subtest: B1 setup seeds editable categories once and proposes incomes without actual money
+ok 2 - B1 setup seeds editable categories once and proposes incomes without actual money
+  ---
+  duration_ms: 177.299473
+  type: 'test'
+  ...
+# Subtest: B1 rejected storage commit changes neither actual income nor expected remainder
+ok 3 - B1 rejected storage commit changes neither actual income nor expected remainder
+  ---
+  duration_ms: 253.891156
+  type: 'test'
+  ...
+# Subtest: B1 R30 migration freezes old deadlines without modifying input or stored ciphertext
+ok 4 - B1 R30 migration freezes old deadlines without modifying input or stored ciphertext
+  ---
+  duration_ms: 195.438637
+  type: 'test'
+  ...
+# Subtest: B1 source edits preserve one monthly occurrence identity and confirmed history
+ok 5 - B1 source edits preserve one monthly occurrence identity and confirmed history
+  ---
+  duration_ms: 0.629182
+  type: 'test'
+  ...
+# Subtest: B1 amount/date edits and refund cancellation replay credit invariants
+ok 6 - B1 amount/date edits and refund cancellation replay credit invariants
+  ---
+  duration_ms: 1.285255
+  type: 'test'
+  ...
+# Subtest: B1 generated sequence maintains cent precision, debt lots, refund limits and no duplicate spending
+ok 7 - B1 generated sequence maintains cent precision, debt lots, refund limits and no duplicate spending
+  ---
+  duration_ms: 244.948978
+  type: 'test'
+  ...
+# Subtest: B1 category merge and immediate undo preserve planned-income classification
+ok 8 - B1 category merge and immediate undo preserve planned-income classification
+  ---
+  duration_ms: 3.507038
+  type: 'test'
+  ...
+# Subtest: A1-F06: exact 8MiB plaintext exports and opens with password and recovery without changing limits
+ok 9 - A1-F06: exact 8MiB plaintext exports and opens with password and recovery without changing limits
+  ---
+  duration_ms: 6895.5069
+  type: 'test'
+  ...
+# Subtest: A1: base64 grammar rejects invalid alphabet, middle padding, extra padding, noncanonical trailing bits and length
+ok 10 - A1: base64 grammar rejects invalid alphabet, middle padding, extra padding, noncanonical trailing bits and length
+  ---
+  duration_ms: 85.979484
+  type: 'test'
+  ...
+# Subtest: A1-F04: null, array and primitive JSON are FORMAT
+ok 11 - A1-F04: null, array and primitive JSON are FORMAT
+  ---
+  duration_ms: 0.666499
+  type: 'test'
+  ...
+# Subtest: A1-F01: corrupt active ciphertext cannot be exported, and memory/storage remain unchanged
+ok 12 - A1-F01: corrupt active ciphertext cannot be exported, and memory/storage remain unchanged
+  ---
+  duration_ms: 95.606504
+  type: 'test'
+  ...
+# Subtest: A1: export rejects stale row both before and after authentication, and historical blob remains downloadable
+ok 13 - A1: export rejects stale row both before and after authentication, and historical blob remains downloadable
+  ---
+  duration_ms: 341.842734
+  type: 'test'
+  ...
+# Subtest: A1-F03: selected verification route is explicit, unselected damaged route not claimed as verified
+ok 14 - A1-F03: selected verification route is explicit, unselected damaged route not claimed as verified
+  ---
+  duration_ms: 184.021709
+  type: 'test'
+  ...
+# Subtest: legacy records default to password without writing either row
+ok 15 - legacy records default to password without writing either row
+  ---
+  duration_ms: 186.542489
+  type: 'test'
+  ...
+# Subtest: PIN persists across service restart, leading zeros preserved; encrypted backups contain no local unlock material
+ok 16 - PIN persists across service restart, leading zeros preserved; encrypted backups contain no local unlock material
+  ---
+  duration_ms: 440.396964
+  type: 'test'
+  ...
+# Subtest: fifth PIN attempt may succeed, five wrong attempts survive reload and require primary credentials
+ok 17 - fifth PIN attempt may succeed, five wrong attempts survive reload and require primary credentials
+  ---
+  duration_ms: 1316.004675
+  type: 'test'
+  ...
+# Subtest: password change retains PIN, recovery key, all money and old backup password semantics
+ok 18 - password change retains PIN, recovery key, all money and old backup password semantics
+  ---
+  duration_ms: 875.021053
+  type: 'test'
+  ...
+# Subtest: no-check mode stores only nonextractable device wrapper; removing it restores password entry
+ok 19 - no-check mode stores only nonextractable device wrapper; removing it restores password entry
+  ---
+  duration_ms: 364.507551
+  type: 'test'
+  ...
+# Subtest: recovery credential may replace forgotten PIN without changing money
+ok 20 - recovery credential may replace forgotten PIN without changing money
+  ---
+  duration_ms: 434.72814
+  type: 'test'
+  ...
+# Subtest: wrong primary, malformed PIN and weak replacement do not change either stored row
+ok 21 - wrong primary, malformed PIN and weak replacement do not change either stored row
+  ---
+  duration_ms: 338.123567
+  type: 'test'
+  ...
+# Subtest: failure writing access row rolls back vault, history and previous access
+ok 22 - failure writing access row rolls back vault, history and previous access
+  ---
+  duration_ms: 451.784514
+  type: 'test'
+  ...
+# Subtest: restore clears local PIN/no-check but keeps original protected safety copy
+ok 23 - restore clears local PIN/no-check but keeps original protected safety copy
+  ---
+  duration_ms: 276.758008
+  type: 'test'
+  ...
+# Subtest: foreign or tampered access cannot auto-unlock and does not damage vault
+ok 24 - foreign or tampered access cannot auto-unlock and does not damage vault
+  ---
+  duration_ms: 260.535868
+  type: 'test'
+  ...
+# Subtest: stale security change cannot overwrite another tab or its device credential
+ok 25 - stale security change cannot overwrite another tab or its device credential
+  ---
+  duration_ms: 441.170195
+  type: 'test'
+  ...
+# Subtest: AES-GCM password round trip exact document
+ok 26 - AES-GCM password round trip exact document
+  ---
+  duration_ms: 83.798864
+  type: 'test'
+  ...
+# Subtest: independent recovery key opens without password
+ok 27 - independent recovery key opens without password
+  ---
+  duration_ms: 1.780265
+  type: 'test'
+  ...
+# Subtest: wrong password fails with safe message
+ok 28 - wrong password fails with safe message
+  ---
+  duration_ms: 92.242037
+  type: 'test'
+  ...
+# Subtest: wrong recovery key fails
+ok 29 - wrong recovery key fails
+  ---
+  duration_ms: 0.787542
+  type: 'test'
+  ...
+# Subtest: ciphertext modification authenticated
+ok 30 - ciphertext modification authenticated
+  ---
+  duration_ms: 88.008725
+  type: 'test'
+  ...
+# Subtest: public dataset metadata modification authenticated
+ok 31 - public dataset metadata modification authenticated
+  ---
+  duration_ms: 92.956999
+  type: 'test'
+  ...
+# Subtest: revision modification authenticated
+ok 32 - revision modification authenticated
+  ---
+  duration_ms: 85.40523
+  type: 'test'
+  ...
+# Subtest: version / KDF downgrade rejected before decrypt
+ok 33 - version / KDF downgrade rejected before decrypt
+  ---
+  duration_ms: 0.267335
+  type: 'test'
+  ...
+# Subtest: random IV changes for each sealing, same plaintext
+ok 34 - random IV changes for each sealing, same plaintext
+  ---
+  duration_ms: 87.32459
+  type: 'test'
+  ...
+# Subtest: new database has independent salt / key / recovery secret
+ok 35 - new database has independent salt / key / recovery secret
+  ---
+  duration_ms: 86.831103
+  type: 'test'
+  ...
+# Subtest: backup includes no plaintext finance, password or raw recovery secret
+ok 36 - backup includes no plaintext finance, password or raw recovery secret
+  ---
+  duration_ms: 0.608631
+  type: 'test'
+  ...
+# Subtest: invalid backup and huge file rejected
+ok 37 - invalid backup and huge file rejected
+  ---
+  duration_ms: 0.192
+  type: 'test'
+  ...
+# Subtest: Dexie actual wrapper commits encrypted record and survives reopen (fake IndexedDB)
+ok 38 - Dexie actual wrapper commits encrypted record and survives reopen (fake IndexedDB)
+  ---
+  duration_ms: 175.895265
+  type: 'test'
+  ...
+# Subtest: setup cannot overwrite an existing database
+ok 39 - setup cannot overwrite an existing database
+  ---
+  duration_ms: 114.883087
+  type: 'test'
+  ...
+# Subtest: mutation persisted before UI service state updates
+ok 40 - mutation persisted before UI service state updates
+  ---
+  duration_ms: 227.586707
+  type: 'test'
+  ...
+# Subtest: storage failure leaves in-memory and persisted state unchanged
+ok 41 - storage failure leaves in-memory and persisted state unchanged
+  ---
+  duration_ms: 99.438483
+  type: 'test'
+  ...
+# Subtest: concurrent tabs cannot silently overwrite another commit
+ok 42 - concurrent tabs cannot silently overwrite another commit
+  ---
+  duration_ms: 282.84102
+  type: 'test'
+  ...
+# Subtest: restore preview verifies but does not mutate existing database
+ok 43 - restore preview verifies but does not mutate existing database
+  ---
+  duration_ms: 191.409484
+  type: 'test'
+  ...
+# Subtest: restore requires explicit confirmation
+ok 44 - restore requires explicit confirmation
+  ---
+  duration_ms: 101.327211
+  type: 'test'
+  ...
+# Subtest: restore old copy preserves current encrypted safety version atomically
+ok 45 - restore old copy preserves current encrypted safety version atomically
+  ---
+  duration_ms: 267.056264
+  type: 'test'
+  ...
+# Subtest: stale restore preview blocked after intervening edit
+ok 46 - stale restore preview blocked after intervening edit
+  ---
+  duration_ms: 170.270638
+  type: 'test'
+  ...
+# Subtest: wrong password during preview leaves local database untouched
+ok 47 - wrong password during preview leaves local database untouched
+  ---
+  duration_ms: 166.730721
+  type: 'test'
+  ...
+# Subtest: restoration onto empty store with recovery key survives restart
+ok 48 - restoration onto empty store with recovery key survives restart
+  ---
+  duration_ms: 84.819005
+  type: 'test'
+  ...
+# Subtest: different dataset preview explicit, not silently merged
+ok 49 - different dataset preview explicit, not silently merged
+  ---
+  duration_ms: 194.599572
+  type: 'test'
+  ...
+# Subtest: lock removes decrypted document and key
+ok 50 - lock removes decrypted document and key
+  ---
+  duration_ms: 85.577604
+  type: 'test'
+  ...
+# Subtest: transaction abort rolls back both safety and active replacement
+ok 51 - transaction abort rolls back both safety and active replacement
+  ---
+  duration_ms: 88.566887
+  type: 'test'
+  ...
+1..51
+# tests 51
+# suites 0
+# pass 51
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 17261.223414

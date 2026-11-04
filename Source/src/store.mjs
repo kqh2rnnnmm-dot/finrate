@@ -1,5 +1,7 @@
 import Dexie from 'dexie';
 import {fail,uid,now} from './model.mjs';
+// Called only after the IndexedDB transaction rejects, so rollback is established.
+function transactionFailure(error){if(error?.name==='QuotaExceededError'||error?.inner?.name==='QuotaExceededError')fail('STORAGE_QUOTA_ABORTED');throw error;}
 export function createStore(name='finrate-local-v1',dependencies){
   const db=new Dexie(name,dependencies);db.version(1).stores({vault:'id',safety:'id,createdAt'});
   db.on('versionchange',()=>db.close());
@@ -14,7 +16,7 @@ export function createStore(name='finrate-local-v1',dependencies){
         if((beforeRestore||beforeMigration)&&current)await db.safety.add({id:uid(),createdAt:now(),vault:current.vault,reason:beforeMigration?'before-schema-3':'before-restore'});
         const record={id:'active',generation:(current?.generation||0)+1,vault};await db.vault.put(record);
         if(resetAccess)await db.vault.delete('device-access');else if(access)await db.vault.put(access);return record;
-      });
+      }).catch(transactionFailure);
     },
     async accessAttempt(expected,id){return db.transaction('rw',db.vault,async()=>{const current=await db.vault.get('active'),a=await db.vault.get('device-access');if(!same(current,expected)||a?.accessId!==id)fail('STALE');if(!Number.isInteger(a.failed)||a.failed<0||a.failed>=5)fail('PIN_LOCKED');a.failed++;await db.vault.put(a);return {...a,failed:a.failed-1};});},
     async resetAttempts(expected,id){return db.transaction('rw',db.vault,async()=>{const current=await db.vault.get('active'),a=await db.vault.get('device-access');if(!same(current,expected)||a?.accessId!==id)fail('STALE');if(a.failed){a.failed=0;await db.vault.put(a);}});},
@@ -23,7 +25,7 @@ export function createStore(name='finrate-local-v1',dependencies){
       return db.transaction('rw',db.vault,db.safety,async()=>{
         const current=await db.vault.get('active');if(!current||!same(current,expected))fail('STALE');
         await db.safety.clear();await db.vault.clear();
-      });
+      }).catch(transactionFailure);
     },
     async close(){db.close();}
   };
