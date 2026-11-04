@@ -1,0 +1,9 @@
+{
+  "engine": "WebKit 26.5 Linux / Playwright 1.62.1",
+  "status": "TEST_ENVIRONMENT_LIMITATION",
+  "trigger": "context.setOffline(true) with native File/Blob read",
+  "observed": "NotReadableError; application refused verification before any deletion",
+  "workaroundInProduct": false,
+  "finalTestModel": "All HTTP connections refused by test server for isolated profile; native File unchanged; navigator.onLine true",
+  "actualIPhone": false
+}
