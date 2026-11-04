@@ -1,0 +1,174 @@
+✖ A2 matrix: financial retains password and clears every financial collection atomically (215.982406ms)
+✖ A2 matrix: financial retains pin and clears every financial collection atomically (358.15605ms)
+✖ A2 matrix: financial retains none and clears every financial collection atomically (271.285496ms)
+✖ A2 matrix: categories retains password and clears every financial collection atomically (188.864271ms)
+✖ A2 matrix: categories retains pin and clears every financial collection atomically (355.170182ms)
+✖ A2 matrix: categories retains none and clears every financial collection atomically (273.616882ms)
+✖ A2: reset requires exact external file, primary credential, original intent and explicit confirmation (349.340123ms)
+✖ A2 all: removes both stores and protection; external file independently restores every financial value (367.945376ms)
+✖ A2 stale/consumed proof cannot overwrite another tab: financial (350.171667ms)
+✖ A2 stale/consumed proof cannot overwrite another tab: categories (345.021662ms)
+✖ A2 stale/consumed proof cannot overwrite another tab: all (348.840131ms)
+✖ A2 partial QuotaExceededError at active rolls back active/access/safety, explicit retry works once (325.977091ms)
+✖ A2 partial QuotaExceededError at safety rolls back active/access/safety, explicit retry works once (326.728037ms)
+✖ A2 supported legacy migration clears without leaving migration safety (170.507349ms)
+✖ A2 unknown persistent extension blocks partial cleanup without guessing its semantics (357.175807ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 0
+ℹ fail 15
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 4660.908113
+
+✖ failing tests:
+
+test at tests/reset-modes.test.mjs:7:91
+✖ A2 matrix: financial retains password and clears every financial collection atomically (215.982406ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:7:342
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processImmediate (node:internal/timers:502:9)
+      at async fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1000)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+
+test at tests/reset-modes.test.mjs:7:91
+✖ A2 matrix: financial retains pin and clears every financial collection atomically (358.15605ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:7:342
+      at async fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1000)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:7:91
+✖ A2 matrix: financial retains none and clears every financial collection atomically (271.285496ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:7:342
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processImmediate (node:internal/timers:502:9)
+      at async fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1000)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:7:91
+✖ A2 matrix: categories retains password and clears every financial collection atomically (188.864271ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:7:342
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processImmediate (node:internal/timers:502:9)
+      at async fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1000)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:7:91
+✖ A2 matrix: categories retains pin and clears every financial collection atomically (355.170182ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:7:342
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processImmediate (node:internal/timers:502:9)
+      at async fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1000)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:7:91
+✖ A2 matrix: categories retains none and clears every financial collection atomically (273.616882ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:7:342
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processImmediate (node:internal/timers:502:9)
+      at async fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1000)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:8:1
+✖ A2: reset requires exact external file, primary credential, original intent and explicit confirmation (349.340123ms)
+  TypeError: a.resetPreview is not a function
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:8:183
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processImmediate (node:internal/timers:502:9)
+      at async fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1000)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:9:1
+✖ A2 all: removes both stores and protection; external file independently restores every financial value (367.945376ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:9:207
+      at async fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1000)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:10:52
+✖ A2 stale/consumed proof cannot overwrite another tab: financial (350.171667ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:10:160
+      at fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1006)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:10:52
+✖ A2 stale/consumed proof cannot overwrite another tab: categories (345.021662ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:10:160
+      at fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1006)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:10:52
+✖ A2 stale/consumed proof cannot overwrite another tab: all (348.840131ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:10:160
+      at fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1006)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:11:40
+✖ A2 partial QuotaExceededError at active rolls back active/access/safety, explicit retry works once (325.977091ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:11:190
+      at fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1006)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:11:40
+✖ A2 partial QuotaExceededError at safety rolls back active/access/safety, explicit retry works once (326.728037ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:11:190
+      at fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1006)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:12:1
+✖ A2 supported legacy migration clears without leaving migration safety (170.507349ms)
+  TypeError: a.resetPreview is not a function
+      at prepare (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:6:103)
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:12:165
+      at fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1006)
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processImmediate (node:internal/timers:502:9)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+
+test at tests/reset-modes.test.mjs:13:1
+✖ A2 unknown persistent extension blocks partial cleanup without guessing its semantics (357.175807ms)
+  TypeError: a.resetPreview is not a function
+      at file:///workspace/finrate/Source/tests/reset-modes.test.mjs:13:257
+      at runNextTicks (node:internal/process/task_queues:65:5)
+      at process.processImmediate (node:internal/timers:502:9)
+      at async fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1000)
+      at async Test.run (node:internal/test_runner/test:1389:7)
+      at async Test.processPendingSubtests (node:internal/test_runner/test:960:7)

@@ -43,9 +43,9 @@ test at tests/backup-safety.test.mjs:5:1
 test at tests/backup-safety.test.mjs:6:1
 ✖ A1-F04: null, array and primitive JSON are FORMAT (0.901193ms)
   AssertionError [ERR_ASSERTION]: The validation function is expected to return "true". Received false
-  
+
   Caught error:
-  
+
   TypeError: Cannot read properties of null (reading 'format')
       at async TestContext.<anonymous> (file:///workspace/finrate/Source/tests/backup-safety.test.mjs:6:153)
       at async Test.run (node:internal/test_runner/test:1389:7)
@@ -100,10 +100,10 @@ test at tests/backup-safety.test.mjs:9:1
 ✖ A1-F03: selected verification route is explicit, unselected damaged route not claimed as verified (169.456763ms)
   AssertionError [ERR_ASSERTION]: Expected values to be strictly equal:
   + actual - expected
-  
+
   + undefined
   - 'password'
-  
+
       at TestContext.<anonymous> (file:///workspace/finrate/Source/tests/backup-safety.test.mjs:9:436)
       at runNextTicks (node:internal/process/task_queues:65:5)
       at process.processImmediate (node:internal/timers:502:9)

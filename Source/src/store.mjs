@@ -20,6 +20,13 @@ export function createStore(name='finrate-local-v1',dependencies){
     },
     async accessAttempt(expected,id){return db.transaction('rw',db.vault,async()=>{const current=await db.vault.get('active'),a=await db.vault.get('device-access');if(!same(current,expected)||a?.accessId!==id)fail('STALE');if(!Number.isInteger(a.failed)||a.failed<0||a.failed>=5)fail('PIN_LOCKED');a.failed++;await db.vault.put(a);return {...a,failed:a.failed-1};});},
     async resetAttempts(expected,id){return db.transaction('rw',db.vault,async()=>{const current=await db.vault.get('active'),a=await db.vault.get('device-access');if(!same(current,expected)||a?.accessId!==id)fail('STALE');if(a.failed){a.failed=0;await db.vault.put(a);}});},
+    async clearFinancial(vault,expected){
+      return db.transaction('rw',db.vault,db.safety,async()=>{
+        const current=await db.vault.get('active');if(!current||!same(current,expected))fail('STALE');
+        const record={id:'active',generation:current.generation+1,vault};
+        await db.vault.put(record);await db.safety.clear();return record;
+      }).catch(transactionFailure);
+    },
     async safety(){return db.safety.orderBy('createdAt').reverse().toArray();},
     async reset(expected){
       return db.transaction('rw',db.vault,db.safety,async()=>{
