@@ -1,0 +1,29 @@
+PASS 320 operation quick actions omit Open; no duplicate account; direct return preserves sort and ciphertext
+PASS 320 category hierarchy and scoped type/search; contextual outline plus; creation hidden in form; no ellipsis
+PASS 320 merge candidates fixed at source type; no premature writes; final merge relinks records without changing financial totals
+PASS 320 subcategory merge fixed type; cancelling a new parent writes nothing; archived child remains reachable/restorable through parent
+PASS 320 account rename is separate; nested current correction keeps pending metadata; revealed card refreshes; opening mode creates no adjustment
+PASS 320 optional side defaults cleanly; side/theme survive reload; mirrored native touch pull and chooser X; native tile metric persists
+PASS 320 updated service worker unlocks exactly the same encrypted vault offline
+PASS 402 operation quick actions omit Open; no duplicate account; direct return preserves sort and ciphertext
+PASS 402 category hierarchy and scoped type/search; contextual outline plus; creation hidden in form; no ellipsis
+PASS merge save failure preserves encrypted record and final form; retry remains available
+PASS 402 merge candidates fixed at source type; no premature writes; final merge relinks records without changing financial totals
+PASS 402 subcategory merge fixed type; cancelling a new parent writes nothing; archived child remains reachable/restorable through parent
+PASS 402 account rename is separate; nested current correction keeps pending metadata; revealed card refreshes; opening mode creates no adjustment
+PASS 402 optional side defaults cleanly; side/theme survive reload; mirrored native touch pull and chooser X; native tile metric persists
+PASS income merging has income-only candidates from its first screen
+PASS separate collisions require unique final names, preserve both children and financial totals
+PASS 402 updated service worker unlocks exactly the same encrypted vault offline
+PASS 1280 operation quick actions omit Open; no duplicate account; direct return preserves sort and ciphertext
+PASS 1280 category hierarchy and scoped type/search; contextual outline plus; creation hidden in form; no ellipsis
+PASS 1280 merge candidates fixed at source type; no premature writes; final merge relinks records without changing financial totals
+PASS 1280 subcategory merge fixed type; cancelling a new parent writes nothing; archived child remains reachable/restorable through parent
+PASS 1280 account rename is separate; nested current correction keeps pending metadata; revealed card refreshes; opening mode creates no adjustment
+PASS 1280 optional side defaults cleanly; side/theme survive reload; mirrored native touch pull and chooser X; native tile metric persists
+PASS 1280 updated service worker unlocks exactly the same encrypted vault offline
+{
+  "checks": 24,
+  "errors": [],
+  "failures": []
+}

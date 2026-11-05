@@ -1,0 +1,12 @@
+PASS direct list with active plans and compact shared horizon, no intermediate navigation
+PASS active card full-width ordered text at 320/375/402/430/736 in both themes
+PASS empty category picker full-width ordered text at 320/375/402/430/736 in both themes
+PASS empty category text full-width ordered text at 320/375/402/430/736 in both themes
+PASS selected category picker full-width ordered text at 320/375/402/430/736 in both themes
+PASS selected category text full-width ordered text at 320/375/402/430/736 in both themes
+PASS subcategory picker full-width ordered text at 320/375/402/430/736 in both themes
+PASS ordinary tap opens review; duplicate opens unsaved independent copy and saves name/amount without copying facts
+PASS archived card full-width ordered text at 320/375/402/430/736 in both themes
+PASS hold-drag-release chooses highlighted archive; separate-tap menu restores archived plan
+PASS touch hold-release keeps menu open; later tap deletes with confirmation; encrypted reload retains tombstone and other plan
+PASS review category uses full card width, blue edit footer below content; 320/402/736 light/dark no horizontal overflow

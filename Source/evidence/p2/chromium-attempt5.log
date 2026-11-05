@@ -1,0 +1,17 @@
+PASS extra menu, two directions, existing10000 no movement, 500char note reading, five main tabs unchanged
+PASS native IndexedDB quota rollback and explicit double-tap retry;3000 partial leaves7000; free invariant and ordinary expense0
+PASS due personal repayment separate canonical source; excluded from P1.2 bulk expense selection
+PASS same linked operation card edit/cancel, canonical audit and debt recalculation
+PASS owed8000 receives3000 leaves5000 not income; now7000 both directions exactly one canonical loan each, credit excluded
+PASS explicit historical loan/repayment links create no cash movement or duplicate, preserved original kinds
+FAIL locator.boundingBox: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('.feedback-notice:visible')[22m
+ { geometry: [], page: 'Долги', dialogs: [], errors: [] }
+locator.boundingBox: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('.feedback-notice:visible')[22m
+
+    at quiet (/workspace/finrate/Source/tests/debts-browser.mjs:20:256)
+    at async file:///workspace/finrate/Source/tests/debts-browser.mjs:46:287
+{"checks":6,"failures":["locator.boundingBox: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.feedback-notice:visible')\u001b[22m\n"]}

@@ -1,0 +1,25 @@
+PASS 320 light atomic history, exact before/after, current object and local history with correct back chain
+PASS 320 light scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS 320 dark atomic history, exact before/after, current object and local history with correct back chain
+PASS 320 dark scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS 402 light atomic history, exact before/after, current object and local history with correct back chain
+PASS 402 light scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS 402 dark atomic history, exact before/after, current object and local history with correct back chain
+PASS 402 dark scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS 1280 light atomic history, exact before/after, current object and local history with correct back chain
+PASS 1280 light scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS 1280 dark atomic history, exact before/after, current object and local history with correct back chain
+PASS 1280 dark scoped search/filter/sort and honest legacy event; viewing writes nothing
+PASS Данные и синхронизация real departure locks key, then restores full back path without data write
+PASS Счета и кошельки real departure locks key, then restores full back path without data write
+PASS Категории real departure locks key, then restores full back path without data write
+PASS Настройки real departure locks key, then restores full back path without data write
+PASS three actual copy downloads + simulated system return preserve session, route and ciphertext
+PASS elapsed timeout shows approved explanation, retains it after wrong password and restores back after unlock
+PASS download return respects autoLock 0 with truthful explanation and working Back
+PASS download return respects autoLock -1 with truthful explanation and working Back
+{
+  "checks": 20,
+  "errors": [],
+  "failures": []
+}

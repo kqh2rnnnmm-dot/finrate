@@ -1,0 +1,43 @@
+{
+  "build": "p2-debts01",
+  "base": "d1a415a3558bdb348ddf29353398090c87367538",
+  "publicAllowlist": 7,
+  "files": {
+    "apple-touch-icon.png": "b5885c943dfa178c5b7043b35c80cb0f13b3ddc34f7f4085663bf9eac5d1e46d",
+    "icon-192.png": "02de571ad2d51f9c5ad3e7025d69c3757144326731163ecfe9a76b7fb13bcfa4",
+    "icon-512.png": "dc5ebe3e204b64dfeb6585959145d7823c5db9e9af7e3fe45ef00a43bb9a0c0b",
+    "icon.svg": "ac3bdbd1431e6d58b2da6e759e1b86e4da70a0f35fbeb173a98e001035fe6328",
+    "index.html": "4e1f3456a6fa1e99168e2bc278158265c5bb703deff6ed06dde6c5ca8ecd5d29",
+    "manifest.webmanifest": "9c42fa3d8ed6be9044ed42c93ea7d45ad7d25e4efad893e4a29f17b463557e39",
+    "sw.js": "0de398922aa1c2da3c7f79b2d23beb025f7187117cd912c5f830437d0874c48d"
+  },
+  "csp": "PASS",
+  "financialFormulasUnchanged": true,
+  "legacyTestAssertionsPreserved": true,
+  "keyArchitectureModulesUnchanged": true,
+  "cryptoProtocolUnchanged": true,
+  "authorizedChangedModules": [
+    "src/style.css",
+    "src/app.mjs",
+    "src/ui.mjs",
+    "src/focus.mjs",
+    "src/context-menu.mjs",
+    "src/dashboard.mjs",
+    "src/payments-ui.mjs",
+    "src/planning-ui.mjs",
+    "src/help.mjs",
+    "src/activity.mjs",
+    "src/activity-ui.mjs",
+    "src/model.mjs",
+    "src/operations.mjs",
+    "src/planning.mjs",
+    "src/reset-policy.mjs",
+    "src/reset-ui.mjs",
+    "src/debts.mjs",
+    "src/debts-ui.mjs"
+  ],
+  "financialExtensionHooksVerified": true,
+  "schema": 5,
+  "format": "finrate-backup/1",
+  "published": false
+}

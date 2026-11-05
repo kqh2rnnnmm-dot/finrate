@@ -1,0 +1,18 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+FAIL Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   '/127.0.0.1:40429/sw.js due to access control checks.'
++ ]
+- []
+ {"view":"planned","rows":[],"errors":[]} AssertionError [ERR_ASSERTION]: Expected values to be strictly deep-equal:
++ actual - expected
+
++ [
++   '/127.0.0.1:40429/sw.js due to access control checks.'
++ ]
+- []
+
+    at file:///workspace/finrate/Source/tests/payments-browser.mjs:44:9
+{"checks":9,"failures":["Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   '/127.0.0.1:40429/sw.js due to access control checks.'\n+ ]\n- []\n"]}

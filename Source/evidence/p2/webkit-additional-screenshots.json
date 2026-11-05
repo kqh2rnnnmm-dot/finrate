@@ -1,0 +1,20 @@
+{
+  "engine": "webkit",
+  "build": "p2-debts01",
+  "shots": [
+    "webkit-neutral-light-home.png",
+    "webkit-neutral-light-owed-list.png",
+    "webkit-neutral-light-owed-detail.png",
+    "webkit-neutral-dark-home.png",
+    "webkit-neutral-dark-owed-list.png",
+    "webkit-neutral-dark-owed-detail.png",
+    "webkit-color-light-home.png",
+    "webkit-color-light-owed-list.png",
+    "webkit-color-light-owed-detail.png",
+    "webkit-color-dark-home.png",
+    "webkit-color-dark-owed-list.png",
+    "webkit-color-dark-owed-detail.png"
+  ],
+  "actualIPhone": false,
+  "published": false
+}

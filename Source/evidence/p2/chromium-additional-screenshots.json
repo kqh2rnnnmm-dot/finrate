@@ -1,0 +1,20 @@
+{
+  "engine": "chromium",
+  "build": "p2-debts01",
+  "shots": [
+    "chromium-neutral-light-home.png",
+    "chromium-neutral-light-owed-list.png",
+    "chromium-neutral-light-owed-detail.png",
+    "chromium-neutral-dark-home.png",
+    "chromium-neutral-dark-owed-list.png",
+    "chromium-neutral-dark-owed-detail.png",
+    "chromium-color-light-home.png",
+    "chromium-color-light-owed-list.png",
+    "chromium-color-light-owed-detail.png",
+    "chromium-color-dark-home.png",
+    "chromium-color-dark-owed-list.png",
+    "chromium-color-dark-owed-detail.png"
+  ],
+  "actualIPhone": false,
+  "published": false
+}
