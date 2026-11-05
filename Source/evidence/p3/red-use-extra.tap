@@ -1,0 +1,29 @@
+TAP version 13
+# Subtest: P3 new use cannot silently spend another reserve; independent historical fact stays allowed and linkable
+not ok 1 - P3 new use cannot silently spend another reserve; independent historical fact stays allowed and linkable
+  ---
+  duration_ms: 10.773127
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals-lifecycle.test.mjs:24:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: [Function (anonymous)]
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals-lifecycle.test.mjs:24:331)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+1..1
+# tests 1
+# suites 0
+# pass 0
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 36.750338
