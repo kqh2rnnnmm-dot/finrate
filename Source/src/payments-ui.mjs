@@ -56,7 +56,7 @@ export function createPaymentsUI({app,root,sheet,pop,perform,captureReturn,focus
  function paymentForm(id){const r=paymentOccurrence(d(),id),f=focus.fresh('expense'),c=d().categories.find(c=>c.id===r.categoryId);
   Object.assign(f,{paymentOccurrenceId:id,paymentName:r.name,paymentDate:r.date,paymentAmount:r.amount,paymentMode:r.amountMode,amount:String(r.remaining/100),date:localDate(),categoryId:c?.parentId||c?.id||'',subcategoryId:c?.parentId?c.id:'',accountId:d().accounts.some(a=>a.id===r.accountId&&!a.archived)?r.accountId:'',note:r.name});return f;
  }
- function pay(id){focus.editor(paymentForm(id),true);}
+ function pay(id,context={}){focus.editor(Object.assign(paymentForm(id),context),true);}
  function batch(ids){if(!ids.length)return;const forms=ids.map(paymentForm),finish=captureReturn();let dialog;
   const body=()=>`<p class="hint">Проверьте реальные суммы, даты, счета и результат каждого переменного платежа. Пока группа не подтверждена, списаний нет.</p><div class="stack">${forms.map((f,i)=>`<button type="button" class="list-button plan-list-card" data-payment-review="${i}"><strong>${esc(f.paymentName)}</strong><small>За ${f.paymentDate} · ${esc(f.date)}</small><strong>${amt(money(f.amount))}</strong><small>${esc(accountName(f.accountId))} · ${f.paymentMode==='variable'?(f.paymentFinal===false?'Частичная оплата':'Оплачено полностью'):'Фиксированный платёж'}</small><span class="plan-card-action">Проверить данные</span></button>`).join('')}</div><button type="button" class="button" data-payment-batch-confirm>Подтвердить оплаты</button>`;
   const draw=()=>{dialog.querySelector('.sheet-body').innerHTML=body();bindBatch();};
@@ -83,5 +83,5 @@ export function createPaymentsUI({app,root,sheet,pop,perform,captureReturn,focus
   if(view==='due')return paymentDue(d(),period,localDate()).map(r=>({id:r.id,label:r.name,type:'К оплате · '+r.date,kind:'payment-due'}));
   return paymentHistory(d()).filter(r=>r.operation.date.slice(0,7)===period).map(r=>({id:r.operation.id,label:r.occurrence.name,type:'Оплата · '+r.operation.date,kind:'operation'}));
  }
- return {page,bind,source,quick,clear,plan,due,searchRows};
+ return {page,bind,source,quick,clear,plan,due,pay,searchRows};
 }

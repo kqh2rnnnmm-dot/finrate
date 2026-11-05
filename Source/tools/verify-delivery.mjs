@@ -1,6 +1,6 @@
 import {readFile,readdir} from 'node:fs/promises';import {createHash} from 'node:crypto';import assert from 'node:assert/strict';
 const hash=b=>createHash('sha256').update(b).digest('hex'),baseline=JSON.parse(await readFile('P3_MAIN_BASELINE_SHA256.json'));
-const allowed=new Set(['src/style.css','src/app.mjs','src/ui.mjs','src/focus.mjs','src/context-menu.mjs','src/dashboard.mjs','src/home-config.mjs','src/debts-ui.mjs','src/planning-ui.mjs','src/help.mjs','src/activity.mjs','src/activity-ui.mjs','src/model.mjs','src/planning.mjs','src/reset-policy.mjs','src/reset-ui.mjs']);
+const allowed=new Set(['src/style.css','src/app.mjs','src/ui.mjs','src/focus.mjs','src/context-menu.mjs','src/dashboard.mjs','src/home-config.mjs','src/debts-ui.mjs','src/payments-ui.mjs','src/planning-ui.mjs','src/help.mjs','src/activity.mjs','src/activity-ui.mjs','src/model.mjs','src/planning.mjs','src/reset-policy.mjs','src/reset-ui.mjs']);
 const additions=['src/goals.mjs','src/goals-ui.mjs'];
 for(const [p,h]of Object.entries(baseline.files))if(!allowed.has(p))assert.equal(hash(await readFile(p)),h,'Protected P2 main module: '+p);
 assert.deepEqual((await readdir('src')).sort(),[...Object.keys(baseline.files),...additions].map(f=>f.slice(4)).sort(),'P3 source allowlist');
