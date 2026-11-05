@@ -1,0 +1,17 @@
+PASS release-build
+PASS patch-unit
+PASS p1-1-payments-webkit
+PASS p1-2-payments-webkit
+PASS a3-access-webkit
+FAIL a2-reset-webkit
+a2-reset-webkit failed: see evidence/a2-reset-webkit.log
+PASS a2-ui-webkit
+PASS g1-notifications-webkit
+PASS g1-required-webkit
+PASS d1-note-webkit
+PASS c1-input-geometry-webkit
+PASS p1-2-payments
+PASS p1-1-payments
+PASS a3-access
+PASS a2-reset
+PASS g1-theme-webkit

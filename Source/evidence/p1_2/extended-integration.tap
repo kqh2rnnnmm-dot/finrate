@@ -1,0 +1,52 @@
+TAP version 13
+# Subtest: P1.2 all optional fields and final links survive copy/reset financial and independent restore
+ok 1 - P1.2 all optional fields and final links survive copy/reset financial and independent restore
+  ---
+  duration_ms: 505.252008
+  type: 'test'
+  ...
+# Subtest: P1.2 all optional fields and final links survive copy/reset categories and independent restore
+ok 2 - P1.2 all optional fields and final links survive copy/reset categories and independent restore
+  ---
+  duration_ms: 490.907642
+  type: 'test'
+  ...
+# Subtest: P1.2 all optional fields and final links survive copy/reset all and independent restore
+ok 3 - P1.2 all optional fields and final links survive copy/reset all and independent restore
+  ---
+  duration_ms: 457.670653
+  type: 'test'
+  ...
+# Subtest: P1.2 batch quota/CAS rollback preserves complete document and PIN; retry creates exactly two expenses in one generation
+ok 4 - P1.2 batch quota/CAS rollback preserves complete document and PIN; retry creates exactly two expenses in one generation
+  ---
+  duration_ms: 425.707745
+  type: 'test'
+  ...
+# Subtest: P1.2 password/PIN changes preserve optional fields, legacy format1 and recovery opening
+ok 5 - P1.2 password/PIN changes preserve optional fields, legacy format1 and recovery opening
+  ---
+  duration_ms: 790.026198
+  type: 'test'
+  ...
+# Subtest: P1.2 legacy P1.1 protected copy reads without lazy migration or writes; explicit new final does not change future estimate
+ok 6 - P1.2 legacy P1.1 protected copy reads without lazy migration or writes; explicit new final does not change future estimate
+  ---
+  duration_ms: 169.28808
+  type: 'test'
+  ...
+# Subtest: P1.2 credit variable final uses B1 debt once; cancelling final restores only original remaining estimate
+ok 7 - P1.2 credit variable final uses B1 debt once; cancelling final restores only original remaining estimate
+  ---
+  duration_ms: 4.024781
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 7
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2906.845346

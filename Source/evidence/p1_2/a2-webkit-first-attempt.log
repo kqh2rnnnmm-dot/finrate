@@ -1,0 +1,8 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+PASS light/neutral/financial: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)
+PASS light/neutral/categories: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)
+own {"root":"hidden","auth":null,"form":null,"body":"app-open surface-open screen-surface-open","feedback":["Проверьте отдельное сохранение файла и введите указанную фразу целиком."],"heading":"Полный сброс FinRate"}
+{"rootVisibility":"","bodyClass":"","visibility":"visible","active":"BODY","openDialogs":0,"hasUnlock":false,"htmlHeight":844,"rootRect":{"x":0,"y":0,"width":390,"height":843.984375,"top":0,"right":390,"bottom":843.984375,"left":0},"authRect":{"x":0,"y":0,"width":390,"height":844,"top":0,"right":390,"bottom":844,"left":0},"authVisibility":"visible","rootInert":false,"rootComputed":"visible","htmlVisibility":"visible","bodyVisibility":"visible","authStyle":""}
+TimeoutError locator.fill: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('#unlock-pin [name=pin]')[22m

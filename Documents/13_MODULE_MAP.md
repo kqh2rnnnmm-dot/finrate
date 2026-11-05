@@ -1,3 +1,21 @@
+# P1.2 · карта изменений ·05.11.2026
+
+| Компонент | Адресное изменение |
+|---|---|
+| scheduled-payments.mjs | Связанный final/partial, explicit estimate, legacy inference при правке, batch, stable move/skip/future/history, bank metadata/availability; existing expense engine |
+| focus.mjs | Дополнительный выбор для связанного variable fact, компактное уточнение оценки, review callback/DTO для групп; стандартные поля/notes/guard сохранены |
+| payments-ui.mjs | Selection/review, прежний source form для scoped conditions, команды/история, календарь и банк; прежние три названия/пять вкладок |
+| app.mjs | Только новые payment messages и build ID |
+| style.css | Только scoped calendar geometry; старые правила/палитры byte-identical |
+| help.mjs | FAQ по утверждённому поведению |
+| tests/tools | RED/GREEN, native IDB/CAS/quota, P1.1 real SW upgrade/copy, обе темы/палитры/движки и общий release/SHA |
+
+`model`, `operations`, `planning`, `planning-ui`, `recurring-income`, `credit/block02`, `service/store/crypto/device-access`, `reset-*`, `navigation/surfaces/field-editor`, `feedback-*` не изменены относительно main4ac42ea. Нет новых зависимостей или data-format version. [Совместимость](P1_2/AUDIT.md).
+
+---
+
+## История предыдущих пакетов
+
 # P1.1 · изменения модулей · 05.11.2026
 
 | Модуль | Изменение |

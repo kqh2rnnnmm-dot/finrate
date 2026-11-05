@@ -1,8 +1,8 @@
 {
-  "build": "p1-1-payments01",
+  "build": "p1-2-payments01",
   "shellFiles": 6,
-  "shellBytes": 628113,
-  "scriptHash": "kWc+2wABCALFtuZZSCbVyxIL1MkabM8z/CpFAbzv2q0=",
+  "shellBytes": 657114,
+  "scriptHash": "VuKuFmw9+xyvEj3/DkpT+V5zKFs9euNjIBsKH1o8yGs=",
   "externalRuntimeDependencies": 0,
   "published": false,
   "warnings": []

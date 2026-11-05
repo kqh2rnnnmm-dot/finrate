@@ -1,0 +1,12 @@
+{
+  "engine": "chromium",
+  "checks": [
+    "real P1.1 1700 defect, exported protected copy, user-approved SW upgrade with exact ciphertext, explicit new settlement and independent old-copy UI restore",
+    "real P1.1 2300 defect, exported protected copy, user-approved SW upgrade with exact ciphertext, explicit new settlement and independent old-copy UI restore"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "version": "153.0.8010.0",
+  "allPassed": true
+}

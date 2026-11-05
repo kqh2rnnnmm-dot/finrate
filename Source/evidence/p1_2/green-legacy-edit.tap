@@ -1,0 +1,232 @@
+TAP version 13
+# Subtest: P1.2 move across month preserves identity/partial/history, removes original date only
+ok 1 - P1.2 move across month preserves identity/partial/history, removes original date only
+  ---
+  duration_ms: 12.889427
+  type: 'test'
+  ...
+# Subtest: P1.2 month skip excludes unpaid obligation and forecast; calendar retains skipped event; unskip exact identity
+ok 2 - P1.2 month skip excludes unpaid obligation and forecast; calendar retains skipped event; unskip exact identity
+  ---
+  duration_ms: 1.104351
+  type: 'test'
+  ...
+# Subtest: P1.2 partial debt cannot be hidden by month skip or rewritten as paid instance
+ok 3 - P1.2 partial debt cannot be hidden by month skip or rewritten as paid instance
+  ---
+  duration_ms: 1.738962
+  type: 'test'
+  ...
+# Subtest: P1.2 single-instance conditions do not change February; this-and-future preserves paid periods and31 anchor
+ok 4 - P1.2 single-instance conditions do not change February; this-and-future preserves paid periods and31 anchor
+  ---
+  duration_ms: 1.060825
+  type: 'test'
+  ...
+# Subtest: P1.2 bank failed/unknown are metadata only, availability is explicit known-data estimate, later one actual success
+ok 5 - P1.2 bank failed/unknown are metadata only, availability is explicit known-data estimate, later one actual success
+  ---
+  duration_ms: 0.960364
+  type: 'test'
+  ...
+# Subtest: P1.2 batch fixed+variable creates exactly two canonical facts atomically; whole repeated group no-op
+ok 6 - P1.2 batch fixed+variable creates exactly two canonical facts atomically; whole repeated group no-op
+  ---
+  duration_ms: 1.389002
+  type: 'test'
+  ...
+# Subtest: P1.2 error in second batch payment rolls first back too
+ok 7 - P1.2 error in second batch payment rolls first back too
+  ---
+  duration_ms: 0.821564
+  type: 'test'
+  ...
+# Subtest: P1.2 insufficient combined funds leaves every fact/link unchanged
+ok 8 - P1.2 insufficient combined funds leaves every fact/link unchanged
+  ---
+  duration_ms: 0.726539
+  type: 'test'
+  ...
+# Subtest: P1.2 duplicate IDs/instances and mixed stale group fail without completing half a group
+ok 9 - P1.2 duplicate IDs/instances and mixed stale group fail without completing half a group
+  ---
+  duration_ms: 0.813491
+  type: 'test'
+  ...
+# Subtest: P1.2 all optional fields and final links survive copy/reset financial and independent restore
+ok 10 - P1.2 all optional fields and final links survive copy/reset financial and independent restore
+  ---
+  duration_ms: 464.211794
+  type: 'test'
+  ...
+# Subtest: P1.2 all optional fields and final links survive copy/reset categories and independent restore
+ok 11 - P1.2 all optional fields and final links survive copy/reset categories and independent restore
+  ---
+  duration_ms: 444.281135
+  type: 'test'
+  ...
+# Subtest: P1.2 all optional fields and final links survive copy/reset all and independent restore
+ok 12 - P1.2 all optional fields and final links survive copy/reset all and independent restore
+  ---
+  duration_ms: 444.513141
+  type: 'test'
+  ...
+# Subtest: P1.2 batch quota/CAS rollback preserves complete document and PIN; retry creates exactly two expenses in one generation
+ok 13 - P1.2 batch quota/CAS rollback preserves complete document and PIN; retry creates exactly two expenses in one generation
+  ---
+  duration_ms: 434.42252
+  type: 'test'
+  ...
+# Subtest: P1.2 password/PIN changes preserve optional fields, legacy format1 and recovery opening
+ok 14 - P1.2 password/PIN changes preserve optional fields, legacy format1 and recovery opening
+  ---
+  duration_ms: 763.556464
+  type: 'test'
+  ...
+# Subtest: P1.2 legacy P1.1 protected copy reads without lazy migration or writes; explicit new final does not change future estimate
+ok 15 - P1.2 legacy P1.1 protected copy reads without lazy migration or writes; explicit new final does not change future estimate
+  ---
+  duration_ms: 172.651573
+  type: 'test'
+  ...
+# Subtest: P1.2 credit variable final uses B1 debt once; cancelling final restores only original remaining estimate
+ok 16 - P1.2 credit variable final uses B1 debt once; cancelling final restores only original remaining estimate
+  ---
+  duration_ms: 2.181251
+  type: 'test'
+  ...
+# Subtest: P1.2 RED→GREEN variable final 170000 closes estimate200000 and preserves next month
+ok 17 - P1.2 RED→GREEN variable final 170000 closes estimate200000 and preserves next month
+  ---
+  duration_ms: 0.87932
+  type: 'test'
+  ...
+# Subtest: P1.2 RED→GREEN variable final 230000 closes estimate200000 and preserves next month
+ok 18 - P1.2 RED→GREEN variable final 230000 closes estimate200000 and preserves next month
+  ---
+  duration_ms: 0.379625
+  type: 'test'
+  ...
+# Subtest: P1.2 variable600+1100 final closes1700; cancellation reopens remaining1400, prior partial remains
+ok 19 - P1.2 variable600+1100 final closes1700; cancellation reopens remaining1400, prior partial remains
+  ---
+  duration_ms: 0.969568
+  type: 'test'
+  ...
+# Subtest: P1.2 partial at/above estimate requires explicit larger period estimate, never silently increases future
+ok 20 - P1.2 partial at/above estimate requires explicit larger period estimate, never silently increases future
+  ---
+  duration_ms: 1.14288
+  type: 'test'
+  ...
+# Subtest: P1.2 fixed retains cap and does not accept variable full flag as override
+ok 21 - P1.2 fixed retains cap and does not accept variable full flag as override
+  ---
+  duration_ms: 0.460627
+  type: 'test'
+  ...
+# Subtest: P1.2 reads P1.1 snapshots/links without migration or query write; explicit legacy final semantics remain
+ok 22 - P1.2 reads P1.1 snapshots/links without migration or query write; explicit legacy final semantics remain
+  ---
+  duration_ms: 0.497894
+  type: 'test'
+  ...
+# Subtest: P1.2 editing final amount/account/date preserves final closure; cancellation reopens other partials
+ok 23 - P1.2 editing final amount/account/date preserves final closure; cancellation reopens other partials
+  ---
+  duration_ms: 1.161547
+  type: 'test'
+  ...
+# Subtest: P1.2 legacy final edit can explicitly adopt approved actual-total rule
+ok 24 - P1.2 legacy final edit can explicitly adopt approved actual-total rule
+  ---
+  duration_ms: 0.69335
+  type: 'test'
+  ...
+# Subtest: P1.2 editing partial cannot create zero remaining partial or make later final cancellation invalid
+ok 25 - P1.2 editing partial cannot create zero remaining partial or make later final cancellation invalid
+  ---
+  duration_ms: 1.192445
+  type: 'test'
+  ...
+# Subtest: P1.2 legacy closed period edit of earlier partial preserves inferred closing fact
+ok 26 - P1.2 legacy closed period edit of earlier partial preserves inferred closing fact
+  ---
+  duration_ms: 0.883046
+  type: 'test'
+  ...
+# Subtest: P1.2 a second active final marker cannot be introduced by editing an earlier partial
+ok 27 - P1.2 a second active final marker cannot be introduced by editing an earlier partial
+  ---
+  duration_ms: 0.94477
+  type: 'test'
+  ...
+# Subtest: P1.1 optional extension leaves legacy document byte-equivalent on query
+ok 28 - P1.1 optional extension leaves legacy document byte-equivalent on query
+  ---
+  duration_ms: 0.195937
+  type: 'test'
+  ...
+# Subtest: P1.1 monthly anchor survives leap/short months, repeated queries and year boundary
+ok 29 - P1.1 monthly anchor survives leap/short months, repeated queries and year boundary
+  ---
+  duration_ms: 0.424622
+  type: 'test'
+  ...
+# Subtest: P1.1 once, weekly and yearly leap dates have stable identities
+ok 30 - P1.1 once, weekly and yearly leap dates have stable identities
+  ---
+  duration_ms: 0.431793
+  type: 'test'
+  ...
+# Subtest: P1.1 plan changes no actual money; partial and full facts each have one canonical operation/link
+ok 31 - P1.1 plan changes no actual money; partial and full facts each have one canonical operation/link
+  ---
+  duration_ms: 2.170194
+  type: 'test'
+  ...
+# Subtest: P1.1 edit/cancel canonical fact recalculates remaining, preserves link and future tariff
+ok 32 - P1.1 edit/cancel canonical fact recalculates remaining, preserves link and future tariff
+  ---
+  duration_ms: 0.689844
+  type: 'test'
+  ...
+# Subtest: P1.1 overpayment, nonpositive/unsafe amount and future actual date leave all data unchanged
+ok 33 - P1.1 overpayment, nonpositive/unsafe amount and future actual date leave all data unchanged
+  ---
+  duration_ms: 0.758408
+  type: 'test'
+  ...
+# Subtest: P1.1 invalid calendar/type/version/references fail safely
+ok 34 - P1.1 invalid calendar/type/version/references fail safely
+  ---
+  duration_ms: 0.775834
+  type: 'test'
+  ...
+# Subtest: P1.1 current month includes all unpaid arrears, not next month
+ok 35 - P1.1 current month includes all unpaid arrears, not next month
+  ---
+  duration_ms: 0.292312
+  type: 'test'
+  ...
+# Subtest: P1.1 future edit preserves due and prepaid snapshots, early payment never shifts calendar
+ok 36 - P1.1 future edit preserves due and prepaid snapshots, early payment never shifts calendar
+  ---
+  duration_ms: 0.849505
+  type: 'test'
+  ...
+# Subtest: P1.1 indefinite pause preserves arrears/partial debt and resume creates no skipped retroactive dates
+ok 37 - P1.1 indefinite pause preserves arrears/partial debt and resume creates no skipped retroactive dates
+  ---
+  duration_ms: 0.861043
+  type: 'test'
+  ...
+1..37
+# tests 37
+# suites 0
+# pass 37
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2825.108106

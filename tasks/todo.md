@@ -1,14 +1,13 @@
-# P1.1 task list
+# P1.2 tasks
 
-- [x] 1. Validated calendar and single payment (deps:none; 3 files): deterministic dates; one operation/link and partial remainder; verify red→green scheduled payment unit tests + build.
-- [x] 2. Edit/pause lifecycle (deps:1; 2 files): preserve due/paid history, skip pauses, operation edit/cancel validation; targeted tests.
-- [x] Checkpoint1–2: core tests/build green.
-- [x] 3. Forecast and A2 (deps:1–2; 4 files): no double count, clear new collections safely, exact encrypted roundtrip; integration/B1/A2 tests.
-- [x] 4. Three-view UI (deps:1–3; 4 files): shared forms/pickers, true payment confirmation and canonical paid details; browser smoke/Back/guards.
-- [x] Checkpoint3–4: end-to-end chain and failure rollback verified.
-- [x] 5. Release/browser matrix (deps:4; test/tools): quotas/CAS/duplicates/offline/restore, size/theme/palette, release and protected SHA; machine evidence.
-- [x] 6. Docs and delivery (deps:5): audit/changelog/tests/open items/iPhone8–12 steps/screens, checkpoint/FAQ/decisions; push branch and open PR; no merge/deploy.
+- [x] 1. Audit + RED/GREEN variable core1700/2300, parts, edit/cancel, legacy (scheduled-payments/tests; no deps).
+- [x] 2. Shared variable UI/default full/compact estimate; browser. Checkpoint core + UI + fixed old tests.
+- [x] 3. Atomic batch core + CAS/quota and shared-form review UI; unit/integration/browser (deps1–2).
+- [x] 4. Instance/future changes, stable move and guarded skip; forecasts/calendar tests + UI (deps1–3).
+- [x] 5. Calendar and bank-result/availability UI; existing tokens and components (deps4).
+- [x] 6. Full regression, compatibility/restore/reset/access/offline; screenshots/geometry; scope/security guards (deps1–5).
+- [x] 7. Docs, FAQ/checkpoint/decisions/module map, commits/push/PR; verify main unchanged, no deployment (deps6).
 
-Owner question: variable over-estimate treatment pending. No dependent excess-payment flow before answer. A2/A3 hardware verification remains deferred.
+User authorization covers these implementation choices. Hardware iPhone acceptance remains open, including A2/A3/P1.1.
 
-Delivery: PR #9 open, not merged; remote main verified at 597b208. Final artifacts are SHA-pinned in Source/evidence/p1_1/regressions/release-run.json.
+Delivery: PR #10 open, not merged; main4ac42ea unchanged. Final source/public bytes match Source/evidence/p1_2/regressions/release-run.json.

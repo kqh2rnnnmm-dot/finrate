@@ -1,0 +1,76 @@
+PASS 320 light numbers 1 stored style/count, no hidden write, readable geometry
+PASS 320 light numbers 2 stored style/count, no hidden write, readable geometry
+PASS 320 light numbers 3 stored style/count, no hidden write, readable geometry
+PASS 320 light numbers 4 stored style/count, no hidden write, readable geometry
+PASS 320 light details 1 stored style/count, no hidden write, readable geometry
+PASS 320 light details 2 stored style/count, no hidden write, readable geometry
+PASS 320 light details 3 stored style/count, no hidden write, readable geometry
+PASS 320 light details 4 stored style/count, no hidden write, readable geometry
+PASS 320 light rows 1 stored style/count, no hidden write, readable geometry
+PASS 320 light rows 2 stored style/count, no hidden write, readable geometry
+PASS 320 light rows 3 stored style/count, no hidden write, readable geometry
+PASS 320 light rows 4 stored style/count, no hidden write, readable geometry
+PASS 320 light child Done accepts account/position into parent, root Done persists
+PASS 320 light root discard and direct hold edit preserve actual return route
+PASS 320 light both entries share persistence; save error keeps draft and retries once
+PASS 320 light parent appearance draft survives home configuration without implicit save
+PASS 320 light minimum one; reload retains UI settings and all financial records
+PASS 320 dark numbers 1 stored style/count, no hidden write, readable geometry
+PASS 320 dark numbers 2 stored style/count, no hidden write, readable geometry
+PASS 320 dark numbers 3 stored style/count, no hidden write, readable geometry
+PASS 320 dark numbers 4 stored style/count, no hidden write, readable geometry
+PASS 320 dark details 1 stored style/count, no hidden write, readable geometry
+PASS 320 dark details 2 stored style/count, no hidden write, readable geometry
+PASS 320 dark details 3 stored style/count, no hidden write, readable geometry
+PASS 320 dark details 4 stored style/count, no hidden write, readable geometry
+PASS 320 dark rows 1 stored style/count, no hidden write, readable geometry
+PASS 320 dark rows 2 stored style/count, no hidden write, readable geometry
+PASS 320 dark rows 3 stored style/count, no hidden write, readable geometry
+PASS 320 dark rows 4 stored style/count, no hidden write, readable geometry
+PASS 320 dark child Done accepts account/position into parent, root Done persists
+PASS 320 dark root discard and direct hold edit preserve actual return route
+PASS 320 dark both entries share persistence; save error keeps draft and retries once
+PASS 320 dark parent appearance draft survives home configuration without implicit save
+PASS 320 dark minimum one; reload retains UI settings and all financial records
+PASS 402 light numbers 1 stored style/count, no hidden write, readable geometry
+PASS 402 light numbers 2 stored style/count, no hidden write, readable geometry
+PASS 402 light numbers 3 stored style/count, no hidden write, readable geometry
+PASS 402 light numbers 4 stored style/count, no hidden write, readable geometry
+PASS 402 light details 1 stored style/count, no hidden write, readable geometry
+PASS 402 light details 2 stored style/count, no hidden write, readable geometry
+PASS 402 light details 3 stored style/count, no hidden write, readable geometry
+PASS 402 light details 4 stored style/count, no hidden write, readable geometry
+PASS 402 light rows 1 stored style/count, no hidden write, readable geometry
+PASS 402 light rows 2 stored style/count, no hidden write, readable geometry
+PASS 402 light rows 3 stored style/count, no hidden write, readable geometry
+PASS 402 light rows 4 stored style/count, no hidden write, readable geometry
+PASS 402 light child Done accepts account/position into parent, root Done persists
+PASS 402 light root discard and direct hold edit preserve actual return route
+PASS 402 light both entries share persistence; save error keeps draft and retries once
+PASS 402 light parent appearance draft survives home configuration without implicit save
+PASS 402 light minimum one; reload retains UI settings and all financial records
+PASS light safe-area 59/34: all four tiles fit above dock in each style
+PASS 402 dark numbers 1 stored style/count, no hidden write, readable geometry
+PASS 402 dark numbers 2 stored style/count, no hidden write, readable geometry
+PASS 402 dark numbers 3 stored style/count, no hidden write, readable geometry
+PASS 402 dark numbers 4 stored style/count, no hidden write, readable geometry
+PASS 402 dark details 1 stored style/count, no hidden write, readable geometry
+PASS 402 dark details 2 stored style/count, no hidden write, readable geometry
+PASS 402 dark details 3 stored style/count, no hidden write, readable geometry
+PASS 402 dark details 4 stored style/count, no hidden write, readable geometry
+PASS 402 dark rows 1 stored style/count, no hidden write, readable geometry
+PASS 402 dark rows 2 stored style/count, no hidden write, readable geometry
+PASS 402 dark rows 3 stored style/count, no hidden write, readable geometry
+PASS 402 dark rows 4 stored style/count, no hidden write, readable geometry
+PASS 402 dark child Done accepts account/position into parent, root Done persists
+PASS 402 dark root discard and direct hold edit preserve actual return route
+PASS direct reorder retry is idempotent: failed write keeps form; no duplicate or extra removal
+PASS 402 dark both entries share persistence; save error keeps draft and retries once
+PASS 402 dark parent appearance draft survives home configuration without implicit save
+PASS 402 dark minimum one; reload retains UI settings and all financial records
+PASS dark safe-area 59/34: all four tiles fit above dock in each style
+{
+  "checks": 71,
+  "errors": [],
+  "failures": []
+}
