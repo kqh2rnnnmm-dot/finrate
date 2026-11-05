@@ -1,5 +1,7 @@
 # P3 — отчёт проверки
 
+[Pull Request №12](https://github.com/kqh2rnnnmm-dot/finrate/pull/12) открыт для приёмки, без merge/deploy.
+
 Сборка **p3-goals01 /0.3.13-p3**, основа main **3add5d9c1bf4fe74c46f2609884d8527682aa9e4**. Ветка codex/p3-goals-reserves. Код функциональности с общей формой P1.2: **5500bdaca2705c22af50802943645f6987276835**. Окончательный код приложения: **37c5dd6633cf967631af1006c87f51b1b752da43**. PR/link указаны в верхней контрольной точке; текущий HEAD проверяется в PR; документы и протоколы не являются публикацией приложения.
 
 **455/455 unit/integration и 61/61 release-заданий PASS; 0 FAIL, 0 SKIP.** [Unit TAP](../../Source/evidence/p3/unit-final.tap), [release](../../Source/evidence/p3/release-run.json), [console](../../Source/evidence/p3/final-release-console.log), [окончательная поставка](../../Source/evidence/p3/final-delivery-verification.json). Это разные уровни детализации; группы внутри browser-driver не складываются с455/61.

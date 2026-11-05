@@ -1,5 +1,7 @@
 # P3 · рабочая ветка для приёмки
 
+[Pull Request №12](https://github.com/kqh2rnnnmm-dot/finrate/pull/12) открыт, не объединён.
+
 `codex/p3-goals-reserves`, **p3-goals01 /0.3.13-p3**, от main3add5d9. Реализованы обе разновидности целей, виртуальные резервы, безопасное использование через канонические операции, единый прогноз, история/архив и реальные показатели Главной. Без merge/Pages/сброса пользовательских данных. Физический iPhone ещё не проверен.
 
 [Контрольная точка](Documents/03_CHECKPOINT.md) · [Матрица](Documents/P3/FINANCIAL_MATRIX.md) · [Проверки](Documents/P3/TEST_REPORT.md) · [Ограничения](Documents/P3/OPEN_ITEMS.md) · [iPhone](Documents/P3/IPHONE_ACCEPTANCE.md) · [Снимки](Documents/P3/SCREENSHOTS.md).
