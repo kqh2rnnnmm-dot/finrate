@@ -4,6 +4,8 @@ Main проверен: `597b2086b7ab3826f14777bc2addecd96dc5b7e3`, объеди�
 
 Ветка `codex/p1-1-scheduled-payments`, сборка `p1-1-payments01` / `0.3.10-p1.1`. Реализована безопасная основа P1.1: шаблоны/календарь, три представления, частичные/полные подтверждения, canonical expense, будущие условия, бессрочная пауза/возобновление, unpaid forecast и A2/copy integration. **P1.1 ещё не принят владельцем.**
 
+Итог: 351/351 unit/integration, 51/51 release jobs PASS, по 9 групп P1.1 в Chromium/WebKit; настоящий iPhone не проверен.
+
 Опциональная payments/version1 обоснована [аудитом](P1_1/AUDIT.md); SCHEMA5, IDB, DEK/слоты и backup/1 не меняются. Денежные формулы B1 защищены SHA с двумя явными validation/composition hooks. Старый A3 не годится как полноценный P1.1 UI/прогноз; автоматического downgrade/сброса нет.
 
 [Изменения](P1_1/CHANGELOG.md) · [проверки](P1_1/TEST_REPORT.md) · [остатки](P1_1/OPEN_ITEMS.md) · [снимки](P1_1/SCREENSHOTS.md) · [iPhone](P1_1/IPHONE_ACCEPTANCE.md).

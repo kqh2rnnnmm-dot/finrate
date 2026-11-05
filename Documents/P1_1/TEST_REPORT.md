@@ -2,6 +2,8 @@
 
 Версия `0.3.10-p1.1`, основа main597b208. Только вымышленные базы, отдельные профили/origin и локальный HTTP-сервер. Публикации нет. Chromium153 и настольный Playwright WebKit26.5 **не являются настоящим iPhone**. A2/A3 аппаратно не подтверждены.
 
+**Итог: 351/351 unit/integration и 51/51 release jobs PASS. P1.1: 9/9 групп в Chromium и 9/9 в WebKit.** HTML SHA256: `0e91d9d467cc67c9a6771bef869f0cbb6837939a39533a809c6088e67b8faa45`.
+
 ## Автоматические сценарии
 
 `node --test --test-isolation=none --test-reporter=tap tests/*.test.mjs` — итог сохраняется в [unit.log](../../Source/evidence/p1_1/regressions/patch-unit.log).

@@ -1,0 +1,142 @@
+TAP version 13
+# Subtest: P1.1 finite free-money horizons include only unpaid scheduled obligations, plans never affect actual
+not ok 1 - P1.1 finite free-money horizons include only unpaid scheduled obligations, plans never affect actual
+  ---
+  duration_ms: 6.136952
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/payments-integration.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 1000000
+    - 990000
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 990000
+  actual: 1000000
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/payments-integration.test.mjs:9:244)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: P1.1 debit partial/payment/edit/cancel keep actual plus unpaid arithmetic exact
+not ok 2 - P1.1 debit partial/payment/edit/cancel keep actual plus unpaid arithmetic exact
+  ---
+  duration_ms: 2.439453
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/payments-integration.test.mjs:10:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    996000 !== 990000
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 990000
+  actual: 996000
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/payments-integration.test.mjs:10:180)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: P1.1 credit-funded expense becomes one B1 credit obligation, not a second planned bill
+not ok 3 - P1.1 credit-funded expense becomes one B1 credit obligation, not a second planned bill
+  ---
+  duration_ms: 1.34724
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/payments-integration.test.mjs:11:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    10000 !== 20000
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 20000
+  actual: 10000
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/payments-integration.test.mjs:11:208)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P1.1 A2 financial removes payment rules/history and restores exact external copy
+not ok 4 - P1.1 A2 financial removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 374.792051
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/payments-integration.test.mjs:13:52'
+  failureType: 'testCodeFailure'
+  error: 'RESET_UNSUPPORTED'
+  code: 'RESET_UNSUPPORTED'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:6:32)
+    assertResetSupported (file:///workspace/finrate/Source/src/reset-policy.mjs:15:242)
+    resetSummary (file:///workspace/finrate/Source/src/reset-policy.mjs:18:2)
+    file:///workspace/finrate/Source/src/service.mjs:72:19
+    async FinRate.exclusive (file:///workspace/finrate/Source/src/service.mjs:12:79)
+    async file:///workspace/finrate/Source/tests/payments-integration.test.mjs:14:297
+    async fixture (file:///workspace/finrate/Source/tests/payments-integration.test.mjs:12:251)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P1.1 A2 categories removes payment rules/history and restores exact external copy
+not ok 5 - P1.1 A2 categories removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 349.190627
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/payments-integration.test.mjs:13:52'
+  failureType: 'testCodeFailure'
+  error: 'RESET_UNSUPPORTED'
+  code: 'RESET_UNSUPPORTED'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:6:32)
+    assertResetSupported (file:///workspace/finrate/Source/src/reset-policy.mjs:15:242)
+    resetSummary (file:///workspace/finrate/Source/src/reset-policy.mjs:18:2)
+    file:///workspace/finrate/Source/src/service.mjs:72:19
+    async FinRate.exclusive (file:///workspace/finrate/Source/src/service.mjs:12:79)
+    async file:///workspace/finrate/Source/tests/payments-integration.test.mjs:14:297
+    async fixture (file:///workspace/finrate/Source/tests/payments-integration.test.mjs:12:251)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P1.1 A2 all removes payment rules/history and restores exact external copy
+ok 6 - P1.1 A2 all removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 438.995553
+  type: 'test'
+  ...
+# Subtest: P1.1 existing service rejects duplicate/stale saves, rollback preserves plans, access and money
+ok 7 - P1.1 existing service rejects duplicate/stale saves, rollback preserves plans, access and money
+  ---
+  duration_ms: 262.213068
+  type: 'test'
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 2
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1498.681018

@@ -1,0 +1,274 @@
+TAP version 13
+# Subtest: P1.1 finite free-money horizons include only unpaid scheduled obligations, plans never affect actual
+ok 1 - P1.1 finite free-money horizons include only unpaid scheduled obligations, plans never affect actual
+  ---
+  duration_ms: 12.884756
+  type: 'test'
+  ...
+# Subtest: P1.1 debit partial/payment/edit/cancel keep actual plus unpaid arithmetic exact
+ok 2 - P1.1 debit partial/payment/edit/cancel keep actual plus unpaid arithmetic exact
+  ---
+  duration_ms: 3.780002
+  type: 'test'
+  ...
+# Subtest: P1.1 credit-funded expense becomes one B1 credit obligation, not a second planned bill
+ok 3 - P1.1 credit-funded expense becomes one B1 credit obligation, not a second planned bill
+  ---
+  duration_ms: 1.088528
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 financial removes payment rules/history and restores exact external copy
+ok 4 - P1.1 A2 financial removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 478.514772
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 categories removes payment rules/history and restores exact external copy
+ok 5 - P1.1 A2 categories removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 440.207642
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 all removes payment rules/history and restores exact external copy
+ok 6 - P1.1 A2 all removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 446.869702
+  type: 'test'
+  ...
+# Subtest: P1.1 existing service rejects duplicate/stale saves, rollback preserves plans, access and money
+ok 7 - P1.1 existing service rejects duplicate/stale saves, rollback preserves plans, access and money
+  ---
+  duration_ms: 269.566992
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains password and clears every financial collection atomically
+ok 8 - A2 matrix: financial retains password and clears every financial collection atomically
+  ---
+  duration_ms: 472.700055
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains pin and clears every financial collection atomically
+ok 9 - A2 matrix: financial retains pin and clears every financial collection atomically
+  ---
+  duration_ms: 649.932469
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains none and clears every financial collection atomically
+ok 10 - A2 matrix: financial retains none and clears every financial collection atomically
+  ---
+  duration_ms: 472.848078
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains password and clears every financial collection atomically
+ok 11 - A2 matrix: categories retains password and clears every financial collection atomically
+  ---
+  duration_ms: 465.898439
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains pin and clears every financial collection atomically
+ok 12 - A2 matrix: categories retains pin and clears every financial collection atomically
+  ---
+  duration_ms: 655.374958
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains none and clears every financial collection atomically
+ok 13 - A2 matrix: categories retains none and clears every financial collection atomically
+  ---
+  duration_ms: 470.015826
+  type: 'test'
+  ...
+# Subtest: A2: reset requires exact external file, primary credential, original intent and explicit confirmation
+ok 14 - A2: reset requires exact external file, primary credential, original intent and explicit confirmation
+  ---
+  duration_ms: 655.637856
+  type: 'test'
+  ...
+# Subtest: A2 all: removes both stores and protection; external file independently restores every financial value
+ok 15 - A2 all: removes both stores and protection; external file independently restores every financial value
+  ---
+  duration_ms: 439.160635
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: financial
+ok 16 - A2 stale/consumed proof cannot overwrite another tab: financial
+  ---
+  duration_ms: 539.666666
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: categories
+ok 17 - A2 stale/consumed proof cannot overwrite another tab: categories
+  ---
+  duration_ms: 526.304995
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: all
+ok 18 - A2 stale/consumed proof cannot overwrite another tab: all
+  ---
+  duration_ms: 530.941678
+  type: 'test'
+  ...
+# Subtest: A2 partial QuotaExceededError at active rolls back active/access/safety, explicit retry works once
+ok 19 - A2 partial QuotaExceededError at active rolls back active/access/safety, explicit retry works once
+  ---
+  duration_ms: 431.102731
+  type: 'test'
+  ...
+# Subtest: A2 partial QuotaExceededError at safety rolls back active/access/safety, explicit retry works once
+ok 20 - A2 partial QuotaExceededError at safety rolls back active/access/safety, explicit retry works once
+  ---
+  duration_ms: 464.507329
+  type: 'test'
+  ...
+# Subtest: A2 supported legacy migration clears without leaving migration safety
+ok 21 - A2 supported legacy migration clears without leaving migration safety
+  ---
+  duration_ms: 261.064884
+  type: 'test'
+  ...
+# Subtest: A2 unknown persistent extension blocks partial cleanup without guessing its semantics
+ok 22 - A2 unknown persistent extension blocks partial cleanup without guessing its semantics
+  ---
+  duration_ms: 353.376938
+  type: 'test'
+  ...
+# Subtest: A2 cannot authorize deletion against a corrupted persisted vault using an older valid in-memory copy
+ok 23 - A2 cannot authorize deletion against a corrupted persisted vault using an older valid in-memory copy
+  ---
+  duration_ms: 355.25472
+  type: 'test'
+  ...
+# Subtest: P1.1 optional extension leaves legacy document byte-equivalent on query
+ok 24 - P1.1 optional extension leaves legacy document byte-equivalent on query
+  ---
+  duration_ms: 0.429209
+  type: 'test'
+  ...
+# Subtest: P1.1 monthly anchor survives leap/short months, repeated queries and year boundary
+ok 25 - P1.1 monthly anchor survives leap/short months, repeated queries and year boundary
+  ---
+  duration_ms: 0.588401
+  type: 'test'
+  ...
+# Subtest: P1.1 once, weekly and yearly leap dates have stable identities
+ok 26 - P1.1 once, weekly and yearly leap dates have stable identities
+  ---
+  duration_ms: 0.556833
+  type: 'test'
+  ...
+# Subtest: P1.1 plan changes no actual money; partial and full facts each have one canonical operation/link
+ok 27 - P1.1 plan changes no actual money; partial and full facts each have one canonical operation/link
+  ---
+  duration_ms: 1.170141
+  type: 'test'
+  ...
+# Subtest: P1.1 edit/cancel canonical fact recalculates remaining, preserves link and future tariff
+ok 28 - P1.1 edit/cancel canonical fact recalculates remaining, preserves link and future tariff
+  ---
+  duration_ms: 0.902787
+  type: 'test'
+  ...
+# Subtest: P1.1 overpayment, nonpositive/unsafe amount and future actual date leave all data unchanged
+ok 29 - P1.1 overpayment, nonpositive/unsafe amount and future actual date leave all data unchanged
+  ---
+  duration_ms: 0.968326
+  type: 'test'
+  ...
+# Subtest: P1.1 invalid calendar/type/version/references fail safely
+ok 30 - P1.1 invalid calendar/type/version/references fail safely
+  ---
+  duration_ms: 0.68034
+  type: 'test'
+  ...
+# Subtest: P1.1 current month includes all unpaid arrears, not next month
+ok 31 - P1.1 current month includes all unpaid arrears, not next month
+  ---
+  duration_ms: 0.387646
+  type: 'test'
+  ...
+# Subtest: P1.1 future edit preserves due and prepaid snapshots, early payment never shifts calendar
+ok 32 - P1.1 future edit preserves due and prepaid snapshots, early payment never shifts calendar
+  ---
+  duration_ms: 1.151853
+  type: 'test'
+  ...
+# Subtest: P1.1 indefinite pause preserves arrears/partial debt and resume creates no skipped retroactive dates
+ok 33 - P1.1 indefinite pause preserves arrears/partial debt and resume creates no skipped retroactive dates
+  ---
+  duration_ms: 1.045693
+  type: 'test'
+  ...
+# Subtest: legacy records default to password without writing either row
+ok 34 - legacy records default to password without writing either row
+  ---
+  duration_ms: 192.366652
+  type: 'test'
+  ...
+# Subtest: PIN persists across service restart, leading zeros preserved; encrypted backups contain no local unlock material
+ok 35 - PIN persists across service restart, leading zeros preserved; encrypted backups contain no local unlock material
+  ---
+  duration_ms: 436.891163
+  type: 'test'
+  ...
+# Subtest: fifth PIN attempt may succeed, five wrong attempts survive reload and require primary credentials
+ok 36 - fifth PIN attempt may succeed, five wrong attempts survive reload and require primary credentials
+  ---
+  duration_ms: 1271.266835
+  type: 'test'
+  ...
+# Subtest: password change retains PIN, recovery key, all money and old backup password semantics
+ok 37 - password change retains PIN, recovery key, all money and old backup password semantics
+  ---
+  duration_ms: 854.841609
+  type: 'test'
+  ...
+# Subtest: no-check mode stores only nonextractable device wrapper; removing it restores password entry
+ok 38 - no-check mode stores only nonextractable device wrapper; removing it restores password entry
+  ---
+  duration_ms: 348.61936
+  type: 'test'
+  ...
+# Subtest: recovery credential may replace forgotten PIN without changing money
+ok 39 - recovery credential may replace forgotten PIN without changing money
+  ---
+  duration_ms: 438.939273
+  type: 'test'
+  ...
+# Subtest: wrong primary, malformed PIN and weak replacement do not change either stored row
+ok 40 - wrong primary, malformed PIN and weak replacement do not change either stored row
+  ---
+  duration_ms: 330.017511
+  type: 'test'
+  ...
+# Subtest: failure writing access row rolls back vault, history and previous access
+ok 41 - failure writing access row rolls back vault, history and previous access
+  ---
+  duration_ms: 428.628706
+  type: 'test'
+  ...
+# Subtest: restore clears local PIN/no-check but keeps original protected safety copy
+ok 42 - restore clears local PIN/no-check but keeps original protected safety copy
+  ---
+  duration_ms: 263.026184
+  type: 'test'
+  ...
+# Subtest: foreign or tampered access cannot auto-unlock and does not damage vault
+ok 43 - foreign or tampered access cannot auto-unlock and does not damage vault
+  ---
+  duration_ms: 260.779453
+  type: 'test'
+  ...
+# Subtest: stale security change cannot overwrite another tab or its device credential
+ok 44 - stale security change cannot overwrite another tab or its device credential
+  ---
+  duration_ms: 447.054115
+  type: 'test'
+  ...
+1..44
+# tests 44
+# suites 0
+# pass 44
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 14750.927964

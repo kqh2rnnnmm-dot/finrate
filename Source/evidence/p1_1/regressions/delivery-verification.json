@@ -1,0 +1,36 @@
+{
+  "build": "p1-1-payments01",
+  "base": "597b2086b7ab3826f14777bc2addecd96dc5b7e3",
+  "publicAllowlist": 7,
+  "files": {
+    "apple-touch-icon.png": "b5885c943dfa178c5b7043b35c80cb0f13b3ddc34f7f4085663bf9eac5d1e46d",
+    "icon-192.png": "02de571ad2d51f9c5ad3e7025d69c3757144326731163ecfe9a76b7fb13bcfa4",
+    "icon-512.png": "dc5ebe3e204b64dfeb6585959145d7823c5db9e9af7e3fe45ef00a43bb9a0c0b",
+    "icon.svg": "ac3bdbd1431e6d58b2da6e759e1b86e4da70a0f35fbeb173a98e001035fe6328",
+    "index.html": "0e91d9d467cc67c9a6771bef869f0cbb6837939a39533a809c6088e67b8faa45",
+    "manifest.webmanifest": "9c42fa3d8ed6be9044ed42c93ea7d45ad7d25e4efad893e4a29f17b463557e39",
+    "sw.js": "da07d0dedcb35a45dba81c47775c440977a7d792ee5160cf52e3677cf82bee9b"
+  },
+  "csp": "PASS",
+  "financialCoreUnchanged": true,
+  "keyArchitectureModulesUnchanged": true,
+  "cryptoProtocolUnchanged": true,
+  "authorizedChangedModules": [
+    "src/model.mjs",
+    "src/planning.mjs",
+    "src/reset-policy.mjs",
+    "src/reset-ui.mjs",
+    "src/app.mjs",
+    "src/ui.mjs",
+    "src/focus.mjs",
+    "src/context-menu.mjs",
+    "src/style.css",
+    "src/planning-ui.mjs",
+    "src/help.mjs",
+    "src/scheduled-payments.mjs",
+    "src/payments-ui.mjs"
+  ],
+  "schema": 5,
+  "format": "finrate-backup/1",
+  "published": false
+}
