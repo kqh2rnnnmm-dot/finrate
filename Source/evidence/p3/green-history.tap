@@ -1,0 +1,22 @@
+TAP version 13
+# Subtest: P3 common history records allocation/account/goal and actual progress, not another financial ledger
+ok 1 - P3 common history records allocation/account/goal and actual progress, not another financial ledger
+  ---
+  duration_ms: 28.099302
+  type: 'test'
+  ...
+# Subtest: P3 common closed goal history reflects real cancellation and explicit detachment
+ok 2 - P3 common closed goal history reflects real cancellation and explicit detachment
+  ---
+  duration_ms: 2.714798
+  type: 'test'
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 2
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 53.309842

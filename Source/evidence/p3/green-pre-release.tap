@@ -1,0 +1,244 @@
+TAP version 13
+# Subtest: P3 common history records allocation/account/goal and actual progress, not another financial ledger
+ok 1 - P3 common history records allocation/account/goal and actual progress, not another financial ledger
+  ---
+  duration_ms: 56.470993
+  type: 'test'
+  ...
+# Subtest: P3 common closed goal history reflects real cancellation and explicit detachment
+ok 2 - P3 common closed goal history reflects real cancellation and explicit detachment
+  ---
+  duration_ms: 3.130542
+  type: 'test'
+  ...
+# Subtest: P3 A2 financial counters/external proof/cleanup and independent exact restore
+ok 3 - P3 A2 financial counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 889.428035
+  type: 'test'
+  ...
+# Subtest: P3 A2 categories counters/external proof/cleanup and independent exact restore
+ok 4 - P3 A2 categories counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 700.760545
+  type: 'test'
+  ...
+# Subtest: P3 A2 all counters/external proof/cleanup and independent exact restore
+ok 5 - P3 A2 all counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 663.660764
+  type: 'test'
+  ...
+# Subtest: P3 quota on create/use leaves neither orphan entity nor fact; CAS and repeat request exact
+ok 6 - P3 quota on create/use leaves neither orphan entity nor fact; CAS and repeat request exact
+  ---
+  duration_ms: 386.235902
+  type: 'test'
+  ...
+# Subtest: P3 password/PIN/recovery preserve root/operations and earlier external copy
+ok 7 - P3 password/PIN/recovery preserve root/operations and earlier external copy
+  ---
+  duration_ms: 1376.231583
+  type: 'test'
+  ...
+# Subtest: P3 draft is encrypted intent, not money or goal; successful creation consumes it atomically
+ok 8 - P3 draft is encrypted intent, not money or goal; successful creation consumes it atomically
+  ---
+  duration_ms: 2.162044
+  type: 'test'
+  ...
+# Subtest: P3 genuine old P2-shaped document opens without any automatic write or extension
+ok 9 - P3 genuine old P2-shaped document opens without any automatic write or extension
+  ---
+  duration_ms: 280.710604
+  type: 'test'
+  ...
+# Subtest: P3 validly encrypted malformed linkage rejected during restore, active vault unchanged
+ok 10 - P3 validly encrypted malformed linkage rejected during restore, active vault unchanged
+  ---
+  duration_ms: 436.587875
+  type: 'test'
+  ...
+# Subtest: P3 old P2 reads are pure, optional root absent; no recommendation materializes a plan
+ok 11 - P3 old P2 reads are pure, optional root absent; no recommendation materializes a plan
+  ---
+  duration_ms: 1.150476
+  type: 'test'
+  ...
+# Subtest: P3 creation/allocate/release idempotent and changed payload IDs rejected
+ok 12 - P3 creation/allocate/release idempotent and changed payload IDs rejected
+  ---
+  duration_ms: 1.1602
+  type: 'test'
+  ...
+# Subtest: P3 progress can exceed target without auto-close; stale metadata does not overwrite
+ok 13 - P3 progress can exceed target without auto-close; stale metadata does not overwrite
+  ---
+  duration_ms: 0.955189
+  type: 'test'
+  ...
+# Subtest: P3 recommendation missing/expired date suppressed; leap calendar and inclusive remaining months explicit
+ok 14 - P3 recommendation missing/expired date suppressed; leap calendar and inclusive remaining months explicit
+  ---
+  duration_ms: 0.486698
+  type: 'test'
+  ...
+# Subtest: P3 explicit whole purchase association may consume only part of one reserve; no purchase double assignment
+ok 15 - P3 explicit whole purchase association may consume only part of one reserve; no purchase double assignment
+  ---
+  duration_ms: 1.713991
+  type: 'test'
+  ...
+# Subtest: P3 split category operation remains one whole purchase/goal; refund totals correct
+ok 16 - P3 split category operation remains one whole purchase/goal; refund totals correct
+  ---
+  duration_ms: 2.064883
+  type: 'test'
+  ...
+# Subtest: P3 edit actual amount down/up changes progress only, records consumption and reduced-net warning
+ok 17 - P3 edit actual amount down/up changes progress only, records consumption and reduced-net warning
+  ---
+  duration_ms: 1.7397
+  type: 'test'
+  ...
+# Subtest: P3 completed goal retains closed snapshot and honest subsequent refund, detached balance independent
+ok 18 - P3 completed goal retains closed snapshot and honest subsequent refund, detached balance independent
+  ---
+  duration_ms: 1.539847
+  type: 'test'
+  ...
+# Subtest: P3 P1.2 payment10000/reserve6000 then partial3000 uses one canonical expense, free invariant
+ok 19 - P3 P1.2 payment10000/reserve6000 then partial3000 uses one canonical expense, free invariant
+  ---
+  duration_ms: 6.641879
+  type: 'test'
+  ...
+# Subtest: P3 unrelated existing expense cannot settle linked payment or debt
+ok 20 - P3 unrelated existing expense cannot settle linked payment or debt
+  ---
+  duration_ms: 1.575
+  type: 'test'
+  ...
+# Subtest: P3 moved payment keeps identity; source account conflict warns and asserts no coverage
+ok 21 - P3 moved payment keeps identity; source account conflict warns and asserts no coverage
+  ---
+  duration_ms: 2.423678
+  type: 'test'
+  ...
+# Subtest: P3 no automatic transfer; archived reserve only at zero and source stays immutable
+ok 22 - P3 no automatic transfer; archived reserve only at zero and source stays immutable
+  ---
+  duration_ms: 1.360895
+  type: 'test'
+  ...
+# Subtest: P3 strict document refs/version/actions/amounts reject malformed protected payload; tiles validated
+ok 23 - P3 strict document refs/version/actions/amounts reject malformed protected payload; tiles validated
+  ---
+  duration_ms: 3.16993
+  type: 'test'
+  ...
+# Subtest: P3 aggregate reserve amounts reject unsafe restoration even if each entry safe, no account-balance fiction
+ok 24 - P3 aggregate reserve amounts reject unsafe restoration even if each entry safe, no account-balance fiction
+  ---
+  duration_ms: 0.946156
+  type: 'test'
+  ...
+# Subtest: P3 new use cannot silently spend another reserve; independent historical fact stays allowed and linkable
+ok 25 - P3 new use cannot silently spend another reserve; independent historical fact stays allowed and linkable
+  ---
+  duration_ms: 1.997301
+  type: 'test'
+  ...
+# Subtest: P3 restoration rejects contradictory active/detached usage flags
+ok 26 - P3 restoration rejects contradictory active/detached usage flags
+  ---
+  duration_ms: 1.342267
+  type: 'test'
+  ...
+# Subtest: P3 many independent goals/reserves retain exact sums/history and closure does not touch neighboring goals
+ok 27 - P3 many independent goals/reserves retain exact sums/history and closure does not touch neighboring goals
+  ---
+  duration_ms: 246.656265
+  type: 'test'
+  ...
+# Subtest: P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+ok 28 - P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+  ---
+  duration_ms: 1.383189
+  type: 'test'
+  ...
+# Subtest: P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+ok 29 - P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+  ---
+  duration_ms: 1.480777
+  type: 'test'
+  ...
+# Subtest: P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+ok 30 - P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+  ---
+  duration_ms: 2.86638
+  type: 'test'
+  ...
+# Subtest: P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+ok 31 - P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+  ---
+  duration_ms: 0.64588
+  type: 'test'
+  ...
+# Subtest: P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+ok 32 - P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+  ---
+  duration_ms: 1.330549
+  type: 'test'
+  ...
+# Subtest: P3 completed/release requires explicit residual choice, preserves cash and closed history
+ok 33 - P3 completed/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.708485
+  type: 'test'
+  ...
+# Subtest: P3 completed/detach requires explicit residual choice, preserves cash and closed history
+ok 34 - P3 completed/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.40199
+  type: 'test'
+  ...
+# Subtest: P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+ok 35 - P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.476944
+  type: 'test'
+  ...
+# Subtest: P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+ok 36 - P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.445325
+  type: 'test'
+  ...
+# Subtest: P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+ok 37 - P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+  ---
+  duration_ms: 2.741329
+  type: 'test'
+  ...
+# Subtest: P3 independent expense can underfund reserve without rewriting history or blocking fact
+ok 38 - P3 independent expense can underfund reserve without rewriting history or blocking fact
+  ---
+  duration_ms: 0.545487
+  type: 'test'
+  ...
+# Subtest: P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+ok 39 - P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+  ---
+  duration_ms: 1.273342
+  type: 'test'
+  ...
+1..39
+# tests 39
+# suites 0
+# pass 39
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5211.816433

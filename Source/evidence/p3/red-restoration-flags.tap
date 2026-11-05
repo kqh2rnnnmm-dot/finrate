@@ -1,0 +1,121 @@
+TAP version 13
+# Subtest: P3 old P2 reads are pure, optional root absent; no recommendation materializes a plan
+ok 1 - P3 old P2 reads are pure, optional root absent; no recommendation materializes a plan
+  ---
+  duration_ms: 9.249061
+  type: 'test'
+  ...
+# Subtest: P3 creation/allocate/release idempotent and changed payload IDs rejected
+ok 2 - P3 creation/allocate/release idempotent and changed payload IDs rejected
+  ---
+  duration_ms: 2.4176
+  type: 'test'
+  ...
+# Subtest: P3 progress can exceed target without auto-close; stale metadata does not overwrite
+ok 3 - P3 progress can exceed target without auto-close; stale metadata does not overwrite
+  ---
+  duration_ms: 1.072003
+  type: 'test'
+  ...
+# Subtest: P3 recommendation missing/expired date suppressed; leap calendar and inclusive remaining months explicit
+ok 4 - P3 recommendation missing/expired date suppressed; leap calendar and inclusive remaining months explicit
+  ---
+  duration_ms: 0.751608
+  type: 'test'
+  ...
+# Subtest: P3 explicit whole purchase association may consume only part of one reserve; no purchase double assignment
+ok 5 - P3 explicit whole purchase association may consume only part of one reserve; no purchase double assignment
+  ---
+  duration_ms: 4.52451
+  type: 'test'
+  ...
+# Subtest: P3 split category operation remains one whole purchase/goal; refund totals correct
+ok 6 - P3 split category operation remains one whole purchase/goal; refund totals correct
+  ---
+  duration_ms: 3.998893
+  type: 'test'
+  ...
+# Subtest: P3 edit actual amount down/up changes progress only, records consumption and reduced-net warning
+ok 7 - P3 edit actual amount down/up changes progress only, records consumption and reduced-net warning
+  ---
+  duration_ms: 2.334895
+  type: 'test'
+  ...
+# Subtest: P3 completed goal retains closed snapshot and honest subsequent refund, detached balance independent
+ok 8 - P3 completed goal retains closed snapshot and honest subsequent refund, detached balance independent
+  ---
+  duration_ms: 3.116928
+  type: 'test'
+  ...
+# Subtest: P3 P1.2 payment10000/reserve6000 then partial3000 uses one canonical expense, free invariant
+ok 9 - P3 P1.2 payment10000/reserve6000 then partial3000 uses one canonical expense, free invariant
+  ---
+  duration_ms: 5.085538
+  type: 'test'
+  ...
+# Subtest: P3 unrelated existing expense cannot settle linked payment or debt
+ok 10 - P3 unrelated existing expense cannot settle linked payment or debt
+  ---
+  duration_ms: 1.171994
+  type: 'test'
+  ...
+# Subtest: P3 moved payment keeps identity; source account conflict warns and asserts no coverage
+ok 11 - P3 moved payment keeps identity; source account conflict warns and asserts no coverage
+  ---
+  duration_ms: 2.442577
+  type: 'test'
+  ...
+# Subtest: P3 no automatic transfer; archived reserve only at zero and source stays immutable
+ok 12 - P3 no automatic transfer; archived reserve only at zero and source stays immutable
+  ---
+  duration_ms: 1.323373
+  type: 'test'
+  ...
+# Subtest: P3 strict document refs/version/actions/amounts reject malformed protected payload; tiles validated
+ok 13 - P3 strict document refs/version/actions/amounts reject malformed protected payload; tiles validated
+  ---
+  duration_ms: 3.015044
+  type: 'test'
+  ...
+# Subtest: P3 aggregate reserve amounts reject unsafe restoration even if each entry safe, no account-balance fiction
+ok 14 - P3 aggregate reserve amounts reject unsafe restoration even if each entry safe, no account-balance fiction
+  ---
+  duration_ms: 0.860362
+  type: 'test'
+  ...
+# Subtest: P3 new use cannot silently spend another reserve; independent historical fact stays allowed and linkable
+ok 15 - P3 new use cannot silently spend another reserve; independent historical fact stays allowed and linkable
+  ---
+  duration_ms: 2.66857
+  type: 'test'
+  ...
+# Subtest: P3 restoration rejects contradictory active/detached usage flags
+not ok 16 - P3 restoration rejects contradictory active/detached usage flags
+  ---
+  duration_ms: 1.192535
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals-lifecycle.test.mjs:25:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: [Function (anonymous)]
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals-lifecycle.test.mjs:25:285)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..16
+# tests 16
+# suites 0
+# pass 15
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 76.773725

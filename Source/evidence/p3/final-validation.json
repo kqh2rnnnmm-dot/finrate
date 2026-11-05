@@ -1,0 +1,26 @@
+{
+  "build": "p3-goals01",
+  "version": "0.3.13-p3",
+  "codeCommit": "37c5dd6633cf967631af1006c87f51b1b752da43",
+  "fullCandidateCommit": "5500bdaca2705c22af50802943645f6987276835",
+  "fullRunPublicHTMLSHA256": "0d77b9962c1e2f01ebd0842d78fba2eba3b86a63c27116357a374fbefb854315",
+  "finalPublicHTMLSHA256": "dc807a245625bdfbe4bea6b44ab7682f4291a2d161c604ce6857b3dac97ca2b2",
+  "fullRelease": {
+    "passed": 61,
+    "failed": 0,
+    "unitPassed": 455,
+    "unitFailed": 0
+  },
+  "afterFullApplicationDiff": [
+    "Source/src/planning-ui.mjs"
+  ],
+  "change": "reserve-aware UI caption only; exact normalized source comparison passed",
+  "financialAndProtectionSourcesUnchangedAfterFull": true,
+  "finalP3BrowserGroups": {
+    "chromium": 19,
+    "webkit": 19
+  },
+  "deliveryVerified": true,
+  "actualIPhone": false,
+  "published": false
+}

@@ -1,3 +1,13 @@
+# P3 · цели и резервы
+
+Рабочая сборка `p3-goals01` /`0.3.13-p3`, основа main3add5d9. Данные local-first, SCHEMA5/backup1, без внешних runtime-сервисов и новых зависимостей. Новый код: goals.mjs/goals-ui.mjs; существующие факты, кредитки, платежи, долги и криптография не переписаны.
+
+Из каталога Source: `npm run build`, `npm run test:p3`, `node tests/goals-browser.mjs`, `node tests/goals-upgrade-browser.mjs`, полный `FINRATE_TEST_WEBKIT=1 node tools/check-release.mjs`. Браузерные runtime/бинарники выбираются существующим tools/browser-runtime.mjs и Playwright. Команды/окружение фактического прогона в [P3 TEST_REPORT](../Documents/P3/TEST_REPORT.md). `tools/p3-screenshots.mjs` снимает дополнительные реальные экраны на вымышленных данных, не публикует их как приложение.
+
+[Приёмка](../Documents/P3/IPHONE_ACCEPTANCE.md) остаётся открытой для настоящего iPhone. Никакого merge/deploy/сброса пользовательской базы.
+
+---
+
 # Source FinRate G1
 
 `0.3.7-g1` · `g1-theme01`, основа main `025fa8e` после объединённого D1. Финансовая модель B1.2.1, схема 5 и защитные механизмы прежние. Новые optional UI preferences не требуют миграции базы.

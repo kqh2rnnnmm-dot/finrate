@@ -1,0 +1,26 @@
+{
+  "engine": "chromium",
+  "build": "p3-goals01",
+  "checks": [
+    "P2 document opens without write/root migration, empty goals and reserves; five main tabs unchanged",
+    "real UI creation +native quota rollback/double tap, reserve10000 changes free once, no canonical operations",
+    "allocate5000/release4000 no movements, same-account oversubscription and competing reserve rejected without write; credit excluded",
+    "new3000 canonical expense and reserve decrement atomic, quota no orphan, double tap one fact; purchase progress11000, free no second subtraction",
+    "existing real2000 expense links without second operation/cash movement, one whole purchase one active goal link",
+    "edit2500 and real refund500 recalc purchase progress, historical reserve consumption unchanged, no automatic reallocation",
+    "500char multiline note, scoped search same card, existing encrypted local history includes reserve-dependent goal progress",
+    "standard dirty guard and encrypted goal draft, resume/save consumes intent, no premature allocations",
+    "Home reserves and concrete selected goal use actual derived numbers; existing configuration and navigation work",
+    "explicit stable P1.2 link covers liability once; canonical partial payment2000 preserves free invariant and planned source",
+    "explicit P2 liability uses existing canonical repayment-out editor, source locked, principal never purchase/income/expense",
+    "native second-window CAS protects allocation group; reload preserves winning action",
+    "close without choice is no-op; detach choice preserves standalone reserve/cash and archive/history with close snapshot"
+  ],
+  "failures": [
+    "locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.bottom [data-page=\"Цели\"]')\u001b[22m\n\u001b[2m    - locator resolved to <button class=\"\" data-page=\"Цели\" aria-label=\"Цели\">…</button>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    29 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying click action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "version": "153.0.8010.0",
+  "allPassed": false
+}

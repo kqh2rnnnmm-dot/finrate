@@ -1,0 +1,76 @@
+TAP version 13
+# Subtest: P3 A2 financial counters/external proof/cleanup and independent exact restore
+not ok 1 - P3 A2 financial counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 382.829501
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals-integration.test.mjs:6:52'
+  failureType: 'testCodeFailure'
+  error: 'RESET_UNSUPPORTED'
+  code: 'RESET_UNSUPPORTED'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:8:32)
+    assertResetSupported (file:///workspace/finrate/Source/src/reset-policy.mjs:15:242)
+    resetSummary (file:///workspace/finrate/Source/src/reset-policy.mjs:18:2)
+    file:///workspace/finrate/Source/src/service.mjs:72:19
+    async FinRate.exclusive (file:///workspace/finrate/Source/src/service.mjs:12:79)
+    async file:///workspace/finrate/Source/tests/goals-integration.test.mjs:6:403
+    async fixture (file:///workspace/finrate/Source/tests/goals-integration.test.mjs:5:276)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: P3 A2 categories counters/external proof/cleanup and independent exact restore
+not ok 2 - P3 A2 categories counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 364.296813
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals-integration.test.mjs:6:52'
+  failureType: 'testCodeFailure'
+  error: 'RESET_UNSUPPORTED'
+  code: 'RESET_UNSUPPORTED'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:8:32)
+    assertResetSupported (file:///workspace/finrate/Source/src/reset-policy.mjs:15:242)
+    resetSummary (file:///workspace/finrate/Source/src/reset-policy.mjs:18:2)
+    file:///workspace/finrate/Source/src/service.mjs:72:19
+    async FinRate.exclusive (file:///workspace/finrate/Source/src/service.mjs:12:79)
+    async file:///workspace/finrate/Source/tests/goals-integration.test.mjs:6:403
+    async fixture (file:///workspace/finrate/Source/tests/goals-integration.test.mjs:5:276)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 A2 all counters/external proof/cleanup and independent exact restore
+not ok 3 - P3 A2 all counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 385.899261
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals-integration.test.mjs:6:52'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    undefined !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  operator: 'strictEqual'
+  stack: |-
+    file:///workspace/finrate/Source/tests/goals-integration.test.mjs:6:439
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/goals-integration.test.mjs:5:276)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..3
+# tests 3
+# suites 0
+# pass 0
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1194.527031

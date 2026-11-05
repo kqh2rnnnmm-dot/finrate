@@ -1,3 +1,4 @@
+import {validateGoals,validateGoalDraft,validateGoalTile} from './goals.mjs';
 import {validateDebts,validateDebtDraft} from './debts.mjs';
 import {validatePlanningShape} from './planning.mjs';
 import {validatePayments} from './scheduled-payments.mjs';
@@ -169,7 +170,7 @@ export function validateDocument(d){
   }for(const e of d.events){stamp(e.at);text(e.action);integer(e.revision);if(e.revision<1||e.revision>d.revision)fail('SCHEMA');}
   if(d.schema>=2){
     if(!Array.isArray(d.drafts)||d.drafts.length>200||!Array.isArray(d.operationEdits)||d.operationEdits.length>30000)fail('SIZE');unique(d.drafts);unique(d.operationEdits);
-    for(const r of d.drafts){stamp(r.updatedAt);const f=r.form;if(f?.debtAction!==undefined)validateDebtDraft(f);if(!f||typeof f!=='object'||(!['expense','income','transfer','refund'].includes(f.kind)&&!validateDebtDraft(f))||JSON.stringify(f).length>30000)fail('SCHEMA');
+    for(const r of d.drafts){stamp(r.updatedAt);const f=r.form;if(f?.goalAction!==undefined||f?.reserveId!==undefined)validateGoalDraft(f,d);if(f?.debtAction!==undefined)validateDebtDraft(f);if(!f||typeof f!=='object'||(!['expense','income','transfer','refund'].includes(f.kind)&&!validateDebtDraft(f))||JSON.stringify(f).length>30000)fail('SCHEMA');
       for(const [k,max] of [['id',100],['amount',100],['categoryId',100],['accountId',100],['toAccountId',100],['note',500],['fee',100]])if(typeof f[k]!=='string'||f[k].length>max)fail('SCHEMA');date(f.date);if(f.creditDueDate)date(f.creditDueDate);if(f.refundChoice!==undefined&&!['','keep','withdraw'].includes(f.refundChoice))fail('REFUND');if(f.refundTransferConfirmed!==undefined&&typeof f.refundTransferConfirmed!=='boolean')fail('REFUND');if(f.refundToAccountId!==undefined&&(typeof f.refundToAccountId!=='string'||f.refundToAccountId.length>100))fail('REFUND');if(f.recipient!==undefined&&(typeof f.recipient!=='string'||f.recipient.length>100))fail('SCHEMA');if(f.transferTarget!==undefined&&!['own','external'].includes(f.transferTarget))fail('TRANSFER');
       if(!Array.isArray(f.split)||f.split.length>100||typeof f.inTransit!=='boolean'||!['extra','inside'].includes(f.feeMode))fail('SCHEMA');
       for(const x of f.split){if(x.categoryId!==null||d.schema<3)text(x.categoryId);if(typeof x.amount!=='string'||x.amount.length>100)fail('SCHEMA');}
@@ -181,9 +182,9 @@ export function validateDocument(d){
     if(!Array.isArray(d.categoryEdits)||!Array.isArray(d.accountEdits)||d.categoryEdits.length>10000||d.accountEdits.length>10000)fail('SCHEMA');
     unique(d.categoryEdits);unique(d.accountEdits);for(const row of [...d.categoryEdits,...d.accountEdits]){stamp(row.at);if(!row.before||typeof row.before!=='object')fail('SCHEMA');}
     const s=d.settings;if(!['system','light','dark'].includes(s.appearance)||!['sand','plum','olive'].includes(s.topPalette)||!['sand','plum','olive'].includes(s.bottomPalette)||!Array.isArray(s.homeTiles)||s.homeTiles.length<1||s.homeTiles.length>(d.schema>=4?6:4))fail('SCHEMA');
-    for(const t of s.homeTiles){if(!t||!['expense','income','last','payment','limits','reserves','goal','debts','account','drafts',...(d.schema>=4?['credit']:[])].includes(t.metric)||t.accountId&&!d.accounts.some(a=>a.id===t.accountId))fail('SCHEMA');if(t.metric==='credit'&&(!d.accounts.some(a=>a.id===t.accountId&&a.financeType==='credit')||!['due','total'].includes(t.creditMetric)))fail('CREDIT_SETTINGS');}
+    for(const t of s.homeTiles){validateGoalTile(d,t);if(!t||!['expense','income','last','payment','limits','reserves','goal','debts','account','drafts',...(d.schema>=4?['credit']:[])].includes(t.metric)||t.accountId&&!d.accounts.some(a=>a.id===t.accountId))fail('SCHEMA');if(t.metric==='credit'&&(!d.accounts.some(a=>a.id===t.accountId&&a.financeType==='credit')||!['due','total'].includes(t.creditMetric)))fail('CREDIT_SETTINGS');}
     for(const c of d.categories)if(c.mergedInto){const target=d.categories.find(x=>x.id===c.mergedInto);if(!c.archived||!target||target.id===c.id||target.type!==c.type||!!target.parentId!==!!c.parentId)fail('SCHEMA');let next=target,seen=new Set([c.id]);while(next){if(seen.has(next.id))fail('SCHEMA');seen.add(next.id);next=d.categories.find(x=>x.id===next.mergedInto);}}
   }
-  balances(d);if(d.schema>=5){assertCreditTimeline(d);if(d.planning!==undefined)validatePlanningShape(d);validatePayments(d);validateDebts(d);}return d;
+  balances(d);if(d.schema>=5){assertCreditTimeline(d);if(d.planning!==undefined)validatePlanningShape(d);validatePayments(d);validateDebts(d);validateGoals(d);}return d;
 }
 export function changed(d,action){d.revision++;d.updatedAt=now();d.events.push({id:uid(),at:d.updatedAt,action,revision:d.revision});validateDocument(d);return d;}

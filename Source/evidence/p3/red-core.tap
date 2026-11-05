@@ -1,0 +1,236 @@
+TAP version 13
+# Subtest: P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+not ok 1 - P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+  ---
+  duration_ms: 7.582207
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:12:139)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+not ok 2 - P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+  ---
+  duration_ms: 0.86586
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:13:255)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+not ok 3 - P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+  ---
+  duration_ms: 0.183268
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:14:129)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+not ok 4 - P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+  ---
+  duration_ms: 0.213904
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:15:1'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:15:126)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+not ok 5 - P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+  ---
+  duration_ms: 0.164149
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:16:1'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:16:129)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 completed/release requires explicit residual choice, preserves cash and closed history
+not ok 6 - P3 completed/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.141604
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:17:92'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:17:222)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 completed/detach requires explicit residual choice, preserves cash and closed history
+not ok 7 - P3 completed/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.09259
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:17:92'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:17:222)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+not ok 8 - P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.093492
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:17:92'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:17:222)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+not ok 9 - P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.141925
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:17:92'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:17:222)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+not ok 10 - P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+  ---
+  duration_ms: 0.310399
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:18:1'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:18:133)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 independent expense can underfund reserve without rewriting history or blocking fact
+not ok 11 - P3 independent expense can underfund reserve without rewriting history or blocking fact
+  ---
+  duration_ms: 0.182656
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:19:1'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:19:121)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+not ok 12 - P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+  ---
+  duration_ms: 0.162746
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:20:1'
+  failureType: 'testCodeFailure'
+  error: 'P3 goals/reserves not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/goals.mjs:2:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:20:207)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 0
+# fail 12
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 49.589998
