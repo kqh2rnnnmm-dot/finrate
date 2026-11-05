@@ -1,0 +1,334 @@
+TAP version 13
+# Subtest: B1 fact excludes borrowed credit and includes only refund own money
+ok 1 - B1 fact excludes borrowed credit and includes only refund own money
+  ---
+  duration_ms: 25.404774
+  type: 'test'
+  ...
+# Subtest: B1 policy changes freeze past deadlines and history records a date only edit
+ok 2 - B1 policy changes freeze past deadlines and history records a date only edit
+  ---
+  duration_ms: 2.468877
+  type: 'test'
+  ...
+# Subtest: B1 repayment above debt and arbitrary positive reconciliation fail atomically
+ok 3 - B1 repayment above debt and arbitrary positive reconciliation fail atomically
+  ---
+  duration_ms: 2.228943
+  type: 'test'
+  ...
+# Subtest: B1 refund surplus requires explicit choice; keep is spent before borrowing
+ok 4 - B1 refund surplus requires explicit choice; keep is spent before borrowing
+  ---
+  duration_ms: 2.670572
+  type: 'test'
+  ...
+# Subtest: B1 confirmed refund withdrawal credits debit only once
+ok 5 - B1 confirmed refund withdrawal credits debit only once
+  ---
+  duration_ms: 2.746116
+  type: 'test'
+  ...
+# Subtest: B1 unconfirmed withdrawal cannot be posted and does not block later purchases
+ok 6 - B1 unconfirmed withdrawal cannot be posted and does not block later purchases
+  ---
+  duration_ms: 1.972505
+  type: 'test'
+  ...
+# Subtest: B1 refund after intervening purchase recomputes surplus
+ok 7 - B1 refund after intervening purchase recomputes surplus
+  ---
+  duration_ms: 0.808844
+  type: 'test'
+  ...
+# Subtest: B1 cancellation cannot leave an overpayment in historical sequence
+ok 8 - B1 cancellation cannot leave an overpayment in historical sequence
+  ---
+  duration_ms: 0.791909
+  type: 'test'
+  ...
+# Subtest: B1 edit revalidates intermediate debt even when final balance could appear valid
+ok 9 - B1 edit revalidates intermediate debt even when final balance could appear valid
+  ---
+  duration_ms: 2.286411
+  type: 'test'
+  ...
+# Subtest: B1 saving a date-only edit preserves money and records operation history
+ok 10 - B1 saving a date-only edit preserves money and records operation history
+  ---
+  duration_ms: 1.519019
+  type: 'test'
+  ...
+# Subtest: B1 nearest repayment amount belongs to its date, independently of current-month due
+ok 11 - B1 nearest repayment amount belongs to its date, independently of current-month due
+  ---
+  duration_ms: 0.67996
+  type: 'test'
+  ...
+# Subtest: B1 refund to debit does not repay card, and date/category limits remain enforced
+ok 12 - B1 refund to debit does not repay card, and date/category limits remain enforced
+  ---
+  duration_ms: 1.302552
+  type: 'test'
+  ...
+# Subtest: B1 cancelling withdrawn refund cannot overdraw debit after its funds were spent
+ok 13 - B1 cancelling withdrawn refund cannot overdraw debit after its funds were spent
+  ---
+  duration_ms: 3.168947
+  type: 'test'
+  ...
+# Subtest: B1 refund above a nonzero debt withdraws only the surplus
+ok 14 - B1 refund above a nonzero debt withdraws only the surplus
+  ---
+  duration_ms: 2.266331
+  type: 'test'
+  ...
+# Subtest: P2 owe existing has no cash movement; partial return excludes ordinary income/expense
+ok 15 - P2 owe existing has no cash movement; partial return excludes ordinary income/expense
+  ---
+  duration_ms: 4.110511
+  type: 'test'
+  ...
+# Subtest: P2 owed existing has no cash movement; partial return excludes ordinary income/expense
+ok 16 - P2 owed existing has no cash movement; partial return excludes ordinary income/expense
+  ---
+  duration_ms: 0.74608
+  type: 'test'
+  ...
+# Subtest: P2 owed now creates exactly one loan-out and one obligation
+ok 17 - P2 owed now creates exactly one loan-out and one obligation
+  ---
+  duration_ms: 0.399314
+  type: 'test'
+  ...
+# Subtest: P2 owe now creates exactly one loan-in and one obligation
+ok 18 - P2 owe now creates exactly one loan-in and one obligation
+  ---
+  duration_ms: 0.322338
+  type: 'test'
+  ...
+# Subtest: initial balances counted once, integer minor units
+ok 19 - initial balances counted once, integer minor units
+  ---
+  duration_ms: 0.605257
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "0.001"
+ok 20 - reject ambiguous money "0.001"
+  ---
+  duration_ms: 0.291372
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "1e2"
+ok 21 - reject ambiguous money "1e2"
+  ---
+  duration_ms: 0.054252
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "NaN"
+ok 22 - reject ambiguous money "NaN"
+  ---
+  duration_ms: 0.315407
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "12 рублей"
+ok 23 - reject ambiguous money "12 рублей"
+  ---
+  duration_ms: 0.156888
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money ""
+ok 24 - reject ambiguous money ""
+  ---
+  duration_ms: 0.04666
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "1 000"
+ok 25 - reject ambiguous money "1 000"
+  ---
+  duration_ms: 0.073081
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "1,2,3"
+ok 26 - reject ambiguous money "1,2,3"
+  ---
+  duration_ms: 0.039009
+  type: 'test'
+  ...
+# Subtest: exact decimal addition avoids binary rounding
+ok 27 - exact decimal addition avoids binary rounding
+  ---
+  duration_ms: 0.120793
+  type: 'test'
+  ...
+# Subtest: expense split debits once and attributes categories
+ok 28 - expense split debits once and attributes categories
+  ---
+  duration_ms: 0.351693
+  type: 'test'
+  ...
+# Subtest: split above total rejected before insertion
+ok 29 - split above total rejected before insertion
+  ---
+  duration_ms: 0.13919
+  type: 'test'
+  ...
+# Subtest: income credits correct account and is income
+ok 30 - income credits correct account and is income
+  ---
+  duration_ms: 0.136276
+  type: 'test'
+  ...
+# Subtest: own transfer preserves total and does not change income/expense
+ok 31 - own transfer preserves total and does not change income/expense
+  ---
+  duration_ms: 0.161424
+  type: 'test'
+  ...
+# Subtest: same-account transfer blocked
+ok 32 - same-account transfer blocked
+  ---
+  duration_ms: 0.150808
+  type: 'test'
+  ...
+# Subtest: correction changes balance without income/expense
+ok 33 - correction changes balance without income/expense
+  ---
+  duration_ms: 0.135135
+  type: 'test'
+  ...
+# Subtest: loan-out principal is cash movement but not income/expense
+ok 34 - loan-out principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.13901
+  type: 'test'
+  ...
+# Subtest: loan-in principal is cash movement but not income/expense
+ok 35 - loan-in principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.098329
+  type: 'test'
+  ...
+# Subtest: repayment-out principal is cash movement but not income/expense
+ok 36 - repayment-out principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.083046
+  type: 'test'
+  ...
+# Subtest: repayment-in principal is cash movement but not income/expense
+ok 37 - repayment-in principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.069054
+  type: 'test'
+  ...
+# Subtest: identical operation id idempotent; changed duplicate rejected
+ok 38 - identical operation id idempotent; changed duplicate rejected
+  ---
+  duration_ms: 0.23774
+  type: 'test'
+  ...
+# Subtest: refund reduces expense in refund period and cannot exceed source
+ok 39 - refund reduces expense in refund period and cannot exceed source
+  ---
+  duration_ms: 0.299313
+  type: 'test'
+  ...
+# Subtest: negative balances represent real recorded movement
+ok 40 - negative balances represent real recorded movement
+  ---
+  duration_ms: 0.241235
+  type: 'test'
+  ...
+# Subtest: credit card is not a supported new money account kind
+ok 41 - credit card is not a supported new money account kind
+  ---
+  duration_ms: 0.117598
+  type: 'test'
+  ...
+# Subtest: same category name normalized, no duplicate aliases
+ok 42 - same category name normalized, no duplicate aliases
+  ---
+  duration_ms: 0.094713
+  type: 'test'
+  ...
+# Subtest: one level of subcategories, same type
+ok 43 - one level of subcategories, same type
+  ---
+  duration_ms: 0.206402
+  type: 'test'
+  ...
+# Subtest: rename category retains past operation references
+ok 44 - rename category retains past operation references
+  ---
+  duration_ms: 0.267334
+  type: 'test'
+  ...
+# Subtest: archive preserves history; stops new use
+ok 45 - archive preserves history; stops new use
+  ---
+  duration_ms: 0.50848
+  type: 'test'
+  ...
+# Subtest: nonzero account cannot be archived
+ok 46 - nonzero account cannot be archived
+  ---
+  duration_ms: 0.133351
+  type: 'test'
+  ...
+# Subtest: available does not deduct earmarked obligation twice
+ok 47 - available does not deduct earmarked obligation twice
+  ---
+  duration_ms: 0.216588
+  type: 'test'
+  ...
+# Subtest: future obligations excluded; reserves do not create actual cash
+ok 48 - future obligations excluded; reserves do not create actual cash
+  ---
+  duration_ms: 0.079491
+  type: 'test'
+  ...
+# Subtest: over-reserved obligation does not add cash back
+ok 49 - over-reserved obligation does not add cash back
+  ---
+  duration_ms: 0.110067
+  type: 'test'
+  ...
+# Subtest: unknown account and impossible date rejected
+ok 50 - unknown account and impossible date rejected
+  ---
+  duration_ms: 0.172241
+  type: 'test'
+  ...
+# Subtest: integer overflow blocked
+ok 51 - integer overflow blocked
+  ---
+  duration_ms: 0.159892
+  type: 'test'
+  ...
+# Subtest: unsafe numbers and incompatible schemas rejected on import
+ok 52 - unsafe numbers and incompatible schemas rejected on import
+  ---
+  duration_ms: 0.202557
+  type: 'test'
+  ...
+# Subtest: valid document change log and unknown currency
+ok 53 - valid document change log and unknown currency
+  ---
+  duration_ms: 0.228466
+  type: 'test'
+  ...
+# Subtest: prototype-like ids remain normal keys without prototype pollution
+ok 54 - prototype-like ids remain normal keys without prototype pollution
+  ---
+  duration_ms: 0.281796
+  type: 'test'
+  ...
+1..54
+# tests 54
+# suites 0
+# pass 54
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 114.427712

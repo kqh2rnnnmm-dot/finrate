@@ -1,3 +1,4 @@
+import {debtExpenses} from './debts.mjs';
 import {recurringRows,validateRecurring,saveRecurring,stopRecurring} from './recurring-income.mjs';
 import {uid,copy,fail,post,totals,addSafe,changed} from './model.mjs';
 import {creditLedger,isCredit,dueForMonth} from './credit.mjs';
@@ -43,7 +44,7 @@ export function setMode(d,mode){if(!Object.hasOwn(MODES,mode))fail('PLANNING');p
 export function forecast(d,today,mode=planningMode(d),{expenses=[],reserves=[]}={}){
  if(!Object.hasOwn(MODES,mode)||!validDate(today))fail('PLANNING');const all=mode==='all',n=Number(mode.slice(1))||1,end=all?null:dueForMonth(today,n-1),C=totals(d).total,obligations=[];
  for(const [id,s]of creditLedger(d))for(const [i,l]of s.lots.entries())if(l.amount>0&&(all||l.due&&l.due<=end))obligations.push({id:'credit:'+id+':'+(l.operationId||i),date:l.due||today,amount:l.amount,real:true});
- for(const e of [...paymentExpenses(d,today,all?today:end),...expenses])if((!all||e.real)&&e.unpaid>0&&(all||e.date<=end))obligations.push({id:e.id,date:e.date,amount:e.unpaid,real:!!e.real,...(e.name?{name:e.name}:{})});
+ for(const e of [...paymentExpenses(d,today,all?today:end),...debtExpenses(d,today,end),...expenses])if((!all||e.real)&&e.unpaid>0&&(all||e.date<=end))obligations.push({id:e.id,date:e.date,amount:e.unpaid,real:!!e.real,...(e.name?{name:e.name}:{})});
  if(new Set(obligations.map(x=>x.id)).size!==obligations.length)fail('DUPLICATE');
  const excluded=reserves.filter(r=>r.exclude!==false),reserved=excluded.reduce((n,r)=>addSafe(n,r.amount),0),cover=new Map();for(const r of excluded)if(r.obligationId)cover.set(r.obligationId,addSafe(cover.get(r.obligationId)||0,r.amount));
  const dues=obligations.map(o=>({...o,net:Math.max(0,o.amount-(cover.get(o.id)||0))})),income=all||mode==='month'?[]:[...incomeOccurrences(d,today,end),...dueIncomeOccurrences(d,today).filter(x=>x.date<today&&d.planning.incomes.find(r=>r.id===x.incomeId)?.recurringVersion===2)].filter(x=>x.remaining>0),expected=income.reduce((n,x)=>addSafe(n,x.remaining),0),unpaid=dues.reduce((n,x)=>addSafe(n,x.net),0),value=addSafe(addSafe(C,-reserved),addSafe(expected,-unpaid));

@@ -1,3 +1,4 @@
+import {DEBT_KINDS,debtLink,reconcileDebts} from './debts.mjs';
 import {reconcileIncomeLinks,migratePlanningMode} from './planning.mjs';
 import {copy,uid,now,fail,post,validateDocument,addSafe,SCHEMA} from './model.mjs';
 import {creditLedger,assertSpending,assertKnownCreditDates,balanceSnapshot} from './credit.mjs';
@@ -20,7 +21,7 @@ export function migrateDocument(input){
   migratePlanningMode(d);
   try{return validateDocument(d);}catch(error){if(input.schema<SCHEMA&&String(error.code||'').startsWith('CREDIT_'))fail('B1_MIGRATION');throw error;}
 }
-function apply(d,fn){const next=copy(d),result=fn(next);reconcileIncomeLinks(next,d);validateDocument(next);Object.assign(d,next);return result;}
+function apply(d,fn){const next=copy(d),result=fn(next);reconcileIncomeLinks(next,d);reconcileDebts(next);validateDocument(next);Object.assign(d,next);return result;}
 function audit(d,o){d.operationEdits.push({id:uid(),operationId:o.id,at:now(),before:copy(o)});}
 export function checkSplit(d,input){
   if(d.schema>=3)return;
@@ -38,7 +39,7 @@ export function saveOperation(d,input,{editId=null,editBase=null,draftId=null,fe
 
     if(editId){
       const old=n.operations.find(o=>o.id===editId);if(!old||old.cancelled)fail('NOT_FOUND');
-      if(old.referenceId&&old.kind!=='refund'||!['expense','income','refund','transfer'].includes(old.kind)||old.stage==='returned')fail('EDIT_UNSUPPORTED');
+      if(old.referenceId&&old.kind!=='refund'||(!['expense','income','refund','transfer'].includes(old.kind)&&!(DEBT_KINDS[old.kind]&&debtLink(n,old.id)))||old.stage==='returned')fail('EDIT_UNSUPPORTED');
       if(!editBase||JSON.stringify(old)!==editBase)fail('EDIT_STALE');
       if(old.kind!==input.kind)fail('OPERATION_KIND');audit(n,old);
       // Preserve identity; validate the entire candidate, including existing refunds.
