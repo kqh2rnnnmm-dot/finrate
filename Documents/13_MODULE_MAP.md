@@ -1,3 +1,11 @@
+# P3 · карта модулей после слияния · 05.11.2026
+
+PR №12 объединён в `main` (`a35a3e71c156713581dc7dfac9516ae27b1cb237`), `p3-goals01` / `0.3.13-p3`. Новые `Source/src/goals.mjs` и `goals-ui.mjs` отвечают за цели, резервы и связи; точечные hooks `model/planning/planning-ui`, `ui/dashboard/home-config`, `focus/payments-ui/debts-ui`, `reset-*`, `activity-*`, FAQ и scoped CSS выполняют интеграцию. Прежние operations/credit/scheduled-payments/debts/service/store/crypto/device-access/navigation/surfaces/field-editor не переписывались. Дальнейшая работа — отдельный PATCH по утверждённой дорожной карте; он не начат.
+
+[Аудит P3](P3/AUDIT.md) · [Изменения](P3/CHANGELOG.md) · [Ограничения](P3/OPEN_ITEMS.md).
+
+---
+
 # P3 · карта модулей · 05.11.2026
 
 В рабочей ветке codex/p3-goals-reserves от main3add5d9. Не объединено/не опубликовано. p3-goals01 /0.3.13-p3.
