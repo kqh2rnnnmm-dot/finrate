@@ -106,7 +106,7 @@ export function savePaymentPlan(d,input,today){return atomic(d,n=>{
  if(old){
   const last=old.versions.at(-1);if(['name','start','repeat','amount','amountMode','method','accountId','categoryId'].every(k=>last[k]===v[k]))return false;
   if((last.start!==start||last.repeat!==v.repeat)&&p.occurrences.some(r=>r.planId===old.id&&r.date>today&&p.links.some(l=>l.occurrenceId===r.id)))fail('PAYMENT_SCHEDULE');
-  freeze(n,old,today);old.versions=old.versions.filter(r=>r.from<v.from);old.versions.push(v);return old.id;
+  freeze(n,old,today);old.history??=[];old.history.push({at:now(),action:'future',before:copy(last),after:copy(v)});old.versions=old.versions.filter(r=>r.from<v.from);old.versions.push(v);return old.id;
  }
  const id=input.id||uid();text(id);if(p.plans.some(r=>r.id===id))fail('DUPLICATE');p.plans.push({id,createdAt:now(),versions:[v],pauses:[]});return id;
 });}
