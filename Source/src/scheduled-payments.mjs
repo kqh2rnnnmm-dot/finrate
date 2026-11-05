@@ -49,10 +49,11 @@ export function validatePayments(d){
  const operations=new Map(d.operations.map(o=>[o.id,o])),linked=new Set(),paid=new Map();
  for(const l of p.links){
   if(!l||typeof l!=='object'||Array.isArray(l))fail('PAYMENT_LINK');
-  const o=operations.get(l.operationId);if(!occurrences.has(l.occurrenceId)||!o||o.kind!=='expense'||o.referenceId||linked.has(o.id)||Object.keys(l).some(k=>!['operationId','occurrenceId'].includes(k)))fail('PAYMENT_LINK');
+  const o=operations.get(l.operationId);if(!occurrences.has(l.occurrenceId)||!o||o.kind!=='expense'||o.referenceId||linked.has(o.id)||Object.keys(l).some(k=>!['operationId','occurrenceId','final'].includes(k))||l.final!==undefined&&(typeof l.final!=='boolean'||occurrences.get(l.occurrenceId).amountMode!=='variable'))fail('PAYMENT_LINK');
   linked.add(o.id);if(actual(o))paid.set(l.occurrenceId,addSafe(paid.get(l.occurrenceId)||0,o.amount));
  }
- for(const [id,amount]of paid)if(amount>occurrences.get(id).amount)fail('PAYMENT_AMOUNT');
+ for(const [id,amount]of paid){const r=occurrences.get(id),links=p.links.filter(l=>l.occurrenceId===id),extended=r.amountMode==='variable'&&links.some(l=>l.final!==undefined);if(!extended){if(amount>r.amount)fail('PAYMENT_AMOUNT');}else{const partial=links.filter(l=>l.final!==true&&actual(operations.get(l.operationId))).reduce((n,l)=>addSafe(n,operations.get(l.operationId).amount),0);if(partial>=r.amount)fail('PAYMENT_ESTIMATE');}}
+
 }
 
 function scheduledDates(v,from,to){
@@ -77,7 +78,7 @@ export function paymentOccurrences(d,from,to){
   for(const day of scheduledDates(v,from,end)){const id=plan.id+':'+day;if(!rows.has(id)&&!paused(plan,day)){if(rows.size>=MAX_ROWS)fail('SIZE');rows.set(id,row(plan,v,day));}}
  }
  const paid=new Map(),ops=new Map(d.operations.map(o=>[o.id,o]));for(const l of p.links){const o=ops.get(l.operationId);if(actual(o))paid.set(l.occurrenceId,addSafe(paid.get(l.occurrenceId)||0,o.amount));}
- return [...rows.values()].map(r=>{const amountPaid=paid.get(r.id)||0;return {...r,paid:amountPaid,remaining:Math.max(0,r.amount-amountPaid),status:amountPaid>=r.amount?'paid':amountPaid?'partial':'open'};}).sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id));
+ return [...rows.values()].map(r=>{const amountPaid=paid.get(r.id)||0;const links=p.links.filter(l=>l.occurrenceId===r.id),extended=r.amountMode==='variable'&&links.some(l=>l.final!==undefined),closed=extended?links.some(l=>l.final===true&&actual(ops.get(l.operationId))):amountPaid>=r.amount;return {...r,paid:amountPaid,remaining:closed?0:Math.max(0,r.amount-amountPaid),status:closed?'paid':amountPaid?'partial':'open'};}).sort((a,b)=>a.date.localeCompare(b.date)||a.id.localeCompare(b.id));
 }
 export function paymentOccurrence(d,id){
  text(id,150);const split=id.lastIndexOf(':'),day=id.slice(split+1);date(day);const r=paymentOccurrences(d,day,day).find(r=>r.id===id);if(!r)fail('PAYMENT_CHANGED');return r;
@@ -112,10 +113,15 @@ export function setPaymentPaused(d,id,pause,today){return atomic(d,n=>{
  else if(open.from>=today)plan.pauses=plan.pauses.filter(p=>p!==open);else open.to=today;
  return true;
 });}
-export function confirmPayment(d,id,input,today,{draftId=null}={}){return atomic(d,n=>{
+export function confirmPayment(d,id,input,today,{draftId=null,final,estimate}={}){return atomic(d,n=>{
  date(today);if(!input.id)fail('PAYMENT');const existing=n.operations.find(o=>o.id===input.id);
  if(existing){if(n.payments.links.some(l=>l.operationId===input.id&&l.occurrenceId===id))return false;fail('DUPLICATE');}
- const r=paymentOccurrence(n,id);integer(input.amount);date(input.date);if(input.date>today)fail('PAYMENT_DATE');if(input.amount>r.remaining)fail('PAYMENT_AMOUNT');
+ const r=paymentOccurrence(n,id);integer(input.amount);date(input.date);if(input.date>today)fail('PAYMENT_DATE');if(r.status==='paid')fail('PAYMENT_CHANGED');if(final!==undefined&&(r.amountMode!=='variable'||typeof final!=='boolean'))fail('PAYMENT');if((r.amountMode==='fixed'||final===undefined)&&input.amount>r.remaining)fail('PAYMENT_AMOUNT');
  if(!n.payments.occurrences.some(o=>o.id===id)){const {paid,remaining,status,...snapshot}=r;n.payments.occurrences.push(snapshot);}
- saveOperation(n,{...input,kind:'expense',referenceId:null},{draftId});n.payments.links.push({operationId:input.id,occurrenceId:id});return true;
+ const snapshot=n.payments.occurrences.find(o=>o.id===id);if(estimate!==undefined){if(r.amountMode!=='variable')fail('PAYMENT');integer(estimate);if(estimate<=r.paid+(final===false?input.amount:0))fail('PAYMENT_ESTIMATE');snapshot.amount=estimate;}
+ saveOperation(n,{...input,kind:'expense',referenceId:null},{draftId});n.payments.links.push({operationId:input.id,occurrenceId:id,...(final!==undefined?{final}:{})});return true;
 });}
+
+// Editing a linked variable fact uses the same operation engine and keeps its final choice attached to that fact.
+export function paymentLinkInfo(d,operationId){const l=data(d).links.find(l=>l.operationId===operationId);if(!l)return null;const r=paymentOccurrence(d,l.occurrenceId),links=data(d).links.filter(x=>x.occurrenceId===r.id),ops=new Map(d.operations.map(o=>[o.id,o])),extended=links.some(x=>x.final!==undefined),active=links.filter(x=>actual(ops.get(x.operationId))).sort((a,b)=>(ops.get(a.operationId).sequence||0)-(ops.get(b.operationId).sequence||0));return {occurrence:r,final:l.final??(!extended&&r.status==='paid'&&active.at(-1)?.operationId===operationId)};}
+export function editPayment(d,operationId,input,today,{editBase,final,estimate}={}){return atomic(d,n=>{date(today);const info=paymentLinkInfo(n,operationId);if(!info||info.occurrence.amountMode!=='variable')fail('PAYMENT_LINK');if(typeof final!=='boolean')fail('PAYMENT');if(input.date>today)fail('PAYMENT_DATE');const l=n.payments.links.find(x=>x.operationId===operationId),r=n.payments.occurrences.find(x=>x.id===l.occurrenceId);l.final=final;if(estimate!==undefined){integer(estimate);r.amount=estimate;}saveOperation(n,{...input,kind:'expense',referenceId:null},{editId:operationId,editBase});return true;});}
