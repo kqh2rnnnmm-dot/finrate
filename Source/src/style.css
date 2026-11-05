@@ -993,3 +993,13 @@ input,textarea,[contenteditable=true],.full-note,.activity-comparison span {
 /* P2: constrain only debt-owned lists; reuse peer spacing and existing cards. */
 [data-debt-list] { display:grid; grid-template-columns:minmax(0,1fr); gap:var(--peer-gap); }
 [data-debt-list]>.list-button { min-width:0; margin:0; }
+
+/* P3: existing surfaces and tokens, scoped goal/reserve content only. */
+[data-goals-ui] { min-width:0; }
+[data-goals-ui] .goal-list { display:grid; grid-template-columns:minmax(0,1fr); gap:var(--peer-gap); min-width:0; }
+[data-goals-ui] .goal-list > * { min-width:0; margin:0; }
+[data-goals-ui] .goal-list small { min-width:0; overflow-wrap:anywhere; }
+[data-goals-ui] .goal-name { display:block; min-width:0; max-width:100%; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
+[data-goals-ui] .goal-progress { display:block; width:100%; height:.5rem; accent-color:var(--blue); }
+[data-goals-ui] .goal-money { white-space:nowrap; max-width:100%; }
+[data-goals-ui] p,[data-goals-ui] dd { overflow-wrap:anywhere; }

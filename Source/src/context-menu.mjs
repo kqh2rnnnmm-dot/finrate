@@ -36,7 +36,7 @@ export function installContextMenus({resolve,blocked=()=>false}){
   if(pointer){held={id:pointer.id,x:pointer.x,y:pointer.y,el};try{(native.parentElement||document.body).setPointerCapture(pointer.id);}catch{/* Mouse/keyboard selection still works if the platform cancelled the touch. */}}
   suppressUntil=performance.now()+400;document.dispatchEvent(new Event('finrate-scroll-reset'));
  }
- const target=e=>e.target.closest('[data-debt-view],[data-personal-debt],[data-payment-plan],[data-income-source],[data-operation],[data-account-view],[data-category-view],[data-category-expand],[data-draft],[data-child],[data-cat-operation],[data-account-operation],[data-metric-operation],[data-result-kind],[data-tile],[data-dock-action]');
+ const target=e=>e.target.closest('[data-goal-view],[data-reserve-view],[data-debt-view],[data-personal-debt],[data-payment-plan],[data-income-source],[data-operation],[data-account-view],[data-category-view],[data-category-expand],[data-draft],[data-child],[data-cat-operation],[data-account-operation],[data-metric-operation],[data-result-kind],[data-tile],[data-dock-action]');
  document.addEventListener('pointerdown',e=>{
   suppressUntil=0;
   if(dialog||blocked()||e.isPrimary===false||e.button!==0)return;resetHold();const el=target(e),config=el&&resolve(el);if(!config)return;

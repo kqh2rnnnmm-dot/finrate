@@ -3,8 +3,8 @@
 - [x] 1. Addressed audit/baseline; RED/GREEN allocation/release/forecast and arithmetic (deps:none).
 - [x] 2. Canonical use/lifecycle/refunds/closure/coverage/draft invariants (deps1).
 - [x] 3. A2/crypto/native-storage integration and old P2 compatibility (deps1–2).
-- [ ] 4. Shared goal/reserve UI/cards/forms/activity (deps1–3).
-- [ ] 5. Existing operation/payment/debt editors, Home config, search/context/back (deps4).
+- [x] 4. Shared goal/reserve UI/cards/forms/activity (deps1–3).
+- [x] 5. Existing operation/payment/debt editors, Home config, search/context/back (deps4).
 - [ ] 6. Chromium/WebKit full matrix, offline/backup/upgrade/CAS/quota, full unit/release and scope/security audit (deps1–5).
 - [ ] 7. Final reports/FAQ/checkpoint/decisions/map/screens/iPhone, commit/push/one PR (deps6).
 
