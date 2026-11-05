@@ -1,0 +1,44 @@
+TAP version 13
+# Subtest: P2 owe aggregate remainder cannot exceed safe integer range even when each debt is valid
+not ok 1 - P2 owe aggregate remainder cannot exceed safe integer range even when each debt is valid
+  ---
+  duration_ms: 9.025181
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/debts.test.mjs:18:39'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: [Function (anonymous)]
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/debts.test.mjs:18:324)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: P2 owed aggregate remainder cannot exceed safe integer range even when each debt is valid
+not ok 2 - P2 owed aggregate remainder cannot exceed safe integer range even when each debt is valid
+  ---
+  duration_ms: 0.659939
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/debts.test.mjs:18:39'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: [Function (anonymous)]
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/debts.test.mjs:18:324)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 0
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 36.470732
