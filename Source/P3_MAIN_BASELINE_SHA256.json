@@ -62,5 +62,6 @@
     "src/ui-settings.mjs": "4a970245283d3d73ab69b5c75cbed47b2d5ec0d946d641e101f101cd4aa72d29",
     "src/ui-values.mjs": "1cf95d082a5d1c283b9092cfed30e72e8d90a8e1d91a4a5c564d0ce4a982d38c",
     "src/ui.mjs": "d8ddac50696346fbcf87be4b2a2d92158b1b093ef1793f932fc5d09334d0fe7c"
-  }
+  },
+  "testAssertions": {}
 }

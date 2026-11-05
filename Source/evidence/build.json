@@ -1,8 +1,8 @@
 {
-  "build": "p2-debts01",
+  "build": "p3-goals01",
   "shellFiles": 6,
-  "shellBytes": 698801,
-  "scriptHash": "yAgkkchMQSzgo+ZqSR8fysUw0nJ3f0ctj4Q7PwLeKgw=",
+  "shellBytes": 764444,
+  "scriptHash": "V3QeEqjNBoa2Yxbm5P1JX49kNoQlj+cY4HrgNYRC/9s=",
   "externalRuntimeDependencies": 0,
   "published": false,
   "warnings": []
