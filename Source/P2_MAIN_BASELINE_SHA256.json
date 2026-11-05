@@ -60,5 +60,8 @@
     "src/surfaces.mjs": "a146c9e8da7725f72c86b41b0d5abaa9a20d155bd3c74b8ee04173494e672c12",
     "src/chrome.mjs": "ceecb58ef1e3a0671fdf39387187319e8a580df662b5d3fa8a159f420fa1d238",
     "src/help.mjs": "58f8925e87f1568fe3fb350a4263ecbceee57eef201a00065ca4128d1b8b2e50"
+  },
+  "testAssertions": {
+    "tests/payments-browser.mjs": "74df18f0b8648623e07a579ef8bfa833124fc3e724dc1f4729de65170233bfdc"
   }
 }
