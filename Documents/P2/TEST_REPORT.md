@@ -1,5 +1,7 @@
 # P2 — отчёт проверки
 
+[Pull Request №11](https://github.com/kqh2rnnnmm-dot/finrate/pull/11) открыт для приёмки; не объединён и не опубликован.
+
 Сборка `p2-debts01` / `0.3.12-p2`, код приложения `e6b3ed1bff058ad92f8fcdd72a9baac48d3d91da`, основа main d1a415a. Chromium и Playwright WebKit 26.5; localhost, отдельные вымышленные хранилища, без публикации и аппаратного iPhone.
 
 **Итог: 415/415 unit/integration, 57/57 release-заданий PASS; 0 FAIL, 0 SKIP в заключительном прогоне.** [Машинный протокол](../../Source/evidence/p2/release-run.json), [unit TAP](../../Source/evidence/p2/unit-final.tap), [console](../../Source/evidence/p2/final-release-console.log), [проверка поставки](../../Source/evidence/p2/delivery-verification.json). Все job-логи и обновлённые отчёты прежних пакетов сохранены в Source/evidence/p2/regressions; исторические артефакты в исходных каталогах восстановлены без перезаписи.
