@@ -9,10 +9,10 @@ not ok 1 - P1.1 finite free-money horizons include only unpaid scheduled obligat
   error: |-
     Expected values to be strictly equal:
     + actual - expected
-    
+
     + 1000000
     - 990000
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 990000
@@ -34,9 +34,9 @@ not ok 2 - P1.1 debit partial/payment/edit/cancel keep actual plus unpaid arithm
   failureType: 'testCodeFailure'
   error: |-
     Expected values to be strictly equal:
-    
+
     996000 !== 990000
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 990000
@@ -60,9 +60,9 @@ not ok 3 - P1.1 credit-funded expense becomes one B1 credit obligation, not a se
   failureType: 'testCodeFailure'
   error: |-
     Expected values to be strictly equal:
-    
+
     10000 !== 20000
-    
+
   code: 'ERR_ASSERTION'
   name: 'AssertionError'
   expected: 20000
