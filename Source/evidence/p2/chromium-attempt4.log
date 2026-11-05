@@ -1,0 +1,27 @@
+PASS extra menu, two directions, existing10000 no movement, 500char note reading, five main tabs unchanged
+PASS native IndexedDB quota rollback and explicit double-tap retry;3000 partial leaves7000; free invariant and ordinary expense0
+PASS due personal repayment separate canonical source; excluded from P1.2 bulk expense selection
+PASS same linked operation card edit/cancel, canonical audit and debt recalculation
+PASS owed8000 receives3000 leaves5000 not income; now7000 both directions exactly one canonical loan each, credit excluded
+PASS explicit historical loan/repayment links create no cash movement or duplicate, preserved original kinds
+PASS guard save draft, resume via existing drafts and atomic consume, no pre-save obligation/movement
+PASS local search same card; full settlement/archive; cancelled final canonical operation reopens and unarchives
+PASS native IDB peer CAS rejects stale repayment without partial debt/cash writes; reload retains winning facts
+FAIL The expression evaluated to a falsy value:
+
+  assert.ok(await top().evaluate(el=>el.scrollWidth<=el.clientWidth+1&&el.querySelector('.sheet-body').scrollWidth<=el.querySelector('.sheet-body').clientWidth+1))
+ {
+  page: 'Долги',
+  dialogs: [
+    'Я должен',
+    'Вымышленный контрагент ДлинноеИмяДлинноеИмяДлинноеИмяДлинноеИмяДлинноеИмяДлинноеИмя',
+    'Движения и история'
+  ],
+  errors: [ '' ]
+}
+AssertionError [ERR_ASSERTION]: The expression evaluated to a falsy value:
+
+  assert.ok(await top().evaluate(el=>el.scrollWidth<=el.clientWidth+1&&el.querySelector('.sheet-body').scrollWidth<=el.querySelector('.sheet-body').clientWidth+1))
+
+    at file:///workspace/finrate/Source/tests/debts-browser.mjs:53:484
+{"checks":9,"failures":["The expression evaluated to a falsy value:\n\n  assert.ok(await top().evaluate(el=>el.scrollWidth<=el.clientWidth+1&&el.querySelector('.sheet-body').scrollWidth<=el.querySelector('.sheet-body').clientWidth+1))\n"]}

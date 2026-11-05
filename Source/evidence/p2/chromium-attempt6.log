@@ -1,0 +1,11 @@
+FAIL locator.elementHandle: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('.feedback-notice:visible').first()[22m
+ { geometry: [], page: undefined, dialogs: [], errors: [] }
+locator.elementHandle: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('.feedback-notice:visible').first()[22m
+
+    at quiet (/workspace/finrate/Source/tests/debts-browser.mjs:20:111)
+    at /workspace/finrate/Source/tests/debts-browser.mjs:35:1145
+{"checks":0,"failures":["locator.elementHandle: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.feedback-notice:visible').first()\u001b[22m\n"]}

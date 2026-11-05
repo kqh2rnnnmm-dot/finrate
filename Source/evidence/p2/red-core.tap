@@ -1,0 +1,84 @@
+TAP version 13
+# Subtest: P2 owe existing has no cash movement; partial return excludes ordinary income/expense
+not ok 1 - P2 owe existing has no cash movement; partial return excludes ordinary income/expense
+  ---
+  duration_ms: 8.841693
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/debts.test.mjs:4:125'
+  failureType: 'testCodeFailure'
+  error: 'P2 debt card is not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.createDebt (file:///workspace/finrate/Source/src/debts.mjs:1:36)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/debts.test.mjs:4:270)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: P2 owed existing has no cash movement; partial return excludes ordinary income/expense
+not ok 2 - P2 owed existing has no cash movement; partial return excludes ordinary income/expense
+  ---
+  duration_ms: 0.129366
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/debts.test.mjs:4:125'
+  failureType: 'testCodeFailure'
+  error: 'P2 debt card is not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.createDebt (file:///workspace/finrate/Source/src/debts.mjs:1:36)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/debts.test.mjs:4:270)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: P2 owed now creates exactly one loan-out and one obligation
+not ok 3 - P2 owed now creates exactly one loan-out and one obligation
+  ---
+  duration_ms: 0.308867
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/debts.test.mjs:5:80'
+  failureType: 'testCodeFailure'
+  error: 'P2 debt card is not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.createDebt (file:///workspace/finrate/Source/src/debts.mjs:1:36)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/debts.test.mjs:5:181)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P2 owe now creates exactly one loan-in and one obligation
+not ok 4 - P2 owe now creates exactly one loan-in and one obligation
+  ---
+  duration_ms: 0.112229
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/debts.test.mjs:5:80'
+  failureType: 'testCodeFailure'
+  error: 'P2 debt card is not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.createDebt (file:///workspace/finrate/Source/src/debts.mjs:1:36)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/debts.test.mjs:5:181)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 0
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 38.111429

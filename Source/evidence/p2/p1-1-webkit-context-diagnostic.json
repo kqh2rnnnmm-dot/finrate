@@ -1,0 +1,34 @@
+{
+  "engine": "webkit",
+  "checks": [
+    "create via existing name/money/category/account editors; plan causes no debit",
+    "partial with double submit: one canonical expense/link and remainder",
+    "existing operation edit/cancel recalculates same payment, no parallel journal",
+    "native IndexedDB quota abort leaves vault/money/link/form intact; explicit retry only",
+    "full confirmation closes obligation; paid list uses canonical records including cancellation trace",
+    "shared context pause/resume skips February, preserves original month-end anchor",
+    "3 payment views × 7 sizes × 4 theme/palette combinations; 320px large-text check; existing confirmation surface screenshots",
+    "real encrypted download and independent native-file UI restore preserve exact document/plans/snapshots/links",
+    "service-worker cold reload/unlock with HTTP server refusing every request (not iPhone airplane mode)"
+  ],
+  "failures": [
+    "Expected values to be strictly deep-equal:\n+ actual - expected\n\n+ [\n+   '/127.0.0.1:39781/sw.js due to access control checks.'\n+ ]\n- []\n"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "version": "26.5",
+  "unexpectedErrorContext": [
+    {
+      "page": "primary",
+      "forcingOffline": true,
+      "refused": []
+    }
+  ],
+  "forcedOfflineUpdateRejected": true,
+  "diagnostic": {
+    "view": "planned",
+    "rows": [],
+    "errors": []
+  },
+  "allPassed": false
+}

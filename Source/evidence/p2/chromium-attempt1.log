@@ -1,0 +1,10 @@
+FAIL locator.click: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('dialog[open]').last().locator('.sheet-back')[22m
+ { page: 'Долги', dialogs: [ 'Примечание' ], errors: [ '', '' ] }
+locator.click: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('dialog[open]').last().locator('.sheet-back')[22m
+
+    at /workspace/finrate/Source/tests/debts-browser.mjs:36:420
+{"checks":0,"failures":["locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('dialog[open]').last().locator('.sheet-back')\u001b[22m\n"]}

@@ -1,0 +1,5 @@
+FAIL locator.elementHandle: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('.feedback-notice:visible').first()[22m
+     at /workspace/finrate/Source/tests/debts-upgrade-browser.mjs:23:711
+{"checks":0,"failures":["locator.elementHandle: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.feedback-notice:visible').first()\u001b[22m\n"]}

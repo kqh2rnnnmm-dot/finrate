@@ -1,0 +1,22 @@
+PASS blue plus → one-time type chooser → full expense form; no old buttons or inline typing
+PASS summary-only split overview and direct main date
+PASS flat part uses parent and optional child; exact amount accepted only by shared Done
+PASS cross-category and same-parent subcategory allocation share one flat editor and grouped disclosure
+PASS Back discards pending part; one explicit purchase save preserves exact allocations and uncategorized residue
+PASS reload/edit retains flat data; reducing a part changes only visible uncategorized residue, never another part or debit
+PASS light 320 home fits, symmetric editor, income save
+PASS light 402 home fits, symmetric editor, income save
+PASS light 430 home fits, symmetric editor, income save
+PASS light 1280 home fits, symmetric editor, income save
+PASS dark 320 home fits, symmetric editor, income save
+PASS dark 402 home fits, symmetric editor, income save
+PASS dark 430 home fits, symmetric editor, income save
+PASS dark 1280 home fits, symmetric editor, income save
+PASS transfer slider preserves established account and fee mathematics
+PASS commission first uses explicit Done; transfer and linked fee post once through unchanged financial service
+PASS offline reload preserves exact encrypted document
+{
+  "passed": 17,
+  "failures": [],
+  "pageErrors": []
+}

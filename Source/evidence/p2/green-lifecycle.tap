@@ -1,0 +1,442 @@
+TAP version 13
+# Subtest: B1 fact excludes borrowed credit and includes only refund own money
+ok 1 - B1 fact excludes borrowed credit and includes only refund own money
+  ---
+  duration_ms: 16.052247
+  type: 'test'
+  ...
+# Subtest: B1 policy changes freeze past deadlines and history records a date only edit
+ok 2 - B1 policy changes freeze past deadlines and history records a date only edit
+  ---
+  duration_ms: 2.298489
+  type: 'test'
+  ...
+# Subtest: B1 repayment above debt and arbitrary positive reconciliation fail atomically
+ok 3 - B1 repayment above debt and arbitrary positive reconciliation fail atomically
+  ---
+  duration_ms: 1.432519
+  type: 'test'
+  ...
+# Subtest: B1 refund surplus requires explicit choice; keep is spent before borrowing
+ok 4 - B1 refund surplus requires explicit choice; keep is spent before borrowing
+  ---
+  duration_ms: 2.323106
+  type: 'test'
+  ...
+# Subtest: B1 confirmed refund withdrawal credits debit only once
+ok 5 - B1 confirmed refund withdrawal credits debit only once
+  ---
+  duration_ms: 1.391386
+  type: 'test'
+  ...
+# Subtest: B1 unconfirmed withdrawal cannot be posted and does not block later purchases
+ok 6 - B1 unconfirmed withdrawal cannot be posted and does not block later purchases
+  ---
+  duration_ms: 0.862034
+  type: 'test'
+  ...
+# Subtest: B1 refund after intervening purchase recomputes surplus
+ok 7 - B1 refund after intervening purchase recomputes surplus
+  ---
+  duration_ms: 0.77317
+  type: 'test'
+  ...
+# Subtest: B1 cancellation cannot leave an overpayment in historical sequence
+ok 8 - B1 cancellation cannot leave an overpayment in historical sequence
+  ---
+  duration_ms: 0.915746
+  type: 'test'
+  ...
+# Subtest: B1 edit revalidates intermediate debt even when final balance could appear valid
+ok 9 - B1 edit revalidates intermediate debt even when final balance could appear valid
+  ---
+  duration_ms: 1.263974
+  type: 'test'
+  ...
+# Subtest: B1 saving a date-only edit preserves money and records operation history
+ok 10 - B1 saving a date-only edit preserves money and records operation history
+  ---
+  duration_ms: 0.81944
+  type: 'test'
+  ...
+# Subtest: B1 nearest repayment amount belongs to its date, independently of current-month due
+ok 11 - B1 nearest repayment amount belongs to its date, independently of current-month due
+  ---
+  duration_ms: 0.441748
+  type: 'test'
+  ...
+# Subtest: B1 refund to debit does not repay card, and date/category limits remain enforced
+ok 12 - B1 refund to debit does not repay card, and date/category limits remain enforced
+  ---
+  duration_ms: 0.663334
+  type: 'test'
+  ...
+# Subtest: B1 cancelling withdrawn refund cannot overdraw debit after its funds were spent
+ok 13 - B1 cancelling withdrawn refund cannot overdraw debit after its funds were spent
+  ---
+  duration_ms: 1.81696
+  type: 'test'
+  ...
+# Subtest: B1 refund above a nonzero debt withdraws only the surplus
+ok 14 - B1 refund above a nonzero debt withdraws only the surplus
+  ---
+  duration_ms: 1.021015
+  type: 'test'
+  ...
+# Subtest: P2 owe existing has no cash movement; partial return excludes ordinary income/expense
+ok 15 - P2 owe existing has no cash movement; partial return excludes ordinary income/expense
+  ---
+  duration_ms: 1.778872
+  type: 'test'
+  ...
+# Subtest: P2 owed existing has no cash movement; partial return excludes ordinary income/expense
+ok 16 - P2 owed existing has no cash movement; partial return excludes ordinary income/expense
+  ---
+  duration_ms: 0.727121
+  type: 'test'
+  ...
+# Subtest: P2 owed now creates exactly one loan-out and one obligation
+ok 17 - P2 owed now creates exactly one loan-out and one obligation
+  ---
+  duration_ms: 0.38949
+  type: 'test'
+  ...
+# Subtest: P2 owe now creates exactly one loan-in and one obligation
+ok 18 - P2 owe now creates exactly one loan-in and one obligation
+  ---
+  duration_ms: 0.374336
+  type: 'test'
+  ...
+# Subtest: P2 repayments edit/cancel through canonical operations recompute remainder and keep audit
+ok 19 - P2 repayments edit/cancel through canonical operations recompute remainder and keep audit
+  ---
+  duration_ms: 1.098733
+  type: 'test'
+  ...
+# Subtest: P2 repeated creation and repayment request IDs never duplicate cash
+ok 20 - P2 repeated creation and repayment request IDs never duplicate cash
+  ---
+  duration_ms: 0.76633
+  type: 'test'
+  ...
+# Subtest: P2 zero/negative/unsafe/overpay/wrong account and credit account fail atomically
+ok 21 - P2 zero/negative/unsafe/overpay/wrong account and credit account fail atomically
+  ---
+  duration_ms: 1.231314
+  type: 'test'
+  ...
+# Subtest: P2 fully repaid archive cannot hide reopened balance after fact cancellation or principal edit
+ok 22 - P2 fully repaid archive cannot hide reopened balance after fact cancellation or principal edit
+  ---
+  duration_ms: 1.611669
+  type: 'test'
+  ...
+# Subtest: P2 existing obligation edit cannot undercut repayments or change direction with facts
+ok 23 - P2 existing obligation edit cannot undercut repayments or change direction with facts
+  ---
+  duration_ms: 1.573241
+  type: 'test'
+  ...
+# Subtest: P2 source fact edits derive amount/date; cancellation with active returns rejected
+ok 24 - P2 source fact edits derive amount/date; cancellation with active returns rejected
+  ---
+  duration_ms: 2.102963
+  type: 'test'
+  ...
+# Subtest: P2 historic canonical loan and repayment link explicitly without another posting; external transfer never reclassified
+ok 25 - P2 historic canonical loan and repayment link explicitly without another posting; external transfer never reclassified
+  ---
+  duration_ms: 0.821804
+  type: 'test'
+  ...
+# Subtest: P2 queries leave old P1.2 documents without debt extension or writes
+ok 26 - P2 queries leave old P1.2 documents without debt extension or writes
+  ---
+  duration_ms: 0.291191
+  type: 'test'
+  ...
+# Subtest: initial balances counted once, integer minor units
+ok 27 - initial balances counted once, integer minor units
+  ---
+  duration_ms: 0.27721
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "0.001"
+ok 28 - reject ambiguous money "0.001"
+  ---
+  duration_ms: 0.198381
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "1e2"
+ok 29 - reject ambiguous money "1e2"
+  ---
+  duration_ms: 0.049585
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "NaN"
+ok 30 - reject ambiguous money "NaN"
+  ---
+  duration_ms: 0.035143
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "12 рублей"
+ok 31 - reject ambiguous money "12 рублей"
+  ---
+  duration_ms: 0.064147
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money ""
+ok 32 - reject ambiguous money ""
+  ---
+  duration_ms: 0.03311
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "1 000"
+ok 33 - reject ambiguous money "1 000"
+  ---
+  duration_ms: 0.028233
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "1,2,3"
+ok 34 - reject ambiguous money "1,2,3"
+  ---
+  duration_ms: 0.058108
+  type: 'test'
+  ...
+# Subtest: exact decimal addition avoids binary rounding
+ok 35 - exact decimal addition avoids binary rounding
+  ---
+  duration_ms: 0.095214
+  type: 'test'
+  ...
+# Subtest: expense split debits once and attributes categories
+ok 36 - expense split debits once and attributes categories
+  ---
+  duration_ms: 0.255758
+  type: 'test'
+  ...
+# Subtest: split above total rejected before insertion
+ok 37 - split above total rejected before insertion
+  ---
+  duration_ms: 0.226573
+  type: 'test'
+  ...
+# Subtest: income credits correct account and is income
+ok 38 - income credits correct account and is income
+  ---
+  duration_ms: 0.151379
+  type: 'test'
+  ...
+# Subtest: own transfer preserves total and does not change income/expense
+ok 39 - own transfer preserves total and does not change income/expense
+  ---
+  duration_ms: 0.134423
+  type: 'test'
+  ...
+# Subtest: same-account transfer blocked
+ok 40 - same-account transfer blocked
+  ---
+  duration_ms: 0.126982
+  type: 'test'
+  ...
+# Subtest: correction changes balance without income/expense
+ok 41 - correction changes balance without income/expense
+  ---
+  duration_ms: 0.121695
+  type: 'test'
+  ...
+# Subtest: loan-out principal is cash movement but not income/expense
+ok 42 - loan-out principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.120713
+  type: 'test'
+  ...
+# Subtest: loan-in principal is cash movement but not income/expense
+ok 43 - loan-in principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.077497
+  type: 'test'
+  ...
+# Subtest: repayment-out principal is cash movement but not income/expense
+ok 44 - repayment-out principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.144198
+  type: 'test'
+  ...
+# Subtest: repayment-in principal is cash movement but not income/expense
+ok 45 - repayment-in principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.070987
+  type: 'test'
+  ...
+# Subtest: identical operation id idempotent; changed duplicate rejected
+ok 46 - identical operation id idempotent; changed duplicate rejected
+  ---
+  duration_ms: 0.209016
+  type: 'test'
+  ...
+# Subtest: refund reduces expense in refund period and cannot exceed source
+ok 47 - refund reduces expense in refund period and cannot exceed source
+  ---
+  duration_ms: 0.222397
+  type: 'test'
+  ...
+# Subtest: negative balances represent real recorded movement
+ok 48 - negative balances represent real recorded movement
+  ---
+  duration_ms: 0.106431
+  type: 'test'
+  ...
+# Subtest: credit card is not a supported new money account kind
+ok 49 - credit card is not a supported new money account kind
+  ---
+  duration_ms: 0.100041
+  type: 'test'
+  ...
+# Subtest: same category name normalized, no duplicate aliases
+ok 50 - same category name normalized, no duplicate aliases
+  ---
+  duration_ms: 0.134714
+  type: 'test'
+  ...
+# Subtest: one level of subcategories, same type
+ok 51 - one level of subcategories, same type
+  ---
+  duration_ms: 0.14509
+  type: 'test'
+  ...
+# Subtest: rename category retains past operation references
+ok 52 - rename category retains past operation references
+  ---
+  duration_ms: 0.174204
+  type: 'test'
+  ...
+# Subtest: archive preserves history; stops new use
+ok 53 - archive preserves history; stops new use
+  ---
+  duration_ms: 0.481799
+  type: 'test'
+  ...
+# Subtest: nonzero account cannot be archived
+ok 54 - nonzero account cannot be archived
+  ---
+  duration_ms: 0.208997
+  type: 'test'
+  ...
+# Subtest: available does not deduct earmarked obligation twice
+ok 55 - available does not deduct earmarked obligation twice
+  ---
+  duration_ms: 0.156447
+  type: 'test'
+  ...
+# Subtest: future obligations excluded; reserves do not create actual cash
+ok 56 - future obligations excluded; reserves do not create actual cash
+  ---
+  duration_ms: 0.067352
+  type: 'test'
+  ...
+# Subtest: over-reserved obligation does not add cash back
+ok 57 - over-reserved obligation does not add cash back
+  ---
+  duration_ms: 0.113922
+  type: 'test'
+  ...
+# Subtest: unknown account and impossible date rejected
+ok 58 - unknown account and impossible date rejected
+  ---
+  duration_ms: 0.263098
+  type: 'test'
+  ...
+# Subtest: integer overflow blocked
+ok 59 - integer overflow blocked
+  ---
+  duration_ms: 0.348608
+  type: 'test'
+  ...
+# Subtest: unsafe numbers and incompatible schemas rejected on import
+ok 60 - unsafe numbers and incompatible schemas rejected on import
+  ---
+  duration_ms: 0.173813
+  type: 'test'
+  ...
+# Subtest: valid document change log and unknown currency
+ok 61 - valid document change log and unknown currency
+  ---
+  duration_ms: 0.158099
+  type: 'test'
+  ...
+# Subtest: prototype-like ids remain normal keys without prototype pollution
+ok 62 - prototype-like ids remain normal keys without prototype pollution
+  ---
+  duration_ms: 0.148665
+  type: 'test'
+  ...
+# Subtest: P1.1 optional extension leaves legacy document byte-equivalent on query
+ok 63 - P1.1 optional extension leaves legacy document byte-equivalent on query
+  ---
+  duration_ms: 0.245441
+  type: 'test'
+  ...
+# Subtest: P1.1 monthly anchor survives leap/short months, repeated queries and year boundary
+ok 64 - P1.1 monthly anchor survives leap/short months, repeated queries and year boundary
+  ---
+  duration_ms: 1.2688
+  type: 'test'
+  ...
+# Subtest: P1.1 once, weekly and yearly leap dates have stable identities
+ok 65 - P1.1 once, weekly and yearly leap dates have stable identities
+  ---
+  duration_ms: 0.791057
+  type: 'test'
+  ...
+# Subtest: P1.1 plan changes no actual money; partial and full facts each have one canonical operation/link
+ok 66 - P1.1 plan changes no actual money; partial and full facts each have one canonical operation/link
+  ---
+  duration_ms: 2.08123
+  type: 'test'
+  ...
+# Subtest: P1.1 edit/cancel canonical fact recalculates remaining, preserves link and future tariff
+ok 67 - P1.1 edit/cancel canonical fact recalculates remaining, preserves link and future tariff
+  ---
+  duration_ms: 1.633643
+  type: 'test'
+  ...
+# Subtest: P1.1 overpayment, nonpositive/unsafe amount and future actual date leave all data unchanged
+ok 68 - P1.1 overpayment, nonpositive/unsafe amount and future actual date leave all data unchanged
+  ---
+  duration_ms: 0.777747
+  type: 'test'
+  ...
+# Subtest: P1.1 invalid calendar/type/version/references fail safely
+ok 69 - P1.1 invalid calendar/type/version/references fail safely
+  ---
+  duration_ms: 0.923418
+  type: 'test'
+  ...
+# Subtest: P1.1 current month includes all unpaid arrears, not next month
+ok 70 - P1.1 current month includes all unpaid arrears, not next month
+  ---
+  duration_ms: 0.466285
+  type: 'test'
+  ...
+# Subtest: P1.1 future edit preserves due and prepaid snapshots, early payment never shifts calendar
+ok 71 - P1.1 future edit preserves due and prepaid snapshots, early payment never shifts calendar
+  ---
+  duration_ms: 1.01704
+  type: 'test'
+  ...
+# Subtest: P1.1 indefinite pause preserves arrears/partial debt and resume creates no skipped retroactive dates
+ok 72 - P1.1 indefinite pause preserves arrears/partial debt and resume creates no skipped retroactive dates
+  ---
+  duration_ms: 1.039753
+  type: 'test'
+  ...
+1..72
+# tests 72
+# suites 0
+# pass 72
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 100.675911

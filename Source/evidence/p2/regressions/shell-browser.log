@@ -1,0 +1,23 @@
+PASS 320 OS=light app=light: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 320 OS=light app=dark: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 320 OS=light app=system: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 320 OS=dark app=light: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 320 OS=dark app=dark: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 320 OS=dark app=system: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 402 OS=light app=light: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 402 OS=light app=dark: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 402 OS=light app=system: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 402 OS=dark app=light: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 402 OS=dark app=dark: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 402 OS=dark app=system: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 1280 OS=light app=light: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 1280 OS=light app=dark: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 1280 OS=light app=system: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 1280 OS=dark app=light: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 1280 OS=dark app=dark: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+PASS 1280 OS=dark app=system: theme/metadata, 62px islands, tint/blur, equal peer gaps/widths, direct search focus, return state, edge gutter, unchanged vault
+{
+  "checks": 18,
+  "errors": [],
+  "failures": []
+}

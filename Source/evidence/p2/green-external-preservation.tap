@@ -1,0 +1,202 @@
+TAP version 13
+# Subtest: P2 horizon composition and partial return invariant; receivable never expected income
+ok 1 - P2 horizon composition and partial return invariant; receivable never expected income
+  ---
+  duration_ms: 42.958437
+  type: 'test'
+  ...
+# Subtest: P2 known date follows horizons and arrears; unknown date in all only; no fabricated due instance
+ok 2 - P2 known date follows horizons and arrears; unknown date in all only; no fabricated due instance
+  ---
+  duration_ms: 1.244253
+  type: 'test'
+  ...
+# Subtest: P2 credit+ordinary payment+debt compose independent IDs once; potential duplicate needs explicit acknowledgement
+ok 3 - P2 credit+ordinary payment+debt compose independent IDs once; potential duplicate needs explicit acknowledgement
+  ---
+  duration_ms: 3.960885
+  type: 'test'
+  ...
+# Subtest: P2 protected external copy/reset financial and independent restore retain debt and canonical links
+ok 4 - P2 protected external copy/reset financial and independent restore retain debt and canonical links
+  ---
+  duration_ms: 1048.790126
+  type: 'test'
+  ...
+# Subtest: P2 protected external copy/reset categories and independent restore retain debt and canonical links
+ok 5 - P2 protected external copy/reset categories and independent restore retain debt and canonical links
+  ---
+  duration_ms: 859.700579
+  type: 'test'
+  ...
+# Subtest: P2 protected external copy/reset all and independent restore retain debt and canonical links
+ok 6 - P2 protected external copy/reset all and independent restore retain debt and canonical links
+  ---
+  duration_ms: 1001.215834
+  type: 'test'
+  ...
+# Subtest: P2 creation/repayment quota abort, CAS and idempotent retry leave no orphan movement
+ok 7 - P2 creation/repayment quota abort, CAS and idempotent retry leave no orphan movement
+  ---
+  duration_ms: 426.068162
+  type: 'test'
+  ...
+# Subtest: P2 tagged debt drafts save without money/obligation and are consumed only after successful action
+ok 8 - P2 tagged debt drafts save without money/obligation and are consumed only after successful action
+  ---
+  duration_ms: 0.687881
+  type: 'test'
+  ...
+# Subtest: P2 password/PIN changes retain exact debt payload, old backup and recovery with same crypto architecture
+ok 9 - P2 password/PIN changes retain exact debt payload, old backup and recovery with same crypto architecture
+  ---
+  duration_ms: 1610.901189
+  type: 'test'
+  ...
+# Subtest: P2 owe existing has no cash movement; partial return excludes ordinary income/expense
+ok 10 - P2 owe existing has no cash movement; partial return excludes ordinary income/expense
+  ---
+  duration_ms: 1.094908
+  type: 'test'
+  ...
+# Subtest: P2 owed existing has no cash movement; partial return excludes ordinary income/expense
+ok 11 - P2 owed existing has no cash movement; partial return excludes ordinary income/expense
+  ---
+  duration_ms: 0.306534
+  type: 'test'
+  ...
+# Subtest: P2 owed now creates exactly one loan-out and one obligation
+ok 12 - P2 owed now creates exactly one loan-out and one obligation
+  ---
+  duration_ms: 0.26457
+  type: 'test'
+  ...
+# Subtest: P2 owe now creates exactly one loan-in and one obligation
+ok 13 - P2 owe now creates exactly one loan-in and one obligation
+  ---
+  duration_ms: 0.646999
+  type: 'test'
+  ...
+# Subtest: P2 repayments edit/cancel through canonical operations recompute remainder and keep audit
+ok 14 - P2 repayments edit/cancel through canonical operations recompute remainder and keep audit
+  ---
+  duration_ms: 33.020159
+  type: 'test'
+  ...
+# Subtest: P2 repeated creation and repayment request IDs never duplicate cash
+ok 15 - P2 repeated creation and repayment request IDs never duplicate cash
+  ---
+  duration_ms: 1.379087
+  type: 'test'
+  ...
+# Subtest: P2 zero/negative/unsafe/overpay/wrong account and credit account fail atomically
+ok 16 - P2 zero/negative/unsafe/overpay/wrong account and credit account fail atomically
+  ---
+  duration_ms: 1.695496
+  type: 'test'
+  ...
+# Subtest: P2 fully repaid archive cannot hide reopened balance after fact cancellation or principal edit
+ok 17 - P2 fully repaid archive cannot hide reopened balance after fact cancellation or principal edit
+  ---
+  duration_ms: 1.026454
+  type: 'test'
+  ...
+# Subtest: P2 existing obligation edit cannot undercut repayments or change direction with facts
+ok 18 - P2 existing obligation edit cannot undercut repayments or change direction with facts
+  ---
+  duration_ms: 1.283974
+  type: 'test'
+  ...
+# Subtest: P2 source fact edits derive amount/date; cancellation with active returns rejected
+ok 19 - P2 source fact edits derive amount/date; cancellation with active returns rejected
+  ---
+  duration_ms: 2.904196
+  type: 'test'
+  ...
+# Subtest: P2 historic canonical loan and repayment link explicitly without another posting; external transfer never reclassified
+ok 20 - P2 historic canonical loan and repayment link explicitly without another posting; external transfer never reclassified
+  ---
+  duration_ms: 4.231424
+  type: 'test'
+  ...
+# Subtest: P2 queries leave old P1.2 documents without debt extension or writes
+ok 21 - P2 queries leave old P1.2 documents without debt extension or writes
+  ---
+  duration_ms: 0.339674
+  type: 'test'
+  ...
+# Subtest: P2 matrix owe/now/undated full return, result period and invalid references
+ok 22 - P2 matrix owe/now/undated full return, result period and invalid references
+  ---
+  duration_ms: 2.338008
+  type: 'test'
+  ...
+# Subtest: P2 matrix owe/now/dated full return, result period and invalid references
+ok 23 - P2 matrix owe/now/dated full return, result period and invalid references
+  ---
+  duration_ms: 1.921778
+  type: 'test'
+  ...
+# Subtest: P2 matrix owe/existing/undated full return, result period and invalid references
+ok 24 - P2 matrix owe/existing/undated full return, result period and invalid references
+  ---
+  duration_ms: 1.327189
+  type: 'test'
+  ...
+# Subtest: P2 matrix owe/existing/dated full return, result period and invalid references
+ok 25 - P2 matrix owe/existing/dated full return, result period and invalid references
+  ---
+  duration_ms: 1.107907
+  type: 'test'
+  ...
+# Subtest: P2 matrix owed/now/undated full return, result period and invalid references
+ok 26 - P2 matrix owed/now/undated full return, result period and invalid references
+  ---
+  duration_ms: 4.30128
+  type: 'test'
+  ...
+# Subtest: P2 matrix owed/now/dated full return, result period and invalid references
+ok 27 - P2 matrix owed/now/dated full return, result period and invalid references
+  ---
+  duration_ms: 1.305346
+  type: 'test'
+  ...
+# Subtest: P2 matrix owed/existing/undated full return, result period and invalid references
+ok 28 - P2 matrix owed/existing/undated full return, result period and invalid references
+  ---
+  duration_ms: 1.277193
+  type: 'test'
+  ...
+# Subtest: P2 matrix owed/existing/dated full return, result period and invalid references
+ok 29 - P2 matrix owed/existing/dated full return, result period and invalid references
+  ---
+  duration_ms: 1.523777
+  type: 'test'
+  ...
+# Subtest: P2 operation cannot belong to two debts; changed request IDs reject and unlinked historical loan editor remains restricted
+ok 30 - P2 operation cannot belong to two debts; changed request IDs reject and unlinked historical loan editor remains restricted
+  ---
+  duration_ms: 0.882516
+  type: 'test'
+  ...
+# Subtest: P2 archive principal increase reopens and stale canonical edits preserve original document
+ok 31 - P2 archive principal increase reopens and stale canonical edits preserve original document
+  ---
+  duration_ms: 1.029989
+  type: 'test'
+  ...
+# Subtest: P2 stale agreement edit cannot overwrite later metadata and one request ID cannot change the creation payload
+ok 32 - P2 stale agreement edit cannot overwrite later metadata and one request ID cannot change the creation payload
+  ---
+  duration_ms: 0.484323
+  type: 'test'
+  ...
+1..32
+# tests 32
+# suites 0
+# pass 32
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 5219.24219

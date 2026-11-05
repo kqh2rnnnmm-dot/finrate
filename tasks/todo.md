@@ -1,13 +1,14 @@
-# P1.2 tasks
+# P2 tasks
 
-- [x] 1. Audit + RED/GREEN variable core1700/2300, parts, edit/cancel, legacy (scheduled-payments/tests; no deps).
-- [x] 2. Shared variable UI/default full/compact estimate; browser. Checkpoint core + UI + fixed old tests.
-- [x] 3. Atomic batch core + CAS/quota and shared-form review UI; unit/integration/browser (deps1–2).
-- [x] 4. Instance/future changes, stable move and guarded skip; forecasts/calendar tests + UI (deps1–3).
-- [x] 5. Calendar and bank-result/availability UI; existing tokens and components (deps4).
-- [x] 6. Full regression, compatibility/restore/reset/access/offline; screenshots/geometry; scope/security guards (deps1–5).
-- [x] 7. Docs, FAQ/checkpoint/decisions/module map, commits/push/PR; verify main unchanged, no deployment (deps6).
+- [x] 1. Audit/baseline + RED four numeric scenarios; create/core validation, no movement existing (deps:none).
+- [x] 2. Repay/edit/cancel/archive/reconcile, legacy canonical links and invariants (deps1).
+- [x] 3. Due/forecast/conflicts/A2/compatibility; protected restore/access/rollback tests (deps1–2).
+- [x] 4. Shared UI/forms/guards/drafts, canonical operation routes, search/home indicator (deps1–3).
+- [x] 5. Native browser matrix, offline/copies/P1.2 upgrade, full release/scope/audit (deps1–4).
+- [x] 6. Docs/finance matrix/FAQ/checkpoint/decisions/map/screens/iPhone, push and PR (deps5).
 
-User authorization covers these implementation choices. Hardware iPhone acceptance remains open, including A2/A3/P1.1.
+No device PASS. Inherited A2/WebKit PIN timeout not claimed fixed. No forgiveness/write-off/reclassification, credit-personal-loan mixing or future packages.
 
-Delivery: PR #10 open, not merged; main4ac42ea unchanged. Final source/public bytes match Source/evidence/p1_2/regressions/release-run.json.
+Final source: e6b3ed1; 415/415 unit/integration, 57/57 release PASS. Public HTML SHA-256 8b285b8f41b4c657539bd1863719d03956d96171009e2979e0060d5fe3baab09. Extra screenshot tool executed both engines; no app changes after release.
+
+Delivery: PR #11 https://github.com/kqh2rnnnmm-dot/finrate/pull/11; main remains d1a415a. No merge/deploy/user reset. Device acceptance remains OPEN.
