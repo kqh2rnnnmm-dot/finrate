@@ -1,4 +1,5 @@
 import {validatePlanningShape} from './planning.mjs';
+import {validatePayments} from './scheduled-payments.mjs';
 import {creditLedger,assertCreditTimeline,dueForMonth,dueAfterDays} from './credit.mjs';
 export const SCHEMA=5;
 export class FinRateError extends Error { constructor(code){super(code);this.name='FinRateError';this.code=code;} }
@@ -182,6 +183,6 @@ export function validateDocument(d){
     for(const t of s.homeTiles){if(!t||!['expense','income','last','payment','limits','reserves','goal','debts','account','drafts',...(d.schema>=4?['credit']:[])].includes(t.metric)||t.accountId&&!d.accounts.some(a=>a.id===t.accountId))fail('SCHEMA');if(t.metric==='credit'&&(!d.accounts.some(a=>a.id===t.accountId&&a.financeType==='credit')||!['due','total'].includes(t.creditMetric)))fail('CREDIT_SETTINGS');}
     for(const c of d.categories)if(c.mergedInto){const target=d.categories.find(x=>x.id===c.mergedInto);if(!c.archived||!target||target.id===c.id||target.type!==c.type||!!target.parentId!==!!c.parentId)fail('SCHEMA');let next=target,seen=new Set([c.id]);while(next){if(seen.has(next.id))fail('SCHEMA');seen.add(next.id);next=d.categories.find(x=>x.id===next.mergedInto);}}
   }
-  balances(d);if(d.schema>=5){assertCreditTimeline(d);if(d.planning!==undefined)validatePlanningShape(d);}return d;
+  balances(d);if(d.schema>=5){assertCreditTimeline(d);if(d.planning!==undefined)validatePlanningShape(d);validatePayments(d);}return d;
 }
 export function changed(d,action){d.revision++;d.updatedAt=now();d.events.push({id:uid(),at:d.updatedAt,action,revision:d.revision});validateDocument(d);return d;}

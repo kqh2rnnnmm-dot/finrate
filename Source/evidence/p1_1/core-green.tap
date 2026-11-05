@@ -1,0 +1,112 @@
+TAP version 13
+# Subtest: P1.1 finite free-money horizons include only unpaid scheduled obligations, plans never affect actual
+ok 1 - P1.1 finite free-money horizons include only unpaid scheduled obligations, plans never affect actual
+  ---
+  duration_ms: 12.946904
+  type: 'test'
+  ...
+# Subtest: P1.1 debit partial/payment/edit/cancel keep actual plus unpaid arithmetic exact
+ok 2 - P1.1 debit partial/payment/edit/cancel keep actual plus unpaid arithmetic exact
+  ---
+  duration_ms: 3.531668
+  type: 'test'
+  ...
+# Subtest: P1.1 credit-funded expense becomes one B1 credit obligation, not a second planned bill
+ok 3 - P1.1 credit-funded expense becomes one B1 credit obligation, not a second planned bill
+  ---
+  duration_ms: 0.9184
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 financial removes payment rules/history and restores exact external copy
+ok 4 - P1.1 A2 financial removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 463.356083
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 categories removes payment rules/history and restores exact external copy
+ok 5 - P1.1 A2 categories removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 443.492741
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 all removes payment rules/history and restores exact external copy
+ok 6 - P1.1 A2 all removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 453.474065
+  type: 'test'
+  ...
+# Subtest: P1.1 existing service rejects duplicate/stale saves, rollback preserves plans, access and money
+ok 7 - P1.1 existing service rejects duplicate/stale saves, rollback preserves plans, access and money
+  ---
+  duration_ms: 270.072466
+  type: 'test'
+  ...
+# Subtest: P1.1 optional extension leaves legacy document byte-equivalent on query
+ok 8 - P1.1 optional extension leaves legacy document byte-equivalent on query
+  ---
+  duration_ms: 0.313224
+  type: 'test'
+  ...
+# Subtest: P1.1 monthly anchor survives leap/short months, repeated queries and year boundary
+ok 9 - P1.1 monthly anchor survives leap/short months, repeated queries and year boundary
+  ---
+  duration_ms: 0.487078
+  type: 'test'
+  ...
+# Subtest: P1.1 once, weekly and yearly leap dates have stable identities
+ok 10 - P1.1 once, weekly and yearly leap dates have stable identities
+  ---
+  duration_ms: 0.648332
+  type: 'test'
+  ...
+# Subtest: P1.1 plan changes no actual money; partial and full facts each have one canonical operation/link
+ok 11 - P1.1 plan changes no actual money; partial and full facts each have one canonical operation/link
+  ---
+  duration_ms: 0.842336
+  type: 'test'
+  ...
+# Subtest: P1.1 edit/cancel canonical fact recalculates remaining, preserves link and future tariff
+ok 12 - P1.1 edit/cancel canonical fact recalculates remaining, preserves link and future tariff
+  ---
+  duration_ms: 0.7597
+  type: 'test'
+  ...
+# Subtest: P1.1 overpayment, nonpositive/unsafe amount and future actual date leave all data unchanged
+ok 13 - P1.1 overpayment, nonpositive/unsafe amount and future actual date leave all data unchanged
+  ---
+  duration_ms: 0.714993
+  type: 'test'
+  ...
+# Subtest: P1.1 invalid calendar/type/version/references fail safely
+ok 14 - P1.1 invalid calendar/type/version/references fail safely
+  ---
+  duration_ms: 0.716725
+  type: 'test'
+  ...
+# Subtest: P1.1 current month includes all unpaid arrears, not next month
+ok 15 - P1.1 current month includes all unpaid arrears, not next month
+  ---
+  duration_ms: 0.316098
+  type: 'test'
+  ...
+# Subtest: P1.1 future edit preserves due and prepaid snapshots, early payment never shifts calendar
+ok 16 - P1.1 future edit preserves due and prepaid snapshots, early payment never shifts calendar
+  ---
+  duration_ms: 0.771298
+  type: 'test'
+  ...
+# Subtest: P1.1 indefinite pause preserves arrears/partial debt and resume creates no skipped retroactive dates
+ok 17 - P1.1 indefinite pause preserves arrears/partial debt and resume creates no skipped retroactive dates
+  ---
+  duration_ms: 0.818299
+  type: 'test'
+  ...
+1..17
+# tests 17
+# suites 0
+# pass 17
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1704.817185

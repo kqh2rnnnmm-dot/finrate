@@ -551,7 +551,7 @@ main { overflow-x:hidden; touch-action:pan-y pinch-zoom; }
 .context-options button.context-selected,.context-options button:focus-visible { background:var(--soft); }
 .context-options svg { width:20px; height:20px; }
 .context-options.context-scrollable,.context-options.context-scrollable button { touch-action:pan-y; }
-[data-operation],[data-account-view],[data-category-view],[data-draft],[data-child],[data-cat-operation],[data-account-operation],[data-metric-operation],[data-result-kind],[data-tile] { -webkit-touch-callout:none; user-select:none; -webkit-user-select:none; }
+[data-payment-plan],[data-operation],[data-account-view],[data-category-view],[data-draft],[data-child],[data-cat-operation],[data-account-operation],[data-metric-operation],[data-result-kind],[data-tile] { -webkit-touch-callout:none; user-select:none; -webkit-user-select:none; }
 .category-row { display:block; }
 .category-row .list-button { margin:0; background:var(--white); }
 .sheet:has(.sheet-more) .sheet-head { display:grid; grid-template-columns:44px minmax(0,1fr) 44px; gap:4px; }
@@ -571,7 +571,7 @@ main { overflow-x:hidden; touch-action:pan-y pinch-zoom; }
 .focus-mode .sheet.large .sheet-head { background:var(--island); }
 button:focus,a:focus,summary:focus,input:focus,textarea:focus,select:focus { outline:none; }
 .context-surface { z-index:100; }
-.context-surface,.context-surface *,[data-operation] *,[data-account-view] *,[data-category-view] *,[data-draft] *,[data-child] *,[data-cat-operation] *,[data-account-operation] *,[data-metric-operation] *,[data-result-kind] *,[data-tile] * { -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; }
+.context-surface,.context-surface *,[data-payment-plan] *,[data-operation] *,[data-account-view] *,[data-category-view] *,[data-draft] *,[data-child] *,[data-cat-operation] *,[data-account-operation] *,[data-metric-operation] *,[data-result-kind] *,[data-tile] * { -webkit-touch-callout:none; -webkit-user-select:none; user-select:none; }
 .auth form>.button { margin-top:16px; }
 
 /* PATCH 2.1: one state vocabulary across existing FinRate controls. */

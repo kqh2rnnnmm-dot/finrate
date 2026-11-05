@@ -1,0 +1,21 @@
+PASS 320x260 light compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll
+PASS 320 light resize restores original layout and picker back path
+PASS 320x260 dark compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll
+PASS 320 dark resize restores original layout and picker back path
+PASS 320x360 light compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll
+PASS 320 light resize restores original layout and picker back path
+PASS 320x360 dark compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll
+PASS 320 dark resize restores original layout and picker back path
+PASS 402x260 light compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll
+PASS 402 light resize restores original layout and picker back path
+PASS 402x260 dark compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll
+PASS 402 dark resize restores original layout and picker back path
+PASS 402x360 light compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll
+PASS 402 light resize restores original layout and picker back path
+PASS 402x360 dark compact controls reserve separate space, opaque 32px/44px targets, no overlap, both ends and manual scroll
+PASS 402 dark resize restores original layout and picker back path
+{
+  "checks": 16,
+  "errors": [],
+  "failures": []
+}

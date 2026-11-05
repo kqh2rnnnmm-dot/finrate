@@ -1,8 +1,8 @@
 {
-  "build": "a3-access01",
+  "build": "p1-1-payments01",
   "shellFiles": 6,
-  "shellBytes": 601816,
-  "scriptHash": "Pw9vvwti6YNbwZlgYfsy1Fpi3giLjLJQ6J6Qzurz8xA=",
+  "shellBytes": 628113,
+  "scriptHash": "kWc+2wABCALFtuZZSCbVyxIL1MkabM8z/CpFAbzv2q0=",
   "externalRuntimeDependencies": 0,
   "published": false,
   "warnings": []

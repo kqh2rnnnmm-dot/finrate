@@ -1,0 +1,64 @@
+TAP version 13
+# Subtest: P1.1 finite free-money horizons include only unpaid scheduled obligations, plans never affect actual
+ok 1 - P1.1 finite free-money horizons include only unpaid scheduled obligations, plans never affect actual
+  ---
+  duration_ms: 11.15992
+  type: 'test'
+  ...
+# Subtest: P1.1 debit partial/payment/edit/cancel keep actual plus unpaid arithmetic exact
+ok 2 - P1.1 debit partial/payment/edit/cancel keep actual plus unpaid arithmetic exact
+  ---
+  duration_ms: 4.049198
+  type: 'test'
+  ...
+# Subtest: P1.1 credit-funded expense becomes one B1 credit obligation, not a second planned bill
+ok 3 - P1.1 credit-funded expense becomes one B1 credit obligation, not a second planned bill
+  ---
+  duration_ms: 0.933393
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 financial removes payment rules/history and restores exact external copy
+ok 4 - P1.1 A2 financial removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 535.028019
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 categories removes payment rules/history and restores exact external copy
+ok 5 - P1.1 A2 categories removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 429.652377
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 all removes payment rules/history and restores exact external copy
+ok 6 - P1.1 A2 all removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 443.921292
+  type: 'test'
+  ...
+# Subtest: P1.1 existing service rejects duplicate/stale saves, rollback preserves plans, access and money
+ok 7 - P1.1 existing service rejects duplicate/stale saves, rollback preserves plans, access and money
+  ---
+  duration_ms: 301.523874
+  type: 'test'
+  ...
+# Subtest: P1.1 shared expense accepts a category split and consumes its operation draft exactly once
+ok 8 - P1.1 shared expense accepts a category split and consumes its operation draft exactly once
+  ---
+  duration_ms: 0.930448
+  type: 'test'
+  ...
+# Subtest: P1.1 A3 password and device PIN changes preserve exact payment data and external-copy recovery
+ok 9 - P1.1 A3 password and device PIN changes preserve exact payment data and external-copy recovery
+  ---
+  duration_ms: 787.643357
+  type: 'test'
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 9
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2571.414562

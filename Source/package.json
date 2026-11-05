@@ -1,6 +1,6 @@
 {
   "name": "finrate-actions",
-  "version": "0.3.9-a3",
+  "version": "0.3.10-p1.1",
   "private": true,
   "type": "module",
   "scripts": {

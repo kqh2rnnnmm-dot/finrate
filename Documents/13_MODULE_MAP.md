@@ -1,3 +1,22 @@
+# P1.1 · изменения модулей · 05.11.2026
+
+| Модуль | Изменение |
+|---|---|
+| scheduled-payments.mjs (новый) | Календарь, версии/паузы, снимки, ссылки, остаток, атомарная оплата через saveOperation |
+| payments-ui.mjs (новый) | Три представления, создание/правка/пауза, штатный редактор факта |
+| model.mjs | Только optional payments validation; остальные байты защищены SHA |
+| planning.mjs | Только подключение unpaid expenses в существующий прогноз и имя строки; остальная B1-логика защищена SHA |
+| reset-policy/reset-ui | Allowlist новой сущности и счётчики предупреждения A2; прежние сбросы |
+| focus/ui/app/context-menu/style | Подключение P1.1 к существующим редакторам/навигации/поиску/контексту; без новых CSS-правил |
+| planning-ui/help | Правдивое описание состава прогноза и FAQ |
+| tests, tools | Календарь/оплаты/rollback/CAS/backup/reset/access, браузерная матрица и release scope guard |
+
+`operations`, `credit`, `block02`, `recurring-income`, `crypto`, `store`, `service`, `device-access`, A3/session/surfaces/navigation — byte-identical к main597b208. Архитектура шифрования, IDB и формат копий прежние.
+
+---
+
+## История предыдущих пакетов
+
 # A3 · изменения модулей · 04.11.2026
 
 | Модуль | Адресное изменение |

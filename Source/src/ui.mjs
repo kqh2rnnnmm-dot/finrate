@@ -1,3 +1,4 @@
+import {createPaymentsUI} from './payments-ui.mjs';
 import {clearAccessFields} from './access-fields.mjs';
 import {notificationForm,uiPreferences} from './ui-settings.mjs';
 import {createPlanningUI} from './planning-ui.mjs';
@@ -77,6 +78,7 @@ export function createUI(ctx){
  const security=createSecurityUI({app,root,sheet,pop,perform,navigate,closeBase:requestLock});
  const management=createManagement({app,root,sheet,pop,perform,focus,card,render,captureReturn,history:(type,id)=>activity.local(type,id)});
  const lists=createListView({root,document:d,names,categoryName,navigate,back,render,resetPosition:(page='Операции')=>positions.set(page,0)});
+ const payments=createPaymentsUI({app,root,sheet,pop,perform,captureReturn,focus,card,render});
  const financial=createPlanningUI({app,sheet,pop,perform,captureReturn,focus});
  focus.setIncomeEntry(financial.entry);
  const activity=createActivityUI({app,root,sheet,pop,notes:fieldEditor,openObject:item=>{if(item.type==='operation')card(item.id);else if(item.type==='account')management.accountView(item.id);else if(item.type==='category')management.categoryView(item.id);else if(item.type==='draft')continueDraft(item.id);else if(item.type==='plan')financial.incomes();else navigate(item.id==='security'?'Пароль и вход':'Настройки');}});
@@ -144,6 +146,7 @@ export function createUI(ctx){
   const leading=primary?'<button class="icon-button" id="more" aria-label="Меню">'+icon('menu')+'</button>':'<button class="icon-button" id="page-back" aria-label="Назад">'+icon('back')+'</button>';
   const actions=(searching||filtering?'':'<button class="icon-button" id="global-search" aria-label="'+(home?'Поиск':'Поиск: '+esc(page))+'">'+icon('search')+'</button>')
    +(home?'<button class="icon-button operation-plus" id="operation-add" aria-label="Добавить операцию" aria-haspopup="dialog" aria-expanded="false">'+icon('plus')+'</button>':'')
+   +(page==='Платежи'?'<button type="button" class="icon-button context-plus" id="payment-create" aria-label="Создать платёж">'+icon('plus')+'</button>':'')
    +(page==='Операции'?`<button class="icon-button ${lists.active()?'filter-on':''}" id="operation-filters" aria-label="Фильтры операций${lists.active()?', включено: '+lists.active():''}">${icon('filters')}</button>`:'')
    +(filtering?'<button type="button" class="icon-button" id="apply-filters" aria-label="Применить фильтры">'+icon('check')+'</button>':'')
    +(page==='Счета и кошельки'&&!management.isArchive()?'<button class="icon-button context-plus" id="account-create" aria-label="Добавить счёт">'+icon('plus')+'</button>':'')
@@ -181,7 +184,7 @@ export function createUI(ctx){
  function draftQuick(id){const draft=d().drafts.find(x=>x.id===id);return draft?{title:names[draft.form.kind],actions:[{label:'Продолжить ввод',icon:'edit',run:()=>continueDraft(id)},{label:'Удалить черновик',icon:'close',danger:true,run:()=>removeDraft(id)}]}:null;}
 
  function resolveContext(el){if(!d())return null;const a=el.dataset;
-  if(a.incomeSource)return financial.quick(a.incomeSource);
+  if(a.paymentPlan)return payments.quick(a.paymentPlan);if(a.incomeSource)return financial.quick(a.incomeSource);
   if(a.dockAction==='Операции')return {title:'Операции',placement:'above',actions:[{label:'Найти операцию',icon:'search',run:()=>navigate('Операции',true,false,search)},{label:'Фильтры операций',icon:'filters',run:()=>navigate('Операции',true,false,()=>navigate('Фильтры операций'))},{label:'Черновики',icon:'edit',run:()=>navigate('Операции',true,false,drafts)}]};
   if(a.dockAction==='Главная')return {title:'Главная',placement:'above',actions:[{label:'Настроить блоки',icon:'Настройки',run:()=>navigate('Главная',true,false,dashboard.configure)},{label:'Внешний вид',icon:'Настройки',run:()=>navigate('Настройки',true,false,()=>{root.querySelector('[name=appearance]')?.focus({preventScroll:true});})}]};
   if(a.operation||a.catOperation||a.accountOperation||a.metricOperation)return operationQuick(a.operation||a.catOperation||a.accountOperation||a.metricOperation);
@@ -208,9 +211,10 @@ export function createUI(ctx){
    if(scope==='Пароль и вход')rows=[{label:'Установить или изменить PIN-код',type:'Пароль и вход',id:'pin',kind:'security'},{label:'Изменить основной пароль',type:'Пароль и вход',id:'password',kind:'security'},{label:'Пароль, PIN и копии',type:'Пароль и вход',id:'help',kind:'security'}];
    if(scope==='Настройки')rows=[{label:'Пароль и вход',type:'Настройки',id:'Пароль и вход',kind:'page'},{label:'Оформление',type:'Настройки',id:'appearance',kind:'setting'},{label:'Автоблокировка',type:'Настройки',id:'autoLock',kind:'setting'}];
    if(scope==='Данные и синхронизация')rows=[['Защищённая резервная копия','backup'],['Проверка и восстановление','restore-start'],['Страховочные копии','safety-list']].map(([label,id])=>({label,id,type:'Данные и синхронизация',kind:'setting'}));
-   // Payments, goals and reports remain unavailable product features; no fake records.
+   if(scope==='Платежи')rows=payments.searchRows();
+   // Goals and reports remain unavailable; no fake records.
    const text=x=>x.searchText||x.label+' '+x.type,found=scope==='Операции'?rows.filter(x=>normalized(text(x)).includes(normalized(q.value))):rank(rows,q.value,text);r.innerHTML=found.map(x=>x.kind==='category'&&x.children?.length?`<details class="category-branch search-branch"><summary data-result="${esc(x.id)}" data-result-kind="category"><span><strong>${esc(x.label)}</strong><small>${operationMark(x.operationType)}</small></span>${branchMark()}</summary><div class="search-children">${x.children.map(c=>`<button class="list-button" data-result="${esc(c.id)}" data-result-kind="category">${esc(c.name)}</button>`).join('')}</div></details>`:`<button class="list-button" data-result="${esc(x.id)}" data-result-kind="${x.kind}"><strong>${esc(x.label)}</strong><small>${x.kind==='category'?operationMark(x.operationType):esc(x.type)}</small></button>`).join('')||'<p class="empty">Совпадений нет.</p>';
-   r.querySelectorAll('button[data-result]').forEach(b=>b.onclick=()=>{const {result:id,resultKind:kind}=b.dataset;if(kind==='operation')card(id);else if(kind==='account')management.accountView(id);else if(kind==='category')management.categoryView(id);else if(kind==='page')navigate(id);else if(kind==='security'){back();security.open(id);}else{back();requestAnimationFrame(()=>{const target=root.querySelector('[name="'+id+'"]')||document.getElementById(id);if(target){target.focus({preventScroll:true});const main=root.querySelector('main');main.scrollTop=Math.max(0,target.offsetTop-main.offsetTop-100);}});}});
+   r.querySelectorAll('button[data-result]').forEach(b=>b.onclick=()=>{const {result:id,resultKind:kind}=b.dataset;if(kind==='operation')card(id);else if(kind==='account')management.accountView(id);else if(kind==='category')management.categoryView(id);else if(kind==='payment-plan')payments.plan(id);else if(kind==='payment-due')payments.due(id);else if(kind==='page')navigate(id);else if(kind==='security'){back();security.open(id);}else{back();requestAnimationFrame(()=>{const target=root.querySelector('[name="'+id+'"]')||document.getElementById(id);if(target){target.focus({preventScroll:true});const main=root.querySelector('main');main.scrollTop=Math.max(0,target.offsetTop-main.offsetTop-100);}});}});
    document.dispatchEvent(new Event('finrate-surface'));
   };q.oninput=draw;draw();
  }
@@ -222,7 +226,7 @@ export function createUI(ctx){
   root.querySelectorAll('[data-extra]').forEach(b=>b.onclick=()=>navigate(b.dataset.extra));
   root.querySelector('#draft-menu')?.addEventListener('click',drafts);
   root.querySelector('#lock-menu')?.addEventListener('click',requestLock);
-  lists.bind();activity.bind();security.bind();
+  lists.bind();activity.bind();security.bind();payments.bind();
   bindSearch();
   root.querySelectorAll('.bottom [data-page]').forEach(b=>{b.classList.toggle('active',b.dataset.page===getPage());if(b.dataset.page===getPage())b.setAttribute('aria-current','page');else b.removeAttribute('aria-current');});
   gestures.refresh();
@@ -237,13 +241,13 @@ export function createUI(ctx){
  function attachRows(){root.querySelectorAll('[data-operation]').forEach(b=>b.onclick=()=>card(b.dataset.operation));}
  function navigationContext(){const allowed=new Set([...PRIMARY_TABS,...menuItems,'Меню','Фильтры операций','Пароль и вход']);let current=getPage()==='Поиск'?searchState.scope:getPage();if(!allowed.has(current))current='Главная';return {page:current,trail:trail.filter(x=>allowed.has(x)&&x!==current).slice(-20),scroll:root.querySelector('main')?.scrollTop||0};}
  function restoreNavigation(context){const allowed=new Set([...PRIMARY_TABS,...menuItems,'Меню','Фильтры операций','Пароль и вход']);trail=(context?.trail||[]).filter(x=>allowed.has(x));if(!trail.length&&!PRIMARY_TABS.includes(context?.page))trail=context?.page==='Меню'?['Главная']:['Главная','Меню'];restoreScroll=Math.max(0,Number(context?.scroll)||0);}
- function clear(){clearSensitive();creditDocument=null;creditState=null;management.clear();activity.clear();contexts.close(false);pendingLeaves.clear();lists.clear();dashboard.clearSettingsDraft();clearSurfaces();document.body.classList.remove('focus-mode');quick=null;quickBank=null;while(panels.length){const r=panels.pop();r.el.remove();}trail=[];positions.clear();queries.clear();searchState.query='';}
+ function clear(){payments.clear();clearSensitive();creditDocument=null;creditState=null;management.clear();activity.clear();contexts.close(false);pendingLeaves.clear();lists.clear();dashboard.clearSettingsDraft();clearSurfaces();document.body.classList.remove('focus-mode');quick=null;quickBank=null;while(panels.length){const r=panels.pop();r.el.remove();}trail=[];positions.clear();queries.clear();searchState.query='';}
  function bindUpdate(){root.querySelector('#apply-update')?.addEventListener('click',()=>{const apply=()=>{if(!waitingUpdate||app.busy)return;navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload(),{once:true});waitingUpdate.postMessage({type:'FINRATE_APPLY_UPDATE'});};leavePanels(()=>askLeave(leavingForms(),apply));});}
  function watchUpdates(reg){const check=()=>{if(reg.waiting&&navigator.serviceWorker.controller){waitingUpdate=reg.waiting;render();bindUpdate();}};check();reg.addEventListener('updatefound',()=>{const installing=reg.installing;installing?.addEventListener('statechange',()=>{if(installing.state==='installed')check();});});reg.update().catch(()=>{});}
  const contexts=installContextMenus({resolve:resolveContext,blocked:()=>!d()||locked||app.busy||panels.some(p=>p.el.dataset.leaveConfirm)});
  const gestures=installNavigationGestures({root,getPage,navigate,blocked:()=>!d()||locked||app.busy||!!activeSurface()||!PRIMARY_TABS.includes(getPage())});
  const edgeLauncher=installEdgeLauncher({root,getPage,getSide:()=>d()?.settings.edgeSide||'right',available:()=>!!d()&&!locked&&!app.busy&&PRIMARY_TABS.includes(getPage())&&!panels.length&&!root.querySelector('main form')&&!activeSurface(),open:operationChooser});
 
- return {header,navigation,home,operations,settings,feedbackDetails,activityPage:activity.page,securityPage:security.page,securityOpen:security.open,navigationContext,restoreNavigation,bind,clear,clearSensitive,reset,back,menu,menuPage,search,searchPage,navigate,watchUpdates,bindUpdate,sheet,perform,closePanel:el=>{if(panels.at(-1)?.el===el)pop();},filtersPage:lists.page,accounts:management.accounts,categories:management.categories};
+ return {header,navigation,home,operations,settings,feedbackDetails,activityPage:activity.page,paymentsPage:payments.page,securityPage:security.page,securityOpen:security.open,navigationContext,restoreNavigation,bind,clear,clearSensitive,reset,back,menu,menuPage,search,searchPage,navigate,watchUpdates,bindUpdate,sheet,perform,closePanel:el=>{if(panels.at(-1)?.el===el)pop();},filtersPage:lists.page,accounts:management.accounts,categories:management.categories};
 }
 function rank(rows,query,text){const q=normalized(query);if(!q)return rows;return rows.map(x=>({x,t:normalized(text(x))})).filter(x=>x.t.includes(q)).sort((a,b)=>Number(!a.t.split(/\s+/).some(w=>w.startsWith(q)))-Number(!b.t.split(/\s+/).some(w=>w.startsWith(q)))).map(x=>x.x);}
