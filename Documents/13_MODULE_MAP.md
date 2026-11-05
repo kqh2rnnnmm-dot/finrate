@@ -1,3 +1,27 @@
+# P2 · карта реализованных модулей · 05.11.2026
+
+Ветка `codex/p2-personal-debts`, `p2-debts01` / `0.3.12-p2`, исходный main d1a415a. Не объединено и не опубликовано; исторические статусы «P2 не начат» ниже относятся к прежней контрольной точке.
+
+| Компонент | Адресное изменение |
+|---|---|
+| debts.mjs (новый) | Optional debts/version1, строгая валидация, вычисляемые остатки, два способа создания, canonical returns/edit/link, archive/reopen, due/forecast source, проверка совпадений и stale metadata |
+| debts-ui.mjs (новый) | Два направления, список/архив, карточка и факты, shared forms/pickers/notes, черновики, контекст, история, явное подтверждение различающихся обязательств |
+| model.mjs | Только validator нового root и помеченных долговых черновиков; SCHEMA/postings/totals прежние |
+| operations.mjs | Только разрешение edit для связанных loan/repayment и reconciliation архива; прежняя запись/отмена/таймлайн по SHA |
+| planning.mjs | Один дополнительный источник непогашенных owe по горизонту; прежние формулы/доходы неизменны |
+| payments-ui.mjs | Отдельные строки «Возврат долга» и вызов карточки; исключение из expense batch; проверка потенциального дублирования при создании/правке плана |
+| focus.mjs | Опциональный debitOnly существующего picker/inline creation; общие редакторы не заменены |
+| ui/app/context-menu | Реальный маршрут дополнительного меню, поиск/переходы/операции/контекст, сообщения ошибок/build |
+| dashboard/planning-ui | Настоящий показатель долгов; пояснение горизонтов/неизвестного срока и предупреждения совпадений |
+| activity/activity-ui | Читаемая история долгов/связанных фактов, прежняя карточка объекта |
+| reset-policy/reset-ui | Только известный debts в strict allowlist/summary; прежние три режима и защита |
+| style.css | Только два правила [data-debt-list] для min-content/peer spacing; все старые токены/правила byte-identical |
+| help/FAQ/tests/tools | Действующие ответы, RED/GREEN, native IDB/crypto/CAS/reset/restore, P1.2 update, visual matrix, baseline guards |
+
+`scheduled-payments`, `recurring-income`, `credit`, `block02`, `service/store/crypto/device-access`, `navigation/surfaces/field-editor`, `feedback/notification-*` не менялись. Полная карта доказательств: [P2/TEST_REPORT](P2/TEST_REPORT.md), [P2/AUDIT](P2/AUDIT.md).
+
+---
+
 # P1.2 · статус карты модулей после слияния · 05.11.2026
 
 PR №10 объединён в `main` (`34415e018c0573391d65129da7da2ef6cbd57eb5`), версия `0.3.11-p1.2`. Описанные ниже изменения P1.2 уже реализованы, не являются предложением. Финансовое ядро model/operations/planning/credit, crypto/store/service, A2 reset, защитные слоты и backup/1 по SHA не изменены. Следующий P2 «Долги» не начат.
