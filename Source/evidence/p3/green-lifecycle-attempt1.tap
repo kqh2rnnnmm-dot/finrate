@@ -1,0 +1,166 @@
+TAP version 13
+# Subtest: P3 old P2 reads are pure, optional root absent; no recommendation materializes a plan
+ok 1 - P3 old P2 reads are pure, optional root absent; no recommendation materializes a plan
+  ---
+  duration_ms: 6.380748
+  type: 'test'
+  ...
+# Subtest: P3 creation/allocate/release idempotent and changed payload IDs rejected
+ok 2 - P3 creation/allocate/release idempotent and changed payload IDs rejected
+  ---
+  duration_ms: 2.023813
+  type: 'test'
+  ...
+# Subtest: P3 progress can exceed target without auto-close; stale metadata does not overwrite
+ok 3 - P3 progress can exceed target without auto-close; stale metadata does not overwrite
+  ---
+  duration_ms: 1.104321
+  type: 'test'
+  ...
+# Subtest: P3 recommendation missing/expired date suppressed; leap calendar and inclusive remaining months explicit
+ok 4 - P3 recommendation missing/expired date suppressed; leap calendar and inclusive remaining months explicit
+  ---
+  duration_ms: 0.441087
+  type: 'test'
+  ...
+# Subtest: P3 explicit whole purchase association may consume only part of one reserve; no purchase double assignment
+ok 5 - P3 explicit whole purchase association may consume only part of one reserve; no purchase double assignment
+  ---
+  duration_ms: 2.687198
+  type: 'test'
+  ...
+# Subtest: P3 split category operation remains one whole purchase/goal; refund totals correct
+ok 6 - P3 split category operation remains one whole purchase/goal; refund totals correct
+  ---
+  duration_ms: 1.293789
+  type: 'test'
+  ...
+# Subtest: P3 edit actual amount down/up changes progress only, records consumption and reduced-net warning
+ok 7 - P3 edit actual amount down/up changes progress only, records consumption and reduced-net warning
+  ---
+  duration_ms: 1.881037
+  type: 'test'
+  ...
+# Subtest: P3 completed goal retains closed snapshot and honest subsequent refund, detached balance independent
+ok 8 - P3 completed goal retains closed snapshot and honest subsequent refund, detached balance independent
+  ---
+  duration_ms: 1.261209
+  type: 'test'
+  ...
+# Subtest: P3 P1.2 payment10000/reserve6000 then partial3000 uses one canonical expense, free invariant
+ok 9 - P3 P1.2 payment10000/reserve6000 then partial3000 uses one canonical expense, free invariant
+  ---
+  duration_ms: 3.83232
+  type: 'test'
+  ...
+# Subtest: P3 unrelated existing expense cannot settle linked payment or debt
+ok 10 - P3 unrelated existing expense cannot settle linked payment or debt
+  ---
+  duration_ms: 1.065893
+  type: 'test'
+  ...
+# Subtest: P3 moved payment keeps identity; source account conflict warns and asserts no coverage
+ok 11 - P3 moved payment keeps identity; source account conflict warns and asserts no coverage
+  ---
+  duration_ms: 1.589466
+  type: 'test'
+  ...
+# Subtest: P3 no automatic transfer; archived reserve only at zero and source stays immutable
+ok 12 - P3 no automatic transfer; archived reserve only at zero and source stays immutable
+  ---
+  duration_ms: 0.950548
+  type: 'test'
+  ...
+# Subtest: P3 strict document refs/version/actions/amounts reject malformed protected payload; tiles validated
+ok 13 - P3 strict document refs/version/actions/amounts reject malformed protected payload; tiles validated
+  ---
+  duration_ms: 1.971584
+  type: 'test'
+  ...
+# Subtest: P3 aggregate reserve amounts reject unsafe restoration even if each entry safe, no account-balance fiction
+ok 14 - P3 aggregate reserve amounts reject unsafe restoration even if each entry safe, no account-balance fiction
+  ---
+  duration_ms: 1.098993
+  type: 'test'
+  ...
+# Subtest: P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+ok 15 - P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+  ---
+  duration_ms: 3.875821
+  type: 'test'
+  ...
+# Subtest: P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+ok 16 - P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+  ---
+  duration_ms: 1.267528
+  type: 'test'
+  ...
+# Subtest: P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+ok 17 - P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+  ---
+  duration_ms: 1.231924
+  type: 'test'
+  ...
+# Subtest: P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+ok 18 - P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+  ---
+  duration_ms: 0.685087
+  type: 'test'
+  ...
+# Subtest: P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+ok 19 - P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+  ---
+  duration_ms: 1.120336
+  type: 'test'
+  ...
+# Subtest: P3 completed/release requires explicit residual choice, preserves cash and closed history
+ok 20 - P3 completed/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.730275
+  type: 'test'
+  ...
+# Subtest: P3 completed/detach requires explicit residual choice, preserves cash and closed history
+ok 21 - P3 completed/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.541219
+  type: 'test'
+  ...
+# Subtest: P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+ok 22 - P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.605757
+  type: 'test'
+  ...
+# Subtest: P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+ok 23 - P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.537844
+  type: 'test'
+  ...
+# Subtest: P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+ok 24 - P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+  ---
+  duration_ms: 2.708549
+  type: 'test'
+  ...
+# Subtest: P3 independent expense can underfund reserve without rewriting history or blocking fact
+ok 25 - P3 independent expense can underfund reserve without rewriting history or blocking fact
+  ---
+  duration_ms: 1.099905
+  type: 'test'
+  ...
+# Subtest: P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+ok 26 - P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+  ---
+  duration_ms: 1.808808
+  type: 'test'
+  ...
+1..26
+# tests 26
+# suites 0
+# pass 26
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 70.783092

@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+ok 1 - P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+  ---
+  duration_ms: 11.382535
+  type: 'test'
+  ...
+# Subtest: P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+ok 2 - P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+  ---
+  duration_ms: 1.783899
+  type: 'test'
+  ...
+# Subtest: P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+ok 3 - P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+  ---
+  duration_ms: 3.149867
+  type: 'test'
+  ...
+# Subtest: P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+ok 4 - P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+  ---
+  duration_ms: 1.314309
+  type: 'test'
+  ...
+# Subtest: P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+not ok 5 - P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+  ---
+  duration_ms: 1.727574
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:16:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 55.00000000000001
+    - 55
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 55
+  actual: 55.00000000000001
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:16:422)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 completed/release requires explicit residual choice, preserves cash and closed history
+not ok 6 - P3 completed/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 1.404545
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:17:92'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'active'
+    - 'completed'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'completed'
+  actual: 'active'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:17:579)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 completed/detach requires explicit residual choice, preserves cash and closed history
+ok 7 - P3 completed/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.992812
+  type: 'test'
+  ...
+# Subtest: P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+not ok 8 - P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 1.056158
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals.test.mjs:17:92'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    + actual - expected
+    
+    + 'active'
+    - 'cancelled'
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'cancelled'
+  actual: 'active'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals.test.mjs:17:579)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+ok 9 - P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 1.729147
+  type: 'test'
+  ...
+# Subtest: P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+ok 10 - P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+  ---
+  duration_ms: 2.911916
+  type: 'test'
+  ...
+# Subtest: P3 independent expense can underfund reserve without rewriting history or blocking fact
+ok 11 - P3 independent expense can underfund reserve without rewriting history or blocking fact
+  ---
+  duration_ms: 0.781332
+  type: 'test'
+  ...
+# Subtest: P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+ok 12 - P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+  ---
+  duration_ms: 2.100549
+  type: 'test'
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 9
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 62.297845
