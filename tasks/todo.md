@@ -1,8 +1,8 @@
 # P2 tasks
 
-- [ ] 1. Audit/baseline + RED four numeric scenarios; create/core validation, no movement existing (deps:none).
-- [ ] 2. Repay/edit/cancel/archive/reconcile, legacy canonical links and invariants (deps1).
-- [ ] 3. Due/forecast/conflicts/A2/compatibility; protected restore/access/rollback tests (deps1–2).
+- [x] 1. Audit/baseline + RED four numeric scenarios; create/core validation, no movement existing (deps:none).
+- [x] 2. Repay/edit/cancel/archive/reconcile, legacy canonical links and invariants (deps1).
+- [x] 3. Due/forecast/conflicts/A2/compatibility; protected restore/access/rollback tests (deps1–2).
 - [ ] 4. Shared UI/forms/guards/drafts, canonical operation routes, search/home indicator (deps1–3).
 - [ ] 5. Native browser matrix, offline/copies/P1.2 upgrade, full release/scope/audit (deps1–4).
 - [ ] 6. Docs/finance matrix/FAQ/checkpoint/decisions/map/screens/iPhone, push and PR (deps5).
