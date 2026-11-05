@@ -1,3 +1,9 @@
+# P2 · состояние модулей после слияния · 05.11.2026
+
+PR №11 объединён в `main` (`4bcb3154fc92973fa7cfa45161b134beb3178e9f`), версия `0.3.12-p2`. Новые `debts.mjs` и `debts-ui.mjs` реализуют учёт долгов; узкие hooks добавлены в `model.mjs`, `operations.mjs`, `planning.mjs`, `payments-ui.mjs`, `dashboard.mjs`, `ui.mjs`, `focus.mjs`, `reset-*`, поиск/историю/FAQ и связанный scoped CSS. Прежние `scheduled-payments.mjs`, crypto/store/service/device-access и формат копии не переписывались. Подробности: [P2 AUDIT](P2/AUDIT.md), [P2 CHANGELOG](P2/CHANGELOG.md). Следующий P3 пока не реализован.
+
+---
+
 # P2 · карта реализованных модулей · 05.11.2026
 
 Ветка `codex/p2-personal-debts`, `p2-debts01` / `0.3.12-p2`, исходный main d1a415a. Не объединено и не опубликовано; исторические статусы «P2 не начат» ниже относятся к прежней контрольной точке.
