@@ -1,5 +1,7 @@
 # PATCH P1.1 · рабочая контрольная точка · 05.11.2026
 
+Pull Request: [https://github.com/kqh2rnnnmm-dot/finrate/pull/9](https://github.com/kqh2rnnnmm-dot/finrate/pull/9) — открыт для приёмки, без merge/deploy.
+
 Main проверен: `597b2086b7ab3826f14777bc2addecd96dc5b7e3`, объединённый A3/PR8, `0.3.9-a3`. Владелец принял A2/A3 **без проверки на настоящем iPhone**. Исторические статусы «PR8 открыт/не объединён» ниже более не актуальны.
 
 Ветка `codex/p1-1-scheduled-payments`, сборка `p1-1-payments01` / `0.3.10-p1.1`. Реализована безопасная основа P1.1: шаблоны/календарь, три представления, частичные/полные подтверждения, canonical expense, будущие условия, бессрочная пауза/возобновление, unpaid forecast и A2/copy integration. **P1.1 ещё не принят владельцем.**

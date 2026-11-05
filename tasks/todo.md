@@ -7,6 +7,8 @@
 - [x] 4. Three-view UI (deps:1–3; 4 files): shared forms/pickers, true payment confirmation and canonical paid details; browser smoke/Back/guards.
 - [x] Checkpoint3–4: end-to-end chain and failure rollback verified.
 - [x] 5. Release/browser matrix (deps:4; test/tools): quotas/CAS/duplicates/offline/restore, size/theme/palette, release and protected SHA; machine evidence.
-- [ ] 6. Docs and delivery (deps:5): audit/changelog/tests/open items/iPhone8–12 steps/screens, checkpoint/FAQ/decisions; push branch and open PR; no merge/deploy.
+- [x] 6. Docs and delivery (deps:5): audit/changelog/tests/open items/iPhone8–12 steps/screens, checkpoint/FAQ/decisions; push branch and open PR; no merge/deploy.
 
 Owner question: variable over-estimate treatment pending. No dependent excess-payment flow before answer. A2/A3 hardware verification remains deferred.
+
+Delivery: PR #9 open, not merged; remote main verified at 597b208. Final artifacts are SHA-pinned in Source/evidence/p1_1/regressions/release-run.json.
