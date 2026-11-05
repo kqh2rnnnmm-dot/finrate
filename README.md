@@ -1,3 +1,11 @@
+# FinRate · статус после слияния P1.1 (05.11.2026)
+
+PATCH P1.1 / PR [#9](https://github.com/kqh2rnnnmm-dot/finrate/pull/9) **объединён в main**: `e561a3134e78ea69d7350857dcc4e02423f81720`. Сборка `p1-1-payments01`, версия `0.3.10-p1.1`. Резервная ветка перед слиянием: `backup/pre-p1-1-main-2026-11-05` (A3, `597b208`). Реальный iPhone не проверен. Ограничение переменного ориентира остаётся открытым; [отчёт](Documents/P1_1/TEST_REPORT.md), [остатки](Documents/P1_1/OPEN_ITEMS.md), [приёмка iPhone](Documents/P1_1/IPHONE_ACCEPTANCE.md).
+
+Никакой отдельной публикации Pages или сброса данных при проверке/слиянии не выполнялось. Старые статусы «PR открыт» ниже относятся к историческим точкам разработки, а не текущему `main`.
+
+---
+
 # FinRate PATCH P1.1 — платежи
 
 [Pull Request №9](https://github.com/kqh2rnnnmm-dot/finrate/pull/9) — открыт для приёмки.
