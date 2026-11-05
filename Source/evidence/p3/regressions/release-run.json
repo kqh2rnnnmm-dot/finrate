@@ -1,0 +1,375 @@
+{
+  "build": "p3-goals01",
+  "publicHTMLSHA256": "0d77b9962c1e2f01ebd0842d78fba2eba3b86a63c27116357a374fbefb854315",
+  "allPassed": true,
+  "results": [
+    {
+      "name": "release-build",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 519
+    },
+    {
+      "name": "patch-unit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 56310
+    },
+    {
+      "name": "p3-upgrade-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7983
+    },
+    {
+      "name": "p2-debts-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 36307
+    },
+    {
+      "name": "p2-upgrade-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 4812
+    },
+    {
+      "name": "p1-2-payments-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 34865
+    },
+    {
+      "name": "p3-goals-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 87808
+    },
+    {
+      "name": "p1-1-payments-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 19495
+    },
+    {
+      "name": "a3-access-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 62856
+    },
+    {
+      "name": "a2-ui-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 12588
+    },
+    {
+      "name": "g1-notifications-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 20394
+    },
+    {
+      "name": "a2-reset-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 89498
+    },
+    {
+      "name": "g1-required-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18972
+    },
+    {
+      "name": "d1-note-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8396
+    },
+    {
+      "name": "c1-input-geometry-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 6823
+    },
+    {
+      "name": "p3-goals",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 70692
+    },
+    {
+      "name": "p3-upgrade",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 6279
+    },
+    {
+      "name": "p2-debts",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 32418
+    },
+    {
+      "name": "p2-upgrade",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 4840
+    },
+    {
+      "name": "p1-2-payments",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 28055
+    },
+    {
+      "name": "g1-theme-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 194703
+    },
+    {
+      "name": "p1-1-payments",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 15743
+    },
+    {
+      "name": "a3-access",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 38716
+    },
+    {
+      "name": "a2-ui",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 11575
+    },
+    {
+      "name": "g1-notifications",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 16218
+    },
+    {
+      "name": "a2-reset",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 62031
+    },
+    {
+      "name": "g1-required",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 16767
+    },
+    {
+      "name": "d1-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5349
+    },
+    {
+      "name": "d1-home-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 47636
+    },
+    {
+      "name": "d1-interaction-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 41180
+    },
+    {
+      "name": "c1-input-geometry",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5947
+    },
+    {
+      "name": "c1-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7655
+    },
+    {
+      "name": "b12-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 9500
+    },
+    {
+      "name": "b11-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7606
+    },
+    {
+      "name": "b1-period-sync-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8821
+    },
+    {
+      "name": "b1-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 4740
+    },
+    {
+      "name": "r30-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 3147
+    },
+    {
+      "name": "edge-lifecycle-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 12207
+    },
+    {
+      "name": "g1-theme",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 174391
+    },
+    {
+      "name": "credit-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 9199
+    },
+    {
+      "name": "notice-motion-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 12870
+    },
+    {
+      "name": "entryfix-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18731
+    },
+    {
+      "name": "security-lifecycle-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5892
+    },
+    {
+      "name": "combined-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 36030
+    },
+    {
+      "name": "history-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18470
+    },
+    {
+      "name": "compact-scroll-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 11397
+    },
+    {
+      "name": "security-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 46554
+    },
+    {
+      "name": "feedback-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 19842
+    },
+    {
+      "name": "modality-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 9468
+    },
+    {
+      "name": "home-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 20899
+    },
+    {
+      "name": "layout-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 20207
+    },
+    {
+      "name": "revision-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 28119
+    },
+    {
+      "name": "control-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 27559
+    },
+    {
+      "name": "shell-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 38954
+    },
+    {
+      "name": "patch-navigation",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 11340
+    },
+    {
+      "name": "patch-lists",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 15581
+    },
+    {
+      "name": "patch-forms",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8059
+    },
+    {
+      "name": "unified-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 75855
+    },
+    {
+      "name": "patch-upgrade",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 41764
+    },
+    {
+      "name": "patch-list-performance",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7389
+    },
+    {
+      "name": "verify-delivery",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 65
+    }
+  ],
+  "actualIPhone": false,
+  "published": false
+}

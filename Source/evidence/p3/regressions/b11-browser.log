@@ -1,0 +1,6 @@
+PASS no available planned income opens ordinary income directly
+PASS wizard reuses common category/subcategory/account creation, four schedules and review edit
+PASS plans and common references survive encrypted reload
+PASS two overdue cards, adjusted partial receipt, remainder quick confirm, skip comment and direct ordinary income after closing all
+PASS overpayment and final shortfall close only selected occurrence; base monthly amounts unchanged
+PASS ordinary entry fits 320/402/736 both themes; document fixed, no horizontal overflow

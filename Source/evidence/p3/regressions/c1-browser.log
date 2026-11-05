@@ -1,0 +1,13 @@
+PASS operation note: exact whitespace, escaped markup, no keyboard
+PASS transfer / income / refund note viewers share exact text behavior
+PASS reading every operation note leaves encrypted storage byte-identical
+PASS fixed outer shell / note viewer at 320/375/390/428/1280, light and dark
+PASS dirty guard: continue retains text, discard does not persist
+PASS note-only save preserves all financial totals
+PASS history note has full viewer without editing immutable snapshot
+PASS account note uses shared viewer
+PASS account form note: viewer → shared editor → unsaved parent form
+PASS new numeric value empty; native Enter accepts cents and removes focus
+PASS saved skip comment: shared viewer/editor, financial status preserved
+PASS simulated native keyboard dismissal accepts numeric field without submitting operation
+PASS no browser runtime errors

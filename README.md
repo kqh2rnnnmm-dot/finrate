@@ -1,3 +1,13 @@
+# P3 · рабочая ветка для приёмки
+
+`codex/p3-goals-reserves`, **p3-goals01 /0.3.13-p3**, от main3add5d9. Реализованы обе разновидности целей, виртуальные резервы, безопасное использование через канонические операции, единый прогноз, история/архив и реальные показатели Главной. Без merge/Pages/сброса пользовательских данных. Физический iPhone ещё не проверен.
+
+[Контрольная точка](Documents/03_CHECKPOINT.md) · [Матрица](Documents/P3/FINANCIAL_MATRIX.md) · [Проверки](Documents/P3/TEST_REPORT.md) · [Ограничения](Documents/P3/OPEN_ITEMS.md) · [iPhone](Documents/P3/IPHONE_ACCEPTANCE.md) · [Снимки](Documents/P3/SCREENSHOTS.md).
+
+Исторические статусы ниже описывают предыдущие main/пакеты.
+
+---
+
 # FinRate · актуальный статус после P2 (05.11.2026)
 
 [PR №11](https://github.com/kqh2rnnnmm-dot/finrate/pull/11) объединён в `main` (merge `4bcb3154fc92973fa7cfa45161b134beb3178e9f`). Сборка `p2-debts01`, версия `0.3.12-p2`. Резервная ветка **кода** `backup/pre-p2-main-2026-11-05` указывает на P1.2 (`d1a415a3558bdb348ddf29353398090c87367538`). Включены личные долги/возвраты, архив, «К оплате», свободные деньги, поиск и черновики. Тесты Codex: 415/415 unit/integration, 57/57 release PASS; реальный iPhone не проверен. Для полного отката данных P2 нужна внешняя копия, созданная до появления новых долгов, не одна только ветка GitHub. Ручной deploy Pages не выполнялся, автоматические настройки Pages не проверялись. [Тесты](Documents/P2/TEST_REPORT.md) · [Границы](Documents/P2/OPEN_ITEMS.md) · [Приёмка iPhone](Documents/P2/IPHONE_ACCEPTANCE.md). Прежние статусы «PR открыт» ниже исторические.

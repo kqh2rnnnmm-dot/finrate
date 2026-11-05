@@ -1,0 +1,25 @@
+{
+  "engine": "chromium",
+  "build": "p3-goals01",
+  "checks": [
+    "P2 document opens without write/root migration, empty goals and reserves; five main tabs unchanged",
+    "real UI creation +native quota rollback/double tap, reserve10000 changes free once, no canonical operations",
+    "allocate5000/release4000 no movements, same-account oversubscription and competing reserve rejected without write; credit excluded",
+    "new3000 canonical expense and reserve decrement atomic, quota no orphan, double tap one fact; purchase progress11000, free no second subtraction",
+    "existing real2000 expense links without second operation/cash movement, one whole purchase one active goal link",
+    "edit2500 and real refund500 recalc purchase progress, historical reserve consumption unchanged, no automatic reallocation",
+    "500char multiline note, scoped search same card, existing encrypted local history includes reserve-dependent goal progress",
+    "standard dirty guard and encrypted goal draft, resume/save consumes intent, no premature allocations",
+    "Home reserves and concrete selected goal use actual derived numbers; existing configuration and navigation work",
+    "explicit stable P1.2 link covers liability once; canonical partial payment2000 preserves free invariant and planned source",
+    "explicit P2 liability uses existing canonical repayment-out editor, source locked, principal never purchase/income/expense",
+    "native second-window CAS protects allocation group; reload preserves winning action"
+  ],
+  "failures": [
+    "locator.waitFor: Error: strict mode violation: locator('[data-goal-close]') resolved to 2 elements:\n    1) <button disabled type=\"button\" class=\"button\" data-goal-close=\"release\">Освободить деньги</button> aka getByRole('button', { name: 'Освободить деньги' })\n    2) <button disabled type=\"button\" class=\"button secondary\" data-goal-close=\"detach\">Оставить отдельным резервом</button> aka getByRole('button', { name: 'Оставить отдельным резервом' })\n\nCall log:\n\u001b[2m  - waiting for locator('[data-goal-close]') to be detached\u001b[22m\n"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "version": "153.0.8010.0",
+  "allPassed": false
+}

@@ -1,0 +1,20 @@
+{
+  "engine": "webkit",
+  "baseline": "d1a415a3558bdb348ddf29353398090c87367538",
+  "build": "p3-goals01",
+  "checks": [
+    "actual P1.2→P2 user-approved SW update; exact vault/generation unchanged, optional root absent, no forced migration",
+    "first debt creation one atomic generation; existing P1.2 payments and operations unchanged",
+    "independent P2 native-file restore of actual P1.2 exported backup equals entire original document"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "oldBackup": {
+    "generatedBy": "actual main P1.2 public build",
+    "format": "finrate-backup/1",
+    "sha256": "d2e47bd8c87cf9d4e13bb316a453cf5300d60cb71f3dc855725eedde26471fe0",
+    "committed": false
+  },
+  "allPassed": true
+}

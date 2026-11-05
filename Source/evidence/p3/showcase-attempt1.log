@@ -1,0 +1,15 @@
+file:///workspace/finrate/Source/src/model.mjs:8
+export const fail=code=>{throw new FinRateError(code);};
+                               ^
+
+FinRateError: GOAL_CHANGED
+    at fail (file:///workspace/finrate/Source/src/model.mjs:8:32)
+    at validateGoalTile (file:///workspace/finrate/Source/src/goals.mjs:37:183)
+    at validateDocument (file:///workspace/finrate/Source/src/model.mjs:185:33)
+    at atomic (file:///workspace/finrate/Source/src/goals.mjs:43:107)
+    at createGoal (file:///workspace/finrate/Source/src/goals.mjs:45:63)
+    at file:///workspace/finrate/Source/tools/p3-screenshots.mjs:20:225 {
+  code: 'GOAL_CHANGED'
+}
+
+Node.js v24.19.0

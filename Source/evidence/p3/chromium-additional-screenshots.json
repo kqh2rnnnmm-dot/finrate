@@ -1,0 +1,28 @@
+{
+  "engine": "chromium",
+  "build": "p3-goals01",
+  "shots": [
+    "chromium-neutral-light-showcase-home.png",
+    "chromium-neutral-light-showcase-goals.png",
+    "chromium-neutral-light-showcase-purchase55.png",
+    "chromium-neutral-light-showcase-reserves.png",
+    "chromium-neutral-light-showcase-reserve.png",
+    "chromium-neutral-dark-showcase-home.png",
+    "chromium-neutral-dark-showcase-goals.png",
+    "chromium-neutral-dark-showcase-purchase55.png",
+    "chromium-neutral-dark-showcase-reserves.png",
+    "chromium-neutral-dark-showcase-reserve.png",
+    "chromium-color-light-showcase-home.png",
+    "chromium-color-light-showcase-goals.png",
+    "chromium-color-light-showcase-purchase55.png",
+    "chromium-color-light-showcase-reserves.png",
+    "chromium-color-light-showcase-reserve.png",
+    "chromium-color-dark-showcase-home.png",
+    "chromium-color-dark-showcase-goals.png",
+    "chromium-color-dark-showcase-purchase55.png",
+    "chromium-color-dark-showcase-reserves.png",
+    "chromium-color-dark-showcase-reserve.png"
+  ],
+  "actualIPhone": false,
+  "published": false
+}

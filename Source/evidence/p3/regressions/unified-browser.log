@@ -1,0 +1,49 @@
+PASS 320 large values: exact text, single line, local scroll, both themes
+PASS 320 chooser X; numeric insertion/paste/digit limits; no blur save; Done only updates parent; multiline exact after explicit financial save
+PASS 320 direct quick edit: Back and Save return to list without a hidden details screen
+PASS 320 details edit: Back and Save return to refreshed details; duplicate overflow menu removed
+PASS 320 search scope/query and actual list scroll survive direct editing
+PASS 320 complete comments with original whitespace; long amounts in both themes; one menu selection and keyboard access without outlines
+PASS 320 accounts: direct edit, raw description, signed reconciliation returns to refreshed details, archive/restore stay in source section
+PASS 320 categories: direct rename and details rename share command/return; editing contains direct commands without an ellipsis
+PASS 320 offline reload unlocks same encrypted data; no external runtime requests
+PASS 375 large values: exact text, single line, local scroll, both themes
+PASS 375 chooser X; numeric insertion/paste/digit limits; no blur save; Done only updates parent; multiline exact after explicit financial save
+PASS 375 direct quick edit: Back and Save return to list without a hidden details screen
+PASS 375 details edit: Back and Save return to refreshed details; duplicate overflow menu removed
+PASS 375 search scope/query and actual list scroll survive direct editing
+PASS 375 complete comments with original whitespace; long amounts in both themes; one menu selection and keyboard access without outlines
+PASS 375 accounts: direct edit, raw description, signed reconciliation returns to refreshed details, archive/restore stay in source section
+PASS 375 categories: direct rename and details rename share command/return; editing contains direct commands without an ellipsis
+PASS 375 offline reload unlocks same encrypted data; no external runtime requests
+PASS 402 large values: exact text, single line, local scroll, both themes
+PASS 402 chooser X; numeric insertion/paste/digit limits; no blur save; Done only updates parent; multiline exact after explicit financial save
+PASS 402 direct quick edit: Back and Save return to list without a hidden details screen
+PASS 402 details edit: Back and Save return to refreshed details; duplicate overflow menu removed
+PASS 402 search scope/query and actual list scroll survive direct editing
+PASS 402 complete comments with original whitespace; long amounts in both themes; one menu selection and keyboard access without outlines
+PASS 402 accounts: direct edit, raw description, signed reconciliation returns to refreshed details, archive/restore stay in source section
+PASS 402 categories: direct rename and details rename share command/return; editing contains direct commands without an ellipsis
+PASS write failure leaves amount/comment available; exact leading/trailing blank lines and hard 500-character limit; retry commits once
+PASS split uses the common numeric editor and rejects amounts above available part before applying
+PASS draft quick continue saves directly back to refreshed drafts, without phantom panels
+PASS native Chromium touch hold → drag → release invokes one direct action; Home tile menu opens shared settings with position and returns directly
+PASS cancel from quick menu returns to list; refund entered through details returns to actual source details
+PASS unchanged imported CRLF is preserved; 500-character multiline editor and full details scroll inside their own areas
+PASS native horizontal pan scrolls the long amount locally, without opening details or swiping to another section
+PASS direct subcategory move, category merge and taxonomy undo return to source list without changing financial totals
+PASS 402 offline reload unlocks same encrypted data; no external runtime requests
+PASS 1280 large values: exact text, single line, local scroll, both themes
+PASS 1280 chooser X; numeric insertion/paste/digit limits; no blur save; Done only updates parent; multiline exact after explicit financial save
+PASS 1280 direct quick edit: Back and Save return to list without a hidden details screen
+PASS 1280 details edit: Back and Save return to refreshed details; duplicate overflow menu removed
+PASS 1280 search scope/query and actual list scroll survive direct editing
+PASS 1280 complete comments with original whitespace; long amounts in both themes; one menu selection and keyboard access without outlines
+PASS 1280 accounts: direct edit, raw description, signed reconciliation returns to refreshed details, archive/restore stay in source section
+PASS 1280 categories: direct rename and details rename share command/return; editing contains direct commands without an ellipsis
+PASS 1280 offline reload unlocks same encrypted data; no external runtime requests
+{
+  "checks": 44,
+  "errors": [],
+  "failures": []
+}

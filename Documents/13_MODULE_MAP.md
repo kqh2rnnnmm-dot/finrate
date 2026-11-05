@@ -1,3 +1,26 @@
+# P3 · карта модулей · 05.11.2026
+
+В рабочей ветке codex/p3-goals-reserves от main3add5d9. Не объединено/не опубликовано. p3-goals01 /0.3.13-p3.
+
+| Модуль | Адресная ответственность P3 |
+|---|---|
+| goals.mjs | Optional goals/version1, выделения/освобождения/использования, строгие ссылки/лимиты, прогресс/refund/закрытие, покрытие обязательств, account-shortfall и рекомендации |
+| goals-ui.mjs | Два представления существующей вкладки, карточки/формы/архив, явные действия/выбор закрытия, общий поиск/context/draft/notes |
+| model.mjs | Только validation hooks P3 root/drafts с проверкой ссылок/optional tilegoalId; postings/totals прежние |
+| planning.mjs | Источник reserveForecast в прежнем reserves/cover seam и запрет повторного именованного ID; B1-формулы неизменны |
+| focus.mjs /payments-ui.mjs /debts-ui.mjs | Контекст резерва вокруг существующего saveFact/confirmPayment/repayDebt в одной атомарной мутации, источник фиксирован |
+| ui.mjs /context-menu.mjs | Existing navigation/search/history/drafts/Back integration, без новой overlay-системы |
+| dashboard.mjs /home-config.mjs | Настоящие показатели резервов/выбранной цели и optional goalId в прежнем редакторе блока |
+| activity.mjs /activity-ui.mjs | Общая зашифрованная история метаданных и производного прогресса, суммы/счёт/связи/закрытие |
+| reset-policy.mjs /reset-ui.mjs | Allowlist только goals/goalId, точные P3-счётчики и предупреждения; три прежних режима |
+| app.mjs /help.mjs /planning-ui.mjs | Маршрут/сообщения/FAQ/пояснение покрытия, точечное снятие disabled после backup с сохранённым dock |
+| style.css | Только [data-goals-ui], прежние токены/темы/палитры до P3 byte-identical |
+| tests/goals* /tools | P3 unit/integration/browser/upgrade/rollback; полный release и SHA-проверка сохранности старых исходников/тестовых assertions |
+
+operations/block02/credit/scheduled-payments/debts/service/store/crypto/device-access/navigation/surfaces/field-editor не изменены относительно принятого P2. SCHEMA5, backup1, DEK/PIN прежние. [Аудит](P3/AUDIT.md), [финансовая матрица](P3/FINANCIAL_MATRIX.md), [ограничения](P3/OPEN_ITEMS.md). Историческое «P3 не реализован» ниже заменено этой записью.
+
+---
+
 # P2 · состояние модулей после слияния · 05.11.2026
 
 PR №11 объединён в `main` (`4bcb3154fc92973fa7cfa45161b134beb3178e9f`), версия `0.3.12-p2`. Новые `debts.mjs` и `debts-ui.mjs` реализуют учёт долгов; узкие hooks добавлены в `model.mjs`, `operations.mjs`, `planning.mjs`, `payments-ui.mjs`, `dashboard.mjs`, `ui.mjs`, `focus.mjs`, `reset-*`, поиск/историю/FAQ и связанный scoped CSS. Прежние `scheduled-payments.mjs`, crypto/store/service/device-access и формат копии не переписывались. Подробности: [P2 AUDIT](P2/AUDIT.md), [P2 CHANGELOG](P2/CHANGELOG.md). Следующий P3 пока не реализован.

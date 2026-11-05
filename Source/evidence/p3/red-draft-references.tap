@@ -1,0 +1,79 @@
+TAP version 13
+# Subtest: P3 A2 financial counters/external proof/cleanup and independent exact restore
+ok 1 - P3 A2 financial counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 628.465397
+  type: 'test'
+  ...
+# Subtest: P3 A2 categories counters/external proof/cleanup and independent exact restore
+ok 2 - P3 A2 categories counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 538.514617
+  type: 'test'
+  ...
+# Subtest: P3 A2 all counters/external proof/cleanup and independent exact restore
+ok 3 - P3 A2 all counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 559.921573
+  type: 'test'
+  ...
+# Subtest: P3 quota on create/use leaves neither orphan entity nor fact; CAS and repeat request exact
+ok 4 - P3 quota on create/use leaves neither orphan entity nor fact; CAS and repeat request exact
+  ---
+  duration_ms: 323.647152
+  type: 'test'
+  ...
+# Subtest: P3 password/PIN/recovery preserve root/operations and earlier external copy
+ok 5 - P3 password/PIN/recovery preserve root/operations and earlier external copy
+  ---
+  duration_ms: 1092.471612
+  type: 'test'
+  ...
+# Subtest: P3 draft is encrypted intent, not money or goal; successful creation consumes it atomically
+ok 6 - P3 draft is encrypted intent, not money or goal; successful creation consumes it atomically
+  ---
+  duration_ms: 0.676054
+  type: 'test'
+  ...
+# Subtest: P3 genuine old P2-shaped document opens without any automatic write or extension
+ok 7 - P3 genuine old P2-shaped document opens without any automatic write or extension
+  ---
+  duration_ms: 204.180428
+  type: 'test'
+  ...
+# Subtest: P3 validly encrypted malformed linkage rejected during restore, active vault unchanged
+ok 8 - P3 validly encrypted malformed linkage rejected during restore, active vault unchanged
+  ---
+  duration_ms: 411.149161
+  type: 'test'
+  ...
+# Subtest: P3 persisted use/edit intents cannot reference missing reserves, goals or facts
+not ok 9 - P3 persisted use/edit intents cannot reference missing reserves, goals or facts
+  ---
+  duration_ms: 2.053759
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/goals-integration.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: 'Missing expected exception.'
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: [Function (anonymous)]
+  operator: 'throws'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/goals-integration.test.mjs:12:601)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..9
+# tests 9
+# suites 0
+# pass 8
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3852.687955
