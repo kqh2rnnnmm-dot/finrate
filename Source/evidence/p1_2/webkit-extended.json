@@ -1,0 +1,23 @@
+{
+  "engine": "webkit",
+  "checks": [
+    "variable1700/2300 full closes current period; cancellation reopens estimate; one real expense per confirmation",
+    "shared editor600 partial +1100 full, final edit1000 and cancellation retain600 partial",
+    "partial reaching estimate opens compact clarification; explicit2600 applies only to period, no premature write",
+    "batch review shared editor; bank never auto-selected; native quota whole rollback; double tap explicit retry exactly2 expenses/one commit",
+    "partial skip guarded; move crosses month with same ID/remainder; bank failed/unknown create no expenses; uncharged period skip",
+    "calendar shows paid/skipped/moved actual instances, same detail; instance-only120, future150 from date, paid partial retained and leap anchor",
+    "bank late actual success after failed/unknown and explicit unskip uses same event, one new expense",
+    "3 payment views +calendar × 7 sizes × 4 theme/palette combinations; 320px large-text check; existing confirmation surface screenshots",
+    "real encrypted download and independent native-file UI restore preserve exact document/plans/snapshots/links",
+    "service-worker cold reload/unlock with HTTP server refusing every request (not iPhone airplane mode)"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "version": "26.5",
+  "expectedOfflineNetworkErrors": [
+    "/127.0.0.1:42765/sw.js due to access control checks."
+  ],
+  "allPassed": true
+}

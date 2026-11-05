@@ -1,0 +1,78 @@
+TAP version 13
+# Subtest: P1.2 move across month preserves identity/partial/history, removes original date only
+ok 1 - P1.2 move across month preserves identity/partial/history, removes original date only
+  ---
+  duration_ms: 20.298692
+  type: 'test'
+  ...
+# Subtest: P1.2 month skip excludes unpaid obligation and forecast; calendar retains skipped event; unskip exact identity
+ok 2 - P1.2 month skip excludes unpaid obligation and forecast; calendar retains skipped event; unskip exact identity
+  ---
+  duration_ms: 1.642926
+  type: 'test'
+  ...
+# Subtest: P1.2 partial debt cannot be hidden by month skip or rewritten as paid instance
+ok 3 - P1.2 partial debt cannot be hidden by month skip or rewritten as paid instance
+  ---
+  duration_ms: 2.056823
+  type: 'test'
+  ...
+# Subtest: P1.2 single-instance conditions do not change February; this-and-future preserves paid periods and31 anchor
+ok 4 - P1.2 single-instance conditions do not change February; this-and-future preserves paid periods and31 anchor
+  ---
+  duration_ms: 1.160627
+  type: 'test'
+  ...
+# Subtest: P1.2 bank failed/unknown are metadata only, availability is explicit known-data estimate, later one actual success
+ok 5 - P1.2 bank failed/unknown are metadata only, availability is explicit known-data estimate, later one actual success
+  ---
+  duration_ms: 1.039954
+  type: 'test'
+  ...
+# Subtest: P1.2 indefinite pause suppresses future unpaid overrides and never reissues missed ones after resume
+ok 6 - P1.2 indefinite pause suppresses future unpaid overrides and never reissues missed ones after resume
+  ---
+  duration_ms: 0.889106
+  type: 'test'
+  ...
+# Subtest: P1.2 indefinite pause retains future partial debt and already-due moved obligations
+ok 7 - P1.2 indefinite pause retains future partial debt and already-due moved obligations
+  ---
+  duration_ms: 1.054146
+  type: 'test'
+  ...
+# Subtest: P1.2 cancelling the sole final fact reopens its obligation even while its parent plan is paused
+not ok 8 - P1.2 cancelling the sole final fact reopens its obligation even while its parent plan is paused
+  ---
+  duration_ms: 2.167481
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/payment-instances.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    'skipped' !== 'open'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'open'
+  actual: 'skipped'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/payment-instances.test.mjs:12:312)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 7
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 79.616471

@@ -1,0 +1,88 @@
+TAP version 13
+# Subtest: P1.2 batch fixed+variable creates exactly two canonical facts atomically; whole repeated group no-op
+ok 1 - P1.2 batch fixed+variable creates exactly two canonical facts atomically; whole repeated group no-op
+  ---
+  duration_ms: 17.947124
+  type: 'test'
+  ...
+# Subtest: P1.2 error in second batch payment rolls first back too
+ok 2 - P1.2 error in second batch payment rolls first back too
+  ---
+  duration_ms: 1.198874
+  type: 'test'
+  ...
+# Subtest: P1.2 insufficient combined funds leaves every fact/link unchanged
+ok 3 - P1.2 insufficient combined funds leaves every fact/link unchanged
+  ---
+  duration_ms: 1.330744
+  type: 'test'
+  ...
+# Subtest: P1.2 duplicate IDs/instances and mixed stale group fail without completing half a group
+ok 4 - P1.2 duplicate IDs/instances and mixed stale group fail without completing half a group
+  ---
+  duration_ms: 0.815614
+  type: 'test'
+  ...
+# Subtest: P1.2 RED→GREEN variable final 170000 closes estimate200000 and preserves next month
+ok 5 - P1.2 RED→GREEN variable final 170000 closes estimate200000 and preserves next month
+  ---
+  duration_ms: 1.672101
+  type: 'test'
+  ...
+# Subtest: P1.2 RED→GREEN variable final 230000 closes estimate200000 and preserves next month
+ok 6 - P1.2 RED→GREEN variable final 230000 closes estimate200000 and preserves next month
+  ---
+  duration_ms: 0.976848
+  type: 'test'
+  ...
+# Subtest: P1.2 variable600+1100 final closes1700; cancellation reopens remaining1400, prior partial remains
+ok 7 - P1.2 variable600+1100 final closes1700; cancellation reopens remaining1400, prior partial remains
+  ---
+  duration_ms: 1.343594
+  type: 'test'
+  ...
+# Subtest: P1.2 partial at/above estimate requires explicit larger period estimate, never silently increases future
+ok 8 - P1.2 partial at/above estimate requires explicit larger period estimate, never silently increases future
+  ---
+  duration_ms: 2.781269
+  type: 'test'
+  ...
+# Subtest: P1.2 fixed retains cap and does not accept variable full flag as override
+ok 9 - P1.2 fixed retains cap and does not accept variable full flag as override
+  ---
+  duration_ms: 0.707601
+  type: 'test'
+  ...
+# Subtest: P1.2 reads P1.1 snapshots/links without migration or query write; explicit legacy final semantics remain
+ok 10 - P1.2 reads P1.1 snapshots/links without migration or query write; explicit legacy final semantics remain
+  ---
+  duration_ms: 0.930148
+  type: 'test'
+  ...
+# Subtest: P1.2 editing final amount/account/date preserves final closure; cancellation reopens other partials
+ok 11 - P1.2 editing final amount/account/date preserves final closure; cancellation reopens other partials
+  ---
+  duration_ms: 1.485368
+  type: 'test'
+  ...
+# Subtest: P1.2 legacy final edit can explicitly adopt approved actual-total rule
+ok 12 - P1.2 legacy final edit can explicitly adopt approved actual-total rule
+  ---
+  duration_ms: 0.61474
+  type: 'test'
+  ...
+# Subtest: P1.2 editing partial cannot create zero remaining partial or make later final cancellation invalid
+ok 13 - P1.2 editing partial cannot create zero remaining partial or make later final cancellation invalid
+  ---
+  duration_ms: 1.95581
+  type: 'test'
+  ...
+1..13
+# tests 13
+# suites 0
+# pass 13
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 61.209815

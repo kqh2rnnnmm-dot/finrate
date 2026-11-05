@@ -1,0 +1,97 @@
+{
+  "engine": "webkit",
+  "checks": [
+    "light/neutral/financial: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "light/neutral/categories: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)"
+  ],
+  "failures": [
+    {
+      "name": "TimeoutError",
+      "reason": "browser assertion failed"
+    }
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "externalFileVerified": true,
+  "files": [
+    {
+      "case": "light/neutral/financial",
+      "sha256": "31404c5e12bd1791b340593132c0f09d2d5b0d478d4a739f38b2033edbb0b5ea",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/neutral/categories",
+      "sha256": "44ca3ca7177f16ca0080f512f1c165d807043da4dc5273f8bd9841dba0fa8a41",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/neutral/all",
+      "sha256": "7c8eeb68bf382d47b0e173fda513c5ee3218c4be1205301a84775fbc30ec6f2a",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    }
+  ],
+  "version": "26.5",
+  "layoutChecks": 42,
+  "offlineModel": "Test server refuses every HTTP connection carrying this isolated profile cookie; native File input unchanged and navigator.onLine remains true. WebKit setOffline flag separately rejects File IO (NotReadableError), so real iOS airplane mode remains hardware-only.",
+  "nativePartialQuotaRollback": true,
+  "ownDiagnostic": {
+    "root": "hidden",
+    "auth": null,
+    "form": null,
+    "body": "app-open surface-open screen-surface-open",
+    "feedback": [
+      "Проверьте отдельное сохранение файла и введите указанную фразу целиком."
+    ],
+    "heading": "Полный сброс FinRate"
+  },
+  "diagnostic": {
+    "rootVisibility": "",
+    "bodyClass": "",
+    "visibility": "visible",
+    "active": "BODY",
+    "openDialogs": 0,
+    "hasUnlock": false,
+    "htmlHeight": 844,
+    "rootRect": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 843.984375,
+      "top": 0,
+      "right": 390,
+      "bottom": 843.984375,
+      "left": 0
+    },
+    "authRect": {
+      "x": 0,
+      "y": 0,
+      "width": 390,
+      "height": 844,
+      "top": 0,
+      "right": 390,
+      "bottom": 844,
+      "left": 0
+    },
+    "authVisibility": "visible",
+    "rootInert": false,
+    "rootComputed": "visible",
+    "htmlVisibility": "visible",
+    "bodyVisibility": "visible",
+    "authStyle": ""
+  }
+}

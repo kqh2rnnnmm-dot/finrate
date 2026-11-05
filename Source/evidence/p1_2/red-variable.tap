@@ -1,0 +1,56 @@
+TAP version 13
+# Subtest: P1.2 RED→GREEN variable final 170000 closes estimate200000 and preserves next month
+not ok 1 - P1.2 RED→GREEN variable final 170000 closes estimate200000 and preserves next month
+  ---
+  duration_ms: 14.00434
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/payments-extended.test.mjs:8:37'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+
+    'partial' !== 'paid'
+
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 'paid'
+  actual: 'partial'
+  operator: 'strictEqual'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/payments-extended.test.mjs:8:296)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: P1.2 RED→GREEN variable final 230000 closes estimate200000 and preserves next month
+not ok 2 - P1.2 RED→GREEN variable final 230000 closes estimate200000 and preserves next month
+  ---
+  duration_ms: 0.385133
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/payments-extended.test.mjs:8:37'
+  failureType: 'testCodeFailure'
+  error: 'PAYMENT_AMOUNT'
+  code: 'PAYMENT_AMOUNT'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:6:32)
+    file:///workspace/finrate/Source/src/scheduled-payments.mjs:118:142
+    atomic (file:///workspace/finrate/Source/src/scheduled-payments.mjs:98:73)
+    confirmPayment (file:///workspace/finrate/Source/src/scheduled-payments.mjs:115:75)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/payments-extended.test.mjs:8:155)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 0
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 41.314834
