@@ -58,5 +58,6 @@
     "src/ui-settings.mjs": "4a970245283d3d73ab69b5c75cbed47b2d5ec0d946d641e101f101cd4aa72d29",
     "src/ui-values.mjs": "1cf95d082a5d1c283b9092cfed30e72e8d90a8e1d91a4a5c564d0ce4a982d38c",
     "src/ui.mjs": "2431666775e404e76aa1a3acd100343199ccfa686037d9c144af5d01b08605b9"
-  }
+  },
+  "planningUIOutsideFreeSHA256": "75a83925f170b006c2239bf0063642f962358e44ac3bf2d8307653be05b644c6"
 }

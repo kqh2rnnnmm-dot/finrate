@@ -1,3 +1,17 @@
+# FinRate PATCH P1.1 — платежи
+
+Ветка `codex/p1-1-scheduled-payments` от main `597b208` (объединённый A3). Сборка `p1-1-payments01`, версия `0.3.10-p1.1`. P1.1 ещё не принят владельцем; merge и публикация не выполнялись.
+
+Работают планы разовых/регулярных платежей, «К оплате», подтверждение частями через обычный расход, «Оплаченные», правка/отмена, будущие условия и бессрочная пауза с возобновлением. Прогноз учитывает непогашенный остаток; копии/очистки A2 сохраняют утверждённую защиту.
+
+Превышение переменного ориентира ожидает решения владельца и пока отклоняется. P1.2 не входит в эту ветку. A2/A3 и P1.1 не прошли аппаратную приёмку iPhone.
+
+[Аудит](Documents/P1_1/AUDIT.md) · [изменения](Documents/P1_1/CHANGELOG.md) · [тесты](Documents/P1_1/TEST_REPORT.md) · [снимки](Documents/P1_1/SCREENSHOTS.md) · [ограничения](Documents/P1_1/OPEN_ITEMS.md) · [iPhone](Documents/P1_1/IPHONE_ACCEPTANCE.md).
+
+---
+
+## История предыдущих пакетов
+
 # FinRate PATCH A3
 
 Pull Request: [https://github.com/kqh2rnnnmm-dot/finrate/pull/8](https://github.com/kqh2rnnnmm-dot/finrate/pull/8) — открыт для приёмки, без merge/deploy.
