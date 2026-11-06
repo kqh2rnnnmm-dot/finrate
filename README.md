@@ -1,5 +1,7 @@
 # FinRate · ACCESS-after-P4 A · готово для ревизии
 
+[PR №14](https://github.com/kqh2rnnnmm-dot/finrate/pull/14) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
 Рабочая ветка codex/access-emergency-reset, **не слито/не опубликовано**. Build access-emergency-reset01 /version0.3.15-access-a; base e7b3f631187b16b7b01fc49cb975968a2439f93c. Аварийное начало с нуля с закрытого экрана: штатные A3 пути, export только ciphertext без секрета, отдельный copy/no-copy выбор и необратимое подтверждение, atomic CAS reset и обычный setup. Старые данные без старого секрета не открываются.
 
 **514/514 unit/integration и71/71 release PASS,0 FAIL/0 SKIP.**

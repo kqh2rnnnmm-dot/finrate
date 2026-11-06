@@ -1,5 +1,7 @@
 # ACCESS-after-P4 A · карта изменений · 06.11.2026
 
+[PR №14](https://github.com/kqh2rnnnmm-dot/finrate/pull/14) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
 codex/access-emergency-reset; access-emergency-reset01 /0.3.15-access-a; base e7b3f631187b16b7b01fc49cb975968a2439f93c. Не слито/не опубликовано.
 
 | Компонент | Адресная ответственность |

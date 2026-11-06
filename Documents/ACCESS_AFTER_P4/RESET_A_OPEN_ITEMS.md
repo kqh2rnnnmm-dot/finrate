@@ -1,5 +1,7 @@
 # ACCESS-after-P4 A — ограничения и риски
 
+[PR №14](https://github.com/kqh2rnnnmm-dot/finrate/pull/14) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
 Рабочая ветка codex/access-emergency-reset; access-emergency-reset01 /0.3.15-access-a. Не слито и не опубликовано. Основа e7b3f631187b16b7b01fc49cb975968a2439f93c.
 
 - **Настоящий iPhone Safari / Home Screen PWA: OPEN.** Playwright WebKit/Linux не является iPhone. Нативные «Файлы», share/download, AutoFill и системная клавиатура/VoiceOver/снимки переключателя приложений требуют устройства. Ранее отложенные A2/A3/P1.1/P1.2/P2/P3/P4 и старый A2/WebKit PIN timeout остаются OPEN; успех этого прогона не доказывает исправления старого нестабильного сценария.

@@ -1,0 +1,13 @@
+{
+  "pr": 14,
+  "url": "https://github.com/kqh2rnnnmm-dot/finrate/pull/14",
+  "state": "open",
+  "merged": false,
+  "mergeable": true,
+  "snapshotHead": "f503feb78f0fdc1f3cefef17591d5ac8f6d7cd30",
+  "base": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "statuses": [],
+  "workflow_runs": [],
+  "remoteCIPassClaimed": false,
+  "subsequentChanges": "documentation and PR link only"
+}

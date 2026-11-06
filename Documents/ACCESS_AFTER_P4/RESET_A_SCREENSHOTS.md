@@ -1,5 +1,7 @@
 # ACCESS A — реальные скриншоты
 
+[PR №14](https://github.com/kqh2rnnnmm-dot/finrate/pull/14) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
 48 PNG из Chromium и Playwright WebKit/Linux. Только вымышленные профили. Это не дизайн-макеты и не аппаратный iPhone. [Manifest SHA/размеров/движков](../../Source/evidence/access/screenshots-manifest.json). Новый build access-emergency-reset01 /0.3.15-access-a, «до» —7 public-файлов P4 main e7b3f63. Точные build/input/public SHA в первичных отчётах.
 
 Обычные снимки390×844, desktop1280×900. Геометрия дополнительно проверена320/375/402/430/844×390, крупный шрифт320 — без отдельного PNG на каждый размер. Нативная клавиатура/Files/VoiceOver iPhone OPEN.

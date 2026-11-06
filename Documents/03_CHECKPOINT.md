@@ -1,5 +1,7 @@
 # ACCESS-after-P4 A · аварийный локальный сброс · 06.11.2026
 
+[PR №14](https://github.com/kqh2rnnnmm-dot/finrate/pull/14) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
 Рабочая ветка `codex/access-emergency-reset`, **готово для ревизии, не слито и не опубликовано**. Текущий base/main: `e7b3f631187b16b7b01fc49cb975968a2439f93c`; после указанного владельцем0974257 изменились только документы. Сборка `access-emergency-reset01` / `0.3.15-access-a`, замороженный код `1d6b60ed79cecd9823f806f5dfaa016ceba57682`. Полный результат:514/514 unit/integration и71/71 release PASS,0 FAIL/0 SKIP. Ссылка PR/итоговый HEAD фиксируются при передаче. Исторические «Codex ещё не получил задачу» ниже больше не являются статусом этой ветки.
 
 Реализован только этап A: «Проблемы со входом?» в закрытом PIN/password/recovery; повторное использование A3 forgot-PIN; строго ciphertext-only export стандартного backup без ключа/decrypt; ручной выбор копии/отказа; отдельные ack+точная фраза+красная кнопка; одноразовые private intent/proof; прежний атомарный vault+safety reset с CAS/guard. После commit — штатный первый запуск, без автоматического active/document. Native old-tab/BroadcastChannel/fallback/rollback и independent restore проверяются на вымышленных данных. Найденная post-PIN race закрыта повторным assertCurrent, без изменения криптографии.

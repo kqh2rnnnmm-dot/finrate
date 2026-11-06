@@ -1,5 +1,7 @@
 # ACCESS-after-P4 A · аварийный локальный сброс
 
+[PR №14](https://github.com/kqh2rnnnmm-dot/finrate/pull/14) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
 access-emergency-reset01 /0.3.15-access-a, codex/access-emergency-reset от main e7b3f631187b16b7b01fc49cb975968a2439f93c; не слито/не опубликовано. Новые emergency-reset.mjs /emergency-reset-ui.mjs, узкие hooks service/store/app; финансовые/криптографические owners сохранены.
 
 Из Source: `npm run build`, `npm run test:access`, `node tests/emergency-browser.mjs`, `node tests/emergency-upgrade-browser.mjs`, `FINRATE_TEST_WEBKIT=1 node tools/check-release.mjs`, `npm run verify:delivery`, `npm audit --json`. Полные команды/результаты в [RESET_A_TEST_REPORT](../Documents/ACCESS_AFTER_P4/RESET_A_TEST_REPORT.md). CASE-выбор — только адресная диагностика, не полный run.

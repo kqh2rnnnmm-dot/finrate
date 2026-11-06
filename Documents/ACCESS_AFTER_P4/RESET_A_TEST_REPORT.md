@@ -1,5 +1,7 @@
 # ACCESS-after-P4 A — отчёт проверки
 
+[PR №14](https://github.com/kqh2rnnnmm-dot/finrate/pull/14) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
 Статус: рабочая ветка codex/access-emergency-reset, готово для ревизии; не слито/не опубликовано. База **e7b3f631187b16b7b01fc49cb975968a2439f93c**. Версия **0.3.15-access-a**, build **access-emergency-reset01**, замороженный код/комплект **1d6b60ed79cecd9823f806f5dfaa016ceba57682**. Последующие документы/артефакты не меняют приложение. Полный HEAD будет указан в PR и передаче владельцу.
 
 Первый полный run для60acf05: **514/514 unit/integration и71/71 release PASS**. Он сохранён отдельно в [first-full](../../Source/evidence/access/first-full/release-run.json). Второй повтор для a6e128c остановлен после воспроизведённого WebKit-отказа: ранняя новая форма позволяла кликнуть до освобождения общей perform/refresh-блокировки;7 групп WebKit успели пройти. [Первичный отказ](../../Source/evidence/access/attempts/full-repeat-webkit-busy.json), [статус прерванного повтора](../../Source/evidence/access/attempts/second-run-status.json). Это не полный PASS.
@@ -64,3 +66,5 @@ Native IndexedDB/rollback/CAS/очереди/счётчики/независим
 **iPhone OPEN**, включая ранее отложенные пакеты и старый A2/WebKit PIN timeout. Физические «Файлы», нативная share-панель/AutoFill/VoiceOver/Face ID диалог ОС не проверены. CodeRabbit skipped/пустые Actions не считаются PASS; удалённые статусы фиксируются после создания PR отдельно. [Риски](RESET_A_OPEN_ITEMS.md), [аппаратная приёмка](RESET_A_IPHONE_ACCEPTANCE.md), [скриншоты](RESET_A_SCREENSHOTS.md).
 
 Дополнительная ручная cmp-проверка standalone против dist сначала отказала: по прежнему build.mjs standalone намеренно не содержит двух manifest/icon links. Формат не менялся; проверено полное равенство именно результату существующего transform, включая тот же script/CSP. Сгенерированный standalone сохранён отдельным build-коммитом d08da54; это тот же проверенный код, не новая логика. [Первичная метадата](../../Source/evidence/access/standalone-delivery.json).
+
+GitHub-снимок при открытии PR14: HEAD f503feb78f0fdc1f3cefef17591d5ac8f6d7cd30, base e7b3f631187b16b7b01fc49cb975968a2439f93c, merged=false/mergeable=true; commit statuses=[] и workflow_runs=[]. Это отсутствие удалённого CI, не PASS. Последующая фиксация ссылки PR меняет только документы/метаданные, не исходники или проверенные public-файлы.
