@@ -1,10 +1,10 @@
-# ACCESS-after-P4 A checklist
+# P5 checklist
 
-- [x] 1. Locked ciphertext export RED/GREEN and independent recovery
-- [x] 2. One-use intent/proof + guarded atomic reset + CAS/rollback RED/GREEN
-- [x] 3. Shared locked UI/routes/copy choices/confirmation/lifecycle/cross-tab fallback
-- [x] 4. Chromium/WebKit native scenarios, upgrade/offline and screenshots
-- [x] 5. Frozen final build/full legacy regression/delivery/npm audit (final code 1d6b60ed79cecd9823f806f5dfaa016ceba57682:514/514 unit,71/71 release PASS)
-- [x] 6. Reports/checkpoint/FAQ/commits/push/one PR #14, stop for owner review (no merge/deploy)
+- [x] 1. Canonical audit/baseline and monetary RED
+- [x] 2. Pure projection/events/date/account/coverage GREEN; five B1 modes unchanged
+- [x] 3. Strict temporary scenario GREEN, no writes or drafts
+- [ ] 4. Reports/shared UI/source navigation/lifecycle, neighbor checks
+- [ ] 5. Chromium+WebKit full matrix/upgrade/restore/offline/screenshots; full release/delivery/audit
+- [ ] 6. Reports/checkpoint/FAQ/commits/push/one PR; stop, no merge/deploy
 
-No merge/deploy/real data reset. Apple/OAuth/cloud/biometrics not in A. iPhone/historical PIN timeout OPEN.
+Only isolated fictional data. ACCESS B/P6/goal schedules excluded. Actual iPhone and historical A2/WebKit PIN timeout OPEN.
