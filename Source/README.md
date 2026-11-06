@@ -1,5 +1,7 @@
 # P5 · полный прогноз · 0.3.16-p5 /p5-forecast01
 
+[PR №15](https://github.com/kqh2rnnnmm-dot/finrate/pull/15) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
 `codex/p5-full-forecast` от `aad52c592c34858122844b5b439727318b9e4bcc`, **для ревизии, не слито/не опубликовано; iPhone OPEN**. Pure full-forecast + existing forecast-ui sheet, узкие hooks ui/app/planning-ui/FAQ/scoped CSS. Новый формат данных/миграция/зависимости не нужны.
 
 Из Source: `npm run build`, `npm run test:p5`, `npm run test:p5:browser`, `FINRATE_TEST_WEBKIT=1 node tools/check-release.mjs`, `node tools/verify-delivery.mjs`, `npm audit --json`. Точные browser env/версии/команды и первичные результаты — [P5/TEST_REPORT](../Documents/P5/TEST_REPORT.md). CASE — только диагностика, не полный run. Node24 использует `--test-isolation=none`.

@@ -1,5 +1,7 @@
 # P5 · реальные снимки до/после
 
+[PR №15](https://github.com/kqh2rnnnmm-dot/finrate/pull/15) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
 56 PNG из окончательного полного browser/upgrade прогона на `b83294201b0f44be3ca1f2db131d7c782a1ff50c`, новая сборка `p5-forecast01 /0.3.16-p5`. До — реальные7 public ACCESS A файлов из base `aad52c592c34858122844b5b439727318b9e4bcc`, не макет. Только вымышленные данные. Chromium153.0.8010.0 и настоящий Playwright WebKit26.5/Linux; **не физический iPhone**.
 
 [Размеры и SHA каждого PNG](../../Source/evidence/p5/screenshots-manifest.json) · [Протокол](TEST_REPORT.md). Отдельные снимки ранних отказов в `Source/evidence/p5/attempt-screenshots/`, не подменяют итоговые.

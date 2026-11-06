@@ -1,5 +1,7 @@
 # P5 · протокол проверки
 
+[PR №15](https://github.com/kqh2rnnnmm-dot/finrate/pull/15) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
 Статус: **финальный полный release75/75 PASS; unit568/568 PASS,0 FAIL/0 SKIP**. Это полный новый прогон после исправления; первый прерванный запуск ниже сохранён отдельно. Кандидат `0.3.16-p5 /p5-forecast01`. Base `aad52c592c34858122844b5b439727318b9e4bcc`; окончательный код/тесты/публичная сборка заморожены в `b83294201b0f44be3ca1f2db131d7c782a1ff50c`. Последующие коммиты — отчёты/артефакты. Настоящий iPhone OPEN.
 
 
@@ -67,3 +69,7 @@ Delivery сохраняет 62/67 прежних src побайтно; 5 ост�
 Все пути относительно `Source/evidence/p5/`: финальные `release-run.json`, `release-final-console.log`, `unit-final.tap`, `delivery-final.json`, `chromium-browser.json`, `webkit-browser.json`, `chromium-upgrade.json`, `webkit-upgrade.json`, `archive-manifest.json`, `final-validation.json`; старые регрессионные driver JSON/log/PNG в `regressions/`. Ранние попытки сохранены рядом с понятными именами, первый полный запуск — `full-attempt1/`. Снимки/размеры/SHA: [SCREENSHOTS](SCREENSHOTS.md).
 
 Аппаратная Safari/PWA приёмка, VoiceOver, клавиатуры, Files и авиарежим **OPEN**, включая A2–P4/ACCESS A и исторический A2/WebKit PIN timeout. [Чек-лист](IPHONE_ACCEPTANCE.md). WebKit/Linux не является iPhone PASS.
+
+Техническая проверка diff: весь raw RED TAP содержит исходные trailing spaces в YAML diagnostic indentation (`red-model`, `green-model-attempt1`, `green-boundaries-fixture-attempt`, `red-account-certainty`), поэтому общий `git diff --check <base>` сообщает whitespace warnings. Первичные логи намеренно не переписывались. Отдельный diff-check исходников/тестов/tools/документов/package/tasks — чистый. Это не функциональные FAIL окончательного тестового прогона.
+
+GitHub после открытия PR15 на `c0aa67ef4d61fd6995a620dba0051dd154383234`: PR open/merged=false/mergeable=true; combined statuses=[], PR workflow_runs=[]. Запусков Actions/статусов не предоставлено, это не CI PASS и не CodeRabbit review. Финальная ссылка на HEAD берётся из PR; последующий коммит меняет только документы/статус. Main перед push повторно aad52c5.

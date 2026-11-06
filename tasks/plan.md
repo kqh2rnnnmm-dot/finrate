@@ -10,3 +10,5 @@ Base aad52c592c34858122844b5b439727318b9e4bcc; 0.3.15-access-a. Clean tree/no op
 6. Docs/PR (deps5). Financial matrix, UX acceptance, tests/raw artifacts, change/open items/iPhone; update checkpoint/decisions/map/FAQ/README. Separate PR to main; no merge/deploy, real iPhone OPEN, historical A2/WebKit timeout OPEN. Stop for owner review.
 
 Each slice has RED→GREEN then adjacent regressions; no agents. New goal contribution schedules and unspecified credit simulation policy are OPEN ITEMS, never invented. Exact source/data/crypto format retained. Read-only date/account uncertainty is explicit, not a guessed cash transfer.
+
+Completed: PR15 open/not merged; 568/568 unit,75/75 release,18+18 P5 browser,4+4 upgrade. Final code b83294201b0f44be3ca1f2db131d7c782a1ff50c; reports/evidence afterward only. Actual iPhone OPEN; no publication, user data or Apple/cloud actions.
