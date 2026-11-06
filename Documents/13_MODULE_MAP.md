@@ -1,3 +1,15 @@
+# ACCESS A · карта модулей после слияния · 06.11.2026
+
+[PR №14](https://github.com/kqh2rnnnmm-dot/finrate/pull/14) **слит в `main`**, merge `e3f4e8fe70caa9883e5336b1dadd613725493ec3`; текущая кодовая версия `0.3.15-access-a`. База до слияния `e7b3f631187b16b7b01fc49cb975968a2439f93c` сохранена в `backup/pre-access-a-main-2026-11-06`.
+
+- Новые `Source/src/emergency-reset.mjs` (одноразовый locked-only intent/proof, ciphertext export без decrypt, CAS-подтверждение) и `Source/src/emergency-reset-ui.mjs` (переиспользование A3-входа, предупреждения, явная irreversible-confirmation последовательность).
+- Адресные изменения `Source/src/service.mjs`/`store.mjs` (atomic vault+safety removal, защита гонок, post-PIN проверка), `app.mjs` (вызов с экрана входа, жизненный цикл и вкладки), scoped CSS/FAQ и сценарии тестов. Финансовые ядра, `crypto.mjs`, `device-access.mjs`, `SCHEMA=5` и формат backup не изменены.
+- Следующий отдельный этап — ACCESS B **сначала архитектура, затем выбранная и отдельно согласованная реализация Apple Account**, без автоматического подключения облака. iPhone-испытания текущего этапа OPEN.
+
+[Подробная карта](ACCESS_AFTER_P4/RESET_A_AUDIT.md) · [Проверки](ACCESS_AFTER_P4/RESET_A_TEST_REPORT.md) · [План B](ACCESS_AFTER_P4/PLAN.md). Исторический «PR открыт» ниже — прежний статус.
+
+---
+
 # ACCESS-after-P4 A · карта изменений · 06.11.2026
 
 [PR №14](https://github.com/kqh2rnnnmm-dot/finrate/pull/14) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
