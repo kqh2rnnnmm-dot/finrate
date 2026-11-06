@@ -1,0 +1,2 @@
+PASS native QuotaExceededError after safety clear rolls back both tables; one-use attempt requires explicit new procedure
+{"checks":1,"failures":[]}

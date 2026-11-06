@@ -1,0 +1,19 @@
+{
+  "engine": "webkit",
+  "build": "access-emergency-reset01",
+  "baseline": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "checks": [],
+  "failures": [
+    "locator.selectOption: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#unlock [name=mode]')\u001b[22m\n\u001b[2m    - locator resolved to <select name=\"mode\">…</select>\u001b[22m\n\u001b[2m  - attempting select option action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m      - element is not visible\u001b[22m\n\u001b[2m    - retrying select option action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    30 × waiting for element to be visible and enabled\u001b[22m\n\u001b[2m       - element is not visible\u001b[22m\n\u001b[2m     - retrying select option action\u001b[22m\n\u001b[2m       - waiting 500ms\u001b[22m\n"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "publicHTMLSHA256": "48636b6f4e9d8d621d90f8585de39d7deebebdade604c56073052b5a40cbb967",
+  "version": "26.5",
+  "diagnostic": {
+    "head": "Войти в FinRate",
+    "dialogs": [],
+    "errors": []
+  },
+  "allPassed": false
+}

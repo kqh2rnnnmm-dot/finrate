@@ -1,0 +1,33 @@
+{
+  "build": "access-emergency-reset01",
+  "base": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "publicAllowlist": 7,
+  "files": {
+    "apple-touch-icon.png": "b5885c943dfa178c5b7043b35c80cb0f13b3ddc34f7f4085663bf9eac5d1e46d",
+    "icon-192.png": "02de571ad2d51f9c5ad3e7025d69c3757144326731163ecfe9a76b7fb13bcfa4",
+    "icon-512.png": "dc5ebe3e204b64dfeb6585959145d7823c5db9e9af7e3fe45ef00a43bb9a0c0b",
+    "icon.svg": "ac3bdbd1431e6d58b2da6e759e1b86e4da70a0f35fbeb173a98e001035fe6328",
+    "index.html": "b0eba90fff623ba2ee0cdc0cc0d60df96aefd5df840fe87ceb18f3a83cc08034",
+    "manifest.webmanifest": "9c42fa3d8ed6be9044ed42c93ea7d45ad7d25e4efad893e4a29f17b463557e39",
+    "sw.js": "38ea62f0f9f837faec071a75707f3d172fd30f7abee4cd4196e676d34b734cd9"
+  },
+  "csp": "PASS",
+  "buildInputsUnchanged": true,
+  "financialFormulasUnchanged": true,
+  "legacyTestAssertionsPreserved": true,
+  "keyArchitectureModulesUnchanged": true,
+  "cryptoProtocolUnchanged": true,
+  "authorizedChangedModules": [
+    "src/app.mjs",
+    "src/service.mjs",
+    "src/store.mjs",
+    "src/help.mjs",
+    "src/style.css",
+    "src/emergency-reset.mjs",
+    "src/emergency-reset-ui.mjs"
+  ],
+  "financialExtensionHooksVerified": true,
+  "schema": 5,
+  "format": "finrate-backup/1",
+  "published": false
+}

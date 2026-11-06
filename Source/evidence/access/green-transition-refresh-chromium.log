@@ -1,0 +1,2 @@
+PASS next screen is exposed only after common perform/refresh finishes, so immediate actions are not silently dropped by an earlier lock
+{"checks":1,"failures":[]}

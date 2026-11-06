@@ -1,0 +1,22 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+PASS PIN/password/recovery routes reuse A3 fields, clear mode secrets, no write/decrypt or help during setup
+PASS 5 wrong PIN lockout preserved, help does not reset counters, existing forgot-PIN→password→new PIN keeps all P1–P4 facts
+PASS explicit recovery route opens existing data without reset; unlocked UI has no emergency help button
+PASS locked real download forbids decrypt/derive/write; exact rich P4 vault, explicit human copy claim, Enter safe/double click one clear, normal manual setup and independent old-file restore
+PASS cancel all4 phases/wrong phrase/checkbox/submit/Enter never delete; explicit no-copy risk+final click clears only after full confirmation
+PASS visibility/pagehide/pageshow/bfcache/cold reload discard all intents/forms; no hidden deletion or resumed confirmation
+PASS return from modeled system download panel tells human to check Files, procedure cancelled and no automatic delete
+PASS native QuotaExceededError after safety clear rolls back both tables; one-use attempt requires explicit new procedure
+PASS native AbortError after safety clear rolls back both tables; one-use attempt requires explicit new procedure
+PASS native InvalidStateError after safety clear rolls back both tables; one-use attempt requires explicit new procedure
+PASS native second-instance newer commit makes final delete STALE, preserves winner and asks restart instead of forgotten password
+PASS native old open tab cleared by metadata BroadcastChannel; stale cached app cannot resurrect data
+PASS native old open tab cleared with no BroadcastChannel (foreground IDB fallback); stale cached app cannot resurrect data
+PASS unavailable IndexedDB export has clear error/no ready-file claim/no blind reset; cancel remains safe
+PASS success is tied to committed atomic transaction, later unavailable reads do not falsely report rollback or retain old final UI
+FAIL surface overflow {
+  head: 'Введите PIN-код',
+  dialogs: [ 'Удалить данные и начать заново' ],
+  errors: [ '' ]
+}     at async file:///workspace/finrate/Source/tests/emergency-browser.mjs:40:79
+{"checks":15,"failures":["surface overflow"]}

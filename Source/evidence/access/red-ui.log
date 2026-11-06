@@ -1,0 +1,5 @@
+FAIL Expected values to be strictly equal:
+
+0 !== 1
+ null     at async file:///workspace/finrate/Source/tests/emergency-browser.mjs:26:2
+{"checks":0,"failures":["Expected values to be strictly equal:\n\n0 !== 1\n"]}

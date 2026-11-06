@@ -1,0 +1,2 @@
+PASS visibility/pagehide/pageshow/bfcache/cold reload discard all intents/forms; no hidden deletion or resumed confirmation
+{"checks":1,"failures":[]}

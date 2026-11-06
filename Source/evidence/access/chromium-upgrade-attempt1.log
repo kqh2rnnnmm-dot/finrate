@@ -1,0 +1,5 @@
+FAIL locator.click: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('#security-open')[22m
+     at async file:///workspace/finrate/Source/tests/emergency-upgrade-browser.mjs:8:1682
+{"checks":0,"failures":["locator.click: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('#security-open')\u001b[22m\n"]}

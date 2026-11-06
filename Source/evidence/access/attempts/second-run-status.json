@@ -1,0 +1,7 @@
+{
+  "code": "a6e128c29254c5f4559b7c9117f7b1cd11b7f218",
+  "allPassed": false,
+  "completedFullRun": false,
+  "reason": "Stopped after reproducible WebKit transition/refresh race; deterministic RED retained; final full rerun required.",
+  "terminatedOwnedProcesses": 14
+}

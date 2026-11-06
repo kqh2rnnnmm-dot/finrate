@@ -1,3 +1,21 @@
+# ACCESS-after-P4 A · карта изменений · 06.11.2026
+
+codex/access-emergency-reset; access-emergency-reset01 /0.3.15-access-a; base e7b3f631187b16b7b01fc49cb975968a2439f93c. Не слито/не опубликовано.
+
+| Компонент | Адресная ответственность |
+|---|---|
+| emergency-reset.mjs (новый) | Locked ciphertext export/allowlist, bounded readable identity, private WeakMap proof/epoch/copy choice, exact final acknowledgment, no-decrypt guard, one-use transaction authorization |
+| emergency-reset-ui.mjs (новый) |3 маршрута через прежний sheet/perform/A3 callbacks, честное предупреждение без счётчиков, download/manual claim vs skip risk, native final word/click, lifecycle cancel/no auto resume; transitions only after perform/onSuccess |
+| service.mjs | Узкие exclusive wrappers/lock invalidation/clear memory; финальный post-PIN assertCurrent. Прежние A2/finance/backup/security bodies сохранены после снятия только известных hooks |
+| store.mjs | Прежние таблицы/DBversion1; усиленный ciphertext CAS; optional synchronous guard и empty verification в той же прежней reset-транзакции. Нет deleteDatabase/общего Web Storage wipe |
+| app.mjs | Кнопка закрытого входа, повторное использование A3 routes/access fields, shared A2 completion, scoped errors/committed terminal flow, privacy/lifecycle/broadcast+foreground fallback/read-failure diagnosis |
+| help.mjs/style.css | FAQ и2 исключительно [data-emergency-reset] правила hidden/wrap. Нет изменения старых токенов/палитр/шрифтов/геометрии |
+| tests/emergency-* / tools build/check-release/verify | RED/GREEN, rich P4 fixtures, реальные IDB/copy/rollback/CAS/lifecycle/offline/upgrade, оба движка; fresh source/build/public fingerprint и сохранность109 старых test-файлов |
+
+Побайтно прежние60 из65 исходных файлов, в том числе model/operations/credit/planning/payments/debts/goals/limits, crypto/device-access/access-fields/session-policy/reset-ui/reset-policy, общий ui/surfaces/focus/field-editor/navigation/dashboard/home-config.5 адресных изменений +2 новых модуля. Формат финансового документа и контейнера копий прежний; новые временные поля не сохраняются. [Аудит](ACCESS_AFTER_P4/RESET_A_AUDIT.md), [проверки](ACCESS_AFTER_P4/RESET_A_TEST_REPORT.md).
+
+---
+
 # P4 · карта реализованных модулей после слияния · 06.11.2026
 
 PR [№13](https://github.com/kqh2rnnnmm-dot/finrate/pull/13) **объединён в `main`**, merge `86395cd65616590f3377b38c9c5023b52ed76a21`; `p4-limits01 / 0.3.14-p4`. Предыдущий код сохранён в `backup/pre-p4-main-2026-11-06` (SHA `eea169f4605a0afa155ab69c95a867ee39749fda`). Новые `Source/src/limits.mjs` и `limits-ui.mjs`; точечная интеграция в `model/app/ui/dashboard/notification-events/context-menu/activity/reset-*/help` и ограниченный CSS. Фактические операции, финансовые формулы, `service/store/crypto/device-access` не переписывались.

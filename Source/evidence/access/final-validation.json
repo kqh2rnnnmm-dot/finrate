@@ -1,0 +1,32 @@
+{
+  "build": "access-emergency-reset01",
+  "version": "0.3.15-access-a",
+  "base": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "applicationAndTests": "1d6b60ed79cecd9823f806f5dfaa016ceba57682",
+  "publicHTMLSHA256": "b0eba90fff623ba2ee0cdc0cc0d60df96aefd5df840fe87ceb18f3a83cc08034",
+  "unit": {
+    "passed": 514,
+    "failed": 0,
+    "skipped": 0,
+    "newAccess": 23,
+    "legacy": 491
+  },
+  "release": {
+    "passed": 71,
+    "failed": 0,
+    "skipped": 0
+  },
+  "perEngine": {
+    "emergencyGroups": 27,
+    "upgradeGroups": 4,
+    "engines": [
+      "Chromium153.0.8010.0",
+      "WebKit26.5"
+    ]
+  },
+  "actualIPhone": false,
+  "published": false,
+  "realUserDataTouched": false,
+  "appleOAuthCloudImplemented": false,
+  "previousFailedRepeat": "attempts/second-run-status.json"
+}
