@@ -1,3 +1,11 @@
+# FinRate · модули после P5 merge · 06.11.2026
+
+PR [№15](https://github.com/kqh2rnnnmm-dot/finrate/pull/15) **слит в `main`**, merge `d2bf7b04bc1a70a6eb0d9867563a833cfe5759cc`, версия `0.3.16-p5 / p5-forecast01`. Базовый код до merge `aad52c592c34858122844b5b439727318b9e4bcc` сохранён в `backup/pre-p5-main-2026-11-06`. Новые `Source/src/full-forecast.mjs` (чистый read-only расчёт событий/риска без записи) и `Source/src/forecast-ui.mjs` (прошлые UI-поверхности, раскрытие, временный сценарий). Узкие hooks `ui.mjs`, `planning-ui.mjs`, `app.mjs`, scoped CSS/FAQ и тесты. `model/planning/credit/scheduled-payments/debts/goals/limits/crypto/store/device-access/emergency-reset` неизменны. Тесты по протоколу Codex: 568 unit, 75 release PASS; настоящий iPhone OPEN.
+
+**Следующий P6.1:** развитие нынешнего «Отчёты» до фактических income/expense/net и категоризированной детализации; [проектный объём](P6_1/NEXT_SCOPE_PROPOSAL.md). Документы ниже «PR15 открыт» исторические. P6.2 поиск/экспорт отдельно, ACCESS B/Apple отложен бессрочно.
+
+---
+
 # P5 · карта адресных изменений · 06.11.2026
 
 [PR №15](https://github.com/kqh2rnnnmm-dot/finrate/pull/15) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
