@@ -1,0 +1,956 @@
+{
+  "build": "p4-limits01",
+  "results": 67,
+  "base": "eea169f4605a0afa155ab69c95a867ee39749fda",
+  "applicationCommit": "3f5cd7f465470fbbc3f4af0603a18774f64b0a64",
+  "testCommit": "fa79f19d4055cc670181ac1f1eb41025852213f5",
+  "publicHTMLSHA256": "f6433dfbc732c6900cd499f8d6851401fcddc7baea8f104310f02d9afb0df4d1",
+  "archived": [
+    {
+      "original": "a2-reset-webkit.log",
+      "sha256": "450487f09b10f93149ff49f034f6c720f513d8b4fbba80842898807aadae2d3d",
+      "bytes": 1868
+    },
+    {
+      "original": "a2-reset.log",
+      "sha256": "31075aad8190c3061e22a0051ed02a6f381d7607ea1f2f12e1057de8f108ea82",
+      "bytes": 1750
+    },
+    {
+      "original": "a2-ui-webkit.log",
+      "sha256": "77b800979fb7a6450f872ba9d8e504f15b5bd105606a7eabb0ce8f684fdf6319",
+      "bytes": 139
+    },
+    {
+      "original": "a2-ui.log",
+      "sha256": "6541f18e3765d2c635e30e06682910eb771e0e6d5c3be3ca96b54f9982329ef6",
+      "bytes": 21
+    },
+    {
+      "original": "a2/chromium-reset.json",
+      "sha256": "50d91bd5564046463fe3fa91e65e1e8e5fbff786de7d72f692910fc3b0be05ed",
+      "bytes": 5307
+    },
+    {
+      "original": "a2/screenshots/chromium-dark-color-financial-confirm.png",
+      "sha256": "3bac3e818d9f3072641224afdadd7befb462466761648a0aac9fd03330cd3649",
+      "bytes": 71537
+    },
+    {
+      "original": "a2/screenshots/chromium-dark-color-financial-preview.png",
+      "sha256": "74f89cc3ff58ffedc2aa911ab6eafed6eee35e3f987614352d07d4a313b9457b",
+      "bytes": 62377
+    },
+    {
+      "original": "a2/screenshots/chromium-dark-neutral-financial-confirm.png",
+      "sha256": "f7a2547df18a60b0188c84e1998a6bf7dee3adeac61950e123ecfb817ac6b4df",
+      "bytes": 70127
+    },
+    {
+      "original": "a2/screenshots/chromium-dark-neutral-financial-preview.png",
+      "sha256": "6313c2ab8a2acf61f8c07db07cc9574ad932e9003173e93e1eb5f33fd1565720",
+      "bytes": 62436
+    },
+    {
+      "original": "a2/screenshots/chromium-light-color-financial-confirm.png",
+      "sha256": "0ddbcae286705fc8af22e1a6dd35d626d31c9be87708b68a48b9501f50376c01",
+      "bytes": 73497
+    },
+    {
+      "original": "a2/screenshots/chromium-light-color-financial-preview.png",
+      "sha256": "9fcbf5f87f8bf37751d3076ca362bbe07238413d6f5602c9a84ba6cc4f76b599",
+      "bytes": 64384
+    },
+    {
+      "original": "a2/screenshots/chromium-light-neutral-financial-confirm.png",
+      "sha256": "0404e95073c3a0aedd9ce43fd2d3c91b72d911c5244be9e17d1c3150d5daf5ba",
+      "bytes": 68823
+    },
+    {
+      "original": "a2/screenshots/chromium-light-neutral-financial-preview.png",
+      "sha256": "769a653d1b1bf4dacfe144757c2e611f7afc1db90f4662a961c95507e12f4487",
+      "bytes": 61659
+    },
+    {
+      "original": "a2/screenshots/webkit-dark-color-all-confirm.png",
+      "sha256": "5fb73ff2a6777e6675bb3232928e7254738000ea1fdd35106e25967f558c2758",
+      "bytes": 80982
+    },
+    {
+      "original": "a2/screenshots/webkit-dark-color-categories-confirm-action.png",
+      "sha256": "e6b74c29c89d6ac3073c70f171b8c7faf59318255276594434b98b7a2415da3b",
+      "bytes": 58652
+    },
+    {
+      "original": "a2/screenshots/webkit-dark-color-financial-confirm-action.png",
+      "sha256": "ae945576237cf8dcb6cc88a0243d3451e5e0d151cf093afe45e762e4c8e52e9a",
+      "bytes": 58765
+    },
+    {
+      "original": "a2/screenshots/webkit-dark-color-financial-confirm.png",
+      "sha256": "a5194db9842c5e870d4bf0b9a5d671b8985020e527181c32363dfb40b761919f",
+      "bytes": 83481
+    },
+    {
+      "original": "a2/screenshots/webkit-dark-color-financial-preview.png",
+      "sha256": "fac49d79fc54933e599d79319883ee10e42652261c7137e5d29e15342f47a05c",
+      "bytes": 72060
+    },
+    {
+      "original": "a2/screenshots/webkit-dark-neutral-all-confirm-action.png",
+      "sha256": "324a11e839c90c1c4246297d42225e172e33b8b5a5420c2a1612503b9516f515",
+      "bytes": 59251
+    },
+    {
+      "original": "a2/screenshots/webkit-dark-neutral-financial-confirm-action.png",
+      "sha256": "4c869dcae1351f5bc2f0a0cde111400890f0ecdb9ea577619c07d3263d102230",
+      "bytes": 60929
+    },
+    {
+      "original": "a2/screenshots/webkit-dark-neutral-financial-confirm.png",
+      "sha256": "86f59cb631b17377aa9056f6cd25eeaf7e049d0cb91aa4b62605545e8d249667",
+      "bytes": 85853
+    },
+    {
+      "original": "a2/screenshots/webkit-dark-neutral-financial-preview.png",
+      "sha256": "31422c88091e84ecb85479761c4edeb0cb35a99fe4aa6d2b88ee70847bd4fc0b",
+      "bytes": 71017
+    },
+    {
+      "original": "a2/screenshots/webkit-light-color-all-confirm-action.png",
+      "sha256": "d84714820ffca07b7ac52c812db9e62289f1fc56ae061764c5745c5a49383c0e",
+      "bytes": 59455
+    },
+    {
+      "original": "a2/screenshots/webkit-light-color-financial-confirm.png",
+      "sha256": "b2550237704124bb5282b0992de1d8715137cc2d098a7e910eb381eb519e5fef",
+      "bytes": 87898
+    },
+    {
+      "original": "a2/screenshots/webkit-light-color-financial-preview.png",
+      "sha256": "1f702c5eab09d6c178ef13f5be695873d6c5537c173519629546a523b3dd1c8d",
+      "bytes": 75746
+    },
+    {
+      "original": "a2/screenshots/webkit-light-neutral-all-confirm-action.png",
+      "sha256": "09399c68afc53fa3c1b1841590cc3f112aa4c89569f845ca91019b6bcdcb8e9d",
+      "bytes": 60463
+    },
+    {
+      "original": "a2/screenshots/webkit-light-neutral-all-confirm.png",
+      "sha256": "1fdedbb1979df4b8416233d1475092470027b7b332a2783e32164d106eaf5f64",
+      "bytes": 84129
+    },
+    {
+      "original": "a2/screenshots/webkit-light-neutral-financial-confirm.png",
+      "sha256": "38bf199fcc3724cce8de55ec50b49b28b01747234d9ff3bab3bbcd91125344e9",
+      "bytes": 86719
+    },
+    {
+      "original": "a2/screenshots/webkit-light-neutral-financial-preview.png",
+      "sha256": "4f34f21574f93d9c12e56c8a3872a59a361e680e98389440e9c7590172b0344d",
+      "bytes": 73396
+    },
+    {
+      "original": "a2/webkit-reset.json",
+      "sha256": "ac7c8aed74eb96879f633588e373746d96c729e0355217c49699c1c2c5e83c32",
+      "bytes": 5505
+    },
+    {
+      "original": "a3-access-webkit.log",
+      "sha256": "1df9e9100861252255771457372e9f9471a7cb157daf6aa603c488c5d41906d4",
+      "bytes": 1502
+    },
+    {
+      "original": "a3-access.log",
+      "sha256": "11c3f44a8f161f6f6ef4f1fbc06087f25e14045fc2b5c1c9eb7039f34a9b211e",
+      "bytes": 1384
+    },
+    {
+      "original": "a3/chromium-after.json",
+      "sha256": "288138d9852c0d2ae72187b567e5d7f3919fbda1bece4effd0199cd2cf101f6d",
+      "bytes": 2684
+    },
+    {
+      "original": "a3/screenshots/webkit-light-neutral-pin.png",
+      "sha256": "7575959207e5a74229178eb9c912d6d48bdc4dedf92c93328792e234c410ce8c",
+      "bytes": 50300
+    },
+    {
+      "original": "a3/webkit-after.json",
+      "sha256": "e7cc81e4070b650de3c16d6397fac1b651e49ac370e0a7384418f640b5a4c44d",
+      "bytes": 2860
+    },
+    {
+      "original": "b121-archived-card.png",
+      "sha256": "d7ea713e1bdf951077480fab219419857125cd86ce61be16e52a6e644ffa86be",
+      "bytes": 31084
+    },
+    {
+      "original": "c1-account.png",
+      "sha256": "232c35a039e224f832dd63b1fc9f550790c9ccf35a2a0467ab1254efc7ab26c7",
+      "bytes": 40402
+    },
+    {
+      "original": "c1-operation.png",
+      "sha256": "8216d1a6fa583e0b9d43cff04ab75e6b92c97245ba81e93660520d4f382b92a5",
+      "bytes": 36942
+    },
+    {
+      "original": "d1-after-category-spacing.png",
+      "sha256": "4dc3a7ebb509ae8f68230e307d11bdd395840f95fbe0ffd92d4b051230df9807",
+      "bytes": 17698
+    },
+    {
+      "original": "d1-after-chooser-left.png",
+      "sha256": "0e735f6c32f2df588395af96424b1496a16e5ad17b0fe9543f603ebb2129db24",
+      "bytes": 31851
+    },
+    {
+      "original": "d1-after-chooser-right.png",
+      "sha256": "0e735f6c32f2df588395af96424b1496a16e5ad17b0fe9543f603ebb2129db24",
+      "bytes": 31851
+    },
+    {
+      "original": "d1-chooser-left-dark.png",
+      "sha256": "0e735f6c32f2df588395af96424b1496a16e5ad17b0fe9543f603ebb2129db24",
+      "bytes": 31851
+    },
+    {
+      "original": "d1-chooser-left-light.png",
+      "sha256": "0dd3f287fabf8a260c8e2d212d6e6fa56139f6457c816aaa8f08678abc2b19dd",
+      "bytes": 31520
+    },
+    {
+      "original": "d1-chooser-right-dark.png",
+      "sha256": "0e735f6c32f2df588395af96424b1496a16e5ad17b0fe9543f603ebb2129db24",
+      "bytes": 31851
+    },
+    {
+      "original": "d1-chooser-right-light.png",
+      "sha256": "0dd3f287fabf8a260c8e2d212d6e6fa56139f6457c816aaa8f08678abc2b19dd",
+      "bytes": 31520
+    },
+    {
+      "original": "g1-after-chromium-color-dark-faq.png",
+      "sha256": "2f9a8874339601d01fcbc484a0dbfe76e7eb40442d22fd65e83bcf947b870cf7",
+      "bytes": 58665
+    },
+    {
+      "original": "g1-after-chromium-color-dark-form.png",
+      "sha256": "d448a5bde6c570d7ab92de2e844acd0be8623a364999f7b6d0ff069b60e9e438",
+      "bytes": 34087
+    },
+    {
+      "original": "g1-after-chromium-color-dark-operations.png",
+      "sha256": "af0b30d5be6e0835a03c8210f95bc4009c9ed7a127c38d34a86f8a0071e15229",
+      "bytes": 30817
+    },
+    {
+      "original": "g1-after-chromium-color-light-faq.png",
+      "sha256": "e236523fed58504c0fb00c35f12404e66f7d1fa65e27c917b88e2854a2ca6ee1",
+      "bytes": 61265
+    },
+    {
+      "original": "g1-after-chromium-color-light-form.png",
+      "sha256": "3cef1e093d91b68ea5607f073158def04bc3059f3b4598944fee7fa28be54575",
+      "bytes": 36571
+    },
+    {
+      "original": "g1-after-chromium-color-light-operations.png",
+      "sha256": "52d3ddc874672e531f664aaa3a8776b5dcb4ad676fad3c6fdd068fd65c172d5e",
+      "bytes": 34921
+    },
+    {
+      "original": "g1-after-chromium-neutral-dark-faq.png",
+      "sha256": "60667f8e1c45fb5c2e11a0f8ffef5e8915d1d96c65386ad09a4814991461ec4e",
+      "bytes": 57451
+    },
+    {
+      "original": "g1-after-chromium-neutral-dark-form.png",
+      "sha256": "e9f8de7c7bc05c25138f965ac1b52152e46440d162e50a87e88ec0bb7bf8052e",
+      "bytes": 33630
+    },
+    {
+      "original": "g1-after-chromium-neutral-dark-operations.png",
+      "sha256": "8d6f031a9460bbbc5f5f19bdf85dbaca8993d4d45e91ba50adf0b1ec560c3663",
+      "bytes": 29575
+    },
+    {
+      "original": "g1-after-chromium-neutral-light-faq.png",
+      "sha256": "0a6a11743e70062da31f524a2a1e6804400a06952838cc21f155139642d348fc",
+      "bytes": 56854
+    },
+    {
+      "original": "g1-after-chromium-neutral-light-form.png",
+      "sha256": "c1f291ab30da1f1348ad6c30233e4217a90ce20074cd8f1c8dbf656423eb6a0e",
+      "bytes": 32860
+    },
+    {
+      "original": "g1-after-chromium-neutral-light-operations.png",
+      "sha256": "a3f3a0df71ec548af4188bc81d803e6d3ffa37232666530ad51d51e382b057f4",
+      "bytes": 30139
+    },
+    {
+      "original": "g1-after-webkit-color-dark-faq.png",
+      "sha256": "f07f580e30c7f028c4d73ff4677d27181449e49770add59de0219716040c3b57",
+      "bytes": 63920
+    },
+    {
+      "original": "g1-after-webkit-color-dark-form.png",
+      "sha256": "4a4bee208accb01de6407f0180be6ad89d0d6d9118653a3433a1a738701e8048",
+      "bytes": 35718
+    },
+    {
+      "original": "g1-after-webkit-color-dark-operations.png",
+      "sha256": "44bd64ffb4cec2a912f73deb5e26ef05dd5d8c78c5062b81a9e8da9dc19c0e51",
+      "bytes": 30510
+    },
+    {
+      "original": "g1-after-webkit-color-light-faq.png",
+      "sha256": "8d576bc3045ae9c962c2cce3145e385582c036d44cca82e6b4dfa27fa4300e54",
+      "bytes": 68465
+    },
+    {
+      "original": "g1-after-webkit-color-light-form.png",
+      "sha256": "89692760e21f7a5dc1444f14b793fe448697f52692bcf68618840f7b94317cc3",
+      "bytes": 39667
+    },
+    {
+      "original": "g1-after-webkit-color-light-operations.png",
+      "sha256": "68007d94e3f49baa693517e9c5af6ec65775e0d08250fd91eec72198c7a1c245",
+      "bytes": 37823
+    },
+    {
+      "original": "g1-after-webkit-neutral-dark-faq.png",
+      "sha256": "78c425bc829cb035b57d479189c7378ded575f9c4849e441841c6ba82812d907",
+      "bytes": 64171
+    },
+    {
+      "original": "g1-after-webkit-neutral-dark-form.png",
+      "sha256": "efcaa958d92a8e08dcedcf74e199b0e78426277cccc26324300a6ba7cc2755db",
+      "bytes": 36375
+    },
+    {
+      "original": "g1-after-webkit-neutral-dark-operations.png",
+      "sha256": "52df0c291e8dc387e1628595a636809ea62c7c0c82b462da0aeedafcbfb81849",
+      "bytes": 31112
+    },
+    {
+      "original": "g1-after-webkit-neutral-light-faq.png",
+      "sha256": "7bb2409fbdd1e3549e8f5e2d171b7d2cf49acff5df0bde65b206c3fa33c56109",
+      "bytes": 64132
+    },
+    {
+      "original": "g1-after-webkit-neutral-light-form.png",
+      "sha256": "16847e6902f59ecb860cd357516f78a68a242168e27ed76042fe4f40a81dda10",
+      "bytes": 36484
+    },
+    {
+      "original": "g1-after-webkit-neutral-light-operations.png",
+      "sha256": "c81fbcb5a36c291dde0967f2b01ea8eb5f30902b5e5128886361aae65e259ad8",
+      "bytes": 32459
+    },
+    {
+      "original": "g1-chromium-color-dark-financial-details.png",
+      "sha256": "f2b8f0681741b9f5ebb322be3a27e9e40bed69061843c87d8e15c77e1a96cf1b",
+      "bytes": 49157
+    },
+    {
+      "original": "g1-chromium-color-dark-financial.png",
+      "sha256": "6c61b822897e8fb64eace911026d9585d7572ecea1dfd0392eb5a6bbea0da97d",
+      "bytes": 48675
+    },
+    {
+      "original": "g1-chromium-color-light-financial-details.png",
+      "sha256": "35719dde3e72d856688d1d0be7c080ebce94f929a03d52e7e09be64de388d722",
+      "bytes": 53812
+    },
+    {
+      "original": "g1-chromium-color-light-financial.png",
+      "sha256": "938bf7be498069a973af606bae41f6a2bbd43d247df341a8e18e8f5d2d6d4f39",
+      "bytes": 55217
+    },
+    {
+      "original": "g1-chromium-neutral-dark-financial-details.png",
+      "sha256": "96812849558d9c98635b2c7677b8817b3bf4024424819bc284527057d78092ea",
+      "bytes": 47038
+    },
+    {
+      "original": "g1-chromium-neutral-dark-financial.png",
+      "sha256": "19095e350b785c2b8f249d8a2f81ffe2ea55ecf94b783f8d166cfdef6da284f1",
+      "bytes": 48178
+    },
+    {
+      "original": "g1-chromium-neutral-light-financial-details.png",
+      "sha256": "fbd577088a745324f23be71e5720076b5eb4ea87e8b29349ccfcab79988cbf06",
+      "bytes": 49733
+    },
+    {
+      "original": "g1-chromium-neutral-light-financial.png",
+      "sha256": "d57d40490d1a097c62bc03d8c85ee3a08ef01bbac47346f0bae25ece8d53262d",
+      "bytes": 48514
+    },
+    {
+      "original": "g1-chromium-required-error-all-off.png",
+      "sha256": "d6e174e77d8d207e25b01163419458d8d0c937056a68ac1fc7885c949fec371e",
+      "bytes": 50127
+    },
+    {
+      "original": "g1-chromium-required-keyboard-model.png",
+      "sha256": "de351119459feccf3546f16adb0f02c2869aabb19a49fa423e8a1bd2765771b5",
+      "bytes": 33771
+    },
+    {
+      "original": "g1-chromium-security-all-off.png",
+      "sha256": "155423ecc2a23b1a80aa836768131501112a1b41134c3cb64956d3f95cc87e59",
+      "bytes": 72389
+    },
+    {
+      "original": "g1-chromium-system.png",
+      "sha256": "6f9f82d1286ecaafc5c308dca67f33d3606df677cd4cdb0d63e930e79df4fd03",
+      "bytes": 60198
+    },
+    {
+      "original": "g1-webkit-color-dark-financial-details.png",
+      "sha256": "0d2e795361c28cb4dae7a1d1814bcccd5912f97ae59eb4c829661b5e7cd026be",
+      "bytes": 53576
+    },
+    {
+      "original": "g1-webkit-color-dark-financial.png",
+      "sha256": "0e81745a5981ee883162443d894954daca4508c5a865a97d3e17eec0399b1329",
+      "bytes": 49345
+    },
+    {
+      "original": "g1-webkit-color-light-financial-details.png",
+      "sha256": "1a6b5ec3e4919ac9148e45e8be9c887f10d9e345d7bc56820a747eb7c4d82753",
+      "bytes": 61612
+    },
+    {
+      "original": "g1-webkit-color-light-financial.png",
+      "sha256": "4f22ecd99168da2bfccf0a924ddc7dee28792aa87cd3650ac5ac788e53c5c70f",
+      "bytes": 56397
+    },
+    {
+      "original": "g1-webkit-neutral-dark-financial-details.png",
+      "sha256": "730793481c8feb33e240c9b631d605efd0b7cc1bba7c4ea9a709da44eb9cb8c8",
+      "bytes": 53571
+    },
+    {
+      "original": "g1-webkit-neutral-dark-financial.png",
+      "sha256": "4c91e6020ebca790e167761ebe6b00aade51ca3740e6a361a182fe1e929c9c40",
+      "bytes": 49996
+    },
+    {
+      "original": "g1-webkit-neutral-light-financial-details.png",
+      "sha256": "91f540774ee280b5fd277a8d3bc4e241b2cf58352b7e2dcb0fbf54a6889805eb",
+      "bytes": 56939
+    },
+    {
+      "original": "g1-webkit-neutral-light-financial.png",
+      "sha256": "8ba97a47d7d74909a7c29813d7e8c211f9c0779d7914dc2f427900b93dcb10bc",
+      "bytes": 50884
+    },
+    {
+      "original": "g1-webkit-required-error-all-off.png",
+      "sha256": "d4a8da5987932b9a5e10024948cc0aa9172006811451971cd536abaf13987d9e",
+      "bytes": 56297
+    },
+    {
+      "original": "g1-webkit-required-keyboard-model.png",
+      "sha256": "dc03489baea43f859ee259f96ad12d4db67d0edcceb4e1307dd72918f05d3027",
+      "bytes": 38092
+    },
+    {
+      "original": "g1-webkit-security-all-off.png",
+      "sha256": "29855d78f9f14035c65df7b217957346a4a22e7a061f7f5a880022f39ae77b5b",
+      "bytes": 80720
+    },
+    {
+      "original": "g1-webkit-system.png",
+      "sha256": "0cb9d1d0fc509d531920054d5747904c01cf4c286772501e53d21b0da1645107",
+      "bytes": 69674
+    },
+    {
+      "original": "internal-unified-1280-dark.png",
+      "sha256": "22b7ad2a30258657c19069c1a2497a9b2c20db3cff80b33c91eeab3c8199e069",
+      "bytes": 26656
+    },
+    {
+      "original": "internal-unified-1280-light.png",
+      "sha256": "61c71ad675ed4e0bf9a575827d87b3e11de2c762eafd53bf3cf4799fc1185a38",
+      "bytes": 27945
+    },
+    {
+      "original": "internal-unified-320-dark.png",
+      "sha256": "4ac7da1f48c09e1ebc54ed85e679d362926a9d1bc783ef24c25d4c883d94960c",
+      "bytes": 21688
+    },
+    {
+      "original": "internal-unified-320-light.png",
+      "sha256": "032e8f4ea416816393f428dae03bc1f68469c7c87608336c5f94a40bc7c331ba",
+      "bytes": 22681
+    },
+    {
+      "original": "internal-unified-375-dark.png",
+      "sha256": "f8d62340d212ebe69f5abf424ff3a370ea8454f6b40aa62116acd6dd3dfac8cc",
+      "bytes": 22298
+    },
+    {
+      "original": "internal-unified-375-light.png",
+      "sha256": "34f31da37fcb845c067a25a8e03383ddbb809652ce293284421c18d16c988d76",
+      "bytes": 23461
+    },
+    {
+      "original": "internal-unified-402-dark.png",
+      "sha256": "9d0ed12cae1087e4808bf0e99fd44f428b38b7b788abaed34cc2c0495c2047e9",
+      "bytes": 22401
+    },
+    {
+      "original": "internal-unified-402-light.png",
+      "sha256": "f0a39a3dc016375e0ec4eb8dc254dd4dd6448c29fe2886e0e3d7c7b4dcd33cac",
+      "bytes": 23520
+    },
+    {
+      "original": "list-performance.json",
+      "sha256": "1d91ba5188333c155cde29964d7703aee12bbe5f32ee0e832f64bdeadad3aafe",
+      "bytes": 1125
+    },
+    {
+      "original": "navigation-upgrade-browser.json",
+      "sha256": "11d805a3b02fc9210c53d74cdd1e6a101392f65833211df10564760118329c36",
+      "bytes": 1373
+    },
+    {
+      "original": "notice-motion-browser.json",
+      "sha256": "2756399baa23b2d5bcc87403bf151984913d26f41f09bd5da3602836de6591c8",
+      "bytes": 418
+    },
+    {
+      "original": "notice-motion-browser.log",
+      "sha256": "0415b3993c43f5ed26b5ef1b17a3ceaf39384509a57b62f429a858787efe232e",
+      "bytes": 419
+    },
+    {
+      "original": "p1-1-payments-webkit.log",
+      "sha256": "7012612625f4824a19b6a892591cc1bfdc81c612aed00101898fdf4b6b54fb12",
+      "bytes": 145
+    },
+    {
+      "original": "p1-1-payments.log",
+      "sha256": "18a632a809e44b097816ff94363bca54b46aec0648a9eaa9f9781842b8bcb59e",
+      "bytes": 27
+    },
+    {
+      "original": "p1-2-payments-webkit.log",
+      "sha256": "e47e04b3e757ca9fbdd45f352623eaa8664001f3fa8fbd48a9a4b6aa2f9632d1",
+      "bytes": 146
+    },
+    {
+      "original": "p1-2-payments.log",
+      "sha256": "32a37bb472179b52346d4effd15b0dd162ffadb5986f3f570f0af2af624c5e3c",
+      "bytes": 28
+    },
+    {
+      "original": "p1_1/screenshots/chromium-color-dark-confirm.png",
+      "sha256": "83676a4b480c7a6920bb40960af0ca4d9d44e8001ba624d2278fb42bf9a00564",
+      "bytes": 45604
+    },
+    {
+      "original": "p1_1/screenshots/chromium-color-dark-due.png",
+      "sha256": "bbb8d353acf6e999df6bac70d7bf5b214b46bf249181ac6801e42ebdecaf25cc",
+      "bytes": 51841
+    },
+    {
+      "original": "p1_1/screenshots/chromium-color-dark-planned.png",
+      "sha256": "02c93fcaa7d919f5cbe74355dbce8d379492cac0b62e68038d77dbea4e263f46",
+      "bytes": 45119
+    },
+    {
+      "original": "p1_1/screenshots/chromium-color-light-confirm.png",
+      "sha256": "8fb1649a781f9f5d1b3e5131e097cd8a13fe9fe6e976cba37f4429c48c6ddc01",
+      "bytes": 49107
+    },
+    {
+      "original": "p1_1/screenshots/chromium-color-light-due.png",
+      "sha256": "89c5c4cd869ce1fbf8a016be82f99984aebf67df7a438ebc5367239e682b4367",
+      "bytes": 59629
+    },
+    {
+      "original": "p1_1/screenshots/chromium-color-light-planned.png",
+      "sha256": "80af5efeb44110c0842502555111b6cd6296e010bf2d67632132b4e3b9322d40",
+      "bytes": 51538
+    },
+    {
+      "original": "p1_1/screenshots/chromium-due.png",
+      "sha256": "a55a60baaf21f0ca3edae5dc97851c3c7200c8c133d1be3ffefc16c1a4f7f3ce",
+      "bytes": 49993
+    },
+    {
+      "original": "p1_1/screenshots/chromium-neutral-dark-confirm.png",
+      "sha256": "629a5a3cadc09865caf973b64506021fdb870be1e598b156cb5294d98122dd13",
+      "bytes": 43016
+    },
+    {
+      "original": "p1_1/screenshots/chromium-neutral-dark-due.png",
+      "sha256": "a6d0ae854ab61eb653153cc710a3536cb5f8eb11c8d05cad38df2a8c926502b1",
+      "bytes": 48667
+    },
+    {
+      "original": "p1_1/screenshots/chromium-neutral-dark-planned.png",
+      "sha256": "cca56cea3232cf0af92b7a38631e19944586f1e964eeeb9f86fa48870c9573a4",
+      "bytes": 43126
+    },
+    {
+      "original": "p1_1/screenshots/chromium-neutral-light-due.png",
+      "sha256": "a26e0ab1beb50db0cf501d507b802069e8f3392277bbd93b3c94539846ac2b57",
+      "bytes": 49702
+    },
+    {
+      "original": "p1_1/screenshots/chromium-neutral-light-planned.png",
+      "sha256": "16e7363107cd86eab526040bf06134d0dd53fa026b13afbcbd65aa251ad10780",
+      "bytes": 44043
+    },
+    {
+      "original": "p1_1/screenshots/chromium-planned.png",
+      "sha256": "16e7363107cd86eab526040bf06134d0dd53fa026b13afbcbd65aa251ad10780",
+      "bytes": 44043
+    },
+    {
+      "original": "p1_1/screenshots/webkit-color-dark-due.png",
+      "sha256": "b3039202dcf1c749e85df306fd7d608675ff3714228f66da46ef9e619d3afa0b",
+      "bytes": 55679
+    },
+    {
+      "original": "p1_1/screenshots/webkit-color-dark-planned.png",
+      "sha256": "a5d5ea09647185cf58cb93bcaac1416ffd93e3b2bd0ef3ee5b28afed92816dd9",
+      "bytes": 47959
+    },
+    {
+      "original": "p1_1/screenshots/webkit-color-light-due.png",
+      "sha256": "5dea75de34073a22feabd0514cc24e3106921af7abdaebced594295d3e0de8ac",
+      "bytes": 66991
+    },
+    {
+      "original": "p1_1/screenshots/webkit-color-light-planned.png",
+      "sha256": "d7fd5b01008d1b39d6c3a066ee24be1bef81bf39fb8bf6f9a3deb128c976b5ce",
+      "bytes": 57526
+    },
+    {
+      "original": "p1_1/screenshots/webkit-due.png",
+      "sha256": "e33dffda196171edd61538ad926b996299ba53b1cbf7e85076fd353bc9a8b84d",
+      "bytes": 57405
+    },
+    {
+      "original": "p1_1/screenshots/webkit-neutral-dark-due.png",
+      "sha256": "75a81761351c953e579334ba660a66dfdbda41ec2022b0a71de6d5e6aa551d2a",
+      "bytes": 55008
+    },
+    {
+      "original": "p1_1/screenshots/webkit-neutral-dark-planned.png",
+      "sha256": "86f95def2ba6e728e708b8aec887d3583f8fcfd53886a2bae13c7c53b24d6366",
+      "bytes": 47866
+    },
+    {
+      "original": "p1_1/screenshots/webkit-neutral-light-due.png",
+      "sha256": "2d4736d45546bafae25ed535270e7861c24897f20ce1afbd640f040d01b39357",
+      "bytes": 57290
+    },
+    {
+      "original": "p1_1/screenshots/webkit-neutral-light-planned.png",
+      "sha256": "2ecd211d75af035a418286fa340aae948376a113db1824d07eaf2de50e44b328",
+      "bytes": 50053
+    },
+    {
+      "original": "p1_1/screenshots/webkit-planned.png",
+      "sha256": "2ecd211d75af035a418286fa340aae948376a113db1824d07eaf2de50e44b328",
+      "bytes": 50053
+    },
+    {
+      "original": "p1_1/webkit-payments.json",
+      "sha256": "31e2b11d941838db6bb8fa3b9d09105278f4ec2d5c8ea58359c71d19abd11e12",
+      "bytes": 1078
+    },
+    {
+      "original": "p1_2/screenshots/chromium-batch-selection.png",
+      "sha256": "c7a320325b2393a5d2f06edaf1c6dda8b890d933cc638b976c479d5e51f5dc6a",
+      "bytes": 63198
+    },
+    {
+      "original": "p1_2/screenshots/chromium-variable-full-2300.png",
+      "sha256": "908e7a2bdbda6dee935f29b3891b8019edaa053fe387d108cefc5e4214278643",
+      "bytes": 48028
+    },
+    {
+      "original": "p1_2/screenshots/webkit-batch-selection.png",
+      "sha256": "236aff81dfb6676cf3e27e2f64a7dd4c371d32a1eae2fba0df65e708616d4195",
+      "bytes": 73599
+    },
+    {
+      "original": "p1_2/screenshots/webkit-neutral-dark-calendar.png",
+      "sha256": "9aef0b6c320adcba6fd2252c1356ef4fae0a7768a70a09911a37140eb707e246",
+      "bytes": 61260
+    },
+    {
+      "original": "p1_2/screenshots/webkit-variable-full-1700.png",
+      "sha256": "0f61a1b7dd313284901880fc27ee2ea4e26cbdbdc153a3a1c9503855896c68f6",
+      "bytes": 53537
+    },
+    {
+      "original": "p1_2/webkit-extended.json",
+      "sha256": "9ef7ee31ac99d604beaad443f9490d94141d1990bc28a8d16d48b2ff264f526e",
+      "bytes": 1381
+    },
+    {
+      "original": "p2-debts-webkit.log",
+      "sha256": "ea452019a45286f0bd5698c489c6221e92ce0b827859417da3129c4accd07da5",
+      "bytes": 2071
+    },
+    {
+      "original": "p2-debts.log",
+      "sha256": "15fbadad12dedee9d319f1e4969c3ea0c56b1a3c9d27283e28f5a6f698931a8d",
+      "bytes": 1905
+    },
+    {
+      "original": "p2-upgrade-webkit.log",
+      "sha256": "0bf46b07703b1cfd01698ff1f146c327f16258bdacd3b15192539d37d4a41782",
+      "bytes": 145
+    },
+    {
+      "original": "p2-upgrade.log",
+      "sha256": "a46ce2838753ed97afb1e1ca5692de49f4784f2c96d5ad25a8cb64ec6b3cf288",
+      "bytes": 27
+    },
+    {
+      "original": "p2/screenshots/chromium-archive-detail.png",
+      "sha256": "05e631acbfc57c0b9b27637ba9c3fc200a467a2367b02511e5448c37052ea90e",
+      "bytes": 44762
+    },
+    {
+      "original": "p2/screenshots/chromium-color-dark-detail.png",
+      "sha256": "cb5a4eeabcea0dbd5696e3a32545d418ae2e39a100cc4787c730c82539ec3f0d",
+      "bytes": 51357
+    },
+    {
+      "original": "p2/screenshots/chromium-color-light-list-desktop.png",
+      "sha256": "75de843cf81f0eadccf870bd285c375ad0f63a6f9ce4871130ef5595b8c12000",
+      "bytes": 106172
+    },
+    {
+      "original": "p2/screenshots/chromium-color-light-list.png",
+      "sha256": "2a2c1abe276dad053f7a4372831a5c9cc66bd8e0e2946df54994f29189bff23a",
+      "bytes": 61381
+    },
+    {
+      "original": "p2/screenshots/chromium-neutral-light-list-desktop.png",
+      "sha256": "6d40b2ceb7ce3f288bb5dc48c866a1f67734f5a13f2b4ae752f050b114db7420",
+      "bytes": 93494
+    },
+    {
+      "original": "p2/screenshots/chromium-neutral-light-list.png",
+      "sha256": "900b19c92f85cae341c4c62666e962eb4b404030121739fae0564b1682888265",
+      "bytes": 53327
+    },
+    {
+      "original": "p2/screenshots/webkit-color-dark-list-desktop.png",
+      "sha256": "e85e8cde1d22ede2c9d7b38a83bdfc256286c98a35f7edbb1cadc724368ec933",
+      "bytes": 107029
+    },
+    {
+      "original": "p2/webkit-debts.json",
+      "sha256": "8078d66dedf1f7f4ccb24730170a6cb7a338c0725867d80db260229ff9c5f392",
+      "bytes": 2234
+    },
+    {
+      "original": "p3-goals-webkit.log",
+      "sha256": "e1e1f34f0b215a78302b3a4b54d82a49f1e7b4c2fc9118737340399033586123",
+      "bytes": 2551
+    },
+    {
+      "original": "p3-goals.log",
+      "sha256": "91db1dd0fca8b3224c378561d4a0c33b9754bb35de4335e3962edfaf587aeeb6",
+      "bytes": 2433
+    },
+    {
+      "original": "p3-upgrade-webkit.log",
+      "sha256": "a270d36cf5da5ba5a7cc17de2c6e0c58cccdd308f6fd7aa62922c8eea1bc3bc3",
+      "bytes": 145
+    },
+    {
+      "original": "p3-upgrade.log",
+      "sha256": "772408dc2034006df47e293a0c1f74475a5b9a7666ec0e08b825a6d3f483ed00",
+      "bytes": 27
+    },
+    {
+      "original": "p3/chromium-ui.json",
+      "sha256": "01bbc8c9e72b43fac64aa5725ac0357008ffe8709a035bd1c356a2fe60299549",
+      "bytes": 2718
+    },
+    {
+      "original": "p3/screenshots/chromium-closed-goal-history.png",
+      "sha256": "aa707d7eaccb3b4e7d16ddcaad0c9eb846bccddfe19f84019680e50063ea0f2d",
+      "bytes": 50447
+    },
+    {
+      "original": "p3/screenshots/chromium-color-dark-reserves-desktop.png",
+      "sha256": "d5425f969fb2dc4b1ec987d74125caefa3120a85196d5055dc3b9eb387323f4f",
+      "bytes": 90997
+    },
+    {
+      "original": "p3/screenshots/chromium-color-dark-reserves.png",
+      "sha256": "8679666da501649e4026c65edaf7e6252032cc5bcf86832926167ceb2dc12b62",
+      "bytes": 58869
+    },
+    {
+      "original": "p3/screenshots/chromium-color-light-goals.png",
+      "sha256": "717edb3b52d32b57d73e5a6fdb43cb0119d91c23d17c545c18c6e6881dde2d6d",
+      "bytes": 58836
+    },
+    {
+      "original": "p3/screenshots/chromium-neutral-dark-goals-desktop.png",
+      "sha256": "e4ae63168e7518d6facdf2f1f20c4cb7925f61555f268477090f59b544a47512",
+      "bytes": 77585
+    },
+    {
+      "original": "p3/screenshots/chromium-neutral-dark-reserve-detail.png",
+      "sha256": "1ac9e2e187c41489a20dde11f7bcd94573024ae61017f93bdf25639c43130666",
+      "bytes": 46567
+    },
+    {
+      "original": "p3/screenshots/chromium-neutral-dark-reserves.png",
+      "sha256": "ad49e53511bdabb23359e4e0ea551858fb6f22058a55fca74738d654a5d6122f",
+      "bytes": 58074
+    },
+    {
+      "original": "p3/screenshots/chromium-neutral-light-home.png",
+      "sha256": "6ff4765ab2d2107d83d0b7ba534134c035a97dabb27c672114c14cb14bb2193c",
+      "bytes": 43391
+    },
+    {
+      "original": "p3/screenshots/chromium-neutral-light-reserves.png",
+      "sha256": "e2f63d332fe315a85b1e4de47242157d993d3f1c16c5cc20c4cf8aec69c226c4",
+      "bytes": 57838
+    },
+    {
+      "original": "p3/screenshots/chromium-reserve-detail.png",
+      "sha256": "71ead9f4e5cb0f3f03be90f4873807777fa8a0f7151e6bf1fd38c404c5cf23f7",
+      "bytes": 48045
+    },
+    {
+      "original": "p3/screenshots/webkit-canonical-expense-form.png",
+      "sha256": "d6b06530ce15d2bc4a9bc01778363ec0ab23563d5c9c23cec70904544c719984",
+      "bytes": 54910
+    },
+    {
+      "original": "p3/screenshots/webkit-neutral-light-reserves-desktop.png",
+      "sha256": "303027cf2d84a519eba0058b83577cc292d7c4d31141d9f0d07babc632ae70ac",
+      "bytes": 101576
+    },
+    {
+      "original": "p3/webkit-ui.json",
+      "sha256": "032ac8aec0eacff09e0265e1da842b03869d09e019254823fa536d6089af9e08",
+      "bytes": 2708
+    },
+    {
+      "original": "p4-limits-webkit.log",
+      "sha256": "2e74d9b2e510dec8ecfb867075445961f4ba20fbea19172f394b223a33f277a5",
+      "bytes": 2360
+    },
+    {
+      "original": "p4-limits.log",
+      "sha256": "d46b045624ccb73f85afed3cff4ad8e1f7983222f4bd9bf109b5182003ffe315",
+      "bytes": 2242
+    },
+    {
+      "original": "p4-precision-webkit.log",
+      "sha256": "68bf1e51da6c23bc25308b4fa527041a21bfdfbfa7b0e2e32c9f8581bcf18e76",
+      "bytes": 145
+    },
+    {
+      "original": "p4-precision.log",
+      "sha256": "5a56c5530c3f33471fdc307e1e9254acdde7b5075500d7a2264d79d43e474597",
+      "bytes": 27
+    },
+    {
+      "original": "p4-upgrade-webkit.log",
+      "sha256": "a270d36cf5da5ba5a7cc17de2c6e0c58cccdd308f6fd7aa62922c8eea1bc3bc3",
+      "bytes": 145
+    },
+    {
+      "original": "p4-upgrade.log",
+      "sha256": "772408dc2034006df47e293a0c1f74475a5b9a7666ec0e08b825a6d3f483ed00",
+      "bytes": 27
+    },
+    {
+      "original": "patch-list-performance.log",
+      "sha256": "02b5ac2b0f019630b6e820591f8654d3b2c903a2cb8cf0386b4c4ca206ae96b2",
+      "bytes": 1990
+    },
+    {
+      "original": "patch-unit.log",
+      "sha256": "7687141b34d4aa45e875c3d36231bb8cc7fb87d88216e1283d356540a05ac4e2",
+      "bytes": 108212
+    },
+    {
+      "original": "patch-upgrade.log",
+      "sha256": "6aab3b0d70b15343bc725b4d2b8e2131990efdb404c4ad740f301603fb95de81",
+      "bytes": 2632
+    },
+    {
+      "original": "release-build.log",
+      "sha256": "bc249c90ed19075527ce2a00148802cf9bde2f37dddfc86e694e46a54e325727",
+      "bytes": 66
+    },
+    {
+      "original": "release-run.json",
+      "sha256": "4f3b22529b749f3b49a5e311ccb5dd208749a74410795b3a3d41b44305062e4b",
+      "bytes": 7926
+    },
+    {
+      "original": "verify-delivery.log",
+      "sha256": "a7b7a7262287875d85984eb2404af229f55152bb79198c061fc6f525e325a92c",
+      "bytes": 1402
+    },
+    {
+      "original": "delivery-verification.json",
+      "sha256": "a7b7a7262287875d85984eb2404af229f55152bb79198c061fc6f525e325a92c",
+      "bytes": 1402
+    }
+  ],
+  "historicTrackedEvidenceRestored": 162,
+  "initialArchiveMetadataFalsePositives": [
+    "delivery-verification.json",
+    "p2/chromium-upgrade.json",
+    "p2/webkit-upgrade.json",
+    "p3/chromium-upgrade.json",
+    "p3/webkit-upgrade.json"
+  ],
+  "excludedPayloadFiles": [],
+  "metadataRecoveredBySeparateRepeat": [
+    {
+      "original": "p2/chromium-upgrade.json",
+      "repeat": "metadata-repeat/p2-chromium.json",
+      "sha256": "9822adb6d29ab28b274b3896acf3d7ccd26bdb0373dbd09bd31b05f2ea37c548",
+      "primaryFullRunLog": "regressions/p2-upgrade.log"
+    },
+    {
+      "original": "p2/webkit-upgrade.json",
+      "repeat": "metadata-repeat/p2-webkit.json",
+      "sha256": "d9b1a0a55af6c13a8dec86a92faf93a1bbcfbe13a3035930c9b00b60894df637",
+      "primaryFullRunLog": "regressions/p2-upgrade-webkit.log"
+    },
+    {
+      "original": "p3/chromium-upgrade.json",
+      "repeat": "metadata-repeat/p3-chromium.json",
+      "sha256": "6fc86dd3259991ceea09d6b2d27a3aaa89a07fb4ee2920a288bce25665979918",
+      "primaryFullRunLog": "regressions/p3-upgrade.log"
+    },
+    {
+      "original": "p3/webkit-upgrade.json",
+      "repeat": "metadata-repeat/p3-webkit.json",
+      "sha256": "a9d75a7ed4a2ab2debf7ec3b733ad83891482e9b216abf5f242a06dc36922284",
+      "primaryFullRunLog": "regressions/p3-upgrade-webkit.log"
+    }
+  ],
+  "historicEvidenceRestoredAfterMetadataRepeat": 7
+}

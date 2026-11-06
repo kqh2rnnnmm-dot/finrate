@@ -1,0 +1,21 @@
+{
+  "engine": "webkit",
+  "build": "p4-limits01",
+  "publicHTMLSHA256": "f6433dfbc732c6900cd499f8d6851401fcddc7baea8f104310f02d9afb0df4d1",
+  "checks": [
+    "real P3 document opens/read only, empty route/metric no invented sums, no auto-write or sixth tab",
+    "parent6000+child3000-refund1000=8000, child2000; rules preserve cash/free and no historical warning on creation"
+  ],
+  "failures": [
+    "Expected values to be strictly equal:\n\n2 !== 0\n"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "version": "26.5",
+  "diagnostic": {
+    "page": "Лимиты",
+    "dialogs": [],
+    "errors": []
+  },
+  "allPassed": false
+}

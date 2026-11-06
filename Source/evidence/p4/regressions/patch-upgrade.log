@@ -1,0 +1,37 @@
+PASS list01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS actions01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS actions02 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS pages01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS unified01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS control01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS shell01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS refine01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS home01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS feedback01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS history01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS security01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS entryfix01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS combined01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+PASS b1-financial01 → A3: service worker upgrade, unchanged ciphertext, offline unlock
+{
+  "checks": [
+    "list01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "actions01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "actions02 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "pages01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "unified01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "control01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "shell01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "refine01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "home01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "feedback01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "history01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "security01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "entryfix01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "combined01 → A3: service worker upgrade, unchanged ciphertext, offline unlock",
+    "b1-financial01 → A3: service worker upgrade, unchanged ciphertext, offline unlock"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false
+}

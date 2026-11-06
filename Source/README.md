@@ -1,3 +1,13 @@
+# P4 · лимиты · p4-limits01 /0.3.14-p4
+
+Рабочая ветка codex/p4-limits от main `eea169f4605a0afa155ab69c95a867ee39749fda`, не слито/не опубликовано. Новые limits.mjs/limits-ui.mjs; optional rules/settings внутри прежнего шифрованного документа, деньги только из прежних канонических фактов.
+
+Из Source: `npm run build`, `npm run test:p4`, `node tests/limits-browser.mjs`, `node tests/limits-upgrade-browser.mjs`, `FINRATE_TEST_WEBKIT=1 node tools/check-release.mjs`, `npm run verify:delivery`. Параметры runtime/точные результаты в [TEST_REPORT](../Documents/P4/TEST_REPORT.md). Браузерные движки — тестовый инструмент, не подтверждение настоящего iPhone.
+
+[Приёмка](../Documents/P4/IPHONE_ACCEPTANCE.md), [границы](../Documents/P4/OPEN_ITEMS.md). Нет merge/deploy/live reset. Аварийный login reset/Apple Account не входят в P4.
+
+---
+
 # P3 · цели и резервы
 
 Рабочая сборка `p3-goals01` /`0.3.13-p3`, основа main3add5d9. Данные local-first, SCHEMA5/backup1, без внешних runtime-сервисов и новых зависимостей. Новый код: goals.mjs/goals-ui.mjs; существующие факты, кредитки, платежи, долги и криптография не переписаны.

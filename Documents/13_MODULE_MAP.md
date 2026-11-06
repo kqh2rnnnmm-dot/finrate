@@ -1,3 +1,24 @@
+# P4 — карта адресных изменений · 06.11.2026
+
+`codex/p4-limits`, p4-limits01 /0.3.14-p4, base `eea169f4605a0afa155ab69c95a867ee39749fda`. Готово для ревизии, не слито/не опубликовано.
+
+| Модуль | Ответственность P4 |
+|---|---|
+| limits.mjs (новый) | Optional version1, strict validation/CRUD/idempotence, месячные canonical allocations/refund, parent/child, точные суммы/состояния, delta transitions, draft validation |
+| limits-ui.mjs (новый) | Существующий маршрут/формы/карточки/архив/месяцы, общие редакторы/категории/guard/drafts/Back, настройки предупреждений, search/context/history |
+| model.mjs | Только вызовы optional limits/draft validators; остальные формулы/валидация побайтно прежние |
+| app/ui/context-menu | Подключение маршрута/плюса/draft/search/общего контекста, foreground committed feedback, явное подавление исторических restore-предупреждений |
+| notification-events.mjs | Новые delta notices через существующие разрешения/очередь; прежние финансовые receipts побайтно прежние |
+| dashboard.mjs | Существующий metric limits — counts/priority без суммы; Settings→Limits; прежние Home-стили/1–6 сохранены |
+| activity.mjs/activity-ui.mjs | Общий зашифрованный аудит правил/состояний/настроек, ссылки на те же карточки, точные signed cents; не новый финансовый журнал |
+| reset-policy/reset-ui | Только известные limits/settings allowlist/summary и прежние3 режима |
+| help.mjs/style.css | FAQ и исключительно [data-limits-ui] геометрия; прежние CSS/палитры byte-identical |
+| tests/limits*.mjs, tools/check-release, verify-delivery | RED/GREEN, реальный IDB/CAS/quota/backup/upgrade/offline, оба движка; SHA allowlist/старые assertions/public7 |
+
+**Побайтно нетронуты**: planning/home-config/focus/surfaces/field-editor/navigation, operations/block02/credit/scheduled-payments/debts/goals, service/store/crypto/device-access и остальные51 из63 исходных файлов (12 разрешённых изменений,2 новых модуля). Модель и прежние receipts дополнительно сравниваются после удаления только P4-hooks. Из101 прежних test-файлов в5 изменена только ожидаемая текущая build-метка; assertions не ослаблены. ACCESS contract также SHA-защищён. [Аудит](P4/AUDIT.md), [проверки](P4/TEST_REPORT.md).
+
+---
+
 # P3 · карта модулей после слияния · 05.11.2026
 
 PR №12 объединён в `main` (`a35a3e71c156713581dc7dfac9516ae27b1cb237`), `p3-goals01` / `0.3.13-p3`. Новые `Source/src/goals.mjs` и `goals-ui.mjs` отвечают за цели, резервы и связи; точечные hooks `model/planning/planning-ui`, `ui/dashboard/home-config`, `focus/payments-ui/debts-ui`, `reset-*`, `activity-*`, FAQ и scoped CSS выполняют интеграцию. Прежние operations/credit/scheduled-payments/debts/service/store/crypto/device-access/navigation/surfaces/field-editor не переписывались. Дальнейшая работа — отдельный PATCH по утверждённой дорожной карте; он не начат.

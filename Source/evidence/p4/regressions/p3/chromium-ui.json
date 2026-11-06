@@ -1,0 +1,31 @@
+{
+  "engine": "chromium",
+  "build": "p3-goals01",
+  "publicHTMLSHA256": "f6433dfbc732c6900cd499f8d6851401fcddc7baea8f104310f02d9afb0df4d1",
+  "checks": [
+    "P2 document opens without write/root migration, empty goals and reserves; five main tabs unchanged",
+    "real UI creation +native quota rollback/double tap, reserve10000 changes free once, no canonical operations",
+    "allocate5000/release4000 no movements, same-account oversubscription and competing reserve rejected without write; credit excluded",
+    "new3000 canonical expense and reserve decrement atomic, quota no orphan, double tap one fact; purchase progress11000, free no second subtraction",
+    "existing real2000 expense links without second operation/cash movement, one whole purchase one active goal link",
+    "edit2500 and real refund500 recalc purchase progress, historical reserve consumption unchanged, no automatic reallocation",
+    "500char multiline note, scoped search same card, existing encrypted local history includes reserve-dependent goal progress",
+    "standard dirty guard and encrypted goal draft, resume/save consumes intent, no premature allocations",
+    "Home reserves and concrete selected goal use actual derived numbers; existing configuration and navigation work",
+    "explicit stable P1.2 link covers liability once; canonical partial payment2000 preserves free invariant and planned source",
+    "explicit P2 liability uses existing canonical repayment-out editor, source locked, principal never purchase/income/expense",
+    "native second-window CAS protects allocation group; reload preserves winning action",
+    "close without choice is no-op; detach choice preserves standalone reserve/cash and archive/history with close snapshot",
+    "cancel linked fact after goal completion recalculates actual history/progress, no automatic reserve restoration",
+    "independent expense preserved despite reserve shortage; visible warning and uncertain savings progress; explicit release reconciles without reversing old fact",
+    "7 viewport sizes x4 theme/palette goals/reserves/cards/forms/Home, 12digit money, 320px large text, no horizontal overflow and fixed Home; real screenshots",
+    "real P3 protected file export and independent native restore preserve entire goals/reserves/actions/operations/history exactly",
+    "3 isolated native A2 reset modes include P3 counters/cleanup; PIN/password/recovery and exact independent restore, live UI DB untouched",
+    "cold offline SW shell with all HTTP refused; encrypted P3 read survives restart; browser evidence not physical iPhone"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "version": "153.0.8010.0",
+  "allPassed": true
+}

@@ -1,0 +1,601 @@
+{
+  "count": 66,
+  "fictionalDataOnly": true,
+  "publicHTMLSHA256": "f6433dfbc732c6900cd499f8d6851401fcddc7baea8f104310f02d9afb0df4d1",
+  "screenshots": [
+    {
+      "file": "screenshots/chromium-after-p4-empty.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "88de3213fd544cd285f378377d351d040fa94f311cc4b72474d03a6cecb98435",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-after-p4-first-rule.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "1b95c551def781a396f18635796b55ae6deeef23fa2d7f3e894d23473ad4db34",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-before-p3-limits-placeholder.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p3-goals01",
+      "sha256": "72d592fb0fe496120740172a92484926ba5454ef9c6968adc19d6fd4ee6c7188",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-dark-detail.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "7ddb1b0fcb382fb25f6336e987db7d0159ee9f3dd18e0ca4163769089048e547",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-dark-form.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "3e74c0338fd145206469288de815886f9588bb9acba347c3b19fa0534aedc7b0",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-dark-home.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "103d3a7eb504c01e3388ea858838a2764337d2f4c35fd7af290dc9144029862a",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-dark-large320.png",
+      "engine": "chromium",
+      "width": 320,
+      "height": 568,
+      "sourceBuild": "p4-limits01",
+      "sha256": "504ad47811a840992a92c2bd64641a854208594e443862ed383e5996fc9e08f4",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-dark-list-desktop.png",
+      "engine": "chromium",
+      "width": 1280,
+      "height": 900,
+      "sourceBuild": "p4-limits01",
+      "sha256": "aebfe60ce7adec2611c3f795c5b1dc4394eb571a77b1b72ab4921a8eaf5a15c4",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-dark-list.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "455e8e9cf4977c6d14d0b8bf85a53b0f2fc4f89f9fc8d8d00dd7cafa3ef6c0d3",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-light-detail.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "8ceea72e9dc692fa26d411738ac071e61e2799f4cff3c4dcb368eb0a67975c0c",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-light-form.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "fb9f8090e7b5c79bc71ffad85d4325fa32819b1192f5356984205356431876c3",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-light-home.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "3a2a5ad0820b6dca56aacafdb5620073cee76687ef7835838f626b66b936c53e",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-light-large320.png",
+      "engine": "chromium",
+      "width": 320,
+      "height": 568,
+      "sourceBuild": "p4-limits01",
+      "sha256": "b212b071a55f6a0d164ddca0fec29127b7e7b078b9a3b8bc5afe5c5b48846873",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-light-list-desktop.png",
+      "engine": "chromium",
+      "width": 1280,
+      "height": 900,
+      "sourceBuild": "p4-limits01",
+      "sha256": "182a81b6b4ab11e2a3aa2b2b5dcb839957356524c630691348fab3bc3ae02ed3",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-color-light-list.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "5299c93f84adf3b09364868e6954002f3d879c9cf033d7f75c5b35f1cdd995c8",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-empty.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "715a1125a097878336e14dfe366aed63ef7fb0c7b0806d44fb6e830c0588b6ab",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-exceeded.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "a3334c86f2b725ad189e5eb74cc151c1c507b5929b9b51491590e5d86b2cb2d5",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-max-import-history320.png",
+      "engine": "chromium",
+      "width": 320,
+      "height": 568,
+      "sourceBuild": "p4-limits01",
+      "sha256": "981e87b59627ce87446a5e961f84c388c42b9b05e8549ae4fd0e5836e4dd2bf7",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-dark-detail.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "18a59c75fd2254f625903cea7c6eff98f5f291422aedb18a18a5ee69c78c3ca8",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-dark-form.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "181526467e7c70866d490bafb9b509419b7ef2bfd5d5a5c89e4451b28eaa2395",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-dark-home.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "2527711f993cad45bdbca852a89c0db3b9136adc0ee6dc5db96b49c51e4c3888",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-dark-large320.png",
+      "engine": "chromium",
+      "width": 320,
+      "height": 568,
+      "sourceBuild": "p4-limits01",
+      "sha256": "8b55d7f14394fbe3581d61c2465429b41efa760d05be3ae569fae537d45b9e56",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-dark-list-desktop.png",
+      "engine": "chromium",
+      "width": 1280,
+      "height": 900,
+      "sourceBuild": "p4-limits01",
+      "sha256": "230c814e3047a551ba1f1b2046efdefdb736e8a9c7be00c6fd6219f7a6d417e7",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-dark-list.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "1cf21449e657b66e2529c6780a4e22e0004f56bff8c1a3c49b5e261e8925eeba",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-light-detail.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "65564941e60b207b32616564037ea82e06e1b67dd80361e75cdf5ed9b03549bb",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-light-form.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "afd47650de0b9eb59efba91bb14f7c34869f638b1f51014298a3b46464c8fbbf",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-light-home.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "009272a34d16e09f20c1130f48eb6e904306b2ceb930873625d00491f0cd09ae",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-light-large320.png",
+      "engine": "chromium",
+      "width": 320,
+      "height": 568,
+      "sourceBuild": "p4-limits01",
+      "sha256": "e9f772726b2035414d18e414482ddaff1a370e0b1a372f1fa8f0f79b21afc858",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-light-list-desktop.png",
+      "engine": "chromium",
+      "width": 1280,
+      "height": 900,
+      "sourceBuild": "p4-limits01",
+      "sha256": "7d607e426abe3154309029235567714b6d7cbba830f5832e10f7f261e4d7a682",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-neutral-light-list.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "34a501272771981b57d52268ffb2e8b2476c5e64af6eb79547bd495cb2d2ca72",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-parent-detail.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "34d8bbc5576c24148b8f361c1028fa3fef09b8e668d57f6195dcadda5c41ee08",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-parent80-child40.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "f0d753a9097f918dd055ce3a480371ca2ac93cf8806ba736380a8605592290ff",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/chromium-warning-settings.png",
+      "engine": "chromium",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "6e68b3a4ae9634ebe55c46fdf3fb460a8d29e5f5009d4ec6307fb5d9686925ef",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-after-p4-empty.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "327f02eeefe8844b15f1eb6ca33441371cba41e8332208a7ba120dea7ea9b4f2",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-after-p4-first-rule.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "e57e9dbb3772773499bfae3d596e24d8d4c84a680edad2df12e05568348b7e58",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-before-p3-limits-placeholder.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p3-goals01",
+      "sha256": "24ee56860b0bf789b266590b3a7193a5635833fdfbed8c98c6d9c3a6644d434e",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-dark-detail.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "a3b356994eae0c9926d828a09985380b55a042c27fe150dd7db2741f7e851993",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-dark-form.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "39a5e602e0fd248c1d913b59f5f30f8c8a2f37bc2c136c594fe142ed307834a4",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-dark-home.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "ef0352357ae2768ddb1431ca17820cbb80e9ca9c57f69f7c52658b3e669eee76",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-dark-large320.png",
+      "engine": "webkit",
+      "width": 320,
+      "height": 568,
+      "sourceBuild": "p4-limits01",
+      "sha256": "a0ba9037a72ea8985b009931f13086ce45e8491e038eb5ddb98e7254804dc7e5",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-dark-list-desktop.png",
+      "engine": "webkit",
+      "width": 1280,
+      "height": 900,
+      "sourceBuild": "p4-limits01",
+      "sha256": "dcd6dc09b817df639906f667c7e605e3cd96cc36112c66fb845b5c6a6d5f40c1",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-dark-list.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "1971b1b16340210f9d1e7dd3e96afa7341d35e62c7002cae934e4669bb56342b",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-light-detail.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "a75190adf62f5aba8349fab2d9a8dc5f24b3e39a68939c1980c688c64e991ff5",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-light-form.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "ddb6bd3c6257ca6b6cdc517d307dbbc94f642a1f1b0929020bb0f3f03cc1c1a8",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-light-home.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "a2384986dfed0638001c0118577ee1cfdd6825c3754d230fb9413bf4089f34f1",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-light-large320.png",
+      "engine": "webkit",
+      "width": 320,
+      "height": 568,
+      "sourceBuild": "p4-limits01",
+      "sha256": "77aad53994ed7af279b306d659c5eafec2576832340c6cad8c23a5427c2a9b1f",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-light-list-desktop.png",
+      "engine": "webkit",
+      "width": 1280,
+      "height": 900,
+      "sourceBuild": "p4-limits01",
+      "sha256": "e665ceb239374f09078ed90afb098c9e9da64db803ea9d44d7aa0fb9c442887f",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-color-light-list.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "d5fe6155c44e07dffed14b47a4351298d8983fba7b9a377eaa251ca353232819",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-empty.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "f9f040e1d1166bd086b350b73b7b5a8b275ae42a89104fe8ddbb2971d89df467",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-exceeded.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "5bbf9d65fc6a6d072989cf54331647b74b24b60b907060dc46a9ce5ab3a4ad88",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-max-import-history320.png",
+      "engine": "webkit",
+      "width": 320,
+      "height": 568,
+      "sourceBuild": "p4-limits01",
+      "sha256": "62a7b61c106cb8f0e86280a40603e7f88a1137540d4617b85d8c9f22ca5b689e",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-dark-detail.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "c223d4b8050202ca809eb4007585758542ae57025e9535cddf18212c830e5d40",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-dark-form.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "cffeb5f2fa6d2d9250682f58ba15493379295a713e4f93e45e43295526193643",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-dark-home.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "e0588423436ddefda95b1fd9f1cdc15139c1c9d89c546286a3f45c418777af49",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-dark-large320.png",
+      "engine": "webkit",
+      "width": 320,
+      "height": 568,
+      "sourceBuild": "p4-limits01",
+      "sha256": "d52b9b872851a7f31943ec99a7b3d2e8fc65b07487a5bd06d5831d81c4911226",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-dark-list-desktop.png",
+      "engine": "webkit",
+      "width": 1280,
+      "height": 900,
+      "sourceBuild": "p4-limits01",
+      "sha256": "e3e4f14f98f419aba3c9a97fd99854c08c4bed79d91490050288290d8e5e9cf2",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-dark-list.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "fc9ec73005184ba4750a7d106468592b5742de1210f7be1039a1644d094a322d",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-light-detail.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "6a74f4f04551180e684b9b7d135e5f77a3c162dcc8138aca5e45fb00706f490c",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-light-form.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "dca750146b300444af42aee78972f6099555b6e6411648b67494e7e6a2d681cc",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-light-home.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "dbcdc9ccf3499bd30af187e9d88ace993ca655367fdc1754487dc051fe70ff19",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-light-large320.png",
+      "engine": "webkit",
+      "width": 320,
+      "height": 568,
+      "sourceBuild": "p4-limits01",
+      "sha256": "42b43206ebdb7fecca58da89d77b8af645f504e57a07e9bcd9f16f07a8d0c52f",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-light-list-desktop.png",
+      "engine": "webkit",
+      "width": 1280,
+      "height": 900,
+      "sourceBuild": "p4-limits01",
+      "sha256": "8ea58bf5bfd8ce0cb8c8fa8360188c62d6a166676cd0fda7ec417c29195ef437",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-neutral-light-list.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "e4d9ab1f73e56b487a2a26c026847f11e5b4ae0bb3429995ccea0eff780d4a96",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-parent-detail.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "3e74f65d36deedb6635bb2695b070dc24efc786eea11cbe7e74f0815e09df5b3",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-parent80-child40.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "952e012d78cdbb92a552c34f2f4f1a8a66d649e2e52a2362af02d57673e93ef4",
+      "actualIPhone": false
+    },
+    {
+      "file": "screenshots/webkit-warning-settings.png",
+      "engine": "webkit",
+      "width": 390,
+      "height": 844,
+      "sourceBuild": "p4-limits01",
+      "sha256": "f4e5a46cf7851182820d7ce015a31112d5c481f433ba539570d6b2bfc65a52a3",
+      "actualIPhone": false
+    }
+  ]
+}

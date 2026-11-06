@@ -1,0 +1,411 @@
+{
+  "build": "p4-limits01",
+  "publicHTMLSHA256": "f6433dfbc732c6900cd499f8d6851401fcddc7baea8f104310f02d9afb0df4d1",
+  "allPassed": true,
+  "results": [
+    {
+      "name": "release-build",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 744
+    },
+    {
+      "name": "patch-unit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 60720
+    },
+    {
+      "name": "p4-precision-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 3124
+    },
+    {
+      "name": "p4-upgrade-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 6794
+    },
+    {
+      "name": "p4-limits-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 81496
+    },
+    {
+      "name": "p3-upgrade-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8093
+    },
+    {
+      "name": "p3-goals-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 84759
+    },
+    {
+      "name": "p2-upgrade-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5388
+    },
+    {
+      "name": "p2-debts-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 43830
+    },
+    {
+      "name": "p1-2-payments-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 35365
+    },
+    {
+      "name": "p1-1-payments-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 19519
+    },
+    {
+      "name": "a3-access-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 62427
+    },
+    {
+      "name": "a2-ui-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 12452
+    },
+    {
+      "name": "g1-notifications-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 20022
+    },
+    {
+      "name": "a2-reset-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 88786
+    },
+    {
+      "name": "g1-required-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18558
+    },
+    {
+      "name": "d1-note-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7904
+    },
+    {
+      "name": "c1-input-geometry-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 6945
+    },
+    {
+      "name": "p4-precision",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 2348
+    },
+    {
+      "name": "p4-limits",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 72369
+    },
+    {
+      "name": "p4-upgrade",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 6033
+    },
+    {
+      "name": "g1-theme-webkit",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 189806
+    },
+    {
+      "name": "p3-goals",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 69803
+    },
+    {
+      "name": "p3-upgrade",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 6273
+    },
+    {
+      "name": "p2-upgrade",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 4813
+    },
+    {
+      "name": "p1-2-payments",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 25851
+    },
+    {
+      "name": "p2-debts",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 31523
+    },
+    {
+      "name": "p1-1-payments",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 13952
+    },
+    {
+      "name": "a3-access",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 36893
+    },
+    {
+      "name": "a2-ui",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 11465
+    },
+    {
+      "name": "g1-notifications",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 15565
+    },
+    {
+      "name": "a2-reset",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 63400
+    },
+    {
+      "name": "g1-required",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 16731
+    },
+    {
+      "name": "d1-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5516
+    },
+    {
+      "name": "d1-home-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 46152
+    },
+    {
+      "name": "d1-interaction-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 40465
+    },
+    {
+      "name": "c1-input-geometry",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5949
+    },
+    {
+      "name": "c1-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7493
+    },
+    {
+      "name": "b12-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8339
+    },
+    {
+      "name": "b11-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7074
+    },
+    {
+      "name": "b1-period-sync-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 8932
+    },
+    {
+      "name": "b1-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5196
+    },
+    {
+      "name": "r30-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 2939
+    },
+    {
+      "name": "g1-theme",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 171358
+    },
+    {
+      "name": "credit-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 9000
+    },
+    {
+      "name": "edge-lifecycle-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 12514
+    },
+    {
+      "name": "notice-motion-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 12904
+    },
+    {
+      "name": "entryfix-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18603
+    },
+    {
+      "name": "combined-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 34959
+    },
+    {
+      "name": "security-lifecycle-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 5647
+    },
+    {
+      "name": "history-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18046
+    },
+    {
+      "name": "compact-scroll-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 11420
+    },
+    {
+      "name": "security-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 47206
+    },
+    {
+      "name": "feedback-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 19497
+    },
+    {
+      "name": "modality-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 9008
+    },
+    {
+      "name": "home-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 20581
+    },
+    {
+      "name": "layout-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 18924
+    },
+    {
+      "name": "revision-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 27612
+    },
+    {
+      "name": "control-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 27070
+    },
+    {
+      "name": "shell-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 38982
+    },
+    {
+      "name": "patch-navigation",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 11253
+    },
+    {
+      "name": "patch-lists",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 15550
+    },
+    {
+      "name": "patch-forms",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7954
+    },
+    {
+      "name": "unified-browser",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 75758
+    },
+    {
+      "name": "patch-upgrade",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 41291
+    },
+    {
+      "name": "patch-list-performance",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 7170
+    },
+    {
+      "name": "verify-delivery",
+      "code": 0,
+      "timedOut": false,
+      "milliseconds": 127
+    }
+  ],
+  "actualIPhone": false,
+  "published": false
+}

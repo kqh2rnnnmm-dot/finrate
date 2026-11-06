@@ -1,0 +1,13 @@
+{
+  "engine": "chromium",
+  "build": "p4-limits01",
+  "checks": [
+    "native maximum safe-integer imported rule/card/history preserve91 kopecks; readonly no-write and month-only UI edit exact in one generation"
+  ],
+  "failures": [],
+  "publicHTMLSHA256": "f6433dfbc732c6900cd499f8d6851401fcddc7baea8f104310f02d9afb0df4d1",
+  "actualIPhone": false,
+  "published": false,
+  "version": "153.0.8010.0",
+  "allPassed": true
+}
