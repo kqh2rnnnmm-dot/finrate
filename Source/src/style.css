@@ -1025,7 +1025,7 @@ input,textarea,[contenteditable=true],.full-note,.activity-comparison span {
 /* P5: local layout, existing tokens and surfaces; money keeps the shared presentation. */
 [data-forecast-ui].forecast-content { display:flex; flex-direction:column; gap:var(--group-gap); min-width:0; }
 [data-forecast-ui] .panel { margin:0; min-width:0; }
-[data-forecast-ui] .forecast-summary, [data-forecast-ui] .forecast-inputs { display:flex; flex-direction:column; gap:var(--peer-gap); min-width:0; }
+[data-forecast-ui] .forecast-summary, [data-forecast-ui] .forecast-inputs, [data-forecast-ui] .forecast-risk-panel { display:flex; flex-direction:column; gap:var(--peer-gap); min-width:0; }
 [data-forecast-ui] .forecast-list { display:flex; flex-direction:column; gap:var(--peer-gap); padding-top:var(--peer-gap); min-width:0; }
 [data-forecast-ui] .forecast-group-summary { display:grid; gap:var(--peer-gap); min-width:0; }
 [data-forecast-ui] .forecast-money { display:block; white-space:nowrap; max-width:100%; overflow-x:auto; overflow-wrap:normal; min-width:0; }
@@ -1033,3 +1033,4 @@ input,textarea,[contenteditable=true],.full-note,.activity-comparison span {
 [data-forecast-ui] .forecast-text { overflow-wrap:anywhere; }
 [data-forecast-ui] .forecast-progress { display:block; width:100%; height:.5rem; accent-color:var(--blue); }
 [data-forecast-ui] [hidden] { display:none !important; }
+[data-forecast-ui] .forecast-summary :is(h3,p,.card-amount) { margin:0; }
