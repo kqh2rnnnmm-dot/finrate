@@ -1,5 +1,6 @@
 # P4 — отчёт проверки
 
+[PR №13](https://github.com/kqh2rnnnmm-dot/finrate/pull/13) открыт для ревизии; не объединён и не опубликован. Исходный main не менялся.
 Статус: рабочая ветка `codex/p4-limits`, готово для ревизии, не слито/не опубликовано. База/main **eea169f4605a0afa155ab69c95a867ee39749fda**, повторный fetch не показал чужих изменений. Приложение **3f5cd7f465470fbbc3f4af0603a18774f64b0a64**, финальный тестовый комплект **fa79f19d4055cc670181ac1f1eb41025852213f5**. Сборка **p4-limits01 /0.3.14-p4**. Последующие документальные коммиты не меняют сборку; итоговый head — в PR/передаче владельцу.
 
 **Unit/integration: 491 PASS,0 FAIL,0 SKIP**, включая36 новых причинных P4-тестов и455 прежних. **Окончательный полный release-run:67/67 PASS,0 FAIL,0 SKIP**. [Unit TAP](../../Source/evidence/p4/unit-final.tap), [release JSON](../../Source/evidence/p4/release-run.json), [первичный console](../../Source/evidence/p4/final-release-console.log), [verify-delivery](../../Source/evidence/p4/final-delivery-verification.json), [архив текущих job-логов/metadata](../../Source/evidence/p4/archive-manifest.json). Это один завершённый финальный прогон для неизменённого конечного приложения; ранний частичный запуск отдельно и в67 не включён.
@@ -58,6 +59,6 @@ npm audit --json
 
 Native IndexedDB/put quota/CAS/rollback/поколения/повторный ID и независимые файловые restore выполнялись фактически. Для WebKit offline сервер отказывает HTTP; на финале принудительно доказан отказ update(/sw.js), не только декларация offline. Ожидаемый точный sw.js transport error допускается только в этой фазе; остальные pageerror дают FAIL. Это не аппаратный авиарежим.
 
-**Настоящий iPhone OPEN**, в том числе все отложенные A2/A3/P1.1/P1.2/P2/P3 и старый A2/WebKit PIN timeout. VoiceOver, нативные клавиатуры Safari/PWA, фактическое сохранение файла в «Файлах» — ручная приёмка. Успех WebKit/Linux не закрывает эти вопросы. GitHub Actions/CodeRabbit фиксируются отдельно; отсутствие workflow/пропуск проверки не являются PASS.
+**Настоящий iPhone OPEN**, в том числе все отложенные A2/A3/P1.1/P1.2/P2/P3 и старый A2/WebKit PIN timeout. VoiceOver, нативные клавиатуры Safari/PWA, фактическое сохранение файла в «Файлах» — ручная приёмка. Успех WebKit/Linux не закрывает эти вопросы. После открытия PR №13 API вернул пустые commit statuses и PR Actions runs ([наблюдение](../../Source/evidence/p4/github-observation.json)); это не PASS удалённого CI. CodeRabbit/пропуск проверки не считаются завершёнными тестами. merge_commit_sha в GitHub — предварительный merge preview, PR остаётся merged=false.
 
 [Снимки](SCREENSHOTS.md) · [iPhone](IPHONE_ACCEPTANCE.md) · [Открытые вопросы](OPEN_ITEMS.md). Логи предыдущих пакетов сохраняются в прежнем виде; текущие результаты архивируются под P4/regressions. В Git нет реальных финансовых данных, пользовательских файлов копий, паролей/recovery/DEK или дампов IndexedDB. Нет merge/deploy/изменений Pages/доменов/живой базы.
