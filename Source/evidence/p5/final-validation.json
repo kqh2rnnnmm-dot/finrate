@@ -1,0 +1,51 @@
+{
+  "base": "aad52c592c34858122844b5b439727318b9e4bcc",
+  "testedCode": "b83294201b0f44be3ca1f2db131d7c782a1ff50c",
+  "build": "p5-forecast01",
+  "version": "0.3.16-p5",
+  "publicHTMLSHA256": "537896673b6f49a4f8cc70d72c816f5bdfc17552860344c7fd99917941c2c528",
+  "release": {
+    "passed": 75,
+    "failed": 0,
+    "skipped": 0
+  },
+  "unit": {
+    "passed": 568,
+    "failed": 0,
+    "skipped": 0,
+    "newP5": 54
+  },
+  "p5Browser": {
+    "chromium": 18,
+    "webkit": 18,
+    "fullScope": true,
+    "sizesPerStyle": 7,
+    "styles": 4
+  },
+  "p5Upgrade": {
+    "chromium": 4,
+    "webkit": 4
+  },
+  "screenshots": 56,
+  "oldSourceFiles": 67,
+  "unchangedSourceFiles": 62,
+  "legacyTestFilesProtected": 114,
+  "schema": 5,
+  "backupFormat": "finrate-backup/1",
+  "newDocumentFields": 0,
+  "dataMigration": false,
+  "nativeNoWriteVerified": true,
+  "independentPasswordAndRecoveryRestore": true,
+  "npmAudit": {
+    "low": 3,
+    "moderate": 4,
+    "high": 0,
+    "critical": 0
+  },
+  "actualIPhone": false,
+  "historicalA2WebkitPinTimeout": "OPEN",
+  "merged": false,
+  "published": false,
+  "realUserDataTouched": false,
+  "appleGoogleCloudWork": false
+}

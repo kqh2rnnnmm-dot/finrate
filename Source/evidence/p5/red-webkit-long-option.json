@@ -1,0 +1,45 @@
+{
+  "engine": "webkit",
+  "build": "p5-forecast01",
+  "base": "aad52c592c34858122844b5b439727318b9e4bcc",
+  "checks": [],
+  "failures": [
+    "horizontal modal overflow"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "fullScope": false,
+  "selectedFixture": 7,
+  "version": "26.5",
+  "publicHTMLSHA256": "f0176e8ede24ef3ed313fe822fd1a23db8730612e46d24cda7e8abcf33f0285e",
+  "matrixSize": {
+    "theme": "light",
+    "palette": "neutral",
+    "width": 320,
+    "height": 568
+  },
+  "overflow": {
+    "width": 320,
+    "sheet": [
+      320,
+      320
+    ],
+    "body": [
+      320,
+      992
+    ],
+    "outside": []
+  },
+  "diagnostic": {
+    "title": "Отчёты",
+    "dialogs": [
+      "Что, если…"
+    ],
+    "error": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "allPassed": false
+}

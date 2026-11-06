@@ -1,3 +1,23 @@
+# P5 · карта адресных изменений · 06.11.2026
+
+[PR №15](https://github.com/kqh2rnnnmm-dot/finrate/pull/15) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
+`0.3.16-p5 /p5-forecast01`, отдельная ветка `codex/p5-full-forecast`; **не слито/не опубликовано, iPhone OPEN**.
+
+| Модуль | Роль |
+|---|---|
+| `Source/src/full-forecast.mjs` — новый | Pure selector поверх forecast/totals/P1/P2/P3/credit/incomes: устойчивые события, даты/счета, первое отрицательное состояние, неизвестность, однократное покрытие и RAM-сценарий |
+| `Source/src/forecast-ui.mjs` — новый | Existing sheet/details/cards, период/итог/риски, shared money/native dates/slider, source callbacks/Back, временный sensitive scenario |
+| `ui.mjs` / `planning-ui.mjs` | Только wiring Reports/источников/контекста Free/captureReturn/clear/bind; старые тела защищены baseline SHA |
+| `app.mjs` | Existing Reports view → forecast page, build label; persisted pageshow очищает RAM sensitive UI |
+| `style.css` / `help.mjs` | Только scoped P5 CSS и bounded FAQ; прежний контент SHA-защищён |
+| `tests/full-forecast*.test.mjs`, `forecast-fixture.mjs`, `forecast*-browser.mjs` | 54 unit/integration; native browser no-write/full visual/upgrade/restore/offline доказательства |
+| build/check-release/verify-delivery/package/lock | Метаданные/75 release jobs/P5 strict baseline/delivery; зависимости прежние |
+
+Прежние planning/model/dashboard/home-config/operations/credit/scheduled-payments/debts/goals/limits, reset/service/store/crypto/device-access/access-fields/session-policy/focus/surfaces/navigation/field-editor **не изменены**. Никакого нового root/settings/черновика, allowlist/reset/schema extension не потребовалось. [Аудит](P5/AUDIT.md) · [Тесты](P5/TEST_REPORT.md).
+
+---
+
 # ACCESS A · карта модулей после слияния · 06.11.2026
 
 [PR №14](https://github.com/kqh2rnnnmm-dot/finrate/pull/14) **слит в `main`**, merge `e3f4e8fe70caa9883e5336b1dadd613725493ec3`; текущая кодовая версия `0.3.15-access-a`. База до слияния `e7b3f631187b16b7b01fc49cb975968a2439f93c` сохранена в `backup/pre-access-a-main-2026-11-06`.

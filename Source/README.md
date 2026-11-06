@@ -1,3 +1,15 @@
+# P5 · полный прогноз · 0.3.16-p5 /p5-forecast01
+
+[PR №15](https://github.com/kqh2rnnnmm-dot/finrate/pull/15) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.
+
+`codex/p5-full-forecast` от `aad52c592c34858122844b5b439727318b9e4bcc`, **для ревизии, не слито/не опубликовано; iPhone OPEN**. Pure full-forecast + existing forecast-ui sheet, узкие hooks ui/app/planning-ui/FAQ/scoped CSS. Новый формат данных/миграция/зависимости не нужны.
+
+Из Source: `npm run build`, `npm run test:p5`, `npm run test:p5:browser`, `FINRATE_TEST_WEBKIT=1 node tools/check-release.mjs`, `node tools/verify-delivery.mjs`, `npm audit --json`. Точные browser env/версии/команды и первичные результаты — [P5/TEST_REPORT](../Documents/P5/TEST_REPORT.md). CASE — только диагностика, не полный run. Node24 использует `--test-isolation=none`.
+
+Семь публичных файлов dist==root, standalone — прежняя build-трансформация без manifest/icon links. Source fingerprint не допускает устаревшую сборку. 62 прежних src побайтно/5 только узкие hooks,114 прежних тестов без ослабления asserts. Финансовые ядра/SCHEMA5/backup1/crypto/store/ACCESS A прежние. [Риски](../Documents/P5/OPEN_ITEMS.md) · [iPhone](../Documents/P5/IPHONE_ACCEPTANCE.md). Apple/облако не входят и отложены бессрочно.
+
+---
+
 # ACCESS-after-P4 A · аварийный локальный сброс
 
 [PR №14](https://github.com/kqh2rnnnmm-dot/finrate/pull/14) **открыт, не слит**. Публикации нет; настоящий iPhone не проверен.

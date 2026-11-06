@@ -1,0 +1,2 @@
+FAIL first known risk must be readable in initial 390px view, without large empty inherited margins { title: 'Отчёты', dialogs: [ 'Прогноз' ], error: [ '' ] }     at async file:///workspace/finrate/Source/tests/forecast-browser.mjs:33:2
+{"checks":0,"failures":["first known risk must be readable in initial 390px view, without large empty inherited margins"]}

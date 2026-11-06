@@ -1,0 +1,23 @@
+PASS all five read-only horizons keep exact native IDB/backup bytes and current Home/free unchanged; dates show early account risk
+PASS payment/debt/credit/income/receivable/reserve/goal reuse actual existing cards and return to same horizon/disclosures without writes
+PASS contextual Forecast from Free returns to original calculation; view horizon never changes saved B1 mode
+PASS exact 12-digit kopecks survive slider sync, real field editor/date/account controls recompute immediately; close discards everything without draft/save
+PASS background/pagehide/persisted pageshow/field-editor interruption/lock/cold reload discard RAM scenario with no persisted change
+PASS post-simulation actual protected export independently restores exact complete document in another native browser profile
+PASS full 7-size matrix/exact amounts/shared editor/native date/Back/large text light/neutral; no horizontal page/modal overflow or writes (real VoiceOver/iOS keyboard OPEN)
+PASS full 7-size matrix/exact amounts/shared editor/native date/Back/large text light/color; no horizontal page/modal overflow or writes (real VoiceOver/iOS keyboard OPEN)
+PASS full 7-size matrix/exact amounts/shared editor/native date/Back/large text dark/neutral; no horizontal page/modal overflow or writes (real VoiceOver/iOS keyboard OPEN)
+PASS full 7-size matrix/exact amounts/shared editor/native date/Back/large text dark/color; no horizontal page/modal overflow or writes (real VoiceOver/iOS keyboard OPEN)
+PASS missing planning/goal top-up schema has honest empty states, no fake salary/contribution or auto-created extension
+INFO offline worker-active
+INFO offline warm-controlled-reload
+INFO offline cold-unavailable-origin-reload
+INFO offline offline-forecast-and-scenario
+INFO offline explicit-origin-connection-refusal
+PASS cached PWA cold reload/Forecast/What-if while the whole local origin refuses connections, real SW update refusal proved; encrypted database unchanged
+PASS native browser local-calendar horizon America/Los_Angeles has no UTC day drift
+PASS native browser local-calendar horizon Pacific/Kiritimati has no UTC day drift
+PASS native browser local-calendar horizon Europe/Moscow has no UTC day drift
+PASS unknown due date/credit purchase/missing repayment accounts show Need to clarify, never fake date/zero or unlimited all-mode simulation
+PASS Forecast→Free→Forecast reuses one existing view and preserves period/disclosures without recursive independent screens
+{"checks":17,"failures":[]}

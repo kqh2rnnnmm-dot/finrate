@@ -1,0 +1,164 @@
+TAP version 13
+# Subtest: P5 encrypted backup bytes, full document/totals/revision/events and all legacy forecasts remain exact
+not ok 1 - P5 encrypted backup bytes, full document/totals/revision/events and all legacy forecasts remain exact
+  ---
+  duration_ms: 21.06075
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/full-forecast-integration.test.mjs:7:1'
+  failureType: 'testCodeFailure'
+  error: 'PLANNING'
+  code: 'PLANNING'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    validatePlanningShape (file:///workspace/finrate/Source/src/planning.mjs:20:691)
+    saveIncome (file:///workspace/finrate/Source/src/planning.mjs:24:604)
+    income (file:///workspace/finrate/Source/tests/forecast-fixture.mjs:8:117)
+    fixture (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:4:165)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:7:114)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: P5 pure selector calls no crypto, derivation or key export
+not ok 2 - P5 pure selector calls no crypto, derivation or key export
+  ---
+  duration_ms: 5.452941
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/full-forecast-integration.test.mjs:8:1'
+  failureType: 'testCodeFailure'
+  error: 'PLANNING'
+  code: 'PLANNING'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    validatePlanningShape (file:///workspace/finrate/Source/src/planning.mjs:20:691)
+    saveIncome (file:///workspace/finrate/Source/src/planning.mjs:24:604)
+    income (file:///workspace/finrate/Source/tests/forecast-fixture.mjs:8:117)
+    fixture (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:4:165)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:8:71)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+  ...
+# Subtest: P5 backup independently restores exact P1-P4/ACCESS document and produces the same read-only forecast
+not ok 3 - P5 backup independently restores exact P1-P4/ACCESS document and produces the same read-only forecast
+  ---
+  duration_ms: 5.677242
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/full-forecast-integration.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: 'PLANNING'
+  code: 'PLANNING'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    validatePlanningShape (file:///workspace/finrate/Source/src/planning.mjs:20:691)
+    saveIncome (file:///workspace/finrate/Source/src/planning.mjs:24:604)
+    income (file:///workspace/finrate/Source/tests/forecast-fixture.mjs:8:117)
+    fixture (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:4:165)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:9:114)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+  ...
+# Subtest: P5 does not add extensions or disturb A2 financial reset/restore
+not ok 4 - P5 does not add extensions or disturb A2 financial reset/restore
+  ---
+  duration_ms: 3.753648
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/full-forecast-integration.test.mjs:10:52'
+  failureType: 'testCodeFailure'
+  error: 'PLANNING'
+  code: 'PLANNING'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    validatePlanningShape (file:///workspace/finrate/Source/src/planning.mjs:20:691)
+    saveIncome (file:///workspace/finrate/Source/src/planning.mjs:24:604)
+    income (file:///workspace/finrate/Source/tests/forecast-fixture.mjs:8:117)
+    fixture (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:4:165)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:10:127)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+  ...
+# Subtest: P5 does not add extensions or disturb A2 categories reset/restore
+not ok 5 - P5 does not add extensions or disturb A2 categories reset/restore
+  ---
+  duration_ms: 3.868668
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/full-forecast-integration.test.mjs:10:52'
+  failureType: 'testCodeFailure'
+  error: 'PLANNING'
+  code: 'PLANNING'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    validatePlanningShape (file:///workspace/finrate/Source/src/planning.mjs:20:691)
+    saveIncome (file:///workspace/finrate/Source/src/planning.mjs:24:604)
+    income (file:///workspace/finrate/Source/tests/forecast-fixture.mjs:8:117)
+    fixture (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:4:165)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:10:127)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+  ...
+# Subtest: P5 does not add extensions or disturb A2 all reset/restore
+not ok 6 - P5 does not add extensions or disturb A2 all reset/restore
+  ---
+  duration_ms: 3.692018
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/full-forecast-integration.test.mjs:10:52'
+  failureType: 'testCodeFailure'
+  error: 'PLANNING'
+  code: 'PLANNING'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    validatePlanningShape (file:///workspace/finrate/Source/src/planning.mjs:20:691)
+    saveIncome (file:///workspace/finrate/Source/src/planning.mjs:24:604)
+    income (file:///workspace/finrate/Source/tests/forecast-fixture.mjs:8:117)
+    fixture (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:4:165)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:10:127)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+  ...
+# Subtest: P5 read-only view preserves A3 password/PIN and locked ACCESS A export/reset with no forgotten secret
+not ok 7 - P5 read-only view preserves A3 password/PIN and locked ACCESS A export/reset with no forgotten secret
+  ---
+  duration_ms: 6.203131
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/full-forecast-integration.test.mjs:11:1'
+  failureType: 'testCodeFailure'
+  error: 'PLANNING'
+  code: 'PLANNING'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    validatePlanningShape (file:///workspace/finrate/Source/src/planning.mjs:20:691)
+    saveIncome (file:///workspace/finrate/Source/src/planning.mjs:24:604)
+    income (file:///workspace/finrate/Source/tests/forecast-fixture.mjs:8:117)
+    fixture (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:4:165)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/full-forecast-integration.test.mjs:11:114)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+  ...
+1..7
+# tests 7
+# suites 0
+# pass 0
+# fail 7
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 126.360829

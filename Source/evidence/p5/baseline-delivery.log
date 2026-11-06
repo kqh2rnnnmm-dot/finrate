@@ -1,0 +1,20 @@
+node:internal/modules/run_main:107
+    triggerUncaughtException(
+    ^
+
+AssertionError [ERR_ASSERTION]: future Apple plan unchanged
++ actual - expected
+
++ '43b5f9eb010f92c4d365702a49938d7b00d9f407fee6ee672fc11fd3170eb579'
+- 'ae5ca0a5b2c84c52c3cc4099c4cdcf4e8b4e3572166bb6c637f22eeab3effc61'
+
+    at file:///workspace/finrate/Source/tools/verify-delivery.mjs:14:168 {
+  generatedMessage: false,
+  code: 'ERR_ASSERTION',
+  actual: '43b5f9eb010f92c4d365702a49938d7b00d9f407fee6ee672fc11fd3170eb579',
+  expected: 'ae5ca0a5b2c84c52c3cc4099c4cdcf4e8b4e3572166bb6c637f22eeab3effc61',
+  operator: 'strictEqual',
+  diff: 'simple'
+}
+
+Node.js v24.19.0

@@ -1,0 +1,26 @@
+{
+  "engine": "webkit",
+  "build": "p5-forecast01",
+  "base": "aad52c592c34858122844b5b439727318b9e4bcc",
+  "checks": [],
+  "failures": [
+    "page.reload: WebKit encountered an internal error\nCall log:\n\u001b[2m  - waiting for navigation until \"load\"\u001b[22m\n"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "fullScope": false,
+  "selectedFixture": 12,
+  "version": "26.5",
+  "publicHTMLSHA256": "864325bd313f80caf8cbfdf4ba7dc6ea5cfc7ef958acd29dcbb386578c631a14",
+  "offlineInitialWorker": {
+    "registered": true,
+    "active": "activated",
+    "controller": false
+  },
+  "offlinePhase": "cold-offline-reload",
+  "diagnostic": {
+    "dialogs": [],
+    "error": []
+  },
+  "allPassed": false
+}

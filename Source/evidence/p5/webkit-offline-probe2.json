@@ -1,0 +1,32 @@
+{
+  "engine": "webkit",
+  "build": "p5-forecast01",
+  "base": "aad52c592c34858122844b5b439727318b9e4bcc",
+  "checks": [],
+  "failures": [
+    "offline phase timeout: explicit-http503-update"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "fullScope": false,
+  "selectedFixture": 12,
+  "version": "26.5",
+  "publicHTMLSHA256": "864325bd313f80caf8cbfdf4ba7dc6ea5cfc7ef958acd29dcbb386578c631a14",
+  "offlineInitialWorker": {
+    "registered": true,
+    "active": "activated",
+    "controller": false
+  },
+  "offlinePhase": "explicit-http503-update",
+  "offlineControlled": true,
+  "diagnostic": {
+    "title": "Отчёты",
+    "dialogs": [
+      "Прогноз"
+    ],
+    "error": [
+      ""
+    ]
+  },
+  "allPassed": false
+}

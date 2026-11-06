@@ -1,0 +1,2 @@
+PASS Forecast→Free→Forecast reuses one existing view and preserves period/disclosures without recursive independent screens
+{"checks":1,"failures":[]}

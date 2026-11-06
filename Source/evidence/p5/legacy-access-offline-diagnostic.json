@@ -1,0 +1,16 @@
+{
+  "engine": "webkit",
+  "build": "p5-forecast01",
+  "baseline": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "checks": [
+    "cold offline PWA shell supports explicit reset/new first launch; SW update HTTP failure proved; network return never restores deleted data"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "publicHTMLSHA256": "864325bd313f80caf8cbfdf4ba7dc6ea5cfc7ef958acd29dcbb386578c631a14",
+  "selectedFixture": 26,
+  "fullScope": false,
+  "version": "26.5",
+  "allPassed": true
+}

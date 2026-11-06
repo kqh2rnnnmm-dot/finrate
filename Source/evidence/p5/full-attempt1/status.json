@@ -1,0 +1,8 @@
+{
+  "code": "ae751d86358d14311a1b3f038b6c1e9ac8d0ed40",
+  "completedFullRun": false,
+  "allPassed": false,
+  "unitPassed": 568,
+  "unitFailed": 0,
+  "reason": "WebKit horizontal modal overflow with long option name at narrow viewport. Interrupted for causal RED and local geometry fix; complete rerun required."
+}

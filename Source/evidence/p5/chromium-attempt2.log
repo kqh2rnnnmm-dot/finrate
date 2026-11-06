@@ -1,0 +1,9 @@
+PASS all five read-only horizons keep exact native IDB/backup bytes and current Home/free unchanged; dates show early account risk
+PASS payment/debt/credit/income/receivable/reserve/goal reuse actual existing cards and return to same horizon/disclosures without writes
+PASS contextual Forecast from Free returns to original calculation; view horizon never changes saved B1 mode
+PASS exact 12-digit kopecks survive slider sync, real field editor/date/account controls recompute immediately; close discards everything without draft/save
+FAIL locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('.overview') to be visible[22m
+ { title: 'Отчёты', dialogs: [], error: [] }     at async file:///workspace/finrate/Source/tests/forecast-browser.mjs:25:2
+{"checks":4,"failures":["locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.overview') to be visible\u001b[22m\n"]}

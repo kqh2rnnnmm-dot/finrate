@@ -1,0 +1,28 @@
+{
+  "engine": "chromium",
+  "baseline": "3add5d9c1bf4fe74c46f2609884d8527682aa9e4",
+  "build": "p5-forecast01",
+  "checks": [
+    "actual P2→P3 user-approved SW update; exact vault/generation unchanged, optional root absent, no forced migration",
+    "first goal creation one atomic generation; existing P2 debts, payments and operations unchanged",
+    "actual P2 can retain P3 extension but ignores reserve in free amount: confirmed unsafe backward runtime; pre-P3 external copy required",
+    "independent P3 native-file restore of actual P2 exported backup equals entire original document"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "oldBackup": {
+    "generatedBy": "actual main P2 public build",
+    "format": "finrate-backup/1",
+    "sha256": "400a8f2d33e00fba68d42669f3249073c06cc06e48ff6f65c779a99030f2586a",
+    "committed": false
+  },
+  "rollback": {
+    "tested": true,
+    "oldRuntime": "P2",
+    "extensionRetained": true,
+    "reservesIgnored": true,
+    "safe": false
+  },
+  "allPassed": true
+}

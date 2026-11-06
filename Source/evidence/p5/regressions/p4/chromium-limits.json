@@ -1,0 +1,30 @@
+{
+  "engine": "chromium",
+  "build": "p5-forecast01",
+  "publicHTMLSHA256": "537896673b6f49a4f8cc70d72c816f5bdfc17552860344c7fd99917941c2c528",
+  "checks": [
+    "real P3 document opens/read only, empty route/metric no invented sums, no auto-write or sixth tab",
+    "parent6000+child3000-refund1000=8000, child2000; rules preserve cash/free and no historical warning on creation",
+    "over-limit purchase saved as one normal expense, one actual1000 excess notice; readonly/month/reload do not repeat notices",
+    "explicit other-month1234.56 no carryover, metadata edits no movement/old warnings; duplicate active scope safe refusal",
+    "79/80/81/100/101 UI states, native quota no warning/no fact, explicit retry and double tap single commit/notice",
+    "Settings→Limits→Warnings90 immediate; early off preserves exceeded cards/notices; global financial permission suppresses optional toast",
+    "standard dirty guard saves incomplete month intent, draft name/resume/atomic consume no expense or premature rule",
+    "archive/history/current facts retained, scoped search opens same historical card, no movement",
+    "keyboard Enter/readable progress semantics, shared context menu/Escape, Back restores list scroll and readonly has no write (VoiceOver hardware OPEN)",
+    "P3 actual reserve expense once/free invariant, P1.2 confirmed payment once, P2 repayment principal excluded",
+    "real credit-card purchase counted by expense fact, unused credit never income/free cash",
+    "existing operation card date/amount edit moves monthly contribution, cancel keeps canonical audit and no stale limit counter",
+    "native second-window CAS rejects stale limit edit without partial writes, reload retains winner",
+    "7 sizes×4 theme/palette limits/details/forms/Home, long names, exact12digit money, 320 large text, fixed Home and no horizontal overflow; real screenshots",
+    "all3 Home styles×1–6 tiles keep fixed shell, true priority counts and tap current-month route",
+    "real protected P4 download and independent native UI restore exact document/rules/settings/history/financial facts",
+    "3 isolated native A2 modes/counters, password/PIN/recovery, repeated request no-op and exact independent restore; UI DB not reset",
+    "cold offline shell+unlock exact persisted data; no historical warnings; controlled HTTP/SW update refusal proved (not actual iPhone airplane mode)"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "version": "153.0.8010.0",
+  "allPassed": true
+}

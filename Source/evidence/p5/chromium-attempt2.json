@@ -1,0 +1,26 @@
+{
+  "engine": "chromium",
+  "build": "p5-forecast01",
+  "base": "aad52c592c34858122844b5b439727318b9e4bcc",
+  "checks": [
+    "all five read-only horizons keep exact native IDB/backup bytes and current Home/free unchanged; dates show early account risk",
+    "payment/debt/credit/income/receivable/reserve/goal reuse actual existing cards and return to same horizon/disclosures without writes",
+    "contextual Forecast from Free returns to original calculation; view horizon never changes saved B1 mode",
+    "exact 12-digit kopecks survive slider sync, real field editor/date/account controls recompute immediately; close discards everything without draft/save"
+  ],
+  "failures": [
+    "locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.overview') to be visible\u001b[22m\n"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "fullScope": true,
+  "selectedFixture": null,
+  "version": "153.0.8010.0",
+  "publicHTMLSHA256": "8c74c1afd9bfe5fc6c3b8bc37f4580bdda9a4f30d58ead6825381a6af4444aed",
+  "diagnostic": {
+    "title": "Отчёты",
+    "dialogs": [],
+    "error": []
+  },
+  "allPassed": false
+}

@@ -1,0 +1,5 @@
+FAIL contextual loop must reuse the existing Forecast, not create a second independent screen
+
+2 !== 1
+ { title: 'Отчёты', dialogs: [ 'Прогноз' ], error: [ '', '', '' ] }     at async file:///workspace/finrate/Source/tests/forecast-browser.mjs:32:2
+{"checks":0,"failures":["contextual loop must reuse the existing Forecast, not create a second independent screen\n\n2 !== 1\n"]}

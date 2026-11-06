@@ -17,7 +17,7 @@ const {count,size,warnings}=await injectManifest({swSrc:'dist/sw-base.js',swDest
 const {unlink}=await import('node:fs/promises');await unlink('dist/sw-base.js');if(warnings.length)throw new Error(warnings.join('\n'));
 const inputFiles=[...(await readdir('src')).sort().map(name=>'src/'+name),'package.json','package-lock.json','tools/build.mjs'],sourceInputs={};
 for(const file of inputFiles)sourceInputs[file]=createHash('sha256').update(await readFile(file)).digest('hex');
-await writeFile('evidence/build.json',JSON.stringify({build:'access-emergency-reset01',version:JSON.parse(await readFile('package.json','utf8')).version,sourceInputs,publicHTMLSHA256:createHash('sha256').update(html).digest('hex'),shellFiles:count,shellBytes:size,scriptHash:hash,externalRuntimeDependencies:0,published:false,warnings},null,2));
+await writeFile('evidence/build.json',JSON.stringify({build:'p5-forecast01',version:JSON.parse(await readFile('package.json','utf8')).version,sourceInputs,publicHTMLSHA256:createHash('sha256').update(html).digest('hex'),shellFiles:count,shellBytes:size,scriptHash:hash,externalRuntimeDependencies:0,published:false,warnings},null,2));
 console.log('Build OK:',count,'precache assets;',html.length,'HTML characters; unpublished.');
 
 for(const name of ['index.html','sw.js','manifest.webmanifest','icon.svg','icon-192.png','icon-512.png','apple-touch-icon.png'])await copyFile('dist/'+name,'../'+name);

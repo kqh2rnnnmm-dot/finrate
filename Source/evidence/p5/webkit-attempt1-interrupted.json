@@ -1,0 +1,7 @@
+{
+  "completedFullRun": false,
+  "allPassed": false,
+  "completedGroups": 11,
+  "reason": "Offline group awaiting an unresolved browser promise; interrupted for phased diagnostics and bounded test waits. Not PASS.",
+  "ownedProcesses": 6
+}

@@ -1,0 +1,148 @@
+{
+  "engine": "chromium",
+  "checks": [
+    "light/neutral/financial: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "light/neutral/categories: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "light/neutral/all: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "light/color/financial: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "light/color/categories: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "light/color/all: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/neutral/financial: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/neutral/categories: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/neutral/all: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/color/financial: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/color/categories: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "dark/color/all: cancel, actual file, confirmation, cross-tab lock, atomic cleanup, PIN and independent restore (light/neutral offline)",
+    "exact 8MiB plaintext: encrypt, export and reopen in chromium"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "externalFileVerified": true,
+  "files": [
+    {
+      "case": "light/neutral/financial",
+      "sha256": "3a8059d4afaa08edc697cce1ea5e1ddd093a380e0d7e967f0990682b7f12e061",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/neutral/categories",
+      "sha256": "bec13987b79903674e34d6f95e1093422919716054834a39f415facde133f48a",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/neutral/all",
+      "sha256": "6938fbaf0b0434f18743a0fcdf83177f25d36f89332e963da9bec45db760b201",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/color/financial",
+      "sha256": "010031d1e83d5551e07b571fbf23115479ad7748a56ae40ddf9aaeefc906c10f",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/color/categories",
+      "sha256": "ff3b72ad15410e24092fee7ee704b8767143e0ecd5ae715cb903f5f2804cbc91",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "light/color/all",
+      "sha256": "af8b3e36d16fcc3d57ad284cd52a0bae0687d24406543b971910bbd270820407",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "password"
+    },
+    {
+      "case": "dark/neutral/financial",
+      "sha256": "9fd88f6bf944b13193b3dd7e42b277bbd1e025e004c94604ebfc8fe4046eabf2",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    },
+    {
+      "case": "dark/neutral/categories",
+      "sha256": "b31b7c9d0ef1c88f9d671a2e12c6360984a73be3fab5da4cb7301406f2e72418",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    },
+    {
+      "case": "dark/neutral/all",
+      "sha256": "eafc906f3cf33be5d84555625415c605b16743e20fdc1be9a950a66091c3228d",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    },
+    {
+      "case": "dark/color/financial",
+      "sha256": "9d7e33ba5d15e3771e9ae50b294345a1dd590ae2d0488ea40df7c5921f348566",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    },
+    {
+      "case": "dark/color/categories",
+      "sha256": "f0827f70d50f6b4569f7a3c366784f77156cc65cc196dea91d536aa7d5346e71",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    },
+    {
+      "case": "dark/color/all",
+      "sha256": "58417ee76c4d5a6bebb31daffbd3cf91803bbae14e6012725b7196d09bdc5e7d",
+      "routes": [
+        "password",
+        "recovery"
+      ],
+      "fullDocumentEqual": true,
+      "uiRoute": "recovery"
+    }
+  ],
+  "version": "153.0.8010.0",
+  "layoutChecks": 168,
+  "offlineModel": "Chromium context.setOffline(true), native File input",
+  "nativePartialQuotaRollback": true
+}

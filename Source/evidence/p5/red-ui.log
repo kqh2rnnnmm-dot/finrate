@@ -1,0 +1,5 @@
+FAIL existing Reports tab needs a real forecast entry
+
+0 !== 1
+
+{"checks":0,"failures":["existing Reports tab needs a real forecast entry\n\n0 !== 1\n"]}

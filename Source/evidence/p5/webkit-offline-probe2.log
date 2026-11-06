@@ -1,0 +1,8 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+INFO offline worker-active
+INFO offline warm-controlled-reload
+INFO offline cold-unavailable-origin-reload
+INFO offline offline-forecast-and-scenario
+INFO offline explicit-http503-update
+FAIL offline phase timeout: explicit-http503-update { title: 'Отчёты', dialogs: [ 'Прогноз' ], error: [ '' ] }     at process.processTimers (node:internal/timers:571:7)
+{"checks":0,"failures":["offline phase timeout: explicit-http503-update"]}

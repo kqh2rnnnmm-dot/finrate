@@ -1,0 +1,9 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+PASS all five read-only horizons keep exact native IDB/backup bytes and current Home/free unchanged; dates show early account risk
+PASS payment/debt/credit/income/receivable/reserve/goal reuse actual existing cards and return to same horizon/disclosures without writes
+PASS contextual Forecast from Free returns to original calculation; view horizon never changes saved B1 mode
+PASS exact 12-digit kopecks survive slider sync, real field editor/date/account controls recompute immediately; close discards everything without draft/save
+PASS background/pagehide/persisted pageshow/field-editor interruption/lock/cold reload discard RAM scenario with no persisted change
+PASS post-simulation actual protected export independently restores exact complete document in another native browser profile
+FAIL horizontal modal overflow { title: 'Отчёты', dialogs: [ 'Что, если…' ], error: [ '', '', '' ] }     at async file:///workspace/finrate/Source/tests/forecast-browser.mjs:27:79
+{"checks":6,"failures":["horizontal modal overflow"]}

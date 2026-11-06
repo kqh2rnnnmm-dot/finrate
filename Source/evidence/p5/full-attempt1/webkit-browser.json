@@ -1,0 +1,34 @@
+{
+  "engine": "webkit",
+  "build": "p5-forecast01",
+  "base": "aad52c592c34858122844b5b439727318b9e4bcc",
+  "checks": [
+    "all five read-only horizons keep exact native IDB/backup bytes and current Home/free unchanged; dates show early account risk",
+    "payment/debt/credit/income/receivable/reserve/goal reuse actual existing cards and return to same horizon/disclosures without writes",
+    "contextual Forecast from Free returns to original calculation; view horizon never changes saved B1 mode",
+    "exact 12-digit kopecks survive slider sync, real field editor/date/account controls recompute immediately; close discards everything without draft/save",
+    "background/pagehide/persisted pageshow/field-editor interruption/lock/cold reload discard RAM scenario with no persisted change",
+    "post-simulation actual protected export independently restores exact complete document in another native browser profile"
+  ],
+  "failures": [
+    "horizontal modal overflow"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "fullScope": true,
+  "selectedFixture": null,
+  "version": "26.5",
+  "publicHTMLSHA256": "f0176e8ede24ef3ed313fe822fd1a23db8730612e46d24cda7e8abcf33f0285e",
+  "diagnostic": {
+    "title": "Отчёты",
+    "dialogs": [
+      "Что, если…"
+    ],
+    "error": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "allPassed": false
+}

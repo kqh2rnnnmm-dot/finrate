@@ -1,0 +1,514 @@
+TAP version 13
+# Subtest: period migration: fresh
+ok 1 - period migration: fresh
+  ---
+  duration_ms: 7.662016
+  type: 'test'
+  ...
+# Subtest: period migration: legacy conflict
+ok 2 - period migration: legacy conflict
+  ---
+  duration_ms: 0.837724
+  type: 'test'
+  ...
+# Subtest: period migration: legacy settings only
+ok 3 - period migration: legacy settings only
+  ---
+  duration_ms: 0.596248
+  type: 'test'
+  ...
+# Subtest: period migration: legacy null home
+ok 4 - period migration: legacy null home
+  ---
+  duration_ms: 0.432678
+  type: 'test'
+  ...
+# Subtest: period migration: legacy absent both
+ok 5 - period migration: legacy absent both
+  ---
+  duration_ms: 0.491704
+  type: 'test'
+  ...
+# Subtest: period migration: canonical beats obsolete
+ok 6 - period migration: canonical beats obsolete
+  ---
+  duration_ms: 0.383805
+  type: 'test'
+  ...
+# Subtest: absent planning and actual setup both start in current month
+ok 7 - absent planning and actual setup both start in current month
+  ---
+  duration_ms: 174.38026
+  type: 'test'
+  ...
+# Subtest: switching all five modes uses unchanged formula results and changes only preference
+ok 8 - switching all five modes uses unchanged formula results and changes only preference
+  ---
+  duration_ms: 11.994188
+  type: 'test'
+  ...
+# Subtest: migration and encrypted reopen preserve unrelated settings and operations; failed write preserves mode
+ok 9 - migration and encrypted reopen preserve unrelated settings and operations; failed write preserves mode
+  ---
+  duration_ms: 1354.335059
+  type: 'test'
+  ...
+# Subtest: B1 five horizons use current and following calendar months, negative all-debts preserved
+ok 10 - B1 five horizons use current and following calendar months, negative all-debts preserved
+  ---
+  duration_ms: 0.942388
+  type: 'test'
+  ...
+# Subtest: B1 partial income replaces expectation, never duplicates cash
+ok 11 - B1 partial income replaces expectation, never duplicates cash
+  ---
+  duration_ms: 2.163107
+  type: 'test'
+  ...
+# Subtest: B1 linking pre-existing income, overreceipt and explicit remainder closure
+ok 12 - B1 linking pre-existing income, overreceipt and explicit remainder closure
+  ---
+  duration_ms: 0.941516
+  type: 'test'
+  ...
+# Subtest: B1 monthly 31 clamps in February and generator is idempotent
+ok 13 - B1 monthly 31 clamps in February and generator is idempotent
+  ---
+  duration_ms: 0.178012
+  type: 'test'
+  ...
+# Subtest: B1 cash shortfall precedes positive endpoint and overdue obligations stay
+ok 14 - B1 cash shortfall precedes positive endpoint and overdue obligations stay
+  ---
+  duration_ms: 0.1761
+  type: 'test'
+  ...
+# Subtest: B1 reserves are individual and linked coverage is capped; no future services in all-debts
+ok 15 - B1 reserves are individual and linked coverage is capped; no future services in all-debts
+  ---
+  duration_ms: 0.317758
+  type: 'test'
+  ...
+# Subtest: B1 shared selected mode switching writes no operation
+ok 16 - B1 shared selected mode switching writes no operation
+  ---
+  duration_ms: 0.158594
+  type: 'test'
+  ...
+# Subtest: B1 explicit reschedule and skip change expectation only
+ok 17 - B1 explicit reschedule and skip change expectation only
+  ---
+  duration_ms: 0.361412
+  type: 'test'
+  ...
+# Subtest: B1 split salary generates only advance and remainder, never a third full salary
+ok 18 - B1 split salary generates only advance and remainder, never a third full salary
+  ---
+  duration_ms: 0.394792
+  type: 'test'
+  ...
+# Subtest: B1 final partial settlement closes expectation, cancellation reopens it without affecting other receipts
+ok 19 - B1 final partial settlement closes expectation, cancellation reopens it without affecting other receipts
+  ---
+  duration_ms: 0.605211
+  type: 'test'
+  ...
+# Subtest: B1.1 no pre-creation paydays; current-month excludes expectation; two months includes Oct25 Nov10 Nov25
+ok 20 - B1.1 no pre-creation paydays; current-month excludes expectation; two months includes Oct25 Nov10 Nov25
+  ---
+  duration_ms: 1.341707
+  type: 'test'
+  ...
+# Subtest: B1.1 daily weekly monthly yearly are stable, bounded and leap/month-end safe
+ok 21 - B1.1 daily weekly monthly yearly are stable, bounded and leap/month-end safe
+  ---
+  duration_ms: 4.759752
+  type: 'test'
+  ...
+# Subtest: B1.1 schedule revisions retain old expected date/amount and posted identities; no backfill after edits
+ok 22 - B1.1 schedule revisions retain old expected date/amount and posted identities; no backfill after edits
+  ---
+  duration_ms: 0.606023
+  type: 'test'
+  ...
+# Subtest: B1.1 exact/over receipt close once; unrelated incomes are never auto-linked
+ok 23 - B1.1 exact/over receipt close once; unrelated incomes are never auto-linked
+  ---
+  duration_ms: 2.085873
+  type: 'test'
+  ...
+# Subtest: B1.1 short payment may keep remainder or close it, cancellation reopens; expectation replaces fact
+ok 24 - B1.1 short payment may keep remainder or close it, cancellation reopens; expectation replaces fact
+  ---
+  duration_ms: 2.248132
+  type: 'test'
+  ...
+# Subtest: B1.1 skipping one due occurrence does not post money or stop future recurrence; archive preserves backlog
+ok 25 - B1.1 skipping one due occurrence does not post money or stop future recurrence; archive preserves backlog
+  ---
+  duration_ms: 1.129324
+  type: 'test'
+  ...
+# Subtest: B1.1 invalid saves and future receipt cannot mutate document
+ok 26 - B1.1 invalid saves and future receipt cannot mutate document
+  ---
+  duration_ms: 0.409543
+  type: 'test'
+  ...
+# Subtest: B1.1 encrypted reopen retains revisions, partial receipt, comment and internal history
+ok 27 - B1.1 encrypted reopen retains revisions, partial receipt, comment and internal history
+  ---
+  duration_ms: 303.544415
+  type: 'test'
+  ...
+# Subtest: B1.2 duplication has no history, identities or financial side effects until explicit save
+ok 28 - B1.2 duplication has no history, identities or financial side effects until explicit save
+  ---
+  duration_ms: 1.182072
+  type: 'test'
+  ...
+# Subtest: B1.2 archive preserves backlog, restoration excludes gap and keeps original history
+ok 29 - B1.2 archive preserves backlog, restoration excludes gap and keeps original history
+  ---
+  duration_ms: 2.833074
+  type: 'test'
+  ...
+# Subtest: B1.2 delete is a tombstone preserving facts/links; pending choice affects only selected plan
+ok 30 - B1.2 delete is a tombstone preserving facts/links; pending choice affects only selected plan
+  ---
+  duration_ms: 10.240976
+  type: 'test'
+  ...
+# Subtest: P5 encrypted backup bytes, full document/totals/revision/events and all legacy forecasts remain exact
+ok 31 - P5 encrypted backup bytes, full document/totals/revision/events and all legacy forecasts remain exact
+  ---
+  duration_ms: 475.991578
+  type: 'test'
+  ...
+# Subtest: P5 pure selector calls no crypto, derivation or key export
+ok 32 - P5 pure selector calls no crypto, derivation or key export
+  ---
+  duration_ms: 454.77456
+  type: 'test'
+  ...
+# Subtest: P5 backup independently restores exact P1-P4/ACCESS document and produces the same read-only forecast
+ok 33 - P5 backup independently restores exact P1-P4/ACCESS document and produces the same read-only forecast
+  ---
+  duration_ms: 651.340013
+  type: 'test'
+  ...
+# Subtest: P5 does not add extensions or disturb A2 financial reset/restore
+ok 34 - P5 does not add extensions or disturb A2 financial reset/restore
+  ---
+  duration_ms: 720.002217
+  type: 'test'
+  ...
+# Subtest: P5 does not add extensions or disturb A2 categories reset/restore
+ok 35 - P5 does not add extensions or disturb A2 categories reset/restore
+  ---
+  duration_ms: 672.634215
+  type: 'test'
+  ...
+# Subtest: P5 does not add extensions or disturb A2 all reset/restore
+ok 36 - P5 does not add extensions or disturb A2 all reset/restore
+  ---
+  duration_ms: 753.354494
+  type: 'test'
+  ...
+# Subtest: P5 read-only view preserves A3 password/PIN and locked ACCESS A export/reset with no forgotten secret
+ok 37 - P5 read-only view preserves A3 password/PIN and locked ACCESS A export/reset with no forgotten secret
+  ---
+  duration_ms: 1009.621954
+  type: 'test'
+  ...
+# Subtest: P5 absent planning opens without creating an extension, fictional income or writes
+ok 38 - P5 absent planning opens without creating an extension, fictional income or writes
+  ---
+  duration_ms: 0.875379
+  type: 'test'
+  ...
+# Subtest: P5 current-month expected income is projection only; legacy month free unchanged
+ok 39 - P5 current-month expected income is projection only; legacy month free unchanged
+  ---
+  duration_ms: 0.493848
+  type: 'test'
+  ...
+# Subtest: P5 first cash gap appears before salary despite a positive endpoint
+ok 40 - P5 first cash gap appears before salary despite a positive endpoint
+  ---
+  duration_ms: 0.741022
+  type: 'test'
+  ...
+# Subtest: P5 enough total money on B does not silently fund expense on A
+ok 41 - P5 enough total money on B does not silently fund expense on A
+  ---
+  duration_ms: 0.489992
+  type: 'test'
+  ...
+# Subtest: P5 same-day incoming/outgoing has uncertain order, not a guaranteed optimistic path
+ok 42 - P5 same-day incoming/outgoing has uncertain order, not a guaranteed optimistic path
+  ---
+  duration_ms: 0.53628
+  type: 'test'
+  ...
+# Subtest: P5 reports first date of shortage, not the later date of deepest deficit
+ok 43 - P5 reports first date of shortage, not the later date of deepest deficit
+  ---
+  duration_ms: 0.718399
+  type: 'test'
+  ...
+# Subtest: P5 overdue partial obligation and explicitly linked reserve are counted once
+ok 44 - P5 overdue partial obligation and explicitly linked reserve are counted once
+  ---
+  duration_ms: 1.629991
+  type: 'test'
+  ...
+# Subtest: P5 unrelated reserve remains excluded after an actual forecast payout
+ok 45 - P5 unrelated reserve remains excluded after an actual forecast payout
+  ---
+  duration_ms: 0.729935
+  type: 'test'
+  ...
+# Subtest: P5 changed payment account invalidates reserve coverage instead of moving funds
+ok 46 - P5 changed payment account invalidates reserve coverage instead of moving funds
+  ---
+  duration_ms: 0.925123
+  type: 'test'
+  ...
+# Subtest: P5 personal principal paid/received is not duplicated as ordinary expense/income
+ok 47 - P5 personal principal paid/received is not duplicated as ordinary expense/income
+  ---
+  duration_ms: 1.338612
+  type: 'test'
+  ...
+# Subtest: P5 an undated personal debt is not assigned today or a guessed repayment account
+ok 48 - P5 an undated personal debt is not assigned today or a guessed repayment account
+  ---
+  duration_ms: 0.562309
+  type: 'test'
+  ...
+# Subtest: P5 dated debt-linked reserve covers principal once but does not invent repayment account
+ok 49 - P5 dated debt-linked reserve covers principal once but does not invent repayment account
+  ---
+  duration_ms: 1.094903
+  type: 'test'
+  ...
+# Subtest: P5 credit limits never become cash; each existing loan lot repays only once
+ok 50 - P5 credit limits never become cash; each existing loan lot repays only once
+  ---
+  duration_ms: 0.412858
+  type: 'test'
+  ...
+# Subtest: P5 unknown grace date is shown unknown rather than a zero or a made-up today
+ok 51 - P5 unknown grace date is shown unknown rather than a zero or a made-up today
+  ---
+  duration_ms: 0.425987
+  type: 'test'
+  ...
+# Subtest: P5 planned credit-card purchase is not mislabeled as an exact own-cash payout
+ok 52 - P5 planned credit-card purchase is not mislabeled as an exact own-cash payout
+  ---
+  duration_ms: 0.499486
+  type: 'test'
+  ...
+# Subtest: P5 transfer in transit is not credited to destination or counted as future guaranteed income
+ok 53 - P5 transfer in transit is not credited to destination or counted as future guaranteed income
+  ---
+  duration_ms: 1.45931
+  type: 'test'
+  ...
+# Subtest: P5 refunds/split categories/adjustments use canonical totals exactly once
+ok 54 - P5 refunds/split categories/adjustments use canonical totals exactly once
+  ---
+  duration_ms: 0.702845
+  type: 'test'
+  ...
+# Subtest: P5 skipped, paused, moved and fully paid instances reuse P1.2 selectors
+ok 55 - P5 skipped, paused, moved and fully paid instances reuse P1.2 selectors
+  ---
+  duration_ms: 1.590974
+  type: 'test'
+  ...
+# Subtest: P5 archived/stopped income rules do not generate new future salary
+ok 56 - P5 archived/stopped income rules do not generate new future salary
+  ---
+  duration_ms: 0.402163
+  type: 'test'
+  ...
+# Subtest: P5 received part and explicit closure replace future expectation, not actual money twice
+ok 57 - P5 received part and explicit closure replace future expectation, not actual money twice
+  ---
+  duration_ms: 0.527357
+  type: 'test'
+  ...
+# Subtest: P5 recommended goal contribution is not a future payment or automatic allocation
+ok 58 - P5 recommended goal contribution is not a future payment or automatic allocation
+  ---
+  duration_ms: 0.3535
+  type: 'test'
+  ...
+# Subtest: P5 variable orientations are explicitly estimates and retain canonical remaining amounts
+ok 59 - P5 variable orientations are explicitly estimates and retain canonical remaining amounts
+  ---
+  duration_ms: 0.474198
+  type: 'test'
+  ...
+# Subtest: P5 calendar/year boundary and immutable B1 meaning: month
+ok 60 - P5 calendar/year boundary and immutable B1 meaning: month
+  ---
+  duration_ms: 0.721102
+  type: 'test'
+  ...
+# Subtest: P5 calendar/year boundary and immutable B1 meaning: m2
+ok 61 - P5 calendar/year boundary and immutable B1 meaning: m2
+  ---
+  duration_ms: 0.71962
+  type: 'test'
+  ...
+# Subtest: P5 calendar/year boundary and immutable B1 meaning: m3
+ok 62 - P5 calendar/year boundary and immutable B1 meaning: m3
+  ---
+  duration_ms: 0.953224
+  type: 'test'
+  ...
+# Subtest: P5 calendar/year boundary and immutable B1 meaning: m4
+ok 63 - P5 calendar/year boundary and immutable B1 meaning: m4
+  ---
+  duration_ms: 1.054844
+  type: 'test'
+  ...
+# Subtest: P5 calendar/year boundary and immutable B1 meaning: all
+ok 64 - P5 calendar/year boundary and immutable B1 meaning: all
+  ---
+  duration_ms: 0.390695
+  type: 'test'
+  ...
+# Subtest: P5 leap February and original monthly day return do not create extra instances
+ok 65 - P5 leap February and original monthly day return do not create extra instances
+  ---
+  duration_ms: 0.513897
+  type: 'test'
+  ...
+# Subtest: P5 view mode never changes the stored Home/free mode or its default
+ok 66 - P5 view mode never changes the stored Home/free mode or its default
+  ---
+  duration_ms: 0.60393
+  type: 'test'
+  ...
+# Subtest: P5 first risk responds to temporary income/date changes and scenario cancellation exactly
+ok 67 - P5 first risk responds to temporary income/date changes and scenario cancellation exactly
+  ---
+  duration_ms: 0.875981
+  type: 'test'
+  ...
+# Subtest: P5 one extra hypothetical debit expense changes projection, never operations/history/revision
+ok 68 - P5 one extra hypothetical debit expense changes projection, never operations/history/revision
+  ---
+  duration_ms: 0.288775
+  type: 'test'
+  ...
+# Subtest: P5 event moved outside horizon is not charged in that period; original plans unchanged
+ok 69 - P5 event moved outside horizon is not charged in that period; original plans unchanged
+  ---
+  duration_ms: 0.63843
+  type: 'test'
+  ...
+# Subtest: P5 changed simulated payment amount caps shared reserve coverage without duplicating funds
+ok 70 - P5 changed simulated payment amount caps shared reserve coverage without duplicating funds
+  ---
+  duration_ms: 0.801501
+  type: 'test'
+  ...
+# Subtest: P5 strict scenario rejects unknown fields, stale ID, past date, negative/overflow and credit-limit funding
+ok 71 - P5 strict scenario rejects unknown fields, stale ID, past date, negative/overflow and credit-limit funding
+  ---
+  duration_ms: 1.119079
+  type: 'test'
+  ...
+# Subtest: P5 12-digit exact kopecks are preserved and unsafe sums fail closed
+ok 72 - P5 12-digit exact kopecks are preserved and unsafe sums fail closed
+  ---
+  duration_ms: 0.297799
+  type: 'test'
+  ...
+# Subtest: P5 event IDs, projections and calendar dates are stable across repeated pure reads
+ok 73 - P5 event IDs, projections and calendar dates are stable across repeated pure reads
+  ---
+  duration_ms: 0.931382
+  type: 'test'
+  ...
+# Subtest: P5 two credit cards and an actual internal repayment do not cause a second cash charge
+ok 74 - P5 two credit cards and an actual internal repayment do not cause a second cash charge
+  ---
+  duration_ms: 1.156514
+  type: 'test'
+  ...
+# Subtest: P5 variable final below orientation closes only its period; cancellation reopens facts
+ok 75 - P5 variable final below orientation closes only its period; cancellation reopens facts
+  ---
+  duration_ms: 1.559468
+  type: 'test'
+  ...
+# Subtest: P5 archived event account stays unknown; another existing account is never substituted
+ok 76 - P5 archived event account stays unknown; another existing account is never substituted
+  ---
+  duration_ms: 1.940379
+  type: 'test'
+  ...
+# Subtest: P5 a missed incoming date is not silently changed to today
+ok 77 - P5 a missed incoming date is not silently changed to today
+  ---
+  duration_ms: 0.292962
+  type: 'test'
+  ...
+# Subtest: P5 independent old expense may uncover reserve shortage without changing either history or allocation
+ok 78 - P5 independent old expense may uncover reserve shortage without changing either history or allocation
+  ---
+  duration_ms: 0.800459
+  type: 'test'
+  ...
+# Subtest: P5 explicit same-obligation cover is capped across several reserves
+ok 79 - P5 explicit same-obligation cover is capped across several reserves
+  ---
+  duration_ms: 1.43242
+  type: 'test'
+  ...
+# Subtest: P5 pending/cancelled facts are not projected as second future movements
+ok 80 - P5 pending/cancelled facts are not projected as second future movements
+  ---
+  duration_ms: 0.575077
+  type: 'test'
+  ...
+# Subtest: P5 forecast arithmetic overflow is rejected even though the underlying document remains intact
+ok 81 - P5 forecast arithmetic overflow is rejected even though the underlying document remains intact
+  ---
+  duration_ms: 0.66521
+  type: 'test'
+  ...
+# Subtest: P5 local calendar around New Year follows local date, not UTC midnight assumptions
+ok 82 - P5 local calendar around New Year follows local date, not UTC midnight assumptions
+  ---
+  duration_ms: 10.689076
+  type: 'test'
+  ...
+# Subtest: P5 all includes real dated debts outside four months but never an infinite schedule of income/services
+ok 83 - P5 all includes real dated debts outside four months but never an infinite schedule of income/services
+  ---
+  duration_ms: 0.610339
+  type: 'test'
+  ...
+# Subtest: P5 account endpoint stays unknown when a future payer is unspecified, while known-account subtotal remains inspectable
+ok 84 - P5 account endpoint stays unknown when a future payer is unspecified, while known-account subtotal remains inspectable
+  ---
+  duration_ms: 0.350265
+  type: 'test'
+  ...
+1..84
+# tests 84
+# suites 0
+# pass 84
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 6767.003679
