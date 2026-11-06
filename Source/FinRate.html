@@ -1035,6 +1035,8 @@ input,textarea,[contenteditable=true],.full-note,.activity-comparison span {
 [data-forecast-ui] .forecast-progress { display:block; width:100%; height:.5rem; accent-color:var(--blue); }
 [data-forecast-ui] [hidden] { display:none !important; }
 [data-forecast-ui] .forecast-summary :is(h3,p,.card-amount) { margin:0; }
+/* WebKit can expose a native option's full paint width through its label. */
+[data-forecast-ui] label:has(>select) { min-width:0; overflow:hidden; }
 
 /* The operation tab and chooser share one outline, size and paint calculation. */
 .operation-edge { position:fixed; right:0; top:calc(50% - 42px); width:18px; height:84px; min-height:0; border:0; padding:0; border-radius:10px 0 0 10px; background:var(--action); opacity:.84; z-index:9; touch-action:none; display:grid; place-items:center; }
