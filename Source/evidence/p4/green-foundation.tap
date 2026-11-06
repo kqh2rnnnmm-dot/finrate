@@ -1,0 +1,466 @@
+TAP version 13
+# Subtest: monthly credit rule uses calendar boundaries, including leap years
+ok 1 - monthly credit rule uses calendar boundaries, including leap years
+  ---
+  duration_ms: 2.536435
+  type: 'test'
+  ...
+# Subtest: debit cannot become negative; entire transaction stays unchanged on failure
+ok 2 - debit cannot become negative; entire transaction stays unchanged on failure
+  ---
+  duration_ms: 2.669521
+  type: 'test'
+  ...
+# Subtest: own money is used first; only borrowed portion becomes debt
+ok 3 - own money is used first; only borrowed portion becomes debt
+  ---
+  duration_ms: 9.893138
+  type: 'test'
+  ...
+# Subtest: credit ceiling and commission are checked together, exactly at the boundary
+ok 4 - credit ceiling and commission are checked together, exactly at the boundary
+  ---
+  duration_ms: 1.000914
+  type: 'test'
+  ...
+# Subtest: repayment reduces earliest monthly debt, without a second expense
+ok 5 - repayment reduces earliest monthly debt, without a second expense
+  ---
+  duration_ms: 1.380804
+  type: 'test'
+  ...
+# Subtest: B1 overpayment rejected; unused credit is excluded from own total
+ok 6 - B1 overpayment rejected; unused credit is excluded from own total
+  ---
+  duration_ms: 0.559394
+  type: 'test'
+  ...
+# Subtest: external transfer is one debit, one expense, category preserved, fee separate
+ok 7 - external transfer is one debit, one expense, category preserved, fee separate
+  ---
+  duration_ms: 0.484183
+  type: 'test'
+  ...
+# Subtest: credit transfer requires a known deadline; statement can refine payment
+ok 8 - credit transfer requires a known deadline; statement can refine payment
+  ---
+  duration_ms: 0.981736
+  type: 'test'
+  ...
+# Subtest: opening debt must be fully assigned before creating account
+ok 9 - opening debt must be fully assigned before creating account
+  ---
+  duration_ms: 0.52338
+  type: 'test'
+  ...
+# Subtest: backdated expense joins its purchase month; payment clears earliest debt
+ok 10 - backdated expense joins its purchase month; payment clears earliest debt
+  ---
+  duration_ms: 0.776544
+  type: 'test'
+  ...
+# Subtest: day-based purchase counts from transaction date
+ok 11 - day-based purchase counts from transaction date
+  ---
+  duration_ms: 0.355744
+  type: 'test'
+  ...
+# Subtest: purchase refund reduces that purchase before an unrelated earlier bucket
+ok 12 - purchase refund reduces that purchase before an unrelated earlier bucket
+  ---
+  duration_ms: 0.474228
+  type: 'test'
+  ...
+# Subtest: edit and cancel replay debt without stale allocations, snapshots or duplicate expenses
+ok 13 - edit and cancel replay debt without stale allocations, snapshots or duplicate expenses
+  ---
+  duration_ms: 0.811825
+  type: 'test'
+  ...
+# Subtest: old negative records migrate unchanged; further overspending blocked, repayment allowed
+ok 14 - old negative records migrate unchanged; further overspending blocked, repayment allowed
+  ---
+  duration_ms: 0.684227
+  type: 'test'
+  ...
+# Subtest: home supports six independently linked credit blocks and rejects invalid links
+ok 15 - home supports six independently linked credit blocks and rejects invalid links
+  ---
+  duration_ms: 0.278009
+  type: 'test'
+  ...
+# Subtest: B1 funded debit conversion rejected without changing any movement
+ok 16 - B1 funded debit conversion rejected without changing any movement
+  ---
+  duration_ms: 0.397986
+  type: 'test'
+  ...
+# Subtest: debt replay uses operation dates rather than entry order
+ok 17 - debt replay uses operation dates rather than entry order
+  ---
+  duration_ms: 0.315896
+  type: 'test'
+  ...
+# Subtest: P3 common history records allocation/account/goal and actual progress, not another financial ledger
+ok 18 - P3 common history records allocation/account/goal and actual progress, not another financial ledger
+  ---
+  duration_ms: 18.729829
+  type: 'test'
+  ...
+# Subtest: P3 common closed goal history reflects real cancellation and explicit detachment
+ok 19 - P3 common closed goal history reflects real cancellation and explicit detachment
+  ---
+  duration_ms: 2.492049
+  type: 'test'
+  ...
+# Subtest: P3 A2 financial counters/external proof/cleanup and independent exact restore
+ok 20 - P3 A2 financial counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 459.044179
+  type: 'test'
+  ...
+# Subtest: P3 A2 categories counters/external proof/cleanup and independent exact restore
+ok 21 - P3 A2 categories counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 446.79989
+  type: 'test'
+  ...
+# Subtest: P3 A2 all counters/external proof/cleanup and independent exact restore
+ok 22 - P3 A2 all counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 439.248079
+  type: 'test'
+  ...
+# Subtest: P3 quota on create/use leaves neither orphan entity nor fact; CAS and repeat request exact
+ok 23 - P3 quota on create/use leaves neither orphan entity nor fact; CAS and repeat request exact
+  ---
+  duration_ms: 259.172205
+  type: 'test'
+  ...
+# Subtest: P3 password/PIN/recovery preserve root/operations and earlier external copy
+ok 24 - P3 password/PIN/recovery preserve root/operations and earlier external copy
+  ---
+  duration_ms: 853.014186
+  type: 'test'
+  ...
+# Subtest: P3 draft is encrypted intent, not money or goal; successful creation consumes it atomically
+ok 25 - P3 draft is encrypted intent, not money or goal; successful creation consumes it atomically
+  ---
+  duration_ms: 0.900016
+  type: 'test'
+  ...
+# Subtest: P3 genuine old P2-shaped document opens without any automatic write or extension
+ok 26 - P3 genuine old P2-shaped document opens without any automatic write or extension
+  ---
+  duration_ms: 187.57672
+  type: 'test'
+  ...
+# Subtest: P3 validly encrypted malformed linkage rejected during restore, active vault unchanged
+ok 27 - P3 validly encrypted malformed linkage rejected during restore, active vault unchanged
+  ---
+  duration_ms: 358.054275
+  type: 'test'
+  ...
+# Subtest: P3 persisted use/edit intents cannot reference missing reserves, goals or facts
+ok 28 - P3 persisted use/edit intents cannot reference missing reserves, goals or facts
+  ---
+  duration_ms: 176.634657
+  type: 'test'
+  ...
+# Subtest: P3 old P2 reads are pure, optional root absent; no recommendation materializes a plan
+ok 29 - P3 old P2 reads are pure, optional root absent; no recommendation materializes a plan
+  ---
+  duration_ms: 0.419208
+  type: 'test'
+  ...
+# Subtest: P3 creation/allocate/release idempotent and changed payload IDs rejected
+ok 30 - P3 creation/allocate/release idempotent and changed payload IDs rejected
+  ---
+  duration_ms: 0.667373
+  type: 'test'
+  ...
+# Subtest: P3 progress can exceed target without auto-close; stale metadata does not overwrite
+ok 31 - P3 progress can exceed target without auto-close; stale metadata does not overwrite
+  ---
+  duration_ms: 0.737145
+  type: 'test'
+  ...
+# Subtest: P3 recommendation missing/expired date suppressed; leap calendar and inclusive remaining months explicit
+ok 32 - P3 recommendation missing/expired date suppressed; leap calendar and inclusive remaining months explicit
+  ---
+  duration_ms: 0.294944
+  type: 'test'
+  ...
+# Subtest: P3 explicit whole purchase association may consume only part of one reserve; no purchase double assignment
+ok 33 - P3 explicit whole purchase association may consume only part of one reserve; no purchase double assignment
+  ---
+  duration_ms: 0.947986
+  type: 'test'
+  ...
+# Subtest: P3 split category operation remains one whole purchase/goal; refund totals correct
+ok 34 - P3 split category operation remains one whole purchase/goal; refund totals correct
+  ---
+  duration_ms: 0.677427
+  type: 'test'
+  ...
+# Subtest: P3 edit actual amount down/up changes progress only, records consumption and reduced-net warning
+ok 35 - P3 edit actual amount down/up changes progress only, records consumption and reduced-net warning
+  ---
+  duration_ms: 0.870462
+  type: 'test'
+  ...
+# Subtest: P3 completed goal retains closed snapshot and honest subsequent refund, detached balance independent
+ok 36 - P3 completed goal retains closed snapshot and honest subsequent refund, detached balance independent
+  ---
+  duration_ms: 0.964741
+  type: 'test'
+  ...
+# Subtest: P3 P1.2 payment10000/reserve6000 then partial3000 uses one canonical expense, free invariant
+ok 37 - P3 P1.2 payment10000/reserve6000 then partial3000 uses one canonical expense, free invariant
+  ---
+  duration_ms: 3.63334
+  type: 'test'
+  ...
+# Subtest: P3 unrelated existing expense cannot settle linked payment or debt
+ok 38 - P3 unrelated existing expense cannot settle linked payment or debt
+  ---
+  duration_ms: 1.04611
+  type: 'test'
+  ...
+# Subtest: P3 moved payment keeps identity; source account conflict warns and asserts no coverage
+ok 39 - P3 moved payment keeps identity; source account conflict warns and asserts no coverage
+  ---
+  duration_ms: 1.624572
+  type: 'test'
+  ...
+# Subtest: P3 no automatic transfer; archived reserve only at zero and source stays immutable
+ok 40 - P3 no automatic transfer; archived reserve only at zero and source stays immutable
+  ---
+  duration_ms: 1.063285
+  type: 'test'
+  ...
+# Subtest: P3 strict document refs/version/actions/amounts reject malformed protected payload; tiles validated
+ok 41 - P3 strict document refs/version/actions/amounts reject malformed protected payload; tiles validated
+  ---
+  duration_ms: 2.354176
+  type: 'test'
+  ...
+# Subtest: P3 aggregate reserve amounts reject unsafe restoration even if each entry safe, no account-balance fiction
+ok 42 - P3 aggregate reserve amounts reject unsafe restoration even if each entry safe, no account-balance fiction
+  ---
+  duration_ms: 0.712068
+  type: 'test'
+  ...
+# Subtest: P3 new use cannot silently spend another reserve; independent historical fact stays allowed and linkable
+ok 43 - P3 new use cannot silently spend another reserve; independent historical fact stays allowed and linkable
+  ---
+  duration_ms: 1.060722
+  type: 'test'
+  ...
+# Subtest: P3 restoration rejects contradictory active/detached usage flags
+ok 44 - P3 restoration rejects contradictory active/detached usage flags
+  ---
+  duration_ms: 1.019321
+  type: 'test'
+  ...
+# Subtest: P3 many independent goals/reserves retain exact sums/history and closure does not touch neighboring goals
+ok 45 - P3 many independent goals/reserves retain exact sums/history and closure does not touch neighboring goals
+  ---
+  duration_ms: 115.640603
+  type: 'test'
+  ...
+# Subtest: P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+ok 46 - P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+  ---
+  duration_ms: 0.705419
+  type: 'test'
+  ...
+# Subtest: P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+ok 47 - P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+  ---
+  duration_ms: 1.063936
+  type: 'test'
+  ...
+# Subtest: P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+ok 48 - P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+  ---
+  duration_ms: 1.036416
+  type: 'test'
+  ...
+# Subtest: P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+ok 49 - P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+  ---
+  duration_ms: 0.676947
+  type: 'test'
+  ...
+# Subtest: P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+ok 50 - P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+  ---
+  duration_ms: 0.934816
+  type: 'test'
+  ...
+# Subtest: P3 completed/release requires explicit residual choice, preserves cash and closed history
+ok 51 - P3 completed/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.754231
+  type: 'test'
+  ...
+# Subtest: P3 completed/detach requires explicit residual choice, preserves cash and closed history
+ok 52 - P3 completed/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.48844
+  type: 'test'
+  ...
+# Subtest: P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+ok 53 - P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.487438
+  type: 'test'
+  ...
+# Subtest: P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+ok 54 - P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.503782
+  type: 'test'
+  ...
+# Subtest: P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+ok 55 - P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+  ---
+  duration_ms: 2.303712
+  type: 'test'
+  ...
+# Subtest: P3 independent expense can underfund reserve without rewriting history or blocking fact
+ok 56 - P3 independent expense can underfund reserve without rewriting history or blocking fact
+  ---
+  duration_ms: 0.529489
+  type: 'test'
+  ...
+# Subtest: P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+ok 57 - P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+  ---
+  duration_ms: 1.498667
+  type: 'test'
+  ...
+# Subtest: P4 unallocated modern fee not inherited into transfer category
+ok 58 - P4 unallocated modern fee not inherited into transfer category
+  ---
+  duration_ms: 1.174489
+  type: 'test'
+  ...
+# Subtest: P4 safe-integer rule/derived cents remain exact; no unsafe conversion or block on canon facts
+ok 59 - P4 safe-integer rule/derived cents remain exact; no unsafe conversion or block on canon facts
+  ---
+  duration_ms: 1.050196
+  type: 'test'
+  ...
+# Subtest: P4 malformed signed rule/settings references reject before persistence; period strict
+ok 60 - P4 malformed signed rule/settings references reject before persistence; period strict
+  ---
+  duration_ms: 1.0458
+  type: 'test'
+  ...
+# Subtest: P4 archived rules retained; duplicate active scope safe refusal and restore conflict atomic
+ok 61 - P4 archived rules retained; duplicate active scope safe refusal and restore conflict atomic
+  ---
+  duration_ms: 0.759798
+  type: 'test'
+  ...
+# Subtest: P4 current classification moves parent totals; archived category remains counted
+ok 62 - P4 current classification moves parent totals; archived category remains counted
+  ---
+  duration_ms: 0.948657
+  type: 'test'
+  ...
+# Subtest: P4 explicit reassign historical rule permits merge; preexisting merged allocations resolve once
+ok 63 - P4 explicit reassign historical rule permits merge; preexisting merged allocations resolve once
+  ---
+  duration_ms: 1.492979
+  type: 'test'
+  ...
+# Subtest: P4 settings do not create root; threshold arithmetic exact around80 at tiny amount
+ok 64 - P4 settings do not create root; threshold arithmetic exact around80 at tiny amount
+  ---
+  duration_ms: 0.513826
+  type: 'test'
+  ...
+# Subtest: P4 pure P3 reads; create changes neither cash nor forecast
+ok 65 - P4 pure P3 reads; create changes neither cash nor forecast
+  ---
+  duration_ms: 0.443684
+  type: 'test'
+  ...
+# Subtest: P4 parent6000+veg3000-refund1000=8000, child2000, then expense3000 goes through at11000
+ok 66 - P4 parent6000+veg3000-refund1000=8000, child2000, then expense3000 goes through at11000
+  ---
+  duration_ms: 1.514761
+  type: 'test'
+  ...
+# Subtest: P4 no carryover/implicit repeat; next-month refund can make net negative
+ok 67 - P4 no carryover/implicit repeat; next-month refund can make net negative
+  ---
+  duration_ms: 0.549149
+  type: 'test'
+  ...
+# Subtest: P4 100 split leaves and mixed allocations counted once; uncategorized rule forbidden
+ok 68 - P4 100 split leaves and mixed allocations counted once; uncategorized rule forbidden
+  ---
+  duration_ms: 7.209135
+  type: 'test'
+  ...
+# Subtest: P4 date/allocation edits and cancel recalculate current facts
+ok 69 - P4 date/allocation edits and cancel recalculate current facts
+  ---
+  duration_ms: 0.80085
+  type: 'test'
+  ...
+# Subtest: P4 external transfer/fee once; internal transfer/pending/cancel/adjustment excluded
+ok 70 - P4 external transfer/fee once; internal transfer/pending/cancel/adjustment excluded
+  ---
+  duration_ms: 1.064798
+  type: 'test'
+  ...
+# Subtest: P4 credit purchase once not repayment; plan only when real payment confirmed
+ok 71 - P4 credit purchase once not repayment; plan only when real payment confirmed
+  ---
+  duration_ms: 1.127981
+  type: 'test'
+  ...
+# Subtest: P4 principal and reserves not expenses; only canonical reserve purchase counted
+ok 72 - P4 principal and reserves not expenses; only canonical reserve purchase counted
+  ---
+  duration_ms: 1.58944
+  type: 'test'
+  ...
+# Subtest: P4 79/80/81/100/101 distinct states; only confirmed upward crossings
+ok 73 - P4 79/80/81/100/101 distinct states; only confirmed upward crossings
+  ---
+  duration_ms: 2.374577
+  type: 'test'
+  ...
+# Subtest: P4 settings immediate/early off preserves card states; no old-month or settings alerts
+ok 74 - P4 settings immediate/early off preserves card states; no old-month or settings alerts
+  ---
+  duration_ms: 1.570612
+  type: 'test'
+  ...
+# Subtest: P4 replay/edit-stale/archive never duplicate rules or move money
+ok 75 - P4 replay/edit-stale/archive never duplicate rules or move money
+  ---
+  duration_ms: 0.598682
+  type: 'test'
+  ...
+# Subtest: P4 category archive/move truthful; merge conflict atomically rejected
+ok 76 - P4 category archive/move truthful; merge conflict atomically rejected
+  ---
+  duration_ms: 1.022906
+  type: 'test'
+  ...
+1..76
+# tests 76
+# suites 0
+# pass 76
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3495.687141
