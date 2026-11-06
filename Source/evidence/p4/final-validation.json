@@ -1,0 +1,29 @@
+{
+  "build": "p4-limits01",
+  "version": "0.3.14-p4",
+  "base": "eea169f4605a0afa155ab69c95a867ee39749fda",
+  "applicationCommit": "3f5cd7f465470fbbc3f4af0603a18774f64b0a64",
+  "testCommit": "fa79f19d4055cc670181ac1f1eb41025852213f5",
+  "publicHTMLSHA256": "f6433dfbc732c6900cd499f8d6851401fcddc7baea8f104310f02d9afb0df4d1",
+  "unit": {
+    "passed": 491,
+    "failed": 0,
+    "skipped": 0,
+    "p4": 36,
+    "legacy": 455
+  },
+  "release": {
+    "passed": 67,
+    "failed": 0,
+    "skipped": 0
+  },
+  "p4BrowserGroupsPerEngine": {
+    "main": 18,
+    "upgrade": 4,
+    "maximumAmount": 1
+  },
+  "actualIPhone": false,
+  "published": false,
+  "userDatabaseTouched": false,
+  "accessAfterP4Implemented": false
+}

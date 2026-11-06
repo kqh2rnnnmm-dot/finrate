@@ -1,0 +1,46 @@
+TAP version 13
+# Subtest: P4 common history captures rule creation/change/archive and derived spending without second ledger
+not ok 1 - P4 common history captures rule creation/change/archive and derived spending without second ledger
+  ---
+  duration_ms: 8.332975
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits-history.test.mjs:4:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'action')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits-history.test.mjs:4:276)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: P4 warning preferences use encrypted existing settings history
+not ok 2 - P4 warning preferences use encrypted existing settings history
+  ---
+  duration_ms: 0.539213
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits-history.test.mjs:5:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot read properties of undefined (reading 'changes')"
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits-history.test.mjs:5:223)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+1..2
+# tests 2
+# suites 0
+# pass 0
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 36.239149

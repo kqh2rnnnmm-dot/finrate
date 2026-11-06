@@ -1,0 +1,236 @@
+TAP version 13
+# Subtest: P4 pure P3 reads; create changes neither cash nor forecast
+not ok 1 - P4 pure P3 reads; create changes neither cash nor forecast
+  ---
+  duration_ms: 8.53076
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:9:160)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: P4 parent6000+veg3000-refund1000=8000, child2000, then expense3000 goes through at11000
+not ok 2 - P4 parent6000+veg3000-refund1000=8000, child2000, then expense3000 goes through at11000
+  ---
+  duration_ms: 0.218802
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:10:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:10:117)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: P4 no carryover/implicit repeat; next-month refund can make net negative
+not ok 3 - P4 no carryover/implicit repeat; next-month refund can make net negative
+  ---
+  duration_ms: 0.493246
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:11:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:11:102)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 100 split leaves and mixed allocations counted once; uncategorized rule forbidden
+not ok 4 - P4 100 split leaves and mixed allocations counted once; uncategorized rule forbidden
+  ---
+  duration_ms: 0.245973
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:12:114)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 date/allocation edits and cancel recalculate current facts
+not ok 5 - P4 date/allocation edits and cancel recalculate current facts
+  ---
+  duration_ms: 0.252152
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:13:91)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 external transfer/fee once; internal transfer/pending/cancel/adjustment excluded
+not ok 6 - P4 external transfer/fee once; internal transfer/pending/cancel/adjustment excluded
+  ---
+  duration_ms: 0.340692
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:14:113)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 credit purchase once not repayment; plan only when real payment confirmed
+not ok 7 - P4 credit purchase once not repayment; plan only when real payment confirmed
+  ---
+  duration_ms: 0.198272
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:15:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:15:106)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 principal and reserves not expenses; only canonical reserve purchase counted
+not ok 8 - P4 principal and reserves not expenses; only canonical reserve purchase counted
+  ---
+  duration_ms: 0.171613
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:16:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:16:109)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 79/80/81/100/101 distinct states; only confirmed upward crossings
+not ok 9 - P4 79/80/81/100/101 distinct states; only confirmed upward crossings
+  ---
+  duration_ms: 0.311649
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:17:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:17:98)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 settings immediate/early off preserves card states; no old-month or settings alerts
+not ok 10 - P4 settings immediate/early off preserves card states; no old-month or settings alerts
+  ---
+  duration_ms: 0.434791
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:18:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:18:116)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 replay/edit-stale/archive never duplicate rules or move money
+not ok 11 - P4 replay/edit-stale/archive never duplicate rules or move money
+  ---
+  duration_ms: 0.26483
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:19:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:19:107)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 category archive/move truthful; merge conflict atomically rejected
+not ok 12 - P4 category archive/move truthful; merge conflict atomically rejected
+  ---
+  duration_ms: 0.158884
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits.test.mjs:20:1'
+  failureType: 'testCodeFailure'
+  error: 'P4 not implemented'
+  code: 'ERR_TEST_FAILURE'
+  stack: |-
+    Module.missing (file:///workspace/finrate/Source/src/limits.mjs:1:26)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits.test.mjs:20:99)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..12
+# tests 12
+# suites 0
+# pass 0
+# fail 12
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 55.772232

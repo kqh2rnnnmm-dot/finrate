@@ -1,0 +1,29 @@
+{
+  "engine": "chromium",
+  "baseline": "eea169f4605a0afa155ab69c95a867ee39749fda",
+  "build": "p4-limits01",
+  "checks": [
+    "actual P3→P4 user-approved SW update, exact ciphertext/generation unchanged, no limits/migration/autowrite",
+    "first UI rule one atomic generation, cash/free/P3 reserves/P2 debt/P1 payment unchanged",
+    "actual P3 runtime retains optional extension but has no limits or warnings; code rollback not state rollback, verified pre-P4 copy required",
+    "independent P4 native-file restore of actual P3 exported backup equals entire original document"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "oldBackup": {
+    "generatedBy": "actual main P3 public build",
+    "format": "finrate-backup/1",
+    "sha256": "d7d06168c178c6425b962235a392528e86a70ca2809137e5a8b89fa322d765c5",
+    "committed": false
+  },
+  "rollback": {
+    "tested": true,
+    "oldRuntime": "P3",
+    "extensionRetained": true,
+    "limitsIgnored": true,
+    "featureCompatible": false,
+    "cashUnaffected": true
+  },
+  "allPassed": true
+}

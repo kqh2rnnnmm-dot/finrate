@@ -1,0 +1,20 @@
+{
+  "engine": "chromium",
+  "baseline": "d1a415a3558bdb348ddf29353398090c87367538",
+  "build": "p4-limits01",
+  "checks": [
+    "actual P1.2→P2 user-approved SW update; exact vault/generation unchanged, optional root absent, no forced migration",
+    "first debt creation one atomic generation; existing P1.2 payments and operations unchanged",
+    "independent P2 native-file restore of actual P1.2 exported backup equals entire original document"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "oldBackup": {
+    "generatedBy": "actual main P1.2 public build",
+    "format": "finrate-backup/1",
+    "sha256": "5ffe48cf6e67241eb9296d76d73a00117029dc47e380e82cf17812feb946e3fb",
+    "committed": false
+  },
+  "allPassed": true
+}

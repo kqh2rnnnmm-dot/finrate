@@ -1,0 +1,106 @@
+TAP version 13
+# Subtest: P4 A2 financial counts/rules/settings/protection and independent exact recovery
+not ok 1 - P4 A2 financial counts/rules/settings/protection and independent exact recovery
+  ---
+  duration_ms: 402.475469
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits-integration.test.mjs:6:52'
+  failureType: 'testCodeFailure'
+  error: 'RESET_UNSUPPORTED'
+  code: 'RESET_UNSUPPORTED'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    assertResetSupported (file:///workspace/finrate/Source/src/reset-policy.mjs:15:251)
+    resetSummary (file:///workspace/finrate/Source/src/reset-policy.mjs:18:2)
+    file:///workspace/finrate/Source/src/service.mjs:72:19
+    async FinRate.exclusive (file:///workspace/finrate/Source/src/service.mjs:12:79)
+    async file:///workspace/finrate/Source/tests/limits-integration.test.mjs:6:403
+    async fixture (file:///workspace/finrate/Source/tests/limits-integration.test.mjs:5:298)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: P4 A2 categories counts/rules/settings/protection and independent exact recovery
+not ok 2 - P4 A2 categories counts/rules/settings/protection and independent exact recovery
+  ---
+  duration_ms: 351.217916
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits-integration.test.mjs:6:52'
+  failureType: 'testCodeFailure'
+  error: 'RESET_UNSUPPORTED'
+  code: 'RESET_UNSUPPORTED'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    assertResetSupported (file:///workspace/finrate/Source/src/reset-policy.mjs:15:251)
+    resetSummary (file:///workspace/finrate/Source/src/reset-policy.mjs:18:2)
+    file:///workspace/finrate/Source/src/service.mjs:72:19
+    async FinRate.exclusive (file:///workspace/finrate/Source/src/service.mjs:12:79)
+    async file:///workspace/finrate/Source/tests/limits-integration.test.mjs:6:403
+    async fixture (file:///workspace/finrate/Source/tests/limits-integration.test.mjs:5:298)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 A2 all counts/rules/settings/protection and independent exact recovery
+not ok 3 - P4 A2 all counts/rules/settings/protection and independent exact recovery
+  ---
+  duration_ms: 360.826646
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits-integration.test.mjs:6:52'
+  failureType: 'testCodeFailure'
+  error: |-
+    Expected values to be strictly equal:
+    
+    undefined !== 1
+    
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: 1
+  operator: 'strictEqual'
+  stack: |-
+    file:///workspace/finrate/Source/tests/limits-integration.test.mjs:6:439
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/limits-integration.test.mjs:5:298)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 quota/create rollback, peer CAS, replay and unchanged cash/free
+ok 4 - P4 quota/create rollback, peer CAS, replay and unchanged cash/free
+  ---
+  duration_ms: 346.471743
+  type: 'test'
+  ...
+# Subtest: P4 warning preferences and rules survive password/PIN/recovery and earlier file
+ok 5 - P4 warning preferences and rules survive password/PIN/recovery and earlier file
+  ---
+  duration_ms: 696.311615
+  type: 'test'
+  ...
+# Subtest: P4 P3 protected document unlock and readonly queries preserve ciphertext and absent extension
+ok 6 - P4 P3 protected document unlock and readonly queries preserve ciphertext and absent extension
+  ---
+  duration_ms: 173.850532
+  type: 'test'
+  ...
+# Subtest: P4 encrypted draft is intent only, atomic consume; stale/invalid references rejected
+ok 7 - P4 encrypted draft is intent only, atomic consume; stale/invalid references rejected
+  ---
+  duration_ms: 189.277056
+  type: 'test'
+  ...
+# Subtest: P4 signed-but-invalid category payload rejected before active restore replacement
+ok 8 - P4 signed-but-invalid category payload rejected before active restore replacement
+  ---
+  duration_ms: 283.636193
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 5
+# fail 3
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 2859.285731

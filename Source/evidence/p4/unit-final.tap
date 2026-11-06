@@ -1,0 +1,2956 @@
+TAP version 13
+# Subtest: A3 same current password is rejected by service using password
+ok 1 - A3 same current password is rejected by service using password
+  ---
+  duration_ms: 373.696286
+  type: 'test'
+  ...
+# Subtest: A3 same current password is rejected by service using recovery
+ok 2 - A3 same current password is rejected by service using recovery
+  ---
+  duration_ms: 264.147983
+  type: 'test'
+  ...
+# Subtest: A3 password change by password preserves password, full financial payload, old/new backups
+ok 3 - A3 password change by password preserves password, full financial payload, old/new backups
+  ---
+  duration_ms: 707.98254
+  type: 'test'
+  ...
+# Subtest: A3 password change by recovery preserves password, full financial payload, old/new backups
+ok 4 - A3 password change by recovery preserves password, full financial payload, old/new backups
+  ---
+  duration_ms: 701.72011
+  type: 'test'
+  ...
+# Subtest: A3 password change by password preserves pin, full financial payload, old/new backups
+ok 5 - A3 password change by password preserves pin, full financial payload, old/new backups
+  ---
+  duration_ms: 952.416314
+  type: 'test'
+  ...
+# Subtest: A3 password change by recovery preserves pin, full financial payload, old/new backups
+ok 6 - A3 password change by recovery preserves pin, full financial payload, old/new backups
+  ---
+  duration_ms: 944.959757
+  type: 'test'
+  ...
+# Subtest: A3 password change by password preserves none, full financial payload, old/new backups
+ok 7 - A3 password change by password preserves none, full financial payload, old/new backups
+  ---
+  duration_ms: 772.312276
+  type: 'test'
+  ...
+# Subtest: A3 password change by recovery preserves none, full financial payload, old/new backups
+ok 8 - A3 password change by recovery preserves none, full financial payload, old/new backups
+  ---
+  duration_ms: 774.959817
+  type: 'test'
+  ...
+# Subtest: A3 password boundaries 12 and 1024; weak, excessive and wrong secrets leave all state unchanged
+ok 9 - A3 password boundaries 12 and 1024; weak, excessive and wrong secrets leave all state unchanged
+  ---
+  duration_ms: 1031.60712
+  type: 'test'
+  ...
+# Subtest: A3 PIN4 → password → PIN6 → none → password removes previous local capabilities
+ok 10 - A3 PIN4 → password → PIN6 → none → password removes previous local capabilities
+  ---
+  duration_ms: 971.183247
+  type: 'test'
+  ...
+# Subtest: A3 failed password transaction rolls back active/access/safety and preserves pin
+ok 11 - A3 failed password transaction rolls back active/access/safety and preserves pin
+  ---
+  duration_ms: 682.197245
+  type: 'test'
+  ...
+# Subtest: A3 failed password transaction rolls back active/access/safety and preserves none
+ok 12 - A3 failed password transaction rolls back active/access/safety and preserves none
+  ---
+  duration_ms: 508.823583
+  type: 'test'
+  ...
+# Subtest: A3 stale password/recovery change cannot replace newer PIN or password
+ok 13 - A3 stale password/recovery change cannot replace newer PIN or password
+  ---
+  duration_ms: 748.591697
+  type: 'test'
+  ...
+# Subtest: A3 PIN4 failed attempt limit survives cold service, recovery alone resets counters
+ok 14 - A3 PIN4 failed attempt limit survives cold service, recovery alone resets counters
+  ---
+  duration_ms: 916.299071
+  type: 'test'
+  ...
+# Subtest: A3 PIN6 failed attempt limit survives cold service, recovery alone resets counters
+ok 15 - A3 PIN6 failed attempt limit survives cold service, recovery alone resets counters
+  ---
+  duration_ms: 922.731428
+  type: 'test'
+  ...
+# Subtest: A3 changed password + pin retains A2 financial behavior and restores external file
+ok 16 - A3 changed password + pin retains A2 financial behavior and restores external file
+  ---
+  duration_ms: 726.567599
+  type: 'test'
+  ...
+# Subtest: A3 changed password + pin retains A2 categories behavior and restores external file
+ok 17 - A3 changed password + pin retains A2 categories behavior and restores external file
+  ---
+  duration_ms: 699.584096
+  type: 'test'
+  ...
+# Subtest: A3 changed password + pin retains A2 all behavior and restores external file
+ok 18 - A3 changed password + pin retains A2 all behavior and restores external file
+  ---
+  duration_ms: 590.397429
+  type: 'test'
+  ...
+# Subtest: A3 changed password + none retains A2 financial behavior and restores external file
+ok 19 - A3 changed password + none retains A2 financial behavior and restores external file
+  ---
+  duration_ms: 521.732349
+  type: 'test'
+  ...
+# Subtest: A3 changed password + none retains A2 categories behavior and restores external file
+ok 20 - A3 changed password + none retains A2 categories behavior and restores external file
+  ---
+  duration_ms: 507.536747
+  type: 'test'
+  ...
+# Subtest: A3 changed password + none retains A2 all behavior and restores external file
+ok 21 - A3 changed password + none retains A2 all behavior and restores external file
+  ---
+  duration_ms: 522.767603
+  type: 'test'
+  ...
+# Subtest: A3 session deadline 0 survives repeated hide/download and resumes without secrets
+ok 22 - A3 session deadline 0 survives repeated hide/download and resumes without secrets
+  ---
+  duration_ms: 0.4081
+  type: 'test'
+  ...
+# Subtest: A3 session deadline 5 survives repeated hide/download and resumes without secrets
+ok 23 - A3 session deadline 5 survives repeated hide/download and resumes without secrets
+  ---
+  duration_ms: 0.098124
+  type: 'test'
+  ...
+# Subtest: A3 session deadline 15 survives repeated hide/download and resumes without secrets
+ok 24 - A3 session deadline 15 survives repeated hide/download and resumes without secrets
+  ---
+  duration_ms: 0.071875
+  type: 'test'
+  ...
+# Subtest: A3 session deadline 30 survives repeated hide/download and resumes without secrets
+ok 25 - A3 session deadline 30 survives repeated hide/download and resumes without secrets
+  ---
+  duration_ms: 0.055071
+  type: 'test'
+  ...
+# Subtest: A3 session deadline -1 survives repeated hide/download and resumes without secrets
+ok 26 - A3 session deadline -1 survives repeated hide/download and resumes without secrets
+  ---
+  duration_ms: 0.064114
+  type: 'test'
+  ...
+# Subtest: history records only whitelisted changes and preserves exact note text
+ok 27 - history records only whitelisted changes and preserves exact note text
+  ---
+  duration_ms: 1.158405
+  type: 'test'
+  ...
+# Subtest: expense creation includes snapshot account/category labels and does not alter totals
+ok 28 - expense creation includes snapshot account/category labels and does not alter totals
+  ---
+  duration_ms: 0.355063
+  type: 'test'
+  ...
+# Subtest: deleted draft retains safe values without retaining its editBase snapshot
+ok 29 - deleted draft retains safe values without retaining its editBase snapshot
+  ---
+  duration_ms: 0.219032
+  type: 'test'
+  ...
+# Subtest: bulk changes retain all links and exact type counts
+ok 30 - bulk changes retain all links and exact type counts
+  ---
+  duration_ms: 14.552698
+  type: 'test'
+  ...
+# Subtest: legacy events stay legacy and malformed optional details are not interpreted
+ok 31 - legacy events stay legacy and malformed optional details are not interpreted
+  ---
+  duration_ms: 0.179825
+  type: 'test'
+  ...
+# Subtest: settings metadata does not turn a financial correction into an extra operation
+ok 32 - settings metadata does not turn a financial correction into an extra operation
+  ---
+  duration_ms: 0.440418
+  type: 'test'
+  ...
+# Subtest: event metadata and business change commit atomically, encrypted, with no unlock mutation
+ok 33 - event metadata and business change commit atomically, encrypted, with no unlock mutation
+  ---
+  duration_ms: 254.002119
+  type: 'test'
+  ...
+# Subtest: standalone build script has matching CSP hash, no CDN or provider endpoints
+ok 34 - standalone build script has matching CSP hash, no CDN or provider endpoints
+  ---
+  duration_ms: 14.880174
+  type: 'test'
+  ...
+# Subtest: workbox manifest precaches only 6 shell assets, not financial data
+ok 35 - workbox manifest precaches only 6 shell assets, not financial data
+  ---
+  duration_ms: 0.926283
+  type: 'test'
+  ...
+# Subtest: dist is complete fixed allowlist and no secrets/evidence/test files
+ok 36 - dist is complete fixed allowlist and no secrets/evidence/test files
+  ---
+  duration_ms: 0.511553
+  type: 'test'
+  ...
+# Subtest: package names and navigation preserved; future packages clearly identified
+ok 37 - package names and navigation preserved; future packages clearly identified
+  ---
+  duration_ms: 11.261428
+  type: 'test'
+  ...
+# Subtest: B1 fact excludes borrowed credit and includes only refund own money
+ok 38 - B1 fact excludes borrowed credit and includes only refund own money
+  ---
+  duration_ms: 1.997326
+  type: 'test'
+  ...
+# Subtest: B1 policy changes freeze past deadlines and history records a date only edit
+ok 39 - B1 policy changes freeze past deadlines and history records a date only edit
+  ---
+  duration_ms: 0.727321
+  type: 'test'
+  ...
+# Subtest: B1 repayment above debt and arbitrary positive reconciliation fail atomically
+ok 40 - B1 repayment above debt and arbitrary positive reconciliation fail atomically
+  ---
+  duration_ms: 0.576298
+  type: 'test'
+  ...
+# Subtest: B1 refund surplus requires explicit choice; keep is spent before borrowing
+ok 41 - B1 refund surplus requires explicit choice; keep is spent before borrowing
+  ---
+  duration_ms: 0.636817
+  type: 'test'
+  ...
+# Subtest: B1 confirmed refund withdrawal credits debit only once
+ok 42 - B1 confirmed refund withdrawal credits debit only once
+  ---
+  duration_ms: 0.958872
+  type: 'test'
+  ...
+# Subtest: B1 unconfirmed withdrawal cannot be posted and does not block later purchases
+ok 43 - B1 unconfirmed withdrawal cannot be posted and does not block later purchases
+  ---
+  duration_ms: 0.670827
+  type: 'test'
+  ...
+# Subtest: B1 refund after intervening purchase recomputes surplus
+ok 44 - B1 refund after intervening purchase recomputes surplus
+  ---
+  duration_ms: 0.579813
+  type: 'test'
+  ...
+# Subtest: B1 cancellation cannot leave an overpayment in historical sequence
+ok 45 - B1 cancellation cannot leave an overpayment in historical sequence
+  ---
+  duration_ms: 0.593393
+  type: 'test'
+  ...
+# Subtest: B1 edit revalidates intermediate debt even when final balance could appear valid
+ok 46 - B1 edit revalidates intermediate debt even when final balance could appear valid
+  ---
+  duration_ms: 0.724687
+  type: 'test'
+  ...
+# Subtest: B1 saving a date-only edit preserves money and records operation history
+ok 47 - B1 saving a date-only edit preserves money and records operation history
+  ---
+  duration_ms: 0.500948
+  type: 'test'
+  ...
+# Subtest: B1 nearest repayment amount belongs to its date, independently of current-month due
+ok 48 - B1 nearest repayment amount belongs to its date, independently of current-month due
+  ---
+  duration_ms: 0.204962
+  type: 'test'
+  ...
+# Subtest: B1 refund to debit does not repay card, and date/category limits remain enforced
+ok 49 - B1 refund to debit does not repay card, and date/category limits remain enforced
+  ---
+  duration_ms: 0.489651
+  type: 'test'
+  ...
+# Subtest: B1 cancelling withdrawn refund cannot overdraw debit after its funds were spent
+ok 50 - B1 cancelling withdrawn refund cannot overdraw debit after its funds were spent
+  ---
+  duration_ms: 0.73359
+  type: 'test'
+  ...
+# Subtest: B1 refund above a nonzero debt withdraws only the surplus
+ok 51 - B1 refund above a nonzero debt withdraws only the surplus
+  ---
+  duration_ms: 0.652821
+  type: 'test'
+  ...
+# Subtest: B1 FAQ describes implemented refund exception, five modes and unblocked drafts without old overpayment promise
+ok 52 - B1 FAQ describes implemented refund exception, five modes and unblocked drafts without old overpayment promise
+  ---
+  duration_ms: 1.011038
+  type: 'test'
+  ...
+# Subtest: B1 encrypted close/reopen and independent restore retain draft, plans, links and refund own
+ok 53 - B1 encrypted close/reopen and independent restore retain draft, plans, links and refund own
+  ---
+  duration_ms: 330.798077
+  type: 'test'
+  ...
+# Subtest: B1 setup seeds editable categories once and proposes incomes without actual money
+ok 54 - B1 setup seeds editable categories once and proposes incomes without actual money
+  ---
+  duration_ms: 168.826155
+  type: 'test'
+  ...
+# Subtest: B1 rejected storage commit changes neither actual income nor expected remainder
+ok 55 - B1 rejected storage commit changes neither actual income nor expected remainder
+  ---
+  duration_ms: 243.003227
+  type: 'test'
+  ...
+# Subtest: B1 R30 migration freezes old deadlines without modifying input or stored ciphertext
+ok 56 - B1 R30 migration freezes old deadlines without modifying input or stored ciphertext
+  ---
+  duration_ms: 161.231406
+  type: 'test'
+  ...
+# Subtest: B1 source edits preserve one monthly occurrence identity and confirmed history
+ok 57 - B1 source edits preserve one monthly occurrence identity and confirmed history
+  ---
+  duration_ms: 0.492616
+  type: 'test'
+  ...
+# Subtest: B1 amount/date edits and refund cancellation replay credit invariants
+ok 58 - B1 amount/date edits and refund cancellation replay credit invariants
+  ---
+  duration_ms: 0.717115
+  type: 'test'
+  ...
+# Subtest: B1 generated sequence maintains cent precision, debt lots, refund limits and no duplicate spending
+ok 59 - B1 generated sequence maintains cent precision, debt lots, refund limits and no duplicate spending
+  ---
+  duration_ms: 222.830125
+  type: 'test'
+  ...
+# Subtest: B1 category merge and immediate undo preserve planned-income classification
+ok 60 - B1 category merge and immediate undo preserve planned-income classification
+  ---
+  duration_ms: 1.350458
+  type: 'test'
+  ...
+# Subtest: period migration: fresh
+ok 61 - period migration: fresh
+  ---
+  duration_ms: 0.498694
+  type: 'test'
+  ...
+# Subtest: period migration: legacy conflict
+ok 62 - period migration: legacy conflict
+  ---
+  duration_ms: 0.407159
+  type: 'test'
+  ...
+# Subtest: period migration: legacy settings only
+ok 63 - period migration: legacy settings only
+  ---
+  duration_ms: 0.348332
+  type: 'test'
+  ...
+# Subtest: period migration: legacy null home
+ok 64 - period migration: legacy null home
+  ---
+  duration_ms: 0.379949
+  type: 'test'
+  ...
+# Subtest: period migration: legacy absent both
+ok 65 - period migration: legacy absent both
+  ---
+  duration_ms: 0.383976
+  type: 'test'
+  ...
+# Subtest: period migration: canonical beats obsolete
+ok 66 - period migration: canonical beats obsolete
+  ---
+  duration_ms: 0.339229
+  type: 'test'
+  ...
+# Subtest: absent planning and actual setup both start in current month
+ok 67 - absent planning and actual setup both start in current month
+  ---
+  duration_ms: 95.952194
+  type: 'test'
+  ...
+# Subtest: switching all five modes uses unchanged formula results and changes only preference
+ok 68 - switching all five modes uses unchanged formula results and changes only preference
+  ---
+  duration_ms: 2.713774
+  type: 'test'
+  ...
+# Subtest: migration and encrypted reopen preserve unrelated settings and operations; failed write preserves mode
+ok 69 - migration and encrypted reopen preserve unrelated settings and operations; failed write preserves mode
+  ---
+  duration_ms: 968.263573
+  type: 'test'
+  ...
+# Subtest: B1 five horizons use current and following calendar months, negative all-debts preserved
+ok 70 - B1 five horizons use current and following calendar months, negative all-debts preserved
+  ---
+  duration_ms: 0.591861
+  type: 'test'
+  ...
+# Subtest: B1 partial income replaces expectation, never duplicates cash
+ok 71 - B1 partial income replaces expectation, never duplicates cash
+  ---
+  duration_ms: 0.650848
+  type: 'test'
+  ...
+# Subtest: B1 linking pre-existing income, overreceipt and explicit remainder closure
+ok 72 - B1 linking pre-existing income, overreceipt and explicit remainder closure
+  ---
+  duration_ms: 0.521107
+  type: 'test'
+  ...
+# Subtest: B1 monthly 31 clamps in February and generator is idempotent
+ok 73 - B1 monthly 31 clamps in February and generator is idempotent
+  ---
+  duration_ms: 0.284248
+  type: 'test'
+  ...
+# Subtest: B1 cash shortfall precedes positive endpoint and overdue obligations stay
+ok 74 - B1 cash shortfall precedes positive endpoint and overdue obligations stay
+  ---
+  duration_ms: 0.305029
+  type: 'test'
+  ...
+# Subtest: B1 reserves are individual and linked coverage is capped; no future services in all-debts
+ok 75 - B1 reserves are individual and linked coverage is capped; no future services in all-debts
+  ---
+  duration_ms: 0.348082
+  type: 'test'
+  ...
+# Subtest: B1 shared selected mode switching writes no operation
+ok 76 - B1 shared selected mode switching writes no operation
+  ---
+  duration_ms: 0.164112
+  type: 'test'
+  ...
+# Subtest: B1 explicit reschedule and skip change expectation only
+ok 77 - B1 explicit reschedule and skip change expectation only
+  ---
+  duration_ms: 0.490242
+  type: 'test'
+  ...
+# Subtest: B1 split salary generates only advance and remainder, never a third full salary
+ok 78 - B1 split salary generates only advance and remainder, never a third full salary
+  ---
+  duration_ms: 0.495039
+  type: 'test'
+  ...
+# Subtest: B1 final partial settlement closes expectation, cancellation reopens it without affecting other receipts
+ok 79 - B1 final partial settlement closes expectation, cancellation reopens it without affecting other receipts
+  ---
+  duration_ms: 0.544281
+  type: 'test'
+  ...
+# Subtest: B1.1 no pre-creation paydays; current-month excludes expectation; two months includes Oct25 Nov10 Nov25
+ok 80 - B1.1 no pre-creation paydays; current-month excludes expectation; two months includes Oct25 Nov10 Nov25
+  ---
+  duration_ms: 1.190773
+  type: 'test'
+  ...
+# Subtest: B1.1 daily weekly monthly yearly are stable, bounded and leap/month-end safe
+ok 81 - B1.1 daily weekly monthly yearly are stable, bounded and leap/month-end safe
+  ---
+  duration_ms: 4.445965
+  type: 'test'
+  ...
+# Subtest: B1.1 schedule revisions retain old expected date/amount and posted identities; no backfill after edits
+ok 82 - B1.1 schedule revisions retain old expected date/amount and posted identities; no backfill after edits
+  ---
+  duration_ms: 0.548187
+  type: 'test'
+  ...
+# Subtest: B1.1 exact/over receipt close once; unrelated incomes are never auto-linked
+ok 83 - B1.1 exact/over receipt close once; unrelated incomes are never auto-linked
+  ---
+  duration_ms: 0.85575
+  type: 'test'
+  ...
+# Subtest: B1.1 short payment may keep remainder or close it, cancellation reopens; expectation replaces fact
+ok 84 - B1.1 short payment may keep remainder or close it, cancellation reopens; expectation replaces fact
+  ---
+  duration_ms: 1.268346
+  type: 'test'
+  ...
+# Subtest: B1.1 skipping one due occurrence does not post money or stop future recurrence; archive preserves backlog
+ok 85 - B1.1 skipping one due occurrence does not post money or stop future recurrence; archive preserves backlog
+  ---
+  duration_ms: 1.146187
+  type: 'test'
+  ...
+# Subtest: B1.1 invalid saves and future receipt cannot mutate document
+ok 86 - B1.1 invalid saves and future receipt cannot mutate document
+  ---
+  duration_ms: 0.452305
+  type: 'test'
+  ...
+# Subtest: B1.1 encrypted reopen retains revisions, partial receipt, comment and internal history
+ok 87 - B1.1 encrypted reopen retains revisions, partial receipt, comment and internal history
+  ---
+  duration_ms: 255.912007
+  type: 'test'
+  ...
+# Subtest: B1.2 duplication has no history, identities or financial side effects until explicit save
+ok 88 - B1.2 duplication has no history, identities or financial side effects until explicit save
+  ---
+  duration_ms: 0.803763
+  type: 'test'
+  ...
+# Subtest: B1.2 archive preserves backlog, restoration excludes gap and keeps original history
+ok 89 - B1.2 archive preserves backlog, restoration excludes gap and keeps original history
+  ---
+  duration_ms: 4.113064
+  type: 'test'
+  ...
+# Subtest: B1.2 delete is a tombstone preserving facts/links; pending choice affects only selected plan
+ok 90 - B1.2 delete is a tombstone preserving facts/links; pending choice affects only selected plan
+  ---
+  duration_ms: 6.166266
+  type: 'test'
+  ...
+# Subtest: A1-F06: exact 8MiB plaintext exports and opens with password and recovery without changing limits
+ok 91 - A1-F06: exact 8MiB plaintext exports and opens with password and recovery without changing limits
+  ---
+  duration_ms: 8066.381694
+  type: 'test'
+  ...
+# Subtest: A1: base64 grammar rejects invalid alphabet, middle padding, extra padding, noncanonical trailing bits and length
+ok 92 - A1: base64 grammar rejects invalid alphabet, middle padding, extra padding, noncanonical trailing bits and length
+  ---
+  duration_ms: 83.263696
+  type: 'test'
+  ...
+# Subtest: A1-F04: null, array and primitive JSON are FORMAT
+ok 93 - A1-F04: null, array and primitive JSON are FORMAT
+  ---
+  duration_ms: 0.521117
+  type: 'test'
+  ...
+# Subtest: A1-F01: corrupt active ciphertext cannot be exported, and memory/storage remain unchanged
+ok 94 - A1-F01: corrupt active ciphertext cannot be exported, and memory/storage remain unchanged
+  ---
+  duration_ms: 85.249098
+  type: 'test'
+  ...
+# Subtest: A1: export rejects stale row both before and after authentication, and historical blob remains downloadable
+ok 95 - A1: export rejects stale row both before and after authentication, and historical blob remains downloadable
+  ---
+  duration_ms: 335.499209
+  type: 'test'
+  ...
+# Subtest: A1-F03: selected verification route is explicit, unselected damaged route not claimed as verified
+ok 96 - A1-F03: selected verification route is explicit, unselected damaged route not claimed as verified
+  ---
+  duration_ms: 164.850912
+  type: 'test'
+  ...
+# Subtest: A1 historical safety: corrupted ciphertext can be downloaded unchanged without claiming authentication; current base remains intact
+ok 97 - A1 historical safety: corrupted ciphertext can be downloaded unchanged without claiming authentication; current base remains intact
+  ---
+  duration_ms: 334.482933
+  type: 'test'
+  ...
+# Subtest: zero debit account blocks expense; later income enables spending
+ok 98 - zero debit account blocks expense; later income enables spending
+  ---
+  duration_ms: 0.77412
+  type: 'test'
+  ...
+# Subtest: uncategorized exact same request is idempotent and debits once
+ok 99 - uncategorized exact same request is idempotent and debits once
+  ---
+  duration_ms: 0.33928
+  type: 'test'
+  ...
+# Subtest: blank account still rejected in domain without relying on UI
+ok 100 - blank account still rejected in domain without relying on UI
+  ---
+  duration_ms: 0.327132
+  type: 'test'
+  ...
+# Subtest: partial split across unrelated roots records one debit plus derived remainder
+ok 101 - partial split across unrelated roots records one debit plus derived remainder
+  ---
+  duration_ms: 0.351077
+  type: 'test'
+  ...
+# Subtest: grow partial split keeps manual parts; shrink overflow is atomic
+ok 102 - grow partial split keeps manual parts; shrink overflow is atomic
+  ---
+  duration_ms: 0.692188
+  type: 'test'
+  ...
+# Subtest: parts with cents use exact integers; repeated classification consolidates, never duplicates money
+ok 103 - parts with cents use exact integers; repeated classification consolidates, never duplicates money
+  ---
+  duration_ms: 0.449953
+  type: 'test'
+  ...
+# Subtest: refund uncategorized residue is linked and not income; cap still enforced
+ok 104 - refund uncategorized residue is linked and not income; cap still enforced
+  ---
+  duration_ms: 0.518463
+  type: 'test'
+  ...
+# Subtest: transfer 40000→15000 with 7000+100 yields 32900 and 22000; fee has no category
+ok 105 - transfer 40000→15000 with 7000+100 yields 32900 and 22000; fee has no category
+  ---
+  duration_ms: 0.308414
+  type: 'test'
+  ...
+# Subtest: transfer max sender minus fee, exactly cents and no overflow
+ok 106 - transfer max sender minus fee, exactly cents and no overflow
+  ---
+  duration_ms: 0.283177
+  type: 'test'
+  ...
+# Subtest: repeated maximum transfer is idempotent even after sender becomes zero
+ok 107 - repeated maximum transfer is idempotent even after sender becomes zero
+  ---
+  duration_ms: 0.425867
+  type: 'test'
+  ...
+# Subtest: negative sender or fee above balance cannot create positive quick transfer
+ok 108 - negative sender or fee above balance cannot create positive quick transfer
+  ---
+  duration_ms: 0.155248
+  type: 'test'
+  ...
+# Subtest: zero transfer never saved; same account rejected
+ok 109 - zero transfer never saved; same account rejected
+  ---
+  duration_ms: 0.198432
+  type: 'test'
+  ...
+# Subtest: editing finished transfer keeps IDs, recalculates max excluding old pair, and cancels fee with parent
+ok 110 - editing finished transfer keeps IDs, recalculates max excluding old pair, and cancels fee with parent
+  ---
+  duration_ms: 0.743044
+  type: 'test'
+  ...
+# Subtest: legacy waiting/inside fee remains untouched on migration and retains separate confirmations
+ok 111 - legacy waiting/inside fee remains untouched on migration and retains separate confirmations
+  ---
+  duration_ms: 0.92434
+  type: 'test'
+  ...
+# Subtest: opening adjustment changes basis without creating fake income; current reconciliation is dated
+ok 112 - opening adjustment changes basis without creating fake income; current reconciliation is dated
+  ---
+  duration_ms: 0.558282
+  type: 'test'
+  ...
+# Subtest: last active account cannot archive; zero other account can archive and restore
+ok 113 - last active account cannot archive; zero other account can archive and restore
+  ---
+  duration_ms: 0.37324
+  type: 'test'
+  ...
+# Subtest: archived parent hides children and restore preserves links; new archived use blocked
+ok 114 - archived parent hides children and restore preserves links; new archived use blocked
+  ---
+  duration_ms: 0.807739
+  type: 'test'
+  ...
+# Subtest: rename/move changes historical taxonomy without changing money or operation id
+ok 115 - rename/move changes historical taxonomy without changing money or operation id
+  ---
+  duration_ms: 0.483432
+  type: 'test'
+  ...
+# Subtest: merge three children from distinct parents into ANY other parent, preserving refund caps
+ok 116 - merge three children from distinct parents into ANY other parent, preserving refund caps
+  ---
+  duration_ms: 0.958151
+  type: 'test'
+  ...
+# Subtest: merge source cannot be mixed with income category and remains atomic
+ok 117 - merge source cannot be mixed with income category and remains atomic
+  ---
+  duration_ms: 0.189529
+  type: 'test'
+  ...
+# Subtest: parent merge duplicate children requires explicit resolution, no automatic merge
+ok 118 - parent merge duplicate children requires explicit resolution, no automatic merge
+  ---
+  duration_ms: 0.372108
+  type: 'test'
+  ...
+# Subtest: parent merge combines duplicate children only after explicit choice
+ok 119 - parent merge combines duplicate children only after explicit choice
+  ---
+  duration_ms: 0.497412
+  type: 'test'
+  ...
+# Subtest: parent merge keeps distinct children only with different explicit names
+ok 120 - parent merge keeps distinct children only with different explicit names
+  ---
+  duration_ms: 0.255066
+  type: 'test'
+  ...
+# Subtest: keeping duplicate names is rejected atomically
+ok 121 - keeping duplicate names is rejected atomically
+  ---
+  duration_ms: 0.336906
+  type: 'test'
+  ...
+# Subtest: taxonomy last-action undo restores links; refuses to overwrite later financial event
+ok 122 - taxonomy last-action undo restores links; refuses to overwrite later financial event
+  ---
+  duration_ms: 0.839466
+  type: 'test'
+  ...
+# Subtest: schema1 migration preserves records, drafts, ciphertext and atomic pre-write safety
+ok 123 - schema1 migration preserves records, drafts, ciphertext and atomic pre-write safety
+  ---
+  duration_ms: 327.446862
+  type: 'test'
+  ...
+# Subtest: schema2 migration preserves records, drafts, ciphertext and atomic pre-write safety
+ok 124 - schema2 migration preserves records, drafts, ciphertext and atomic pre-write safety
+  ---
+  duration_ms: 330.589146
+  type: 'test'
+  ...
+# Subtest: schema2 migration abort retains original vault and no safety partial commit
+ok 125 - schema2 migration abort retains original vault and no safety partial commit
+  ---
+  duration_ms: 166.691833
+  type: 'test'
+  ...
+# Subtest: all four encrypted home layouts validate and keep original legacy settings
+ok 126 - all four encrypted home layouts validate and keep original legacy settings
+  ---
+  duration_ms: 0.371957
+  type: 'test'
+  ...
+# Subtest: merged taxonomy, aliases, audit and refunds roundtrip through real encrypted backup
+ok 127 - merged taxonomy, aliases, audit and refunds roundtrip through real encrypted backup
+  ---
+  duration_ms: 82.804059
+  type: 'test'
+  ...
+# Subtest: monthly credit rule uses calendar boundaries, including leap years
+ok 128 - monthly credit rule uses calendar boundaries, including leap years
+  ---
+  duration_ms: 0.211431
+  type: 'test'
+  ...
+# Subtest: debit cannot become negative; entire transaction stays unchanged on failure
+ok 129 - debit cannot become negative; entire transaction stays unchanged on failure
+  ---
+  duration_ms: 0.438466
+  type: 'test'
+  ...
+# Subtest: own money is used first; only borrowed portion becomes debt
+ok 130 - own money is used first; only borrowed portion becomes debt
+  ---
+  duration_ms: 1.045199
+  type: 'test'
+  ...
+# Subtest: credit ceiling and commission are checked together, exactly at the boundary
+ok 131 - credit ceiling and commission are checked together, exactly at the boundary
+  ---
+  duration_ms: 0.673591
+  type: 'test'
+  ...
+# Subtest: repayment reduces earliest monthly debt, without a second expense
+ok 132 - repayment reduces earliest monthly debt, without a second expense
+  ---
+  duration_ms: 0.568276
+  type: 'test'
+  ...
+# Subtest: B1 overpayment rejected; unused credit is excluded from own total
+ok 133 - B1 overpayment rejected; unused credit is excluded from own total
+  ---
+  duration_ms: 0.377736
+  type: 'test'
+  ...
+# Subtest: external transfer is one debit, one expense, category preserved, fee separate
+ok 134 - external transfer is one debit, one expense, category preserved, fee separate
+  ---
+  duration_ms: 0.388602
+  type: 'test'
+  ...
+# Subtest: credit transfer requires a known deadline; statement can refine payment
+ok 135 - credit transfer requires a known deadline; statement can refine payment
+  ---
+  duration_ms: 0.817083
+  type: 'test'
+  ...
+# Subtest: opening debt must be fully assigned before creating account
+ok 136 - opening debt must be fully assigned before creating account
+  ---
+  duration_ms: 0.315594
+  type: 'test'
+  ...
+# Subtest: backdated expense joins its purchase month; payment clears earliest debt
+ok 137 - backdated expense joins its purchase month; payment clears earliest debt
+  ---
+  duration_ms: 0.481208
+  type: 'test'
+  ...
+# Subtest: day-based purchase counts from transaction date
+ok 138 - day-based purchase counts from transaction date
+  ---
+  duration_ms: 0.2651
+  type: 'test'
+  ...
+# Subtest: purchase refund reduces that purchase before an unrelated earlier bucket
+ok 139 - purchase refund reduces that purchase before an unrelated earlier bucket
+  ---
+  duration_ms: 0.446127
+  type: 'test'
+  ...
+# Subtest: edit and cancel replay debt without stale allocations, snapshots or duplicate expenses
+ok 140 - edit and cancel replay debt without stale allocations, snapshots or duplicate expenses
+  ---
+  duration_ms: 0.503
+  type: 'test'
+  ...
+# Subtest: old negative records migrate unchanged; further overspending blocked, repayment allowed
+ok 141 - old negative records migrate unchanged; further overspending blocked, repayment allowed
+  ---
+  duration_ms: 0.313241
+  type: 'test'
+  ...
+# Subtest: home supports six independently linked credit blocks and rejects invalid links
+ok 142 - home supports six independently linked credit blocks and rejects invalid links
+  ---
+  duration_ms: 0.2516
+  type: 'test'
+  ...
+# Subtest: B1 funded debit conversion rejected without changing any movement
+ok 143 - B1 funded debit conversion rejected without changing any movement
+  ---
+  duration_ms: 0.253163
+  type: 'test'
+  ...
+# Subtest: debt replay uses operation dates rather than entry order
+ok 144 - debt replay uses operation dates rather than entry order
+  ---
+  duration_ms: 0.266322
+  type: 'test'
+  ...
+# Subtest: P2 horizon composition and partial return invariant; receivable never expected income
+ok 145 - P2 horizon composition and partial return invariant; receivable never expected income
+  ---
+  duration_ms: 2.885517
+  type: 'test'
+  ...
+# Subtest: P2 known date follows horizons and arrears; unknown date in all only; no fabricated due instance
+ok 146 - P2 known date follows horizons and arrears; unknown date in all only; no fabricated due instance
+  ---
+  duration_ms: 0.582237
+  type: 'test'
+  ...
+# Subtest: P2 credit+ordinary payment+debt compose independent IDs once; potential duplicate needs explicit acknowledgement
+ok 147 - P2 credit+ordinary payment+debt compose independent IDs once; potential duplicate needs explicit acknowledgement
+  ---
+  duration_ms: 2.610082
+  type: 'test'
+  ...
+# Subtest: P2 protected external copy/reset financial and independent restore retain debt and canonical links
+ok 148 - P2 protected external copy/reset financial and independent restore retain debt and canonical links
+  ---
+  duration_ms: 420.335379
+  type: 'test'
+  ...
+# Subtest: P2 protected external copy/reset categories and independent restore retain debt and canonical links
+ok 149 - P2 protected external copy/reset categories and independent restore retain debt and canonical links
+  ---
+  duration_ms: 420.345834
+  type: 'test'
+  ...
+# Subtest: P2 protected external copy/reset all and independent restore retain debt and canonical links
+ok 150 - P2 protected external copy/reset all and independent restore retain debt and canonical links
+  ---
+  duration_ms: 421.631647
+  type: 'test'
+  ...
+# Subtest: P2 creation/repayment quota abort, CAS and idempotent retry leave no orphan movement
+ok 151 - P2 creation/repayment quota abort, CAS and idempotent retry leave no orphan movement
+  ---
+  duration_ms: 258.700514
+  type: 'test'
+  ...
+# Subtest: P2 tagged debt drafts save without money/obligation and are consumed only after successful action
+ok 152 - P2 tagged debt drafts save without money/obligation and are consumed only after successful action
+  ---
+  duration_ms: 0.348403
+  type: 'test'
+  ...
+# Subtest: P2 password/PIN changes retain exact debt payload, old backup and recovery with same crypto architecture
+ok 153 - P2 password/PIN changes retain exact debt payload, old backup and recovery with same crypto architecture
+  ---
+  duration_ms: 826.274548
+  type: 'test'
+  ...
+# Subtest: P2 owe existing has no cash movement; partial return excludes ordinary income/expense
+ok 154 - P2 owe existing has no cash movement; partial return excludes ordinary income/expense
+  ---
+  duration_ms: 0.678168
+  type: 'test'
+  ...
+# Subtest: P2 owed existing has no cash movement; partial return excludes ordinary income/expense
+ok 155 - P2 owed existing has no cash movement; partial return excludes ordinary income/expense
+  ---
+  duration_ms: 0.261575
+  type: 'test'
+  ...
+# Subtest: P2 owed now creates exactly one loan-out and one obligation
+ok 156 - P2 owed now creates exactly one loan-out and one obligation
+  ---
+  duration_ms: 0.262606
+  type: 'test'
+  ...
+# Subtest: P2 owe now creates exactly one loan-in and one obligation
+ok 157 - P2 owe now creates exactly one loan-in and one obligation
+  ---
+  duration_ms: 0.242507
+  type: 'test'
+  ...
+# Subtest: P2 repayments edit/cancel through canonical operations recompute remainder and keep audit
+ok 158 - P2 repayments edit/cancel through canonical operations recompute remainder and keep audit
+  ---
+  duration_ms: 0.74784
+  type: 'test'
+  ...
+# Subtest: P2 repeated creation and repayment request IDs never duplicate cash
+ok 159 - P2 repeated creation and repayment request IDs never duplicate cash
+  ---
+  duration_ms: 0.629096
+  type: 'test'
+  ...
+# Subtest: P2 zero/negative/unsafe/overpay/wrong account and credit account fail atomically
+ok 160 - P2 zero/negative/unsafe/overpay/wrong account and credit account fail atomically
+  ---
+  duration_ms: 0.988615
+  type: 'test'
+  ...
+# Subtest: P2 fully repaid archive cannot hide reopened balance after fact cancellation or principal edit
+ok 161 - P2 fully repaid archive cannot hide reopened balance after fact cancellation or principal edit
+  ---
+  duration_ms: 0.836442
+  type: 'test'
+  ...
+# Subtest: P2 existing obligation edit cannot undercut repayments or change direction with facts
+ok 162 - P2 existing obligation edit cannot undercut repayments or change direction with facts
+  ---
+  duration_ms: 1.058397
+  type: 'test'
+  ...
+# Subtest: P2 source fact edits derive amount/date; cancellation with active returns rejected
+ok 163 - P2 source fact edits derive amount/date; cancellation with active returns rejected
+  ---
+  duration_ms: 1.178365
+  type: 'test'
+  ...
+# Subtest: P2 historic canonical loan and repayment link explicitly without another posting; external transfer never reclassified
+ok 164 - P2 historic canonical loan and repayment link explicitly without another posting; external transfer never reclassified
+  ---
+  duration_ms: 1.579705
+  type: 'test'
+  ...
+# Subtest: P2 queries leave old P1.2 documents without debt extension or writes
+ok 165 - P2 queries leave old P1.2 documents without debt extension or writes
+  ---
+  duration_ms: 0.252451
+  type: 'test'
+  ...
+# Subtest: P2 matrix owe/now/undated full return, result period and invalid references
+ok 166 - P2 matrix owe/now/undated full return, result period and invalid references
+  ---
+  duration_ms: 1.382455
+  type: 'test'
+  ...
+# Subtest: P2 matrix owe/now/dated full return, result period and invalid references
+ok 167 - P2 matrix owe/now/dated full return, result period and invalid references
+  ---
+  duration_ms: 1.185575
+  type: 'test'
+  ...
+# Subtest: P2 matrix owe/existing/undated full return, result period and invalid references
+ok 168 - P2 matrix owe/existing/undated full return, result period and invalid references
+  ---
+  duration_ms: 0.929688
+  type: 'test'
+  ...
+# Subtest: P2 matrix owe/existing/dated full return, result period and invalid references
+ok 169 - P2 matrix owe/existing/dated full return, result period and invalid references
+  ---
+  duration_ms: 0.93033
+  type: 'test'
+  ...
+# Subtest: P2 matrix owed/now/undated full return, result period and invalid references
+ok 170 - P2 matrix owed/now/undated full return, result period and invalid references
+  ---
+  duration_ms: 1.015495
+  type: 'test'
+  ...
+# Subtest: P2 matrix owed/now/dated full return, result period and invalid references
+ok 171 - P2 matrix owed/now/dated full return, result period and invalid references
+  ---
+  duration_ms: 1.160739
+  type: 'test'
+  ...
+# Subtest: P2 matrix owed/existing/undated full return, result period and invalid references
+ok 172 - P2 matrix owed/existing/undated full return, result period and invalid references
+  ---
+  duration_ms: 0.825054
+  type: 'test'
+  ...
+# Subtest: P2 matrix owed/existing/dated full return, result period and invalid references
+ok 173 - P2 matrix owed/existing/dated full return, result period and invalid references
+  ---
+  duration_ms: 0.844283
+  type: 'test'
+  ...
+# Subtest: P2 operation cannot belong to two debts; changed request IDs reject and unlinked historical loan editor remains restricted
+ok 174 - P2 operation cannot belong to two debts; changed request IDs reject and unlinked historical loan editor remains restricted
+  ---
+  duration_ms: 0.690286
+  type: 'test'
+  ...
+# Subtest: P2 archive principal increase reopens and stale canonical edits preserve original document
+ok 175 - P2 archive principal increase reopens and stale canonical edits preserve original document
+  ---
+  duration_ms: 0.831474
+  type: 'test'
+  ...
+# Subtest: P2 stale agreement edit cannot overwrite later metadata and one request ID cannot change the creation payload
+ok 176 - P2 stale agreement edit cannot overwrite later metadata and one request ID cannot change the creation payload
+  ---
+  duration_ms: 0.48275
+  type: 'test'
+  ...
+# Subtest: P2 owe aggregate remainder cannot exceed safe integer range even when each debt is valid
+ok 177 - P2 owe aggregate remainder cannot exceed safe integer range even when each debt is valid
+  ---
+  duration_ms: 0.537561
+  type: 'test'
+  ...
+# Subtest: P2 owed aggregate remainder cannot exceed safe integer range even when each debt is valid
+ok 178 - P2 owed aggregate remainder cannot exceed safe integer range even when each debt is valid
+  ---
+  duration_ms: 0.36706
+  type: 'test'
+  ...
+# Subtest: feedback stays FIFO with exactly one current notification
+ok 179 - feedback stays FIFO with exactly one current notification
+  ---
+  duration_ms: 0.185583
+  type: 'test'
+  ...
+# Subtest: an error interrupts success and drops stale queued successes
+ok 180 - an error interrupts success and drops stale queued successes
+  ---
+  duration_ms: 0.091735
+  type: 'test'
+  ...
+# Subtest: clear drops callbacks without running a mutation
+ok 181 - clear drops callbacks without running a mutation
+  ---
+  duration_ms: 0.08821
+  type: 'test'
+  ...
+# Subtest: a confirmed success replaces the stale error after a manual retry
+ok 182 - a confirmed success replaces the stale error after a manual retry
+  ---
+  duration_ms: 0.08157
+  type: 'test'
+  ...
+# Subtest: optional UI preferences preserve legacy documents and independently gate ordinary levels
+ok 183 - optional UI preferences preserve legacy documents and independently gate ordinary levels
+  ---
+  duration_ms: 0.180015
+  type: 'test'
+  ...
+# Subtest: required errors persist, ordinary messages cannot erase them, required queue stays ordered
+ok 184 - required errors persist, ordinary messages cannot erase them, required queue stays ordered
+  ---
+  duration_ms: 0.123973
+  type: 'test'
+  ...
+# Subtest: financial snapshots require a committed action and contain actual operation data only
+ok 185 - financial snapshots require a committed action and contain actual operation data only
+  ---
+  duration_ms: 0.62481
+  type: 'test'
+  ...
+# Subtest: draft, plan and settings confirmations never invent a transaction; security bypasses ordinary preferences
+ok 186 - draft, plan and settings confirmations never invent a transaction; security bypasses ordinary preferences
+  ---
+  duration_ms: 0.193014
+  type: 'test'
+  ...
+# Subtest: repeated identical errors replace their stale retry callback without multiplying critical queue entries
+ok 187 - repeated identical errors replace their stale retry callback without multiplying critical queue entries
+  ---
+  duration_ms: 0.105866
+  type: 'test'
+  ...
+# Subtest: optional UI settings survive encrypted roundtrip without schema or financial migrations
+ok 188 - optional UI settings survive encrypted roundtrip without schema or financial migrations
+  ---
+  duration_ms: 340.814502
+  type: 'test'
+  ...
+# Subtest: P3 common history records allocation/account/goal and actual progress, not another financial ledger
+ok 189 - P3 common history records allocation/account/goal and actual progress, not another financial ledger
+  ---
+  duration_ms: 4.645488
+  type: 'test'
+  ...
+# Subtest: P3 common closed goal history reflects real cancellation and explicit detachment
+ok 190 - P3 common closed goal history reflects real cancellation and explicit detachment
+  ---
+  duration_ms: 3.336521
+  type: 'test'
+  ...
+# Subtest: P3 A2 financial counters/external proof/cleanup and independent exact restore
+ok 191 - P3 A2 financial counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 432.185125
+  type: 'test'
+  ...
+# Subtest: P3 A2 categories counters/external proof/cleanup and independent exact restore
+ok 192 - P3 A2 categories counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 421.560176
+  type: 'test'
+  ...
+# Subtest: P3 A2 all counters/external proof/cleanup and independent exact restore
+ok 193 - P3 A2 all counters/external proof/cleanup and independent exact restore
+  ---
+  duration_ms: 422.045045
+  type: 'test'
+  ...
+# Subtest: P3 quota on create/use leaves neither orphan entity nor fact; CAS and repeat request exact
+ok 194 - P3 quota on create/use leaves neither orphan entity nor fact; CAS and repeat request exact
+  ---
+  duration_ms: 252.865942
+  type: 'test'
+  ...
+# Subtest: P3 password/PIN/recovery preserve root/operations and earlier external copy
+ok 195 - P3 password/PIN/recovery preserve root/operations and earlier external copy
+  ---
+  duration_ms: 836.482508
+  type: 'test'
+  ...
+# Subtest: P3 draft is encrypted intent, not money or goal; successful creation consumes it atomically
+ok 196 - P3 draft is encrypted intent, not money or goal; successful creation consumes it atomically
+  ---
+  duration_ms: 0.361563
+  type: 'test'
+  ...
+# Subtest: P3 genuine old P2-shaped document opens without any automatic write or extension
+ok 197 - P3 genuine old P2-shaped document opens without any automatic write or extension
+  ---
+  duration_ms: 171.773482
+  type: 'test'
+  ...
+# Subtest: P3 validly encrypted malformed linkage rejected during restore, active vault unchanged
+ok 198 - P3 validly encrypted malformed linkage rejected during restore, active vault unchanged
+  ---
+  duration_ms: 340.847411
+  type: 'test'
+  ...
+# Subtest: P3 persisted use/edit intents cannot reference missing reserves, goals or facts
+ok 199 - P3 persisted use/edit intents cannot reference missing reserves, goals or facts
+  ---
+  duration_ms: 166.323951
+  type: 'test'
+  ...
+# Subtest: P3 old P2 reads are pure, optional root absent; no recommendation materializes a plan
+ok 200 - P3 old P2 reads are pure, optional root absent; no recommendation materializes a plan
+  ---
+  duration_ms: 0.497272
+  type: 'test'
+  ...
+# Subtest: P3 creation/allocate/release idempotent and changed payload IDs rejected
+ok 201 - P3 creation/allocate/release idempotent and changed payload IDs rejected
+  ---
+  duration_ms: 0.623868
+  type: 'test'
+  ...
+# Subtest: P3 progress can exceed target without auto-close; stale metadata does not overwrite
+ok 202 - P3 progress can exceed target without auto-close; stale metadata does not overwrite
+  ---
+  duration_ms: 0.805275
+  type: 'test'
+  ...
+# Subtest: P3 recommendation missing/expired date suppressed; leap calendar and inclusive remaining months explicit
+ok 203 - P3 recommendation missing/expired date suppressed; leap calendar and inclusive remaining months explicit
+  ---
+  duration_ms: 0.327111
+  type: 'test'
+  ...
+# Subtest: P3 explicit whole purchase association may consume only part of one reserve; no purchase double assignment
+ok 204 - P3 explicit whole purchase association may consume only part of one reserve; no purchase double assignment
+  ---
+  duration_ms: 1.137565
+  type: 'test'
+  ...
+# Subtest: P3 split category operation remains one whole purchase/goal; refund totals correct
+ok 205 - P3 split category operation remains one whole purchase/goal; refund totals correct
+  ---
+  duration_ms: 0.973753
+  type: 'test'
+  ...
+# Subtest: P3 edit actual amount down/up changes progress only, records consumption and reduced-net warning
+ok 206 - P3 edit actual amount down/up changes progress only, records consumption and reduced-net warning
+  ---
+  duration_ms: 0.987253
+  type: 'test'
+  ...
+# Subtest: P3 completed goal retains closed snapshot and honest subsequent refund, detached balance independent
+ok 207 - P3 completed goal retains closed snapshot and honest subsequent refund, detached balance independent
+  ---
+  duration_ms: 0.991289
+  type: 'test'
+  ...
+# Subtest: P3 P1.2 payment10000/reserve6000 then partial3000 uses one canonical expense, free invariant
+ok 208 - P3 P1.2 payment10000/reserve6000 then partial3000 uses one canonical expense, free invariant
+  ---
+  duration_ms: 2.508542
+  type: 'test'
+  ...
+# Subtest: P3 unrelated existing expense cannot settle linked payment or debt
+ok 209 - P3 unrelated existing expense cannot settle linked payment or debt
+  ---
+  duration_ms: 0.680501
+  type: 'test'
+  ...
+# Subtest: P3 moved payment keeps identity; source account conflict warns and asserts no coverage
+ok 210 - P3 moved payment keeps identity; source account conflict warns and asserts no coverage
+  ---
+  duration_ms: 1.109633
+  type: 'test'
+  ...
+# Subtest: P3 no automatic transfer; archived reserve only at zero and source stays immutable
+ok 211 - P3 no automatic transfer; archived reserve only at zero and source stays immutable
+  ---
+  duration_ms: 1.105146
+  type: 'test'
+  ...
+# Subtest: P3 strict document refs/version/actions/amounts reject malformed protected payload; tiles validated
+ok 212 - P3 strict document refs/version/actions/amounts reject malformed protected payload; tiles validated
+  ---
+  duration_ms: 2.511887
+  type: 'test'
+  ...
+# Subtest: P3 aggregate reserve amounts reject unsafe restoration even if each entry safe, no account-balance fiction
+ok 213 - P3 aggregate reserve amounts reject unsafe restoration even if each entry safe, no account-balance fiction
+  ---
+  duration_ms: 0.417535
+  type: 'test'
+  ...
+# Subtest: P3 new use cannot silently spend another reserve; independent historical fact stays allowed and linkable
+ok 214 - P3 new use cannot silently spend another reserve; independent historical fact stays allowed and linkable
+  ---
+  duration_ms: 0.867958
+  type: 'test'
+  ...
+# Subtest: P3 restoration rejects contradictory active/detached usage flags
+ok 215 - P3 restoration rejects contradictory active/detached usage flags
+  ---
+  duration_ms: 0.990678
+  type: 'test'
+  ...
+# Subtest: P3 many independent goals/reserves retain exact sums/history and closure does not touch neighboring goals
+ok 216 - P3 many independent goals/reserves retain exact sums/history and closure does not touch neighboring goals
+  ---
+  duration_ms: 122.749408
+  type: 'test'
+  ...
+# Subtest: P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+ok 217 - P3 reserve30000 account/10000 assign +5000 -4000: no actual movement; free excludes once
+  ---
+  duration_ms: 0.568286
+  type: 'test'
+  ...
+# Subtest: P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+ok 218 - P3 allocations cannot reuse account money, spend credit limit, go negative or mutate on failure
+  ---
+  duration_ms: 0.905113
+  type: 'test'
+  ...
+# Subtest: P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+ok 219 - P3 use3000 new fact then2000 existing: reserve11000→8000→6000, no second debit/repeated request
+  ---
+  duration_ms: 1.439599
+  type: 'test'
+  ...
+# Subtest: P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+ok 220 - P3 save goal8000/20000 is40%; planned12000 is not allocated money; recommendation is no plan
+  ---
+  duration_ms: 0.592863
+  type: 'test'
+  ...
+# Subtest: P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+ok 221 - P3 purchase goal8000 reserved +3000 spent=11000/55%; refund/cancel never auto-replenish reserve
+  ---
+  duration_ms: 1.828372
+  type: 'test'
+  ...
+# Subtest: P3 completed/release requires explicit residual choice, preserves cash and closed history
+ok 222 - P3 completed/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 1.176933
+  type: 'test'
+  ...
+# Subtest: P3 completed/detach requires explicit residual choice, preserves cash and closed history
+ok 223 - P3 completed/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.72721
+  type: 'test'
+  ...
+# Subtest: P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+ok 224 - P3 cancelled/release requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 0.746388
+  type: 'test'
+  ...
+# Subtest: P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+ok 225 - P3 cancelled/detach requires explicit residual choice, preserves cash and closed history
+  ---
+  duration_ms: 1.774351
+  type: 'test'
+  ...
+# Subtest: P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+ok 226 - P3 debt10000 covered6000 at cash20000: free10000; actual partial repayment is not a purchase
+  ---
+  duration_ms: 5.198521
+  type: 'test'
+  ...
+# Subtest: P3 independent expense can underfund reserve without rewriting history or blocking fact
+ok 227 - P3 independent expense can underfund reserve without rewriting history or blocking fact
+  ---
+  duration_ms: 0.541898
+  type: 'test'
+  ...
+# Subtest: P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+ok 228 - P3 source mismatch rejects use atomically; source edit requires explicit detach, no reserve restoration
+  ---
+  duration_ms: 1.080271
+  type: 'test'
+  ...
+# Subtest: five shared destinations put Home exactly third; both swipe directions stop at edges
+ok 229 - five shared destinations put Home exactly third; both swipe directions stop at edges
+  ---
+  duration_ms: 0.143181
+  type: 'test'
+  ...
+# Subtest: every root removes previous navigation trails; one Back removes one secondary step
+ok 230 - every root removes previous navigation trails; one Back removes one secondary step
+  ---
+  duration_ms: 0.141478
+  type: 'test'
+  ...
+# Subtest: repeated root transitions never grow trail; same secondary target is idempotent
+ok 231 - repeated root transitions never grow trail; same secondary target is idempotent
+  ---
+  duration_ms: 0.220865
+  type: 'test'
+  ...
+# Subtest: expense/income/transfer amounts, IDs and details are independent and survive switches
+ok 232 - expense/income/transfer amounts, IDs and details are independent and survive switches
+  ---
+  duration_ms: 0.308114
+  type: 'test'
+  ...
+# Subtest: saving active type can clear that type while retaining other unfinished types
+ok 233 - saving active type can clear that type while retaining other unfinished types
+  ---
+  duration_ms: 0.094018
+  type: 'test'
+  ...
+# Subtest: account or date alone changed is meaningful; untouched defaults are clean
+ok 234 - account or date alone changed is meaningful; untouched defaults are clean
+  ---
+  duration_ms: 0.131414
+  type: 'test'
+  ...
+# Subtest: only clear horizontal gestures inside safe edges produce a direction
+ok 235 - only clear horizontal gestures inside safe edges produce a direction
+  ---
+  duration_ms: 0.231241
+  type: 'test'
+  ...
+# Subtest: ignores left system edge
+ok 236 - ignores left system edge
+  ---
+  duration_ms: 0.136691
+  type: 'test'
+  ...
+# Subtest: ignores right system edge
+ok 237 - ignores right system edge
+  ---
+  duration_ms: 0.060268
+  type: 'test'
+  ...
+# Subtest: ignores ends at edge
+ok 238 - ignores ends at edge
+  ---
+  duration_ms: 0.050644
+  type: 'test'
+  ...
+# Subtest: ignores vertical
+ok 239 - ignores vertical
+  ---
+  duration_ms: 0.049483
+  type: 'test'
+  ...
+# Subtest: ignores short accidental motion
+ok 240 - ignores short accidental motion
+  ---
+  duration_ms: 0.045356
+  type: 'test'
+  ...
+# Subtest: ignores diagonal
+ok 241 - ignores diagonal
+  ---
+  duration_ms: 0.046889
+  type: 'test'
+  ...
+# Subtest: ignores long hold
+ok 242 - ignores long hold
+  ---
+  duration_ms: 0.044425
+  type: 'test'
+  ...
+# Subtest: ignores vertical excursion then horizontal
+ok 243 - ignores vertical excursion then horizontal
+  ---
+  duration_ms: 0.041671
+  type: 'test'
+  ...
+# Subtest: ignores blocked input/dialog/keyboard
+ok 244 - ignores blocked input/dialog/keyboard
+  ---
+  duration_ms: 0.045567
+  type: 'test'
+  ...
+# Subtest: operation type swipes use a separate finite list
+ok 245 - operation type swipes use a separate finite list
+  ---
+  duration_ms: 0.07427
+  type: 'test'
+  ...
+# Subtest: snapshot detects edits and returns to clean when original values are restored
+ok 246 - snapshot detects edits and returns to clean when original values are restored
+  ---
+  duration_ms: 0.322144
+  type: 'test'
+  ...
+# Subtest: search alone is view state, not an unsaved edit
+ok 247 - search alone is view state, not an unsaved edit
+  ---
+  duration_ms: 0.146666
+  type: 'test'
+  ...
+# Subtest: checkbox selection and file identity participate in snapshot
+ok 248 - checkbox selection and file identity participate in snapshot
+  ---
+  duration_ms: 0.179213
+  type: 'test'
+  ...
+# Subtest: outside tap closes exactly once and cancels focus-changing pointer default
+ok 249 - outside tap closes exactly once and cancels focus-changing pointer default
+  ---
+  duration_ms: 0.348984
+  type: 'test'
+  ...
+# Subtest: starting inside, releasing outside, a large drag and cancelled pointers do not dismiss
+ok 250 - starting inside, releasing outside, a large drag and cancelled pointers do not dismiss
+  ---
+  duration_ms: 0.132425
+  type: 'test'
+  ...
+# Subtest: a second pointer cannot complete a first pointer dismissal
+ok 251 - a second pointer cannot complete a first pointer dismissal
+  ---
+  duration_ms: 0.076172
+  type: 'test'
+  ...
+# Subtest: P4 unallocated modern fee not inherited into transfer category
+ok 252 - P4 unallocated modern fee not inherited into transfer category
+  ---
+  duration_ms: 1.007803
+  type: 'test'
+  ...
+# Subtest: P4 safe-integer rule/derived cents remain exact; no unsafe conversion or block on canon facts
+ok 253 - P4 safe-integer rule/derived cents remain exact; no unsafe conversion or block on canon facts
+  ---
+  duration_ms: 1.620605
+  type: 'test'
+  ...
+# Subtest: P4 malformed signed rule/settings references reject before persistence; period strict
+ok 254 - P4 malformed signed rule/settings references reject before persistence; period strict
+  ---
+  duration_ms: 1.843504
+  type: 'test'
+  ...
+# Subtest: P4 archived rules retained; duplicate active scope safe refusal and restore conflict atomic
+ok 255 - P4 archived rules retained; duplicate active scope safe refusal and restore conflict atomic
+  ---
+  duration_ms: 1.257571
+  type: 'test'
+  ...
+# Subtest: P4 current classification moves parent totals; archived category remains counted
+ok 256 - P4 current classification moves parent totals; archived category remains counted
+  ---
+  duration_ms: 1.190743
+  type: 'test'
+  ...
+# Subtest: P4 explicit reassign historical rule permits merge; preexisting merged allocations resolve once
+ok 257 - P4 explicit reassign historical rule permits merge; preexisting merged allocations resolve once
+  ---
+  duration_ms: 1.143333
+  type: 'test'
+  ...
+# Subtest: P4 settings do not create root; threshold arithmetic exact around80 at tiny amount
+ok 258 - P4 settings do not create root; threshold arithmetic exact around80 at tiny amount
+  ---
+  duration_ms: 0.678799
+  type: 'test'
+  ...
+# Subtest: P4 unfinished blank-month intent can be saved without creating a rule
+ok 259 - P4 unfinished blank-month intent can be saved without creating a rule
+  ---
+  duration_ms: 0.363314
+  type: 'test'
+  ...
+# Subtest: P4 detail contributions use only matched split parts and signed actual refund
+ok 260 - P4 detail contributions use only matched split parts and signed actual refund
+  ---
+  duration_ms: 0.750145
+  type: 'test'
+  ...
+# Subtest: P4 maximum imported rule metadata/draft preserves every cent without numeric reparsing
+ok 261 - P4 maximum imported rule metadata/draft preserves every cent without numeric reparsing
+  ---
+  duration_ms: 0.546675
+  type: 'test'
+  ...
+# Subtest: P4 common history captures rule creation/change/archive and derived spending without second ledger
+ok 262 - P4 common history captures rule creation/change/archive and derived spending without second ledger
+  ---
+  duration_ms: 1.120809
+  type: 'test'
+  ...
+# Subtest: P4 warning preferences use encrypted existing settings history
+ok 263 - P4 warning preferences use encrypted existing settings history
+  ---
+  duration_ms: 0.223379
+  type: 'test'
+  ...
+# Subtest: P4 A2 financial counts/rules/settings/protection and independent exact recovery
+ok 264 - P4 A2 financial counts/rules/settings/protection and independent exact recovery
+  ---
+  duration_ms: 415.735647
+  type: 'test'
+  ...
+# Subtest: P4 A2 categories counts/rules/settings/protection and independent exact recovery
+ok 265 - P4 A2 categories counts/rules/settings/protection and independent exact recovery
+  ---
+  duration_ms: 412.446837
+  type: 'test'
+  ...
+# Subtest: P4 A2 all counts/rules/settings/protection and independent exact recovery
+ok 266 - P4 A2 all counts/rules/settings/protection and independent exact recovery
+  ---
+  duration_ms: 435.866938
+  type: 'test'
+  ...
+# Subtest: P4 quota/create rollback, peer CAS, replay and unchanged cash/free
+ok 267 - P4 quota/create rollback, peer CAS, replay and unchanged cash/free
+  ---
+  duration_ms: 345.044868
+  type: 'test'
+  ...
+# Subtest: P4 warning preferences and rules survive password/PIN/recovery and earlier file
+ok 268 - P4 warning preferences and rules survive password/PIN/recovery and earlier file
+  ---
+  duration_ms: 660.714991
+  type: 'test'
+  ...
+# Subtest: P4 P3 protected document unlock and readonly queries preserve ciphertext and absent extension
+ok 269 - P4 P3 protected document unlock and readonly queries preserve ciphertext and absent extension
+  ---
+  duration_ms: 164.689715
+  type: 'test'
+  ...
+# Subtest: P4 encrypted draft is intent only, atomic consume; stale/invalid references rejected
+ok 270 - P4 encrypted draft is intent only, atomic consume; stale/invalid references rejected
+  ---
+  duration_ms: 170.457405
+  type: 'test'
+  ...
+# Subtest: P4 signed-but-invalid category payload rejected before active restore replacement
+ok 271 - P4 signed-but-invalid category payload rejected before active restore replacement
+  ---
+  duration_ms: 249.225192
+  type: 'test'
+  ...
+# Subtest: P4 notices human/financial not receipt; default80 and actual exceeded money
+ok 272 - P4 notices human/financial not receipt; default80 and actual exceeded money
+  ---
+  duration_ms: 1.463124
+  type: 'test'
+  ...
+# Subtest: P4 restore opt-out, financial/master permissions, no read/metadata/failed-action alerts
+ok 273 - P4 restore opt-out, financial/master permissions, no read/metadata/failed-action alerts
+  ---
+  duration_ms: 0.553695
+  type: 'test'
+  ...
+# Subtest: P4 fall below and explicit re-cross may warn; same state/no-op does not
+ok 274 - P4 fall below and explicit re-cross may warn; same state/no-op does not
+  ---
+  duration_ms: 1.213326
+  type: 'test'
+  ...
+# Subtest: P4 new/current rules or changing threshold never emits past spending as fresh warning
+ok 275 - P4 new/current rules or changing threshold never emits past spending as fresh warning
+  ---
+  duration_ms: 0.642456
+  type: 'test'
+  ...
+# Subtest: P4 pure P3 reads; create changes neither cash nor forecast
+ok 276 - P4 pure P3 reads; create changes neither cash nor forecast
+  ---
+  duration_ms: 0.597419
+  type: 'test'
+  ...
+# Subtest: P4 parent6000+veg3000-refund1000=8000, child2000, then expense3000 goes through at11000
+ok 277 - P4 parent6000+veg3000-refund1000=8000, child2000, then expense3000 goes through at11000
+  ---
+  duration_ms: 1.425248
+  type: 'test'
+  ...
+# Subtest: P4 no carryover/implicit repeat; next-month refund can make net negative
+ok 278 - P4 no carryover/implicit repeat; next-month refund can make net negative
+  ---
+  duration_ms: 0.494949
+  type: 'test'
+  ...
+# Subtest: P4 100 split leaves and mixed allocations counted once; uncategorized rule forbidden
+ok 279 - P4 100 split leaves and mixed allocations counted once; uncategorized rule forbidden
+  ---
+  duration_ms: 8.335549
+  type: 'test'
+  ...
+# Subtest: P4 date/allocation edits and cancel recalculate current facts
+ok 280 - P4 date/allocation edits and cancel recalculate current facts
+  ---
+  duration_ms: 1.046341
+  type: 'test'
+  ...
+# Subtest: P4 external transfer/fee once; internal transfer/pending/cancel/adjustment excluded
+ok 281 - P4 external transfer/fee once; internal transfer/pending/cancel/adjustment excluded
+  ---
+  duration_ms: 1.150824
+  type: 'test'
+  ...
+# Subtest: P4 credit purchase once not repayment; plan only when real payment confirmed
+ok 282 - P4 credit purchase once not repayment; plan only when real payment confirmed
+  ---
+  duration_ms: 1.287816
+  type: 'test'
+  ...
+# Subtest: P4 principal and reserves not expenses; only canonical reserve purchase counted
+ok 283 - P4 principal and reserves not expenses; only canonical reserve purchase counted
+  ---
+  duration_ms: 1.961697
+  type: 'test'
+  ...
+# Subtest: P4 79/80/81/100/101 distinct states; only confirmed upward crossings
+ok 284 - P4 79/80/81/100/101 distinct states; only confirmed upward crossings
+  ---
+  duration_ms: 1.986264
+  type: 'test'
+  ...
+# Subtest: P4 settings immediate/early off preserves card states; no old-month or settings alerts
+ok 285 - P4 settings immediate/early off preserves card states; no old-month or settings alerts
+  ---
+  duration_ms: 1.803394
+  type: 'test'
+  ...
+# Subtest: P4 replay/edit-stale/archive never duplicate rules or move money
+ok 286 - P4 replay/edit-stale/archive never duplicate rules or move money
+  ---
+  duration_ms: 0.626813
+  type: 'test'
+  ...
+# Subtest: P4 category archive/move truthful; merge conflict atomically rejected
+ok 287 - P4 category archive/move truthful; merge conflict atomically rejected
+  ---
+  duration_ms: 1.21613
+  type: 'test'
+  ...
+# Subtest: default date order includes other operation kinds and cancelled records
+ok 288 - default date order includes other operation kinds and cancelled records
+  ---
+  duration_ms: 0.412938
+  type: 'test'
+  ...
+# Subtest: old first reverses chronology and deterministic same-date insertion order
+ok 289 - old first reverses chronology and deterministic same-date insertion order
+  ---
+  duration_ms: 0.106667
+  type: 'test'
+  ...
+# Subtest: conditions are AND across groups and OR within types/accounts
+ok 290 - conditions are AND across groups and OR within types/accounts
+  ---
+  duration_ms: 0.330567
+  type: 'test'
+  ...
+# Subtest: transfer is discoverable by both sender and receiver
+ok 291 - transfer is discoverable by both sender and receiver
+  ---
+  duration_ms: 0.343045
+  type: 'test'
+  ...
+# Subtest: parent includes children, merged aliases and any allocation
+ok 292 - parent includes children, merged aliases and any allocation
+  ---
+  duration_ms: 0.121799
+  type: 'test'
+  ...
+# Subtest: selected merged category resolves to canonical category
+ok 293 - selected merged category resolves to canonical category
+  ---
+  duration_ms: 0.082461
+  type: 'test'
+  ...
+# Subtest: uncategorized includes explicit null, remainder and operations without allocation
+ok 294 - uncategorized includes explicit null, remainder and operations without allocation
+  ---
+  duration_ms: 0.084925
+  type: 'test'
+  ...
+# Subtest: refund has its own filter; is never silently classified as income
+ok 295 - refund has its own filter; is never silently classified as income
+  ---
+  duration_ms: 0.127007
+  type: 'test'
+  ...
+# Subtest: custom dates are inclusive and allow either open endpoint
+ok 296 - custom dates are inclusive and allow either open endpoint
+  ---
+  duration_ms: 0.126847
+  type: 'test'
+  ...
+# Subtest: invalid range blocks results and does not normalize into a different range
+ok 297 - invalid range blocks results and does not normalize into a different range
+  ---
+  duration_ms: 0.068401
+  type: 'test'
+  ...
+# Subtest: month and last seven calendar days use real local calendar across month/year edges
+ok 298 - month and last seven calendar days use real local calendar across month/year edges
+  ---
+  duration_ms: 0.094759
+  type: 'test'
+  ...
+# Subtest: query respects selected conditions and chronology without prefix reranking
+ok 299 - query respects selected conditions and chronology without prefix reranking
+  ---
+  duration_ms: 0.102701
+  type: 'test'
+  ...
+# Subtest: empty sets mean all, sort is not counted as a filtering condition
+ok 300 - empty sets mean all, sort is not counted as a filtering condition
+  ---
+  duration_ms: 0.075331
+  type: 'test'
+  ...
+# Subtest: view transformations preserve document, amounts, dates and settings byte for byte
+ok 301 - view transformations preserve document, amounts, dates and settings byte for byte
+  ---
+  duration_ms: 0.12895
+  type: 'test'
+  ...
+# Subtest: initial balances counted once, integer minor units
+ok 302 - initial balances counted once, integer minor units
+  ---
+  duration_ms: 0.188808
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "0.001"
+ok 303 - reject ambiguous money "0.001"
+  ---
+  duration_ms: 0.08848
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "1e2"
+ok 304 - reject ambiguous money "1e2"
+  ---
+  duration_ms: 0.040861
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "NaN"
+ok 305 - reject ambiguous money "NaN"
+  ---
+  duration_ms: 0.032999
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "12 рублей"
+ok 306 - reject ambiguous money "12 рублей"
+  ---
+  duration_ms: 0.07525
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money ""
+ok 307 - reject ambiguous money ""
+  ---
+  duration_ms: 0.100889
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "1 000"
+ok 308 - reject ambiguous money "1 000"
+  ---
+  duration_ms: 0.032648
+  type: 'test'
+  ...
+# Subtest: reject ambiguous money "1,2,3"
+ok 309 - reject ambiguous money "1,2,3"
+  ---
+  duration_ms: 0.02728
+  type: 'test'
+  ...
+# Subtest: exact decimal addition avoids binary rounding
+ok 310 - exact decimal addition avoids binary rounding
+  ---
+  duration_ms: 0.062832
+  type: 'test'
+  ...
+# Subtest: expense split debits once and attributes categories
+ok 311 - expense split debits once and attributes categories
+  ---
+  duration_ms: 0.162259
+  type: 'test'
+  ...
+# Subtest: split above total rejected before insertion
+ok 312 - split above total rejected before insertion
+  ---
+  duration_ms: 0.122541
+  type: 'test'
+  ...
+# Subtest: income credits correct account and is income
+ok 313 - income credits correct account and is income
+  ---
+  duration_ms: 0.377486
+  type: 'test'
+  ...
+# Subtest: own transfer preserves total and does not change income/expense
+ok 314 - own transfer preserves total and does not change income/expense
+  ---
+  duration_ms: 0.174787
+  type: 'test'
+  ...
+# Subtest: same-account transfer blocked
+ok 315 - same-account transfer blocked
+  ---
+  duration_ms: 0.126826
+  type: 'test'
+  ...
+# Subtest: correction changes balance without income/expense
+ok 316 - correction changes balance without income/expense
+  ---
+  duration_ms: 0.134999
+  type: 'test'
+  ...
+# Subtest: loan-out principal is cash movement but not income/expense
+ok 317 - loan-out principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.219403
+  type: 'test'
+  ...
+# Subtest: loan-in principal is cash movement but not income/expense
+ok 318 - loan-in principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.146646
+  type: 'test'
+  ...
+# Subtest: repayment-out principal is cash movement but not income/expense
+ok 319 - repayment-out principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.102271
+  type: 'test'
+  ...
+# Subtest: repayment-in principal is cash movement but not income/expense
+ok 320 - repayment-in principal is cash movement but not income/expense
+  ---
+  duration_ms: 0.076372
+  type: 'test'
+  ...
+# Subtest: identical operation id idempotent; changed duplicate rejected
+ok 321 - identical operation id idempotent; changed duplicate rejected
+  ---
+  duration_ms: 0.200354
+  type: 'test'
+  ...
+# Subtest: refund reduces expense in refund period and cannot exceed source
+ok 322 - refund reduces expense in refund period and cannot exceed source
+  ---
+  duration_ms: 0.211031
+  type: 'test'
+  ...
+# Subtest: negative balances represent real recorded movement
+ok 323 - negative balances represent real recorded movement
+  ---
+  duration_ms: 0.120618
+  type: 'test'
+  ...
+# Subtest: credit card is not a supported new money account kind
+ok 324 - credit card is not a supported new money account kind
+  ---
+  duration_ms: 0.100367
+  type: 'test'
+  ...
+# Subtest: same category name normalized, no duplicate aliases
+ok 325 - same category name normalized, no duplicate aliases
+  ---
+  duration_ms: 0.165684
+  type: 'test'
+  ...
+# Subtest: one level of subcategories, same type
+ok 326 - one level of subcategories, same type
+  ---
+  duration_ms: 0.13593
+  type: 'test'
+  ...
+# Subtest: rename category retains past operation references
+ok 327 - rename category retains past operation references
+  ---
+  duration_ms: 0.121098
+  type: 'test'
+  ...
+# Subtest: archive preserves history; stops new use
+ok 328 - archive preserves history; stops new use
+  ---
+  duration_ms: 1.502602
+  type: 'test'
+  ...
+# Subtest: nonzero account cannot be archived
+ok 329 - nonzero account cannot be archived
+  ---
+  duration_ms: 0.110903
+  type: 'test'
+  ...
+# Subtest: available does not deduct earmarked obligation twice
+ok 330 - available does not deduct earmarked obligation twice
+  ---
+  duration_ms: 0.256057
+  type: 'test'
+  ...
+# Subtest: future obligations excluded; reserves do not create actual cash
+ok 331 - future obligations excluded; reserves do not create actual cash
+  ---
+  duration_ms: 0.091735
+  type: 'test'
+  ...
+# Subtest: over-reserved obligation does not add cash back
+ok 332 - over-reserved obligation does not add cash back
+  ---
+  duration_ms: 0.147237
+  type: 'test'
+  ...
+# Subtest: unknown account and impossible date rejected
+ok 333 - unknown account and impossible date rejected
+  ---
+  duration_ms: 0.194016
+  type: 'test'
+  ...
+# Subtest: integer overflow blocked
+ok 334 - integer overflow blocked
+  ---
+  duration_ms: 0.334242
+  type: 'test'
+  ...
+# Subtest: unsafe numbers and incompatible schemas rejected on import
+ok 335 - unsafe numbers and incompatible schemas rejected on import
+  ---
+  duration_ms: 0.161127
+  type: 'test'
+  ...
+# Subtest: valid document change log and unknown currency
+ok 336 - valid document change log and unknown currency
+  ---
+  duration_ms: 0.151173
+  type: 'test'
+  ...
+# Subtest: prototype-like ids remain normal keys without prototype pollution
+ok 337 - prototype-like ids remain normal keys without prototype pollution
+  ---
+  duration_ms: 0.248506
+  type: 'test'
+  ...
+# Subtest: numeric editor accepts exact cents with either separator without conversion
+ok 338 - numeric editor accepts exact cents with either separator without conversion
+  ---
+  duration_ms: 0.270167
+  type: 'test'
+  ...
+# Subtest: numeric editor rejects letters, exponent syntax, currency and too many decimals
+ok 339 - numeric editor rejects letters, exponent syntax, currency and too many decimals
+  ---
+  duration_ms: 0.117363
+  type: 'test'
+  ...
+# Subtest: signed balances permit minus but operation amounts do not
+ok 340 - signed balances permit minus but operation amounts do not
+  ---
+  duration_ms: 0.125054
+  type: 'test'
+  ...
+# Subtest: empty and unfinished numeric edits stay editable without being valid money
+ok 341 - empty and unfinished numeric edits stay editable without being valid money
+  ---
+  duration_ms: 0.106416
+  type: 'test'
+  ...
+# Subtest: schema 1 migrates without changing identities, balances or input
+ok 342 - schema 1 migrates without changing identities, balances or input
+  ---
+  duration_ms: 0.432156
+  type: 'test'
+  ...
+# Subtest: schema 1 legacy multi-root split remains readable after migration
+ok 343 - schema 1 legacy multi-root split remains readable after migration
+  ---
+  duration_ms: 0.225382
+  type: 'test'
+  ...
+# Subtest: existing sibling split still debits once
+ok 344 - existing sibling split still debits once
+  ---
+  duration_ms: 0.200545
+  type: 'test'
+  ...
+# Subtest: legacy schema2 cross-parent input still rejects atomically
+ok 345 - legacy schema2 cross-parent input still rejects atomically
+  ---
+  duration_ms: 0.347381
+  type: 'test'
+  ...
+# Subtest: split above total rejects without mutation
+ok 346 - split above total rejects without mutation
+  ---
+  duration_ms: 0.21708
+  type: 'test'
+  ...
+# Subtest: parent category allowed without split
+ok 347 - parent category allowed without split
+  ---
+  duration_ms: 0.176339
+  type: 'test'
+  ...
+# Subtest: transfer extra fee credits full amount and charges once
+ok 348 - transfer extra fee credits full amount and charges once
+  ---
+  duration_ms: 0.265921
+  type: 'test'
+  ...
+# Subtest: fee inside transfer credits net amount with same gross debit
+ok 349 - fee inside transfer credits net amount with same gross debit
+  ---
+  duration_ms: 0.356916
+  type: 'test'
+  ...
+# Subtest: invalid fee fails entire transaction candidate
+ok 350 - invalid fee fails entire transaction candidate
+  ---
+  duration_ms: 0.350255
+  type: 'test'
+  ...
+# Subtest: transfer repeated same request is idempotent
+ok 351 - transfer repeated same request is idempotent
+  ---
+  duration_ms: 0.385467
+  type: 'test'
+  ...
+# Subtest: editing transfer and fee preserves identity with updated net math
+ok 352 - editing transfer and fee preserves identity with updated net math
+  ---
+  duration_ms: 0.436182
+  type: 'test'
+  ...
+# Subtest: editing transfer with no fee keeps cancelled fee history
+ok 353 - editing transfer with no fee keeps cancelled fee history
+  ---
+  duration_ms: 0.398286
+  type: 'test'
+  ...
+# Subtest: zero receiving account cannot be archived while a transfer is pending
+ok 354 - zero receiving account cannot be archived while a transfer is pending
+  ---
+  duration_ms: 0.318179
+  type: 'test'
+  ...
+# Subtest: in transit requires two separate confirmed movements
+ok 355 - in transit requires two separate confirmed movements
+  ---
+  duration_ms: 0.457193
+  type: 'test'
+  ...
+# Subtest: returned transfer principal restores sender, fee stays expense
+ok 356 - returned transfer principal restores sender, fee stays expense
+  ---
+  duration_ms: 0.417364
+  type: 'test'
+  ...
+# Subtest: credit before debit and chronological errors leave original unchanged
+ok 357 - credit before debit and chronological errors leave original unchanged
+  ---
+  duration_ms: 0.493597
+  type: 'test'
+  ...
+# Subtest: cancel transfer also cancels fee; no loss or new income
+ok 358 - cancel transfer also cancels fee; no loss or new income
+  ---
+  duration_ms: 0.316396
+  type: 'test'
+  ...
+# Subtest: edit changes same id and keeps before snapshot
+ok 359 - edit changes same id and keeps before snapshot
+  ---
+  duration_ms: 0.452035
+  type: 'test'
+  ...
+# Subtest: edit draft conflicts with later edit
+ok 360 - edit draft conflicts with later edit
+  ---
+  duration_ms: 0.566924
+  type: 'test'
+  ...
+# Subtest: cancel preserves row but removes all financial effects
+ok 361 - cancel preserves row but removes all financial effects
+  ---
+  duration_ms: 0.281194
+  type: 'test'
+  ...
+# Subtest: partial split refund only reduces corresponding child expense
+ok 362 - partial split refund only reduces corresponding child expense
+  ---
+  duration_ms: 0.510552
+  type: 'test'
+  ...
+# Subtest: cannot cancel purchase with active refund or shrink below refunded amount
+ok 363 - cannot cancel purchase with active refund or shrink below refunded amount
+  ---
+  duration_ms: 0.82235
+  type: 'test'
+  ...
+# Subtest: multiple drafts preserve metadata, never money; only saved operation draft removed
+ok 364 - multiple drafts preserve metadata, never money; only saved operation draft removed
+  ---
+  duration_ms: 0.446807
+  type: 'test'
+  ...
+# Subtest: malformed confidential draft fails import validation
+ok 365 - malformed confidential draft fails import validation
+  ---
+  duration_ms: 0.182218
+  type: 'test'
+  ...
+# Subtest: legacy ciphertext untouched by unlock; first commit archives schema1 atomically
+ok 366 - legacy ciphertext untouched by unlock; first commit archives schema1 atomically
+  ---
+  duration_ms: 413.310118
+  type: 'test'
+  ...
+# Subtest: migration transaction failure preserves both schema1 and empty safety
+ok 367 - migration transaction failure preserves both schema1 and empty safety
+  ---
+  duration_ms: 168.744383
+  type: 'test'
+  ...
+# Subtest: P1.2 move across month preserves identity/partial/history, removes original date only
+ok 368 - P1.2 move across month preserves identity/partial/history, removes original date only
+  ---
+  duration_ms: 1.079128
+  type: 'test'
+  ...
+# Subtest: P1.2 month skip excludes unpaid obligation and forecast; calendar retains skipped event; unskip exact identity
+ok 369 - P1.2 month skip excludes unpaid obligation and forecast; calendar retains skipped event; unskip exact identity
+  ---
+  duration_ms: 0.784715
+  type: 'test'
+  ...
+# Subtest: P1.2 partial debt cannot be hidden by month skip or rewritten as paid instance
+ok 370 - P1.2 partial debt cannot be hidden by month skip or rewritten as paid instance
+  ---
+  duration_ms: 0.942728
+  type: 'test'
+  ...
+# Subtest: P1.2 single-instance conditions do not change February; this-and-future preserves paid periods and31 anchor
+ok 371 - P1.2 single-instance conditions do not change February; this-and-future preserves paid periods and31 anchor
+  ---
+  duration_ms: 0.988836
+  type: 'test'
+  ...
+# Subtest: P1.2 bank failed/unknown are metadata only, availability is explicit known-data estimate, later one actual success
+ok 372 - P1.2 bank failed/unknown are metadata only, availability is explicit known-data estimate, later one actual success
+  ---
+  duration_ms: 0.968315
+  type: 'test'
+  ...
+# Subtest: P1.2 indefinite pause suppresses future unpaid overrides and never reissues missed ones after resume
+ok 373 - P1.2 indefinite pause suppresses future unpaid overrides and never reissues missed ones after resume
+  ---
+  duration_ms: 0.959082
+  type: 'test'
+  ...
+# Subtest: P1.2 indefinite pause retains future partial debt and already-due moved obligations
+ok 374 - P1.2 indefinite pause retains future partial debt and already-due moved obligations
+  ---
+  duration_ms: 0.831143
+  type: 'test'
+  ...
+# Subtest: P1.2 cancelling the sole final fact reopens its obligation even while its parent plan is paused
+ok 375 - P1.2 cancelling the sole final fact reopens its obligation even while its parent plan is paused
+  ---
+  duration_ms: 1.690408
+  type: 'test'
+  ...
+# Subtest: P1.2 batch fixed+variable creates exactly two canonical facts atomically; whole repeated group no-op
+ok 376 - P1.2 batch fixed+variable creates exactly two canonical facts atomically; whole repeated group no-op
+  ---
+  duration_ms: 1.112547
+  type: 'test'
+  ...
+# Subtest: P1.2 error in second batch payment rolls first back too
+ok 377 - P1.2 error in second batch payment rolls first back too
+  ---
+  duration_ms: 0.778436
+  type: 'test'
+  ...
+# Subtest: P1.2 insufficient combined funds leaves every fact/link unchanged
+ok 378 - P1.2 insufficient combined funds leaves every fact/link unchanged
+  ---
+  duration_ms: 0.688974
+  type: 'test'
+  ...
+# Subtest: P1.2 duplicate IDs/instances and mixed stale group fail without completing half a group
+ok 379 - P1.2 duplicate IDs/instances and mixed stale group fail without completing half a group
+  ---
+  duration_ms: 0.596248
+  type: 'test'
+  ...
+# Subtest: P1.2 all optional fields and final links survive copy/reset financial and independent restore
+ok 380 - P1.2 all optional fields and final links survive copy/reset financial and independent restore
+  ---
+  duration_ms: 424.386941
+  type: 'test'
+  ...
+# Subtest: P1.2 all optional fields and final links survive copy/reset categories and independent restore
+ok 381 - P1.2 all optional fields and final links survive copy/reset categories and independent restore
+  ---
+  duration_ms: 418.021879
+  type: 'test'
+  ...
+# Subtest: P1.2 all optional fields and final links survive copy/reset all and independent restore
+ok 382 - P1.2 all optional fields and final links survive copy/reset all and independent restore
+  ---
+  duration_ms: 421.829407
+  type: 'test'
+  ...
+# Subtest: P1.2 batch quota/CAS rollback preserves complete document and PIN; retry creates exactly two expenses in one generation
+ok 383 - P1.2 batch quota/CAS rollback preserves complete document and PIN; retry creates exactly two expenses in one generation
+  ---
+  duration_ms: 419.141952
+  type: 'test'
+  ...
+# Subtest: P1.2 password/PIN changes preserve optional fields, legacy format1 and recovery opening
+ok 384 - P1.2 password/PIN changes preserve optional fields, legacy format1 and recovery opening
+  ---
+  duration_ms: 759.620994
+  type: 'test'
+  ...
+# Subtest: P1.2 legacy P1.1 protected copy reads without lazy migration or writes; explicit new final does not change future estimate
+ok 385 - P1.2 legacy P1.1 protected copy reads without lazy migration or writes; explicit new final does not change future estimate
+  ---
+  duration_ms: 177.306886
+  type: 'test'
+  ...
+# Subtest: P1.2 credit variable final uses B1 debt once; cancelling final restores only original remaining estimate
+ok 386 - P1.2 credit variable final uses B1 debt once; cancelling final restores only original remaining estimate
+  ---
+  duration_ms: 1.545746
+  type: 'test'
+  ...
+# Subtest: P1.2 RED→GREEN variable final 170000 closes estimate200000 and preserves next month
+ok 387 - P1.2 RED→GREEN variable final 170000 closes estimate200000 and preserves next month
+  ---
+  duration_ms: 0.643037
+  type: 'test'
+  ...
+# Subtest: P1.2 RED→GREEN variable final 230000 closes estimate200000 and preserves next month
+ok 388 - P1.2 RED→GREEN variable final 230000 closes estimate200000 and preserves next month
+  ---
+  duration_ms: 0.356645
+  type: 'test'
+  ...
+# Subtest: P1.2 variable600+1100 final closes1700; cancellation reopens remaining1400, prior partial remains
+ok 389 - P1.2 variable600+1100 final closes1700; cancellation reopens remaining1400, prior partial remains
+  ---
+  duration_ms: 0.739819
+  type: 'test'
+  ...
+# Subtest: P1.2 partial at/above estimate requires explicit larger period estimate, never silently increases future
+ok 390 - P1.2 partial at/above estimate requires explicit larger period estimate, never silently increases future
+  ---
+  duration_ms: 1.097695
+  type: 'test'
+  ...
+# Subtest: P1.2 fixed retains cap and does not accept variable full flag as override
+ok 391 - P1.2 fixed retains cap and does not accept variable full flag as override
+  ---
+  duration_ms: 0.466056
+  type: 'test'
+  ...
+# Subtest: P1.2 reads P1.1 snapshots/links without migration or query write; explicit legacy final semantics remain
+ok 392 - P1.2 reads P1.1 snapshots/links without migration or query write; explicit legacy final semantics remain
+  ---
+  duration_ms: 0.57722
+  type: 'test'
+  ...
+# Subtest: P1.2 editing final amount/account/date preserves final closure; cancellation reopens other partials
+ok 393 - P1.2 editing final amount/account/date preserves final closure; cancellation reopens other partials
+  ---
+  duration_ms: 1.044037
+  type: 'test'
+  ...
+# Subtest: P1.2 legacy final edit can explicitly adopt approved actual-total rule
+ok 394 - P1.2 legacy final edit can explicitly adopt approved actual-total rule
+  ---
+  duration_ms: 0.545844
+  type: 'test'
+  ...
+# Subtest: P1.2 editing partial cannot create zero remaining partial or make later final cancellation invalid
+ok 395 - P1.2 editing partial cannot create zero remaining partial or make later final cancellation invalid
+  ---
+  duration_ms: 1.058658
+  type: 'test'
+  ...
+# Subtest: P1.2 legacy closed period edit of earlier partial preserves inferred closing fact
+ok 396 - P1.2 legacy closed period edit of earlier partial preserves inferred closing fact
+  ---
+  duration_ms: 0.744485
+  type: 'test'
+  ...
+# Subtest: P1.2 a second active final marker cannot be introduced by editing an earlier partial
+ok 397 - P1.2 a second active final marker cannot be introduced by editing an earlier partial
+  ---
+  duration_ms: 0.680732
+  type: 'test'
+  ...
+# Subtest: P1.1 finite free-money horizons include only unpaid scheduled obligations, plans never affect actual
+ok 398 - P1.1 finite free-money horizons include only unpaid scheduled obligations, plans never affect actual
+  ---
+  duration_ms: 0.554295
+  type: 'test'
+  ...
+# Subtest: P1.1 debit partial/payment/edit/cancel keep actual plus unpaid arithmetic exact
+ok 399 - P1.1 debit partial/payment/edit/cancel keep actual plus unpaid arithmetic exact
+  ---
+  duration_ms: 0.989356
+  type: 'test'
+  ...
+# Subtest: P1.1 credit-funded expense becomes one B1 credit obligation, not a second planned bill
+ok 400 - P1.1 credit-funded expense becomes one B1 credit obligation, not a second planned bill
+  ---
+  duration_ms: 0.464223
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 financial removes payment rules/history and restores exact external copy
+ok 401 - P1.1 A2 financial removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 420.535873
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 categories removes payment rules/history and restores exact external copy
+ok 402 - P1.1 A2 categories removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 422.595334
+  type: 'test'
+  ...
+# Subtest: P1.1 A2 all removes payment rules/history and restores exact external copy
+ok 403 - P1.1 A2 all removes payment rules/history and restores exact external copy
+  ---
+  duration_ms: 421.678195
+  type: 'test'
+  ...
+# Subtest: P1.1 existing service rejects duplicate/stale saves, rollback preserves plans, access and money
+ok 404 - P1.1 existing service rejects duplicate/stale saves, rollback preserves plans, access and money
+  ---
+  duration_ms: 257.954784
+  type: 'test'
+  ...
+# Subtest: P1.1 shared expense accepts a category split and consumes its operation draft exactly once
+ok 405 - P1.1 shared expense accepts a category split and consumes its operation draft exactly once
+  ---
+  duration_ms: 0.5774
+  type: 'test'
+  ...
+# Subtest: P1.1 A3 password and device PIN changes preserve exact payment data and external-copy recovery
+ok 406 - P1.1 A3 password and device PIN changes preserve exact payment data and external-copy recovery
+  ---
+  duration_ms: 753.80602
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains password and clears every financial collection atomically
+ok 407 - A2 matrix: financial retains password and clears every financial collection atomically
+  ---
+  duration_ms: 441.215586
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains pin and clears every financial collection atomically
+ok 408 - A2 matrix: financial retains pin and clears every financial collection atomically
+  ---
+  duration_ms: 609.338051
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains none and clears every financial collection atomically
+ok 409 - A2 matrix: financial retains none and clears every financial collection atomically
+  ---
+  duration_ms: 444.626701
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains password and clears every financial collection atomically
+ok 410 - A2 matrix: categories retains password and clears every financial collection atomically
+  ---
+  duration_ms: 436.852324
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains pin and clears every financial collection atomically
+ok 411 - A2 matrix: categories retains pin and clears every financial collection atomically
+  ---
+  duration_ms: 600.506192
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains none and clears every financial collection atomically
+ok 412 - A2 matrix: categories retains none and clears every financial collection atomically
+  ---
+  duration_ms: 429.194604
+  type: 'test'
+  ...
+# Subtest: A2: reset requires exact external file, primary credential, original intent and explicit confirmation
+ok 413 - A2: reset requires exact external file, primary credential, original intent and explicit confirmation
+  ---
+  duration_ms: 601.104743
+  type: 'test'
+  ...
+# Subtest: A2 all: removes both stores and protection; external file independently restores every financial value
+ok 414 - A2 all: removes both stores and protection; external file independently restores every financial value
+  ---
+  duration_ms: 430.981494
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: financial
+ok 415 - A2 stale/consumed proof cannot overwrite another tab: financial
+  ---
+  duration_ms: 505.606031
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: categories
+ok 416 - A2 stale/consumed proof cannot overwrite another tab: categories
+  ---
+  duration_ms: 490.892491
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: all
+ok 417 - A2 stale/consumed proof cannot overwrite another tab: all
+  ---
+  duration_ms: 507.05909
+  type: 'test'
+  ...
+# Subtest: A2 partial QuotaExceededError at active rolls back active/access/safety, explicit retry works once
+ok 418 - A2 partial QuotaExceededError at active rolls back active/access/safety, explicit retry works once
+  ---
+  duration_ms: 421.69788
+  type: 'test'
+  ...
+# Subtest: A2 partial QuotaExceededError at safety rolls back active/access/safety, explicit retry works once
+ok 419 - A2 partial QuotaExceededError at safety rolls back active/access/safety, explicit retry works once
+  ---
+  duration_ms: 409.280935
+  type: 'test'
+  ...
+# Subtest: A2 supported legacy migration clears without leaving migration safety
+ok 420 - A2 supported legacy migration clears without leaving migration safety
+  ---
+  duration_ms: 250.234858
+  type: 'test'
+  ...
+# Subtest: A2 unknown persistent extension blocks partial cleanup without guessing its semantics
+ok 421 - A2 unknown persistent extension blocks partial cleanup without guessing its semantics
+  ---
+  duration_ms: 329.054191
+  type: 'test'
+  ...
+# Subtest: A2 cannot authorize deletion against a corrupted persisted vault using an older valid in-memory copy
+ok 422 - A2 cannot authorize deletion against a corrupted persisted vault using an older valid in-memory copy
+  ---
+  duration_ms: 330.109914
+  type: 'test'
+  ...
+# Subtest: reset: incorrect password, PIN and forged proof never delete data
+ok 423 - reset: incorrect password, PIN and forged proof never delete data
+  ---
+  duration_ms: 352.496755
+  type: 'test'
+  ...
+# Subtest: reset: verification/cancellation writes nothing; explicit confirmation removes both stores and memory; external copy stays usable
+ok 424 - reset: verification/cancellation writes nothing; explicit confirmation removes both stores and memory; external copy stays usable
+  ---
+  duration_ms: 492.028661
+  type: 'test'
+  ...
+# Subtest: reset: recovery key is accepted and cannot affect a different database
+ok 425 - reset: recovery key is accepted and cannot affect a different database
+  ---
+  duration_ms: 329.242727
+  type: 'test'
+  ...
+# Subtest: reset: stale confirmation cannot delete a newer revision
+ok 426 - reset: stale confirmation cannot delete a newer revision
+  ---
+  duration_ms: 415.548958
+  type: 'test'
+  ...
+# Subtest: reset: stale tab cannot resurrect deleted data or overwrite a new setup
+ok 427 - reset: stale tab cannot resurrect deleted data or overwrite a new setup
+  ---
+  duration_ms: 492.906327
+  type: 'test'
+  ...
+# Subtest: reset: failure in second clear rolls back vault, device access and safety together
+ok 428 - reset: failure in second clear rolls back vault, device access and safety together
+  ---
+  duration_ms: 326.213828
+  type: 'test'
+  ...
+# Subtest: reset: locking invalidates an old authorization
+ok 429 - reset: locking invalidates an old authorization
+  ---
+  duration_ms: 426.199087
+  type: 'test'
+  ...
+# Subtest: reset: an in-flight password unlock cannot reopen deleted data
+ok 430 - reset: an in-flight password unlock cannot reopen deleted data
+  ---
+  duration_ms: 407.32143
+  type: 'test'
+  ...
+# Subtest: reset: concurrent financial write is serialized by busy guard
+ok 431 - reset: concurrent financial write is serialized by busy guard
+  ---
+  duration_ms: 330.565383
+  type: 'test'
+  ...
+# Subtest: P1.1 optional extension leaves legacy document byte-equivalent on query
+ok 432 - P1.1 optional extension leaves legacy document byte-equivalent on query
+  ---
+  duration_ms: 0.29192
+  type: 'test'
+  ...
+# Subtest: P1.1 monthly anchor survives leap/short months, repeated queries and year boundary
+ok 433 - P1.1 monthly anchor survives leap/short months, repeated queries and year boundary
+  ---
+  duration_ms: 0.727722
+  type: 'test'
+  ...
+# Subtest: P1.1 once, weekly and yearly leap dates have stable identities
+ok 434 - P1.1 once, weekly and yearly leap dates have stable identities
+  ---
+  duration_ms: 0.515639
+  type: 'test'
+  ...
+# Subtest: P1.1 plan changes no actual money; partial and full facts each have one canonical operation/link
+ok 435 - P1.1 plan changes no actual money; partial and full facts each have one canonical operation/link
+  ---
+  duration_ms: 1.24982
+  type: 'test'
+  ...
+# Subtest: P1.1 edit/cancel canonical fact recalculates remaining, preserves link and future tariff
+ok 436 - P1.1 edit/cancel canonical fact recalculates remaining, preserves link and future tariff
+  ---
+  duration_ms: 0.741532
+  type: 'test'
+  ...
+# Subtest: P1.1 overpayment, nonpositive/unsafe amount and future actual date leave all data unchanged
+ok 437 - P1.1 overpayment, nonpositive/unsafe amount and future actual date leave all data unchanged
+  ---
+  duration_ms: 0.799196
+  type: 'test'
+  ...
+# Subtest: P1.1 invalid calendar/type/version/references fail safely
+ok 438 - P1.1 invalid calendar/type/version/references fail safely
+  ---
+  duration_ms: 0.80865
+  type: 'test'
+  ...
+# Subtest: P1.1 current month includes all unpaid arrears, not next month
+ok 439 - P1.1 current month includes all unpaid arrears, not next month
+  ---
+  duration_ms: 0.343947
+  type: 'test'
+  ...
+# Subtest: P1.1 future edit preserves due and prepaid snapshots, early payment never shifts calendar
+ok 440 - P1.1 future edit preserves due and prepaid snapshots, early payment never shifts calendar
+  ---
+  duration_ms: 0.730175
+  type: 'test'
+  ...
+# Subtest: P1.1 indefinite pause preserves arrears/partial debt and resume creates no skipped retroactive dates
+ok 441 - P1.1 indefinite pause preserves arrears/partial debt and resume creates no skipped retroactive dates
+  ---
+  duration_ms: 0.797674
+  type: 'test'
+  ...
+# Subtest: legacy records default to password without writing either row
+ok 442 - legacy records default to password without writing either row
+  ---
+  duration_ms: 162.753899
+  type: 'test'
+  ...
+# Subtest: PIN persists across service restart, leading zeros preserved; encrypted backups contain no local unlock material
+ok 443 - PIN persists across service restart, leading zeros preserved; encrypted backups contain no local unlock material
+  ---
+  duration_ms: 401.795587
+  type: 'test'
+  ...
+# Subtest: fifth PIN attempt may succeed, five wrong attempts survive reload and require primary credentials
+ok 444 - fifth PIN attempt may succeed, five wrong attempts survive reload and require primary credentials
+  ---
+  duration_ms: 1244.039554
+  type: 'test'
+  ...
+# Subtest: password change retains PIN, recovery key, all money and old backup password semantics
+ok 445 - password change retains PIN, recovery key, all money and old backup password semantics
+  ---
+  duration_ms: 838.584611
+  type: 'test'
+  ...
+# Subtest: no-check mode stores only nonextractable device wrapper; removing it restores password entry
+ok 446 - no-check mode stores only nonextractable device wrapper; removing it restores password entry
+  ---
+  duration_ms: 332.305229
+  type: 'test'
+  ...
+# Subtest: recovery credential may replace forgotten PIN without changing money
+ok 447 - recovery credential may replace forgotten PIN without changing money
+  ---
+  duration_ms: 419.876681
+  type: 'test'
+  ...
+# Subtest: wrong primary, malformed PIN and weak replacement do not change either stored row
+ok 448 - wrong primary, malformed PIN and weak replacement do not change either stored row
+  ---
+  duration_ms: 339.602454
+  type: 'test'
+  ...
+# Subtest: failure writing access row rolls back vault, history and previous access
+ok 449 - failure writing access row rolls back vault, history and previous access
+  ---
+  duration_ms: 421.22819
+  type: 'test'
+  ...
+# Subtest: restore clears local PIN/no-check but keeps original protected safety copy
+ok 450 - restore clears local PIN/no-check but keeps original protected safety copy
+  ---
+  duration_ms: 256.337413
+  type: 'test'
+  ...
+# Subtest: foreign or tampered access cannot auto-unlock and does not damage vault
+ok 451 - foreign or tampered access cannot auto-unlock and does not damage vault
+  ---
+  duration_ms: 257.387609
+  type: 'test'
+  ...
+# Subtest: stale security change cannot overwrite another tab or its device credential
+ok 452 - stale security change cannot overwrite another tab or its device credential
+  ---
+  duration_ms: 418.010695
+  type: 'test'
+  ...
+# Subtest: download intent is short-lived and consumed once
+ok 453 - download intent is short-lived and consumed once
+  ---
+  duration_ms: 0.258801
+  type: 'test'
+  ...
+# Subtest: download does not bypass immediate or timed locking
+ok 454 - download does not bypass immediate or timed locking
+  ---
+  duration_ms: 0.096962
+  type: 'test'
+  ...
+# Subtest: repeated hide events do not extend the allowed absence
+ok 455 - repeated hide events do not extend the allowed absence
+  ---
+  duration_ms: 0.070253
+  type: 'test'
+  ...
+# Subtest: remaining timer follows original deadline and never policy has no deadline
+ok 456 - remaining timer follows original deadline and never policy has no deadline
+  ---
+  duration_ms: 0.091395
+  type: 'test'
+  ...
+# Subtest: nested UI roundtrip preserves exact allocations and debits once with uncategorized residue
+ok 457 - nested UI roundtrip preserves exact allocations and debits once with uncategorized residue
+  ---
+  duration_ms: 0.927054
+  type: 'test'
+  ...
+# Subtest: editing excludes original part from its ceiling and never permits negative availability
+ok 458 - editing excludes original part from its ceiling and never permits negative availability
+  ---
+  duration_ms: 0.121669
+  type: 'test'
+  ...
+# Subtest: children cannot exceed parent; crossing parent references rejected
+ok 459 - children cannot exceed parent; crossing parent references rejected
+  ---
+  duration_ms: 0.114518
+  type: 'test'
+  ...
+# Subtest: single-child legacy splits retain category identity and 100-part ceiling
+ok 460 - single-child legacy splits retain category identity and 100-part ceiling
+  ---
+  duration_ms: 0.344497
+  type: 'test'
+  ...
+# Subtest: display keeps exact minor units and omits decimals only for whole values
+ok 461 - display keeps exact minor units and omits decimals only for whole values
+  ---
+  duration_ms: 0.712328
+  type: 'test'
+  ...
+# Subtest: preview never mutates raw multiline source
+ok 462 - preview never mutates raw multiline source
+  ---
+  duration_ms: 0.168348
+  type: 'test'
+  ...
+# Subtest: input caps twelve integer digits without altering existing financial parser
+ok 463 - input caps twelve integer digits without altering existing financial parser
+  ---
+  duration_ms: 0.101589
+  type: 'test'
+  ...
+# Subtest: opening editor does not create placeholder zeroes or lose a real fraction
+ok 464 - opening editor does not create placeholder zeroes or lose a real fraction
+  ---
+  duration_ms: 0.118814
+  type: 'test'
+  ...
+# Subtest: large aggregate totals do not lose cents in binary division
+ok 465 - large aggregate totals do not lose cents in binary division
+  ---
+  duration_ms: 0.179474
+  type: 'test'
+  ...
+# Subtest: AES-GCM password round trip exact document
+ok 466 - AES-GCM password round trip exact document
+  ---
+  duration_ms: 81.234719
+  type: 'test'
+  ...
+# Subtest: independent recovery key opens without password
+ok 467 - independent recovery key opens without password
+  ---
+  duration_ms: 1.184974
+  type: 'test'
+  ...
+# Subtest: wrong password fails with safe message
+ok 468 - wrong password fails with safe message
+  ---
+  duration_ms: 81.682508
+  type: 'test'
+  ...
+# Subtest: wrong recovery key fails
+ok 469 - wrong recovery key fails
+  ---
+  duration_ms: 1.030817
+  type: 'test'
+  ...
+# Subtest: ciphertext modification authenticated
+ok 470 - ciphertext modification authenticated
+  ---
+  duration_ms: 80.788493
+  type: 'test'
+  ...
+# Subtest: public dataset metadata modification authenticated
+ok 471 - public dataset metadata modification authenticated
+  ---
+  duration_ms: 81.671753
+  type: 'test'
+  ...
+# Subtest: revision modification authenticated
+ok 472 - revision modification authenticated
+  ---
+  duration_ms: 82.219749
+  type: 'test'
+  ...
+# Subtest: version / KDF downgrade rejected before decrypt
+ok 473 - version / KDF downgrade rejected before decrypt
+  ---
+  duration_ms: 0.280112
+  type: 'test'
+  ...
+# Subtest: random IV changes for each sealing, same plaintext
+ok 474 - random IV changes for each sealing, same plaintext
+  ---
+  duration_ms: 84.765064
+  type: 'test'
+  ...
+# Subtest: new database has independent salt / key / recovery secret
+ok 475 - new database has independent salt / key / recovery secret
+  ---
+  duration_ms: 85.363896
+  type: 'test'
+  ...
+# Subtest: backup includes no plaintext finance, password or raw recovery secret
+ok 476 - backup includes no plaintext finance, password or raw recovery secret
+  ---
+  duration_ms: 0.511493
+  type: 'test'
+  ...
+# Subtest: invalid backup and huge file rejected
+ok 477 - invalid backup and huge file rejected
+  ---
+  duration_ms: 0.239302
+  type: 'test'
+  ...
+# Subtest: Dexie actual wrapper commits encrypted record and survives reopen (fake IndexedDB)
+ok 478 - Dexie actual wrapper commits encrypted record and survives reopen (fake IndexedDB)
+  ---
+  duration_ms: 164.045888
+  type: 'test'
+  ...
+# Subtest: setup cannot overwrite an existing database
+ok 479 - setup cannot overwrite an existing database
+  ---
+  duration_ms: 83.933841
+  type: 'test'
+  ...
+# Subtest: mutation persisted before UI service state updates
+ok 480 - mutation persisted before UI service state updates
+  ---
+  duration_ms: 170.543129
+  type: 'test'
+  ...
+# Subtest: storage failure leaves in-memory and persisted state unchanged
+ok 481 - storage failure leaves in-memory and persisted state unchanged
+  ---
+  duration_ms: 86.253965
+  type: 'test'
+  ...
+# Subtest: concurrent tabs cannot silently overwrite another commit
+ok 482 - concurrent tabs cannot silently overwrite another commit
+  ---
+  duration_ms: 252.142125
+  type: 'test'
+  ...
+# Subtest: restore preview verifies but does not mutate existing database
+ok 483 - restore preview verifies but does not mutate existing database
+  ---
+  duration_ms: 182.415269
+  type: 'test'
+  ...
+# Subtest: restore requires explicit confirmation
+ok 484 - restore requires explicit confirmation
+  ---
+  duration_ms: 85.933103
+  type: 'test'
+  ...
+# Subtest: restore old copy preserves current encrypted safety version atomically
+ok 485 - restore old copy preserves current encrypted safety version atomically
+  ---
+  duration_ms: 257.934258
+  type: 'test'
+  ...
+# Subtest: stale restore preview blocked after intervening edit
+ok 486 - stale restore preview blocked after intervening edit
+  ---
+  duration_ms: 169.41503
+  type: 'test'
+  ...
+# Subtest: wrong password during preview leaves local database untouched
+ok 487 - wrong password during preview leaves local database untouched
+  ---
+  duration_ms: 170.298369
+  type: 'test'
+  ...
+# Subtest: restoration onto empty store with recovery key survives restart
+ok 488 - restoration onto empty store with recovery key survives restart
+  ---
+  duration_ms: 89.673692
+  type: 'test'
+  ...
+# Subtest: different dataset preview explicit, not silently merged
+ok 489 - different dataset preview explicit, not silently merged
+  ---
+  duration_ms: 166.967367
+  type: 'test'
+  ...
+# Subtest: lock removes decrypted document and key
+ok 490 - lock removes decrypted document and key
+  ---
+  duration_ms: 85.309385
+  type: 'test'
+  ...
+# Subtest: transaction abort rolls back both safety and active replacement
+ok 491 - transaction abort rolls back both safety and active replacement
+  ---
+  duration_ms: 83.946881
+  type: 'test'
+  ...
+1..491
+# tests 491
+# suites 0
+# pass 491
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 60649.299918

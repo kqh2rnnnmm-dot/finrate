@@ -1,0 +1,226 @@
+TAP version 13
+# Subtest: P4 unallocated modern fee not inherited into transfer category
+ok 1 - P4 unallocated modern fee not inherited into transfer category
+  ---
+  duration_ms: 5.478085
+  type: 'test'
+  ...
+# Subtest: P4 safe-integer rule/derived cents remain exact; no unsafe conversion or block on canon facts
+ok 2 - P4 safe-integer rule/derived cents remain exact; no unsafe conversion or block on canon facts
+  ---
+  duration_ms: 19.478395
+  type: 'test'
+  ...
+# Subtest: P4 malformed signed rule/settings references reject before persistence; period strict
+ok 3 - P4 malformed signed rule/settings references reject before persistence; period strict
+  ---
+  duration_ms: 1.441042
+  type: 'test'
+  ...
+# Subtest: P4 archived rules retained; duplicate active scope safe refusal and restore conflict atomic
+ok 4 - P4 archived rules retained; duplicate active scope safe refusal and restore conflict atomic
+  ---
+  duration_ms: 0.992421
+  type: 'test'
+  ...
+# Subtest: P4 current classification moves parent totals; archived category remains counted
+ok 5 - P4 current classification moves parent totals; archived category remains counted
+  ---
+  duration_ms: 1.117255
+  type: 'test'
+  ...
+# Subtest: P4 explicit reassign historical rule permits merge; preexisting merged allocations resolve once
+ok 6 - P4 explicit reassign historical rule permits merge; preexisting merged allocations resolve once
+  ---
+  duration_ms: 1.225444
+  type: 'test'
+  ...
+# Subtest: P4 settings do not create root; threshold arithmetic exact around80 at tiny amount
+ok 7 - P4 settings do not create root; threshold arithmetic exact around80 at tiny amount
+  ---
+  duration_ms: 0.610499
+  type: 'test'
+  ...
+# Subtest: P4 unfinished blank-month intent can be saved without creating a rule
+ok 8 - P4 unfinished blank-month intent can be saved without creating a rule
+  ---
+  duration_ms: 0.315064
+  type: 'test'
+  ...
+# Subtest: P4 detail contributions use only matched split parts and signed actual refund
+ok 9 - P4 detail contributions use only matched split parts and signed actual refund
+  ---
+  duration_ms: 0.826497
+  type: 'test'
+  ...
+# Subtest: P4 maximum imported rule metadata/draft preserves every cent without numeric reparsing
+ok 10 - P4 maximum imported rule metadata/draft preserves every cent without numeric reparsing
+  ---
+  duration_ms: 0.539805
+  type: 'test'
+  ...
+# Subtest: P4 common history captures rule creation/change/archive and derived spending without second ledger
+ok 11 - P4 common history captures rule creation/change/archive and derived spending without second ledger
+  ---
+  duration_ms: 2.649931
+  type: 'test'
+  ...
+# Subtest: P4 warning preferences use encrypted existing settings history
+ok 12 - P4 warning preferences use encrypted existing settings history
+  ---
+  duration_ms: 0.443733
+  type: 'test'
+  ...
+# Subtest: P4 A2 financial counts/rules/settings/protection and independent exact recovery
+ok 13 - P4 A2 financial counts/rules/settings/protection and independent exact recovery
+  ---
+  duration_ms: 457.350602
+  type: 'test'
+  ...
+# Subtest: P4 A2 categories counts/rules/settings/protection and independent exact recovery
+ok 14 - P4 A2 categories counts/rules/settings/protection and independent exact recovery
+  ---
+  duration_ms: 451.210616
+  type: 'test'
+  ...
+# Subtest: P4 A2 all counts/rules/settings/protection and independent exact recovery
+ok 15 - P4 A2 all counts/rules/settings/protection and independent exact recovery
+  ---
+  duration_ms: 451.179061
+  type: 'test'
+  ...
+# Subtest: P4 quota/create rollback, peer CAS, replay and unchanged cash/free
+ok 16 - P4 quota/create rollback, peer CAS, replay and unchanged cash/free
+  ---
+  duration_ms: 343.026705
+  type: 'test'
+  ...
+# Subtest: P4 warning preferences and rules survive password/PIN/recovery and earlier file
+ok 17 - P4 warning preferences and rules survive password/PIN/recovery and earlier file
+  ---
+  duration_ms: 715.60201
+  type: 'test'
+  ...
+# Subtest: P4 P3 protected document unlock and readonly queries preserve ciphertext and absent extension
+ok 18 - P4 P3 protected document unlock and readonly queries preserve ciphertext and absent extension
+  ---
+  duration_ms: 165.457071
+  type: 'test'
+  ...
+# Subtest: P4 encrypted draft is intent only, atomic consume; stale/invalid references rejected
+ok 19 - P4 encrypted draft is intent only, atomic consume; stale/invalid references rejected
+  ---
+  duration_ms: 174.029662
+  type: 'test'
+  ...
+# Subtest: P4 signed-but-invalid category payload rejected before active restore replacement
+ok 20 - P4 signed-but-invalid category payload rejected before active restore replacement
+  ---
+  duration_ms: 255.479172
+  type: 'test'
+  ...
+# Subtest: P4 notices human/financial not receipt; default80 and actual exceeded money
+ok 21 - P4 notices human/financial not receipt; default80 and actual exceeded money
+  ---
+  duration_ms: 1.876352
+  type: 'test'
+  ...
+# Subtest: P4 restore opt-out, financial/master permissions, no read/metadata/failed-action alerts
+ok 22 - P4 restore opt-out, financial/master permissions, no read/metadata/failed-action alerts
+  ---
+  duration_ms: 0.904211
+  type: 'test'
+  ...
+# Subtest: P4 fall below and explicit re-cross may warn; same state/no-op does not
+ok 23 - P4 fall below and explicit re-cross may warn; same state/no-op does not
+  ---
+  duration_ms: 1.668887
+  type: 'test'
+  ...
+# Subtest: P4 new/current rules or changing threshold never emits past spending as fresh warning
+ok 24 - P4 new/current rules or changing threshold never emits past spending as fresh warning
+  ---
+  duration_ms: 0.880847
+  type: 'test'
+  ...
+# Subtest: P4 pure P3 reads; create changes neither cash nor forecast
+ok 25 - P4 pure P3 reads; create changes neither cash nor forecast
+  ---
+  duration_ms: 0.697227
+  type: 'test'
+  ...
+# Subtest: P4 parent6000+veg3000-refund1000=8000, child2000, then expense3000 goes through at11000
+ok 26 - P4 parent6000+veg3000-refund1000=8000, child2000, then expense3000 goes through at11000
+  ---
+  duration_ms: 1.065649
+  type: 'test'
+  ...
+# Subtest: P4 no carryover/implicit repeat; next-month refund can make net negative
+ok 27 - P4 no carryover/implicit repeat; next-month refund can make net negative
+  ---
+  duration_ms: 0.72713
+  type: 'test'
+  ...
+# Subtest: P4 100 split leaves and mixed allocations counted once; uncategorized rule forbidden
+ok 28 - P4 100 split leaves and mixed allocations counted once; uncategorized rule forbidden
+  ---
+  duration_ms: 9.161888
+  type: 'test'
+  ...
+# Subtest: P4 date/allocation edits and cancel recalculate current facts
+ok 29 - P4 date/allocation edits and cancel recalculate current facts
+  ---
+  duration_ms: 1.270991
+  type: 'test'
+  ...
+# Subtest: P4 external transfer/fee once; internal transfer/pending/cancel/adjustment excluded
+ok 30 - P4 external transfer/fee once; internal transfer/pending/cancel/adjustment excluded
+  ---
+  duration_ms: 1.294716
+  type: 'test'
+  ...
+# Subtest: P4 credit purchase once not repayment; plan only when real payment confirmed
+ok 31 - P4 credit purchase once not repayment; plan only when real payment confirmed
+  ---
+  duration_ms: 4.89724
+  type: 'test'
+  ...
+# Subtest: P4 principal and reserves not expenses; only canonical reserve purchase counted
+ok 32 - P4 principal and reserves not expenses; only canonical reserve purchase counted
+  ---
+  duration_ms: 2.963663
+  type: 'test'
+  ...
+# Subtest: P4 79/80/81/100/101 distinct states; only confirmed upward crossings
+ok 33 - P4 79/80/81/100/101 distinct states; only confirmed upward crossings
+  ---
+  duration_ms: 2.287378
+  type: 'test'
+  ...
+# Subtest: P4 settings immediate/early off preserves card states; no old-month or settings alerts
+ok 34 - P4 settings immediate/early off preserves card states; no old-month or settings alerts
+  ---
+  duration_ms: 1.747983
+  type: 'test'
+  ...
+# Subtest: P4 replay/edit-stale/archive never duplicate rules or move money
+ok 35 - P4 replay/edit-stale/archive never duplicate rules or move money
+  ---
+  duration_ms: 0.510702
+  type: 'test'
+  ...
+# Subtest: P4 category archive/move truthful; merge conflict atomically rejected
+ok 36 - P4 category archive/move truthful; merge conflict atomically rejected
+  ---
+  duration_ms: 0.996357
+  type: 'test'
+  ...
+1..36
+# tests 36
+# suites 0
+# pass 36
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 3147.58802

@@ -6,8 +6,8 @@ export const RESET_MODES=Object.freeze({
  categories:{title:'Очистить данные и категории',word:'ОЧИСТИТЬ КАТЕГОРИИ',action:'Очистить данные и категории'},
  all:{title:'Полный сброс FinRate',word:'СБРОСИТЬ FINRATE',action:'Удалить все данные'}
 });
-const rootKeys=new Set(['schema','datasetId','currency','createdAt','updatedAt','revision','accounts','categories','operations','events','drafts','operationEdits','categoryEdits','accountEdits','settings','planning','payments','debts','goals']);
-const settingKeys=new Set(['defaultOperation','theme','autoLock','lastAccountId','appearance','topPalette','bottomPalette','homeTiles','homeTileStyle','edgeSide','colorPalette','notificationsEnabled','financialNotifications','systemNotifications']);
+const rootKeys=new Set(['schema','datasetId','currency','createdAt','updatedAt','revision','accounts','categories','operations','events','drafts','operationEdits','categoryEdits','accountEdits','settings','planning','payments','debts','goals','limits']);
+const settingKeys=new Set(['defaultOperation','theme','autoLock','lastAccountId','appearance','topPalette','bottomPalette','homeTiles','homeTileStyle','edgeSide','colorPalette','notificationsEnabled','financialNotifications','systemNotifications','limitEarlyWarnings','limitWarningPercent']);
 const known=(object,keys)=>Object.keys(object||{}).every(k=>keys.has(k));
 export function assertResetMode(mode){if(!Object.hasOwn(RESET_MODES,mode))fail('FORMAT');}
 export function assertResetSupported(d,mode){
@@ -16,7 +16,7 @@ export function assertResetSupported(d,mode){
 }
 export function resetSummary(d,mode,safety,entry){
  assertResetSupported(d,mode);
- return {mode,accounts:d.accounts.length,categories:d.categories.filter(c=>!c.parentId).length,subcategories:d.categories.filter(c=>c.parentId).length,operations:d.operations.length,plans:d.planning?.incomes.length||0,occurrences:d.planning?.occurrences.length||0,links:d.planning?.links.length||0,...(d.payments?{paymentPlans:d.payments.plans.length,paymentOccurrences:d.payments.occurrences.length,paymentLinks:d.payments.links.length}:{}),...(d.debts?{personalDebts:d.debts.items.length,debtLinks:d.debts.links.length}:{}),...(d.goals?{goals:d.goals.items.length,reserves:d.goals.reserves.length,reserveActions:d.goals.actions.length,reserveUses:d.goals.actions.filter(a=>a.kind==='use').length}:{}),drafts:d.drafts.length,events:d.events.length,edits:d.operationEdits.length+d.accountEdits.length+d.categoryEdits.length,safety,entry:entry.mode,currency:d.currency,autoLock:d.settings.autoLock};
+ return {mode,accounts:d.accounts.length,categories:d.categories.filter(c=>!c.parentId).length,subcategories:d.categories.filter(c=>c.parentId).length,operations:d.operations.length,plans:d.planning?.incomes.length||0,occurrences:d.planning?.occurrences.length||0,links:d.planning?.links.length||0,...(d.payments?{paymentPlans:d.payments.plans.length,paymentOccurrences:d.payments.occurrences.length,paymentLinks:d.payments.links.length}:{}),...(d.debts?{personalDebts:d.debts.items.length,debtLinks:d.debts.links.length}:{}),...(d.goals?{goals:d.goals.items.length,reserves:d.goals.reserves.length,reserveActions:d.goals.actions.length,reserveUses:d.goals.actions.filter(a=>a.kind==='use').length}:{}),...(d.limits?{limitRules:d.limits.rules.length,activeLimits:d.limits.rules.filter(r=>!r.archived).length,archivedLimits:d.limits.rules.filter(r=>r.archived).length}:{}),drafts:d.drafts.length,events:d.events.length,edits:d.operationEdits.length+d.accountEdits.length+d.categoryEdits.length,safety,entry:entry.mode,currency:d.currency,autoLock:d.settings.autoLock};
 }
 export function clearedDocument(d,mode){
  assertResetSupported(d,mode);if(mode==='all')fail('FORMAT');

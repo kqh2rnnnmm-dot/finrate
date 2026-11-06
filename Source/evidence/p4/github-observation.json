@@ -1,0 +1,12 @@
+{
+  "observedHead": "86414eca86fc87d91096182ba6219b3518b1ef4c",
+  "base": "eea169f4605a0afa155ab69c95a867ee39749fda",
+  "pr": "https://github.com/kqh2rnnnmm-dot/finrate/pull/13",
+  "state": "open",
+  "merged": false,
+  "mergeable": true,
+  "statuses": [],
+  "workflow_runs": [],
+  "remoteChecksPassed": false,
+  "note": "No commit statuses or PR Actions runs were returned; absence is not PASS. GitHub merge_commit_sha is a prospective merge preview, not a merge performed by Codex."
+}
