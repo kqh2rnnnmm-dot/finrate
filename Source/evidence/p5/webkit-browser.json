@@ -1,0 +1,51 @@
+{
+  "engine": "webkit",
+  "build": "p5-forecast01",
+  "base": "aad52c592c34858122844b5b439727318b9e4bcc",
+  "checks": [
+    "all five read-only horizons keep exact native IDB/backup bytes and current Home/free unchanged; dates show early account risk",
+    "payment/debt/credit/income/receivable/reserve/goal reuse actual existing cards and return to same horizon/disclosures without writes",
+    "contextual Forecast from Free returns to original calculation; view horizon never changes saved B1 mode",
+    "exact 12-digit kopecks survive slider sync, real field editor/date/account controls recompute immediately; close discards everything without draft/save",
+    "background/pagehide/persisted pageshow/field-editor interruption/lock/cold reload discard RAM scenario with no persisted change",
+    "post-simulation actual protected export independently restores exact complete document in another native browser profile",
+    "full 7-size matrix/exact amounts/shared editor/native date/Back/large text light/neutral; no horizontal page/modal overflow or writes (real VoiceOver/iOS keyboard OPEN)",
+    "full 7-size matrix/exact amounts/shared editor/native date/Back/large text light/color; no horizontal page/modal overflow or writes (real VoiceOver/iOS keyboard OPEN)",
+    "full 7-size matrix/exact amounts/shared editor/native date/Back/large text dark/neutral; no horizontal page/modal overflow or writes (real VoiceOver/iOS keyboard OPEN)",
+    "full 7-size matrix/exact amounts/shared editor/native date/Back/large text dark/color; no horizontal page/modal overflow or writes (real VoiceOver/iOS keyboard OPEN)",
+    "missing planning/goal top-up schema has honest empty states, no fake salary/contribution or auto-created extension",
+    "cold cached PWA Forecast/What-if remains responsive while the entire origin refuses connections; uncached browser fetch rejection and unchanged IDB proved (background update settlement recorded separately)",
+    "native browser local-calendar horizon America/Los_Angeles has no UTC day drift",
+    "native browser local-calendar horizon Pacific/Kiritimati has no UTC day drift",
+    "native browser local-calendar horizon Europe/Moscow has no UTC day drift",
+    "unknown due date/credit purchase/missing repayment accounts show Need to clarify, never fake date/zero or unlimited all-mode simulation",
+    "Forecast→Free→Forecast reuses one existing view and preserves period/disclosures without recursive independent screens",
+    "compact initial 390px forecast exposes full risk text and uses peer spacing without reducing financial typography"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "fullScope": true,
+  "selectedFixture": null,
+  "version": "26.5",
+  "publicHTMLSHA256": "537896673b6f49a4f8cc70d72c816f5bdfc17552860344c7fd99917941c2c528",
+  "matrixSize": {
+    "theme": "dark",
+    "palette": "color",
+    "width": 1280,
+    "height": 900
+  },
+  "offlineInitialWorker": {
+    "registered": true,
+    "active": "activated",
+    "controller": false
+  },
+  "offlinePhase": "ui-remains-responsive-during-update",
+  "offlineControlled": true,
+  "backgroundUpdateSettlement": "rejected",
+  "refusedOfflinePaths": [
+    "/sw.js",
+    "/_p5/network-probe"
+  ],
+  "allPassed": true
+}

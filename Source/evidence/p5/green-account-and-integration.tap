@@ -1,0 +1,334 @@
+TAP version 13
+# Subtest: P5 encrypted backup bytes, full document/totals/revision/events and all legacy forecasts remain exact
+ok 1 - P5 encrypted backup bytes, full document/totals/revision/events and all legacy forecasts remain exact
+  ---
+  duration_ms: 420.466217
+  type: 'test'
+  ...
+# Subtest: P5 pure selector calls no crypto, derivation or key export
+ok 2 - P5 pure selector calls no crypto, derivation or key export
+  ---
+  duration_ms: 349.27828
+  type: 'test'
+  ...
+# Subtest: P5 backup independently restores exact P1-P4/ACCESS document and produces the same read-only forecast
+ok 3 - P5 backup independently restores exact P1-P4/ACCESS document and produces the same read-only forecast
+  ---
+  duration_ms: 536.869635
+  type: 'test'
+  ...
+# Subtest: P5 does not add extensions or disturb A2 financial reset/restore
+ok 4 - P5 does not add extensions or disturb A2 financial reset/restore
+  ---
+  duration_ms: 532.643581
+  type: 'test'
+  ...
+# Subtest: P5 does not add extensions or disturb A2 categories reset/restore
+ok 5 - P5 does not add extensions or disturb A2 categories reset/restore
+  ---
+  duration_ms: 616.898674
+  type: 'test'
+  ...
+# Subtest: P5 does not add extensions or disturb A2 all reset/restore
+ok 6 - P5 does not add extensions or disturb A2 all reset/restore
+  ---
+  duration_ms: 596.00434
+  type: 'test'
+  ...
+# Subtest: P5 read-only view preserves A3 password/PIN and locked ACCESS A export/reset with no forgotten secret
+ok 7 - P5 read-only view preserves A3 password/PIN and locked ACCESS A export/reset with no forgotten secret
+  ---
+  duration_ms: 843.020129
+  type: 'test'
+  ...
+# Subtest: P5 absent planning opens without creating an extension, fictional income or writes
+ok 8 - P5 absent planning opens without creating an extension, fictional income or writes
+  ---
+  duration_ms: 0.790925
+  type: 'test'
+  ...
+# Subtest: P5 current-month expected income is projection only; legacy month free unchanged
+ok 9 - P5 current-month expected income is projection only; legacy month free unchanged
+  ---
+  duration_ms: 0.500097
+  type: 'test'
+  ...
+# Subtest: P5 first cash gap appears before salary despite a positive endpoint
+ok 10 - P5 first cash gap appears before salary despite a positive endpoint
+  ---
+  duration_ms: 0.833528
+  type: 'test'
+  ...
+# Subtest: P5 enough total money on B does not silently fund expense on A
+ok 11 - P5 enough total money on B does not silently fund expense on A
+  ---
+  duration_ms: 0.534878
+  type: 'test'
+  ...
+# Subtest: P5 same-day incoming/outgoing has uncertain order, not a guaranteed optimistic path
+ok 12 - P5 same-day incoming/outgoing has uncertain order, not a guaranteed optimistic path
+  ---
+  duration_ms: 0.383445
+  type: 'test'
+  ...
+# Subtest: P5 reports first date of shortage, not the later date of deepest deficit
+ok 13 - P5 reports first date of shortage, not the later date of deepest deficit
+  ---
+  duration_ms: 0.643658
+  type: 'test'
+  ...
+# Subtest: P5 overdue partial obligation and explicitly linked reserve are counted once
+ok 14 - P5 overdue partial obligation and explicitly linked reserve are counted once
+  ---
+  duration_ms: 1.005821
+  type: 'test'
+  ...
+# Subtest: P5 unrelated reserve remains excluded after an actual forecast payout
+ok 15 - P5 unrelated reserve remains excluded after an actual forecast payout
+  ---
+  duration_ms: 0.588837
+  type: 'test'
+  ...
+# Subtest: P5 changed payment account invalidates reserve coverage instead of moving funds
+ok 16 - P5 changed payment account invalidates reserve coverage instead of moving funds
+  ---
+  duration_ms: 0.663518
+  type: 'test'
+  ...
+# Subtest: P5 personal principal paid/received is not duplicated as ordinary expense/income
+ok 17 - P5 personal principal paid/received is not duplicated as ordinary expense/income
+  ---
+  duration_ms: 1.009377
+  type: 'test'
+  ...
+# Subtest: P5 an undated personal debt is not assigned today or a guessed repayment account
+ok 18 - P5 an undated personal debt is not assigned today or a guessed repayment account
+  ---
+  duration_ms: 0.390055
+  type: 'test'
+  ...
+# Subtest: P5 dated debt-linked reserve covers principal once but does not invent repayment account
+ok 19 - P5 dated debt-linked reserve covers principal once but does not invent repayment account
+  ---
+  duration_ms: 0.519165
+  type: 'test'
+  ...
+# Subtest: P5 credit limits never become cash; each existing loan lot repays only once
+ok 20 - P5 credit limits never become cash; each existing loan lot repays only once
+  ---
+  duration_ms: 0.358358
+  type: 'test'
+  ...
+# Subtest: P5 unknown grace date is shown unknown rather than a zero or a made-up today
+ok 21 - P5 unknown grace date is shown unknown rather than a zero or a made-up today
+  ---
+  duration_ms: 0.291118
+  type: 'test'
+  ...
+# Subtest: P5 planned credit-card purchase is not mislabeled as an exact own-cash payout
+ok 22 - P5 planned credit-card purchase is not mislabeled as an exact own-cash payout
+  ---
+  duration_ms: 0.540807
+  type: 'test'
+  ...
+# Subtest: P5 transfer in transit is not credited to destination or counted as future guaranteed income
+ok 23 - P5 transfer in transit is not credited to destination or counted as future guaranteed income
+  ---
+  duration_ms: 0.865655
+  type: 'test'
+  ...
+# Subtest: P5 refunds/split categories/adjustments use canonical totals exactly once
+ok 24 - P5 refunds/split categories/adjustments use canonical totals exactly once
+  ---
+  duration_ms: 0.890141
+  type: 'test'
+  ...
+# Subtest: P5 skipped, paused, moved and fully paid instances reuse P1.2 selectors
+ok 25 - P5 skipped, paused, moved and fully paid instances reuse P1.2 selectors
+  ---
+  duration_ms: 1.757659
+  type: 'test'
+  ...
+# Subtest: P5 archived/stopped income rules do not generate new future salary
+ok 26 - P5 archived/stopped income rules do not generate new future salary
+  ---
+  duration_ms: 0.691879
+  type: 'test'
+  ...
+# Subtest: P5 received part and explicit closure replace future expectation, not actual money twice
+ok 27 - P5 received part and explicit closure replace future expectation, not actual money twice
+  ---
+  duration_ms: 1.128362
+  type: 'test'
+  ...
+# Subtest: P5 recommended goal contribution is not a future payment or automatic allocation
+ok 28 - P5 recommended goal contribution is not a future payment or automatic allocation
+  ---
+  duration_ms: 0.478825
+  type: 'test'
+  ...
+# Subtest: P5 variable orientations are explicitly estimates and retain canonical remaining amounts
+ok 29 - P5 variable orientations are explicitly estimates and retain canonical remaining amounts
+  ---
+  duration_ms: 0.496502
+  type: 'test'
+  ...
+# Subtest: P5 calendar/year boundary and immutable B1 meaning: month
+ok 30 - P5 calendar/year boundary and immutable B1 meaning: month
+  ---
+  duration_ms: 0.765658
+  type: 'test'
+  ...
+# Subtest: P5 calendar/year boundary and immutable B1 meaning: m2
+ok 31 - P5 calendar/year boundary and immutable B1 meaning: m2
+  ---
+  duration_ms: 0.889691
+  type: 'test'
+  ...
+# Subtest: P5 calendar/year boundary and immutable B1 meaning: m3
+ok 32 - P5 calendar/year boundary and immutable B1 meaning: m3
+  ---
+  duration_ms: 0.945502
+  type: 'test'
+  ...
+# Subtest: P5 calendar/year boundary and immutable B1 meaning: m4
+ok 33 - P5 calendar/year boundary and immutable B1 meaning: m4
+  ---
+  duration_ms: 0.97118
+  type: 'test'
+  ...
+# Subtest: P5 calendar/year boundary and immutable B1 meaning: all
+ok 34 - P5 calendar/year boundary and immutable B1 meaning: all
+  ---
+  duration_ms: 0.241075
+  type: 'test'
+  ...
+# Subtest: P5 leap February and original monthly day return do not create extra instances
+ok 35 - P5 leap February and original monthly day return do not create extra instances
+  ---
+  duration_ms: 0.400189
+  type: 'test'
+  ...
+# Subtest: P5 view mode never changes the stored Home/free mode or its default
+ok 36 - P5 view mode never changes the stored Home/free mode or its default
+  ---
+  duration_ms: 0.369574
+  type: 'test'
+  ...
+# Subtest: P5 first risk responds to temporary income/date changes and scenario cancellation exactly
+ok 37 - P5 first risk responds to temporary income/date changes and scenario cancellation exactly
+  ---
+  duration_ms: 0.551713
+  type: 'test'
+  ...
+# Subtest: P5 one extra hypothetical debit expense changes projection, never operations/history/revision
+ok 38 - P5 one extra hypothetical debit expense changes projection, never operations/history/revision
+  ---
+  duration_ms: 0.192584
+  type: 'test'
+  ...
+# Subtest: P5 event moved outside horizon is not charged in that period; original plans unchanged
+ok 39 - P5 event moved outside horizon is not charged in that period; original plans unchanged
+  ---
+  duration_ms: 0.324628
+  type: 'test'
+  ...
+# Subtest: P5 changed simulated payment amount caps shared reserve coverage without duplicating funds
+ok 40 - P5 changed simulated payment amount caps shared reserve coverage without duplicating funds
+  ---
+  duration_ms: 0.545995
+  type: 'test'
+  ...
+# Subtest: P5 strict scenario rejects unknown fields, stale ID, past date, negative/overflow and credit-limit funding
+ok 41 - P5 strict scenario rejects unknown fields, stale ID, past date, negative/overflow and credit-limit funding
+  ---
+  duration_ms: 1.178045
+  type: 'test'
+  ...
+# Subtest: P5 12-digit exact kopecks are preserved and unsafe sums fail closed
+ok 42 - P5 12-digit exact kopecks are preserved and unsafe sums fail closed
+  ---
+  duration_ms: 0.305871
+  type: 'test'
+  ...
+# Subtest: P5 event IDs, projections and calendar dates are stable across repeated pure reads
+ok 43 - P5 event IDs, projections and calendar dates are stable across repeated pure reads
+  ---
+  duration_ms: 1.211154
+  type: 'test'
+  ...
+# Subtest: P5 two credit cards and an actual internal repayment do not cause a second cash charge
+ok 44 - P5 two credit cards and an actual internal repayment do not cause a second cash charge
+  ---
+  duration_ms: 0.987705
+  type: 'test'
+  ...
+# Subtest: P5 variable final below orientation closes only its period; cancellation reopens facts
+ok 45 - P5 variable final below orientation closes only its period; cancellation reopens facts
+  ---
+  duration_ms: 1.302458
+  type: 'test'
+  ...
+# Subtest: P5 archived event account stays unknown; another existing account is never substituted
+ok 46 - P5 archived event account stays unknown; another existing account is never substituted
+  ---
+  duration_ms: 0.384026
+  type: 'test'
+  ...
+# Subtest: P5 a missed incoming date is not silently changed to today
+ok 47 - P5 a missed incoming date is not silently changed to today
+  ---
+  duration_ms: 0.199213
+  type: 'test'
+  ...
+# Subtest: P5 independent old expense may uncover reserve shortage without changing either history or allocation
+ok 48 - P5 independent old expense may uncover reserve shortage without changing either history or allocation
+  ---
+  duration_ms: 0.702034
+  type: 'test'
+  ...
+# Subtest: P5 explicit same-obligation cover is capped across several reserves
+ok 49 - P5 explicit same-obligation cover is capped across several reserves
+  ---
+  duration_ms: 0.802952
+  type: 'test'
+  ...
+# Subtest: P5 pending/cancelled facts are not projected as second future movements
+ok 50 - P5 pending/cancelled facts are not projected as second future movements
+  ---
+  duration_ms: 0.345379
+  type: 'test'
+  ...
+# Subtest: P5 forecast arithmetic overflow is rejected even though the underlying document remains intact
+ok 51 - P5 forecast arithmetic overflow is rejected even though the underlying document remains intact
+  ---
+  duration_ms: 0.463622
+  type: 'test'
+  ...
+# Subtest: P5 local calendar around New Year follows local date, not UTC midnight assumptions
+ok 52 - P5 local calendar around New Year follows local date, not UTC midnight assumptions
+  ---
+  duration_ms: 14.070906
+  type: 'test'
+  ...
+# Subtest: P5 all includes real dated debts outside four months but never an infinite schedule of income/services
+ok 53 - P5 all includes real dated debts outside four months but never an infinite schedule of income/services
+  ---
+  duration_ms: 0.489491
+  type: 'test'
+  ...
+# Subtest: P5 account endpoint stays unknown when a future payer is unspecified, while known-account subtotal remains inspectable
+ok 54 - P5 account endpoint stays unknown when a future payer is unspecified, while known-account subtotal remains inspectable
+  ---
+  duration_ms: 0.339019
+  type: 'test'
+  ...
+1..54
+# tests 54
+# suites 0
+# pass 54
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 4010.482466

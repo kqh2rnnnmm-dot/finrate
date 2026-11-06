@@ -1,0 +1,18 @@
+{
+  "engine": "webkit",
+  "build": "p5-forecast01",
+  "legacyBuild": "access-emergency-reset01",
+  "baseline": "aad52c592c34858122844b5b439727318b9e4bcc",
+  "checks": [
+    "actual main ACCESS A seven public files open rich P1-P4 data/PIN and produce a real standard protected backup",
+    "real SW ACCESS→P5 update/cold PIN screen has zero native write attempts, identical vault/access/safety and generation, no reset or migration",
+    "existing PIN works after update; Home/free/P1-P4 document exact, new Reports and discarded scenario introduce no extension/history",
+    "real pre-P5 protected backup independently restores full document using old password and recovery in separate P5 profiles"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "publicHTMLSHA256": "537896673b6f49a4f8cc70d72c816f5bdfc17552860344c7fd99917941c2c528",
+  "version": "26.5",
+  "allPassed": true
+}

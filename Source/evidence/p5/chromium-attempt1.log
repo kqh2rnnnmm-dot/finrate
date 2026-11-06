@@ -1,0 +1,8 @@
+PASS all five read-only horizons keep exact native IDB/backup bytes and current Home/free unchanged; dates show early account risk
+PASS payment/debt/credit/income/receivable/reserve/goal reuse actual existing cards and return to same horizon/disclosures without writes
+PASS contextual Forecast from Free returns to original calculation; view horizon never changes saved B1 mode
+FAIL The expression evaluated to a falsy value:
+
+  assert.ok(norm(await f.locator('[data-scenario-results] [data-forecast-total]').nth(1).innerText()).includes('123456789'))
+ { title: 'Отчёты', dialogs: [ 'Что, если…' ], error: [ '', '', '' ] }     at async file:///workspace/finrate/Source/tests/forecast-browser.mjs:24:2
+{"checks":3,"failures":["The expression evaluated to a falsy value:\n\n  assert.ok(norm(await f.locator('[data-scenario-results] [data-forecast-total]').nth(1).innerText()).includes('123456789'))\n"]}

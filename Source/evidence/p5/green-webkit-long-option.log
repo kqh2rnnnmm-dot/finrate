@@ -1,0 +1,3 @@
+Skipping host requirements validation logic because `PLAYWRIGHT_SKIP_VALIDATE_HOST_REQUIREMENTS` env variable is set.
+PASS full 7-size matrix/exact amounts/shared editor/native date/Back/large text light/neutral; no horizontal page/modal overflow or writes (real VoiceOver/iOS keyboard OPEN)
+{"checks":1,"failures":[]}

@@ -1,0 +1,25 @@
+{
+  "engine": "chromium",
+  "build": "p5-forecast01",
+  "base": "aad52c592c34858122844b5b439727318b9e4bcc",
+  "checks": [],
+  "failures": [
+    "first known risk must be readable in initial 390px view, without large empty inherited margins"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "fullScope": false,
+  "selectedFixture": 18,
+  "version": "153.0.8010.0",
+  "publicHTMLSHA256": "1f75f367120fa8f167e5d432970c4f9b2633e68ee5a8c0e65163930d7e3f69b4",
+  "diagnostic": {
+    "title": "Отчёты",
+    "dialogs": [
+      "Прогноз"
+    ],
+    "error": [
+      ""
+    ]
+  },
+  "allPassed": false
+}

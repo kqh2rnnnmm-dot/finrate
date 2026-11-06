@@ -1,0 +1,2 @@
+PASS background/pagehide/persisted pageshow/field-editor interruption/lock/cold reload discard RAM scenario with no persisted change
+{"checks":1,"failures":[]}

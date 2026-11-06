@@ -1,0 +1,13 @@
+{
+  "engine": "webkit",
+  "build": "p5-forecast01",
+  "checks": [
+    "native maximum safe-integer imported rule/card/history preserve91 kopecks; readonly no-write and month-only UI edit exact in one generation"
+  ],
+  "failures": [],
+  "publicHTMLSHA256": "537896673b6f49a4f8cc70d72c816f5bdfc17552860344c7fd99917941c2c528",
+  "actualIPhone": false,
+  "published": false,
+  "version": "26.5",
+  "allPassed": true
+}

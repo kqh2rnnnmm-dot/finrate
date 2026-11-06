@@ -1,0 +1,35 @@
+PASS 402 direct sort preserves focus, reuses rows and never opens filters
+PASS 402 filter draft is isolated; Back cancels unapplied values
+PASS 402 AND/OR date/type/account/parent-category filters; invalid dates disable both Apply controls
+PASS 402 sort retains criteria; contextual search applies them; global search ignores them; section navigation retains settings
+PASS 402 chips, full reset and actionable empty state
+PASS 402 symmetric 32px circles / 44px targets, true endpoints, reduced/normal motion, no mask or horizontal overflow
+PASS 402 active inner picker scrolls independently in both directions
+PASS 402 pointer interaction and quick sorting interrupt running scroll animation
+PASS 402 sort at 4× CPU throttling retains row and header nodes without full render
+PASS 402 all filtering and navigation leaves encrypted financial record byte-identical
+{
+  "build": "p2.1-combined01",
+  "actualIPhone": false,
+  "published": false,
+  "checks": [
+    "402 direct sort preserves focus, reuses rows and never opens filters",
+    "402 filter draft is isolated; Back cancels unapplied values",
+    "402 AND/OR date/type/account/parent-category filters; invalid dates disable both Apply controls",
+    "402 sort retains criteria; contextual search applies them; global search ignores them; section navigation retains settings",
+    "402 chips, full reset and actionable empty state",
+    "402 symmetric 32px circles / 44px targets, true endpoints, reduced/normal motion, no mask or horizontal overflow",
+    "402 active inner picker scrolls independently in both directions",
+    "402 pointer interaction and quick sorting interrupt running scroll animation",
+    "402 sort at 4× CPU throttling retains row and header nodes without full render",
+    "402 all filtering and navigation leaves encrypted financial record byte-identical"
+  ],
+  "errors": [],
+  "failures": [],
+  "timings": [
+    59.600000001490116,
+    43,
+    62.5,
+    47.19999999552965
+  ]
+}

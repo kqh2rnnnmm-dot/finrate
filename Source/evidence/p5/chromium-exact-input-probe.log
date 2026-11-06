@@ -1,0 +1,2 @@
+PASS exact 12-digit kopecks survive slider sync, real field editor/date/account controls recompute immediately; close discards everything without draft/save
+{"checks":1,"failures":[]}
