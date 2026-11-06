@@ -1,3 +1,15 @@
+# ACCESS B · официальные источники и уровень проверенности · 06.11.2026
+
+- **Официально подтверждено:** вебовый Sign in with Apple Services ID связывается с primary native App ID: https://developer.apple.com/help/account/capabilities/configure-sign-in-with-apple-for-the-web ; правила Apple для Sign in with Apple JS прямо требуют App Store app: https://developer.apple.com/sign-in-with-apple/usage-guidelines-for-websites-and-other-platforms/ ; https://developer.apple.com/documentation/signinwithapple/configuring-your-environment-for-sign-in-with-apple .
+- **Официально подтверждено:** Apple identity token требует серверной проверки подписи/JWT/nonce/iss/aud/exp: https://developer.apple.com/documentation/signinwithapple/verifying-a-user .
+- **Официально подтверждено:** Apple passkeys доступны начиная с iOS16 и синхронизируются через iCloud Keychain: https://developer.apple.com/news/?id=21mnmxow ; https://support.apple.com/en-euro/guide/iphone/iphf538ea8d0/ios .
+- **Официальная возможность, но НЕ проверена в FinRate:** CloudKit JS и privateCloudDatabase требуют CloudKit app/container и конфигурации: https://developer.apple.com/documentation/cloudkitjs ; https://developer.apple.com/documentation/cloudkitjs/cloudkit.database .
+- **Официальная публичная стоимость, региональные условия UNKNOWN:** Apple Developer Program USD 99/год: https://developer.apple.com/programs/enroll/ .
+- **НЕ ПРОВЕРЕНО:** Apple Developer eligibility standalone PWA, любой рабочий App ID/Services ID для FinRate, CloudKit адаптер, существование backend/escrow, server identity isolation, WebAuthn PRF на iOS16.6.1, восстановление на реальном iPhone, стоимость и региональная доступность сервисов. Нет новых подключений и экспериментов с реальными данными.
+- [Подробное исследование](ACCESS_AFTER_P4/ACCESS_B_FEASIBILITY_2026-11-06.md) · [Задание Codex только на исследование](ACCESS_AFTER_P4/ACCESS_B_CODEX_RESEARCH_TASK_2026-11-06.md). Это **предложения, не утверждённые изменения**.
+
+---
+
 # A3 · источники · 04.11.2026
 
 - [Утверждённое задание](A3/TASK.md), [матрица](A3/ACCEPTANCE_MATRIX.md), [передача статусов/выдержка roadmap](A3/HANDOFF_STATUS.md) из FinRate_A3_CODEX_HANDOFF_2026-11-04.zip.
