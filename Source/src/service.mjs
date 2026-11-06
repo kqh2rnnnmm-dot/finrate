@@ -36,7 +36,7 @@ export class FinRate {
     this.discardEmergencyReset();
     const record=await this.store.read();if(!record)fail('EMPTY');let a=await this.store.readAccess();if(!await validAccess(record.vault,a))fail('ACCESS_LOST');
     if(a.mode==='pin')a=await this.store.accessAttempt(record,a.accessId);
-    const result=await openAccess(record.vault,a,pin);await this.store.resetAttempts(record,a.accessId);
+    const result=await openAccess(record.vault,a,pin);await this.store.resetAttempts(record,a.accessId);await this.store.assertCurrent(record);
     this.document=migrateDocument(result.doc);this.key=result.key;this.record=record;this.needsMigration=result.doc.schema<SCHEMA;return copy(this.document);
   });}
   async changeSecurity({action,secret,mode='password',password,pin,entry}){return this.exclusive(async()=>{

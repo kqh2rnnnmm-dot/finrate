@@ -1017,3 +1017,7 @@ input,textarea,[contenteditable=true],.full-note,.activity-comparison span {
 [data-limits-ui] [data-limit-state="exceeded"] .limit-state,[data-limits-ui][data-limit-state="exceeded"] .limit-state { color:var(--red); }
 [data-limits-ui] [data-limit-state="exceeded"] .limit-progress,[data-limits-ui][data-limit-state="exceeded"] .limit-progress { accent-color:var(--red); }
 [data-limits-ui] p,[data-limits-ui] small,[data-limits-ui] dd { overflow-wrap:anywhere; }
+
+/* ACCESS A: preserve native hidden semantics only inside the new reset flow. */
+[data-emergency-reset] [hidden] { display:none !important; }
+[data-emergency-reset] :is(.button,.text-button,.list-button) { white-space:normal; overflow-wrap:anywhere; min-width:0; max-width:100%; }
