@@ -2,7 +2,7 @@
 
 - [x] 1. Core audit/RED/GREEN facts/rules (deps:none)
 - [x] 2. Category lifecycle and confirmed nonrepeating warning transitions (deps1)
-- [ ] 3. Storage/A2/drafts/restore/access/CAS/quota (deps1–2)
+- [x] 3. Storage/A2/drafts/restore/access/CAS/quota (deps1–2)
 - [ ] 4. Shared limits UI/history/search/context/guard/back (deps1–3)
 - [ ] 5. Home/settings/feedback integration and neighbor checks (deps4)
 - [ ] 6. Final immutable build/full regression/both engines/old P3 upgrade/audit/verify (deps1–5)
