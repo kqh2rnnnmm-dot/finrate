@@ -186,5 +186,21 @@
     "tests/vault.test.mjs": "52e9d18837db48589ae6cef5703a2750409cacab932b0f827c4aa9eaa8805fd6"
   },
   "accessPlanSHA256": "43b5f9eb010f92c4d365702a49938d7b00d9f407fee6ee672fc11fd3170eb579",
-  "recoveryContractSHA256": "ee36f3c678bf5cccffddd2db01152a8f6082d183c266a393ff5f2e2250f08129"
+  "recoveryContractSHA256": "ee36f3c678bf5cccffddd2db01152a8f6082d183c266a393ff5f2e2250f08129",
+  "originalVersion": "0.3.15-access-a",
+  "packageDependencies": {
+    "dependencies": {
+      "dexie": "4.4.6"
+    },
+    "devDependencies": {
+      "@sparticuz/chromium": "153.0.0",
+      "esbuild": "0.28.2",
+      "fake-indexeddb": "6.2.5",
+      "playwright": "1.62.1",
+      "workbox-build": "7.4.1",
+      "workbox-precaching": "7.4.1",
+      "workbox-routing": "7.4.1"
+    }
+  },
+  "normalizedLockSHA256": "27434b1dbc79a1e6d2956b7a12e8543946a45dde7182b2672481b96e1cf42390"
 }

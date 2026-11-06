@@ -14,7 +14,7 @@ import {backupBlob} from './crypto.mjs';
 import {createUI,icon} from './ui.mjs';
 import {PRIMARY_TABS} from './interaction.mjs';
 import {helpPage} from './help.mjs';
-const BUILD='access-emergency-reset01',root=document.getElementById('app'),store=createStore(),app=new FinRate(store);
+const BUILD='p5-forecast01',root=document.getElementById('app'),store=createStore(),app=new FinRate(store);
 root.dataset.build=BUILD;
 let page='Главная',status='',bad=false,exists=false,recovery=null,prepared=null,safetyDownloaded=false,hiddenTimer,suspendRequested=false;
 let returnContext=null,lockReason=null,lockDelay=5,suspendReason='timeout';const sessionPolicy=createSessionPolicy();
@@ -69,7 +69,7 @@ function render(){
   if(invalidating){root.replaceChildren();return;}
   document.body.classList.toggle('app-open',!!app.document&&!recovery);
   if(!app.document||recovery){root.innerHTML=auth();bind();ui.bindUpdate();return;}
-  const views={'Главная':home,'Меню':ui.menuPage,'Поиск':ui.searchPage,'Счета и кошельки':ui.accounts,'Категории':ui.categories,'Операции':operations,'Платежи':ui.paymentsPage,'Долги':ui.debtsPage,'Цели':ui.goalsPage,'Лимиты':ui.limitsPage,'Фильтры операций':ui.filtersPage,'Настройки':settings,'История изменений':ui.activityPage,'Пароль и вход':ui.securityPage,'Данные и синхронизация':data,'Инструкция и FAQ':helpPage};
+  const views={'Главная':home,'Меню':ui.menuPage,'Поиск':ui.searchPage,'Счета и кошельки':ui.accounts,'Категории':ui.categories,'Операции':operations,'Отчёты':ui.reportsPage,'Платежи':ui.paymentsPage,'Долги':ui.debtsPage,'Цели':ui.goalsPage,'Лимиты':ui.limitsPage,'Фильтры операций':ui.filtersPage,'Настройки':settings,'История изменений':ui.activityPage,'Пароль и вход':ui.securityPage,'Данные и синхронизация':data,'Инструкция и FAQ':helpPage};
   // Keep the dock's captured pointer attached while scrubbing between tabs.
   const dock=root.querySelector('.bottom');
   const layout=root.querySelector('.layout'),head=root.querySelector(':scope > header');
@@ -146,7 +146,7 @@ document.addEventListener('visibilitychange',()=>{
  }else returnToApp();
 });
 window.addEventListener('pagehide',()=>{document.documentElement.classList.add('access-private');clearAccessFields(document);ui.clearSensitive();emergencyUI.cancel();resetUI.cancel();clearFeedback();if(app.document&&sessionPolicy.consumeDownload()){sessionPolicy.hide();scheduleLock();root.style.visibility='hidden';return;}if(app.busy){suspendRequested=true;suspendReason='departure';root.style.visibility='hidden';return;}closeBase('departure');});
-window.addEventListener('pageshow',e=>{if(e.persisted)emergencyUI.cancel();returnToApp();if(e.persisted&&!suspendRequested&&!lockRenderFrame){getComputedStyle(root).visibility;render();}});
+window.addEventListener('pageshow',e=>{if(e.persisted){emergencyUI.cancel();ui.clearSensitive();}returnToApp();if(e.persisted&&!suspendRequested&&!lockRenderFrame){getComputedStyle(root).visibility;render();}});
 (async()=>{try{if(!globalThis.crypto?.subtle||!globalThis.indexedDB)throw new Error('CAPABILITY');exists=!!await store.read();await app.entryStatus();render();await autoEnter();
   if(location.protocol!=='file:'&&'serviceWorker' in navigator)navigator.serviceWorker.register('./sw.js').then(reg=>ui.watchUpdates(reg)).catch(()=>{setStatus('Ваши данные доступны. Работа без интернета пока недоступна. Повторите запуск с подключением.',true);});
 }catch{root.innerHTML=`<div class="auth">${header()}<div class="message error" role="alert">В этом режиме браузера FinRate не может безопасно сохранять данные. Откройте приложение в обычном режиме браузера. На iPhone используйте опубликованную ссылку FinRate.</div></div>`;}})();
