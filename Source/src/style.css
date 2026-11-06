@@ -1003,3 +1003,17 @@ input,textarea,[contenteditable=true],.full-note,.activity-comparison span {
 [data-goals-ui] .goal-progress { display:block; width:100%; height:.5rem; accent-color:var(--blue); }
 [data-goals-ui] .goal-money { white-space:nowrap; max-width:100%; }
 [data-goals-ui] p,[data-goals-ui] dd { overflow-wrap:anywhere; }
+
+/* P4: local limit content only; existing palettes, surfaces and spacing tokens. */
+[data-limits-ui] { min-width:0; }
+[data-limits-ui] .limits-list { display:grid; grid-template-columns:minmax(0,1fr); gap:var(--peer-gap); min-width:0; }
+[data-limits-ui] .limits-list > * { min-width:0; margin:0; }
+[data-limits-ui] .limit-name { display:block; min-width:0; max-width:100%; white-space:nowrap; text-overflow:ellipsis; overflow:hidden; }
+[data-limits-ui] .limit-money { white-space:nowrap; max-width:100%; }
+[data-limits-ui] .limit-progress { display:block; width:100%; height:.5rem; accent-color:var(--blue); }
+[data-limits-ui] .limit-state { font-weight:600; }
+[data-limits-ui] [data-limit-state="near"] .limit-state,[data-limits-ui][data-limit-state="near"] .limit-state { color:var(--transfer); }
+[data-limits-ui] [data-limit-state="near"] .limit-progress,[data-limits-ui][data-limit-state="near"] .limit-progress { accent-color:var(--transfer); }
+[data-limits-ui] [data-limit-state="exceeded"] .limit-state,[data-limits-ui][data-limit-state="exceeded"] .limit-state { color:var(--red); }
+[data-limits-ui] [data-limit-state="exceeded"] .limit-progress,[data-limits-ui][data-limit-state="exceeded"] .limit-progress { accent-color:var(--red); }
+[data-limits-ui] p,[data-limits-ui] small,[data-limits-ui] dd { overflow-wrap:anywhere; }

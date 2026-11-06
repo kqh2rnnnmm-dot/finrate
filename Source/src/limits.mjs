@@ -12,9 +12,11 @@ const category=(d,id)=>{text(id);const c=d.categories.find(c=>c.id===id);if(!c||
 const find=(d,id)=>{const r=data(d).rules.find(r=>r.id===id);if(!r)fail('LIMIT_CHANGED');return r;};
 const safe=n=>n>=-MAX&&n<=MAX?Number(n):null;
 export const limitSettings=d=>({earlyEnabled:d.settings?.limitEarlyWarnings!==false,percent:d.settings?.limitWarningPercent??80});
+export const limitInputAmount=value=>{const n=BigInt(value);return n/100n+'.'+String(n%100n).padStart(2,'0');};
 export const limitEditBase=(d,id)=>JSON.stringify(find(d,id));
 export function validateLimitDraft(f,d){
- if(!['create','edit'].includes(f.limitAction)||f.kind!=='expense')fail('LIMIT');text(f.limitId);month(f.limitPeriod);
+ if(!['create','edit'].includes(f.limitAction)||f.kind!=='expense')fail('LIMIT');text(f.limitId);if(typeof f.limitPeriod!=='string'||f.limitPeriod.length>7)fail('LIMIT_PERIOD');if(f.limitPeriod)month(f.limitPeriod);
+ if(f.originalCents!==undefined){amount(f.originalCents);if(f.originalAmount!==limitInputAmount(f.originalCents))fail('LIMIT');}
  if(f.limitAction==='edit'&&!data(d).rules.some(r=>r.id===f.limitId))fail('LIMIT_CHANGED');
  for(const key of ['categoryId','subcategoryId'])if(f[key])category(d,f[key]);
  if(f.subcategoryId&&d.categories.find(c=>c.id===f.subcategoryId)?.parentId!==f.categoryId)fail('LIMIT_CATEGORY');
@@ -40,6 +42,7 @@ export function limits(d,period){month(period);const rules=data(d).rules.filter(
 export function limit(d,id){const r=find(d,id);return row(d,r,calculate(d,r.period));}
 export function limitSummary(d,period){const rows=limits(d,period).filter(r=>!r.archived),count=state=>rows.filter(r=>r.state===state).length;return {count:rows.length,exceeded:count('exceeded'),reached:count('reached'),near:count('near'),normal:count('normal')};}
 export function limitOperations(d,id){const r=find(d,id),c=category(d,r.categoryId);return d.operations.filter(o=>!o.cancelled&&!o.pending&&o.date.startsWith(r.period+'-')&&(isExpense(o)||o.kind==='refund')&&o.allocations.some(a=>{const part=resolveCategory(d,a.categoryId);return part&&(part.id===c.id||!c.parentId&&resolveCategory(d,part.parentId)?.id===c.id);}));}
+export function limitContributions(d,id){const r=find(d,id),c=category(d,r.categoryId);return limitOperations(d,id).map(o=>({operation:copy(o),exactAmount:o.allocations.reduce((n,a)=>{const part=resolveCategory(d,a.categoryId);return part&&(part.id===c.id||!c.parentId&&resolveCategory(d,part.parentId)?.id===c.id)?n+BigInt(a.amount)*(o.kind==='refund'?-1n:1n):n;},0n).toString()}));}
 function atomic(d,fn){const n=copy(d),result=fn(n);if(result===false)return false;validateDocument(n);Object.assign(d,n);return result;}
 function clean(d,input){const c=category(d,input.categoryId);return {id:input.id||uid(),categoryId:c.id,period:month(input.period),amount:amount(input.amount)};}
 function consume(n,draftId){if(draftId)n.drafts=n.drafts.filter(r=>r.id!==draftId);}
