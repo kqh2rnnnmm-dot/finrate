@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: P4 unallocated modern fee not inherited into transfer category
+ok 1 - P4 unallocated modern fee not inherited into transfer category
+  ---
+  duration_ms: 8.394754
+  type: 'test'
+  ...
+# Subtest: P4 safe-integer rule/derived cents remain exact; no unsafe conversion or block on canon facts
+ok 2 - P4 safe-integer rule/derived cents remain exact; no unsafe conversion or block on canon facts
+  ---
+  duration_ms: 16.078781
+  type: 'test'
+  ...
+# Subtest: P4 malformed signed rule/settings references reject before persistence; period strict
+ok 3 - P4 malformed signed rule/settings references reject before persistence; period strict
+  ---
+  duration_ms: 1.364019
+  type: 'test'
+  ...
+# Subtest: P4 archived rules retained; duplicate active scope safe refusal and restore conflict atomic
+ok 4 - P4 archived rules retained; duplicate active scope safe refusal and restore conflict atomic
+  ---
+  duration_ms: 1.770057
+  type: 'test'
+  ...
+# Subtest: P4 current classification moves parent totals; archived category remains counted
+ok 5 - P4 current classification moves parent totals; archived category remains counted
+  ---
+  duration_ms: 1.071028
+  type: 'test'
+  ...
+# Subtest: P4 explicit reassign historical rule permits merge; preexisting merged allocations resolve once
+ok 6 - P4 explicit reassign historical rule permits merge; preexisting merged allocations resolve once
+  ---
+  duration_ms: 1.270361
+  type: 'test'
+  ...
+# Subtest: P4 settings do not create root; threshold arithmetic exact around80 at tiny amount
+ok 7 - P4 settings do not create root; threshold arithmetic exact around80 at tiny amount
+  ---
+  duration_ms: 0.568607
+  type: 'test'
+  ...
+# Subtest: P4 notices human/financial not receipt; default80 and actual exceeded money
+ok 8 - P4 notices human/financial not receipt; default80 and actual exceeded money
+  ---
+  duration_ms: 1.655829
+  type: 'test'
+  ...
+# Subtest: P4 restore opt-out, financial/master permissions, no read/metadata/failed-action alerts
+ok 9 - P4 restore opt-out, financial/master permissions, no read/metadata/failed-action alerts
+  ---
+  duration_ms: 0.882359
+  type: 'test'
+  ...
+# Subtest: P4 fall below and explicit re-cross may warn; same state/no-op does not
+ok 10 - P4 fall below and explicit re-cross may warn; same state/no-op does not
+  ---
+  duration_ms: 1.678241
+  type: 'test'
+  ...
+# Subtest: P4 new/current rules or changing threshold never emits past spending as fresh warning
+ok 11 - P4 new/current rules or changing threshold never emits past spending as fresh warning
+  ---
+  duration_ms: 0.744287
+  type: 'test'
+  ...
+# Subtest: P4 pure P3 reads; create changes neither cash nor forecast
+ok 12 - P4 pure P3 reads; create changes neither cash nor forecast
+  ---
+  duration_ms: 1.225235
+  type: 'test'
+  ...
+# Subtest: P4 parent6000+veg3000-refund1000=8000, child2000, then expense3000 goes through at11000
+ok 13 - P4 parent6000+veg3000-refund1000=8000, child2000, then expense3000 goes through at11000
+  ---
+  duration_ms: 1.716728
+  type: 'test'
+  ...
+# Subtest: P4 no carryover/implicit repeat; next-month refund can make net negative
+ok 14 - P4 no carryover/implicit repeat; next-month refund can make net negative
+  ---
+  duration_ms: 0.694553
+  type: 'test'
+  ...
+# Subtest: P4 100 split leaves and mixed allocations counted once; uncategorized rule forbidden
+ok 15 - P4 100 split leaves and mixed allocations counted once; uncategorized rule forbidden
+  ---
+  duration_ms: 8.19536
+  type: 'test'
+  ...
+# Subtest: P4 date/allocation edits and cancel recalculate current facts
+ok 16 - P4 date/allocation edits and cancel recalculate current facts
+  ---
+  duration_ms: 0.874428
+  type: 'test'
+  ...
+# Subtest: P4 external transfer/fee once; internal transfer/pending/cancel/adjustment excluded
+ok 17 - P4 external transfer/fee once; internal transfer/pending/cancel/adjustment excluded
+  ---
+  duration_ms: 1.176903
+  type: 'test'
+  ...
+# Subtest: P4 credit purchase once not repayment; plan only when real payment confirmed
+ok 18 - P4 credit purchase once not repayment; plan only when real payment confirmed
+  ---
+  duration_ms: 6.000107
+  type: 'test'
+  ...
+# Subtest: P4 principal and reserves not expenses; only canonical reserve purchase counted
+ok 19 - P4 principal and reserves not expenses; only canonical reserve purchase counted
+  ---
+  duration_ms: 4.869863
+  type: 'test'
+  ...
+# Subtest: P4 79/80/81/100/101 distinct states; only confirmed upward crossings
+ok 20 - P4 79/80/81/100/101 distinct states; only confirmed upward crossings
+  ---
+  duration_ms: 2.230585
+  type: 'test'
+  ...
+# Subtest: P4 settings immediate/early off preserves card states; no old-month or settings alerts
+ok 21 - P4 settings immediate/early off preserves card states; no old-month or settings alerts
+  ---
+  duration_ms: 1.491767
+  type: 'test'
+  ...
+# Subtest: P4 replay/edit-stale/archive never duplicate rules or move money
+ok 22 - P4 replay/edit-stale/archive never duplicate rules or move money
+  ---
+  duration_ms: 0.572614
+  type: 'test'
+  ...
+# Subtest: P4 category archive/move truthful; merge conflict atomically rejected
+ok 23 - P4 category archive/move truthful; merge conflict atomically rejected
+  ---
+  duration_ms: 1.668322
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 98.633762

@@ -1,0 +1,84 @@
+TAP version 13
+# Subtest: P4 notices human/financial not receipt; default80 and actual exceeded money
+not ok 1 - P4 notices human/financial not receipt; default80 and actual exceeded money
+  ---
+  duration_ms: 7.798927
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits-notifications.test.mjs:4:1'
+  failureType: 'testCodeFailure'
+  error: 'n.completedLimitNotifications is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits-notifications.test.mjs:4:138)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.start (node:internal/test_runner/test:1242:17)
+    startSubtestAfterBootstrap (node:internal/test_runner/harness:387:17)
+  ...
+# Subtest: P4 restore opt-out, financial/master permissions, no read/metadata/failed-action alerts
+not ok 2 - P4 restore opt-out, financial/master permissions, no read/metadata/failed-action alerts
+  ---
+  duration_ms: 0.737176
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits-notifications.test.mjs:5:1'
+  failureType: 'testCodeFailure'
+  error: 'n.completedLimitNotifications is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits-notifications.test.mjs:5:149)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: P4 fall below and explicit re-cross may warn; same state/no-op does not
+not ok 3 - P4 fall below and explicit re-cross may warn; same state/no-op does not
+  ---
+  duration_ms: 0.920135
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits-notifications.test.mjs:6:1'
+  failureType: 'testCodeFailure'
+  error: 'n.completedLimitNotifications is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits-notifications.test.mjs:6:205)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: P4 new/current rules or changing threshold never emits past spending as fresh warning
+not ok 4 - P4 new/current rules or changing threshold never emits past spending as fresh warning
+  ---
+  duration_ms: 0.723576
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/limits-notifications.test.mjs:7:1'
+  failureType: 'testCodeFailure'
+  error: 'n.completedLimitNotifications is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/limits-notifications.test.mjs:7:225)
+    Test.runInAsyncScope (node:async_hooks:227:14)
+    Test.run (node:internal/test_runner/test:1382:25)
+    Test.processPendingSubtests (node:internal/test_runner/test:960:18)
+    Test.postRun (node:internal/test_runner/test:1522:19)
+    Test.run (node:internal/test_runner/test:1447:12)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..4
+# tests 4
+# suites 0
+# pass 0
+# fail 4
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 35.544284
