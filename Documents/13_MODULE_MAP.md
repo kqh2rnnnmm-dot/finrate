@@ -1,3 +1,11 @@
+# P4 · карта реализованных модулей после слияния · 06.11.2026
+
+PR [№13](https://github.com/kqh2rnnnmm-dot/finrate/pull/13) **объединён в `main`**, merge `86395cd65616590f3377b38c9c5023b52ed76a21`; `p4-limits01 / 0.3.14-p4`. Предыдущий код сохранён в `backup/pre-p4-main-2026-11-06` (SHA `eea169f4605a0afa155ab69c95a867ee39749fda`). Новые `Source/src/limits.mjs` и `limits-ui.mjs`; точечная интеграция в `model/app/ui/dashboard/notification-events/context-menu/activity/reset-*/help` и ограниченный CSS. Фактические операции, финансовые формулы, `service/store/crypto/device-access` не переписывались.
+
+**Следующий:** ACCESS-after-P4 — отдельная подготовка аварийного сброса + Apple Account/recovery, не часть P4. [Детали P4](P4/AUDIT.md) · [Тесты](P4/TEST_REPORT.md). Исторические пометки ниже «готово к ревизии» неактуальны.
+
+---
+
 # P4 — карта адресных изменений · 06.11.2026
 
 `codex/p4-limits`, p4-limits01 /0.3.14-p4, base `eea169f4605a0afa155ab69c95a867ee39749fda`. Готово для ревизии, не слито/не опубликовано.
