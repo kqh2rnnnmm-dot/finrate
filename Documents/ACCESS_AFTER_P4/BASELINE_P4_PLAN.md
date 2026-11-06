@@ -1,0 +1,13 @@
+# P4 limits — implementation plan
+
+Base eea169f4605a0afa155ab69c95a867ee39749fda; current main P3 0.3.13-p3; branch codex/p4-limits; no open PR. Direct user authorization covers code/commits/push/one PR, not merge/deploy/user reset/Apple/OAuth. Completed P3 plan archived in Documents/P4. No agents.
+
+1. Core vertical slice (deps:none; limits/model + tests): RED canonical parent/child/month/refund/external/credit/P1/P2/P3/split/safe-boundary cases, optional strict rules/settings, atomic CRUD. Verify no money/forecast changes, pure P3 reads, no carryover. Source financial owners byte-identical.
+2. Lifecycle/notification slice (deps1; limits/notification-events/app + tests): category move/archive/merge contracts, derived state79/80/81/100/101, percent changes and financial notification gating. UI confirmed action only, explicitly suppress restore; no persistence counters/notifications on reads. Verify rollback, unchanged facts and no duplicate alerts.
+3. Storage/protection slice (deps1–2; model/reset-policy/reset-ui + tests): strict draft refs and A2 fields/counters; real service and named IDB, quota/CAS/double ID, signed malformed payload, backup/independent restore/PIN/password/recovery. No service/store/crypto rewrite.
+4. Shared UI slice (deps1–3; limits-ui/ui/activity/activity-ui/scopedCSS): current/other months +archived, forms/category picker/shared editors/guard/drafts, details/status/scale/history/search/context/back. Verify focused actual browser flows before matrix.
+5. Home/settings slice (deps4; dashboard/ui/app/help): existing metric and current-month priority counts, 3 styles/1–6 tiles, Settings→Limits→Warnings, threshold1–99/early toggle, no invalid shortcuts. Verify actual readonly values, screen/scroll and no financial deltas.
+6. Delivery/testing slice (deps1–5; tools/build/verify/check-release + browser tests): final immutable p4-limits01/0.3.14-p4, old test assertions preserved except expected current build labels. Chromium/WebKit,7 sizes×4 palettes/themes, native IDB/offline/upgrade/backup/reset/access, all regression/unit and npm audit unchanged.
+7. Reports/PR (deps6): Documents/P4 audit/matrix/changelog/test/open/screens/iPhone, checkpoint/decisions/modulemap/FAQ/README, record full base/head/publicSHA. Commit/push one PR, no merge/deploy. Deferred access contract stays byte-identical. Physical iPhone OPEN.
+
+Checkpoints after each slice: focused RED→GREEN, inspect adjacent behavior, commit small change. Full final run only when code stable; any later product change requires relevant retests and honest hash separation (prefer no post-full code changes). Preserve first failures, never weaken prior assertions. No unnecessary architecture/designer/backend work.

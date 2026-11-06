@@ -1,0 +1,490 @@
+TAP version 13
+# Subtest: A3 same current password is rejected by service using password
+ok 1 - A3 same current password is rejected by service using password
+  ---
+  duration_ms: 313.349939
+  type: 'test'
+  ...
+# Subtest: A3 same current password is rejected by service using recovery
+ok 2 - A3 same current password is rejected by service using recovery
+  ---
+  duration_ms: 266.915028
+  type: 'test'
+  ...
+# Subtest: A3 password change by password preserves password, full financial payload, old/new backups
+ok 3 - A3 password change by password preserves password, full financial payload, old/new backups
+  ---
+  duration_ms: 733.403317
+  type: 'test'
+  ...
+# Subtest: A3 password change by recovery preserves password, full financial payload, old/new backups
+ok 4 - A3 password change by recovery preserves password, full financial payload, old/new backups
+  ---
+  duration_ms: 744.666233
+  type: 'test'
+  ...
+# Subtest: A3 password change by password preserves pin, full financial payload, old/new backups
+ok 5 - A3 password change by password preserves pin, full financial payload, old/new backups
+  ---
+  duration_ms: 978.530707
+  type: 'test'
+  ...
+# Subtest: A3 password change by recovery preserves pin, full financial payload, old/new backups
+ok 6 - A3 password change by recovery preserves pin, full financial payload, old/new backups
+  ---
+  duration_ms: 981.548509
+  type: 'test'
+  ...
+# Subtest: A3 password change by password preserves none, full financial payload, old/new backups
+ok 7 - A3 password change by password preserves none, full financial payload, old/new backups
+  ---
+  duration_ms: 769.760452
+  type: 'test'
+  ...
+# Subtest: A3 password change by recovery preserves none, full financial payload, old/new backups
+ok 8 - A3 password change by recovery preserves none, full financial payload, old/new backups
+  ---
+  duration_ms: 791.700886
+  type: 'test'
+  ...
+# Subtest: A3 password boundaries 12 and 1024; weak, excessive and wrong secrets leave all state unchanged
+ok 9 - A3 password boundaries 12 and 1024; weak, excessive and wrong secrets leave all state unchanged
+  ---
+  duration_ms: 1050.142427
+  type: 'test'
+  ...
+# Subtest: A3 PIN4 → password → PIN6 → none → password removes previous local capabilities
+ok 10 - A3 PIN4 → password → PIN6 → none → password removes previous local capabilities
+  ---
+  duration_ms: 1025.469545
+  type: 'test'
+  ...
+# Subtest: A3 failed password transaction rolls back active/access/safety and preserves pin
+ok 11 - A3 failed password transaction rolls back active/access/safety and preserves pin
+  ---
+  duration_ms: 671.269982
+  type: 'test'
+  ...
+# Subtest: A3 failed password transaction rolls back active/access/safety and preserves none
+ok 12 - A3 failed password transaction rolls back active/access/safety and preserves none
+  ---
+  duration_ms: 525.730754
+  type: 'test'
+  ...
+# Subtest: A3 stale password/recovery change cannot replace newer PIN or password
+ok 13 - A3 stale password/recovery change cannot replace newer PIN or password
+  ---
+  duration_ms: 789.040025
+  type: 'test'
+  ...
+# Subtest: A3 PIN4 failed attempt limit survives cold service, recovery alone resets counters
+ok 14 - A3 PIN4 failed attempt limit survives cold service, recovery alone resets counters
+  ---
+  duration_ms: 932.455105
+  type: 'test'
+  ...
+# Subtest: A3 PIN6 failed attempt limit survives cold service, recovery alone resets counters
+ok 15 - A3 PIN6 failed attempt limit survives cold service, recovery alone resets counters
+  ---
+  duration_ms: 970.24816
+  type: 'test'
+  ...
+# Subtest: A3 changed password + pin retains A2 financial behavior and restores external file
+ok 16 - A3 changed password + pin retains A2 financial behavior and restores external file
+  ---
+  duration_ms: 741.162278
+  type: 'test'
+  ...
+# Subtest: A3 changed password + pin retains A2 categories behavior and restores external file
+ok 17 - A3 changed password + pin retains A2 categories behavior and restores external file
+  ---
+  duration_ms: 706.323342
+  type: 'test'
+  ...
+# Subtest: A3 changed password + pin retains A2 all behavior and restores external file
+ok 18 - A3 changed password + pin retains A2 all behavior and restores external file
+  ---
+  duration_ms: 608.532393
+  type: 'test'
+  ...
+# Subtest: A3 changed password + none retains A2 financial behavior and restores external file
+ok 19 - A3 changed password + none retains A2 financial behavior and restores external file
+  ---
+  duration_ms: 530.714144
+  type: 'test'
+  ...
+# Subtest: A3 changed password + none retains A2 categories behavior and restores external file
+ok 20 - A3 changed password + none retains A2 categories behavior and restores external file
+  ---
+  duration_ms: 517.992544
+  type: 'test'
+  ...
+# Subtest: A3 changed password + none retains A2 all behavior and restores external file
+ok 21 - A3 changed password + none retains A2 all behavior and restores external file
+  ---
+  duration_ms: 564.444173
+  type: 'test'
+  ...
+# Subtest: A3 session deadline 0 survives repeated hide/download and resumes without secrets
+ok 22 - A3 session deadline 0 survives repeated hide/download and resumes without secrets
+  ---
+  duration_ms: 0.315775
+  type: 'test'
+  ...
+# Subtest: A3 session deadline 5 survives repeated hide/download and resumes without secrets
+ok 23 - A3 session deadline 5 survives repeated hide/download and resumes without secrets
+  ---
+  duration_ms: 0.080258
+  type: 'test'
+  ...
+# Subtest: A3 session deadline 15 survives repeated hide/download and resumes without secrets
+ok 24 - A3 session deadline 15 survives repeated hide/download and resumes without secrets
+  ---
+  duration_ms: 0.07472
+  type: 'test'
+  ...
+# Subtest: A3 session deadline 30 survives repeated hide/download and resumes without secrets
+ok 25 - A3 session deadline 30 survives repeated hide/download and resumes without secrets
+  ---
+  duration_ms: 0.037755
+  type: 'test'
+  ...
+# Subtest: A3 session deadline -1 survives repeated hide/download and resumes without secrets
+ok 26 - A3 session deadline -1 survives repeated hide/download and resumes without secrets
+  ---
+  duration_ms: 0.034411
+  type: 'test'
+  ...
+# Subtest: A1-F06: exact 8MiB plaintext exports and opens with password and recovery without changing limits
+ok 27 - A1-F06: exact 8MiB plaintext exports and opens with password and recovery without changing limits
+  ---
+  duration_ms: 9417.992113
+  type: 'test'
+  ...
+# Subtest: A1: base64 grammar rejects invalid alphabet, middle padding, extra padding, noncanonical trailing bits and length
+ok 28 - A1: base64 grammar rejects invalid alphabet, middle padding, extra padding, noncanonical trailing bits and length
+  ---
+  duration_ms: 81.877505
+  type: 'test'
+  ...
+# Subtest: A1-F04: null, array and primitive JSON are FORMAT
+ok 29 - A1-F04: null, array and primitive JSON are FORMAT
+  ---
+  duration_ms: 0.403594
+  type: 'test'
+  ...
+# Subtest: A1-F01: corrupt active ciphertext cannot be exported, and memory/storage remain unchanged
+ok 30 - A1-F01: corrupt active ciphertext cannot be exported, and memory/storage remain unchanged
+  ---
+  duration_ms: 88.963421
+  type: 'test'
+  ...
+# Subtest: A1: export rejects stale row both before and after authentication, and historical blob remains downloadable
+ok 31 - A1: export rejects stale row both before and after authentication, and historical blob remains downloadable
+  ---
+  duration_ms: 356.249045
+  type: 'test'
+  ...
+# Subtest: A1-F03: selected verification route is explicit, unselected damaged route not claimed as verified
+ok 32 - A1-F03: selected verification route is explicit, unselected damaged route not claimed as verified
+  ---
+  duration_ms: 174.66995
+  type: 'test'
+  ...
+# Subtest: A1 historical safety: corrupted ciphertext can be downloaded unchanged without claiming authentication; current base remains intact
+ok 33 - A1 historical safety: corrupted ciphertext can be downloaded unchanged without claiming authentication; current base remains intact
+  ---
+  duration_ms: 356.507736
+  type: 'test'
+  ...
+# Subtest: ACCESS locked export is read-only standard ciphertext; no decrypt/derive or secret/plaintext/access/safety; independent recovery exact
+ok 34 - ACCESS locked export is read-only standard ciphertext; no decrypt/derive or secret/plaintext/access/safety; independent recovery exact
+  ---
+  duration_ms: 607.290856
+  type: 'test'
+  ...
+# Subtest: ACCESS locked-only path cannot export from unlocked app or authorize with forged/copied/cancelled intent
+ok 35 - ACCESS locked-only path cannot export from unlocked app or authorize with forged/copied/cancelled intent
+  ---
+  duration_ms: 449.553123
+  type: 'test'
+  ...
+# Subtest: ACCESS newer preview and stale ciphertext/generation invalidate export; no read-side migration/write
+ok 36 - ACCESS newer preview and stale ciphertext/generation invalidate export; no read-side migration/write
+  ---
+  duration_ms: 481.858606
+  type: 'test'
+  ...
+# Subtest: ACCESS unknown vault fields never leak; structural export failure permits only explicit no-copy decision for identified bounded record
+ok 37 - ACCESS unknown vault fields never leak; structural export failure permits only explicit no-copy decision for identified bounded record
+  ---
+  duration_ms: 362.010969
+  type: 'test'
+  ...
+# Subtest: ACCESS missing/invalid-identity/oversize record and unavailable IDB fail closed without reset
+ok 38 - ACCESS missing/invalid-identity/oversize record and unavailable IDB fail closed without reset
+  ---
+  duration_ms: 419.817998
+  type: 'test'
+  ...
+# Subtest: ACCESS service requires both copy decision and separate exact final confirmation; no direct/forged proof
+ok 39 - ACCESS service requires both copy decision and separate exact final confirmation; no direct/forged proof
+  ---
+  duration_ms: 347.265147
+  type: 'test'
+  ...
+# Subtest: ACCESS saved-copy choice is explicit human claim, no secret verification; atomic clear then manual setup/new dataset and old file restore
+ok 40 - ACCESS saved-copy choice is explicit human claim, no secret verification; atomic clear then manual setup/new dataset and old file restore
+  ---
+  duration_ms: 519.053109
+  type: 'test'
+  ...
+# Subtest: ACCESS no-copy proof resets only after acknowledgment, never auto creates data; cannot replay against next setup
+ok 41 - ACCESS no-copy proof resets only after acknowledgment, never auto creates data; cannot replay against next setup
+  ---
+  duration_ms: 450.658374
+  type: 'test'
+  ...
+# Subtest: ACCESS cancellation/new preview/lock destroys opaque intents and proofs without writing
+ok 42 - ACCESS cancellation/new preview/lock destroys opaque intents and proofs without writing
+  ---
+  duration_ms: 356.290103
+  type: 'test'
+  ...
+# Subtest: ACCESS transaction QuotaExceededError rolls back both tables/access; proof consumed and explicit restart required
+ok 43 - ACCESS transaction QuotaExceededError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 382.795439
+  type: 'test'
+  ...
+# Subtest: ACCESS transaction AbortError rolls back both tables/access; proof consumed and explicit restart required
+ok 44 - ACCESS transaction AbortError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 351.520138
+  type: 'test'
+  ...
+# Subtest: ACCESS transaction InvalidStateError rolls back both tables/access; proof consumed and explicit restart required
+ok 45 - ACCESS transaction InvalidStateError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 383.506479
+  type: 'test'
+  ...
+# Subtest: ACCESS cancel while deletion queued invalidates proof at transaction boundary, not only DOM
+ok 46 - ACCESS cancel while deletion queued invalidates proof at transaction boundary, not only DOM
+  ---
+  duration_ms: 344.507387
+  type: 'test'
+  ...
+# Subtest: ACCESS cancellation between native safety.clear and vault.clear rolls whole transaction back
+ok 47 - ACCESS cancellation between native safety.clear and vault.clear rolls whole transaction back
+  ---
+  duration_ms: 375.372839
+  type: 'test'
+  ...
+# Subtest: ACCESS concurrent duplicate reset is BUSY then expired, one actual rw deletion
+ok 48 - ACCESS concurrent duplicate reset is BUSY then expired, one actual rw deletion
+  ---
+  duration_ms: 357.538284
+  type: 'test'
+  ...
+# Subtest: ACCESS peer financial change after warning is STALE with all winner data preserved
+ok 49 - ACCESS peer financial change after warning is STALE with all winner data preserved
+  ---
+  duration_ms: 457.361978
+  type: 'test'
+  ...
+# Subtest: ACCESS password change or restore of a different dataset cannot be deleted by earlier intent
+ok 50 - ACCESS password change or restore of a different dataset cannot be deleted by earlier intent
+  ---
+  duration_ms: 702.153209
+  type: 'test'
+  ...
+# Subtest: ACCESS ciphertext changed without generation bump is STALE for export/reset and old canonical commit
+ok 51 - ACCESS ciphertext changed without generation bump is STALE for export/reset and old canonical commit
+  ---
+  duration_ms: 362.852835
+  type: 'test'
+  ...
+# Subtest: ACCESS old unlocked tab cannot resurrect deleted vault or overwrite new dataset without BroadcastChannel
+ok 52 - ACCESS old unlocked tab cannot resurrect deleted vault or overwrite new dataset without BroadcastChannel
+  ---
+  duration_ms: 568.938597
+  type: 'test'
+  ...
+# Subtest: ACCESS in-flight secret unlock cannot expose deleted document
+ok 53 - ACCESS in-flight secret unlock cannot expose deleted document
+  ---
+  duration_ms: 433.741126
+  type: 'test'
+  ...
+# Subtest: ACCESS pending export cancellation gives no file/valid proof and no storage writes
+ok 54 - ACCESS pending export cancellation gives no file/valid proof and no storage writes
+  ---
+  duration_ms: 344.657649
+  type: 'test'
+  ...
+# Subtest: ACCESS existing store CAS rejects same-generation changed ciphertext before any old writer can overwrite it
+ok 55 - ACCESS existing store CAS rejects same-generation changed ciphertext before any old writer can overwrite it
+  ---
+  duration_ms: 355.892442
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains password and clears every financial collection atomically
+ok 56 - A2 matrix: financial retains password and clears every financial collection atomically
+  ---
+  duration_ms: 474.296058
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains pin and clears every financial collection atomically
+ok 57 - A2 matrix: financial retains pin and clears every financial collection atomically
+  ---
+  duration_ms: 623.851434
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains none and clears every financial collection atomically
+ok 58 - A2 matrix: financial retains none and clears every financial collection atomically
+  ---
+  duration_ms: 455.287795
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains password and clears every financial collection atomically
+ok 59 - A2 matrix: categories retains password and clears every financial collection atomically
+  ---
+  duration_ms: 464.508137
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains pin and clears every financial collection atomically
+ok 60 - A2 matrix: categories retains pin and clears every financial collection atomically
+  ---
+  duration_ms: 648.715188
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains none and clears every financial collection atomically
+ok 61 - A2 matrix: categories retains none and clears every financial collection atomically
+  ---
+  duration_ms: 469.139725
+  type: 'test'
+  ...
+# Subtest: A2: reset requires exact external file, primary credential, original intent and explicit confirmation
+ok 62 - A2: reset requires exact external file, primary credential, original intent and explicit confirmation
+  ---
+  duration_ms: 627.05162
+  type: 'test'
+  ...
+# Subtest: A2 all: removes both stores and protection; external file independently restores every financial value
+ok 63 - A2 all: removes both stores and protection; external file independently restores every financial value
+  ---
+  duration_ms: 451.117688
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: financial
+ok 64 - A2 stale/consumed proof cannot overwrite another tab: financial
+  ---
+  duration_ms: 550.011053
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: categories
+ok 65 - A2 stale/consumed proof cannot overwrite another tab: categories
+  ---
+  duration_ms: 555.022548
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: all
+ok 66 - A2 stale/consumed proof cannot overwrite another tab: all
+  ---
+  duration_ms: 541.815689
+  type: 'test'
+  ...
+# Subtest: A2 partial QuotaExceededError at active rolls back active/access/safety, explicit retry works once
+ok 67 - A2 partial QuotaExceededError at active rolls back active/access/safety, explicit retry works once
+  ---
+  duration_ms: 476.348529
+  type: 'test'
+  ...
+# Subtest: A2 partial QuotaExceededError at safety rolls back active/access/safety, explicit retry works once
+ok 68 - A2 partial QuotaExceededError at safety rolls back active/access/safety, explicit retry works once
+  ---
+  duration_ms: 457.991624
+  type: 'test'
+  ...
+# Subtest: A2 supported legacy migration clears without leaving migration safety
+ok 69 - A2 supported legacy migration clears without leaving migration safety
+  ---
+  duration_ms: 276.224846
+  type: 'test'
+  ...
+# Subtest: A2 unknown persistent extension blocks partial cleanup without guessing its semantics
+ok 70 - A2 unknown persistent extension blocks partial cleanup without guessing its semantics
+  ---
+  duration_ms: 368.457141
+  type: 'test'
+  ...
+# Subtest: A2 cannot authorize deletion against a corrupted persisted vault using an older valid in-memory copy
+ok 71 - A2 cannot authorize deletion against a corrupted persisted vault using an older valid in-memory copy
+  ---
+  duration_ms: 377.369276
+  type: 'test'
+  ...
+# Subtest: reset: incorrect password, PIN and forged proof never delete data
+ok 72 - reset: incorrect password, PIN and forged proof never delete data
+  ---
+  duration_ms: 387.583879
+  type: 'test'
+  ...
+# Subtest: reset: verification/cancellation writes nothing; explicit confirmation removes both stores and memory; external copy stays usable
+ok 73 - reset: verification/cancellation writes nothing; explicit confirmation removes both stores and memory; external copy stays usable
+  ---
+  duration_ms: 542.423038
+  type: 'test'
+  ...
+# Subtest: reset: recovery key is accepted and cannot affect a different database
+ok 74 - reset: recovery key is accepted and cannot affect a different database
+  ---
+  duration_ms: 350.711512
+  type: 'test'
+  ...
+# Subtest: reset: stale confirmation cannot delete a newer revision
+ok 75 - reset: stale confirmation cannot delete a newer revision
+  ---
+  duration_ms: 477.389501
+  type: 'test'
+  ...
+# Subtest: reset: stale tab cannot resurrect deleted data or overwrite a new setup
+ok 76 - reset: stale tab cannot resurrect deleted data or overwrite a new setup
+  ---
+  duration_ms: 519.493213
+  type: 'test'
+  ...
+# Subtest: reset: failure in second clear rolls back vault, device access and safety together
+ok 77 - reset: failure in second clear rolls back vault, device access and safety together
+  ---
+  duration_ms: 331.723831
+  type: 'test'
+  ...
+# Subtest: reset: locking invalidates an old authorization
+ok 78 - reset: locking invalidates an old authorization
+  ---
+  duration_ms: 422.474526
+  type: 'test'
+  ...
+# Subtest: reset: an in-flight password unlock cannot reopen deleted data
+ok 79 - reset: an in-flight password unlock cannot reopen deleted data
+  ---
+  duration_ms: 420.585265
+  type: 'test'
+  ...
+# Subtest: reset: concurrent financial write is serialized by busy guard
+ok 80 - reset: concurrent financial write is serialized by busy guard
+  ---
+  duration_ms: 352.808241
+  type: 'test'
+  ...
+1..80
+# tests 80
+# suites 0
+# pass 80
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 46809.614654

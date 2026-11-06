@@ -1,11 +1,10 @@
-# P4 checklist
+# ACCESS-after-P4 A checklist
 
-- [x] 1. Core audit/RED/GREEN facts/rules (deps:none)
-- [x] 2. Category lifecycle and confirmed nonrepeating warning transitions (deps1)
-- [x] 3. Storage/A2/drafts/restore/access/CAS/quota (deps1–2)
-- [x] 4. Shared limits UI/history/search/context/guard/back (deps1–3)
-- [x] 5. Home/settings/feedback integration and neighbor checks (deps4)
-- [x] 6. Final immutable build/full regression/both engines/old P3 upgrade/audit/verify (deps1–5)
-- [x] 7. Reports/screens/iPhone/deferred access handoff/commits/push/one PR (deps6)
+- [x] 1. Locked ciphertext export RED/GREEN and independent recovery
+- [x] 2. One-use intent/proof + guarded atomic reset + CAS/rollback RED/GREEN
+- [x] 3. Shared locked UI/routes/copy choices/confirmation/lifecycle/cross-tab fallback
+- [x] 4. Chromium/WebKit native scenarios, upgrade/offline and screenshots
+- [x] 5. Frozen final build/full legacy regression/delivery/npm audit (final code 1d6b60ed79cecd9823f806f5dfaa016ceba57682:514/514 unit,71/71 release PASS)
+- [x] 6. Reports/checkpoint/FAQ/commits/push/one PR #14, stop for owner review (no merge/deploy)
 
-No merge/deploy/user reset. ACCESS-after-P4 explicitly deferred; no Apple/OAuth/cloud/login reset code. Actual iPhone and historical A2/WebKit PIN timeout OPEN.
+No merge/deploy/real data reset. Apple/OAuth/cloud/biometrics not in A. iPhone/historical PIN timeout OPEN.

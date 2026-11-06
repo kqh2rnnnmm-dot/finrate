@@ -1,0 +1,24 @@
+FAIL next screen must wait for common refresh/perform to finish, otherwise its enabled buttons silently drop clicks
+
+1 !== 0
+ {
+  head: 'Введите PIN-код',
+  dialogs: [ 'Удалить данные и начать заново' ],
+  errors: [ '' ],
+  buttons: [
+    { text: '', disabled: false },
+    { text: 'FinRate', disabled: false },
+    {
+      text: 'Сохранить зашифрованную копию старых данных',
+      disabled: false
+    },
+    { text: 'Продолжить с сохранённой копией', disabled: true },
+    { text: 'Продолжить без копии', disabled: false },
+    { text: 'Оставить без изменений', disabled: false },
+    { text: '', disabled: true }
+  ],
+  busyDone: undefined,
+  busyStop: undefined,
+  visibility: 'visible'
+}     at async file:///workspace/finrate/Source/tests/emergency-browser.mjs:49:1
+{"checks":0,"failures":["next screen must wait for common refresh/perform to finish, otherwise its enabled buttons silently drop clicks\n\n1 !== 0\n"]}

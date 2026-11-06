@@ -1,0 +1,11 @@
+FAIL locator.waitFor: Timeout 15000ms exceeded.
+Call log:
+[2m  - waiting for locator('[data-emergency-reset=routes]') to be visible[22m
+ {
+  head: 'Введите PIN-код',
+  dialogs: [ 'Удалить данные FinRate' ],
+  errors: [
+    'Удаление не подтверждено. Начните подтверждение заново; автоматического повторения не будет.'
+  ]
+}     at async file:///workspace/finrate/Source/tests/emergency-browser.mjs:38:79
+{"checks":0,"failures":["locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('[data-emergency-reset=routes]') to be visible\u001b[22m\n"]}

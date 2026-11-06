@@ -1,6 +1,6 @@
 {
   "name": "finrate-actions",
-  "version": "0.3.14-p4",
+  "version": "0.3.15-access-a",
   "private": true,
   "type": "module",
   "scripts": {
@@ -37,7 +37,9 @@
     "test:p3": "node --test --test-isolation=none --test-reporter=tap tests/goals*.test.mjs",
     "test:p3:browser": "node tests/goals-browser.mjs",
     "test:p4": "node --test --test-isolation=none --test-reporter=tap tests/limits*.test.mjs",
-    "test:p4:browser": "node tests/limits-browser.mjs"
+    "test:p4:browser": "node tests/limits-browser.mjs",
+    "test:access": "node --test --test-isolation=none --test-reporter=tap tests/emergency-*.test.mjs",
+    "test:access:browser": "node tests/emergency-browser.mjs"
   },
   "dependencies": {
     "dexie": "4.4.6"

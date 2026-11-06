@@ -1,0 +1,96 @@
+TAP version 13
+# Subtest: ACCESS locked export is read-only standard ciphertext; no decrypt/derive or secret/plaintext/access/safety; independent recovery exact
+not ok 1 - ACCESS locked export is read-only standard ciphertext; no decrypt/derive or secret/plaintext/access/safety; independent recovery exact
+  ---
+  duration_ms: 397.411622
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-export.test.mjs:6:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-export.test.mjs:8:98
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-export.test.mjs:3:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: ACCESS locked-only path cannot export from unlocked app or authorize with forged/copied/cancelled intent
+not ok 2 - ACCESS locked-only path cannot export from unlocked app or authorize with forged/copied/cancelled intent
+  ---
+  duration_ms: 371.399976
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-export.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyBackup is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-export.test.mjs:13:208
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-export.test.mjs:3:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS newer preview and stale ciphertext/generation invalidate export; no read-side migration/write
+not ok 3 - ACCESS newer preview and stale ciphertext/generation invalidate export; no read-side migration/write
+  ---
+  duration_ms: 356.315871
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-export.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-export.test.mjs:14:169
+    fixture (file:///workspace/finrate/Source/tests/emergency-export.test.mjs:3:537)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS unknown vault fields never leak; structural export failure permits only explicit no-copy decision for identified bounded record
+not ok 4 - ACCESS unknown vault fields never leak; structural export failure permits only explicit no-copy decision for identified bounded record
+  ---
+  duration_ms: 365.01125
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-export.test.mjs:15:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-export.test.mjs:15:337
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-export.test.mjs:3:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS missing/invalid-identity/oversize record and unavailable IDB fail closed without reset
+not ok 5 - ACCESS missing/invalid-identity/oversize record and unavailable IDB fail closed without reset
+  ---
+  duration_ms: 371.969269
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-export.test.mjs:16:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-export.test.mjs:16:394
+    async fixture (file:///workspace/finrate/Source/tests/emergency-export.test.mjs:3:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..5
+# tests 5
+# suites 0
+# pass 0
+# fail 5
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 1937.437968

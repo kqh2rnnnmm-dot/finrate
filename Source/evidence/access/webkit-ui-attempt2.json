@@ -1,0 +1,39 @@
+{
+  "engine": "webkit",
+  "build": "access-emergency-reset01",
+  "baseline": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "checks": [
+    "PIN/password/recovery routes reuse A3 fields, clear mode secrets, no write/decrypt or help during setup",
+    "5 wrong PIN lockout preserved, help does not reset counters, existing forgot-PIN→password→new PIN keeps all P1–P4 facts",
+    "explicit recovery route opens existing data without reset; unlocked UI has no emergency help button",
+    "locked real download forbids decrypt/derive/write; exact rich P4 vault, explicit human copy claim, Enter safe/double click one clear, normal manual setup and independent old-file restore",
+    "cancel all4 phases/wrong phrase/checkbox/submit/Enter never delete; explicit no-copy risk+final click clears only after full confirmation",
+    "visibility/pagehide/pageshow/bfcache/cold reload discard all intents/forms; no hidden deletion or resumed confirmation",
+    "return from modeled system download panel tells human to check Files, procedure cancelled and no automatic delete",
+    "native QuotaExceededError after safety clear rolls back both tables; one-use attempt requires explicit new procedure",
+    "native AbortError after safety clear rolls back both tables; one-use attempt requires explicit new procedure",
+    "native InvalidStateError after safety clear rolls back both tables; one-use attempt requires explicit new procedure",
+    "native second-instance newer commit makes final delete STALE, preserves winner and asks restart instead of forgotten password",
+    "native old open tab cleared by metadata BroadcastChannel; stale cached app cannot resurrect data",
+    "native old open tab cleared with no BroadcastChannel (foreground IDB fallback); stale cached app cannot resurrect data",
+    "unavailable IndexedDB export has clear error/no ready-file claim/no blind reset; cancel remains safe",
+    "success is tied to committed atomic transaction, later unavailable reads do not falsely report rollback or retain old final UI"
+  ],
+  "failures": [
+    "surface overflow"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "publicHTMLSHA256": "9a29c8de0fcf2285abe0e9db19856c39697d53affbcd315c799101fec4d4a2d3",
+  "version": "26.5",
+  "diagnostic": {
+    "head": "Введите PIN-код",
+    "dialogs": [
+      "Удалить данные и начать заново"
+    ],
+    "errors": [
+      ""
+    ]
+  },
+  "allPassed": false
+}

@@ -1,0 +1,148 @@
+TAP version 13
+# Subtest: ACCESS locked export is read-only standard ciphertext; no decrypt/derive or secret/plaintext/access/safety; independent recovery exact
+ok 1 - ACCESS locked export is read-only standard ciphertext; no decrypt/derive or secret/plaintext/access/safety; independent recovery exact
+  ---
+  duration_ms: 696.457105
+  type: 'test'
+  ...
+# Subtest: ACCESS locked-only path cannot export from unlocked app or authorize with forged/copied/cancelled intent
+ok 2 - ACCESS locked-only path cannot export from unlocked app or authorize with forged/copied/cancelled intent
+  ---
+  duration_ms: 441.7492
+  type: 'test'
+  ...
+# Subtest: ACCESS newer preview and stale ciphertext/generation invalidate export; no read-side migration/write
+ok 3 - ACCESS newer preview and stale ciphertext/generation invalidate export; no read-side migration/write
+  ---
+  duration_ms: 445.521182
+  type: 'test'
+  ...
+# Subtest: ACCESS unknown vault fields never leak; structural export failure permits only explicit no-copy decision for identified bounded record
+ok 4 - ACCESS unknown vault fields never leak; structural export failure permits only explicit no-copy decision for identified bounded record
+  ---
+  duration_ms: 356.396733
+  type: 'test'
+  ...
+# Subtest: ACCESS missing/invalid-identity/oversize record and unavailable IDB fail closed without reset
+ok 5 - ACCESS missing/invalid-identity/oversize record and unavailable IDB fail closed without reset
+  ---
+  duration_ms: 412.25305
+  type: 'test'
+  ...
+# Subtest: ACCESS service requires both copy decision and separate exact final confirmation; no direct/forged proof
+ok 6 - ACCESS service requires both copy decision and separate exact final confirmation; no direct/forged proof
+  ---
+  duration_ms: 343.797081
+  type: 'test'
+  ...
+# Subtest: ACCESS saved-copy choice is explicit human claim, no secret verification; atomic clear then manual setup/new dataset and old file restore
+ok 7 - ACCESS saved-copy choice is explicit human claim, no secret verification; atomic clear then manual setup/new dataset and old file restore
+  ---
+  duration_ms: 512.243824
+  type: 'test'
+  ...
+# Subtest: ACCESS no-copy proof resets only after acknowledgment, never auto creates data; cannot replay against next setup
+ok 8 - ACCESS no-copy proof resets only after acknowledgment, never auto creates data; cannot replay against next setup
+  ---
+  duration_ms: 423.487444
+  type: 'test'
+  ...
+# Subtest: ACCESS cancellation/new preview/lock destroys opaque intents and proofs without writing
+ok 9 - ACCESS cancellation/new preview/lock destroys opaque intents and proofs without writing
+  ---
+  duration_ms: 345.094431
+  type: 'test'
+  ...
+# Subtest: ACCESS transaction QuotaExceededError rolls back both tables/access; proof consumed and explicit restart required
+ok 10 - ACCESS transaction QuotaExceededError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 337.047773
+  type: 'test'
+  ...
+# Subtest: ACCESS transaction AbortError rolls back both tables/access; proof consumed and explicit restart required
+ok 11 - ACCESS transaction AbortError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 341.089454
+  type: 'test'
+  ...
+# Subtest: ACCESS transaction InvalidStateError rolls back both tables/access; proof consumed and explicit restart required
+ok 12 - ACCESS transaction InvalidStateError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 343.477089
+  type: 'test'
+  ...
+# Subtest: ACCESS cancel while deletion queued invalidates proof at transaction boundary, not only DOM
+ok 13 - ACCESS cancel while deletion queued invalidates proof at transaction boundary, not only DOM
+  ---
+  duration_ms: 339.557198
+  type: 'test'
+  ...
+# Subtest: ACCESS cancellation between native safety.clear and vault.clear rolls whole transaction back
+ok 14 - ACCESS cancellation between native safety.clear and vault.clear rolls whole transaction back
+  ---
+  duration_ms: 335.417893
+  type: 'test'
+  ...
+# Subtest: ACCESS concurrent duplicate reset is BUSY then expired, one actual rw deletion
+ok 15 - ACCESS concurrent duplicate reset is BUSY then expired, one actual rw deletion
+  ---
+  duration_ms: 348.687671
+  type: 'test'
+  ...
+# Subtest: ACCESS peer financial change after warning is STALE with all winner data preserved
+ok 16 - ACCESS peer financial change after warning is STALE with all winner data preserved
+  ---
+  duration_ms: 435.343149
+  type: 'test'
+  ...
+# Subtest: ACCESS password change or restore of a different dataset cannot be deleted by earlier intent
+ok 17 - ACCESS password change or restore of a different dataset cannot be deleted by earlier intent
+  ---
+  duration_ms: 684.57074
+  type: 'test'
+  ...
+# Subtest: ACCESS ciphertext changed without generation bump is STALE for export/reset and old canonical commit
+ok 18 - ACCESS ciphertext changed without generation bump is STALE for export/reset and old canonical commit
+  ---
+  duration_ms: 331.283845
+  type: 'test'
+  ...
+# Subtest: ACCESS old unlocked tab cannot resurrect deleted vault or overwrite new dataset without BroadcastChannel
+ok 19 - ACCESS old unlocked tab cannot resurrect deleted vault or overwrite new dataset without BroadcastChannel
+  ---
+  duration_ms: 514.706943
+  type: 'test'
+  ...
+# Subtest: ACCESS in-flight secret unlock cannot expose deleted document
+ok 20 - ACCESS in-flight secret unlock cannot expose deleted document
+  ---
+  duration_ms: 425.347401
+  type: 'test'
+  ...
+# Subtest: ACCESS pending export cancellation gives no file/valid proof and no storage writes
+ok 21 - ACCESS pending export cancellation gives no file/valid proof and no storage writes
+  ---
+  duration_ms: 350.53162
+  type: 'test'
+  ...
+# Subtest: ACCESS existing store CAS rejects same-generation changed ciphertext before any old writer can overwrite it
+ok 22 - ACCESS existing store CAS rejects same-generation changed ciphertext before any old writer can overwrite it
+  ---
+  duration_ms: 358.780862
+  type: 'test'
+  ...
+# Subtest: ACCESS local PIN result delayed after successful resetAttempts cannot publish deleted plaintext
+ok 23 - ACCESS local PIN result delayed after successful resetAttempts cannot publish deleted plaintext
+  ---
+  duration_ms: 428.691304
+  type: 'test'
+  ...
+1..23
+# tests 23
+# suites 0
+# pass 23
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 9610.046932

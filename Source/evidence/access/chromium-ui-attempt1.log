@@ -1,0 +1,12 @@
+PASS PIN/password/recovery routes reuse A3 fields, clear mode secrets, no write/decrypt or help during setup
+PASS 5 wrong PIN lockout preserved, help does not reset counters, existing forgot-PIN→password→new PIN keeps all P1–P4 facts
+PASS explicit recovery route opens existing data without reset; unlocked UI has no emergency help button
+FAIL Expected values to be strictly equal:
+
+false !== true
+ {
+  head: 'Введите PIN-код',
+  dialogs: [ 'Удалить данные и начать заново' ],
+  errors: [ '' ]
+}     at async file:///workspace/finrate/Source/tests/emergency-browser.mjs:31:2
+{"checks":3,"failures":["Expected values to be strictly equal:\n\nfalse !== true\n"]}

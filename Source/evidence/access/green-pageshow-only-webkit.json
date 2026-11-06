@@ -1,0 +1,16 @@
+{
+  "engine": "webkit",
+  "build": "access-emergency-reset01",
+  "baseline": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "checks": [
+    "visibility/pagehide/pageshow/bfcache/cold reload discard all intents/forms; no hidden deletion or resumed confirmation"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "publicHTMLSHA256": "3b173b563c0ddebd0a0eac307f6716f452d60213943ffaa0eb1a75cd50f960b9",
+  "selectedFixture": 6,
+  "fullScope": false,
+  "version": "26.5",
+  "allPassed": true
+}

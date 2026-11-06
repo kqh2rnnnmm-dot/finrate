@@ -1,0 +1,56 @@
+{
+  "engine": "chromium",
+  "build": "access-emergency-reset01",
+  "baseline": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "checks": [],
+  "failures": [
+    "next screen must wait for common refresh/perform to finish, otherwise its enabled buttons silently drop clicks\n\n1 !== 0\n"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "publicHTMLSHA256": "34759691275d932cdcaa66b95823c456a41bf47cb06b11db827ba4fc2295196e",
+  "selectedFixture": 27,
+  "fullScope": false,
+  "version": "153.0.8010.0",
+  "diagnostic": {
+    "head": "Введите PIN-код",
+    "dialogs": [
+      "Удалить данные и начать заново"
+    ],
+    "errors": [
+      ""
+    ],
+    "buttons": [
+      {
+        "text": "",
+        "disabled": false
+      },
+      {
+        "text": "FinRate",
+        "disabled": false
+      },
+      {
+        "text": "Сохранить зашифрованную копию старых данных",
+        "disabled": false
+      },
+      {
+        "text": "Продолжить с сохранённой копией",
+        "disabled": true
+      },
+      {
+        "text": "Продолжить без копии",
+        "disabled": false
+      },
+      {
+        "text": "Оставить без изменений",
+        "disabled": false
+      },
+      {
+        "text": "",
+        "disabled": true
+      }
+    ],
+    "visibility": "visible"
+  },
+  "allPassed": false
+}

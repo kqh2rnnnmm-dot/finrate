@@ -1,0 +1,33 @@
+{
+  "engine": "webkit",
+  "build": "access-emergency-reset01",
+  "baseline": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "checks": [
+    "PIN/password/recovery routes reuse A3 fields, clear mode secrets, no write/decrypt or help during setup",
+    "5 wrong PIN lockout preserved, help does not reset counters, existing forgot-PIN→password→new PIN keeps all P1–P4 facts",
+    "explicit recovery route opens existing data without reset; unlocked UI has no emergency help button",
+    "locked real download forbids decrypt/derive/write; exact rich P4 vault, explicit human copy claim, Enter safe/double click one clear, normal manual setup and independent old-file restore",
+    "cancel all4 phases/wrong phrase/checkbox/submit/Enter never delete; explicit no-copy risk+final click clears only after full confirmation",
+    "visibility/pagehide/pageshow/bfcache/cold reload discard all intents/forms; no hidden deletion or resumed confirmation",
+    "return from modeled system download panel tells human to check Files, procedure cancelled and no automatic delete"
+  ],
+  "failures": [
+    "page.waitForFunction: Timeout 15000ms exceeded."
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "publicHTMLSHA256": "34759691275d932cdcaa66b95823c456a41bf47cb06b11db827ba4fc2295196e",
+  "selectedFixture": null,
+  "fullScope": true,
+  "version": "26.5",
+  "diagnostic": {
+    "head": "Введите PIN-код",
+    "dialogs": [
+      "Удалить данные и начать заново"
+    ],
+    "errors": [
+      ""
+    ]
+  },
+  "allPassed": false
+}

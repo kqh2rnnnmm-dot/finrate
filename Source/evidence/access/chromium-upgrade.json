@@ -1,0 +1,23 @@
+{
+  "engine": "chromium",
+  "baseline": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "build": "access-emergency-reset01",
+  "publicHTMLSHA256": "b0eba90fff623ba2ee0cdc0cc0d60df96aefd5df840fe87ceb18f3a83cc08034",
+  "checks": [
+    "actual public P4 exports rich P1–P4 encrypted file; old login has no emergency help",
+    "user-approved actual P4→ACCESS SW upgrade and help read preserve exact ciphertext/generation, no autowrite or forced reset",
+    "old PIN still opens every P1–P4 entity; new locked export equals actual P4 vault and changes no record",
+    "independent ACCESS native UI restore of actual P4 external file equals full original document, same schema5/backup1"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "version": "153.0.8010.0",
+  "oldBackup": {
+    "generatedBy": "actual unmodified public P4",
+    "format": "finrate-backup/1",
+    "sha256": "7d03a12a9b70be6d69ef9008426513b0c03d3e8c465f7545399ab6fd3ad5669d",
+    "committed": false
+  },
+  "allPassed": true
+}

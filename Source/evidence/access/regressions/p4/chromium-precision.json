@@ -1,0 +1,13 @@
+{
+  "engine": "chromium",
+  "build": "access-emergency-reset01",
+  "checks": [
+    "native maximum safe-integer imported rule/card/history preserve91 kopecks; readonly no-write and month-only UI edit exact in one generation"
+  ],
+  "failures": [],
+  "publicHTMLSHA256": "b0eba90fff623ba2ee0cdc0cc0d60df96aefd5df840fe87ceb18f3a83cc08034",
+  "actualIPhone": false,
+  "published": false,
+  "version": "153.0.8010.0",
+  "allPassed": true
+}

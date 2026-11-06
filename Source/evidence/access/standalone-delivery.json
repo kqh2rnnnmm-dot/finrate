@@ -1,0 +1,11 @@
+{
+  "standaloneMatchesExistingBuildTransform": true,
+  "intentionallyRemovedLinks": [
+    "manifest",
+    "icon"
+  ],
+  "standaloneSHA256": "4f5d10eb02b53fef4d9e4def3d3b22404e6c7e123145f93a56d8106c9f2a4f49",
+  "publicHTMLSHA256": "b0eba90fff623ba2ee0cdc0cc0d60df96aefd5df840fe87ceb18f3a83cc08034",
+  "publicFiles": 7,
+  "realUserDataTouched": false
+}

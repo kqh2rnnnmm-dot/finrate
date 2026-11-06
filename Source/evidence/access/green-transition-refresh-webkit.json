@@ -1,0 +1,16 @@
+{
+  "engine": "webkit",
+  "build": "access-emergency-reset01",
+  "baseline": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "checks": [
+    "next screen is exposed only after common perform/refresh finishes, so immediate actions are not silently dropped by an earlier lock"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "publicHTMLSHA256": "b0eba90fff623ba2ee0cdc0cc0d60df96aefd5df840fe87ceb18f3a83cc08034",
+  "selectedFixture": 27,
+  "fullScope": false,
+  "version": "26.5",
+  "allPassed": true
+}

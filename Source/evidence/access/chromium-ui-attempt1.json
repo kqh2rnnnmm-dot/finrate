@@ -1,0 +1,27 @@
+{
+  "engine": "chromium",
+  "build": "access-emergency-reset01",
+  "baseline": "e7b3f631187b16b7b01fc49cb975968a2439f93c",
+  "checks": [
+    "PIN/password/recovery routes reuse A3 fields, clear mode secrets, no write/decrypt or help during setup",
+    "5 wrong PIN lockout preserved, help does not reset counters, existing forgot-PIN→password→new PIN keeps all P1–P4 facts",
+    "explicit recovery route opens existing data without reset; unlocked UI has no emergency help button"
+  ],
+  "failures": [
+    "Expected values to be strictly equal:\n\nfalse !== true\n"
+  ],
+  "actualIPhone": false,
+  "published": false,
+  "publicHTMLSHA256": "2acaa7ab88979c8b211868856be0fe18b9aac360c5b9d821338b45bb4023b770",
+  "version": "153.0.8010.0",
+  "diagnostic": {
+    "head": "Введите PIN-код",
+    "dialogs": [
+      "Удалить данные и начать заново"
+    ],
+    "errors": [
+      ""
+    ]
+  },
+  "allPassed": false
+}
