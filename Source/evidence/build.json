@@ -21,7 +21,7 @@
     "src/device-access.mjs": "a06917f42ef5bace7a82fd8f8c8a5104a4efabae3f9d58c5f3696b7ba6ffd1d2",
     "src/edge-launcher.css": "e528f1f49f8040d09b96bb2cc227c8ddfa23da5016abce8853e65eb754c3f5df",
     "src/edge-launcher.mjs": "96b6a554d30c5acc81100b1a9760515a978678139ae6f8c1c5c0c7f796764758",
-    "src/emergency-reset-ui.mjs": "742e0ffb4d12adaa7ec784a349c756e5cd40772e950cb9a84e8035694a8e21e2",
+    "src/emergency-reset-ui.mjs": "3fabf622e8847a52c4b7ca66e30cc6afdd1ff6e19e9e2252fd702e4f9220e7f2",
     "src/emergency-reset.mjs": "f0453a48ce0e981d74e81efc456bac966519664632cba083119d54e271585e1e",
     "src/feedback-state.mjs": "86703209a3a30b71f0737f920ebf51de0306ed456a90b7ee461763a34ecbce64",
     "src/feedback.mjs": "d5ddab544690da0904729120467e6e71adae02d903469a10b00b12c79c5edb51",
@@ -73,10 +73,10 @@
     "package-lock.json": "158458e6bc6072943656f2b9bd409bf365dd6d9fc99a6b9990bd4d9b6cfa5374",
     "tools/build.mjs": "db0030facce0ce0c7aefeb5aeef320e3a52208148c89695817b1670764c4c040"
   },
-  "publicHTMLSHA256": "34759691275d932cdcaa66b95823c456a41bf47cb06b11db827ba4fc2295196e",
+  "publicHTMLSHA256": "b0eba90fff623ba2ee0cdc0cc0d60df96aefd5df840fe87ceb18f3a83cc08034",
   "shellFiles": 6,
-  "shellBytes": 820388,
-  "scriptHash": "629yvo//vD9BEMO97GZQ3+3/VC0+qKRXnT23gJjXNtg=",
+  "shellBytes": 820404,
+  "scriptHash": "0BkzQ4Kag4g3wcVHvtvbISpCij/lM/Uj6Rg13ZP9Kvg=",
   "externalRuntimeDependencies": 0,
   "published": false,
   "warnings": []
