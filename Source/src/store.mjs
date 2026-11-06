@@ -5,11 +5,12 @@ function transactionFailure(error){if(error?.name==='QuotaExceededError'||error?
 export function createStore(name='finrate-local-v1',dependencies){
   const db=new Dexie(name,dependencies);db.version(1).stores({vault:'id',safety:'id,createdAt'});
   db.on('versionchange',()=>db.close());
-  const same=(a,b)=>a?.generation===b?.generation&&a?.vault.datasetId===b?.vault.datasetId;
+  const sameVersion=(a,b)=>a?.generation===b?.generation&&a?.vault?.datasetId===b?.vault?.datasetId;
+  const same=(a,b)=>sameVersion(a,b)&&a?.vault?.revision===b?.vault?.revision&&a?.vault?.savedAt===b?.vault?.savedAt&&a?.vault?.iv===b?.vault?.iv&&a?.vault?.data===b?.vault?.data&&JSON.stringify(a?.vault?.slots)===JSON.stringify(b?.vault?.slots);
   return {
     db, async read(){return db.vault.get('active');},
     async readAccess(){return db.vault.get('device-access');},
-    async assertCurrent(expected){const current=await db.vault.get('active');if(!current||!same(current,expected))fail('STALE');},
+    async assertCurrent(expected){const current=await db.vault.get('active');if(!current||!sameVersion(current,expected))fail('STALE');},
     async commit(vault,expected,{beforeRestore=false,beforeMigration=false,access,resetAccess=false}={}){
       return db.transaction('rw',db.vault,db.safety,async()=>{
         const current=await db.vault.get('active');if(!same(current,expected))fail('STALE');
@@ -28,10 +29,11 @@ export function createStore(name='finrate-local-v1',dependencies){
       }).catch(transactionFailure);
     },
     async safety(){return db.safety.orderBy('createdAt').reverse().toArray();},
-    async reset(expected){
+    async reset(expected,{validate}={}){
       return db.transaction('rw',db.vault,db.safety,async()=>{
         const current=await db.vault.get('active');if(!current||!same(current,expected))fail('STALE');
-        await db.safety.clear();await db.vault.clear();
+        validate?.(current);await db.safety.clear();validate?.(current);await db.vault.clear();validate?.(current);
+        if(validate&&(await db.vault.count()!==0||await db.safety.count()!==0))fail('STALE');validate?.(current);
       }).catch(transactionFailure);
     },
     async close(){db.close();}

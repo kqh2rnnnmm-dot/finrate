@@ -1,0 +1,325 @@
+TAP version 13
+# Subtest: ACCESS locked export is read-only standard ciphertext; no decrypt/derive or secret/plaintext/access/safety; independent recovery exact
+ok 1 - ACCESS locked export is read-only standard ciphertext; no decrypt/derive or secret/plaintext/access/safety; independent recovery exact
+  ---
+  duration_ms: 655.323599
+  type: 'test'
+  ...
+# Subtest: ACCESS locked-only path cannot export from unlocked app or authorize with forged/copied/cancelled intent
+ok 2 - ACCESS locked-only path cannot export from unlocked app or authorize with forged/copied/cancelled intent
+  ---
+  duration_ms: 435.979969
+  type: 'test'
+  ...
+# Subtest: ACCESS newer preview and stale ciphertext/generation invalidate export; no read-side migration/write
+ok 3 - ACCESS newer preview and stale ciphertext/generation invalidate export; no read-side migration/write
+  ---
+  duration_ms: 430.714487
+  type: 'test'
+  ...
+# Subtest: ACCESS unknown vault fields never leak; structural export failure permits only explicit no-copy decision for identified bounded record
+ok 4 - ACCESS unknown vault fields never leak; structural export failure permits only explicit no-copy decision for identified bounded record
+  ---
+  duration_ms: 347.930297
+  type: 'test'
+  ...
+# Subtest: ACCESS missing/invalid-identity/oversize record and unavailable IDB fail closed without reset
+ok 5 - ACCESS missing/invalid-identity/oversize record and unavailable IDB fail closed without reset
+  ---
+  duration_ms: 594.875844
+  type: 'test'
+  ...
+# Subtest: ACCESS service requires both copy decision and separate exact final confirmation; no direct/forged proof
+ok 6 - ACCESS service requires both copy decision and separate exact final confirmation; no direct/forged proof
+  ---
+  duration_ms: 344.119009
+  type: 'test'
+  ...
+# Subtest: ACCESS saved-copy choice is explicit human claim, no secret verification; atomic clear then manual setup/new dataset and old file restore
+ok 7 - ACCESS saved-copy choice is explicit human claim, no secret verification; atomic clear then manual setup/new dataset and old file restore
+  ---
+  duration_ms: 540.864825
+  type: 'test'
+  ...
+# Subtest: ACCESS no-copy proof resets only after acknowledgment, never auto creates data; cannot replay against next setup
+ok 8 - ACCESS no-copy proof resets only after acknowledgment, never auto creates data; cannot replay against next setup
+  ---
+  duration_ms: 442.614232
+  type: 'test'
+  ...
+# Subtest: ACCESS cancellation/new preview/lock destroys opaque intents and proofs without writing
+ok 9 - ACCESS cancellation/new preview/lock destroys opaque intents and proofs without writing
+  ---
+  duration_ms: 345.418974
+  type: 'test'
+  ...
+# Subtest: ACCESS transaction QuotaExceededError rolls back both tables/access; proof consumed and explicit restart required
+ok 10 - ACCESS transaction QuotaExceededError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 362.534242
+  type: 'test'
+  ...
+# Subtest: ACCESS transaction AbortError rolls back both tables/access; proof consumed and explicit restart required
+ok 11 - ACCESS transaction AbortError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 364.631179
+  type: 'test'
+  ...
+# Subtest: ACCESS transaction InvalidStateError rolls back both tables/access; proof consumed and explicit restart required
+ok 12 - ACCESS transaction InvalidStateError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 389.097861
+  type: 'test'
+  ...
+# Subtest: ACCESS cancel while deletion queued invalidates proof at transaction boundary, not only DOM
+ok 13 - ACCESS cancel while deletion queued invalidates proof at transaction boundary, not only DOM
+  ---
+  duration_ms: 352.18164
+  type: 'test'
+  ...
+# Subtest: ACCESS cancellation between native safety.clear and vault.clear rolls whole transaction back
+ok 14 - ACCESS cancellation between native safety.clear and vault.clear rolls whole transaction back
+  ---
+  duration_ms: 338.421222
+  type: 'test'
+  ...
+# Subtest: ACCESS concurrent duplicate reset is BUSY then expired, one actual rw deletion
+ok 15 - ACCESS concurrent duplicate reset is BUSY then expired, one actual rw deletion
+  ---
+  duration_ms: 345.684274
+  type: 'test'
+  ...
+# Subtest: ACCESS peer financial change after warning is STALE with all winner data preserved
+ok 16 - ACCESS peer financial change after warning is STALE with all winner data preserved
+  ---
+  duration_ms: 475.983141
+  type: 'test'
+  ...
+# Subtest: ACCESS password change or restore of a different dataset cannot be deleted by earlier intent
+ok 17 - ACCESS password change or restore of a different dataset cannot be deleted by earlier intent
+  ---
+  duration_ms: 691.979268
+  type: 'test'
+  ...
+# Subtest: ACCESS ciphertext changed without generation bump is STALE for export/reset and old canonical commit
+ok 18 - ACCESS ciphertext changed without generation bump is STALE for export/reset and old canonical commit
+  ---
+  duration_ms: 346.553415
+  type: 'test'
+  ...
+# Subtest: ACCESS old unlocked tab cannot resurrect deleted vault or overwrite new dataset without BroadcastChannel
+ok 19 - ACCESS old unlocked tab cannot resurrect deleted vault or overwrite new dataset without BroadcastChannel
+  ---
+  duration_ms: 527.146037
+  type: 'test'
+  ...
+# Subtest: ACCESS in-flight secret unlock cannot expose deleted document
+ok 20 - ACCESS in-flight secret unlock cannot expose deleted document
+  ---
+  duration_ms: 450.190227
+  type: 'test'
+  ...
+# Subtest: ACCESS pending export cancellation gives no file/valid proof and no storage writes
+ok 21 - ACCESS pending export cancellation gives no file/valid proof and no storage writes
+  ---
+  duration_ms: 345.726157
+  type: 'test'
+  ...
+# Subtest: ACCESS existing store CAS rejects same-generation changed ciphertext before any old writer can overwrite it
+ok 22 - ACCESS existing store CAS rejects same-generation changed ciphertext before any old writer can overwrite it
+  ---
+  duration_ms: 347.867858
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains password and clears every financial collection atomically
+ok 23 - A2 matrix: financial retains password and clears every financial collection atomically
+  ---
+  duration_ms: 468.685435
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains pin and clears every financial collection atomically
+ok 24 - A2 matrix: financial retains pin and clears every financial collection atomically
+  ---
+  duration_ms: 625.264139
+  type: 'test'
+  ...
+# Subtest: A2 matrix: financial retains none and clears every financial collection atomically
+ok 25 - A2 matrix: financial retains none and clears every financial collection atomically
+  ---
+  duration_ms: 453.058305
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains password and clears every financial collection atomically
+ok 26 - A2 matrix: categories retains password and clears every financial collection atomically
+  ---
+  duration_ms: 467.384777
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains pin and clears every financial collection atomically
+ok 27 - A2 matrix: categories retains pin and clears every financial collection atomically
+  ---
+  duration_ms: 617.778617
+  type: 'test'
+  ...
+# Subtest: A2 matrix: categories retains none and clears every financial collection atomically
+ok 28 - A2 matrix: categories retains none and clears every financial collection atomically
+  ---
+  duration_ms: 463.305271
+  type: 'test'
+  ...
+# Subtest: A2: reset requires exact external file, primary credential, original intent and explicit confirmation
+ok 29 - A2: reset requires exact external file, primary credential, original intent and explicit confirmation
+  ---
+  duration_ms: 646.703388
+  type: 'test'
+  ...
+# Subtest: A2 all: removes both stores and protection; external file independently restores every financial value
+ok 30 - A2 all: removes both stores and protection; external file independently restores every financial value
+  ---
+  duration_ms: 449.645331
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: financial
+ok 31 - A2 stale/consumed proof cannot overwrite another tab: financial
+  ---
+  duration_ms: 581.094519
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: categories
+ok 32 - A2 stale/consumed proof cannot overwrite another tab: categories
+  ---
+  duration_ms: 591.688371
+  type: 'test'
+  ...
+# Subtest: A2 stale/consumed proof cannot overwrite another tab: all
+ok 33 - A2 stale/consumed proof cannot overwrite another tab: all
+  ---
+  duration_ms: 575.338845
+  type: 'test'
+  ...
+# Subtest: A2 partial QuotaExceededError at active rolls back active/access/safety, explicit retry works once
+ok 34 - A2 partial QuotaExceededError at active rolls back active/access/safety, explicit retry works once
+  ---
+  duration_ms: 443.367578
+  type: 'test'
+  ...
+# Subtest: A2 partial QuotaExceededError at safety rolls back active/access/safety, explicit retry works once
+ok 35 - A2 partial QuotaExceededError at safety rolls back active/access/safety, explicit retry works once
+  ---
+  duration_ms: 455.140891
+  type: 'test'
+  ...
+# Subtest: A2 supported legacy migration clears without leaving migration safety
+ok 36 - A2 supported legacy migration clears without leaving migration safety
+  ---
+  duration_ms: 283.485767
+  type: 'test'
+  ...
+# Subtest: A2 unknown persistent extension blocks partial cleanup without guessing its semantics
+ok 37 - A2 unknown persistent extension blocks partial cleanup without guessing its semantics
+  ---
+  duration_ms: 385.272576
+  type: 'test'
+  ...
+# Subtest: A2 cannot authorize deletion against a corrupted persisted vault using an older valid in-memory copy
+not ok 38 - A2 cannot authorize deletion against a corrupted persisted vault using an older valid in-memory copy
+  ---
+  duration_ms: 372.402378
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/reset-modes.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: |-
+    The validation function is expected to return "true". Received false
+    
+    Caught error:
+    
+    FinRateError: STALE
+  code: 'ERR_ASSERTION'
+  name: 'AssertionError'
+  expected: [Function (anonymous)]
+  actual:
+    name: 'FinRateError'
+  error: 'STALE'
+  code: 'STALE'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    Object.assertCurrent (file:///workspace/finrate/Source/src/store.mjs:12:115)
+    async file:///workspace/finrate/Source/src/service.mjs:89:5
+    async FinRate.exclusive (file:///workspace/finrate/Source/src/service.mjs:14:79)
+    async waitForActual (node:assert:646:5)
+    async strict.rejects (node:assert:769:25)
+    async file:///workspace/finrate/Source/tests/reset-modes.test.mjs:14:348
+    async fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1000)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  operator: 'rejects'
+  stack: |-
+    async file:///workspace/finrate/Source/tests/reset-modes.test.mjs:14:348
+    async fixture (file:///workspace/finrate/Source/tests/reset-modes.test.mjs:4:1000)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: reset: incorrect password, PIN and forged proof never delete data
+ok 39 - reset: incorrect password, PIN and forged proof never delete data
+  ---
+  duration_ms: 378.75394
+  type: 'test'
+  ...
+# Subtest: reset: verification/cancellation writes nothing; explicit confirmation removes both stores and memory; external copy stays usable
+ok 40 - reset: verification/cancellation writes nothing; explicit confirmation removes both stores and memory; external copy stays usable
+  ---
+  duration_ms: 501.808437
+  type: 'test'
+  ...
+# Subtest: reset: recovery key is accepted and cannot affect a different database
+ok 41 - reset: recovery key is accepted and cannot affect a different database
+  ---
+  duration_ms: 351.43669
+  type: 'test'
+  ...
+# Subtest: reset: stale confirmation cannot delete a newer revision
+ok 42 - reset: stale confirmation cannot delete a newer revision
+  ---
+  duration_ms: 431.003565
+  type: 'test'
+  ...
+# Subtest: reset: stale tab cannot resurrect deleted data or overwrite a new setup
+ok 43 - reset: stale tab cannot resurrect deleted data or overwrite a new setup
+  ---
+  duration_ms: 514.971387
+  type: 'test'
+  ...
+# Subtest: reset: failure in second clear rolls back vault, device access and safety together
+ok 44 - reset: failure in second clear rolls back vault, device access and safety together
+  ---
+  duration_ms: 350.797274
+  type: 'test'
+  ...
+# Subtest: reset: locking invalidates an old authorization
+ok 45 - reset: locking invalidates an old authorization
+  ---
+  duration_ms: 441.233212
+  type: 'test'
+  ...
+# Subtest: reset: an in-flight password unlock cannot reopen deleted data
+ok 46 - reset: an in-flight password unlock cannot reopen deleted data
+  ---
+  duration_ms: 443.59238
+  type: 'test'
+  ...
+# Subtest: reset: concurrent financial write is serialized by busy guard
+ok 47 - reset: concurrent financial write is serialized by busy guard
+  ---
+  duration_ms: 386.19968
+  type: 'test'
+  ...
+1..47
+# tests 47
+# suites 0
+# pass 46
+# fail 1
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 21227.385918

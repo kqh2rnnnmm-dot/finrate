@@ -1,0 +1,386 @@
+TAP version 13
+# Subtest: ACCESS locked export is read-only standard ciphertext; no decrypt/derive or secret/plaintext/access/safety; independent recovery exact
+not ok 1 - ACCESS locked export is read-only standard ciphertext; no decrypt/derive or secret/plaintext/access/safety; independent recovery exact
+  ---
+  duration_ms: 390.954129
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-export.test.mjs:6:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-export.test.mjs:8:98
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async startSubtestAfterBootstrap (node:internal/test_runner/harness:387:3)
+  ...
+# Subtest: ACCESS locked-only path cannot export from unlocked app or authorize with forged/copied/cancelled intent
+not ok 2 - ACCESS locked-only path cannot export from unlocked app or authorize with forged/copied/cancelled intent
+  ---
+  duration_ms: 368.463249
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-export.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyBackup is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-export.test.mjs:13:208
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS newer preview and stale ciphertext/generation invalidate export; no read-side migration/write
+not ok 3 - ACCESS newer preview and stale ciphertext/generation invalidate export; no read-side migration/write
+  ---
+  duration_ms: 349.271119
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-export.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-export.test.mjs:14:169
+    fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:537)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS unknown vault fields never leak; structural export failure permits only explicit no-copy decision for identified bounded record
+not ok 4 - ACCESS unknown vault fields never leak; structural export failure permits only explicit no-copy decision for identified bounded record
+  ---
+  duration_ms: 387.263352
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-export.test.mjs:15:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-export.test.mjs:15:337
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS missing/invalid-identity/oversize record and unavailable IDB fail closed without reset
+not ok 5 - ACCESS missing/invalid-identity/oversize record and unavailable IDB fail closed without reset
+  ---
+  duration_ms: 357.330579
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-export.test.mjs:16:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-export.test.mjs:16:394
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS service requires both copy decision and separate exact final confirmation; no direct/forged proof
+not ok 6 - ACCESS service requires both copy decision and separate exact final confirmation; no direct/forged proof
+  ---
+  duration_ms: 352.009414
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:4:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyReset is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:4:199
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS saved-copy choice is explicit human claim, no secret verification; atomic clear then manual setup/new dataset and old file restore
+not ok 7 - ACCESS saved-copy choice is explicit human claim, no secret verification; atomic clear then manual setup/new dataset and old file restore
+  ---
+  duration_ms: 380.441346
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:5:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:5:246
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS no-copy proof resets only after acknowledgment, never auto creates data; cannot replay against next setup
+not ok 8 - ACCESS no-copy proof resets only after acknowledgment, never auto creates data; cannot replay against next setup
+  ---
+  duration_ms: 344.545162
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:6:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:6:181
+    fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:537)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS cancellation/new preview/lock destroys opaque intents and proofs without writing
+not ok 9 - ACCESS cancellation/new preview/lock destroys opaque intents and proofs without writing
+  ---
+  duration_ms: 357.501365
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:7:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:7:180
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS transaction QuotaExceededError rolls back both tables/access; proof consumed and explicit restart required
+not ok 10 - ACCESS transaction QuotaExceededError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 336.009817
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:8:75'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:8:266
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS transaction AbortError rolls back both tables/access; proof consumed and explicit restart required
+not ok 11 - ACCESS transaction AbortError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 345.317018
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:8:75'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:8:266
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS transaction InvalidStateError rolls back both tables/access; proof consumed and explicit restart required
+not ok 12 - ACCESS transaction InvalidStateError rolls back both tables/access; proof consumed and explicit restart required
+  ---
+  duration_ms: 335.803643
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:8:75'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:8:266
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS cancel while deletion queued invalidates proof at transaction boundary, not only DOM
+not ok 13 - ACCESS cancel while deletion queued invalidates proof at transaction boundary, not only DOM
+  ---
+  duration_ms: 343.059406
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:9:180
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS cancellation between native safety.clear and vault.clear rolls whole transaction back
+not ok 14 - ACCESS cancellation between native safety.clear and vault.clear rolls whole transaction back
+  ---
+  duration_ms: 327.196142
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:10:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:10:181
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS concurrent duplicate reset is BUSY then expired, one actual rw deletion
+not ok 15 - ACCESS concurrent duplicate reset is BUSY then expired, one actual rw deletion
+  ---
+  duration_ms: 365.90086
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:11:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:11:138
+    fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:537)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS peer financial change after warning is STALE with all winner data preserved
+not ok 16 - ACCESS peer financial change after warning is STALE with all winner data preserved
+  ---
+  duration_ms: 338.899701
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:12:151
+    fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:537)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS password change or restore of a different dataset cannot be deleted by earlier intent
+not ok 17 - ACCESS password change or restore of a different dataset cannot be deleted by earlier intent
+  ---
+  duration_ms: 445.268907
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:13:217
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS ciphertext changed without generation bump is STALE for export/reset and old canonical commit
+not ok 18 - ACCESS ciphertext changed without generation bump is STALE for export/reset and old canonical commit
+  ---
+  duration_ms: 347.299042
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:14:188
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS old unlocked tab cannot resurrect deleted vault or overwrite new dataset without BroadcastChannel
+not ok 19 - ACCESS old unlocked tab cannot resurrect deleted vault or overwrite new dataset without BroadcastChannel
+  ---
+  duration_ms: 433.697568
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:15:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:15:244
+    runNextTicks (node:internal/process/task_queues:65:5)
+    process.processImmediate (node:internal/timers:502:9)
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS in-flight secret unlock cannot expose deleted document
+not ok 20 - ACCESS in-flight secret unlock cannot expose deleted document
+  ---
+  duration_ms: 418.486748
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:16:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    without (file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:3:72)
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:16:386
+    async fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:531)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: ACCESS pending export cancellation gives no file/valid proof and no storage writes
+not ok 21 - ACCESS pending export cancellation gives no file/valid proof and no storage writes
+  ---
+  duration_ms: 371.474661
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/emergency-reset.test.mjs:17:1'
+  failureType: 'testCodeFailure'
+  error: 'app.emergencyPreview is not a function'
+  code: 'ERR_TEST_FAILURE'
+  name: 'TypeError'
+  stack: |-
+    file:///workspace/finrate/Source/tests/emergency-reset.test.mjs:17:147
+    fixture (file:///workspace/finrate/Source/tests/emergency-fixture.mjs:24:537)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+1..21
+# tests 21
+# suites 0
+# pass 0
+# fail 21
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 7752.624483
