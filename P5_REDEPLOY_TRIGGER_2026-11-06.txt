@@ -1,0 +1,17 @@
+FinRate P5 - manual GitHub Pages redeploy trigger
+Date: 2026-11-06
+Version: 0.3.16-p5 (p5-forecast01)
+Target branch: main
+Verified main before creating this file: 9a9726dfed3f91a89bca2777db6ca8eff2322b1a
+
+This document-only change is intended to cause a new GitHub Pages build and deployment.
+It does not change application code, compiled assets, the service worker, security, or financial data.
+The already-merged P5 application files remain in the repository root and Source/dist.
+
+Previous Pages run: https://github.com/kqh2rnnnmm-dot/finrate/actions/runs/42267454467
+Previous failure: Pages build succeeded; deploy stayed deployment_queued and ended in failure.
+A new commit may trigger another deployment but cannot by itself fix a GitHub Pages service problem.
+
+After the Pages workflow reports Success, verify in the existing FinRate PWA:
+Reports (Отчёты) > Open forecast (Открыть прогноз) > What if (Что, если…).
+Do not clear browser storage, reset the vault, or delete the installed PWA to troubleshoot delivery.
