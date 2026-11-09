@@ -1,0 +1,27 @@
+{
+  "engine": "chromium",
+  "build": "p5-forecast01",
+  "base": "aad52c592c34858122844b5b439727318b9e4bcc",
+  "checks": [
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / numbers/light/neutral",
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / numbers/light/color",
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / numbers/dark/neutral",
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / numbers/dark/color",
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / details/light/neutral",
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / details/light/color",
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / details/dark/neutral",
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / details/dark/color",
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / rows/light/neutral",
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / rows/light/color",
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / rows/dark/neutral",
+    "monthly overview / exact long money / keyboard / no-write / P5 Back / rows/dark/color"
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "published": false,
+  "fullScope": true,
+  "selectedFixture": null,
+  "version": "154.0.8037.57",
+  "testStyle": "rows",
+  "allPassed": true
+}

@@ -1,0 +1,70 @@
+TAP version 13
+# Subtest: month/year bounds and exact kopecks use canonical totals without mutation
+ok 1 - month/year bounds and exact kopecks use canonical totals without mutation
+  ---
+  duration_ms: 6.448354
+  type: 'test'
+  ...
+# Subtest: leap February and December boundaries
+ok 2 - leap February and December boundaries
+  ---
+  duration_ms: 0.278149
+  type: 'test'
+  ...
+# Subtest: split is one expense, next-month refund reduces that month not income
+ok 3 - split is one expense, next-month refund reduces that month not income
+  ---
+  duration_ms: 2.493247
+  type: 'test'
+  ...
+# Subtest: cancelled and pending records excluded
+ok 4 - cancelled and pending records excluded
+  ---
+  duration_ms: 2.104244
+  type: 'test'
+  ...
+# Subtest: transfers, loan principals, adjustments and opening balances are not period results
+ok 5 - transfers, loan principals, adjustments and opening balances are not period results
+  ---
+  duration_ms: 0.478564
+  type: 'test'
+  ...
+# Subtest: external transfer and its separate actual fee follow canonical expense
+ok 6 - external transfer and its separate actual fee follow canonical expense
+  ---
+  duration_ms: 0.378437
+  type: 'test'
+  ...
+# Subtest: actual credit purchase once, own repayment excluded, credit limit never income
+ok 7 - actual credit purchase once, own repayment excluded, credit limit never income
+  ---
+  duration_ms: 0.456451
+  type: 'test'
+  ...
+# Subtest: real empty month has explicit empty state
+ok 8 - real empty month has explicit empty state
+  ---
+  duration_ms: 0.233824
+  type: 'test'
+  ...
+# Subtest: supported document currencies stay separate; mixed account currencies fail closed
+ok 9 - supported document currencies stay separate; mixed account currencies fail closed
+  ---
+  duration_ms: 0.450873
+  type: 'test'
+  ...
+# Subtest: missing inputs, malformed months and overflow are rejected, never fake zero
+ok 10 - missing inputs, malformed months and overflow are rejected, never fake zero
+  ---
+  duration_ms: 0.479095
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 10
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 38.35448
