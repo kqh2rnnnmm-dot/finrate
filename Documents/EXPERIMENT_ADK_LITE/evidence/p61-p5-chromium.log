@@ -1,0 +1,16 @@
+FAIL browserType.launch: Failed to launch chromium because executable doesn't exist at /tmp/chromium undefined     at /tmp/p61-build/Source/tests/forecast-browser.mjs:20:62
+node:internal/fs/promises:697
+  return new FileHandle(await PromisePrototypeThen(
+                        ^
+
+Error: ENOENT: no such file or directory, open 'evidence/p5/chromium-browser.json'
+    at async open (node:internal/fs/promises:697:25)
+    at async writeFile (node:internal/fs/promises:1317:14)
+    at async file:///tmp/p61-build/Source/tests/forecast-browser.mjs:35:411 {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'open',
+  path: 'evidence/p5/chromium-browser.json'
+}
+
+Node.js v24.19.0

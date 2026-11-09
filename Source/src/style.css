@@ -1036,3 +1036,10 @@ input,textarea,[contenteditable=true],.full-note,.activity-comparison span {
 [data-forecast-ui] .forecast-summary :is(h3,p,.card-amount) { margin:0; }
 /* WebKit can expose a native option's full paint width through its label. */
 [data-forecast-ui] label:has(>select) { min-width:0; overflow:hidden; }
+
+/* Experimental monthly overview: existing cards/type/colors, local geometry only. */
+.monthly-report { min-width:0; }
+.monthly-report dl { display:block; }
+.monthly-report dt { margin-top:var(--peer-gap); }
+.monthly-report-money { margin:0; max-width:100%; overflow-x:auto; white-space:nowrap; font-variant-numeric:tabular-nums; }
+.monthly-report input { min-width:0; max-width:100%; box-sizing:border-box; }

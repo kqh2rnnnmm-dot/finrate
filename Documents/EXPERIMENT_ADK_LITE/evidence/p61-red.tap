@@ -1,0 +1,24 @@
+✖ Source/tests/monthly-report.test.mjs (1.348372ms)
+ℹ tests 1
+ℹ suites 0
+ℹ pass 0
+ℹ fail 1
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 25.335261
+
+✖ failing tests:
+
+test at Source/tests/monthly-report.test.mjs:1:1
+✖ Source/tests/monthly-report.test.mjs (1.348372ms)
+  file:///workspace/finrate/Source/tests/monthly-report.test.mjs:2
+  import {newDocument,addAccount,addCategory,post,cancel,totals} from '../src/model.mjs';
+                                                  ^^^^^^
+  SyntaxError: The requested module '../src/model.mjs' does not provide an export named 'cancel'
+      at #asyncInstantiate (node:internal/modules/esm/module_job:327:21)
+      at async ModuleJob.run (node:internal/modules/esm/module_job:431:5)
+      at async node:internal/modules/esm/loader:643:26
+      at async node:internal/test_runner/runner:1071:15
+      at async runFiles (node:internal/test_runner/runner:1037:9)
+      at async runChain (node:internal/test_runner/runner:1115:5)

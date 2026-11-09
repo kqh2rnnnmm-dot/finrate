@@ -1,0 +1,96 @@
+TAP version 13
+# Subtest: month/year bounds and exact kopecks use canonical totals without mutation
+ok 1 - month/year bounds and exact kopecks use canonical totals without mutation
+  ---
+  duration_ms: 5.711408
+  type: 'test'
+  ...
+# Subtest: leap February and December boundaries
+ok 2 - leap February and December boundaries
+  ---
+  duration_ms: 0.263107
+  type: 'test'
+  ...
+# Subtest: split is one expense, next-month refund reduces that month not income
+not ok 3 - split is one expense, next-month refund reduces that month not income
+  ---
+  duration_ms: 0.532423
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/monthly-report.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: 'REFUND'
+  code: 'REFUND'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    validateOperation (file:///workspace/finrate/Source/src/model.mjs:103:154)
+    post (file:///workspace/finrate/Source/src/model.mjs:136:3)
+    op (file:///workspace/finrate/Source/tests/monthly-report.test.mjs:6:62)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/monthly-report.test.mjs:9:249)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: cancelled and pending records excluded
+not ok 4 - cancelled and pending records excluded
+  ---
+  duration_ms: 0.493847
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/monthly-report.test.mjs:10:1'
+  failureType: 'testCodeFailure'
+  error: 'NOT_FOUND'
+  code: 'NOT_FOUND'
+  name: 'FinRateError'
+  stack: |-
+    fail (file:///workspace/finrate/Source/src/model.mjs:9:32)
+    file:///workspace/finrate/Source/src/operations.mjs:71:49
+    apply (file:///workspace/finrate/Source/src/operations.mjs:24:48)
+    cancelOperation (file:///workspace/finrate/Source/src/operations.mjs:70:46)
+    TestContext.<anonymous> (file:///workspace/finrate/Source/tests/monthly-report.test.mjs:10:132)
+    async Test.run (node:internal/test_runner/test:1389:7)
+    async Test.processPendingSubtests (node:internal/test_runner/test:960:7)
+  ...
+# Subtest: transfers, loan principals, adjustments and opening balances are not period results
+ok 5 - transfers, loan principals, adjustments and opening balances are not period results
+  ---
+  duration_ms: 0.475379
+  type: 'test'
+  ...
+# Subtest: external transfer and its separate actual fee follow canonical expense
+ok 6 - external transfer and its separate actual fee follow canonical expense
+  ---
+  duration_ms: 0.523319
+  type: 'test'
+  ...
+# Subtest: actual credit purchase once, own repayment excluded, credit limit never income
+ok 7 - actual credit purchase once, own repayment excluded, credit limit never income
+  ---
+  duration_ms: 0.500275
+  type: 'test'
+  ...
+# Subtest: real empty month has explicit empty state
+ok 8 - real empty month has explicit empty state
+  ---
+  duration_ms: 0.214245
+  type: 'test'
+  ...
+# Subtest: supported document currencies stay separate; mixed account currencies fail closed
+ok 9 - supported document currencies stay separate; mixed account currencies fail closed
+  ---
+  duration_ms: 0.710695
+  type: 'test'
+  ...
+# Subtest: missing inputs, malformed months and overflow are rejected, never fake zero
+ok 10 - missing inputs, malformed months and overflow are rejected, never fake zero
+  ---
+  duration_ms: 3.730216
+  type: 'test'
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 8
+# fail 2
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 35.310803
