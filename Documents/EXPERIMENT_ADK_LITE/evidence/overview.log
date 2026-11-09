@@ -1,0 +1,13 @@
+PASS numbers light neutral
+PASS numbers light color
+PASS numbers dark neutral
+PASS numbers dark color
+PASS details light neutral
+PASS details light color
+PASS details dark neutral
+PASS details dark color
+PASS rows light neutral
+PASS rows light color
+PASS rows dark neutral
+PASS rows dark color
+{"passed":12,"failures":[]}
