@@ -1036,3 +1036,14 @@ input,textarea,[contenteditable=true],.full-note,.activity-comparison span {
 [data-forecast-ui] .forecast-summary :is(h3,p,.card-amount) { margin:0; }
 /* WebKit can expose a native option's full paint width through its label. */
 [data-forecast-ui] label:has(>select) { min-width:0; overflow:hidden; }
+
+/* D-092: MyRate-style unified status area.
+   iOS Home Screen draws its native status bar; keep a single canvas rather
+   than painting a second fixed blur/tint strip below or behind it.
+   Keep existing viewport-fit and safe-area positioning unchanged. */
+@media(max-width:760px), (pointer:coarse) {
+  #app { background:var(--canvas); }
+  #app::before,.sheet.large::before {
+    content:none;
+  }
+}
