@@ -1,13 +1,14 @@
 {
   "name": "finrate-lite",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
   "scripts": {
     "test": "node tests/run.mjs",
     "build": "node tools/build.mjs",
     "test:browser": "node tests/browser.mjs",
-    "verify:delivery": "node tools/verify.mjs"
+    "verify:delivery": "node tools/verify.mjs",
+    "test:browser:work": "node tests/work-browser.mjs"
   },
   "dependencies": {
     "dexie": "4.4.6"
