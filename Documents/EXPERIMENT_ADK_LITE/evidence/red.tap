@@ -1,0 +1,220 @@
+TAP version 13
+# Subtest: exact month result and immutable document
+not ok 1 - exact month result and immutable document
+  ---
+  duration_ms: 1.866946
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/report-period.test.mjs:7:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot find module '/workspace/finrate/Source/src/report-period.mjs' imported from /workspace/finrate/Source/tests/report-period.test.mjs"
+  code: 'ERR_MODULE_NOT_FOUND'
+  stack: |-
+    finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    moduleResolve (node:internal/modules/esm/resolve:865:10)
+    defaultResolve (node:internal/modules/esm/resolve:992:11)
+    #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    #resolve (node:internal/modules/esm/loader:683:17)
+    ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    node:internal/modules/esm/loader:632:32
+    TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+  ...
+# Subtest: inclusive month boundaries, next year, Gregorian leap and century
+not ok 2 - inclusive month boundaries, next year, Gregorian leap and century
+  ---
+  duration_ms: 0.399087
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/report-period.test.mjs:8:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot find module '/workspace/finrate/Source/src/report-period.mjs' imported from /workspace/finrate/Source/tests/report-period.test.mjs"
+  code: 'ERR_MODULE_NOT_FOUND'
+  stack: |-
+    finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    moduleResolve (node:internal/modules/esm/resolve:865:10)
+    defaultResolve (node:internal/modules/esm/resolve:992:11)
+    #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    #resolve (node:internal/modules/esm/loader:683:17)
+    ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    node:internal/modules/esm/loader:632:32
+    TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+  ...
+# Subtest: split counts once, refund belongs to its actual month and is not income
+not ok 3 - split counts once, refund belongs to its actual month and is not income
+  ---
+  duration_ms: 0.254885
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/report-period.test.mjs:9:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot find module '/workspace/finrate/Source/src/report-period.mjs' imported from /workspace/finrate/Source/tests/report-period.test.mjs"
+  code: 'ERR_MODULE_NOT_FOUND'
+  stack: |-
+    finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    moduleResolve (node:internal/modules/esm/resolve:865:10)
+    defaultResolve (node:internal/modules/esm/resolve:992:11)
+    #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    #resolve (node:internal/modules/esm/loader:683:17)
+    ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    node:internal/modules/esm/loader:632:32
+    TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+  ...
+# Subtest: canonical edit moves fact, cancellation and pending exclude it
+not ok 4 - canonical edit moves fact, cancellation and pending exclude it
+  ---
+  duration_ms: 0.281514
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/report-period.test.mjs:10:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot find module '/workspace/finrate/Source/src/report-period.mjs' imported from /workspace/finrate/Source/tests/report-period.test.mjs"
+  code: 'ERR_MODULE_NOT_FOUND'
+  stack: |-
+    finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    moduleResolve (node:internal/modules/esm/resolve:865:10)
+    defaultResolve (node:internal/modules/esm/resolve:992:11)
+    #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    #resolve (node:internal/modules/esm/loader:683:17)
+    ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    node:internal/modules/esm/loader:632:32
+    TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+  ...
+# Subtest: own transfer/loan/repayment/adjustment/opening are not reported earnings or spending
+not ok 5 - own transfer/loan/repayment/adjustment/opening are not reported earnings or spending
+  ---
+  duration_ms: 0.431144
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/report-period.test.mjs:11:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot find module '/workspace/finrate/Source/src/report-period.mjs' imported from /workspace/finrate/Source/tests/report-period.test.mjs"
+  code: 'ERR_MODULE_NOT_FOUND'
+  stack: |-
+    finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    moduleResolve (node:internal/modules/esm/resolve:865:10)
+    defaultResolve (node:internal/modules/esm/resolve:992:11)
+    #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    #resolve (node:internal/modules/esm/loader:683:17)
+    ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    node:internal/modules/esm/loader:632:32
+    TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+  ...
+# Subtest: external transfer plus canonical actual fee count once
+not ok 6 - external transfer plus canonical actual fee count once
+  ---
+  duration_ms: 0.296967
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/report-period.test.mjs:12:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot find module '/workspace/finrate/Source/src/report-period.mjs' imported from /workspace/finrate/Source/tests/report-period.test.mjs"
+  code: 'ERR_MODULE_NOT_FOUND'
+  stack: |-
+    finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    moduleResolve (node:internal/modules/esm/resolve:865:10)
+    defaultResolve (node:internal/modules/esm/resolve:992:11)
+    #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    #resolve (node:internal/modules/esm/loader:683:17)
+    ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    node:internal/modules/esm/loader:632:32
+    TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+  ...
+# Subtest: credit purchase is expense but repayment and available limit are not
+not ok 7 - credit purchase is expense but repayment and available limit are not
+  ---
+  duration_ms: 0.25151
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/report-period.test.mjs:13:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot find module '/workspace/finrate/Source/src/report-period.mjs' imported from /workspace/finrate/Source/tests/report-period.test.mjs"
+  code: 'ERR_MODULE_NOT_FOUND'
+  stack: |-
+    finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    moduleResolve (node:internal/modules/esm/resolve:865:10)
+    defaultResolve (node:internal/modules/esm/resolve:992:11)
+    #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    #resolve (node:internal/modules/esm/loader:683:17)
+    ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    node:internal/modules/esm/loader:632:32
+    TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+  ...
+# Subtest: four document currencies independently, never mixed conversions
+not ok 8 - four document currencies independently, never mixed conversions
+  ---
+  duration_ms: 0.396903
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/report-period.test.mjs:14:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot find module '/workspace/finrate/Source/src/report-period.mjs' imported from /workspace/finrate/Source/tests/report-period.test.mjs"
+  code: 'ERR_MODULE_NOT_FOUND'
+  stack: |-
+    finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    moduleResolve (node:internal/modules/esm/resolve:865:10)
+    defaultResolve (node:internal/modules/esm/resolve:992:11)
+    #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    #resolve (node:internal/modules/esm/loader:683:17)
+    ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    node:internal/modules/esm/loader:632:32
+    TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+  ...
+# Subtest: empty differs from unavailable data and malformed month
+not ok 9 - empty differs from unavailable data and malformed month
+  ---
+  duration_ms: 0.526905
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/report-period.test.mjs:15:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot find module '/workspace/finrate/Source/src/report-period.mjs' imported from /workspace/finrate/Source/tests/report-period.test.mjs"
+  code: 'ERR_MODULE_NOT_FOUND'
+  stack: |-
+    finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    moduleResolve (node:internal/modules/esm/resolve:865:10)
+    defaultResolve (node:internal/modules/esm/resolve:992:11)
+    #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    #resolve (node:internal/modules/esm/loader:683:17)
+    ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    node:internal/modules/esm/loader:632:32
+    TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+  ...
+# Subtest: safe integer money stays exact; overflow fails closed
+not ok 10 - safe integer money stays exact; overflow fails closed
+  ---
+  duration_ms: 0.576868
+  type: 'test'
+  location: '/workspace/finrate/Source/tests/report-period.test.mjs:16:1'
+  failureType: 'testCodeFailure'
+  error: "Cannot find module '/workspace/finrate/Source/src/report-period.mjs' imported from /workspace/finrate/Source/tests/report-period.test.mjs"
+  code: 'ERR_MODULE_NOT_FOUND'
+  stack: |-
+    finalizeResolution (node:internal/modules/esm/resolve:271:11)
+    moduleResolve (node:internal/modules/esm/resolve:865:10)
+    defaultResolve (node:internal/modules/esm/resolve:992:11)
+    #cachedDefaultResolve (node:internal/modules/esm/loader:701:20)
+    #resolveAndMaybeBlockOnLoaderThread (node:internal/modules/esm/loader:721:38)
+    ModuleLoader.resolveSync (node:internal/modules/esm/loader:759:56)
+    #resolve (node:internal/modules/esm/loader:683:17)
+    ModuleLoader.getOrCreateModuleJob (node:internal/modules/esm/loader:603:35)
+    node:internal/modules/esm/loader:632:32
+    TracingChannel.tracePromise (node:diagnostics_channel:362:14)
+  ...
+1..10
+# tests 10
+# suites 0
+# pass 0
+# fail 10
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 45.389255

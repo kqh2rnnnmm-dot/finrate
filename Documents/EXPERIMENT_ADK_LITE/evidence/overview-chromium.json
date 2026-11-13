@@ -1,0 +1,92 @@
+{
+  "engine": "chromium",
+  "checks": [
+    {
+      "style": "numbers",
+      "theme": "light",
+      "palette": "neutral",
+      "sizes": 7,
+      "nativeWrites": 0
+    },
+    {
+      "style": "numbers",
+      "theme": "light",
+      "palette": "color",
+      "sizes": 7,
+      "nativeWrites": 0
+    },
+    {
+      "style": "numbers",
+      "theme": "dark",
+      "palette": "neutral",
+      "sizes": 7,
+      "nativeWrites": 0
+    },
+    {
+      "style": "numbers",
+      "theme": "dark",
+      "palette": "color",
+      "sizes": 7,
+      "nativeWrites": 0
+    },
+    {
+      "style": "details",
+      "theme": "light",
+      "palette": "neutral",
+      "sizes": 7,
+      "nativeWrites": 0
+    },
+    {
+      "style": "details",
+      "theme": "light",
+      "palette": "color",
+      "sizes": 7,
+      "nativeWrites": 0
+    },
+    {
+      "style": "details",
+      "theme": "dark",
+      "palette": "neutral",
+      "sizes": 7,
+      "nativeWrites": 0
+    },
+    {
+      "style": "details",
+      "theme": "dark",
+      "palette": "color",
+      "sizes": 7,
+      "nativeWrites": 0
+    },
+    {
+      "style": "rows",
+      "theme": "light",
+      "palette": "neutral",
+      "sizes": 7,
+      "nativeWrites": 0
+    },
+    {
+      "style": "rows",
+      "theme": "light",
+      "palette": "color",
+      "sizes": 7,
+      "nativeWrites": 0
+    },
+    {
+      "style": "rows",
+      "theme": "dark",
+      "palette": "neutral",
+      "sizes": 7,
+      "nativeWrites": 0
+    },
+    {
+      "style": "rows",
+      "theme": "dark",
+      "palette": "color",
+      "sizes": 7,
+      "nativeWrites": 0
+    }
+  ],
+  "failures": [],
+  "actualIPhone": false,
+  "version": "154.0.8037.57"
+}
