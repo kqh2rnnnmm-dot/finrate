@@ -1,0 +1,14 @@
+Product: FinRate Lite
+Version: 0.1.0 / lite-test01
+Base: 13d585c636918e4b25b717b2bd35c85d469d94a0
+HEAD: 98c3fe4f6c959bdd06fce0d53d2d6f32038fcf58
+Branch: codex/finrate-lite-test-v0.1 (local only)
+Public deployment: NOT PERFORMED
+GitHub Actions: NOT RUN
+Full/main: unchanged
+ZIP: 8 static executable files; CRC test PASS
+Domain tests: 17 PASS; security/storage tests: 3 PASS
+Chromium: 13 checks PASS; WebKit and physical iPhone: NOT RUN
+Acceptance matrix: open PARTIAL/NOT RUN items; see TEST_REPORT.md
+Source bundle requires base commit in repository; bundle verify PASS.
+Rollback code does not restore user data.

@@ -1,0 +1,19 @@
+{
+  "checks": [
+    "clean setup and initial balance",
+    "income yes/no and manual assignment",
+    "parent and child categories",
+    "live preview, scope above card, save month",
+    "global step preserves preview; offset step and cancellation",
+    "protection, release and reports",
+    "320/375/390/430/1200 light/dark no horizontal shell overflow",
+    "reload persistence",
+    "encrypted backup download",
+    "independent clean browser backup restoration",
+    "offline cold reload and unlock",
+    "no page errors",
+    "future template conflict, cancel rollback and atomic reconciliation"
+  ],
+  "errors": [],
+  "physicalIPhone": false
+}

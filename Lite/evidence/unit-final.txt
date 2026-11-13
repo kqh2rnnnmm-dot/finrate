@@ -1,0 +1,40 @@
+
+> finrate-lite@0.1.0 test
+> node tests/run.mjs
+
+✔ T06–08 auto/manual spend 0 (22.62877ms)
+✔ T06–08 auto/manual spend 800000 (0.843372ms)
+✔ T06–08 auto/manual spend 1600000 (1.264458ms)
+✔ owner acceptance scenario (0.954029ms)
+✔ T09/T10 repeated zero cycles do not recreate manual (2.69147ms)
+✔ T26 per income pennies (0.871154ms)
+✔ T13–17 historical refund at zero and limit (1.934689ms)
+✔ T18–23 rollover, late edit and protection conflict (0.720246ms)
+✔ T24 deficit reduces funded free (0.454395ms)
+✔ T25 atomic future conflict; T27 idempotency (0.53008ms)
+✔ multiple income snapshots, new month future plan, zero refund no-op (0.791173ms)
+✔ protected auto cannot be recreated or spent; insufficient reenable rejected (0.640957ms)
+✔ cancel income cannot invade protection; expense cancellation preserves audit (0.418752ms)
+✔ M02–07 distribution, repeated yes/no, 90%, all zero and conservation (0.95456ms)
+✔ T11/T12 shortage and manual zero guard; atomic refusal (1.009183ms)
+✔ T30 unchanged zero preserves refund until explicit release (0.844064ms)
+✔ template changes do not recalculate month, overflow and invalid dates refused (0.863843ms)
+ℹ tests 17
+ℹ suites 0
+ℹ pass 17
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 46.372602
+✔ independent password/recovery restore, wrong password, corrupt, foreign and CAS/reset isolation (725.314026ms)
+✔ actual Full parser rejects Lite backup marker (99.869958ms)
+✔ transaction abort preserves vault and safety rows (95.964031ms)
+ℹ tests 3
+ℹ suites 0
+ℹ pass 3
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 926.81986

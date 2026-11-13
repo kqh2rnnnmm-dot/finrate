@@ -1,0 +1,1 @@
+import {spawnSync} from 'node:child_process';for(const f of ['model.test.mjs','security.test.mjs']){const r=spawnSync(process.execPath,['tests/'+f],{stdio:'inherit'});if(r.status)process.exit(r.status||1);}

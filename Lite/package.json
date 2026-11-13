@@ -1,0 +1,21 @@
+{
+  "name": "finrate-lite",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node tests/run.mjs",
+    "build": "node tools/build.mjs",
+    "test:browser": "node tests/browser.mjs",
+    "verify:delivery": "node tools/verify.mjs"
+  },
+  "dependencies": {
+    "dexie": "4.4.6"
+  },
+  "devDependencies": {
+    "esbuild": "0.28.2",
+    "fake-indexeddb": "6.2.5",
+    "playwright": "1.62.1",
+    "@sparticuz/chromium": "153.0.0"
+  }
+}
